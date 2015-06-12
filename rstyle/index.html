@@ -1,0 +1,396 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/REC-html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="docstyle.css">
+    <title>来自 Google 的 R 语言编码风格指南</title>
+    <style type="text/css">
+           ul.NoBullet {list-style-type: none}
+    </style>
+  </head>
+
+  <body>
+
+<!---------------------------------------------------------------------------->
+
+  <h1>来自 Google 的 R 语言编码风格指南</h1>
+  
+  <p>
+    R 语言是一门主要用于统计计算和绘图的高级编程语言. 这份 R 语言编码风格指南旨在让我们的 R 代码更容易阅读、分享和检查. 以下规则系与 Google 的 R 用户群体协同设计而成.
+  </p>
+
+<!---------------------------------------------------------------------------->
+
+  <ul class="NoBullet">
+    <h2><li>概要: R编码风格约定</li></h2>
+    <ol>
+      <li><a href=#filenames>文件命名</a>: 以 <code>.R</code> (大写) 结尾</li>
+      <li><a href=#identifiers>标识符命名</a>: <code>variable.name</code>,
+        <code>FunctionName</code>, <code>kConstantName</code></li>
+
+      <li><a href=#linelength>单行长度</a>: 不超过 80 个字符</li>
+      <li><a href=#indentation>缩进</a>: 两个空格, 不使用制表符</li>
+      <li><a href=#spacing>空白</a></li>
+      <li><a href=#curlybraces>花括号</a>: 前括号不折行写, 后括号独占一行</li>
+      <li><a href=#assignment>赋值符号</a>: 使用 <code>&lt;-</code>, 而非
+        <code>=</code></li>
+
+      <li><a href=#semicolons>分号</a>: 不要用</li>
+      <li><a href=#generallayout> 总体布局和顺序</a></li>
+      <li><a href=#comments> 注释准则</a>: 所有注释以 <code>#</code> 开始, 
+        后接一个空格; 行内注释需要在 <code>#</code> 前加两个空格</li>
+
+      <li><a href=#functiondefinition>函数的定义和调用</a></li>
+      <li><a href=#functiondocumentation> 函数文档</a></li>
+      <li><a href=#examplefunction> 示例函数</a></li>
+      <li><a href=#todo> TODO 书写风格</a>: <code>TODO(您的用户名)</code></li>
+
+    </ol>
+    <h2><li>概要: R语言使用规则</li></h2>
+    <ol>
+      <li><a href=#attach> <code>attach</code></a>: 避免使用</li>
+      <li><a href=#functionlanguage> 函数</a>:
+        错误 (error) 应当使用 <code>stop()</code> 抛出</li>
+
+      <li><a href=#object> 对象和方法</a>: 尽可能避免使用 S4 对象和方法; 
+      永远不要混用 S3 和 S4</li>
+    </ol>
+  </ul>
+
+  <br>
+  <ol>
+<!---------------------------------------------------------------------------->
+
+    <h3><li>表示和命名</li></h3>
+
+      <ul class="NoBullet">
+        <h4 id="filenames"><li>文件命名</li></h4>
+          <p>
+            文件名应以 <code>.R</code> (大写) 结尾, 文件名本身要有意义.
+            <br> 正例: <code>predict_ad_revenue.R</code>
+            <br> 反例: <code><span style="color:red">foo.R</span></code>
+
+          </p>
+        <h4 id="identifiers"><li>标识符命名</li></h4>
+          <p>
+            在标识符中不要使用下划线 ( <code>_</code> ) 或连字符
+            ( <code>-</code> ).
+            标识符应根据如下惯例命名.
+            变量名应使用点 (<code>.</code>) 分隔所有的小写字母或单词;
+            函数名首字母大写, 不用点分隔 (所含单词首字母大写);
+            常数命名规则同函数, 但需使用一个 <code>k</code> 开头.
+          </p>
+
+          <ul>
+            <li><code>variable.name </code>
+              <br> 正例: <code>avg.clicks</code>
+              <br> 反例: <code><span style="color:red">avg_Clicks
+                </span></code>, <code><span style="color:red">avgClicks
+                </span></code>
+
+            </li>
+            <li><code>FunctionName </code>
+              <br> 正例: <code>CalculateAvgClicks</code>
+              <br> 反例: <code><span style="color:red">calculate_avg_clicks
+                </span></code>,
+                <code><span style="color:red">calculateAvgClicks</span></code>
+
+              <br> 函数命名应为动词或动词性短语.
+              <br><em>例外: 当创建一个含类 (class) 属性的对象时, 
+              函数名 (也是constructor) 和类名 (class) 应当匹配 (例如, lm).</em>
+            <li><code>kConstantName </code></li>
+          </ul>
+      </ul>
+
+<!---------------------------------------------------------------------------->
+
+    <h3><li>语法</li></h3>
+
+      <ul class="NoBullet">
+        <h4 id="linelength"><li>单行长度</li></h4>
+          <p>
+            最大单行长度为 80 个字符.
+          </p>
+        <h4 id="indentation"><li>缩进</li></h4>
+          <p>
+            使用两个空格来缩进代码. 永远不要使用制表符或混合使用二者.
+            <br><em>例外: 当括号内发生折行时, 所折行与括号内的第一个字符对齐.</em>
+
+          <p>
+        <h4 id="spacing"><li>空白</li></h4>
+          <p>
+            在所有二元操作符 (<code>=</code>,
+            <code>+</code>, <code>-</code>, <code>&lt;-</code>, 等等)
+            的两侧加上空格.
+            <br><em> 例外: 在函数调用中传递参数时 <code>=</code> 
+            两边的空格可加可不加.</em>
+
+          </p>
+          <p>
+            不可在逗号前加空格, 逗号后总须加空格.
+            <br><br> 正例:<pre><code>tabPrior &lt;- table(df[df$daysFromOpt &lt; 0, &quot;campaignid&quot;])
+total &lt;- sum(x[, 1])
+total &lt;- sum(x[1, ])</code></pre>
+
+          </p>
+          <p>
+            反例:<pre><code><span style="color:red">tabPrior &lt;- table(df[df$daysFromOpt&lt;0, &quot;campaignid&quot;])  # 在 '<' 两侧需要增加空格
+tabPrior &lt;- table(df[df$daysFromOpt &lt; 0,&quot;campaignid&quot;])  # 逗号后需要一个空格
+tabPrior&lt;- table(df[df$daysFromOpt &lt; 0, &quot;campaignid&quot;])  # 在 &lt;- 前需要一个空格
+tabPrior<-table(df[df$daysFromOpt &lt; 0, &quot;campaignid&quot;])  # 在 &lt;- 两侧需要增加空格
+total &lt;- sum(x[,1])  # 逗号后需要一个空格
+total &lt;- sum(x[ ,1])  # 逗号后需要一个空格, 而非逗号之前</span></code></pre>
+
+          </p>
+          <p>
+            在前括号前加一个空格, 函数调用时除外.
+          </p>
+          <p>
+            正例:
+            <br><code>if (debug)</code>
+          </p>
+          <p>
+
+            反例:
+            <br><code><span style="color:red">if(debug)</span></code>
+          </p>
+          <p>
+            多加空格 (即, 在行内使用多于一个空格) 也是可以的, 
+            如果这样做能够改善等号或箭头 (<code><-</code>) 的对齐效果.
+          </p>
+<pre><code>plot(x    = xCoord,
+     y    = dataMat[, makeColName(metric, ptiles[1], &quot;roiOpt&quot;)],
+     ylim = ylim,
+     xlab = &quot;dates&quot;,
+     ylab = metric,
+     main = (paste(metric, &quot; for 3 samples &quot;, sep=&quot;&quot;)))
+
+</pre></code>
+          <p>
+            不要向圆括号或方括号中的代码两侧加入空格.
+            <br><em> 例外: 逗号后总须加空格.</em>
+          </p>
+          <p>
+            正例: <pre><code>if (debug)
+x[1, ]</code></pre>
+          </p>
+
+          <p>
+            反例:<pre><code><span style="color:red">if ( debug )  # debug 的两边不要加空格
+x[1,]  # 需要在逗号后加一个空格 </span></code></pre>
+          </p>
+        <h4 id="curlybraces"><li>花括号</li></h4>
+          <p>
+            前括号永远不应该独占一行; 
+            后括号应当总是独占一行. 
+            您可以在代码块只含单个语句时省略花括号; 但在处理这类单个语句时, 
+            您必须 <em>前后一致地</em> 要么全部使用花括号, 或者全部不用花括号.
+          </p>
+
+          <code><pre>
+if (is.null(ylim)) {
+  ylim &lt;- c(0, 0.06)
+}</pre></code>
+          <p>
+            或 (不可混用)
+          </p>
+          <code><pre>
+if (is.null(ylim))
+  ylim &lt;- c(0, 0.06)</pre></code>
+          <p>
+
+            总在新起的一行开始书写代码块的主体.
+          </p>
+          <p>
+            反例:
+            <br><code><span style="color:red"> if (is.null(ylim))
+              ylim &lt;- c(0, 0.06)</span></code>
+            <br><code><span style="color:red"> if (is.null(ylim))
+              {ylim &lt;- c(0, 0.06)} </span></code>
+          </p>
+
+        <h4 id="assignment"><li>赋值</li></h4>
+          <p>
+            使用 <code>&lt;-</code> 进行赋值, 不用 <code>=</code> 赋值.
+          </p>
+          <p>
+            正例:
+            <br><code> x &lt;- 5 </code>
+
+          </p>
+          <p>
+            反例:
+            <br><code><span style="color:red"> x = 5</span></code>
+          </p>
+        <h4 id="semicolons"><li>分号</li></h4>
+          <p>
+            不要以分号结束一行, 也不要利用分号在同一行放多于一个命令. (分号是毫无必要的, 并且为了与其他Google编码风格指南保持一致, 此处同样略去.)
+          </p>
+          
+      </ul>
+
+<!---------------------------------------------------------------------------->
+
+    <h3><li> 代码组织 </li></h3>
+      <ul class="NoBullet">
+        <h4 id="generallayout"><li>总体布局和顺序</li></h4>
+          <p>
+            如果所有人都以相同顺序安排代码内容, 
+            我们就可以更加轻松快速地阅读并理解他人的脚本了.
+          </p>
+
+          <ol>
+            <li>版权声明注释
+            <li>作者信息注释
+            <li>文件描述注释, 包括程序的用途, 输入和输出
+            <li><code>source()</code> 和 <code>library()</code> 语句
+            <li>函数定义
+            <li>要执行的语句, 如果有的话 (例如,
+              <code> print</code>, <code>plot</code>)
+          </ol>
+
+          <p>
+            单元测试应在另一个名为 <code>原始的文件名_unittest.R</code> 
+            的独立文件中进行.<p>
+        <h4 id="comments"><li>注释准则</li></h4>
+          <p>
+            注释您的代码. 整行注释应以 # 后接一个空格开始.
+          </p>
+
+          <p>
+            行内短注释应在代码后接两个空格, <code>#</code>, 再接一个空格.
+          </p>
+<pre><code># Create histogram of frequency of campaigns by pct budget spent.
+hist(df$pctSpent,
+     breaks = &quot;scott&quot;,  # method for choosing number of buckets
+     main   = &quot;Histogram: fraction budget spent by campaignid&quot;,
+     xlab   = &quot;Fraction of budget spent&quot;,
+     ylab   = &quot;Frequency (count of campaignids)&quot;)
+</code></pre>
+
+        <h4 id="functiondefinition"><li> 函数的定义和调用</li></h4>
+          <p>
+            函数定义应首先列出无默认值的参数, 然后再列出有默认值的参数.
+          </p>
+          <p>
+            函数定义和函数调用中, 允许每行写多个参数; 
+            折行只允许在赋值语句外进行.
+            <br>正例:
+<pre><code>PredictCTR &lt;- function(query, property, numDays,
+                       showPlot = TRUE)
+</code></pre>
+
+           反例:
+<pre><code><span style="color:red">PredictCTR &lt;- function(query, property, numDays, showPlot =
+                       TRUE)
+</span></code></pre>
+          <p> 理想情况下, 单元测试应该充当函数调用的样例 (对于包中的程序来说).
+        <h4 id="functiondocumentation"><li> 函数文档 </li></h4>
+          <p> 函数在定义行下方都应当紧接一个注释区. 这些注释应当由如下内容组成: 
+            此函数的一句话描述; 此函数的参数列表, 用 <code>Args:</code> 表示, 
+            对每个参数的描述 (包括数据类型); 以及对于返回值的描述, 
+            以 <code>Returns:</code> 表示. 这些注释应当描述得足够充分, 
+            这样调用者无须阅读函数中的任何代码即可使用此函数.
+            
+        <h4 id="examplefunction"><li> 示例函数 </li></h4><pre><code>
+
+CalculateSampleCovariance &lt;- function(x, y, verbose = TRUE) {
+  # Computes the sample covariance between two vectors.
+  #
+  # Args:
+  #   x: One of two vectors whose sample covariance is to be calculated.
+  #   y: The other vector. x and y must have the same length, greater than one,
+  #      with no missing values.
+  #   verbose: If TRUE, prints sample covariance; if not, not. Default is TRUE.
+  #
+  # Returns:
+  #   The sample covariance between x and y.
+  n &lt;- length(x)
+  # Error handling
+  if (n &lt;= 1 || n != length(y)) {
+    stop(&quot;Arguments x and y have invalid lengths: &quot;,
+         length(x), &quot; and &quot;, length(y), &quot;.&quot;)
+  }
+  if (TRUE %in% is.na(x) || TRUE %in% is.na(y)) {
+    stop(&quot; Arguments x and y must not have missing values.&quot;)
+  }
+  covariance &lt;- var(x, y)
+  if (verbose)
+    cat(&quot;Covariance = &quot;, round(covariance, 4), &quot;.\n&quot;, sep = &quot;&quot;)
+  return(covariance)
+}
+
+</code></pre>
+
+        <h4 id="todo"><li> TODO 书写风格 </li></h4>
+          <p> 编码时通篇使用一种一致的风格来书写 TODO.
+          <br><CODE>TODO(您的用户名): 所要采取行动的明确描述</CODE>
+  </ul>
+
+<!---------------------------------------------------------------------------->
+
+      <h3><li> 语言 </li></h3>
+
+       <ul class="NoBullet">
+        <h4 id="attach"><li> Attach </li></h4>
+        <p> 使用 <code>attach</code> 造成错误的可能数不胜数. 避免使用它.
+	<h4 id="functionlanguage"><li>函数 </li></h4>
+        <p> 错误 (error) 应当使用 <code>stop()</code> 抛出.
+	<h4 id="object"><li>对象和方法</li></h4>
+            
+          <p>S 语言中有两套面向对象系统, S3 和 S4, 在 R 中这两套均可使用. 
+          S3 方法的可交互性更强, 更加灵活, 反之, S4 方法更加正式和严格.
+          (对这两套系统的说明, 参见 Thomas Lumley 的文章
+          "Programmer's Niche: A Simple
+          Class, in S3 and S4", 发表于 R News 4/1, 2004, 33 - 36 页:
+          <a href="http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf">
+          http://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf</a>.)
+          <p>这里推荐使用 S3 对象和方法, 除非您有很强烈的理由去使用 S4 对象和方法.
+            使用 S4 对象的一个主要理由是在 C++ 代码中直接使用对象. 使用一个 S4 
+            泛型/方法的主要理由是对双参数的分发.
+          <p>避免混用 S3 和 S4: S4 方法会忽略 S3 中的继承, 反之亦然.
+	</ul>
+
+
+<!---------------------------------------------------------------------------->
+
+     <h3><li> 例外 </li></h3>
+
+     除非有不去这样做的好理由, 否则应当遵循以上描述的编码惯例. 
+     例外包括遗留代码的维护和对第三方代码的修改.
+
+<!---------------------------------------------------------------------------->
+
+     <h3><li> 结语 </li></h3>
+
+     遵守常识, <strong>前后一致</strong>.
+     <p>
+     如果您在编辑现有代码, 花几分钟看看代码的上下文并弄清它的风格.
+     如果其他人在 <code>if</code> 语句周围使用了空格, 那您也应该这样做.
+     如果他们的注释是用星号组成的小盒子围起来的, 那您也要这样写。
+     <p>
+     
+     遵循编码风格准则的意义在于, 人们相当于有了一个编程的通用词汇表, 
+     于是人们可以专注于您在 <em>说什么</em>, 而不是您是 <em>怎么说</em> 的. 
+     我们在这里提供全局的编码风格规则以便人们了解这些词汇, 但局部风格也很重要.
+     如果您加入文件中的代码看起来和周围的已有代码截然不同, 
+     那么代码阅读者的阅读节奏就会被破坏. 尽量避免这样做.
+
+     OK, 关于如何写代码已经写得够多了; 代码本身要有趣的多. 编码愉快!
+
+<!---------------------------------------------------------------------------->
+
+     <h3><li> 参考文献 </li></h3>
+
+     <a href="http://www.maths.lth.se/help/R/RCC/">
+     http://www.maths.lth.se/help/R/RCC/</a> - R语言编码惯例
+     <br>
+     <a href="http://ess.r-project.org/">http://ess.r-project.org/</a> - 为
+     emacs 用户而生. 在您的 emacs 中运行 R 并且提供了一个 emacs mode.
+
+  </ol>
+
+<!---------------------------------------------------------------------------->
+
+</html>

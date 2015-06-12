@@ -1,0 +1,884 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8" />
+	<title>rApache</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+	
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="stylesheets/base.css">
+	<link rel="stylesheet" href="stylesheets/skeleton.css">
+	<link rel="stylesheet" href="stylesheets/layout.css">
+	<link rel="stylesheet" href="stylesheets/docs.css">
+	
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	
+</head>
+<body>
+
+<!-- Primary Page Layout
+================================================== -->
+
+<div class="container">	
+    <div class="three columns sidebar">
+	&nbsp;
+	<nav>
+	<a title="rApache" label="Back to rApache home" href="index.html"><img title="Back to rApache home" src="images/Logo.png" /></a>
+	<ul>
+	<li><a href="#Installation">安装</a></li>
+	<li><a href="#Configuring_rapache">配置</a></li>
+	<li><a href="#rapache_Functions">函数</a></li>
+	<li><a href="#rapache_Variables">变量</a></li>
+	<li><a href="#rapache_Cookbook">示例</a></li>
+	<li><a href="#License">协议</a></li>
+	<li><a href="#Citing">引用</a></li>
+	<li><a href="#Thanks">致谢</a></li>
+	</ul>
+	</nav>
+    </div>
+
+    <div class="twelve columns content offset-by-one">
+<header><h1>文档</h1></header>
+
+<p><i>
+
+这份文档描述了 rApache 的安装，配置，多样化用法及支持的软件包。此文档将尽量涵盖关于 rApache 的最新信息。评论和建议请联系 <a href="mailto:jeff.horner@vanderbilt.edu">维护者</a>.
+</i></p>
+
+<h3><a name="Introduction"></a>1. <a title="Back to top" href="#top">引言</a></h3>
+<p>
+rApache 是为了支持 Web 应用开发，结合了 <a href="http://www.r-project.org/">R (统计分析、绘图的语言和操作环境)</a> 以及 <a href="http://httpd.apache.org/">Apache Web 服务器软件</a> 的项目。当前版本可运行于 UNIX/Linux 及 Mac OS X 操作系统。现可支持使用线程式多处理模块的 Apache 服务器，但我们仍推荐使用 <a href="http://httpd.apache.org/docs/2.2/mod/prefork.html">Apache 的 Prefork 多处理模块</a> (参阅 Apache 文档中的 <a href="http://httpd.apache.org/docs/2.2/mpm.html">多处理模块</a> 一节以了解更多)。
+</p>
+
+<p>
+rApache 提供了名为 mod_R 的 Apache 模块，相当于在 Web 服务器中嵌入了 R 语言解释器。同时，rApache 捆绑了 <a href="http://httpd.apache.org/apreq/">libapreq</a> 这个可使 Apache 处理客户端请求数据的 Apache 模块。二者联合提供的胶合层将 R 转换为了一种服务端脚本环境。
+</p>
+
+<p>
+虽未与 rApache 捆绑发布，但 R 包 <a href="http://www.rforge.net/brew">brew</a> (亦可在 <a href="http://cran.r-project.org/mirrors.html">CRAN</a> 下载) 也在服务端脚本执行中起着重要作用。brew 实现了一种模板化的框架，可用于在 R 中自动生成报告。同时也是实时生成 HTML 文件的完美选择。其语法与 PHP / JSP / Ruby 的 erb 模块 / Python 的 psp 模块十分相似。由于 brew 包可以单独安装使用，故其未与 rApache 捆绑发布。
+</p>
+
+<h4><a name="Security"></a>1.1 <a title="Back to top" href="#top">安全性</a></h4>
+
+<p>
+与其他任何服务器端脚本环境无异，rApache 是完全由您 —— <strong>编程者</strong>所控制的。如果您允许您编写的 R 代码接受和处理第三方提交的信息，就需要根据情况自行决定是否对客户端所提交信息的安全性进行验证。由此，作者可以断言，rapache 与其他流行的 Web 脚本语言或环境 (PHP, Ruby on Rails 等) 在安全性方面不相上下。
+</p>
+
+<h3><a name="Installation"></a>2. <a title="Back to top" href="#top">安装</a></h3>
+
+<p>rApache 可使用典型的 GNU/Linux 源代码安装方式进行安装：在 shell 中执行 '<b>configure</strong>', 然后执行 '<b>make</strong>', 和 '<b>make install</strong>' .</p>
+
+<p><i>目前，rApache 仅提供源代码下载。我曾尝试学习过 Debian 系统的打包方法但仍未完全理解。如果任何人有兴趣为任何 Linux 发行版提供二进制安装包，请 <a href="mailto:jeff.horner@vanderbilt.edu">给我发邮件</a>。</i></p>
+
+<p>安装及使用 rApache 的系统要求如下：</p>
+
+<ol>
+	<li> R 已经以共享库的方式编译和安装 (参阅 <a href="http://cran.r-project.org/doc/manuals/R-exts.html#Embedding-R-under-Unix_002dalikes">Writing R Extensions</a> 获取更多信息)。</li>
+	<li> Apache 2.2.x 或更高版本，支持加载模块。</li>
+	<li> <a href="http://httpd.apache.org/apreq/">libapreq2</a> 2.05 或更高版本。此模块与 rApache 捆绑发布，当 configure 未发现 libapreq 时，将以默认选项安装；如发现已安装，将以配置 --with-apreq2-config 进行覆盖。</li>
+</ol>
+
+<h4><a name="Running_configure"></a>2.1 <a title="Back to top" href="#top">执行 configure</a></h4>
+<p>configure 将尽力检测您的系统是否满足以上要求。一旦失败，您应当尝试增加以下参数：</p>
+<ul>
+	<li><strong>--with-R</strong> R所在的完整路径</li>
+	<li><strong>--with-apache2-apxs</strong> Apache extension tool所在的完整路径</li>
+	<li><strong>--with-apreq2-config</strong> libapreq2所在的完整路径</li>
+</ul>
+<p>常见参数值的示例：</p>
+<pre class="code">
+./configure \
+    --with-R=/usr/bin/R \
+    --with-apache2-apxs=/usr/bin/apxs2 \
+    --with-apreq2-config=/usr/bin/apreq2-config
+</pre>
+
+<h4><a name="Running_make"></a>2.2 <a title="Back to top" href="#top">执行 make</a></h4>
+<p>不带目标参数执行 make 将开始构建 rApache. 执行 'make install' 进行安装。以下为其他可用的 make 目标参数：</p>
+<ul>
+	<li><strong>itest</strong> 以单进程模式启动 Apache. 您应当可以看到有一条回显信息指示您在浏览器中打开 http://localhost:8181/index.html. 在这里您能够检查 rApache 在安装之前的编译情况。要停止 Apache, 键入 Control-C 或 Control-\.</li>
+	<li><strong>test</strong> 以多进程模式启动 Apache. 执行 'make stop' 以停止 Apache.</li>
+	<li><strong>stop</strong> 在使用 'make test' 启动 Apache 后，执行此命令以停止 Apache.</li>
+	<li><strong>valgrind</strong> 以单进程模式启动 Apache 和 valgrind.</li>
+	<li><strong>debug</strong> 以单进程模式启动 Apache 和 gdb. 注意查找写有 "Copy/paste the following line to gdb" 的那一行。您需要在调试器中使用 'run -x -f ...' 命令启动 Apache.</li>
+</ul>
+<h4><a name="Quick_Install_DebianUbuntu"></a>2.3 <a title="Back to top" href="#top">在 Debian/Ubuntu 中快速安装</a></h4>
+<p>作为 root 执行以下命令或在每个命令前使用 sudo:<p>
+<pre class="code">
+apt-get install r-base-dev apache2-mpm-prefork apache2-prefork-dev
+wget http://biostat.mc.vanderbilt.edu/rapache/files/rapache-latest.tar.gz
+rapachedir=`tar tzf rapache-latest.tar.gz   | head -1`
+tar xzvf rapache-latest.tar.gz
+cd $rapachedir
+./configure
+make
+make install
+</pre>
+
+<h3><a name="Configuring_rapache"></a>3. <a title="Back to top" href="#top">配置 rApache</a></h3>
+<!-- what to place in your apache2 config file -->
+
+<p>此节详细说明了您需要向 Apache 配置文件中添加的内容。如果您使用编译源代码的方式安装 Apache, 则只需编辑主配置文件 httpd.conf 即可。如果您是以二进制方式安装，可能需要分别修改多个分散的配置文件。所以，在做任何修改之前，请首先了解您的 Apache 配置文件分布情况。</p>
+
+<h4><a name="R_module"></a>3.1 <a title="Back to top" href="#top">R_module</a></h4>
+<p>
+首先使 Apache 加载 mod_R 模块 (<b>必须置于任何 rApache 相关命令之前</strong>):
+</p>
+<pre class="code">
+# 所有 Apache 模块均以此方式加载. 请切记
+# 字符串 "R_module" 是大小写敏感的,
+# 在配置文件中请务必正确书写.
+
+LoadModule R_module           /apache/module/path/mod_R.so
+</pre>
+<p>
+<a href="http://httpd.apache.org/docs/2.2/mod/mod_so.html#loadmodule">LoadModule</a> 是一个 Apache 指令，用以连接包含 module strucutres 的目标文件。rApache 的 module structure 名为 "R_Module".
+</p>
+
+<p><b>注意:</strong> 
+
+在某些 UNIX 系统上尝试启动 apache2 时，您也许会看到类似下列错误信息：
+
+<pre class="code">
+apache2: Syntax error on line 186 of /etc/apache2/apache2.conf: Cannot load 
+/usr/lib/apache2/modules/mod_R.so into server: libR.so: cannot open shared 
+object file: No such file or directory
+</pre>
+
+要解决此问题，我们需要引导您系统的实时连接器(real-time linker)，即 ld.so, 寻找到 libR.so 的所在目录。最简单的方法是添加该目录的路径到文件 /etc/ld.so.conf 中，然后以 root 重新执行 ldconfig. 如果您不知道此目录的路径，执行以下命令即可得到：
+
+<pre class="code">
+$ R CMD config --ldflags
+-L/usr/lib/R/lib -lR
+</pre>
+
+在上面的输出信息中，<b>/usr/lib/R/lib</strong> 即为需要向 /etc/ld.so.conf 中添加的路径。
+
+<h4><a name="ROutputErrors"></a>3.2 <a title="Back to top" href="#top">ROutputErrors</a></h4>
+<p>
+这条指令的出现意味着 rApache 需要将 R 的出错信息转换为 HTML 代码输出到浏览器中显示，而非写入 Apache 的错误日志。请注意，此举改变了传递给浏览器的 HTTP 响应状态代码。当 Apache 配置文件中含有 ROutputErrors 这条指令时，出错后将返回 200 OK. 否则，出错后将返回 500 INTERNAL_SERVER_ERROR. 示例配置片段如下：
+</p>
+<pre class="code">
+# 将下列语句加入配置文件以将错误信息转换为在浏览器中显示的 HTML.
+# 否则, 所有警告和错误信息将被写入 Apache 的错误日志.
+
+ROutputErrors
+</pre>
+
+<h4><a name="r_info"></a>3.3 <a title="Back to top" href="#top">SetHandler r-info</a></h4>
+
+<p>
+第一次配置 rapache 时，不妨添加以下指令来确认整套系统已正常工作。当您访问 /RApacheInfo 时，将看到一份自动生成的关于 R 和 Apache 状态的报告。配置生产环境的主机时，此步骤可略去。
+</p>
+
+<pre class="code">
+# 生成并输出一份关于 R 在 Apache 中运行状态的报告.
+&lt;Location /RApacheInfo&gt;
+SetHandler r-info
+&lt;/Location&gt;
+</pre>
+
+<a href="RApacheInfo.html">点击这里查看一个示例。</a>
+
+<h4><a name="REvalOnStartup"></a>3.4 <a title="Back to top" href="#top">REvalOnStartup</a></h4>
+
+<p>这条指令可接受一个字符串型参数：在启动时要执行的 R 语言表达式。在配置文件中可写任意多条此类指令，并根据出现的先后顺序在全局环境 (global environment) 执行。如下所示，适合设置选项或载入 R 包：</p>
+
+<pre class="code">
+# 载入所需的 DBI 包和 RMySQL 包
+
+REvalOnStartup "library(DBI); library(RMySQL)"
+</pre>
+
+<h4><a name="RSourceOnStartup"></a>3.5 <a title="Back to top" href="#top">RSourceOnStartup</a></h4>
+
+<p>使用此指令即可在启动时执行较多的 R 代码。这等价于在全局环境中调用 source() 函数。与 REvalOnStartup 指令类似，此指令可以出现在配置文件的任何位置，且根据出现的顺序依次执行。</p>
+
+<pre class="code">
+# 配置启动时要执行的代码所在的文件
+
+RSourceOnStartup "/var/www/lib/R/startup.R"
+</pre>
+
+<h4><a name="R_Handlers"></a>3.6 <a title="Back to top" href="#top">R Handlers</a></h4>
+
+<p><i> 由于此节所述内容非常容易引发混乱，所以认真阅读此节是十分必要的。您将学习两条 Apache 指令，两条 rApache 指令，以及两种 SetHandler 选项。</i></p>
+
+<h5><a name="Location_Directory"></a>3.6.1 <a title="Back to top" href="#top">Location 和 Directory 的区别</a></h5>
+
+<p> 在此使用 Apache 指令 <a href="http://httpd.apache.org/docs/2.2/mod/core.html#location">Location</a>
+和 <a href="http://httpd.apache.org/docs/2.2/mod/core.html#directory">Directory</a>
+的目的是将 URL、文件路径匹配到 R 处理器 (handler) 上。的确，Apache 的可定制性极强，还存在其他可以更精细地控制 URL 和文件的指令。请参阅 <a href="http://httpd.apache.org/docs/2.2/">Apache 官方文档</a> 以了解更多信息。 </p>
+
+<p>"Location" 用于定义与文件系统中的文件无映射关系的 URL 行为。在 rApache 中，它可以用于调用一个 R 处理器 (handler). 举例来说，假设我们已在 example.com 安装了 rApache, 并且如 3.3 节添加了如下的 "Location" 指令：
+
+<pre class="code">
+&lt;Location /Risneat&gt;
+    SetHandler r-info
+&lt;/Location&gt;
+</pre>
+
+<p>
+那么，此 URL http://example.com/Risneat 将调用处理器 r-info, 但此 URL 不与文件系统中的任何文件存在映射关系。
+</p>
+
+<p>"Directory" 用于定义文件系统中与文件有关的行为。在 rApache 中，它可以通过类似于下述的 R 处理器 (handler) 来执行包含 R 语言表达式的文件：</p>
+
+<pre class="code">
+# 位于 /var/www/brew 目录下的所有文件
+# 都将被传递给 brew 包中的函数 brew() 进行处理
+&lt;Directory /var/www/brew&gt;
+    SetHandler r-script
+    RHandler brew::brew
+&lt;/Directory&gt;
+</pre>
+
+<p>
+假设站点 example.com 的 Apache 根目录 (DocumentRoot) 为 /var/www/, 那么文件 /var/www/brew/foo.html 映射到的 URL 就为  http://example.com/brew/foo.html, 且将通过 brew 包执行。
+</p>
+
+<h5><a name="handler_script"></a>3.6.2 <a title="Back to top" href="#top">r-handler 和 r-script 的区别</a></h5>
+
+<p><strong>r-handler</strong>, <strong>r-script</strong> 和 <strong>r-info</strong> 均为 Apache 中 <a href="http://httpd.apache.org/docs/2.2/mod/core.html#sethandler">SetHandler</a> 指令的可用参数 ("r-info" 在 3.3 节中已作阐释)。调用
+SetHandler 将强制通过指定名称的处理器 (handler) 解析相应的 URL.</p>
+
+<p><strong>r-handler</strong> 可用于不加参数调用 R 函数。您也可以指定一个特定文件 (见下文)。此参数通常与指令 Location 配合使用。</p>
+
+<p><strong>r-script</strong> 使用两个参数调用 R 函数：第一个参数为文件的完整路径，第二个参数用于指定 R 中的环境 (environment)。此参数通常与 Directory 指令配合使用。</p>
+
+<p>使用上述任意一个 SetHandler 指令的参数都要求调用的函数或脚本返回一个合适的 HTTP 响应代码。当此代码的值为 OK 的情况下 (大多数), 将传递给浏览器一个 HTTP 响应代码 200. 若您的函数或脚本想在出错时给出提示，则须返回一个 S3 类 (class) 中的 'try-error' 对象 (关于 'try-error' 类，请参阅 R 语言文档中关于 try 和 tryCatch 的部分)。</p>
+
+<h5><a name="RHandler"></a>3.6.3 <a title="Back to top" href="#top">RHandler</a></h5>
+
+<p>RHandler 用以指定一个具体的 R 函数来处理提交的 Web 请求。此 R 函数必须存在于已加载包或 R 的搜索路径中。如同在 R 中一样，您可以在函数名前使用 "::" 以指定其所属包的名称。示例：</p>
+
+<pre class="code">
+# 指定 foo() 为要执行的函数.
+# 可能由 REvalOnStartup 或 RSourceOnStartup 创建
+
+RHandler foo
+
+# 执行位于 foo 包中的 bar() 函数
+
+RHandler foo::bar
+</pre>
+
+<h5><a name="RFileHandler"></a>3.6.4 <a title="Back to top" href="#top">RFileHandler</a></h5>
+
+<p>
+RFileHandler 用以指定一个文件和 (或) 函数来处理收到的 Web 请求。使用记号 "::"  来同时指定文件和文件中的函数 (需使用文件的绝对路径)。示例：
+</p>
+
+<pre class="code">
+# 一个 Hello world 程序. 等价于对每个请求调用 source('/var/www/R/hello.R')
+
+RFileHandler /var/www/R/hello.R
+
+# 调用 bar.R 中的 foo() 函数
+
+RFileHandler /var/www/R/bar.R::foo
+</pre>
+
+<p>关于 RFileHandler 另外一个注解是，当且仅当其指定的文件的时间戳改变时，文件才会被重新解析。这一特性对调试有相当帮助，一旦代码成熟，您可以将其做成包并使用 RSourceOnStartup 指令来读取，然后作为函数调用，这样做效率更高。</p>
+
+<h5><a name="Example_Configurations"></a>3.6.5 <a title="Back to top" href="#top">配置示例</a></h5>
+
+<p>目前最简单的配置实例是 brew 包的例子。在 /var/www/brew 目录下的每个文件均被视为一个 brew 脚本：</p>
+
+<pre class="code">
+# 位于 /var/www/brew 目录下的所有文件都将通过 brew 包中的 brew() 函数处理
+&lt;Directory /var/www/brew&gt;
+	SetHandler r-script
+	RHandler brew::brew
+&lt;/Directory&gt;
+</pre>
+
+<p>另一个选择是使用 sys.source:<p>
+
+<pre class="code">
+# 在 /var/www/R-files 目录下的所有文件都将通过函数 sys.source() 执行.
+&lt;Directory /var/www/R-files&gt;
+	SetHandler r-script
+	RHandler sys.source
+&lt;/Directory&gt;
+</pre>
+
+<p>一个 Hello World 程序，URL 为 /test/helloworld:</p>
+<pre class="code">
+# 为所有匹配 /test/helloworld 目录的请求, 包括针对
+# /test/helloworld/foobar 目录的请求执行 helloworld.r 中的 R 表达式
+
+&lt;Location /test/helloworld&gt;
+        SetHandler r-handler
+        RFileHandler /path/to/R/scripts/helloworld.r
+&lt;/Location&gt;
+</pre>
+
+<h3><a name="rapache_Functions"></a>4. <a title="Back to top" href="#top">rApache 函数</a></h3>
+
+<p> 以下函数可用于 R 处理器 (handler) 中。</p>
+
+<h4><a name="setHeader"></a>4.1 <a title="Back to top" href="#top">setHeader</a></h4>
+
+<p>为响应添加 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html">HTTP 响应头 (response header) (RFC2616)</a>.
+所有的 headers 必须在第一次 print() 或 cat() 的输出前被添加。</p>
+
+<div class="rdoc">
+<p>示例：</p>
+<pre class="code">
+setHeader(header='X-Powered-By',value='rApache')
+</pre>
+
+<p>参数：</p>
+<ul>
+<li><strong>header</strong> 字符型. header 的名称: 大小写敏感.</li>
+<li><strong>value</strong> header 的值. 任意可被转换为字符型的长度为 1 的 R 对象</li>
+</ul>
+
+<p>返回值：</p> 
+<ul><li>返回传入的值 (value). 当 name 或 value 为非字符型时返回值为空 (NULL).</ul>
+</div>
+
+<h4><a name="setContentType"></a>4.2 <a title="Back to top" href="#top">setContentType</a></h4>
+<p>允许处理器 (handler) 设置请求的 <a href="http://www.wikipedia.org/wiki/Internet_media_type">内容类型 (content type)</a>. 必须在使用 print() 或 cat() 函数做输出前调用.</p>
+
+<div class="rdoc">
+<p>示例：</p>
+<pre class="code">
+setContentType(type='image/png')
+</pre>
+
+<p>参数：</p>
+<ul>
+<li><strong>type</strong> 长度为 1 的字符型向量. 需为有效的 MIME 类型.</li>
+</ul>
+
+<p>返回值：</p>
+<ul>
+<li>返回 type, 出错时返回 NULL.</li>
+</ul>
+
+</div>
+
+<h4><a name="setCookie"></a>4.3 <a title="Back to top" href="#top">setCookie</a></h4>
+<p>为响应头添加 <a href="http://www.wikipedia.org/wiki/HTTP_cookie">HTTP Cookies</a>.
+最简单的情形, 调用 setCookie(r,'foo','bar') 将赋值 'bar' 给名为 'foo' 的 cookie. 调用 setCookie(r,'foo') 将删除名为 'foo' 的 cookie.
+可使用 ... 来附加任何非标准的键值对.
+</p>
+
+<div class="rdoc">
+
+<p>示例：</p>
+<pre class="code">
+setCookie(name='sessionID',value=paste(rnorm(1)))
+</pre>
+
+<p>参数：</p>
+<ul>
+<li><strong>name</strong> 字符型. Cookie 名称.</li>
+<li><strong>value</strong> 任意可被转换为字符型的长度为 1 的 R 对象. Cookie 值.</li>
+<li><strong>expires</strong> POSIXct 对象. 决定 cookie 的过期时间.</li>
+<li><strong>path</strong> 字符型. Cookie 归属的 URL.</li>
+<li><strong>domain</strong> 字符型. Cookie 归属的域名.</li>
+<li><strong>...</strong> 其他的 cookie 附加值.</li>
+</ul>
+
+<p>返回值：</p>
+<ul><li>以字符串形式表示的 Cookie. 若 name 未被赋值, 则返回 NULL.</li></ul>
+
+</div>
+
+<h4><a name="urlEncode"></a>4.4 <a title="Back to top" href="#top">urlEncode 和 urlDecode</a></h4>
+<p>对字符型向量进行<a href="http://www.wikipedia.org/wiki/Percent-encoding">百分比式编解码</a>.</p>
+
+<div class="rdoc">
+<p>示例：</p>
+<pre class="code">
+urlEncode(str='hello world@example.com')
+urlDecode(str='hello+world%40example.com')
+</pre>
+
+<p>参数：</p>
+<ul>
+<li><strong>str</strong> 要进行编码或解码的字符型向量.</li>
+</ul>
+
+<p>返回值：</p>
+<ul><li>与 str 长度相同的字符型向量.</li></ul>
+</div>
+
+<h4><a name="RApacheInfo"></a>4.5 <a title="Back to top" href="#top">RApacheInfo</a></h4>
+<p>输出一份关于 rapache 的报告 <a href="RApacheInfo.html">(示例)</a>.
+须为 R 处理器 (handler) 中的唯一调用。等价于使用 "SetHandler r-info".</p>
+
+<div class="rdoc">
+<p>示例：</p>
+<pre class="code">
+RApacheInfo()
+</pre>
+
+<p>参数：</p>
+<ul><li>无</li></ul>
+
+<p>返回值：</p>
+<ul><li>NULL.</li></ul>
+</div>
+
+<h4><a name="sendBin"></a>4.6 <a title="Back to top" href="#top">sendBin</a></h4>
+<p>向浏览器发送二进制数据. 此函数等价于 R 中的 writeBin() 函数, 但在这里参数 connection 已被忽略.
+参阅 R 文档中关于 <strong>writeBin()</strong> 函数的部分.</p>
+
+<div class="rdoc">
+<p>示例：</p>
+<pre class="code">
+sendBin(object=readBin(t,'raw',n=file.info(t)$size))
+</pre>
+
+<p>参数：</p>
+<ul>
+  <li><strong>object</strong> 要写入到 connection 中的 R 对象.</li>
+  <li><strong>con</strong> 已被忽略, 调用中可省略.</li>
+  <li><strong>size</strong> 整数. 比特流中每个元素的比特数. 默认值 <i>NA_integer_</i> 使用自然大小.
+    原始 (raw) 型向量和复数型向量不支持改变 size.</li>
+  <li><strong>endian</strong> 字节序. (针对文件使用 <i>'big'</i> 或 <i>'little'</i>, 即大字节序和小字节序两种顺序, 使用 <i>"swap"</i> 强制交换字节序.)</li>
+</ul>
+
+<p>返回值：</p>
+<ul><li>NULL</ul></li>
+</div>
+
+<h4><a name="RApacheOutputErrors"></a>4.7 <a title="Back to top" href="#top">RApacheOutputErrors</a></h4>
+<p>决定 rApache 将错误信息输出到浏览器还是输出到 apache 错误日志.
+优先级高于作用于整个模块的 apache 配置指令 ROutputErrors.
+此函数也可控制发送给请求者的 HTTP 响应代码, 参数 status=TRUE 时为 200, 参数 status=FALSE 时为 500.</p>
+
+<div class="rdoc">
+<p>示例：</p>
+<pre class="code">
+# 将警告和错误转换为 HTML 注释
+RApacheOutputErrors(status=TRUE,prefix=&#39;&amp;lt!--\n&#39;,suffix=&#39;--&amp;gt\n&#39;)
+</pre>
+
+<p>参数：</p>
+<ul>
+  <li><strong>status</strong> 逻辑型. 若为 TRUE, 将错误信息输出到浏览器; 若为 FALSE, 则将错误信息写入 apache 日志文件.</li>
+  <li><strong>prefix</strong> 字符串. 仅当参数 status=TRUE 时生效. 发送给浏览器的每条错误信息的前缀文字.</li>
+  <li><strong>suffix</strong> 字符串. 仅当参数 status=TRUE 时生效. 发送给浏览器的每条错误信息的后缀文字.</li>
+</ul>
+<p>返回值：</p>
+<ul><li>NULL.</li></ul>
+</div>
+
+<h3><a name="rapache_Variables"></a>5. <a title="Back to top" href="#top">rApache 变量</a></h3>
+
+<p>
+在早期版本的 rApache 中，来自 Web 服务器的信息是作为一个单独的变量传递给 R 处理器 (handler) 的。这种体系设计仿效了其他第三方 apache 模块的普遍做法，但事实证明，这种设计给维护模块的开发者带来了诸多不便。由于 R 支持词法作用域 (lexical scoping) 机制，并拥有在更广意义上灵活操纵语言的能力，所以我们改而实现了另一种更为简明的设计。
+</p>
+
+<p>和 PHP 变量的名字相似，rApache 变量存在于一个只读列表中，大多数情况下其值为字符型向量。它们已被注入到 R 处理器 (handler) 所在环境中，您编写的 R 代码将根据<a href="http://cran.r-project.org/doc/manuals/R-intro.html#Scope">词法作用域规则</a>来寻找它们。<p>
+
+<h4><a name="GET"></a>5.1 <a title="Back to top" href="#top">GET</a></h4>
+
+<p>变量 GET 包含了以 HTTP GET 方式获取的值 (values). 即 URL 中，问号后接的键值对，或当 HTML 表单的 method 属性为 "GET" 时所传递的数据。举例来说，如下表单：
+
+<pre class="code">
+&lt;form method=&quot;GET&quot; action=&quot;http://example.com/brew/get.html&quot;&gt;
+	&lt;input type=&quot;text&quot; name=&quot;p1&quot; value=&quot;0.95&quot;&gt;
+	&lt;input type=&quot;text&quot; name=&quot;p2&quot; value=&quot;0.7&quot;&gt;
+&lt;input type=&quot;submit&quot; name=&quot;Submit&quot;&gt;
+&lt;/form&gt;
+</pre>
+
+将生成如下的 GET 变量 (列表型)：
+
+<pre class="code">
+> str(GET)
+List of 3
+ $ p1    : chr "0.95"
+ $ p2    : chr "0.7"
+ $ Submit: chr "Submit Query"
+</pre>
+
+<h4><a name="POST"></a>5.2 <a title="Back to top" href="#top">POST</a></h4>
+
+<p>变量 POST 包含了通过 HTTP POST 方式发送的值。即，当 HTML 表单的 method 属性为 "POST" 时所传递的数据。将上一小节示例中的 method 修改为 "POST" 将生成同样的值。只是此处存入的是 POST 变量：
+
+<pre class="code">
+> str(POST)
+List of 3
+ $ p1    : chr "0.95"
+ $ p2    : chr "0.7"
+ $ Submit: chr "Submit Query"
+</pre>
+
+<h4><a name="COOKIES"></a>5.3 <a title="Back to top" href="#top">COOKIES</a></h4>
+
+<p>变量 COOKIES 包含了从名为 "Cookie" 的 HTTP 响应头取得的值。它是一个值为字符型向量的列表型变量。参考 <a href="#setCookie">setCookie</a> 函数和<a href="http://www.wikipedia.org/wiki/HTTP_cookie">此链接</a>以了解更多。
+
+<h4><a name="FILES"></a>5.4 <a title="Back to top" href="#top">FILES</a></h4>
+
+<p>变量 FILES 包含了当 HTML 表单的 enctype 属性被设置为 "multipart/form-data" 时，通过表单所上传文件的信息。如下表单：
+
+<pre class="code">
+&lt;form enctype=&quot;multipart/form-data&quot; method=&quot;POST&quot; action=&quot;URL&quot;&gt;
+	&lt;input type=&quot;file&quot; name=&quot;FirstFile&quot;&gt;
+	&lt;input type=&quot;file&quot; name=&quot;SecondFile&quot;&gt;
+&lt;input type=&quot;submit&quot; name=&quot;Upload&quot;&gt;
+</pre>
+
+将生成如下 FILES 变量：
+
+<pre class="code">
+> str(FILES)
+List of 2
+ $ FirstFile :List of 2
+  ..$ name    : chr "useR2007poster.pdf"
+  ..$ tmp_name: chr "/tmp/apreqc9GlXE"
+ $ SecondFile:List of 2
+  ..$ name    : chr "rapache-1.0.0-useR2007.tar.gz"
+  ..$ tmp_name: chr "/tmp/apreqoQ2hhX"
+</pre>
+
+<p>它是一个由列表组成的列表型变量，以嵌套结构给出了文件的名称 ("name")、缓存文件的文件名 ("tmp_name") 以及缓存文件的所在位置。例如，要引用 input 标签名为 "FirstFile" 的已上传文件，写法即为 FILES$FirstFile$tmp_name. 以下是一段将文件复制到 '/usr/local/uploaded_files' 目录的代码：</p>
+
+<pre class="code">
+destination <- file.path('/usr/local/uploaded_files',FILES$FirstFile$name)
+file.copy(FILES$FirstFile$tmp_name,destination,overwrite=TRUE)
+</pre>
+
+<p>注意：当 R 处理器 (handler) 处理请求完成后，缓存文件将被自动删除。因此，请切记在 R 处理器 return 之前将缓存文件复制或移动到您想要的位置。<p>
+
+<h4><a name="SERVER"></a>5.5 <a title="Back to top" href="#top">SERVER</a></h4>
+
+<p>如下列输出所示，SERVER 变量包含了关于传入 Web 请求的丰富信息：</p>
+
+<pre class="code">
+> str(SERVER)
+List of 30
+ $ headers_in        :List of 9
+  ..$ Host           : chr "localhost:8181"
+  ..$ User-Agent     : chr "Mozilla/5.0 (X11; U; Linux i686; en-US; ..."
+  ..$ Accept         : chr "text/xml,application/xml,application/x..."
+  ..$ Accept-Language: chr "en-us,en;q=0.5"
+  ..$ Accept-Encoding: chr "gzip,deflate"
+  ..$ Accept-Charset : chr "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+  ..$ Keep-Alive     : chr "300"
+  ..$ Connection     : chr "keep-alive"
+  ..$ Cache-Control  : chr "max-age=0"
+ $ proto_num         : int 1001
+ $ protocol          : chr "HTTP/1.1"
+ $ unparsed_uri      : chr "/brew/server.html/beetles/?foo=bar"
+ $ uri               : chr "/brew/server.html/beetles/"
+ $ filename          : chr "/home/hornerj/rapache/branches/rapache-1-0-br..."
+ $ canonical_filename: chr "/home/hornerj/rapache/branches/rapache-1-0-br..."
+ $ path_info         : chr "/beetles/"
+ $ args              : chr "foo=bar"
+ $ content_type      : chr "text/html"
+ $ handler           : chr "r-script"
+ $ content_encoding  : NULL
+ $ range             : NULL
+ $ hostname          : chr "localhost"
+ $ user              : NULL
+ $ header_only       : logi FALSE
+ $ no_cache          : logi FALSE
+ $ no_local_copy     : logi FALSE
+ $ assbackwards      : logi FALSE
+ $ status            : int 200
+ $ method_number     : int 0
+ $ eos_sent          : logi FALSE
+ $ the_request       : chr "GET /brew/server.html/beetles/?foo=bar HTTP/1.1"
+ $ method            : chr "GET"
+ $ status_line       : NULL
+ $ bytes_sent        : num 0
+ $ clength           : num 0
+ $ remaining         : num 0
+ $ read_length       : num 0
+ $ request_time      :'POSIXct', format: chr "2007-08-15 11:11:49"
+ $ mtime             :'POSIXct', format: chr "1969-12-31 18:00:00"
+</pre>
+
+<p>以下是列表中元素的具体说明：</p>
+
+	<div id="rdoc">
+	<p><strong>headers_in</strong>  客户端发送的 HTTP 头信息组成的列表.</p>
+
+    <p><strong>proto_num</strong>  整数型. 协议的版本号; 1.1 = 1001</p>
+
+    <p><strong>protocol</strong>  字符型. 协议字符串, 如上所示, 或可能为 HTTP/0.9.</p>
+
+    <p><strong>unparsed_uri</strong>  字符型. 未进行任何解析的 URI.</p>
+
+    <p><strong>uri</strong>  字符型. URI 的路径部分.</p>
+
+    <p><strong>filename</strong> 字符型. 含有完整路径信息的文件名.</p>
+
+    <p><strong>canonical_filename</strong> 字符型. 真正的文件名. 大小写、别名、符号链接已被解析.</p>
+
+    <p><strong>path_info</strong>  字符型. 当 URL 已被匹配到一个 Web 服务器已知的资源时, URL 的前缀部分. 这里的"资源"指被 Apache 的 Location 指令定义的一个文件或一个 URL.</p>
+
+    <p><strong>args</strong>  字符型. 从请求中提取的, 以HTTP GET 方式发送的数据.</p>
+
+    <p><strong>content_type</strong> 字符型. 当前请求的内容类型.</p>
+
+    <p><strong>handler</strong>  字符型. 用来调用处理器函数 (handler function) 的处理器字符串 (handler string).</p>
+
+    <p><strong>content_encoding</strong> 字符型. 数据的编码.</p>
+
+    <p><strong>range</strong> 字符型. 名为 "Range:" 的 HTTP 响应头.</p>
+
+    <p><strong>hostname</strong>  字符型. 服务器的主机名.</p>
+
+    <p><strong>user</strong>  字符型. 若进行了 HTTP 认证, 此元素取得用户名.</p>
+
+    <p><strong>header_only</strong> 逻辑型. HEAD 请求, 与 GET 相对.</p>
+
+    <p><strong>no_cache</strong> 逻辑型. 此响应不可被缓存.</p>
+
+    <p><strong>no_local_copy</strong>  逻辑型. 此响应无本地副本.</p> 
+
+	<p><strong>assbackwards</strong> 逻辑型. HTTP/0.9, "简易"型请求 (如 GET /foo\n w/no headers). 开发者发现这是一种不使用头 (header) 进行内部重定向的有效途径.</p>
+
+    <p><strong>status</strong> 整数型. 状态行.</p>
+
+    <p><strong>method_number</strong> GET, POST 等方式的整数代表值.</p>
+
+    <p><strong>eos_sent</strong> 逻辑型. 一个判断流终止存储段 (EOS bucket) 是否已被发送的标志.</p>
+
+    <p><strong>the_request</strong> 字符型. 请求的第一行.</p>
+
+    <p><strong>method</strong>  字符型. 请求方式 (如 GET, HEAD, POST 等).</p>
+
+    <p><strong>status_line</strong> 字符型. 状态行, 如果已被脚本设定.</p>
+
+    <p><strong>bytes_sent</strong> 数值型. 已发送的字节数.</p>
+
+    <p><strong>clength</strong> 数值型. "真正的"内容长度.</p>
+
+    <p><strong>remaining</strong> 数值型. 要从请求体中读取的剩余字节数.</p>
+
+    <p><strong>read_length</strong> 数值型. 已从请求体中读取的字节数.</p>
+
+    <p><strong>request_time</strong> POSIXct DateTime 对象. 请求开始的时间.</p>
+
+    <p><strong>mtime</strong> POSIXct DateTime 对象. 所请求资源的最后修改时间.</p>
+	</div>
+
+<h4><a name="HTTP_RESPONSE_CODES"></a>5.6 <a title="Back to top" href="#top">处理器返回值和 HTTP 响应代码</a></h4>
+
+<p>下表描述了在 R 处理器 (handler) 环境中以长度为 1 的整数型向量形式存在的变量，以及它们对于 R 处理器 (handler) 正确的返回值。其中包括了 Apache 模块的返回值和 HTTP 状态代码 (参看 <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10"> RFC2616 中的状态代码定义</a>)。最正常的，同时也是绝大多数处理器 (handler) 将返回的值为 DONE.</p>
+
+<table><tr><th>名称</th><th>值</th><th>描述</th></tr>
+<tr><td>DECLINDED</td><td>                          -1</td><td>模块拒绝处理.</td></tr>
+<tr><td>DONE</td><td>                               -2</td><td>模块处理响应完毕.</td></tr>
+<tr><td>OK</td><td>                                 -0</td><td>模块已处理此 Apache 响应阶段 (response stage).</td></tr>
+<tr><td>HTTP_CONTINUE</td><td>                     100</td><td></tr>
+<tr><td>HTTP_SWITCHING_PROTOCOLS</td><td>          101</td><td></tr>
+<tr><td>HTTP_PROCESSING</td><td>                   102</td><td></tr>
+<tr><td>HTTP_OK</td><td>                           200</td><td></tr>
+<tr><td>HTTP_CREATED</td><td>                      201</td><td></tr>
+<tr><td>HTTP_ACCEPTED</td><td>                     202</td><td></tr>
+<tr><td>HTTP_NON_AUTHORITATIVE</td><td>            203</td><td></tr>
+<tr><td>HTTP_NO_CONTENT</td><td>                   204</td><td></tr>
+<tr><td>HTTP_RESET_CONTENT</td><td>                205</td><td></tr>
+<tr><td>HTTP_PARTIAL_CONTENT</td><td>              206</td><td></tr>
+<tr><td>HTTP_MULTI_STATUS</td><td>                 207</td><td></tr>
+<tr><td>HTTP_MULTIPLE_CHOICES</td><td>             300</td><td></tr>
+<tr><td>HTTP_MOVED_PERMANENTLY</td><td>            301</td><td></tr>
+<tr><td>HTTP_MOVED_TEMPORARILY</td><td>            302</td><td></tr>
+<tr><td>HTTP_SEE_OTHER</td><td>                    303</td><td></tr>
+<tr><td>HTTP_NOT_MODIFIED</td><td>                 304</td><td></tr>
+<tr><td>HTTP_USE_PROXY</td><td>                    305</td><td></tr>
+<tr><td>HTTP_TEMPORARY_REDIRECT</td><td>           307</td><td></tr>
+<tr><td>HTTP_BAD_REQUEST</td><td>                  400</td><td></tr>
+<tr><td>HTTP_UNAUTHORIZED</td><td>                 401</td><td></tr>
+<tr><td>HTTP_PAYMENT_REQUIRED</td><td>             402</td><td></tr>
+<tr><td>HTTP_FORBIDDEN</td><td>                    403</td><td></tr>
+<tr><td>HTTP_NOT_FOUND</td><td>                    404</td><td></tr>
+<tr><td>HTTP_METHOD_NOT_ALLOWED</td><td>           405</td><td></tr>
+<tr><td>HTTP_NOT_ACCEPTABLE</td><td>               406</td><td></tr>
+<tr><td>HTTP_PROXY_AUTHENTICATION_REQUIRED</td><td>407</td><td></tr>
+<tr><td>HTTP_REQUEST_TIME_OUT</td><td>             408</td><td></tr>
+<tr><td>HTTP_CONFLICT</td><td>                     409</td><td></tr>
+<tr><td>HTTP_GONE</td><td>                         410</td><td></tr>
+<tr><td>HTTP_LENGTH_REQUIRED</td><td>              411</td><td></tr>
+<tr><td>HTTP_PRECONDITION_FAILED</td><td>          412</td><td></tr>
+<tr><td>HTTP_REQUEST_ENTITY_TOO_LARGE</td><td>     413</td><td></tr>
+<tr><td>HTTP_REQUEST_URI_TOO_LARGE</td><td>        414</td><td></tr>
+<tr><td>HTTP_UNSUPPORTED_MEDIA_TYPE</td><td>       415</td><td></tr>
+<tr><td>HTTP_RANGE_NOT_SATISFIABLE</td><td>        416</td><td></tr>
+<tr><td>HTTP_EXPECTATION_FAILED</td><td>           417</td><td></tr>
+<tr><td>HTTP_UNPROCESSABLE_ENTITY</td><td>         422</td><td></tr>
+<tr><td>HTTP_LOCKED</td><td>                       423</td><td></tr>
+<tr><td>HTTP_FAILED_DEPENDENCY</td><td>            424</td><td></tr>
+<tr><td>HTTP_UPGRADE_REQUIRED</td><td>             426</td><td></tr>
+<tr><td>HTTP_INTERNAL_SERVER_ERROR</td><td>        500</td><td></tr>
+<tr><td>HTTP_NOT_IMPLEMENTED</td><td>              501</td><td></tr>
+<tr><td>HTTP_BAD_GATEWAY</td><td>                  502</td><td></tr>
+<tr><td>HTTP_SERVICE_UNAVAILABLE</td><td>          503</td><td></tr>
+<tr><td>HTTP_GATEWAY_TIME_OUT</td><td>             504</td><td></tr>
+<tr><td>HTTP_VERSION_NOT_SUPPORTED</td><td>        505</td><td></tr>
+<tr><td>HTTP_VARIANT_ALSO_VARIES</td><td>          506</td><td></tr>
+<tr><td>HTTP_INSUFFICIENT_STORAGE</td><td>         507</td><td></tr>
+<tr><td>HTTP_NOT_EXTENDED</td><td>                 510</td><td></tr>
+</table>
+
+<br>
+<p>另一个可能的处理器 (handler) 返回值是一个 S3 中 'try-error' 类的对象.</p>
+
+<h3><a name="rapache_Cookbook"></a>6. <a title="Back to top" href="#top">rApache 实战</a></h3>
+<p>要查看一个完整的 rApache 应用，请下载 <a href="http://biostat.mc.vanderbilt.edu/svn/rapache/web/files/useR2007brew.tgz">useR2007 会议上的示例程序</a>。 此程序使用了 <a href="http://biostat.mc.vanderbilt.edu/Hmisc">Hmisc</a> 和 <a href="http://www.rforge.net/brew/">brew</a> 包来进行势和样本量的计算。</p>
+
+<p>下列代码通过对浏览器发送的数据给出回显，实践了 rApache 的全部功能。请复制以下代码并粘贴到一个文件中，然后使用下述选项设置 rApache, 最后使用浏览器访问 http://example.com/rapachetest (请用您自己的主机名替换 example.com).</p>
+
+<pre class="code">
+# 
+# 以下请放入您的 Apache 配置文件.
+#
+&lt;Location /rapachetest&gt;
+	SetHandler r-handler
+	RFileHandler /var/www/R/test.R
+&lt;/Location&gt;
+</pre>
+
+	<!-- sample app -->
+<pre class="code">
+#
+# 复制下列代码到 /var/www/R/test.R 并保存
+#
+hrefify &lt;- function(title) gsub(&#39;[\\.()]&#39;,&#39;_&#39;,title,perl=TRUE)
+scrub &lt;- function(str){ 
+	if (is.null(str)) return(&#39;NULL&#39;)
+	if (length(str) == 0) return(&#39;length 0 string&#39;)
+	cat(&quot;\n&lt;!-- before as.character: (&quot;,str,&quot;)--&gt;\n&quot;,sep=&#39;&#39;)
+	str &lt;- as.character(str)
+	cat(&quot;\n&lt;!-- after as.character: (&quot;,str,&quot;)--&gt;\n&quot;,sep=&#39;&#39;)
+	str &lt;- gsub(&#39;&amp;&#39;,&#39;&amp;amp;&#39;,str); str &lt;- gsub(&#39;@&#39;,&#39;_at_&#39;,str); 
+	str &lt;- gsub(&#39;&lt;&#39;,&#39;&amp;lt;&#39;,str); str &lt;- gsub(&#39;&gt;&#39;,&#39;&amp;gt;&#39;,str); 
+	if (length(str) == 0 || is.null(str) || str == &#39;&#39;)
+		str &lt;- &#39;&amp;nbsp;&#39; 
+	str
+}
+cl&lt;-&#39;e&#39;
+zebary &lt;- function(i){ 
+	cl &lt;&lt;- ifelse(cl==&#39;e&#39;,&#39;o&#39;,&#39;e&#39;)
+	cat(&#39;&lt;tr class=&quot;&#39;,cl,&#39;&quot;&gt;&lt;td&gt;&#39;,scrub(i),&#39;&lt;/td&gt;&lt;/tr&gt;\n&#39;,sep=&#39;&#39;)
+}
+zeblist &lt;- function(i,l){ 
+	cl &lt;&lt;- ifelse(cl==&#39;e&#39;,&#39;o&#39;,&#39;e&#39;)
+	 cat(&#39;&lt;tr class=&quot;&#39;,cl,&#39;&quot;&gt;&lt;td class=&quot;l&quot;&gt;&#39;,names(l)[i],&#39;&lt;/td&gt;&lt;td&gt;&#39;)
+	if(is.list(l[[i]]))
+		zebra(names(l)[i],l[[i]])
+	else {
+		if (length(l[[i]]) &gt; 1)
+			zebary(l[[i]])
+		else
+			cat(scrub(l[[i]]))
+	}
+		
+	cat(&#39;&lt;/td&gt;&lt;/tr&gt;\n&#39;,sep=&#39;&#39;)
+}
+zebra &lt;- function(title,l){ 
+	cat(&#39;&lt;h2&gt;&lt;a name=&quot;&#39;,hrefify(title),&#39;&quot;&gt; &lt;/a&gt;&#39;,title,&#39;&lt;/h2&gt;\n&lt;table&gt;&lt;tbody&gt;&#39;,sep=&#39;&#39;)
+	ifelse(is.list(l),lapply(1:length(l),zeblist,l), lapply(l,zebary))
+	cat(&#39;&lt;/tbody&gt;&lt;/table&gt;\n&lt;br/&gt;&lt;hr/&gt;&#39;) 
+}
+
+# Output starts here
+setContentType(&quot;text/html&quot;)
+
+if(is.null(GET)){
+	called &lt;- 1
+} else {
+	called &lt;- as.integer(GET$called) + 1
+}
+
+setCookie(&#39;called&#39;,called,expires=Sys.time()+100)
+
+cat(&#39;&lt;HTML&gt;&lt;head&gt;&lt;style type=&quot;text/css&quot;&gt;\n&#39;) 
+cat(&#39;table { border: 1px solid #8897be; border-spacing: 0px; font-size: 10pt; }&#39;)
+cat(&#39;td { border-bottom:1px solid #d9d9d9; border-left:1px solid #d9d9d9; border-spacing: 0px; padding: 3px 8px; }&#39;)
+cat(&#39;td.l { font-weight: bold; width: 10%; }\n&#39;)
+cat(&#39;tr.e { background-color: #eeeeee; border-spacing: 0px; }\n&#39;)
+cat(&#39;tr.o { background-color: #ffffff; border-spacing: 0px; }\n&#39;)
+cat(&#39;&lt;/style&gt;&lt;/head&gt;&lt;BODY&gt;&lt;H1&gt;Canonical Test for rApache&lt;/H1&gt;\n&#39;)
+cat(&#39;&lt;form enctype=multipart/form-data method=POST action=&quot;?called=&#39;,called,&#39;&quot;&gt;\n&#39;,sep=&#39;&#39;)
+cat(&#39;Enter a string: &lt;input type=text name=name value=&quot;&quot;&gt;&lt;br&gt;\n&#39;,sep=&#39;&#39;)
+cat(&#39;Enter another string: &lt;input type=text name=name value=&quot;&quot;&gt;&lt;br&gt;\n&#39;,sep=&#39;&#39;)
+cat(&#39;Upload a file: &lt;input type=file name=fileUpload&gt;&lt;br&gt;\n&#39;)
+cat(&#39;Upload another file: &lt;input type=file name=anotherFile&gt;&lt;br&gt;\n&#39;)
+cat(&#39;&lt;input type=submit name=Submit&gt;&#39;)
+
+cat(&quot;&lt;hr&gt;\n&quot;)
+zebra(&#39;CGI GET Data&#39;,GET)
+zebra(&#39;CGI POST Data&#39;,POST)
+zebra(&#39;Cookies&#39;,COOKIES)
+if (!is.null(FILES)){
+	cat(&#39;&lt;h2&gt;Files Uploaded in POST Data&lt;/h2&gt;\n&#39;)
+	for (n in names(FILES)){
+		zebra(paste(&quot;Form Variable&quot;,n),FILES[[n]])
+	}
+}
+zebra(&quot;SERVER Variables&quot;,SERVER)
+cat(&quot;&lt;/BODY&gt;&lt;/HTML&gt;\n&quot;)
+
+DONE
+</pre>
+	<!-- testing for user input -->
+	<!-- uploading files -->
+<h3><a name="License"></a>7. 许可协议</h3>
+<p>
+  rApache 的源代码使用 <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache License Version
+  2.0</a> 进行授权。
+</p>
+<h3><a name="Citing"></a>8. 引用 rApache</h3>
+
+<p>要引用 rApache，使用：</p>
+
+<div class="citation"> Jeffrey Horner (2011). rApache: Web application development with R and Apache. http://biostat.mc.vanderbilt.edu/rapache/</div>
+
+<p> 可供 LaTeX 用户使用的 BibTeX 条目为</p>
+<pre class="code">
+@Manual{,
+	title = {rApache: Web application development with R and Apache.},
+	author = {Jeffrey Horner},
+	year = {2011},
+	url = {http://www.rapache.net/},
+}
+</pre>
+
+<h3><a name="Thanks"></a>9. 致谢</h3>
+<p>感谢以下同仁的贡献、建议和对问题的反馈。如果我忘记提到您，请发邮件与我联系。</p>
+<pre>
+	Gregoire Thomas
+	Jan de Leeuw
+	Keven E. Thorpe
+	Jeremy Stephens
+	Aleksander Wawer
+	David Konerding
+	Robert Kofler
+	Jeroen Ooms
+	Michael Driscoll
+</pre>
+<hr>
+&copy; 2011 范德比尔特大学 | 协议 (<a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>) | 使用 <a href="http://www.getskeleton.com">skeleton</a> 样式 | 肖楠 译
+</div>
+</div></body></html>
+ 

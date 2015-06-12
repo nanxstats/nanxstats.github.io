@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Nan Xiao</title>
+  <meta name="description" content="Nan Xiao">
+  <meta name="author" content="Nan Xiao">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/tomorrow-prettify-theme.css">
+
+  <!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.min.js"></script>
+  <script src="js/site.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body class="code-snippets-visible">
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+  <section class="header">
+
+    <div class="row">
+      <div class="eight columns">
+        <h1 class="title" align="left">Nan Xiao</h1>
+        <h5 align="left">Placeholder</h5>
+      </div>
+      <div class="four columns">
+        <img src="images/nanxiao.jpg" width="60%"/>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="navbar-spacer"></div>
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="projects.html">Projects</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="papers.html">Papers</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="books.html">Books</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="talks.html">Talks</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Grid -->
+  <div class="docs-section" id="grid">
+    <h6 class="docs-header">The grid</h6>
+    <p>The grid is a <u>12-column fluid grid with a max width of 960px</u>, that shrinks with the browser/device at smaller sizes. The max width can be changed with one line of CSS and all columns will resize accordingly. The syntax is simple and it makes coding responsive much easier. Go ahead, resize the browser.</p>
+    <div class="example-grid docs-example">
+      <div class="row">
+        <div class="one column">One</div>
+        <div class="eleven columns">Eleven</div>
+      </div>
+      <div class="row">
+        <div class="two columns">Two</div>
+        <div class="ten columns">Ten</div>
+      </div>
+      <div class="row">
+        <div class="three columns">Three</div>
+        <div class="nine columns">Nine</div>
+      </div>
+      <div class="row">
+        <div class="four columns">Four</div>
+        <div class="eight columns">Eight</div>
+      </div>
+      <div class="row">
+        <div class="five columns">Five</div>
+        <div class="seven columns">Seven</div>
+      </div>
+      <div class="row">
+        <div class="six columns">Six</div>
+        <div class="six columns">Six</div>
+      </div>
+      <div class="row">
+        <div class="seven columns">Seven</div>
+        <div class="five columns">Five</div>
+      </div>
+      <div class="row">
+        <div class="eight columns">Eight</div>
+        <div class="four  columns">Four</div>
+      </div>
+      <div class="row">
+        <div class="nine columns">Nine</div>
+        <div class="three columns">Three</div>
+      </div>
+      <div class="row">
+        <div class="ten columns">Ten</div>
+        <div class="two columns">Two</div>
+      </div>
+      <div class="row">
+        <div class="eleven columns">Eleven</div>
+        <div class="one column">One</div>
+      </div>
+    </div>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint"><!-- .container is main centered wrapper -->
+  <div class="container">
+
+    <!-- columns should be the immediate child of a .row -->
+    <div class="row">
+      <div class="one column">One</div>
+      <div class="eleven columns">Eleven</div>
+    </div>
+
+    <!-- just use a number and class 'column' or 'columns' -->
+    <div class="row">
+      <div class="two columns">Two</div>
+      <div class="ten columns">Ten</div>
+    </div>
+
+    <!-- there are a few shorthand columns widths as well -->
+    <div class="row">
+      <div class="one-third column">1/3</div>
+      <div class="two-thirds column">2/3</div>
+    </div>
+    <div class="row">
+      <div class="one-half column">1/2</div>
+      <div class="one-half column">1/2</div>
+    </div>
+
+  </div>
+
+  <!-- Note: columns can be nested, but it's not recommended since Skeleton's grid has %-based gutters, meaning a nested grid results in variable with gutters (which can end up being *really* small on certain browser/device sizes) -->
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+  <!-- Typography -->
+  <div class="docs-section" id="typography">
+    <h6 class="docs-header">Typography</h6>
+    <p>Type is all set with the <code>rems</code>, so font-sizes and spacial relationships can be responsively sized based on a single <code>&lt;html&gt;</code> font-size property. Out of the box, Skeleton never changes the <code>&lt;html&gt;</code> font-size, but it's there in case you need it for your project. All measurements are still base 10 though so, an <code>&lt;h1&gt;</code> with <code>5.0rem</code>font-size just means <code>50px</code>.</p>
+    <div class="docs-example">
+      <div class="row">
+        <div class="six columns">
+          <p><strong>The typography base</strong> is <a href="http://www.google.com/fonts/specimen/Raleway">Raleway</a> served by Google, set at 15rem (15px) over a 1.6 line height (24px). Other type basics like <a href="#">anchors</a>, <strong>strong</strong>, <em>emphasis</em>, and <u>underline</u> are all obviously included.</p>
+          <p><strong>Headings</strong> create a family of distinct sizes each with specific <code>letter-spacing</code>, <code>line-height</code>, and <code>margins</code>.</p>
+        </div>
+        <div class="six columns">
+          <h1>Heading<span class="heading-font-size"> <code>&lt;h1&gt;</code> 50rem</span></h1>
+          <h2>Heading<span class="heading-font-size"> <code>&lt;h2&gt;</code> 42rem</span></h2>
+          <h3>Heading<span class="heading-font-size"> <code>&lt;h3&gt;</code> 36rem</span></h3>
+          <h4>Heading<span class="heading-font-size"> <code>&lt;h4&gt;</code> 30rem</span></h4>
+          <h5>Heading<span class="heading-font-size"> <code>&lt;h5&gt;</code> 24rem</span></h5>
+          <h6>Heading<span class="heading-font-size"> <code>&lt;h6&gt;</code> 15rem</span></h6>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint"><!-- Standard Headings -->
+  <h1>Heading</h1>
+  <h2>Heading</h2>
+  <h3>Heading</h3>
+  <h4>Heading</h4>
+  <h5>Heading</h5>
+  <h6>Heading</h6>
+
+  <!-- Base type size -->
+  <p>The base type is 15px over 1.6 line height (24px)</p>
+
+  <!-- Other styled text tags -->
+  <strong>Bolded</strong>
+  <em>Italicized</em>
+  <a>Colored</a>
+  <u>Underlined</u>
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+  <!-- Buttons -->
+  <div class="docs-section" id="buttons">
+    <h6 class="docs-header">Buttons</h6>
+    <p>Buttons come in two basic flavors in Skeleton. The standard <code>&lt;button&gt;</code> element is plain, whereas the <code>.button-primary</code> button is vibrant and prominent. Button styles are applied to a number of appropriate form elements, but can also be arbitrarily attached to anchors with a <code>.button</code> class.</p>
+    <div class="docs-example">
+      <div>
+        <a class="button" href="#">Anchor button</a>
+        <button>Button element</button>
+        <input type="submit" value="submit input">
+        <input type="button" value="button input">
+      </div>
+      <div>
+        <a class="button button-primary" href="#">Anchor button</a>
+        <button class="button-primary">Button element</button>
+        <input class="button-primary" type="submit" value="submit input">
+        <input class="button-primary" type="button" value="button input">
+      </div>
+    </div>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint"><!-- Standard buttons -->
+  <a class="button" href="#">Anchor button</a>
+  <button>Button element</button>
+  <input type="submit" value="submit input">
+  <input type="button" value="button input">
+
+  <!-- Primary buttons -->
+  <a class="button button-primary" href="#">Anchor button</a>
+  <button class="button-primary">Button element</button>
+  <input class="button-primary" type="submit" value="submit input">
+  <input class="button-primary" type="button" value="button input">
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+
+
+  <!-- Lists -->
+  <div class="docs-section" id="lists">
+    <h6 class="docs-header">Lists</h6>
+    <div class="row docs-example">
+      <div class="six columns">
+        <ul>
+          <li>Unordered lists have basic styles</li>
+          <li>
+            They use the circle list style
+            <ul>
+              <li>Nested lists styled to feel right</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Just more list items mama san</li>
+        </ul>
+      </div>
+      <div class="six columns">
+        <ol>
+          <li>Ordered lists also have basic styles</li>
+          <li>
+            They use the decimal list style
+            <ul>
+              <li>Ordered and unordered can be nested</li>
+              <li>Can nest either type of list into the other</li>
+            </ul>
+          </li>
+          <li>Last list item just for the fun</li>
+        </ol>
+      </div>
+    </div>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint"><ul>
+  <li>Item 1</li>
+  <li>
+    Item 2
+    <ul>
+      <li>Item 2.1</li>
+      <li>Item 2.2</li>
+    </ul>
+  </li>
+  <li>Item 3</li>
+</ul>
+
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+  <!-- Code -->
+  <div class="docs-section" id="code">
+    <h6 class="docs-header">Code</h6>
+    <p>Code styling is kept basic – just wrap anything in a <code>&lt;code&gt;</code> and it will appear like <code>this</code>. For blocks of code, wrap a <code>&lt;code&gt;</code> with a <code>&lt;pre&gt;</code>.</p>
+    <div class="docs-example">
+<pre><code>.some-class {
+  background-color: red;
+  }</code></pre>
+    </div>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint"><pre><code>.some-class {
+  background-color: red;
+  }</code></pre>
+
+  <!-- Remember every whitespace and break will be preserved in a <pre>, including indentation in your code -->
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+  <!-- Tables -->
+  <div class="docs-section" id="tables">
+    <h6 class="docs-header">Tables</h6>
+    <p>Be sure to use properly formed table markup with <code>&lt;thead&gt;</code> and <code>&lt;tbody&gt;</code> when building a <code>table</code>.</p>
+    <div class="docs-example">
+      <table class="u-full-width">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Sex</th>
+          <th>Location</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Dave Gamache</td>
+          <td>26</td>
+          <td>Male</td>
+          <td>San Francisco</td>
+        </tr>
+        <tr>
+          <td>Dwayne Johnson</td>
+          <td>42</td>
+          <td>Male</td>
+          <td>Hayward</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint"><table class="u-full-width">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Sex</th>
+    <th>Location</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Dave Gamache</td>
+    <td>26</td>
+    <td>Male</td>
+    <td>San Francisco</td>
+  </tr>
+  <tr>
+    <td>Dwayne Johnson</td>
+    <td>42</td>
+    <td>Male</td>
+    <td>Hayward</td>
+  </tr>
+  </tbody>
+</table>
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+  <!-- Queries -->
+  <div class="docs-section" id="queries">
+    <h6 class="docs-header">Media queries</h6>
+    <p>Skeleton uses media queries to serve its scalable grid, but also has a list of queries for convenience of styling your site across devices. The queries are mobile-first, meaning they target <code>min-width</code>. Mobile-first queries are how Skeleton's grid is built and is the preferrable method of organizing CSS. It means all styles outside of a query apply to all devices, then larger devices are targeted for enhancement. This prevents small devices from having to parse tons of unused CSS. The sizes for the queries are:</p>
+    <div class="docs-example row">
+      <div class="six columns">
+        <ul>
+          <li><strong>Desktop HD</strong>: 1200px</li>
+          <li><strong>Desktop</strong>: 1000px</li>
+          <li><strong>Tablet</strong>: 750px</li>
+        </ul>
+      </div>
+      <div class="six columns">
+        <ul>
+          <li><strong>Phablet</strong>: 550px</li>
+          <li><strong>Mobile</strong>: 400px</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint">/* Mobile first queries */
+
+  /* Larger than mobile */
+  @media (min-width: 400px) {}
+
+  /* Larger than phablet */
+  @media (min-width: 550px) {}
+
+  /* Larger than tablet */
+  @media (min-width: 750px) {}
+
+  /* Larger than desktop */
+  @media (min-width: 1000px) {}
+
+  /* Larger than Desktop HD */
+  @media (min-width: 1200px) {}
+
+
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+
+  <!-- Utilities and Misc. -->
+  <div class="docs-section" id="utilities">
+    <h6 class="docs-header">Utilities</h6>
+    <p>Skeleton has a number of small utility classes that act as easy-to-use helpers. Sometimes it's better to use a utility class than create a whole new class just to float an element.</p>
+
+
+    <!-- CODE EXAMPLE ———————————————————————————————————————— -->
+<pre class="code-example">
+<code class="code-example-body prettyprint">/* Utility Classes */
+
+  /* Make element full width */
+  .u-full-width {
+  width: 100%;
+  box-sizing: border-box; }
+
+  /* Make sure elements don't run outside containers (great for images in columns) */
+  .u-max-full-width {
+  max-width: 100%;
+  box-sizing: border-box; }
+
+  /* Float either direction */
+  .u-pull-right {
+  float: right; }
+  .u-pull-left {
+  float: left; }
+
+  /* Clear a float */
+  .u-cf {
+  content: "";
+  display: table;
+  clear: both; }
+</code>
+</pre>
+    <!-- ————————————————————————————————————————————————————— -->
+
+
+  </div>
+
+  <!-- Examples -->
+  <div class="docs-section examples" id="examples">
+    <h6 class="docs-header">Examples</h6>
+    <div class="row example">
+      <a class="example-screenshot-wrapper" target="_blank" href="examples/landing">
+        <img class="example-screenshot" src="images/talk-rcpi.png">
+      </a>
+      <div class="one-half offset-by-one-half column">
+        <h6 class="example-header">Demo Landing Page</h6>
+        <p class="example-description">This template is an example of how easy it can be to create a landing page with just the Skeleton grid and a few custom styles. The entire demo is ~150 lines of CSS including comments (most of which is positioning the phones at the top).</p>
+        <a class="button" href="examples/landing" target="_blank">Demo</a>
+        <a class="button" href="https://github.com/dhg/Skeleton/tree/gh-pages/examples/landing" target="_blank">Source</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51112087-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
