@@ -1,3 +1,18 @@
+body {
+  font-family: "Merriweather", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1rem; }
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  height: 40px;
+  padding: 0 25px;
+  font-size: 12px;
+  font-weight: 700; }
+
 .container {
   max-width: 800px; }
 .header {
@@ -12,7 +27,7 @@
   text-transform: uppercase;
   font-size: 1.4rem;
   letter-spacing: .2rem;
-  font-weight: 600; }
+  font-weight: 700; }
 .docs-section {
   border-top: 1px solid #eee;
   padding: 4rem 0;
@@ -31,7 +46,7 @@
   height: 30px;
   line-height: 30px;
   margin-bottom: .75rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: .1rem; }
 .docs-example .row,
 .docs-example.row,
@@ -58,7 +73,7 @@
   position: relative;
   margin-top: 4rem; }
 .example-header {
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 1.5rem;
   margin-bottom: .5rem; }
 .example-description {
@@ -104,8 +119,8 @@
   margin-bottom: 0; }
 .navbar-link {
   text-transform: uppercase;
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 12px;
+  font-weight: 700;
   letter-spacing: .2rem;
   margin-right: 35px;
   text-decoration: none;
@@ -166,8 +181,8 @@
     margin-bottom: 0; }
   .navbar-link {
     text-transform: uppercase;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: 700;
     letter-spacing: .2rem;
     margin-right: 35px;
     text-decoration: none;
@@ -238,7 +253,7 @@
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.0rem;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
     letter-spacing: .1rem; }
   .popover-item:first-child .popover-link {
