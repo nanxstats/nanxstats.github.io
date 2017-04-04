@@ -1,5 +1,6 @@
 body {
   font-family: "Lora", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem; }
@@ -125,7 +126,7 @@ input[type="button"] {
   margin-right: 35px;
   text-decoration: none;
   line-height: 6.5rem;
-  color: #222; }
+  color: #333; }
 .navbar-link.active {
   color: #33C3F0; }
 
@@ -187,7 +188,7 @@ input[type="button"] {
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #222; }
+    color: #333; }
   .navbar-link.active {
     color: #33C3F0; }
   .has-docked-nav .navbar {
@@ -246,7 +247,7 @@ input[type="button"] {
     margin: 0; }
   .popover-link {
     position: relative;
-    color: #222;
+    color: #333;
     display: block;
     padding: 8px 20px;
     border-bottom: 1px solid #eee;
