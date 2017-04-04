@@ -1,8 +1,4 @@
 <!doctype html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
 	<!-- Basic Page Needs
@@ -11,9 +7,6 @@
 	<title>rApache</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
 	
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -65,7 +58,7 @@
 
 <h3><a name="Introduction"></a>1. <a title="Back to top" href="#top">引言</a></h3>
 <p>
-rApache 是为了支持 Web 应用开发，结合了 <a href="http://www.r-project.org/">R (统计分析、绘图的语言和操作环境)</a> 以及 <a href="http://httpd.apache.org/">Apache Web 服务器软件</a> 的项目。当前版本可运行于 UNIX/Linux 及 Mac OS X 操作系统。现可支持使用线程式多处理模块的 Apache 服务器，但我们仍推荐使用 <a href="http://httpd.apache.org/docs/2.2/mod/prefork.html">Apache 的 Prefork 多处理模块</a> (参阅 Apache 文档中的 <a href="http://httpd.apache.org/docs/2.2/mpm.html">多处理模块</a> 一节以了解更多)。
+rApache 是为了支持 Web 应用开发，结合了 <a href="https://www.r-project.org/">R (统计分析、绘图的语言和操作环境)</a> 以及 <a href="http://httpd.apache.org/">Apache Web 服务器软件</a> 的项目。当前版本可运行于 UNIX/Linux 及 Mac OS X 操作系统。现可支持使用线程式多处理模块的 Apache 服务器，但我们仍推荐使用 <a href="http://httpd.apache.org/docs/2.2/mod/prefork.html">Apache 的 Prefork 多处理模块</a> (参阅 Apache 文档中的 <a href="http://httpd.apache.org/docs/2.2/mpm.html">多处理模块</a> 一节以了解更多)。
 </p>
 
 <p>
@@ -91,7 +84,7 @@ rApache 提供了名为 mod_R 的 Apache 模块，相当于在 Web 服务器中�
 <p>安装及使用 rApache 的系统要求如下：</p>
 
 <ol>
-	<li> R 已经以共享库的方式编译和安装 (参阅 <a href="http://cran.r-project.org/doc/manuals/R-exts.html#Embedding-R-under-Unix_002dalikes">Writing R Extensions</a> 获取更多信息)。</li>
+	<li> R 已经以共享库的方式编译和安装 (参阅 <a href="https://cran.r-project.org/doc/manuals/R-exts.html#Embedding-R-under-Unix_002dalikes">Writing R Extensions</a> 获取更多信息)。</li>
 	<li> Apache 2.2.x 或更高版本，支持加载模块。</li>
 	<li> <a href="http://httpd.apache.org/apreq/">libapreq2</a> 2.05 或更高版本。此模块与 rApache 捆绑发布，当 configure 未发现 libapreq 时，将以默认选项安装；如发现已安装，将以配置 --with-apreq2-config 进行覆盖。</li>
 </ol>
@@ -744,7 +737,7 @@ List of 30
 <p>另一个可能的处理器 (handler) 返回值是一个 S3 中 'try-error' 类的对象.</p>
 
 <h3><a name="rapache_Cookbook"></a>6. <a title="Back to top" href="#top">rApache 实战</a></h3>
-<p>要查看一个完整的 rApache 应用，请下载 <a href="http://biostat.mc.vanderbilt.edu/svn/rapache/web/files/useR2007brew.tgz">useR2007 会议上的示例程序</a>。 此程序使用了 <a href="http://biostat.mc.vanderbilt.edu/Hmisc">Hmisc</a> 和 <a href="http://www.rforge.net/brew/">brew</a> 包来进行势和样本量的计算。</p>
+<p>要查看一个完整的 rApache 应用，请下载 <a href="http://rapache.net/useR2007brew.tgz">useR2007 会议上的示例程序</a>。 此程序使用了 <a href="http://biostat.mc.vanderbilt.edu/Hmisc">Hmisc</a> 和 <a href="http://www.rforge.net/brew/">brew</a> 包来进行势和样本量的计算。</p>
 
 <p>下列代码通过对浏览器发送的数据给出回显，实践了 rApache 的全部功能。请复制以下代码并粘贴到一个文件中，然后使用下述选项设置 rApache, 最后使用浏览器访问 http://example.com/rapachetest (请用您自己的主机名替换 example.com).</p>
 
