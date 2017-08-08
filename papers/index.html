@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Papers | Nan Xiao</title>
+  <meta name="description" content="Nan Xiao's publications">
+  <meta name="author" content="Nan Xiao">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="../css/custom.css">
+
+  <style>
+    author {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  </style>
+
+  <!-- Scripts
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="../js/site.js"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="../images/favicon.png">
+
+</head>
+<body class="code-snippets-visible">
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+  <section class="header">
+
+    <div class="row">
+      <div class="eight columns">
+        <h1 class="title" align="left">Nan Xiao</h1>
+        <p align="left"><br>R Developer<br>Data Science Practitioner<br>Machine Learning Researcher</p>
+      </div>
+      <div class="four columns">
+        <img src="../images/nanxiao.png" width="65%"/>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="navbar-spacer"></div>
+  <nav class="navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/software/">Software</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="#">Papers</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/books/">Books</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/talks/">Talks</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="/wisdom/">Wisdom</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="docs-section">
+    <h4>Journal Papers</h4>
+  </div>
+
+  <div class="docs-section">
+
+    <h5>Multi-Step Adaptive Elastic-Net: Reducing false positives in high-dimensional variable selection</h5>
+
+    <p>
+      <author>Nan Xiao</author> and Q.-S. Xu.
+    </p>
+
+    <p align="center">
+      <img src="../images/paper-msaenet.png" width="85%" alt="msaenet" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> Regression and variable selection in high-dimensional settings,
+      especially when p >> n has been a popular research topic in statistical machine learning.
+      In recent years, many successful methods have been developed to tackle this problem.
+      In this paper, we propose the multi-step adaptive elastic-net (MSA-Enet), a multi-step
+      estimation algorithm built upon adaptive elastic-net regularization. The numerical study
+      on simulation data and real-world biological datasets have shown that the MSA-Enet method
+      tends to significantly reduce the number of false-positive variables, while still maintain
+      the estimation accuracy. By analyzing the variables eliminated in each step, more insight
+      could be gained about the structure of the correlated variable groups. These properties
+      are desirable in many real-world variable selection and regression problems.
+    </p>
+
+    <div class="row">
+      <div class="six columns">
+        <em>Journal of Statistical Computation and Simulation (2015)</em>.
+      </div>
+      <div class="six columns" align="right">
+        <a href="http://www.tandfonline.com/doi/full/10.1080/00949655.2015.1016944" class="button">Journal</a>
+        <a href="msaenet.pdf" class="button">PDF</a>
+        <a href="https://msaenet.com" class="button">Software</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5>protr/ProtrWeb: R package and web server for generating various numerical representation schemes of protein sequence</h5>
+
+    <p>
+      <author>Nan Xiao</author>, D.-S. Cao, M.-F. Zhu, and Q.-S. Xu.
+    </p>
+
+    <p align="center">
+      <img src="../images/paper-protr.png" width="80%" alt="protr schematic" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> Amino acid sequence-derived structural and physiochemical descriptors
+      are extensively utilized for the research of structural, functional, expression and interaction
+      profiles of proteins and peptides. We developed protr, a comprehensive R package for generating
+      various numerical representation schemes of proteins and peptides from amino acid sequence.
+      The package calculates eight descriptor groups composed of twenty two types of commonly used
+      descriptors that include about 22,700 descriptor values. It allows users to select amino acid
+      properties from the AAindex database, and use self-defined properties to construct customized
+      descriptors. For proteochemometric modeling, it calculates six types of scales-based descriptors
+      derived by various dimensionality reduction methods. The protr package also integrates the
+      functionality of similarity score computation derived by protein sequence alignment and
+      Gene Ontology (GO) semantic similarity measures within a list of proteins, and calculates
+      profile-based protein features based on position-specific scoring matrix (PSSM).
+      We also developed ProtrWeb, a user-friendly web server for calculating descriptors presented
+      in the protr package. The protr package is freely available from CRAN
+      (<a href="https://cran.r-project.org/package=protr">link</a>).
+      ProtrWeb is freely available at <a href="http://protr.org">this link</a>.
+    </p>
+
+    <div class="row">
+      <div class="six columns">
+        <em>Bioinformatics (2015)</em>.
+      </div>
+      <div class="six columns" align="right">
+        <a href="https://academic.oup.com/bioinformatics/article/31/11/1857/2365197/" class="button">Journal</a>
+        <a href="protr.pdf" class="button">PDF</a>
+        <a href="https://nanx.me/protr/" class="button">Software</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5>Rcpi: R/Bioconductor package to generate various descriptors of proteins, compounds, and their interactions</h5>
+
+    <p>
+      D.-S. Cao*, <author>Nan Xiao*</author>, Q.-S. Xu and A. F. Chen. *Joint first authors.
+    </p>
+
+    <p align="center">
+      <img src="../images/paper-Rcpi.png" width="75%" alt="Rcpi schematic" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> In chemoinformatics and bioinformatics fields, one of the main computational
+      challenges in various predictive modeling is to find a suitable way to effectively represent the molecules
+      under investigation such as small molecules, proteins and even complex interactions. To solve this problem,
+      we developed a freely available R/Bioconductor package, called Compound-Protein Interaction with R (Rcpi),
+      for complex molecular representation from drugs, proteins and more complex interactions including
+      protein-protein and compound-protein interactions. Rcpi could calculate a large number of structural
+      and physicochemical features of proteins and peptides from amino acid sequences, molecular descriptors
+      of small molecules from their topology, and protein-protein interaction and compound-protein interaction
+      descriptors. In addition to main functionalities, Rcpi could also provide a number of useful auxiliary
+      utilities to facilitate the user's need. With the descriptors calculated by this package, the users could
+      conveniently apply various statistical machine learning methods in R to solve various biological and drug
+      research questions in computational biology and drug discovery. Rcpi is freely available from the Bioconductor
+      website (<a href="https://bioconductor.org/packages/Rcpi">link</a>).
+    </p>
+
+    <div class="row">
+      <div class="six columns">
+        <em>Bioinformatics (2015)</em>.
+      </div>
+      <div class="six columns" align="right">
+        <a href="https://academic.oup.com/bioinformatics/article/31/2/279/2365812/" class="button">Journal</a>
+        <a href="Rcpi.pdf" class="button">PDF</a>
+        <a href="https://nanx.me/Rcpi/" class="button">Software</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5>Integrating Multiple Evidence Sources to Predict Adverse Drug Reactions Based on Systems Pharmacology Model</h5>
+
+    <p>
+      D.-S. Cao, <author>Nan Xiao</author>, Y.-J. Li, W.-B. Zeng, Y.-Z. Liang, A.-P. Lu, Q.-S. Xu, A. F. Chen.
+    </p>
+
+    <p align="center">
+      <img src="../images/paper-mef.png" width="75%" alt="MEF schematic" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> Identifying potential adverse drug reactions (ADRs) is critically important for
+      drug discovery and public health. Here we developed a multiple evidence fusion (MEF) method for the large-scale
+      prediction of drug ADRs that can handle both approved drugs and novel molecules. MEF is based on the similarity
+      reference by collaborative filtering, and integrates multiple similarity measures from various data types,
+      taking advantage of the complementarity in the data. We used MEF to integrate drug-related and ADR-related
+      data from multiple levels, including the network structural data formed by known drug–ADR relationships
+      for predicting likely unknown ADRs. On cross-validation, it obtains high sensitivity and specificity,
+      substantially outperforming existing methods that utilize single or a few data types. We validated our
+      prediction by their overlap with drug–ADR associations that are known in databases. The proposed
+      computational method could be used for complementary hypothesis generation and rapid analysis of
+      potential drug–ADR interactions.
+    </p>
+
+    <div class="row">
+      <div class="seven columns">
+        <em>CPT: Pharmacometrics & Systems Pharmacology (2015)</em>.
+      </div>
+      <div class="five columns" align="right">
+        <a href="http://onlinelibrary.wiley.com/doi/10.1002/psp4.12002/abstract" class="button">Journal</a>
+        <a href="MEF.pdf" class="button">PDF</a>
+        <a href="https://github.com/road2stat/MEF" class="button">Code</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5>Ordered Homogeneity Pursuit Lasso for Group Variable Selection with Applications to Spectroscopic Data</h5>
+
+    <p>
+      You-Wu Lin, <author>Nan Xiao</author>, Li-Li Wang, Chuan-Quan Li, Qing-Song Xu.
+    </p>
+
+    <p align="center">
+      <img src="../images/paper-OHPL.png" width="90%" alt="OHPL flowchart" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> In high-dimensional data modeling, variable selection methods have been
+      a popular choice to improve the prediction accuracy by effectively selecting the subset of
+      informative variables, and such methods can enhance the model interpretability with sparse representation.
+      In this study, we propose a novel group variable selection method named ordered homogeneity pursuit lasso
+      (OHPL) that takes the homogeneity structure in high-dimensional data into account. OHPL is particularly
+      useful in high-dimensional datasets with strongly correlated variables. We illustrate the approach
+      using three real-world spectroscopic datasets and compare it with four state-of-the-art variable
+      selection methods. The benchmark results on real-world data show that the proposed method is
+      capable of identifying a small number of influential groups and has better prediction performance
+      than its competitors. The OHPL method and the spectroscopic datasets are implemented and included
+      in an R package OHPL available from <a href="https://ohpl.io">https://OHPL.io</a>.
+    </p>
+
+    <div class="row">
+      <div class="five columns">
+        <em>Chemometrics and Intelligent Laboratory Systems (2017)</em>.
+      </div>
+      <div class="seven columns" align="right">
+        <a href="http://www.sciencedirect.com/science/article/pii/S0169743917300503" class="button">Journal</a>
+        <a href="OHPL.pdf" class="button">PDF</a>
+        <a href="https://OHPL.io/" class="button">Website</a>
+        <a href="https://OHPL.io/doc/" class="button">Software</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5><em>In silico</em> Evaluation of logD<sub>7.4</sub> and Comparison with Other Prediction Methods</h5>
+
+    <p>
+      J.-B. Wang, D.-S. Cao, M.-F. Zhu, Y.-H. Yun, <author>Nan Xiao</author>, Y.-Z. Liang.
+    </p>
+
+    <p align="center">
+      <img src="../images/paper-logd.png" width="65%" alt="logd corrgram" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> Lipophilicity, evaluated by either <i>n</i>-octanol/water partition coefficient (logP)
+      or <i>n</i>-octanol/buffer solution distribution coefficient (logD), is of high importance in pharmacology,
+      toxicology and medicinal chemistry. A quantitative structure-property relationship (QSPR) study was
+      carried out for the prediction of distribution coefficients at pH 7.4 (logD<sub>7.4</sub>) of a large data set
+      consisting of 1,130 organic compounds with 30 molecular descriptors selected by genetic algorithm (GA).
+      Partial least squares (PLS) and support vector machine (SVM) regression were used to build prediction
+      models with 904 molecules as the training set, and the predictive ability was evaluated with 226 molecules
+      as the external test set. The results exhibited by the regression statistics demonstrate that the SVM model
+      is more reliable and has a better predictive accuracy than the PLS model. The square correlation coefficients
+      of fitting, cross validation and prediction are 0.92, 0.90 and 0.90, respectively. The corresponding root
+      mean square errors are 0.52, 0.59 and 0.56, respectively. The reliability and generalization ability of the
+      model were assessed by applicability domain and Y-randomization test, and 30 selected molecular descriptors
+      could give a reliable and direct interpretation to logD<sub>7.4</sub> to some extent. When compared with the
+      logD<sub>7.4</sub> values calculated by five methods from Discovery Studio and ChemAxon, our SVM model shows
+      superiority over them. The results indicate that our model is a reliable and promising method to
+      evaluate logD<sub>7.4</sub>.
+    </p>
+
+    <div class="row">
+      <div class="six columns">
+        <em>Journal of Chemometrics (2015)</em>.
+      </div>
+      <div class="six columns" align="right">
+        <a href="http://onlinelibrary.wiley.com/doi/10.1002/cem.2718/full" class="button">Journal</a>
+        <a href="logd.pdf" class="button">PDF</a>
+        <a href="https://github.com/road2stat/logd74" class="button">Dataset</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5>A novel local manifold-ranking based <em>k</em>-NN for modeling the regression between bioactivity and molecular descriptors</h5>
+
+    <p>
+      L. Shen, D.-S. Cao, Q.-S. Xu, X. Huang, <author>Nan Xiao</author>, Y.-Z. Liang.
+    </p>
+
+    <p align="center">
+      <img src="../images/paper-mrknn.png" width="100%" alt="MRKNN" />
+    </p>
+
+    <div class="row">
+      <div class="eight columns">
+        <em>Chemometrics and Intelligent Laboratory Systems (2015)</em>.
+      </div>
+      <div class="four columns" align="right">
+        <a href="http://www.sciencedirect.com/science/article/pii/S0169743915003202" class="button">Journal</a>
+        <a href="MRKNN.pdf" class="button">PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+    <h4>Preprints</h4>
+  </div>
+
+  <div class="docs-section">
+
+    <h5>hdnom: Building Nomograms for Penalized Cox Models with High-Dimensional Survival Data</h5>
+
+    <p>
+      <author>Nan Xiao</author>, Q.-S. Xu, and M.-Z. Li.
+    </p>
+
+    <p align="center">
+      <img class="image-wrapper" src="../images/paper-hdnom.png" width="100%" alt="hdnom" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong>
+    </p>
+    <p><strong>Summary:</strong> We developed hdnom, an R package for survival modeling
+      with high-dimensional data. The package is the first free and open-source software package
+      that streamlines the workflow of penalized Cox model building, validation, calibration,
+      comparison, and nomogram visualization, with nine types of penalized Cox regression methods
+      fully supported. A web application and an online prediction tool maker are offered to
+      enhance interactivity and flexibility in high-dimensional survival analysis.</p>
+    <p> <strong>Availability:</strong> The hdnom R package is available from CRAN:
+      <a href="https://cran.r-project.org/package=hdnom" target="_blank">https://cran.r-project.org/package=hdnom</a> under GPL.
+      The hdnom web application can be accessed at <a href="http://hdnom.io" target="_blank">http://hdnom.io</a>.
+      The web application maker is available from <a href="https://hdnom.org/appmaker" target="_blank">https://hdnom.org/appmaker</a>.
+      The hdnom project website: <a href="https://hdnom.org" target="_blank">https://hdnom.org</a>.
+    </p>
+
+    <div class="row">
+      <div class="six columns">
+        <em>Submitted</em>.
+      </div>
+      <div class="six columns" align="right">
+        <a href="http://biorxiv.org/content/early/2016/08/23/065524" class="button">bioRxiv</a>
+        <a href="http://biorxiv.org/content/biorxiv/early/2016/08/23/065524.full.pdf" class="button">PDF</a>
+        <a href="https://hdnom.org" class="button">Software</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+    <h4>Posters</h4>
+  </div>
+
+  <div class="docs-section">
+
+    <h5>DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr</h5>
+
+    <p>
+      <author>Nan Xiao</author>, Tengfei Yin, and Miaozhu Li.
+    </p>
+
+    <p align="center">
+      <img class="image-wrapper" src="../images/poster-dockflow-bioc2017.png" width="80%" alt="dockflow-poster-bioc2017" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> We have accumulated numerous excellent software packages for analyzing
+      large-scale biomedical data on the way to delivering on the promise of human genomics.
+      <a href="https://bioconductor.org/help/workflows/">Bioconductor workflows</a> illustrated the
+      feasibility of organizing and demonstrating such software collections in a reproducible and
+      human-readable way. Going forward, how to implement fully automatic workflow execution and
+      persistently reproducible report compilation on an industrial-scale becomes challenging from
+      the engineering perspective. For example, the software tools across workflows usually require
+      drastically different system dependencies and execution environments and thus need to be isolated completely.
+      As one of the first efforts exploring the possibility of bioinformatics workflow
+      containerization and orchestration using Docker, the DockFlow project aims to
+      containerize every single existing Bioconductor workflow in a clean, smooth,
+      and scalable way. We will show that with the help of our R package <a href="https://liftr.me">liftr</a>,
+      it is possible to achieve the goal of persistent reproducible workflow
+      containerization by simply creating and managing a YAML configuration file
+      for each workflow. We will also share our experience and the pitfalls encountered
+      during such containerization efforts, which may offer some best practices and valuable
+      references for creating similar bioinformatics workflows in the future.
+      The DockFlow project website: <a href="https://dockflow.org">https://dockflow.org</a>.
+    </p>
+
+    <div class="row">
+      <div class="nine columns">
+        <em>BioC 2017, July 26-28, Dana-Farber Cancer Institute, Boston, MA.</em><br>
+        <a href="https://bioconductor.org/help/course-materials/2017/BioC2017/">
+          https://bioconductor.org/help/course-materials/2017/BioC2017/</a>
+      </div>
+      <div class="three columns" align="right">
+        <a href="dockflow-poster-bioc2017.pdf" class="button">Poster PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5>ChromaClust: Latent Color Topic Modeling for Images</h5>
+
+    <p>
+      <author>Nan Xiao</author>
+    </p>
+
+    <p align="center">
+      <img class="image-wrapper" src="../images/poster-chromaclust.png" width="80%" alt="chromaclust-poster" />
+    </p>
+
+    <p>
+      Poster of the final project for the class
+      <a href="https://galton.uchicago.edu/courseinfo/courses/2016/win/ann/w35450-1.shtml">
+        HGEN 48600/STAT 35450</a> (Fundamentals of Computational Biology: Models and Inference)
+      at The University of Chicago in 2016. We explored the hypothesis if there is
+      <em>color topics</em> used in the visual design of movie posters with the generative model
+      STRUCTURE, or namely, Latent Dirichlet Allocation.
+    </p>
+
+    <div class="row">
+      <div class="nine columns">
+        <em>March 8, 2016. Gordon Center for Integrative Sciences, The University of Chicago.</em>
+      </div>
+      <div class="three columns" align="right">
+        <a href="chromaclust-poster-hg48600.pdf" class="button">Poster PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="docs-section">
+
+    <h5>liftr: Reproducible Bioinformatics and Statistical Data Analysis with Docker, Rabix, and knitr</h5>
+
+    <p>
+      <author>Nan Xiao</author>, Tengfei Yin, and Miaozhu Li.
+    </p>
+
+    <p align="center">
+      <img class="image-wrapper" src="../images/poster-liftr-bioc2015.png" width="80%" alt="liftr-poster-bioc2015" />
+    </p>
+
+    <p>
+      <strong>Abstract:</strong> liftr extends the R Markdown metadata format. It helps you generate
+      Dockerfile for rendering R Markdown documents in Docker containers.
+      Users can also include and run pre-defined Rabix tools/workflows, then analyze the Rabix output
+      in the dockerized R Markdown documents.
+    </p>
+
+    <div class="row">
+      <div class="nine columns">
+        <em>BioC 2015, July 20-22, Fred Hutchinson Cancer Research Center, Seattle, WA.</em><br>
+        <a href="https://www.bioconductor.org/help/course-materials/2015/BioC2015/">
+          https://www.bioconductor.org/help/course-materials/2015/BioC2015/</a>
+      </div>
+      <div class="three columns" align="right">
+        <a href="liftr-poster-bioc2015.pdf" class="button">Poster PDF</a>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+
+</div>
+
+<!-- Google Analytics -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-66394392-1', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
