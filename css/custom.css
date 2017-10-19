@@ -3,7 +3,7 @@ body {
   color: #333;
 }
 
-/* link color */
+/* link style */
 a:active {
   color: rgb(51, 122, 183); }
 a:hover {
@@ -13,9 +13,11 @@ a {
   color: rgb(51, 122, 183);
   text-decoration: none; }
 
-/* paper link style */
-a.paperlink {
-  text-decoration: none !important; }
+/* software link style */
+a.codelink {
+  color: rgb(26, 13, 171) !important; }
+a.codelink:hover {
+  color: rgb(18, 9, 119) !important; }
 
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem; }
