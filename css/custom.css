@@ -31,8 +31,8 @@ input[type="reset"],
 input[type="button"] {
   height: 40px;
   padding: 0 25px;
-  font-size: 12px;
-  font-weight: 700; }
+  font-size: 14px;
+  font-weight: 400; }
 
 .container {
   max-width: 800px; }
@@ -128,8 +128,8 @@ input[type="button"] {
   margin-bottom: 0; }
 .navbar-link {
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 400;
   letter-spacing: .2rem;
   margin-right: 35px;
   text-decoration: none;
@@ -179,8 +179,8 @@ input[type="button"] {
     margin-bottom: 0; }
   .navbar-link {
     text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: 14px;
+    font-weight: 400;
     letter-spacing: .2rem;
     margin-right: 35px;
     text-decoration: none;
