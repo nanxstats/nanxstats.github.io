@@ -1,5 +1,6 @@
 body {
-  font-family: "Merriweather", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
   color: #333;
 }
 
@@ -20,7 +21,9 @@ a.codelink:hover {
   color: rgb(18, 9, 119) !important; }
 
 h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
   margin-bottom: 1rem; }
+
 .button,
 button,
 input[type="submit"],
