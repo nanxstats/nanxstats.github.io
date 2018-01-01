@@ -1,6 +1,6 @@
 body {
-  font-family: "Lato", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: "TiemposText", Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
   color: #333;
 }
 
@@ -21,7 +21,8 @@ a.codelink:hover {
   color: rgb(18, 9, 119) !important; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  font-family: "TiemposHeadline", Georgia, Times, "Times New Roman", serif;
+  font-weight: 400;
   margin-bottom: 1rem; }
 
 .button,
@@ -48,7 +49,7 @@ input[type="button"] {
   text-transform: uppercase;
   font-size: 1.4rem;
   letter-spacing: .2rem;
-  font-weight: 700; }
+  font-weight: 600; }
 .docs-section {
   border-top: 1px solid #eee;
   padding: 4rem 0;
@@ -67,7 +68,7 @@ input[type="button"] {
   height: 30px;
   line-height: 30px;
   margin-bottom: .75rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: .1rem; }
 .docs-example .row,
 .docs-example.row,
@@ -94,7 +95,7 @@ input[type="button"] {
   position: relative;
   margin-top: 4rem; }
 .example-header {
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: .5rem; }
 .example-description {
@@ -257,7 +258,7 @@ input[type="button"] {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.0rem;
-    font-weight: 700;
+    font-weight: 600;
     text-align: center;
     letter-spacing: .1rem; }
   .popover-item:first-child .popover-link {
