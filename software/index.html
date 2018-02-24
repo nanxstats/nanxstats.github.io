@@ -1,746 +1,762 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<head>
   <meta charset="utf-8">
   <title>Software - Nan Xiao | 肖楠</title>
-  <meta name="description" content="Nan Xiao's software projects, including R/Bioconductor packages and web applications">
-  <meta name="author" content="Nan Xiao">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="description" content="Nan Xiao's software projects, including R packages and Shiny web applications.">
+  <meta name="author" content="Nan Xiao | 肖楠">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
-  <link rel="stylesheet" href="../css/fonts.css">
-  <link rel="stylesheet" href="../css/style.css">
-
-  <style>
-    /* move up anchor for fixed header */
-    a.anchor { display: block; position: relative; top: -65px; visibility: hidden; }
-  </style>
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="../images/favicon.png">
-
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" type="text/css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
-<body class="code-snippets-visible">
 
-<!-- Primary Page Layout
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<div class="container">
-  <section class="header">
+<body>
 
-    <div class="row">
-      <div class="eight columns">
-        <h1 class="title" align="left">Nan Xiao</h1>
-        <p align="left">R developer<br>data science practitioner<br>machine learning researcher</p>
-      </div>
-      <div class="four columns">
-        <img src="../images/nanxiao.jpg" width="60%"/>
-      </div>
-    </div>
-
-  </section>
-
-  <div class="navbar-spacer"></div>
-  <nav class="navbar">
-    <div class="container">
-      <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-link" href="/">Home</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="#">Software</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="/papers/">Papers</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="/books/">Books</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="/talks/">Talks</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="/blog/">Blog</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <div class="docs-section">
-
-    <h4>Software Index</h4>
-
-    <p></p>
-
-    <p>
-      R Packages:
-      <a href="#msaenet">msaenet</a>
-      &middot; <a href="#ggsci">ggsci</a>
-      &middot; <a href="#liftr">liftr</a>
-      &middot; <a href="#protr">protr</a>
-      &middot; <a href="#Rcpi">Rcpi</a>
-      &middot; <a href="#OHPL">OHPL</a>
-      &middot; <a href="#hdnom">hdnom</a>
-      &middot; <a href="#sevenbridges-r">sevenbridges-r</a>
-      &middot; <a href="#enpls">enpls</a>
-      &middot; <a href="#RECA">RECA</a>
-      &middot; <a href="#grex">grex</a>
-      &middot; <a href="#sbgr">sbgr</a>
-    </p>
-
-    <p>
-      Web Applications:
-      <a href="#DockFlow">dockflow.org</a>
-      &middot; <a href="#hdnomio">hdnom.io</a>
-      &middot; <a href="#TargetNet">targetnet.org</a>
-      &middot; <a href="#ProtrWeb">protr.org</a>
-      &middot; <a href="#ImgSVD">imgsvd.com</a>
-      &middot; <a href="#Signify">p-values.org</a>
-    </p>
-
-  </div>
-
-  <div class="docs-section">
-    <h4>R Packages</h4>
-    <p>A collection of my R packages for machine learning, data visualization, and reproducible research.</p>
-  </div>
-
-  <a class="anchor" id="msaenet"></a>
-
-  <div class="docs-section">
-
+<div class="pt-5">
+  <div class="container">
     <div class="row">
 
-      <div class="three columns">
-        <img src="../images/project-msaenet.png" width="100%" alt="msaenet-icon" />
-      </div>
+      <div class="col-md-10 offset-1">
+        <div class="row">
 
-      <div class="nine columns">
+          <div class="col-md-2">
+            <img src="../images/nanxiao.jpg" class="img-fluid d-block rounded">
+          </div>
 
-        <h5>msaenet: Multi-Step Adaptive Estimation Methods for Reducing False Positive Selection in Sparse Regressions</h5>
+          <div class="col-md-9">
+            <h1 class="display-4">Nan Xiao</h1>
+            <p class="text-muted">Genomic Data Scientist. Seven Bridges Genomics, Inc. Cambridge, MA, USA.<br>
+              PhD Candidate. Statistics. Central South University. Changsha, Hunan, China.</p>
+          </div>
 
-        <p>
-          msaenet implements the multi-step adaptive elastic-net (MSAENet) algorithm for feature selection in
-          high-dimensional regressions. Multi-step adaptive estimation based on MCP-net or SCAD-net
-          is also supported.
-        </p>
-
-        <p>
-          <a href="https://msaenet.com" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=msaenet" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/msaenet" class="button">GitHub</a>
-          <a href="../papers/msaenet.pdf" class="button">Paper</a>
-        </p>
-
+        </div>
       </div>
 
     </div>
-
   </div>
-
-  <a class="anchor" id="ggsci"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-ggsci.png" width="100%" alt="ggsci-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>ggsci: Scientific Journal and Sci-Fi Themed Color Palettes for ggplot2</h5>
-
-        <p>
-          ggsci offers a collection of ggplot2 color palettes inspired by scientific journals,
-          data visualization libraries, science fiction movies, and TV shows.
-        </p>
-
-        <p>
-          <a href="https://ggsci.net" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=ggsci" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/ggsci" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="liftr"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-liftr.png" width="100%" alt="liftr-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>liftr: Containerize R Markdown Documents</h5>
-
-        <p>
-          liftr aims to solve the problem of <em>persistent reproducible reporting</em>.
-          To achieve this goal, it extends the R Markdown metadata format,
-          and uses Docker to containerize and render R Markdown documents.
-        </p>
-
-        <p>
-          <a href="https://liftr.me" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=liftr" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/liftr" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="protr"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-protr.png" width="100%" alt="protr-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>protr: R Package for Generating Various Numerical Representation Schemes of Protein Sequence</h5>
-
-        <p>
-          R package generating various numerical representation schemes of protein sequence for bioinformatics
-          and proteochemometrics research.
-        </p>
-
-        <p>
-          <a href="/protr/" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=protr" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/protr" class="button">GitHub</a>
-          <a href="../papers/protr.pdf" class="button">Paper</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="Rcpi"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-Rcpi.png" width="100%" alt="Rcpi-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>Rcpi: R/Bioconductor Package for Generating Various Descriptors of Proteins, Compounds, and their Interactions</h5>
-
-        <p>
-          The Rcpi package emphasizes the comprehensive integration of
-          bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery.
-        </p>
-
-        <p>
-          <a href="/Rcpi/" class="button">Website</a>
-          <a href="https://bioconductor.org/packages/Rcpi" class="button">Bioconductor</a>
-          <a href="https://github.com/road2stat/Rcpi" class="button">GitHub</a>
-          <a href="../papers/Rcpi.pdf" class="button">Paper</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="OHPL"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-OHPL.png" width="100%" alt="OHPL-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>OHPL: Ordered Homogeneity Pursuit Lasso for Group Variable Selection</h5>
-
-        <p>
-          Ordered homogeneity pursuit lasso (OHPL) algorithm for group variable selection.
-          The OHPL method takes the homogeneity structure in high-dimensional data into account
-          and enjoys the grouping effect to select groups of important variables automatically.
-          This feature makes it particularly useful for high-dimensional datasets with strongly
-          correlated variables, such as spectroscopic data.
-        </p>
-
-        <p>
-          <a href="https://OHPL.io/doc/" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=OHPL" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/OHPL" class="button">GitHub</a>
-          <a href="../papers/OHPL.pdf" class="button">Paper</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="hdnom"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-hdnom.png" width="100%" alt="hdnom-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>hdnom: Benchmarking and Visualization Toolkit for Penalized Cox Models</h5>
-
-        <p>
-          hdnom creates nomogram visualizations for penalized Cox regression models,
-          with the support of reproducible survival model building, validation, calibration,
-          and comparison for high-dimensional data.
-        </p>
-
-        <p>
-          <a href="https://hdnom.org" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=hdnom" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/hdnom" class="button">GitHub</a>
-          <a href="https://www.biorxiv.org/content/biorxiv/early/2016/08/23/065524.full.pdf" class="button">Paper</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="sevenbridges-r"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-sevenbridges-r.png" width="100%" alt="sevenbridges-r-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>sevenbridges-r: Seven Bridges API Client, CWL Schema, Meta Schema, and SDK Helper in R</h5>
-
-        <p>
-          R client and utilities for Seven Bridges platform API, from Cancer
-          Genomics Cloud to other Seven Bridges supported platforms.
-        </p>
-
-        <p>
-          <a href="https://sbg.github.io/sevenbridges-r/" class="button">Website</a>
-          <a href="https://bioconductor.org/packages/sevenbridges" class="button">Bioconductor</a>
-          <a href="https://github.com/sbg/sevenbridges-r" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="enpls"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-enpls.png" width="100%" alt="enpls-icon"/>
-      </div>
-
-      <div class="nine columns">
-
-        <h5>enpls: R Package for Ensemble Partial Least Squares Regression</h5>
-
-        <p>
-          Algorithmic framework for measuring feature importance, outlier detection,
-          model applicability evaluation, and ensemble predictive modeling with (sparse)
-          partial least squares regressions.
-        </p>
-
-        <p>
-          <a href="https://enpls.org" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=enpls" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/enpls" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="RECA"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-RECA.png" width="100%" alt="RECA-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>RECA: R Package for Relevant Component Analysis (RCA) in Supervised Distance Metric Learning</h5>
-
-        <p>
-          Relevant Component Analysis (RCA) tries to find a linear transformation of the feature space
-          such that the effect of irrelevant variability is reduced in the transformed space.
-        </p>
-
-        <p>
-          <a href="/RECA/" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=RECA" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/RECA" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="grex"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-grex.png" width="100%" alt="grex-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>grex: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data</h5>
-
-        <p>
-          grex offers a minimal dependency solution for mapping Ensembl gene IDs to
-          Entrez IDs, HGNC gene symbols, and UniProt IDs, for Genotype-Tissue Expression (GTEx) data.
-        </p>
-
-        <p>
-          <a href="/grex/" class="button">Website</a>
-          <a href="https://cran.r-project.org/package=grex" class="button">CRAN</a>
-          <a href="https://github.com/road2stat/grex" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="sbgr"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-sbgr.png" width="100%" alt="sbgr-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>sbgr: R Client for Seven Bridges Genomics API (v1)</h5>
-
-        <p>
-          sbgr provides an R client for accessing Seven Bridges Genomics API (v1).
-        </p>
-
-        <p>
-          <a href="/sbgr/" class="button">Website</a>
-          <a href="https://github.com/road2stat/sbgr" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="docs-section">
-    <h4>Web Applications</h4>
-    <p>A collection of my Shiny apps for reproducible interactive data analysis.</p>
-  </div>
-
-  <a class="anchor" id="DockFlow"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-dockflow.png" width="100%" alt="dockflow-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr</h5>
-
-        <p>
-          Proof-of-concept project exploring the technical possibility and complexity
-          for bioinformatics workflow containerization and orchestration using Docker
-          and liftr. All 18 available Bioconductor workflows were containerized.
-        </p>
-
-        <p>
-          <a href="https://dockflow.org" class="button">DockFlow.org</a>
-          <a href="https://github.com/road2stat/dockflow" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="hdnomio"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-hdnom.png" width="100%" alt="hdnom-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>hdnom.io: Web Application for Building Nomograms with High-Dimensional Data</h5>
-
-        <p>
-          <a href="http://hdnom.io">hdnom.io</a> is the web application for the hdnom package.
-          All the 9 model types in the hdnom package are supported.
-          It streamlined the process of nomogram building, model validation,
-          model calibration, and reproducible report generation.
-        </p>
-
-        <p>
-          The web app has been included in the
-          <a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">Shiny User Showcase</a>.
-        </p>
-
-        <p>
-          <a href="http://hdnom.io" class="button">hdnom.io</a>
-          <a href="https://www.biorxiv.org/content/biorxiv/early/2016/08/23/065524.full.pdf" class="button">Paper</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="TargetNet"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-targetnet.png" width="100%" alt="targetnet-icon"/>
-      </div>
-
-      <div class="nine columns">
-
-        <h5>TargetNet: Shiny Web Application for Drug Target Identification with Large-Scale Public Binding Affinities Data</h5>
-
-        <p>
-          Web application for predicting the binding probability of 623 potential drug
-          targets for given molecule(s).
-          Driven by machine learning modeling of large-scale public chemogenomics data.
-        </p>
-
-        <p>
-          <a href="http://targetnet.org" class="button">targetnet.org</a>
-          <a href="https://github.com/road2stat/targetnet" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="ProtrWeb"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-protr.png" width="100%" alt="protrweb-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>ProtrWeb: Shiny Web Application for Protein Sequence-Derived Descriptor Computation</h5>
-
-        <p>
-          Web application for computing 14 types of protein sequence-derived structural and
-          physicochemical features in bioinformatics.
-        </p>
-
-        <p>
-          <a href="http://protr.org" class="button">protr.org</a>
-          <a href="https://github.com/road2stat/protrweb" class="button">GitHub</a>
-          <a href="../papers/protr.pdf" class="button">Paper</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="ImgSVD"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-imgsvd.png" width="100%" alt="imgsvd-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>ImgSVD: Shiny Web Application for Image Compression via Singular Value Decomposition</h5>
-
-        <p>
-          ImgSVD is a Shiny app for image compression via singular value decomposition (SVD).
-          ImgSVD is inspired by Yihui Xie's comment in
-          Yixuan Qiu's <a href="https://cos.name/2014/02/svd-and-image-compression/">article</a>
-          on image compression via singular value decomposition with the R package
-          <a href="https://cran.r-project.org/package=rARPACK">rARPACK</a>. [Photo credit: <em>Crouching Tiger, Hidden Dragon</em>]
-        </p>
-
-        <p>
-          <a href="http://imgsvd.com" class="button">imgsvd.com</a>
-          <a href="https://github.com/road2stat/imgsvd" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <a class="anchor" id="Signify"></a>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/project-signify.png" width="100%" alt="signify-icon" />
-      </div>
-
-      <div class="nine columns">
-
-        <h5>Signify: Shiny Web Application for Making Your <em>p</em>-value Sound Significant</h5>
-
-        <p>
-          Signify is a Shiny-based web application for making your (>0.05) <em>p</em>-values
-          sound significant.
-          The application is powered by the data from
-          <a href="https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/">Matthew Hankins</a>.
-        </p>
-
-        <p>
-          <a href="http://p-values.org" class="button">p-values.org</a>
-          <a href="https://github.com/road2stat/signify" class="button">GitHub</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="docs-section">
-    <h4>R Document Archives</h4>
-  </div>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/rapache.png" width="100%" alt="rapache-icon"/>
-      </div>
-
-      <div class="nine columns">
-
-        <h5>Developing Web Applications with R and Apache</h5>
-        <h5>使用 R 和 Apache 开发 Web 应用程序</h5>
-
-        <p>
-          Created by Jeffery Horner, rApache is a creative project supporting web application
-          development using the R statistical language and environment and the Apache web server.
-        </p>
-        <p>
-          Here is the translated documentation in Chinese, which was firstly released in March, 2010. The current version was revised in December, 2011.
-        </p>
-
-        <p>
-          <a href="/rapache/" class="button">Read More</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="docs-section">
-
-    <div class="row">
-
-      <div class="three columns">
-        <img src="../images/rstyle.png" width="100%" alt="rstyle-icon"/>
-      </div>
-
-      <div class="nine columns">
-
-        <h5>Google's R Style Guide</h5>
-        <h5>来自 Google 的 R 语言编码风格指南</h5>
-
-        <p>
-          Google's style guide for R gurus. The style guide conveys that consistency and detailed usages
-          are the very elements in R coding.
-        </p>
-        <p>
-          Translated in Dec, 2011.
-        </p>
-
-        <p>
-          <a href="/rstyle/" class="button">Read More</a>
-        </p>
-
-      </div>
-    </div>
-
-  </div>
-
-  <div class="docs-section">
-    <div align="center">&copy; Nan Xiao 2018<br><a href="mailto:me@nanx.me">me@nanx.me</a></div>
-  </div>
-
 </div>
 
-<!-- Scripts
-–––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-<script src="../js/site.js"></script>
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <hr>
+        <ul class="nav nav-pills nav-justified">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="active nav-link">Software</a>
+          </li>
+          <li class="nav-item">
+            <a href="/papers/" class="nav-link">Papers</a>
+          </li>
+          <li class="nav-item">
+            <a href="/books/" class="nav-link">Books</a>
+          </li>
+          <li class="nav-item">
+            <a href="/talks/" class="nav-link">Talks</a>
+          </li>
+          <li class="nav-item">
+            <a href="/blog/" class="nav-link">Blog</a>
+          </li>
+        </ul>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="py-1">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <h2 class="">Software Index</h2>
+
+        <p></p>
+
+        <p>
+          R Packages:
+          <a href="#msaenet">msaenet</a>
+          &middot; <a href="#ggsci">ggsci</a>
+          &middot; <a href="#liftr">liftr</a>
+          &middot; <a href="#protr">protr</a>
+          &middot; <a href="#Rcpi">Rcpi</a>
+          &middot; <a href="#OHPL">OHPL</a>
+          &middot; <a href="#hdnom">hdnom</a>
+          &middot; <a href="#sevenbridges-r">sevenbridges-r</a>
+          &middot; <a href="#enpls">enpls</a>
+          &middot; <a href="#RECA">RECA</a>
+          &middot; <a href="#grex">grex</a>
+          &middot; <a href="#sbgr">sbgr</a>
+        </p>
+
+        <p>
+          Web Applications:
+          <a href="#DockFlow">dockflow.org</a>
+          &middot; <a href="#hdnomio">hdnom.io</a>
+          &middot; <a href="#TargetNet">targetnet.org</a>
+          &middot; <a href="#ProtrWeb">protr.org</a>
+          &middot; <a href="#ImgSVD">imgsvd.com</a>
+          &middot; <a href="#Signify">p-values.org</a>
+        </p>
+
+        <hr>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <h2 class="">R Packages</h2>
+        <p>A collection of my R packages for machine learning, data visualization, and reproducible research.</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="msaenet"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-msaenet.png" class="img-fluid" alt="msaenet-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>msaenet: Multi-Step Adaptive Estimation Methods for Reducing False Positive Selection in Sparse Regressions</h3>
+            <p>
+              msaenet implements the multi-step adaptive elastic-net (MSAENet) algorithm for feature selection in
+              high-dimensional regressions. Multi-step adaptive estimation based on MCP-net or SCAD-net
+              is also supported.
+            </p>
+            <p>
+              <a href="https://msaenet.com" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=msaenet" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/msaenet" class="btn btn-outline-primary">GitHub</a>
+              <a href="../papers/msaenet.pdf" class="btn btn-outline-primary">Paper</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="ggsci"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-ggsci.png" class="img-fluid" alt="ggsci-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>ggsci: Scientific Journal and Sci-Fi Themed Color Palettes for ggplot2</h3>
+            <p>
+              ggsci offers a collection of ggplot2 color palettes inspired by scientific journals,
+              data visualization libraries, science fiction movies, and TV shows.
+            </p>
+            <p>
+              <a href="https://ggsci.net" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=ggsci" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/ggsci" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="liftr"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-liftr.png" class="img-fluid" alt="liftr-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>liftr: Containerize R Markdown Documents</h3>
+            <p>
+              liftr aims to solve the problem of <em>persistent reproducible reporting</em>.
+              To achieve this goal, it extends the R Markdown metadata format,
+              and uses Docker to containerize and render R Markdown documents.
+            </p>
+            <p>
+              <a href="https://liftr.me" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=liftr" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/liftr" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="protr"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-protr.png" class="img-fluid" alt="protr-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>protr: R Package for Generating Various Numerical Representation Schemes of Protein Sequence</h3>
+            <p>
+              R package generating various numerical representation schemes of protein sequence for bioinformatics
+              and proteochemometrics research.
+            </p>
+            <p>
+              <a href="/protr/" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=protr" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/protr" class="btn btn-outline-primary">GitHub</a>
+              <a href="../papers/protr.pdf" class="btn btn-outline-primary">Paper</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="Rcpi"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-Rcpi.png" class="img-fluid" alt="Rcpi-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>Rcpi: R/Bioconductor Package for Generating Various Descriptors of Proteins, Compounds, and their Interactions</h3>
+            <p>
+              The Rcpi package emphasizes the comprehensive integration of
+              bioinformatics and chemoinformatics into a molecular informatics platform for drug discovery.
+            </p>
+            <p>
+              <a href="/Rcpi/" class="btn btn-outline-primary">Website</a>
+              <a href="https://bioconductor.org/packages/Rcpi" class="btn btn-outline-primary">Bioconductor</a>
+              <a href="https://github.com/road2stat/Rcpi" class="btn btn-outline-primary">GitHub</a>
+              <a href="../papers/Rcpi.pdf" class="btn btn-outline-primary">Paper</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="OHPL"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-OHPL.png" class="img-fluid" alt="OHPL-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>OHPL: Ordered Homogeneity Pursuit Lasso for Group Variable Selection</h3>
+            <p>
+              Ordered homogeneity pursuit lasso (OHPL) algorithm for group variable selection.
+              The OHPL method takes the homogeneity structure in high-dimensional data into account
+              and enjoys the grouping effect to select groups of important variables automatically.
+              This feature makes it particularly useful for high-dimensional datasets with strongly
+              correlated variables, such as spectroscopic data.
+            </p>
+            <p>
+              <a href="https://OHPL.io/doc/" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=OHPL" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/OHPL" class="btn btn-outline-primary">GitHub</a>
+              <a href="../papers/OHPL.pdf" class="btn btn-outline-primary">Paper</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="hdnom"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-hdnom.png" class="img-fluid" alt="hdnom-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>hdnom: Benchmarking and Visualization Toolkit for Penalized Cox Models</h3>
+            <p>
+              hdnom creates nomogram visualizations for penalized Cox regression models,
+              with the support of reproducible survival model building, validation, calibration,
+              and comparison for high-dimensional data.
+            </p>
+            <p>
+              <a href="https://hdnom.org" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=hdnom" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/hdnom" class="btn btn-outline-primary">GitHub</a>
+              <a href="https://www.biorxiv.org/content/biorxiv/early/2016/08/23/065524.full.pdf" class="btn btn-outline-primary">Paper</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="sevenbridges-r"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-sevenbridges-r.png" class="img-fluid" alt="sevenbridges-r-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>sevenbridges-r: Seven Bridges API Client, CWL Schema, Meta Schema, and SDK Helper in R</h3>
+            <p>
+              R client and utilities for Seven Bridges platform API, from Cancer
+              Genomics Cloud to other Seven Bridges supported platforms.
+            </p>
+            <p>
+              <a href="https://sbg.github.io/sevenbridges-r/" class="btn btn-outline-primary">Website</a>
+              <a href="https://bioconductor.org/packages/sevenbridges" class="btn btn-outline-primary">Bioconductor</a>
+              <a href="https://github.com/sbg/sevenbridges-r" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="enpls"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-enpls.png" class="img-fluid" alt="enpls-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>enpls: R Package for Ensemble Partial Least Squares Regression</h3>
+            <p>
+              Algorithmic framework for measuring feature importance, outlier detection,
+              model applicability evaluation, and ensemble predictive modeling with (sparse)
+              partial least squares regressions.
+            </p>
+            <p>
+              <a href="https://enpls.org" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=enpls" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/enpls" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="RECA"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-RECA.png" class="img-fluid" alt="RECA-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>RECA: R Package for Relevant Component Analysis (RCA) in Supervised Distance Metric Learning</h3>
+            <p>
+              Relevant Component Analysis (RCA) tries to find a linear transformation of the feature space
+              such that the effect of irrelevant variability is reduced in the transformed space.
+            </p>
+            <p>
+              <a href="/RECA/" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=RECA" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/RECA" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="grex"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-grex.png" class="img-fluid" alt="grex-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>grex: Gene ID Mapping for Genotype-Tissue Expression (GTEx) Data</h3>
+            <p>
+              grex offers a minimal dependency solution for mapping Ensembl gene IDs to
+              Entrez IDs, HGNC gene symbols, and UniProt IDs, for Genotype-Tissue Expression (GTEx) data.
+            </p>
+            <p>
+              <a href="/grex/" class="btn btn-outline-primary">Website</a>
+              <a href="https://cran.r-project.org/package=grex" class="btn btn-outline-primary">CRAN</a>
+              <a href="https://github.com/road2stat/grex" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="sbgr"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-sbgr.png" class="img-fluid" alt="sbgr-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>sbgr: R Client for Seven Bridges Genomics API (v1)</h3>
+            <p>
+              sbgr provides an R client for accessing Seven Bridges Genomics API (v1).
+            </p>
+            <p>
+              <a href="/sbgr/" class="btn btn-outline-primary">Website</a>
+              <a href="https://github.com/road2stat/sbgr" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <h2 class="">Web Applications</h2>
+        <p>A collection of my Shiny apps for reproducible interactive data analysis.</p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="DockFlow"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-dockflow.png" class="img-fluid" alt="dockflow-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr</h3>
+            <p>
+              Proof-of-concept project exploring the technical possibility and complexity
+              for bioinformatics workflow containerization and orchestration using Docker
+              and <a href="https://liftr.me">liftr</a>.
+              All 18 available Bioconductor workflows were containerized.
+            </p>
+            <p>
+              <a href="https://dockflow.org" class="btn btn-outline-primary">DockFlow.org</a>
+              <a href="https://github.com/road2stat/dockflow" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="hdnomio"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-hdnom.png" class="img-fluid" alt="hdnom-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>hdnom.io: Web Application for Building Nomograms with High-Dimensional Data</h3>
+            <p>
+              <a href="http://hdnom.io">hdnom.io</a> is the web application for the hdnom package.
+              All the 9 model types in the hdnom package are supported.
+              It streamlined the process of nomogram building, model validation,
+              model calibration, and reproducible report generation.
+            </p>
+            <p>
+              This app has been selected as one of the
+              <a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">Shiny User Showcase</a>.
+            </p>
+            <p>
+              <a href="http://hdnom.io" class="btn btn-outline-primary">hdnom.io</a>
+              <a href="https://www.biorxiv.org/content/biorxiv/early/2016/08/23/065524.full.pdf" class="btn btn-outline-primary">Paper</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="TargetNet"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-targetnet.png" class="img-fluid" alt="targetnet-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>TargetNet: Shiny Web Application for Drug Target Identification with Large-Scale Public Binding Affinities Data</h3>
+            <p>
+              Web application for predicting the binding probability of 623 potential drug
+              targets for given molecule(s).
+              Driven by machine learning modeling of large-scale public chemogenomics data.
+            </p>
+            <p>
+              <a href="http://targetnet.org" class="btn btn-outline-primary">targetnet.org</a>
+              <a href="https://github.com/road2stat/targetnet" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="ProtrWeb"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-protr.png" class="img-fluid" alt="protrweb-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>ProtrWeb: Shiny Web Application for Computing Protein Sequence-Derived Descriptors</h3>
+            <p>
+              Web application for computing 14 types of protein sequence-derived structural and
+              physicochemical features in bioinformatics.
+            </p>
+            <p>
+              <a href="http://protr.org" class="btn btn-outline-primary">protr.org</a>
+              <a href="https://github.com/road2stat/protrweb" class="btn btn-outline-primary">GitHub</a>
+              <a href="../papers/protr.pdf" class="btn btn-outline-primary">Paper</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="ImgSVD"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-imgsvd.png" class="img-fluid" alt="imgsvd-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>ImgSVD: Shiny Web Application for Image Compression via Singular Value Decomposition</h3>
+            <p>
+              ImgSVD is a Shiny app for image compression via singular value decomposition (SVD).
+              ImgSVD is inspired by Yihui Xie's comment in
+              Yixuan Qiu's <a href="https://cos.name/2014/02/svd-and-image-compression/">article</a>
+              on image compression via singular value decomposition with the R package
+              <a href="https://cran.r-project.org/package=rARPACK">rARPACK</a>.
+            </p>
+            <p>
+              <a href="http://imgsvd.com" class="btn btn-outline-primary">imgsvd.com</a>
+              <a href="https://github.com/road2stat/imgsvd" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<a class="anchor" id="Signify"></a>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/project-signify.png" class="img-fluid" alt="signify-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>Signify: Shiny Web Application for Making Your <em>p</em>-value Sound Significant</h3>
+            <p>
+              Signify is a Shiny-based web application for making your (>0.05) <em>p</em>-values
+              sound significant.
+              The application is powered by the data from
+              <a href="https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/">Matthew Hankins</a>.
+            </p>
+            <p>
+              <a href="http://p-values.org" class="btn btn-outline-primary">p-values.org</a>
+              <a href="https://github.com/road2stat/signify" class="btn btn-outline-primary">GitHub</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <h2 class="">R Document Archives</h2>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/rapache.png" class="img-fluid" alt="rapache-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>Developing Web Applications with R and Apache</h3>
+            <h3>使用 R 和 Apache 开发 Web 应用程序</h3>
+            <p>
+              Created by Jeffery Horner, rApache is a creative project supporting web application
+              development using the R statistical language and environment and the Apache web server.
+            </p>
+            <p>
+              Here is the translated documentation in Chinese, which was firstly released in March, 2010.
+              The current version was revised in December, 2011.
+            </p>
+            <p>
+              <a href="/rapache/" class="btn btn-outline-primary">Read More</a>
+            </p>
+          </div>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="../images/rstyle.png" class="img-fluid" alt="rstyle-icon" />
+          </div>
+          <div class="col-md-9">
+            <h3>Google's R Style Guide</h3>
+            <h3>来自 Google 的 R 语言编码风格指南</h3>
+            <p>
+              Google's style guide for R gurus. The style guide conveys that consistency and detailed usages
+              are the very elements in R coding. Translated in December, 2011.
+            </p>
+            <p>
+              <a href="/rstyle/" class="btn btn-outline-primary">Read More</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+        <hr>
+        <p class="text-muted">
+          <a href="mailto:me@nanx.me" target="_blank"><i class="fa fa-fw fa-envelope-square text-muted fa-lg"></i></a>
+          <a href="https://github.com/road2stat" target="_blank"><i class="fa fa-fw fa-github-square text-muted fa-lg"></i></a>
+          <a href="https://www.linkedin.com/in/road2stat" target="_blank"><i class="fa fa-fw fa-linkedin-square text-muted fa-lg"></i></a>
+          <a href="https://twitter.com/road2stat" target="_blank"><i class="fa fa-fw fa-twitter-square text-muted fa-lg"></i></a>
+          <a href="https://scholar.google.com/citations?user=BNizRecAAAAJ&hl=en" target="_blank"><i class="fa fa-fw fa-google text-muted fa-lg"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -752,7 +768,6 @@
     ga('send', 'pageview');
 </script>
 
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
+
 </html>
