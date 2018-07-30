@@ -91,6 +91,7 @@
 
         <p>Talks:</p>
         <ul>
+          <li><a href="#talk-jsm-2018">liftr: an R Package for Persistent Reproducible Research</a> (JSM 2018)</li>
           <li><a href="#talk-chinar-2017">Persistent Reproducible Reporting with Docker and R</a> (China R Conference 2017)</li>
           <li><a href="#talk-dockercon2017">Reproducible Dynamic Report Generation with Docker and R</a> (DockerCon 2017)</li>
           <li><a href="#talk-bostonbiocmeetup">Cancer Genomics Cloud & R</a> (Boston R/Bioconductor for Genomics Meetup, 2017)</li>
@@ -306,6 +307,47 @@
     <div class="row">
       <div class="col-md-10 offset-1">
         <h2 class="">Talks</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class=""><div class="container"><div class="row"><div class="col-md-10 offset-1"><hr></div></div></div></div>
+
+<a class="anchor" id="talk-jsm-2018"></a>
+
+<div class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-1">
+
+        <h3>liftr: an R Package for Persistent Reproducible Research</h3>
+
+        <p>
+          Invited talk at the <a href="https://ww2.amstat.org/meetings/JSM/2018/">2018 Joint Statistical Meetings</a>.
+          Vancouver, Canada. July 30, 2018.
+          <a href="https://ww2.amstat.org/meetings/JSM/2018/onlineprogram/ActivityDetails.cfm?SessionID=215482">Session info</a>.
+        </p>
+
+        <p>
+          <strong>Abstract:</strong>
+          The R package liftr aims to solve the problem of persistent reproducible reporting in statistical computing.
+          It is one of the winners of the 2018 John M. Chambers Statistical Software Award.
+          The R Markdown format and its backend compilation engine knitr offer a
+          <span class="font-italic">de facto</span> standard  for creating dynamic documents.
+          However, the reproducibility of such computing environments is often limited to individual machines.
+          It is not easy to replicate the system environment (libraries, R versions, R packages) where the document
+          was compiled. By introducing Docker,  the open source containerization technology, liftr solves this
+          reproducibility problem. With the help of liftr, R Markdown users can quickly create and manage Docker
+          containers for rendering their documents, thus making the computations utterly reproducible across
+          machines and systems. liftr redefined the meaning of reproducible research by offering
+          system-level reproducibility for data analysis for the first time and made it easier to
+          create large-scale dynamic document building services. We will discuss the design philosophy,
+          implementation, and applications of the liftr package.
+        </p>
+
+        <a href="jsm2018-liftr-nanxiao.pdf" class="btn btn-outline-primary btn-block">PDF Slides</a>
+
       </div>
     </div>
   </div>
