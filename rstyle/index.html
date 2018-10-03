@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="styleguide.css">
-    <title>来自 Google 的 R 语言编码风格指南</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="styleguide.css" type="text/css">
+    <title>来自Google的R语言编码风格指南</title>
     <style type="text/css">
         ul.NoBullet {list-style-type: none}
     </style>
@@ -12,14 +13,18 @@
 
 <body>
 
+<div class="container">
+<div class="row">
+<div class="col-12">
+
 <!---------------------------------------------------------------------------->
 
-<h1>来自 Google 的 R 语言编码风格指南</h1>
+<h1>来自Google的R语言编码风格指南</h1>
 
 <p>
-    R 语言是一门主要用于统计计算和绘图的高级编程语言.
-    这份 R 语言编码风格指南旨在让我们的 R 代码更容易阅读、分享和检查.
-    以下规则系与 Google 的 R 用户群体协同设计而成.
+    R语言是一门主要用于统计计算和绘图的高级编程语言.
+    这份R语言编码风格指南旨在让我们的R代码更容易阅读、分享和检查.
+    以下规则系与Google的R用户群体协同设计而成.
 </p>
 
 <!---------------------------------------------------------------------------->
@@ -31,7 +36,7 @@
         <li><a href=#identifiers>标识符命名</a>: <code>variable.name</code>,
             <code>FunctionName</code>, <code>kConstantName</code></li>
 
-        <li><a href=#linelength>单行长度</a>: 不超过 80 个字符</li>
+        <li><a href=#linelength>单行长度</a>: 不超过80个字符</li>
         <li><a href=#indentation>缩进</a>: 两个空格, 不使用制表符</li>
         <li><a href=#spacing>空白</a></li>
         <li><a href=#curlybraces>花括号</a>: 前括号不折行写, 后括号独占一行</li>
@@ -46,7 +51,7 @@
         <li><a href=#functiondefinition>函数的定义和调用</a></li>
         <li><a href=#functiondocumentation> 函数文档</a></li>
         <li><a href=#examplefunction> 示例函数</a></li>
-        <li><a href=#todo> TODO 书写风格</a>: <code>TODO(您的用户名)</code></li>
+        <li><a href=#todo> TODO书写风格</a>: <code>TODO(您的用户名)</code></li>
 
     </ol>
     <h2><li>概要: R语言使用规则</li></h2>
@@ -55,8 +60,8 @@
         <li><a href=#functionlanguage> 函数</a>:
             错误 (error) 应当使用 <code>stop()</code> 抛出</li>
 
-        <li><a href=#object> 对象和方法</a>: 尽可能避免使用 S4 对象和方法;
-            永远不要混用 S3 和 S4</li>
+        <li><a href=#object> 对象和方法</a>: 尽可能避免使用S4对象和方法;
+            永远不要混用S3和S4</li>
     </ol>
 </ul>
 
@@ -326,8 +331,8 @@ if (is.null(ylim))
 
     </code></pre>
 
-        <h4 id="todo"><li> TODO 书写风格 </li></h4>
-        <p> 编码时通篇使用一种一致的风格来书写 TODO.
+        <h4 id="todo"><li> TODO书写风格 </li></h4>
+        <p> 编码时通篇使用一种一致的风格来书写TODO.
             <br><CODE>TODO(您的用户名): 所要采取行动的明确描述</CODE>
     </ul>
 
@@ -342,17 +347,17 @@ if (is.null(ylim))
         <p> 错误 (error) 应当使用 <code>stop()</code> 抛出.
         <h4 id="object"><li>对象和方法</li></h4>
 
-        <p>S 语言中有两套面向对象系统, S3 和 S4, 在 R 中这两套均可使用.
-            S3 方法的可交互性更强, 更加灵活, 反之, S4 方法更加正式和严格.
-            (对这两套系统的说明, 参见 Thomas Lumley 的文章
+        <p>S语言中有两套面向对象系统, S3和S4, 在R中这两套均可使用.
+            S3方法的可交互性更强, 更加灵活, 反之, S4方法更加正式和严格.
+            (对这两套系统的说明, 参见Thomas Lumley的文章
             "Programmer's Niche: A Simple
             Class, in S3 and S4", 发表于 R News 4/1, 2004, 33 - 36 页:
             <a href="https://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf">
                 https://cran.r-project.org/doc/Rnews/Rnews_2004-1.pdf</a>.)
-        <p>这里推荐使用 S3 对象和方法, 除非您有很强烈的理由去使用 S4 对象和方法.
-            使用 S4 对象的一个主要理由是在 C++ 代码中直接使用对象. 使用一个 S4
-            泛型/方法的主要理由是对双参数的分发.
-        <p>避免混用 S3 和 S4: S4 方法会忽略 S3 中的继承, 反之亦然.
+        <p>这里推荐使用S3对象和方法, 除非您有很强烈的理由去使用S4对象和方法.
+            使用S4对象的一个主要理由是在 C++ 代码中直接使用对象. 使用一个S4泛型/方法
+            的主要理由是对双参数的分发.
+        <p>避免混用S3和S4: S4方法会忽略S3中的继承, 反之亦然.
     </ul>
 
 
@@ -390,11 +395,15 @@ if (is.null(ylim))
         http://www.maths.lth.se/help/R/RCC/</a> - R语言编码惯例
     <br>
     <a href="https://ess.r-project.org">https://ess.r-project.org/</a> - 为
-    emacs 用户而生. 在您的 emacs 中运行 R 并且提供了一个 emacs mode.
+    Emacs用户而生. 在您的Emacs中运行R并且提供了一个Emacs mode.
 
 </ol>
 
 <!---------------------------------------------------------------------------->
+
+</div>
+</div>
+</div>
 
 </body>
 
