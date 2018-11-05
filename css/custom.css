@@ -1,16 +1,31 @@
 /* navigation */
 
 .nav-pills .nav-link.active {
-    color: rgba(0, 0, 0, 0.9);
-    background-color: #ffffff;
+    color: #FFFFFF;
+    background-color: #4582EC;
 }
 
-.nav-link {
-    color: rgba(0, 0, 0, 0.5);
+/* link */
+
+a {
+    color: #4582EC;
 }
 
-.nav-link:hover, .nav-link:focus {
-    color: rgba(0, 0, 0, 0.7);
+a:hover {
+    color: #1559cf;
+}
+
+/* button */
+
+.btn-outline-primary {
+    color: #4582EC;
+    border-color: #4582EC;
+}
+
+.btn-outline-primary:hover {
+    color: #FFFFFF;
+    background-color: #4582EC;
+    border-color: #4582EC;
 }
 
 /* footer */
@@ -21,16 +36,16 @@
 
 .nanx-footer a {
     font-weight: 500;
-    color: #495057
+    color: #495057;
 }
 
 .nanx-footer a:hover {
-    color: #007bff
+    color: #4582EC;
 }
 
-/* highlight author */
+/* author */
 
 author {
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: underline;
 }
