@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/post/hugo-renga-theme/</loc>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/blog/post/general-purpose-programming-with-r/</loc>
     <lastmod>2018-10-25T23:30:00+00:00</lastmod>
   </url>
@@ -142,12 +147,12 @@
   
   <url>
     <loc>/blog/</loc>
-    <lastmod>2018-10-25T23:30:00+00:00</lastmod>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/blogdown/</loc>
-    <lastmod>2017-12-27T07:00:00-05:00</lastmod>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -222,7 +227,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-10-25T23:30:00+00:00</lastmod>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
   </url>
   
   <url>
@@ -233,7 +238,7 @@
   
   <url>
     <loc>/tags/hugo/</loc>
-    <lastmod>2017-12-27T07:00:00-05:00</lastmod>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -350,6 +355,12 @@
   </url>
   
   <url>
+    <loc>/tags/renga/</loc>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/reproducible-research/</loc>
     <lastmod>2018-07-30T23:30:00+00:00</lastmod>
     <priority>0</priority>
@@ -395,7 +406,7 @@
   
   <url>
     <loc>/tags/theme/</loc>
-    <lastmod>2017-12-27T07:00:00-05:00</lastmod>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

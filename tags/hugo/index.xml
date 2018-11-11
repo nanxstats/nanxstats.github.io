@@ -6,10 +6,19 @@
     <description>Recent content in Hugo on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Dec 2017 07:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 10 Nov 2018 23:30:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Renga: A Clean Bootstrap 4 Theme for Hugo and Blogdown</title>
+      <link>/blog/post/hugo-renga-theme/</link>
+      <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/hugo-renga-theme/</guid>
+      <description>For a long time, I have been maintaining my homepage and the portfolio pages (software, papers) with HTML purely written by hand. Skeleton was my frontend framework for about five years, then I switched to Bootstrap 4 this year. After I (re)-started blogging at the end of last year, things got a bit complicated. The blog and the portfolio pages don’t get a consistent look (the</description>
+    </item>
     
     <item>
       <title>Tanka: A Minimalist Theme for Hugo and Blogdown</title>

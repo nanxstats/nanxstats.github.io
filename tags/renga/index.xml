@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Theme on Nan Xiao | 肖楠</title>
-    <link>/tags/theme/</link>
-    <description>Recent content in Theme on Nan Xiao | 肖楠</description>
+    <title>Renga on Nan Xiao | 肖楠</title>
+    <link>/tags/renga/</link>
+    <description>Recent content in Renga on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 10 Nov 2018 23:30:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/renga/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,16 +18,6 @@
       
       <guid>/blog/post/hugo-renga-theme/</guid>
       <description>For a long time, I have been maintaining my homepage and the portfolio pages (software, papers) with HTML purely written by hand. Skeleton was my frontend framework for about five years, then I switched to Bootstrap 4 this year. After I (re)-started blogging at the end of last year, things got a bit complicated. The blog and the portfolio pages don’t get a consistent look (the</description>
-    </item>
-    
-    <item>
-      <title>Tanka: A Minimalist Theme for Hugo and Blogdown</title>
-      <link>/blog/post/hugo-tanka-theme/</link>
-      <pubDate>Wed, 27 Dec 2017 07:00:00 -0500</pubDate>
-      
-      <guid>/blog/post/hugo-tanka-theme/</guid>
-      <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.
-Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
     </item>
     
   </channel>
