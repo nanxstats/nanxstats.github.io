@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Triplet Loss on Nan Xiao | 肖楠</title>
+    <link>/tags/triplet-loss/</link>
+    <description>Recent content in Triplet Loss on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Aug 2018 19:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/triplet-loss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Implementing Triplet Losses for Implicit Feedback Recommender Systems with R and Keras</title>
+      <link>/blog/post/triplet-loss-r-keras/</link>
+      <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/triplet-loss-r-keras/</guid>
+      <description>All the R code for this post is available on GitHub: road2stat/deep-learning-recipes.
+Three Palms by Jamie Davies.
+ At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
+    </item>
+    
+  </channel>
+</rss>

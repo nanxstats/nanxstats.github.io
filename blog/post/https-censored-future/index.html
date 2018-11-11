@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> An HTTPS-Censored Future - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="nn_NO" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/blog/post/https-censored-future/" />
+    <meta property="og:title" content="An HTTPS-Censored Future" />
+    <meta property="og:image" content="/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
+
+    
+        <meta property="twitter:site" content="@road2stat">
+    
+
+    <meta property="twitter:title" content="An HTTPS-Censored Future" />
+    <meta property="twitter:image" content="/image/nanxiao.jpg" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:description" content="" />
+
+    <link rel="canonical" href="../../../blog/post/https-censored-future/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../css/custom.css" />
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow.min.css" integrity="sha256-0QU8ry64q+N6YBIEF/6XF6vUeF15gbNO4tLS6ikk0FI=" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="../../../image/favicon.png">
+
+    
+</head>
+
+<body>
+    
+    <div class="my-4 my-md-5 header">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto offset-md-1 d-none d-md-block">
+                
+                    <a href="../../../">
+                        <img class="ml-md-4 logo img-fluid d-block rounded" src="../../../image/nanxiao.jpg" alt="logo">
+                    </a>
+                
+            </div>
+            <div class="col-auto align-self-center mr-auto">
+                <a href="../../../">
+                    <h1 class="name">Nan Xiao</h1>
+                </a>
+
+                <ul class="nav nav-primary">
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-software" href="../../../software/">
+                                
+                                Software
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-papers" href="../../../papers/">
+                                
+                                Papers
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-books" href="../../../books/">
+                                
+                                Books
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-talks" href="../../../talks/">
+                                
+                                Talks
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-blog" href="../../../blog/">
+                                
+                                Blog
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4 blog-post-title">An HTTPS-Censored Future</h1>
+
+                    <div class="mb-md-4 meta">
+                        
+                            
+                                <span class="author" title="Nan Xiao">
+                                    Nan Xiao
+                                </span>
+                            
+                        
+
+                        <span class="date middot" title='Fri May 18 2018 15:50:00 UTC'>
+                            2018-05-18
+                        </span>
+
+                        <span class="reading-time middot">
+                            2 minute read
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/https">https</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/github">github</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/censorship">censorship</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="markdown">
+                        
+    
+
+
+<div class="figure">
+<img src="../../../image/the-fall-of-phaeton-peter-rubens.jpg" alt="Figure: The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art." />
+<p class="caption">Figure: <em>The Fall of Phaeton</em> by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.</p>
+</div>
+<div id="the-good-news" class="section level2">
+<h2>The Good News</h2>
+<p>One of the good news from the past weeks is that <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/">GitHub Pages finally supports HTTPS for custom domains</a>. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them <a href="https://github.com/isaacs/github/issues/156">can be a lengthy process</a>.</p>
+<p>Before this, regular people like me probably need to add an extra layer which supports HTTPS for your custom domain, such as Cloudflare or Netlify, to host their static content on GitHub/GitHub Pages. Cloudflare is professional at security while Netlify is mastering build and deploy especially if you use the <a href="https://jamstack.org/">JAMstack</a>.</p>
+<p>In reality, for various reasons, these solutions are not 100% perfect, regarding security, simplicity, or efficiency. Still, I should say they are worth trying (esp. Netlify) if you want to know <a href="https://yihui.name/en/2017/06/netlify-instead-of-github-pages/">more possibilities</a> out there, beyond directly serving static websites.</p>
+</div>
+<div id="the-bad-news" class="section level2">
+<h2>The Bad News</h2>
+<p>HTTPS could also be a double-edged sword, in many ways. To establish a secure communication channel, the server and the client have to trust a centralized, third-party certificate authority (CA) who issues the certificates. The first issue is, some of the CAs themselves are not exactly playing by the book: <a href="https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/">backdating the certificates</a>, <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">misissuing certificates</a>, to name a few. An even more pressing issue is, the universal application of HTTPS might bring up the possibility of a new type of censorship. One of the very recent examples <em>could be</em> <a href="https://news.ycombinator.com/item?id=16951831">Sci-Hub’s TLS certificate incident</a>. If you connect it to its domain name takedowns [<a href="https://news.ycombinator.com/item?id=16823067">1</a>], [<a href="https://news.ycombinator.com/item?id=11635647">2</a>] which happened quite a while ago, it could be quite alarming.</p>
+</div>
+<div id="reimagine-the-system" class="section level2">
+<h2>Reimagine the System</h2>
+<p>After 30 years when the Internet was first created, it might be the time to rethink some of its design, for example, the CA system and the domain system. Ideally, we want to be both secure and decentralized. At the end of the day, what Pied Piper is building in HBO’s <em>Silicon Valley</em> might not sound that crazy anymore.</p>
+</div>
+
+
+
+                    </div>
+
+                    
+                        <div class="navigation">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-left">
+                                            <a href="../../../blog/post/taking-the-long-view/">« Taking the Long View</a>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-right">
+                                            <a href="../../../blog/post/shiny-async/">Shiny Now Supports Async Execution »</a>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="comments">
+
+      <div class="py-3 content">
+            <div class="container">
+                  <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-10">
+                              <div class="comments">
+                                    <div id="disqus_thread"></div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+            (function () {
+                  
+                  
+                  if (window.location.hostname == "localhost")
+                        return;
+
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  var disqus_shortname = 'nan-xiao-blog';
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+      </script>
+      <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+</section>
+    <div class="my-4 footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-5">
+                
+                    <div class="mx-0 mx-md-4 text-left">
+                        
+                            <a href="https://nanx.me">© 2018 Nan Xiao</a>
+                        
+                    </div>
+                
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="mx-0 mx-md-4 text-right">
+                    
+                        <a href="https://github.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/github.svg" alt="github" />
+                        </a>
+                    
+
+                    
+                        <a href="https://www.linkedin.com/in/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/linkedin.svg" alt="linkedin" />
+                        </a>
+                    
+
+                    
+                        <a href="https://twitter.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/twitter.svg" alt="twitter" />
+                        </a>
+                    
+
+                    
+                        <a href="mailto:me@nanx.me">
+                            <img class="icon" src="../../../img/email.svg" alt="email" />
+                        </a>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <a href="../../../index.xml" class="mr-0">
+                            <img class="icon" src="../../../img/rss.svg" alt="rss" />
+                        </a>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous"></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-66394392-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+        
+
+    
+</body>
+
+</html>

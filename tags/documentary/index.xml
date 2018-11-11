@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentary on Nan Xiao | 肖楠</title>
+    <link>/tags/documentary/</link>
+    <description>Recent content in Documentary on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 02 May 2018 05:40:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/documentary/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Taking the Long View</title>
+      <link>/blog/post/taking-the-long-view/</link>
+      <pubDate>Wed, 02 May 2018 05:40:00 +0000</pubDate>
+      
+      <guid>/blog/post/taking-the-long-view/</guid>
+      <description>The world is a fast-changing place. Eleven years ago, when iPhone was first launched, people probably didn’t anticipate that was the end of Nokia. Today, I don’t even use the voice calling feature on my phone anymore, unless really necessary. This might not be good news for AT&amp;amp;T, and maybe I’m an outlier, but this is the truth, this is the world we live.
+After walking a long road in such a changing world, it is easy to forget why we started at first.</description>
+    </item>
+    
+  </channel>
+</rss>

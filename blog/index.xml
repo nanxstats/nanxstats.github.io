@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Nan Xiao | 肖楠</title>
+    <link>/blog/</link>
+    <description>Recent content in Blog on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Oct 2018 23:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>General-Purpose Programming with R</title>
+      <link>/blog/post/general-purpose-programming-with-r/</link>
+      <pubDate>Thu, 25 Oct 2018 23:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/general-purpose-programming-with-r/</guid>
+      <description>“They’ll take your soul if you let them — don’t let them.” (You’ve Got a Friend)   I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.
+Recently, I found a fascinating thread posted in the r/rstats subreddit.</description>
+    </item>
+    
+    <item>
+      <title>The Accidental Product Success</title>
+      <link>/blog/post/accidental-product-success/</link>
+      <pubDate>Mon, 15 Oct 2018 21:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/accidental-product-success/</guid>
+      <description>A roadmap may tell how you can get there but doesn’t tell you where to go. Photo source.
+ Technology companies are sometimes quirky but always quite interesting.
+Often, we can witness accidental epic wins in products that don’t belong to a company’s main offerings. A few examples from the (almost) trillion dollar club:
+Microsoft is a software company, but they have made some excellent hardware products, especially accessories. Recently, they even remastered the legendary IntelliMouse, an ergonomic mouse designed for office use but highly acclaimed in the gaming community.</description>
+    </item>
+    
+    <item>
+      <title>Implementing Triplet Losses for Implicit Feedback Recommender Systems with R and Keras</title>
+      <link>/blog/post/triplet-loss-r-keras/</link>
+      <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/triplet-loss-r-keras/</guid>
+      <description>All the R code for this post is available on GitHub: road2stat/deep-learning-recipes.
+Three Palms by Jamie Davies.
+ At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
+    </item>
+    
+    <item>
+      <title>How a Financial Crisis Started</title>
+      <link>/blog/post/how-a-financial-crisis-started/</link>
+      <pubDate>Wed, 29 Aug 2018 14:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/how-a-financial-crisis-started/</guid>
+      <description>Photo by Ablimit Ablet.
+ I once read a joke with some dry humor a long time ago. It’s almost a parable about how the system amplifies fragility. I’m not entirely sure where it originated, but here you go:
+ A bunny bounced into a bakery and asked the baker: “do you have 100 croissants?”
+The baker: “Ahh, I’m so sorry we don’t have that many.”
+The bunny: “Oh… okay.</description>
+    </item>
+    
+    <item>
+      <title>Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras</title>
+      <link>/blog/post/recsys-binary-implicit-feedback-r-keras/</link>
+      <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
+      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
+One in A Million by Veronica Benavides.</description>
+    </item>
+    
+    <item>
+      <title>Building My First Deep Learning Machine</title>
+      <link>/blog/post/building-my-first-deep-learning-machine/</link>
+      <pubDate>Mon, 20 Aug 2018 15:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/building-my-first-deep-learning-machine/</guid>
+      <description>Five years ago, GNOME 3’s immaturity was one of the reasons for me to switch to a Mac. After finished watching two seasons of Mr. Robot, I somehow missed it. With my AWS/GCP bills going up quite a bit recently, I quickly decided to invest a little and build a PC to retry the Linux desktop environment, also, to tackle some personal machine learning projects.
+Hardware Here is my PCPartPicker part list for the parts of choice.</description>
+    </item>
+    
+    <item>
+      <title>My OCD for Inbox Zero</title>
+      <link>/blog/post/my-ocd-for-inbox-zero/</link>
+      <pubDate>Wed, 15 Aug 2018 21:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/my-ocd-for-inbox-zero/</guid>
+      <description>Inbox zero means having zero unread emails in your email’s inbox. I have an OCD for it.
+Fraser Valley, British Columbia, Canada.
+ Many years ago, like many people, I used to “mark as unread” some emails I received, when I cannot decide to reply or not reply immediately for whatever reasons.
+Obviously, pretending things as unread is not an effective strategy to get them done. I didn’t reply to the things I want to say yes quickly enough, which could make people think that I’m not interested.</description>
+    </item>
+    
+    <item>
+      <title>John M. Chambers Award, Product Sense, and the Feature Roadmap for liftr</title>
+      <link>/blog/post/jmc-award/</link>
+      <pubDate>Mon, 30 Jul 2018 23:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/jmc-award/</guid>
+      <description>I feel super honored to say that I have received the 2018 John M. Chambers Statistical Software Award from the American Statistical Association this year, for my R package liftr on reproducible research. This year’s award also has another recipient: Dustin Tran, for his excellent Python library Edward on probabilistic programming. We just had a great session of invited talks today at the 2018 Joint Statistical Meetings in Vancouver, Canada.</description>
+    </item>
+    
+    <item>
+      <title>It Has Been 15 Years Since MSBlast</title>
+      <link>/blog/post/15-years-since-msblast/</link>
+      <pubDate>Sun, 15 Jul 2018 00:20:00 +0000</pubDate>
+      
+      <guid>/blog/post/15-years-since-msblast/</guid>
+      <description>It was August 2003, when I was in the 8th grade, enjoying the summer break.
+One day, my dad came home from work. He tried to call me during the day asking for help on some computer issues. Unfortunately, he couldn’t reach me because I was using the dial-up Internet with a good old 56k modem, so the landline was busy the whole time. (You’ll know what I mean if you’re old enough.</description>
+    </item>
+    
+    <item>
+      <title>Save the Link Like a Boss</title>
+      <link>/blog/post/save-the-link-like-a-boss/</link>
+      <pubDate>Sun, 01 Jul 2018 17:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/save-the-link-like-a-boss/</guid>
+      <description>Middle of Nowhere by David Kovalenko.
+  Anything posted on the Internet, stays there forever.
+ I’m a firm believer of such assertions. The reality is, however, even if something is published on the Internet, due to technical reasons, it still probably won’t live there forever. The situation becomes more like
+ If something isn’t on the web, it doesn’t exist at all.
+ Yes, as time goes, content on the Internet fades away.</description>
+    </item>
+    
+    <item>
+      <title>Learn to Say No The Hard Way</title>
+      <link>/blog/post/learn-to-say-no-the-hard-way/</link>
+      <pubDate>Thu, 28 Jun 2018 16:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/learn-to-say-no-the-hard-way/</guid>
+      <description>Sometimes I feel guilty that I have not been able to do some real impactful research during my PhD studies. Although, I feel blessed that I have super cool advisors, who have taught me things that are even more important than doing good research. One particular thing I learned, is about saying no – I was terrible at it, and honestly, still learning more about it.</description>
+    </item>
+    
+    <item>
+      <title>Shiny Now Supports Async Execution</title>
+      <link>/blog/post/shiny-async/</link>
+      <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
+      
+      <guid>/blog/post/shiny-async/</guid>
+      <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.
+You Want It When? (Zootopia)
+  In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
+    </item>
+    
+    <item>
+      <title>An HTTPS-Censored Future</title>
+      <link>/blog/post/https-censored-future/</link>
+      <pubDate>Fri, 18 May 2018 15:50:00 +0000</pubDate>
+      
+      <guid>/blog/post/https-censored-future/</guid>
+      <description>Figure: The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.
+ The Good News One of the good news from the past weeks is that GitHub Pages finally supports HTTPS for custom domains. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them can be a lengthy process.</description>
+    </item>
+    
+    <item>
+      <title>Taking the Long View</title>
+      <link>/blog/post/taking-the-long-view/</link>
+      <pubDate>Wed, 02 May 2018 05:40:00 +0000</pubDate>
+      
+      <guid>/blog/post/taking-the-long-view/</guid>
+      <description>The world is a fast-changing place. Eleven years ago, when iPhone was first launched, people probably didn’t anticipate that was the end of Nokia. Today, I don’t even use the voice calling feature on my phone anymore, unless really necessary. This might not be good news for AT&amp;amp;T, and maybe I’m an outlier, but this is the truth, this is the world we live.
+After walking a long road in such a changing world, it is easy to forget why we started at first.</description>
+    </item>
+    
+    <item>
+      <title>10 Things That Matter in Deep Learning (1/5)</title>
+      <link>/blog/post/10-things-matter-in-deep-learning-1/</link>
+      <pubDate>Thu, 12 Apr 2018 17:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/10-things-matter-in-deep-learning-1/</guid>
+      <description>Figure: Heart of the Matter by Otis Kaye, 1963. The Art Institute of Chicago.
+ Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</description>
+    </item>
+    
+    <item>
+      <title>Why Everyone Should #DeletePython</title>
+      <link>/blog/post/why-everyone-should-delete-python/</link>
+      <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/why-everyone-should-delete-python/</guid>
+      <description>Disclaimer: this article reflects my personal opinion only. Reader discretion is advised.
+Figure: How Beemo changes batteries (Adventure Time). Cute but dangerous, just like working with Python 2 and Python 3 simultaneously.
+ OK. There I said it. Everybody should consider #DeletePython.
+Recently, people have raised significant concerns regarding Facebook’s privacy protection practice on their user’s data, with the discussions on Twitter: #DeleteFacebook. This inspired me to say something about another spicy topic: #DeletePython.</description>
+    </item>
+    
+    <item>
+      <title>The Return of the Native Font Stack</title>
+      <link>/blog/post/the-return-of-the-native-font-stack/</link>
+      <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
+      
+      <guid>/blog/post/the-return-of-the-native-font-stack/</guid>
+      <description>Figure: Lead type.
+ As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:
+font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.
+Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
+    </item>
+    
+    <item>
+      <title>3 Simple Criteria for Choosing Open Source Projects</title>
+      <link>/blog/post/choose-open-source-projects/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/choose-open-source-projects/</guid>
+      <description>As programming languages and their ecosystems evolve, we have many more powerful tools in our toolbox(es) than ten years ago. Ideas are also becoming cheaper than ever, especially when we want to implement them as open source projects. Everything looks like a nail when we have a mighty hammer. We may come up with five ideas in the morning every day. While at the end of the day, we may</description>
+    </item>
+    
+    <item>
+      <title>Nothing Without Love</title>
+      <link>/blog/post/nothing-without-love/</link>
+      <pubDate>Thu, 15 Feb 2018 21:00:00 -0500</pubDate>
+      
+      <guid>/blog/post/nothing-without-love/</guid>
+      <description>Nate Ruess’s songs have magnificent voices and amazing arrangements, while often unbelievably sad at their cores, such as Grammy’s favourite “We Are Young”. This one, on the other hand, is an exception.
+ Send up a signal, that everything’s fine
+Come on slide up right here by my side
+You know that I, I want to rest in your light
+ Photo: Wind turbine near North Kingstown, RI, from the morning train to NYC.</description>
+    </item>
+    
+    <item>
+      <title>Buzzword Map, or Buzz World Map</title>
+      <link>/blog/post/buzzword-map-or-buzz-world-map/</link>
+      <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/buzzword-map-or-buzz-world-map/</guid>
+      <description>I don’t always care about popular topics because they usually fade fast. But when I do, here is a 2017 world interest map for deep learning, artificial intelligence, and blockchain (courtesy of Google Trends, where you can reproduce it).
+Google Trends: comparing the search traffic in 2017.
+ The dominant color shown in each region represents the most searched term there. The question is, what does this map tell us — everything, or nothing at all?</description>
+    </item>
+    
+    <item>
+      <title>Papers in My Heart (2017)</title>
+      <link>/blog/post/papers-in-my-heart-2017/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/papers-in-my-heart-2017/</guid>
+      <description>Figure: Album cover for Skip to the Good Part by He Is We, 2011.
+  It is the last day of 2017. Looking back, it has been another fruitful year for statistical and machine intelligence research. Notably, a lot of new ideas have been published in the direction of deep learning. Although it is intriguing, I will probably talk about things I care about in deep learning in another post.</description>
+    </item>
+    
+    <item>
+      <title>Tanka: A Minimalist Theme for Hugo and Blogdown</title>
+      <link>/blog/post/hugo-tanka-theme/</link>
+      <pubDate>Wed, 27 Dec 2017 07:00:00 -0500</pubDate>
+      
+      <guid>/blog/post/hugo-tanka-theme/</guid>
+      <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.
+Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
+    </item>
+    
+    <item>
+      <title>Collected Wisdom</title>
+      <link>/blog/post/collected-wisdom/</link>
+      <pubDate>Wed, 27 Dec 2017 03:00:00 -0500</pubDate>
+      
+      <guid>/blog/post/collected-wisdom/</guid>
+      <description>Here I will post some collected quotes that influenced my opinion on how learning, inference, and science should be. Choose problems One thing Grothendieck said was that one should never try to prove anything that is not almost obvious. This does not mean that one should not be ambitious in choosing things to work on. Rather, “if you don’t see that what you are</description>
+    </item>
+    
+    <item>
+      <title>Time Marches On</title>
+      <link>/blog/post/time-marches-on/</link>
+      <pubDate>Tue, 26 Dec 2017 09:31:00 -0500</pubDate>
+      
+      <guid>/blog/post/time-marches-on/</guid>
+      <description>It’s a new start. Let’s have some fun.</description>
+    </item>
+    
+  </channel>
+</rss>

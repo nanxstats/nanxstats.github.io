@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project Management on Nan Xiao | 肖楠</title>
+    <link>/tags/project-management/</link>
+    <description>Recent content in Project Management on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/project-management/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3 Simple Criteria for Choosing Open Source Projects</title>
+      <link>/blog/post/choose-open-source-projects/</link>
+      <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/choose-open-source-projects/</guid>
+      <description>As programming languages and their ecosystems evolve, we have many more powerful tools in our toolbox(es) than ten years ago. Ideas are also becoming cheaper than ever, especially when we want to implement them as open source projects. Everything looks like a nail when we have a mighty hammer. We may come up with five ideas in the morning every day. While at the end of the day, we may</description>
+    </item>
+    
+  </channel>
+</rss>

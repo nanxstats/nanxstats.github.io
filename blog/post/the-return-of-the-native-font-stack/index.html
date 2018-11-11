@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> The Return of the Native Font Stack - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="nn_NO" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/blog/post/the-return-of-the-native-font-stack/" />
+    <meta property="og:title" content="The Return of the Native Font Stack" />
+    <meta property="og:image" content="/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
+
+    
+        <meta property="twitter:site" content="@road2stat">
+    
+
+    <meta property="twitter:title" content="The Return of the Native Font Stack" />
+    <meta property="twitter:image" content="/image/nanxiao.jpg" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:description" content="" />
+
+    <link rel="canonical" href="../../../blog/post/the-return-of-the-native-font-stack/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../css/custom.css" />
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow.min.css" integrity="sha256-0QU8ry64q+N6YBIEF/6XF6vUeF15gbNO4tLS6ikk0FI=" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="../../../image/favicon.png">
+
+    
+</head>
+
+<body>
+    
+    <div class="my-4 my-md-5 header">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto offset-md-1 d-none d-md-block">
+                
+                    <a href="../../../">
+                        <img class="ml-md-4 logo img-fluid d-block rounded" src="../../../image/nanxiao.jpg" alt="logo">
+                    </a>
+                
+            </div>
+            <div class="col-auto align-self-center mr-auto">
+                <a href="../../../">
+                    <h1 class="name">Nan Xiao</h1>
+                </a>
+
+                <ul class="nav nav-primary">
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-software" href="../../../software/">
+                                
+                                Software
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-papers" href="../../../papers/">
+                                
+                                Papers
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-books" href="../../../books/">
+                                
+                                Books
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-talks" href="../../../talks/">
+                                
+                                Talks
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-blog" href="../../../blog/">
+                                
+                                Blog
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4 blog-post-title">The Return of the Native Font Stack</h1>
+
+                    <div class="mb-md-4 meta">
+                        
+                            
+                                <span class="author" title="Nan Xiao">
+                                    Nan Xiao
+                                </span>
+                            
+                        
+
+                        <span class="date middot" title='Tue Mar 13 2018 02:20:00 UTC'>
+                            2018-03-13
+                        </span>
+
+                        <span class="reading-time middot">
+                            2 minute read
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/web-typography">web typography</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/css">css</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/native-font-stack">native font stack</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/system-font-stack">system font stack</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/bootstrap-4">bootstrap 4</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="markdown">
+                        
+    
+
+
+<div class="figure">
+<img src="../../../image/lead-set-printing.jpg" alt="Figure: Lead type." />
+<p class="caption">Figure: Lead type.</p>
+</div>
+<p>As people said, <a href="https://ia.net/topics/the-web-is-all-about-typography-period/">web design is 95% typography</a>.
+Once upon a time, people who care about the typography of their website
+define their font stack using CSS like this:</p>
+<pre class="css"><code>font-family: &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, sans-serif;</code></pre>
+<p>They secretly wish their website could look different from the mortal
+websites which use Times New Roman, Arial, or Georgia with the
+<a href="https://nedbatchelder.com/blog/200805/bad_web_type_georgias_numerals.html">funny-looking numerals</a>.</p>
+<p>Until one day, their sincerity impressed the god of typography,
+who granted them a technology named
+<a href="https://en.wikipedia.org/wiki/Web_typography#Web_fonts">web fonts</a>.
+They can finally use their favorite fonts on the web:</p>
+<pre class="css"><code>@font-face {
+  font-family: &#39;Popular Sans&#39;;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://server-address/popular-sans.woff2) format(&#39;woff2&#39;);
+}
+
+font-family: &quot;Popular Sans&quot;, sans-serif;</code></pre>
+<p>With the blessing of some free web font services, people do not
+worry if their website will look different across devices anymore.</p>
+<p>Time flies, they eventually realized that many of the available free
+web fonts are only designed with “acceptable” quality, while the high-quality
+fonts like <a href="http://www.latofonts.com/">Lato</a>, are overused way too much.
+In the same time, some commercial web font services who have
+high-qualify fonts, are often utterly expensive with a ridiculous
+subscription model.</p>
+<p>Some other people decided to serve their own web fonts with CDN.
+They encountered issues with names they never heard before, such as
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>
+and <a href="https://github.com/typekit/webfontloader">FOUT</a>.
+Readers from some regions of the world complained that
+the content was loading slowly, even worse, the rendering
+was sometimes entirely blocked since the CDN server was not reachable.</p>
+<p>It’s now 2018. The latest devices usually come with beautiful
+system fonts. People rethought the core value of a good web font stack:
+the fonts should 1. look beautiful, and 2. feel performant.
+As a trade-off, the website does not need always to look the
+same across all devices, not necessarily. The
+<a href="https://bitsofco.de/the-new-system-font-stack/">new system font stack</a>
+thus returns. It looks like this:</p>
+<pre class="css"><code>font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, sans-serif;</code></pre>
+<p>It loads fast — there is no more external asset loading required.
+It looks beautiful and renders well on every mainstream operating system.
+The recently released Bootstrap 4 selected such a
+<a href="https://getbootstrap.com/docs/4.0/content/reboot/#native-font-stack">native font stack</a>.
+I have also just <a href="https://github.com/road2stat/hugo-tanka/commit/7bc79daa9ac1071908b3cc0d42863bf4fa3f1e04">updated</a>
+my blog theme <a href="https://github.com/road2stat/hugo-tanka">hugo-tanka</a>
+with this font stack, hoping it could bring better reading experience.</p>
+<p>Will the web typography technology evolve again in the next few years? Maybe.
+Will people change their font stack to the trending one again?
+Yes, we will probably often do that. Because we enjoy change, we really do.</p>
+
+
+
+                    </div>
+
+                    
+                        <div class="navigation">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-left">
+                                            <a href="../../../blog/post/choose-open-source-projects/">« 3 Simple Criteria for Choosing Open Source Projects</a>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-right">
+                                            <a href="../../../blog/post/why-everyone-should-delete-python/">Why Everyone Should #DeletePython »</a>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="comments">
+
+      <div class="py-3 content">
+            <div class="container">
+                  <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-10">
+                              <div class="comments">
+                                    <div id="disqus_thread"></div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+            (function () {
+                  
+                  
+                  if (window.location.hostname == "localhost")
+                        return;
+
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  var disqus_shortname = 'nan-xiao-blog';
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+      </script>
+      <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+</section>
+    <div class="my-4 footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-5">
+                
+                    <div class="mx-0 mx-md-4 text-left">
+                        
+                            <a href="https://nanx.me">© 2018 Nan Xiao</a>
+                        
+                    </div>
+                
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="mx-0 mx-md-4 text-right">
+                    
+                        <a href="https://github.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/github.svg" alt="github" />
+                        </a>
+                    
+
+                    
+                        <a href="https://www.linkedin.com/in/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/linkedin.svg" alt="linkedin" />
+                        </a>
+                    
+
+                    
+                        <a href="https://twitter.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/twitter.svg" alt="twitter" />
+                        </a>
+                    
+
+                    
+                        <a href="mailto:me@nanx.me">
+                            <img class="icon" src="../../../img/email.svg" alt="email" />
+                        </a>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <a href="../../../index.xml" class="mr-0">
+                            <img class="icon" src="../../../img/rss.svg" alt="rss" />
+                        </a>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous"></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-66394392-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+        
+
+    
+</body>
+
+</html>

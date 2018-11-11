@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on Nan Xiao | 肖楠</title>
+    <link>/tags/css/</link>
+    <description>Recent content in Css on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 13 Mar 2018 02:20:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Return of the Native Font Stack</title>
+      <link>/blog/post/the-return-of-the-native-font-stack/</link>
+      <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
+      
+      <guid>/blog/post/the-return-of-the-native-font-stack/</guid>
+      <description>Figure: Lead type.
+ As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:
+font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.
+Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
+    </item>
+    
+  </channel>
+</rss>

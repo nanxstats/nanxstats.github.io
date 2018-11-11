@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Nan Xiao | 肖楠</title>
+    <link>/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Aug 2018 19:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Implementing Triplet Losses for Implicit Feedback Recommender Systems with R and Keras</title>
+      <link>/blog/post/triplet-loss-r-keras/</link>
+      <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/triplet-loss-r-keras/</guid>
+      <description>All the R code for this post is available on GitHub: road2stat/deep-learning-recipes.
+Three Palms by Jamie Davies.
+ At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
+    </item>
+    
+    <item>
+      <title>Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras</title>
+      <link>/blog/post/recsys-binary-implicit-feedback-r-keras/</link>
+      <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
+      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
+One in A Million by Veronica Benavides.</description>
+    </item>
+    
+    <item>
+      <title>Building My First Deep Learning Machine</title>
+      <link>/blog/post/building-my-first-deep-learning-machine/</link>
+      <pubDate>Mon, 20 Aug 2018 15:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/building-my-first-deep-learning-machine/</guid>
+      <description>Five years ago, GNOME 3’s immaturity was one of the reasons for me to switch to a Mac. After finished watching two seasons of Mr. Robot, I somehow missed it. With my AWS/GCP bills going up quite a bit recently, I quickly decided to invest a little and build a PC to retry the Linux desktop environment, also, to tackle some personal machine learning projects.
+Hardware Here is my PCPartPicker part list for the parts of choice.</description>
+    </item>
+    
+    <item>
+      <title>10 Things That Matter in Deep Learning (1/5)</title>
+      <link>/blog/post/10-things-matter-in-deep-learning-1/</link>
+      <pubDate>Thu, 12 Apr 2018 17:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/10-things-matter-in-deep-learning-1/</guid>
+      <description>Figure: Heart of the Matter by Otis Kaye, 1963. The Art Institute of Chicago.
+ Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</description>
+    </item>
+    
+  </channel>
+</rss>

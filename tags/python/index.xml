@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Nan Xiao | 肖楠</title>
+    <link>/tags/python/</link>
+    <description>Recent content in Python on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 01 Apr 2018 00:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why Everyone Should #DeletePython</title>
+      <link>/blog/post/why-everyone-should-delete-python/</link>
+      <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/why-everyone-should-delete-python/</guid>
+      <description>Disclaimer: this article reflects my personal opinion only. Reader discretion is advised.
+Figure: How Beemo changes batteries (Adventure Time). Cute but dangerous, just like working with Python 2 and Python 3 simultaneously.
+ OK. There I said it. Everybody should consider #DeletePython.
+Recently, people have raised significant concerns regarding Facebook’s privacy protection practice on their user’s data, with the discussions on Twitter: #DeleteFacebook. This inspired me to say something about another spicy topic: #DeletePython.</description>
+    </item>
+    
+  </channel>
+</rss>

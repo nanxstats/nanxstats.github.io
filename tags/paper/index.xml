@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paper on Nan Xiao | 肖楠</title>
+    <link>/tags/paper/</link>
+    <description>Recent content in Paper on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 31 Dec 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/paper/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Papers in My Heart (2017)</title>
+      <link>/blog/post/papers-in-my-heart-2017/</link>
+      <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/post/papers-in-my-heart-2017/</guid>
+      <description>Figure: Album cover for Skip to the Good Part by He Is We, 2011.
+  It is the last day of 2017. Looking back, it has been another fruitful year for statistical and machine intelligence research. Notably, a lot of new ideas have been published in the direction of deep learning. Although it is intriguing, I will probably talk about things I care about in deep learning in another post.</description>
+    </item>
+    
+  </channel>
+</rss>

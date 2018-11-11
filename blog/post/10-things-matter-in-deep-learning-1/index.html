@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> 10 Things That Matter in Deep Learning (1/5) - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="nn_NO" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/blog/post/10-things-matter-in-deep-learning-1/" />
+    <meta property="og:title" content="10 Things That Matter in Deep Learning (1/5)" />
+    <meta property="og:image" content="/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
+
+    
+        <meta property="twitter:site" content="@road2stat">
+    
+
+    <meta property="twitter:title" content="10 Things That Matter in Deep Learning (1/5)" />
+    <meta property="twitter:image" content="/image/nanxiao.jpg" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:description" content="" />
+
+    <link rel="canonical" href="../../../blog/post/10-things-matter-in-deep-learning-1/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../css/custom.css" />
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow.min.css" integrity="sha256-0QU8ry64q+N6YBIEF/6XF6vUeF15gbNO4tLS6ikk0FI=" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="../../../image/favicon.png">
+
+    
+</head>
+
+<body>
+    
+    <div class="my-4 my-md-5 header">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto offset-md-1 d-none d-md-block">
+                
+                    <a href="../../../">
+                        <img class="ml-md-4 logo img-fluid d-block rounded" src="../../../image/nanxiao.jpg" alt="logo">
+                    </a>
+                
+            </div>
+            <div class="col-auto align-self-center mr-auto">
+                <a href="../../../">
+                    <h1 class="name">Nan Xiao</h1>
+                </a>
+
+                <ul class="nav nav-primary">
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-software" href="../../../software/">
+                                
+                                Software
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-papers" href="../../../papers/">
+                                
+                                Papers
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-books" href="../../../books/">
+                                
+                                Books
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-talks" href="../../../talks/">
+                                
+                                Talks
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-blog" href="../../../blog/">
+                                
+                                Blog
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4 blog-post-title">10 Things That Matter in Deep Learning (1/5)</h1>
+
+                    <div class="mb-md-4 meta">
+                        
+                            
+                                <span class="author" title="Nan Xiao">
+                                    Nan Xiao
+                                </span>
+                            
+                        
+
+                        <span class="date middot" title='Thu Apr 12 2018 17:00:00 UTC'>
+                            2018-04-12
+                        </span>
+
+                        <span class="reading-time middot">
+                            4 minute read
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/deep-learning">deep learning</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="markdown">
+                        
+    
+
+
+<div class="figure">
+<img src="../../../image/heart-of-the-matter-otis-kaye.png" alt="Figure: Heart of the Matter by Otis Kaye, 1963. The Art Institute of Chicago." />
+<p class="caption">Figure: <em>Heart of the Matter</em> by Otis Kaye, 1963. The Art Institute of Chicago.</p>
+</div>
+<p>Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</p>
+<p>This also means, despite the hype, deep learning did something right. Some particular components of this system are worth investigating. So, I decided to summarize some of the exciting parts of deep learning here and free these ideas from my mind.</p>
+<p>This post will be the beginning of a five post series. The series will not try to be a comprehensive or even up-to-date overview of this topic. Instead, it serves as an opinionated record of the directions I think worth exploring in this field, according to my (limited) observations in the past five years. Note that a lot of the places in the DL land are still uncharted territories, so as usual, viewer discretion is advised.</p>
+<div id="unified-learning-framework" class="section level2">
+<h2>1. Unified Learning Framework</h2>
+<p><img src="../../../image/tensors-flowing.gif" align="right" width="200"></p>
+<p><em>One framework to rule them all.</em></p>
+<p>If there is only one thing that really matters in DL, this is it.</p>
+<p>Deep learning offers a unified, scalable framework for large-scale machine learning modeling. You can simply formulate a machine learning problem as minimizing a loss function, reparameterize and replace the traditional components that connect the input and outcome with deep neural networks, then optimize the (differentiable) system with an off-the-shelve optimizer, most likely a derivative version of stochastic gradient descent (SGD).</p>
+<p>A <em>unified</em> framework means it does not only work for traditional classification/regression problems. You can also apply this framework to directly optimize any adequately defined objective functions that used to be challenging to optimize or used to require customized solvers. For example, the well-known <a href="http://katbailey.github.io/post/matrix-factorization-with-tensorflow/">matrix factorization method</a> in recommender systems, or the <a href="https://medium.com/mlreview/how-to-apply-distance-metric-learning-for-street-to-shop-problem-d21247723d2a">large margin nearest neighbor based triplet loss</a> for supervised distance metric learning.</p>
+<p>Such opportunities also created an invisible war for machine learning programming frameworks. Existing frameworks like TensorFlow, Keras, PyTorch, Caffe, MXNet, and many others could help people solve machine learning problems in a standardized fashion. Many interesting techniques also come with them. For instance, <a href="https://arxiv.org/abs/1509.07164">automatic differentiation</a> is one of the key ingredients for such programming frameworks.</p>
+<p>Having a good framework for doing things is critical. Like my friend Tao <a href="https://joegaotao.github.io/2017/08/28/%E7%9B%B8%E5%85%B3%E6%8A%BD%E6%A0%B7%E8%9E%8D%E5%90%88/">discussed</a> (in Chinese), a good framework is not only useful for solving the problem itself, but also helps us better understand and fine-tune the system. Ultimately, a good framework will enable better communication and collaborative problem-solving.</p>
+</div>
+<div id="bayesian-deep-learning" class="section level2">
+<h2>2. Bayesian Deep Learning</h2>
+<p>Does the unified modeling framework idea sound familiar to you? Yes, everything described above is highly similar to what people can do in Bayesian modeling. We would first define a data model (prior + likelihood), then use MCMC/variational inference to optimize it (get the posterior). Several programming frameworks were also available.</p>
+<p>Not surprisingly, the similarity inspired people to explore renovating traditional Bayesian models with the help of deep neural networks, or vice versa, integrating uncertainty and probabilistic inference into deep neural network structures for better interpretability. Such efforts can be categorized under the name “Bayesian deep learning.”</p>
+<p>Bayesian deep learning can be useful in many scenarios requiring probabilistic inference. However, for some cases, especially in NLP applications, I doubt the models will have decent (predictive) performance gains by incorporating a DNN component, since many problems in text modeling are not as difficult as the problems in image recognition or speech recognition. As an example, there are some possibilities for doing “deep topic modeling,” but if I want to be more statistically rigorous, I would still prefer methods that do <a href="https://dl.acm.org/citation.cfm?id=2741115">exact inference using MCMC</a>. In the end, we would mostly expect such crossovers help improve the scalability or interpretability of the existing models.</p>
+<div class="figure">
+<img src="../../../image/lda-movie-poster-color-topics.png" alt="Figure: Latent color topics in movie poster design, learned by vanilla LDA." />
+<p class="caption">Figure: <a href="https://nanx.me/posters/chromaclust-poster-hg48600.pdf">Latent color topics</a> in movie poster design, learned by vanilla LDA.</p>
+</div>
+<p>Several probabilistic programming frameworks are being built for Bayesian deep learning (or just Bayesian modeling), including <a href="http://edwardlib.org/">Edward</a>, <a href="https://github.com/thu-ml/zhusuan">ZhuSuan</a>, and <a href="https://greta-dev.github.io/greta/">greta</a>. To some degree, they are very similar to <a href="http://mc-stan.org">Stan</a>, whereas they took alternative approaches for optimization.</p>
+<p>Next time, we will talk about feature learning and regularization.</p>
+</div>
+
+
+
+                    </div>
+
+                    
+                        <div class="navigation">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-left">
+                                            <a href="../../../blog/post/why-everyone-should-delete-python/">« Why Everyone Should #DeletePython</a>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-right">
+                                            <a href="../../../blog/post/taking-the-long-view/">Taking the Long View »</a>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="comments">
+
+      <div class="py-3 content">
+            <div class="container">
+                  <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-10">
+                              <div class="comments">
+                                    <div id="disqus_thread"></div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+            (function () {
+                  
+                  
+                  if (window.location.hostname == "localhost")
+                        return;
+
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  var disqus_shortname = 'nan-xiao-blog';
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+      </script>
+      <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+</section>
+    <div class="my-4 footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-5">
+                
+                    <div class="mx-0 mx-md-4 text-left">
+                        
+                            <a href="https://nanx.me">© 2018 Nan Xiao</a>
+                        
+                    </div>
+                
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="mx-0 mx-md-4 text-right">
+                    
+                        <a href="https://github.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/github.svg" alt="github" />
+                        </a>
+                    
+
+                    
+                        <a href="https://www.linkedin.com/in/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/linkedin.svg" alt="linkedin" />
+                        </a>
+                    
+
+                    
+                        <a href="https://twitter.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/twitter.svg" alt="twitter" />
+                        </a>
+                    
+
+                    
+                        <a href="mailto:me@nanx.me">
+                            <img class="icon" src="../../../img/email.svg" alt="email" />
+                        </a>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <a href="../../../index.xml" class="mr-0">
+                            <img class="icon" src="../../../img/rss.svg" alt="rss" />
+                        </a>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous"></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-66394392-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+        
+
+    
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="nn_NO" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/blog/post/recsys-binary-implicit-feedback-r-keras/" />
+    <meta property="og:title" content="Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras" />
+    <meta property="og:image" content="/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
+
+    
+        <meta property="twitter:site" content="@road2stat">
+    
+
+    <meta property="twitter:title" content="Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras" />
+    <meta property="twitter:image" content="/image/nanxiao.jpg" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:description" content="" />
+
+    <link rel="canonical" href="../../../blog/post/recsys-binary-implicit-feedback-r-keras/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../css/custom.css" />
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow.min.css" integrity="sha256-0QU8ry64q+N6YBIEF/6XF6vUeF15gbNO4tLS6ikk0FI=" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="../../../image/favicon.png">
+
+    
+</head>
+
+<body>
+    
+    <div class="my-4 my-md-5 header">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto offset-md-1 d-none d-md-block">
+                
+                    <a href="../../../">
+                        <img class="ml-md-4 logo img-fluid d-block rounded" src="../../../image/nanxiao.jpg" alt="logo">
+                    </a>
+                
+            </div>
+            <div class="col-auto align-self-center mr-auto">
+                <a href="../../../">
+                    <h1 class="name">Nan Xiao</h1>
+                </a>
+
+                <ul class="nav nav-primary">
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-software" href="../../../software/">
+                                
+                                Software
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-papers" href="../../../papers/">
+                                
+                                Papers
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-books" href="../../../books/">
+                                
+                                Books
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-talks" href="../../../talks/">
+                                
+                                Talks
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-blog" href="../../../blog/">
+                                
+                                Blog
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4 blog-post-title">Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras</h1>
+
+                    <div class="mb-md-4 meta">
+                        
+                            
+                                <span class="author" title="Nan Xiao">
+                                    Nan Xiao
+                                </span>
+                            
+                        
+
+                        <span class="date middot" title='Wed Aug 22 2018 17:30:00 UTC'>
+                            2018-08-22
+                        </span>
+
+                        <span class="reading-time middot">
+                            5 minute read
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/deep-learning">deep learning</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/neural-network">neural network</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/recommender-system">recommender system</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/collaborative-filtering">collaborative filtering</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/implicit-feedback">implicit feedback</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/keras">Keras</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/r">R</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="markdown">
+                        
+    
+
+
+<p>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including <a href="https://grouplens.org/datasets/movielens/">MovieLens</a>, are a bit misleading: in reality, <a href="http://yifanhu.net/PUB/cf.pdf">implicit feedback</a> data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.</p>
+<div class="figure">
+<img src="../../../image/one-in-a-million-veronica-benavides.jpg" alt="One in A Million by Veronica Benavides." />
+<p class="caption"><a href="https://unsplash.com/photos/W6NGECt_yE4">One in A Million</a> by Veronica Benavides.</p>
+</div>
+<p>To do collaborative filtering with such data is a curse because the 0-1 entries in the matrix we want to decompose has far less information than a 1 to 5 score. While it is also a blessing because a binary classification is usually easier to do, compared to a real-valued regression — the information we need from either the features or latent factors is less than what a regression model requires. So intuitively, it balances out.</p>
+<p>Now I’ve got <a href="https://nanx.me/blog/post/building-my-first-deep-learning-machine/">my new machine</a>. I decided to rapidly build a prototype recommender system for binary implicit feedback data With R and Keras. The algorithm should be elementary to implement with the frameworks and directly trainable on CPU or GPU.</p>
+<div id="poor-mans-neural-collaborative-filtering" class="section level2">
+<h2>Poor Man’s Neural Collaborative Filtering</h2>
+<p>We will use the <a href="https://www.netflixprize.com/assets/ProgressPrize2008_BellKor.pdf">simple SVD idea</a> popularized by the Netflix prize. Let’s say we have a <code>m x n</code> matrix <code>R</code> with binary values <code>r_{ui}</code>. We want to decompose it into a <code>m x k</code> matrix <code>P</code> and a <code>k x n</code> matrix <code>Q</code> with <code>k</code> latent factors each. The inner product <code>p_u x q_i</code> derived by latent representations <code>p_u</code> and <code>q_i</code> from <code>P</code> and <code>Q</code> will be used to predict <code>r_{ui}</code>. Everything is differentiable here so it can be optimized by gradient descent methods.</p>
+<p>Some modifications for dealing with the binary implicit feedback data:</p>
+<ul>
+<li>Since <code>r_{ui}</code> is binary (0-1 valued), we will use the binary cross entropy loss (commonly used for classification) instead of the regression-oriented MSE losses.</li>
+<li>As a remedy for the sparsity (or unbalanced classes) often presented in matrix <code>R</code>, we assign more weight to the less presented class (known interactions), which is necessarily “cost-sensitive learning”. Another possibility is to use random sampling to get different, much smaller sets of negative samples to balance the training data for each batch.</li>
+<li>The inner product layer or the part before it is easily replaceable by arbitrary DNN architectures. I didn’t do it here though because I prefer to keep the model simple.</li>
+</ul>
+<p>As a reference, what we are trying to do here is similar to what <a href="https://dl.acm.org/citation.cfm?id=3052569">He et al. (WWW 2017)</a> proposed, but even more straightforward. I call it “poor man’s neural collaborative filtering”.</p>
+</div>
+<div id="applications-to-quantitative-systems-pharmacology" class="section level2">
+<h2>Applications to Quantitative Systems Pharmacology</h2>
+<p>Let’s try this model with our data. The <a href="https://github.com/road2stat/MEF">dataset</a> is from a <a href="https://doi.org/10.1002/psp4.12002">statistical methodology paper</a> we published in 2015. It contains 746 drugs and 817 adverse drug reactions (ADRs), with 24,803 known drug-ADR associations. This data can be represented by a 746 x 817 matrix with 0-1 entries, where 1 denotes for having a known association. It’s implicit feedback: we don’t know any non-association drug-ADR pairs here, and all the missing drug-ADR pairs (all the pairs other than the known associated pairs) are marked as 0. We are interested in predicting if there are any novel associations between all the missing drug-ADR pairs. If successful, we will be able to forecast if a specific drug has any potential but unreported side effects, which helps the clinical pharmacology and pharmacovigilance practice.</p>
+<p>For our data, the model parameters are summarized below (only 15k parameters, yay):</p>
+<pre><output>
+_______________________________________________________________________________
+Layer (type)                  Output Shape      Param #     Connected to
+===============================================================================
+input_1 (InputLayer)            (None, 1)         0
+_______________________________________________________________________________
+input_2 (InputLayer)            (None, 1)         0
+_______________________________________________________________________________
+embedding_1 (Embedding)       (None, 1, 10)       7460      input_1[0][0]
+_______________________________________________________________________________
+embedding_2 (Embedding)       (None, 1, 10)       8170      input_2[0][0]
+_______________________________________________________________________________
+flatten_1 (Flatten)             (None, 10)        0         embedding_1[0][0]
+_______________________________________________________________________________
+flatten_2 (Flatten)             (None, 10)        0         embedding_2[0][0]
+_______________________________________________________________________________
+dot_1 (Dot)                     (None, 1)         0         flatten_1[0][0]
+                                                            flatten_2[0][0]
+_______________________________________________________________________________
+dense_1 (Dense)                 (None, 1)         2         dot_1[0][0]
+===============================================================================
+Total params: 15,632
+Trainable params: 15,632
+Non-trainable params: 0
+_______________________________________________________________________________
+
+</output></pre>
+</div>
+<div id="code-and-results" class="section level2">
+<h2>Code and Results</h2>
+<p>Let’s code it up with R + Keras and train it on GPU:</p>
+<script src="https://gist.github.com/road2stat/9a958fcd8c5a348a00116128afd7758f.js"></script>
+<p>The key parameters to tune here are:</p>
+<ul>
+<li>The <code>optimizer</code>. We chose RMSProp since it gave us the most stable training results.</li>
+<li>The number of latent factors <code>k</code>. We finally decided to use 5 because it is unlikely that one needs 50 factors to do this well. One probably also needs more layers for a larger <code>k</code>.</li>
+<li>The <code>class_weight</code>. We tried a few from 1:1 to 500:1 and finally selected the 50:1 ratio.</li>
+<li>The <code>batch_size</code>. Due to the sparsity of the matrix, this affects the performance.</li>
+</ul>
+<p>The loss and accuracy changes in each epoch are visualized below:</p>
+<div class="figure">
+<img src="../../../image/r-keras-recsys-loss-accuracy.png" alt="Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7." />
+<p class="caption">Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7.</p>
+</div>
+</div>
+<div id="comments" class="section level2">
+<h2>Comments</h2>
+<p>We have just prototyped a recommender system with only a few lines of R code, thanks to the flexibility offered by a modern machine learning framework with automatic differentiation and off-the-shelf optimizers. Two interesting topics to explore:</p>
+<ul>
+<li><strong>Model architecture</strong>. The barebone model here is easily extensible to build <strong>hybrid</strong> recommender systems as we did in our 2015 paper. Such extensions can be defined as <a href="http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf">feature-based matrix factorization</a>, meaning we can further incorporate features for the drugs and ADRs to improve the predictive performance. One can simply put them in a neural net architecture and let them play together with the latent factors learned here.</li>
+<li><strong>Loss function</strong>. It is possible to try more loss functions, such as the <a href="https://github.com/maciejkula/triplet_recommendations_keras">triplet loss</a> designed explicitly for one-class classification or metric learning problems.</li>
+</ul>
+<p>Here is the <a href="https://github.com/road2stat/deep-learning-recipes">GitHub repo</a> for the R code.</p>
+</div>
+
+
+
+                    </div>
+
+                    
+                        <div class="navigation">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-left">
+                                            <a href="../../../blog/post/building-my-first-deep-learning-machine/">« Building My First Deep Learning Machine</a>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-right">
+                                            <a href="../../../blog/post/how-a-financial-crisis-started/">How a Financial Crisis Started »</a>
+                                        </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="comments">
+
+      <div class="py-3 content">
+            <div class="container">
+                  <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-10">
+                              <div class="comments">
+                                    <div id="disqus_thread"></div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+            (function () {
+                  
+                  
+                  if (window.location.hostname == "localhost")
+                        return;
+
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  var disqus_shortname = 'nan-xiao-blog';
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+      </script>
+      <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+</section>
+    <div class="my-4 footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-5">
+                
+                    <div class="mx-0 mx-md-4 text-left">
+                        
+                            <a href="https://nanx.me">© 2018 Nan Xiao</a>
+                        
+                    </div>
+                
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="mx-0 mx-md-4 text-right">
+                    
+                        <a href="https://github.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/github.svg" alt="github" />
+                        </a>
+                    
+
+                    
+                        <a href="https://www.linkedin.com/in/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/linkedin.svg" alt="linkedin" />
+                        </a>
+                    
+
+                    
+                        <a href="https://twitter.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/twitter.svg" alt="twitter" />
+                        </a>
+                    
+
+                    
+                        <a href="mailto:me@nanx.me">
+                            <img class="icon" src="../../../img/email.svg" alt="email" />
+                        </a>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <a href="../../../index.xml" class="mr-0">
+                            <img class="icon" src="../../../img/rss.svg" alt="rss" />
+                        </a>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous"></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-66394392-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+        
+
+    
+</body>
+
+</html>

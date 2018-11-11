@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Promises on Nan Xiao | 肖楠</title>
+    <link>/tags/promises/</link>
+    <description>Recent content in Promises on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 May 2018 14:15:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/promises/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Shiny Now Supports Async Execution</title>
+      <link>/blog/post/shiny-async/</link>
+      <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
+      
+      <guid>/blog/post/shiny-async/</guid>
+      <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.
+You Want It When? (Zootopia)
+  In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
+    </item>
+    
+  </channel>
+</rss>

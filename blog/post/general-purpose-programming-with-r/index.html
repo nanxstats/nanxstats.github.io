@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> General-Purpose Programming with R - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="nn_NO" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="/blog/post/general-purpose-programming-with-r/" />
+    <meta property="og:title" content="General-Purpose Programming with R" />
+    <meta property="og:image" content="/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
+
+    
+        <meta property="twitter:site" content="@road2stat">
+    
+
+    <meta property="twitter:title" content="General-Purpose Programming with R" />
+    <meta property="twitter:image" content="/image/nanxiao.jpg" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:description" content="" />
+
+    <link rel="canonical" href="../../../blog/post/general-purpose-programming-with-r/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="../../../css/custom.css" />
+
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/tomorrow.min.css" integrity="sha256-0QU8ry64q+N6YBIEF/6XF6vUeF15gbNO4tLS6ikk0FI=" crossorigin="anonymous" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="../../../image/favicon.png">
+
+    
+</head>
+
+<body>
+    
+    <div class="my-4 my-md-5 header">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto offset-md-1 d-none d-md-block">
+                
+                    <a href="../../../">
+                        <img class="ml-md-4 logo img-fluid d-block rounded" src="../../../image/nanxiao.jpg" alt="logo">
+                    </a>
+                
+            </div>
+            <div class="col-auto align-self-center mr-auto">
+                <a href="../../../">
+                    <h1 class="name">Nan Xiao</h1>
+                </a>
+
+                <ul class="nav nav-primary">
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-software" href="../../../software/">
+                                
+                                Software
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-papers" href="../../../papers/">
+                                
+                                Papers
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-books" href="../../../books/">
+                                
+                                Books
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-talks" href="../../../talks/">
+                                
+                                Talks
+                            </a>
+                        </li>
+                    
+                        <li class="nav-item">
+                            <a class="text-uppercase nav-link text-blog" href="../../../blog/">
+                                
+                                Blog
+                            </a>
+                        </li>
+                    
+
+                    
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-10">
+                    <h1 class="mx-0 mx-md-4 blog-post-title">General-Purpose Programming with R</h1>
+
+                    <div class="mb-md-4 meta">
+                        
+                            
+                                <span class="author" title="Nan Xiao">
+                                    Nan Xiao
+                                </span>
+                            
+                        
+
+                        <span class="date middot" title='Thu Oct 25 2018 23:30:00 UTC'>
+                            2018-10-25
+                        </span>
+
+                        <span class="reading-time middot">
+                            2 minute read
+                        </span>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                    <li class="d-inline middot">
+                                        <a href="../../../tags/r">R</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+
+                        <div class="d-none d-md-inline tags">
+                            <ul class="list-unstyled d-inline">
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="markdown">
+                        
+    
+
+
+<div class="py-3 col-10 offset-1">
+<div class="embed-responsive embed-responsive-16by9">
+<p><iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6UmVBqRsYJk?rel=0" allowfullscreen></iframe></p>
+</div>
+</div>
+<center>
+“They’ll take your soul if you let them — don’t let them.” (You’ve Got a Friend)
+</center>
+<p>
+</p>
+<p>I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (<a href="https://simplystatistics.org/">pun</a> intended), but everything related to data, or everything that can be done programmatically.</p>
+<p>Recently, I found <a href="https://www.reddit.com/r/rstats/comments/9hviwd/am_i_crazy_for_loving_r_as_a_generalpurpose/">a fascinating thread posted in the r/rstats subreddit</a>. The discussion summarized some of the excellent designs deeply embedded in R. In the comments section, there are also some good debates of R’s strengths/weaknesses for a few everyday general-purpose programming tasks, such as web scraping. Apparently, some people love to use R for general-purpose programming, just like I do.</p>
+<p>Some additional thoughts on the two notable aspects discussed in the thread:</p>
+<ul>
+<li><strong>Functional Programming</strong>. I believe everyone should read the <a href="http://adv-r.had.co.nz/Functional-programming.html">Functional Programming chapter</a> in Hadley’s <em>Advanced R</em> book to have a better understanding of this awesome aspect of R. From my perspective, R has just the right amount of FP support. Although Haskell is super good (with a cool motto: <em>avoid “success at all costs”</em>), it took a rather extreme approach. As a result, you have to introduce some unintuitive concepts to compensate for the fact that not everything in the world is best abstracted under that paradigm. With R, in most cases, you can be both elegant and comfortable.</li>
+<li><strong>Package Management</strong>. R has one single package management system, and <em>the</em> package repository: CRAN. CRAN has a decently high bar for package acceptance. All packages there should conceptually work even if the latest stable version of R is rolled out every few months. Beyond this, active open source communities are autonomously formed in recent years to collectively build high-quality “suites” of contributed packages, such as the <a href="https://www.tidyverse.org/">tidyverse</a> and <a href="https://ropensci.org/">rOpenSci</a>. I do want to emphasize this because it’s obviously not a trivial thing to have in practice, for example, <a href="https://nanx.me/blog/post/why-everyone-should-delete-python/">the-language-which-must-not-be-named</a>.</li>
+</ul>
+<p>No language is perfect. We should see that every language makes fundamental mistakes in their designs. R happens to be correct in a lot of critical design choices, and I happen to love it for general-purpose (+statistical) programming. It’s all probabilistic.</p>
+<p><em>Conflict of interest</em>: I donated $25 to the <a href="https://www.r-project.org/foundation/">R Foundation</a> in 2017, to support the best language for statistical computing on the planet. You can also <a href="https://www.r-project.org/foundation/donations.html">do it here</a>.</p>
+
+
+
+                    </div>
+
+                    
+                        <div class="navigation">
+                            <div class="row">
+                                <div class="col-12 col-md-6">
+                                    
+                                        <div class="mx-0 mx-md-4 mt-4 text-left">
+                                            <a href="../../../blog/post/accidental-product-success/">« The Accidental Product Success</a>
+                                        </div>
+                                    
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="comments">
+
+      <div class="py-3 content">
+            <div class="container">
+                  <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-10">
+                              <div class="comments">
+                                    <div id="disqus_thread"></div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <script type="text/javascript">
+            (function () {
+                  
+                  
+                  if (window.location.hostname == "localhost")
+                        return;
+
+                  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                  var disqus_shortname = 'nan-xiao-blog';
+                  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+      </script>
+      <noscript>
+            Please enable JavaScript to view the
+            <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+      </noscript>
+</section>
+    <div class="my-4 footer">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-5">
+                
+                    <div class="mx-0 mx-md-4 text-left">
+                        
+                            <a href="https://nanx.me">© 2018 Nan Xiao</a>
+                        
+                    </div>
+                
+            </div>
+            <div class="col-sm-12 col-md-5">
+                <div class="mx-0 mx-md-4 text-right">
+                    
+                        <a href="https://github.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/github.svg" alt="github" />
+                        </a>
+                    
+
+                    
+                        <a href="https://www.linkedin.com/in/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/linkedin.svg" alt="linkedin" />
+                        </a>
+                    
+
+                    
+                        <a href="https://twitter.com/road2stat" target="_blank">
+                            <img class="icon" src="../../../img/twitter.svg" alt="twitter" />
+                        </a>
+                    
+
+                    
+                        <a href="mailto:me@nanx.me">
+                            <img class="icon" src="../../../img/email.svg" alt="email" />
+                        </a>
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+                        <a href="../../../index.xml" class="mr-0">
+                            <img class="icon" src="../../../img/rss.svg" alt="rss" />
+                        </a>
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js" integrity="sha256-iq71rXEe/fvjCUP9AfLY0cKudQuKAQywiUpXkRFSkLc=" crossorigin="anonymous"></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.initHighlighting();
+            }, true);
+        </script>
+    
+
+    
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-66394392-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    
+        
+<script src="../../../js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>
