@@ -18,7 +18,7 @@
       
       <guid>/blog/post/triplet-loss-r-keras/</guid>
       <description>All the R code for this post is available on GitHub: road2stat/deep-learning-recipes.
-Three Palms by Jamie Davies.
+Photo: Three Palms by Jamie Davies
  At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
     </item>
     
@@ -29,7 +29,7 @@ Three Palms by Jamie Davies.
       
       <guid>/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
       <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
-One in A Million by Veronica Benavides.</description>
+Photo: One in A Million by Veronica Benavides</description>
     </item>
     
   </channel>

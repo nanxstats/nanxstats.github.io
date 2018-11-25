@@ -180,8 +180,8 @@
 
 <p>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including <a href="https://grouplens.org/datasets/movielens/">MovieLens</a>, are a bit misleading: in reality, <a href="http://yifanhu.net/PUB/cf.pdf">implicit feedback</a> data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.</p>
 <div class="figure">
-<img src="../../../image/one-in-a-million-veronica-benavides.jpg" alt="One in A Million by Veronica Benavides." />
-<p class="caption"><a href="https://unsplash.com/photos/W6NGECt_yE4">One in A Million</a> by Veronica Benavides.</p>
+<img src="../../../image/one-in-a-million-veronica-benavides.jpg" alt="Photo: One in A Million by Veronica Benavides" />
+<p class="caption">Photo: <a href="https://unsplash.com/photos/W6NGECt_yE4">One in A Million</a> by Veronica Benavides</p>
 </div>
 <p>To do collaborative filtering with such data is a curse because the 0-1 entries in the matrix we want to decompose has far less information than a 1 to 5 score. While it is also a blessing because a binary classification is usually easier to do, compared to a real-valued regression — the information we need from either the features or latent factors is less than what a regression model requires. So intuitively, it balances out.</p>
 <p>Now I’ve got <a href="https://nanx.me/blog/post/building-my-first-deep-learning-machine/">my new machine</a>. I decided to rapidly build a prototype recommender system for binary implicit feedback data With R and Keras. The algorithm should be elementary to implement with the frameworks and directly trainable on CPU or GPU.</p>
@@ -241,8 +241,8 @@ _______________________________________________________________________________
 </ul>
 <p>The loss and accuracy changes in each epoch are visualized below:</p>
 <div class="figure">
-<img src="../../../image/r-keras-recsys-loss-accuracy.png" alt="Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7." />
-<p class="caption">Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7.</p>
+<img src="../../../image/r-keras-recsys-loss-accuracy.png" alt="Figure: Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7." />
+<p class="caption">Figure: Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7.</p>
 </div>
 </div>
 <div id="comments" class="section level2">

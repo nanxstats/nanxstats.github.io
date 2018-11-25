@@ -184,8 +184,8 @@
 
 <p>All the R code for this post is available on GitHub: <a href="https://github.com/road2stat/deep-learning-recipes">road2stat/deep-learning-recipes</a>.</p>
 <div class="figure">
-<img src="../../../image/three-palms-jamie-davies.jpg" alt="Three Palms by Jamie Davies." />
-<p class="caption"><a href="https://unsplash.com/photos/eZt5mvF7RcU">Three Palms</a> by Jamie Davies.</p>
+<img src="../../../image/three-palms-jamie-davies.jpg" alt="Photo: Three Palms by Jamie Davies" />
+<p class="caption">Photo: <a href="https://unsplash.com/photos/eZt5mvF7RcU">Three Palms</a> by Jamie Davies</p>
 </div>
 <p>At the end of our <a href="https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/">last post</a>, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</p>
 <div id="triplet-loss" class="section level2">
@@ -201,8 +201,8 @@
 <p>We binarized the 1 to 5 ratings to make it binary (interacting or non-interacting user-item pairs) implicit feedback data. To construct the triplets, we sample from the interacting user-items pairs and combine them with randomly sampled non-interaction items for the users.</p>
 <p>The model looks like this:</p>
 <div class="figure">
-<img src="../../../image/triplet-loss-model-keras.png" alt="A barebone matrix factorization model with a triplet loss for recommender systems with implicit feedback data." />
-<p class="caption">A barebone matrix factorization model with a triplet loss for recommender systems with implicit feedback data.</p>
+<img src="../../../image/triplet-loss-model-keras.png" alt="Figure: A barebone matrix factorization model with a triplet loss for recommender systems with implicit feedback data." />
+<p class="caption">Figure: A barebone matrix factorization model with a triplet loss for recommender systems with implicit feedback data.</p>
 </div>
 <p>From the figure, the low-rank, dense embeddings for users and items are the inputs for the loss function (the Lambda layer). By minimizing the loss function, we achieved our goal: learning representations for users and items. Note that the embedding layer for items is shared by the positive and negative items since they are inherently both items thus should use the same representation.</p>
 </div>
@@ -216,8 +216,8 @@
 <p>The custom performance metric we implemented is a user-averaged AUC. In essence, for each user in the test set, we predict the probability if an item will be preferred by the user on all items in the test set. We then compute the AUC based on these predictions for this user, do this for all users, and average all the AUC values. Intuitively, this metric can roughly reflect the probability that a randomly selected positive item will be ranked higher than a randomly selected negative item for users.</p>
 <p>The loss and AUC change on the training/test set is visualized below.</p>
 <div class="figure">
-<img src="../../../image/triplet-loss-margin-movielens.png" alt="The first 20 epochs: loss and user-averaged AUC for the margin-based triplet loss model." />
-<p class="caption">The first 20 epochs: loss and user-averaged AUC for the margin-based triplet loss model.</p>
+<img src="../../../image/triplet-loss-margin-movielens.png" alt="Figure: The first 20 epochs: loss and user-averaged AUC for the margin-based triplet loss model." />
+<p class="caption">Figure: The first 20 epochs: loss and user-averaged AUC for the margin-based triplet loss model.</p>
 </div>
 </div>
 <div id="the-bpr-triplet-loss" class="section level2">
@@ -226,8 +226,8 @@
 <p><span class="math display">\[L_\text{BPR}(a, p, n) = \sum \big(1 - \sigma(f(a, p) - f(a, n)) \big)\]</span></p>
 <p>where <span class="math inline">\(\sigma\)</span> is the sigmoid function. For the sake of completeness, I also implemented it. It has a strikingly similar performance to the margin-based model for our data here, while it converges faster with the benefit of not needing to tune the margin parameter of the loss.</p>
 <div class="figure">
-<img src="../../../image/triplet-loss-bpr-movielens.png" alt="The first 20 epochs: loss and user-averaged AUC for the BPR triplet loss model." />
-<p class="caption">The first 20 epochs: loss and user-averaged AUC for the BPR triplet loss model.</p>
+<img src="../../../image/triplet-loss-bpr-movielens.png" alt="Figure: The first 20 epochs: loss and user-averaged AUC for the BPR triplet loss model." />
+<p class="caption">Figure: The first 20 epochs: loss and user-averaged AUC for the BPR triplet loss model.</p>
 </div>
 </div>
 <div id="comments" class="section level2">
