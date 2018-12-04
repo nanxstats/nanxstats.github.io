@@ -6,10 +6,21 @@
     <description>Recent content in R on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Oct 2018 23:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Dec 2018 14:30:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A List of Awesome Shiny Extension Packages</title>
+      <link>/blog/post/awesome-shiny-extensions/</link>
+      <pubDate>Tue, 04 Dec 2018 14:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/awesome-shiny-extensions/</guid>
+      <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
+  TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: road2stat/awesome-shiny-extensions. Pull requests welcomed!
+ Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
+    </item>
     
     <item>
       <title>General-Purpose Programming with R</title>

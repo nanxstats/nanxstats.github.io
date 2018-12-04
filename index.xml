@@ -6,10 +6,21 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Nov 2018 23:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Dec 2018 14:30:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A List of Awesome Shiny Extension Packages</title>
+      <link>/blog/post/awesome-shiny-extensions/</link>
+      <pubDate>Tue, 04 Dec 2018 14:30:00 +0000</pubDate>
+      
+      <guid>/blog/post/awesome-shiny-extensions/</guid>
+      <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
+  TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: road2stat/awesome-shiny-extensions. Pull requests welcomed!
+ Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
+    </item>
     
     <item>
       <title>Renga: A Clean Bootstrap 4 Theme for Hugo and Blogdown</title>
@@ -156,7 +167,7 @@ You Want It When? (Zootopia)
       <pubDate>Fri, 18 May 2018 15:50:00 +0000</pubDate>
       
       <guid>/blog/post/https-censored-future/</guid>
-      <description>The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.
+      <description>The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.
  The Good News One of the good news from the past weeks is that GitHub Pages finally supports HTTPS for custom domains. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them can be a lengthy process.</description>
     </item>
     

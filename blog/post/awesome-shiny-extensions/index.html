@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> An HTTPS-Censored Future - Nan Xiao | 肖楠 </title>
+    <title> A List of Awesome Shiny Extension Packages - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="A list of awesome Shiny extension packages." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="nn_NO" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="/blog/post/https-censored-future/" />
-    <meta property="og:title" content="An HTTPS-Censored Future" />
-    <meta property="og:image" content="/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="/blog/post/awesome-shiny-extensions/" />
+    <meta property="og:title" content="A List of Awesome Shiny Extension Packages" />
+    <meta property="og:image" content="/image/awesome-shiny-extensions.jpg" />
+    <meta property="og:description" content="A list of awesome Shiny extension packages." />
 
     
         <meta property="twitter:site" content="@road2stat">
     
 
-    <meta property="twitter:title" content="An HTTPS-Censored Future" />
-    <meta property="twitter:image" content="/image/nanxiao.jpg" />
+    <meta property="twitter:title" content="A List of Awesome Shiny Extension Packages" />
+    <meta property="twitter:image" content="/image/awesome-shiny-extensions.jpg" />
     <meta property="twitter:card" content="summary" />
-    <meta property="twitter:description" content="" />
+    <meta property="twitter:description" content="A list of awesome Shiny extension packages." />
 
-    <link rel="canonical" href="../../../blog/post/https-censored-future/">
+    <link rel="canonical" href="../../../blog/post/awesome-shiny-extensions/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous" />
 
@@ -112,7 +112,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    <h1 class="mx-0 mx-md-4 blog-post-title">An HTTPS-Censored Future</h1>
+                    <h1 class="mx-0 mx-md-4 blog-post-title">A List of Awesome Shiny Extension Packages</h1>
 
                     <div class="mb-md-4 meta">
                         
@@ -123,8 +123,8 @@
                             
                         
 
-                        <span class="date middot" title='Fri May 18 2018 15:50:00 UTC'>
-                            2018-05-18
+                        <span class="date middot" title='Tue Dec 4 2018 14:30:00 UTC'>
+                            2018-12-04
                         </span>
 
                         <span class="reading-time middot">
@@ -135,15 +135,11 @@
                             <ul class="list-unstyled d-inline">
                                 
                                     <li class="d-inline middot">
-                                        <a href="../../../tags/https">https</a>
+                                        <a href="../../../tags/shiny">shiny</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="../../../tags/github">github</a>
-                                    </li>
-                                
-                                    <li class="d-inline middot">
-                                        <a href="../../../tags/censorship">censorship</a>
+                                        <a href="../../../tags/r">R</a>
                                     </li>
                                 
                             </ul>
@@ -163,23 +159,17 @@
 
 
 <div class="figure">
-<img src="../../../image/the-fall-of-phaeton-peter-rubens.jpg" alt="The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art." />
-<p class="caption"><em>The Fall of Phaeton</em> by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.</p>
+<img src="../../../image/awesome-shiny-extensions.jpg" alt="“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay." />
+<p class="caption">“Everything looks official with tiny leaves around it.” Original photo by <a href="https://unsplash.com/photos/2LJ4rqK2qfU">Kelli Tungay</a>.</p>
 </div>
-<div id="the-good-news" class="section level2">
-<h2>The Good News</h2>
-<p>One of the good news from the past weeks is that <a href="https://blog.github.com/2018-05-01-github-pages-custom-domains-https/">GitHub Pages finally supports HTTPS for custom domains</a>. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them <a href="https://github.com/isaacs/github/issues/156">can be a lengthy process</a>.</p>
-<p>Before this, regular people like me probably need to add an extra layer which supports HTTPS for your custom domain, such as Cloudflare or Netlify, to host their static content on GitHub/GitHub Pages. Cloudflare is professional at security while Netlify is mastering build and deploy especially if you use the <a href="https://jamstack.org/">JAMstack</a>.</p>
-<p>In reality, for various reasons, these solutions are not 100% perfect, regarding security, simplicity, or efficiency. Still, I should say they are worth trying (esp. Netlify) if you want to know <a href="https://yihui.name/en/2017/06/netlify-instead-of-github-pages/">more possibilities</a> out there, beyond directly serving static websites.</p>
-</div>
-<div id="the-bad-news" class="section level2">
-<h2>The Bad News</h2>
-<p>HTTPS could also be a double-edged sword, in many ways. To establish a secure communication channel, the server and the client have to trust a centralized, third-party certificate authority (CA) who issues the certificates. The first issue is, some of the CAs themselves are not exactly playing by the book: <a href="https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/">backdating the certificates</a>, <a href="https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html">misissuing certificates</a>, to name a few. An even more pressing issue is, the universal application of HTTPS might bring up the possibility of a new type of censorship. One of the very recent examples <em>could be</em> <a href="https://news.ycombinator.com/item?id=16951831">Sci-Hub’s TLS certificate incident</a>. If you connect it to its domain name takedowns [<a href="https://news.ycombinator.com/item?id=16823067">1</a>], [<a href="https://news.ycombinator.com/item?id=11635647">2</a>] which happened quite a while ago, it could be quite alarming.</p>
-</div>
-<div id="reimagine-the-system" class="section level2">
-<h2>Reimagine the System</h2>
-<p>After 30 years when the Internet was first created, it might be the time to rethink some of its design, for example, the CA system and the domain system. Ideally, we want to be both secure and decentralized. At the end of the day, what Pied Piper is building in HBO’s <em>Silicon Valley</em> might not sound that crazy anymore.</p>
-</div>
+<blockquote>
+<p>TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: <a href="https://github.com/road2stat/awesome-shiny-extensions">road2stat/awesome-shiny-extensions</a>. Pull requests welcomed!</p>
+</blockquote>
+<p>Five years ago, I wrote my first research software paper, and it eventually got published in <em>Bioinformatics</em>. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app. So when the topic comes to Shiny, my observations are probably biased — but, as an early adopter of the web framework, I really never cease to be amazed by it. I enjoyed the excitement of creation from every single app I built, no matter if they are created for research purposes, or for operational data science needs under the enterprise context, or just for fun.</p>
+<p>We have to say that most of the web development today happens under some boilerplate and reusable components, despite the language or framework. With this in mind, I love two things that make Shiny apps unique and lightning fast to build: 1. the reactive programming paradigm which avoids a lot of plumbing work; 2. all the user-contributed widgets (mostly based on htmlwidgets) which avoids reinventing the wheel for 95% of the cases. In short, the solid fundamental design and the strong ecosystem ensure that Shiny is going to be something both elegant and useful.</p>
+<p>Of course, the Shiny ecosystem evolved a lot (for the better) these years, and there is so many stuff I don’t even know exist or possible before. Therefore, I decided to start a repo on GitHub to collect and organize the awesome R packages that offer reusable, extended UI or server components for Shiny: <a href="https://github.com/road2stat/awesome-shiny-extensions">road2stat/awesome-shiny-extensions</a>. In case it helps someone save time to find something or gain knowledge about what’s out there, that would be all I wished for.</p>
+<p>Currently, the list contains about 130 R packages, all classified into a specific category, such as app theming, UI components, backend components, visualization components, app deployment, and so on. Since things are evolving fast, please feel free to send pull requests to help add new packages or fix broken links.</p>
+<p>Keep coding, keep shining.</p>
 
 
 
@@ -191,15 +181,11 @@
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="../../../blog/post/taking-the-long-view/">« Taking the Long View</a>
+                                            <a href="../../../blog/post/hugo-renga-theme/">« Renga: A Clean Bootstrap 4 Theme for Hugo and Blogdown</a>
                                         </div>
                                     
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="../../../blog/post/shiny-async/">Shiny Now Supports Async Execution »</a>
-                                        </div>
                                     
                                 </div>
                             </div>
