@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Photo on Nan Xiao | 肖楠</title>
-    <link>/tags/photo/</link>
+    <link>https://nanx.me/tags/photo/</link>
     <description>Recent content in Photo on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 15 Feb 2018 21:00:00 -0500</lastBuildDate>
     
-	<atom:link href="/tags/photo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanx.me/tags/photo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Nothing Without Love</title>
-      <link>/blog/post/nothing-without-love/</link>
+      <link>https://nanx.me/blog/post/nothing-without-love/</link>
       <pubDate>Thu, 15 Feb 2018 21:00:00 -0500</pubDate>
       
-      <guid>/blog/post/nothing-without-love/</guid>
+      <guid>https://nanx.me/blog/post/nothing-without-love/</guid>
       <description>Nate Ruess’s songs have magnificent voices and amazing arrangements, while often unbelievably sad at their cores, such as Grammy’s favourite “We Are Young”. This one, on the other hand, is an exception.
  Send up a signal, that everything’s fine
 Come on slide up right here by my side

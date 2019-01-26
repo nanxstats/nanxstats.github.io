@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tanka on Nan Xiao | 肖楠</title>
-    <link>/tags/tanka/</link>
+    <link>https://nanx.me/tags/tanka/</link>
     <description>Recent content in Tanka on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 27 Dec 2017 07:00:00 -0500</lastBuildDate>
     
-	<atom:link href="/tags/tanka/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanx.me/tags/tanka/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tanka: A Minimalist Theme for Hugo and Blogdown</title>
-      <link>/blog/post/hugo-tanka-theme/</link>
+      <link>https://nanx.me/blog/post/hugo-tanka-theme/</link>
       <pubDate>Wed, 27 Dec 2017 07:00:00 -0500</pubDate>
       
-      <guid>/blog/post/hugo-tanka-theme/</guid>
+      <guid>https://nanx.me/blog/post/hugo-tanka-theme/</guid>
       <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.
 Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
     </item>

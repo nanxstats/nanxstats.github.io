@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>R on Nan Xiao | 肖楠</title>
-    <link>/tags/r/</link>
+    <link>https://nanx.me/tags/r/</link>
     <description>Recent content in R on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 04 Dec 2018 14:30:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/r/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanx.me/tags/r/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>A List of Awesome Shiny Extension Packages</title>
-      <link>/blog/post/awesome-shiny-extensions/</link>
+      <link>https://nanx.me/blog/post/awesome-shiny-extensions/</link>
       <pubDate>Tue, 04 Dec 2018 14:30:00 +0000</pubDate>
       
-      <guid>/blog/post/awesome-shiny-extensions/</guid>
+      <guid>https://nanx.me/blog/post/awesome-shiny-extensions/</guid>
       <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
   TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: road2stat/awesome-shiny-extensions. Pull requests welcomed!
  Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
@@ -24,20 +24,20 @@
     
     <item>
       <title>General-Purpose Programming with R</title>
-      <link>/blog/post/general-purpose-programming-with-r/</link>
+      <link>https://nanx.me/blog/post/general-purpose-programming-with-r/</link>
       <pubDate>Thu, 25 Oct 2018 23:30:00 +0000</pubDate>
       
-      <guid>/blog/post/general-purpose-programming-with-r/</guid>
+      <guid>https://nanx.me/blog/post/general-purpose-programming-with-r/</guid>
       <description>“They’ll take your soul if you let them — don’t let them.” (You’ve Got a Friend)  I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.
 Recently, I found a fascinating thread posted in the r/rstats subreddit.</description>
     </item>
     
     <item>
       <title>Implementing Triplet Losses for Implicit Feedback Recommender Systems with R and Keras</title>
-      <link>/blog/post/triplet-loss-r-keras/</link>
+      <link>https://nanx.me/blog/post/triplet-loss-r-keras/</link>
       <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
       
-      <guid>/blog/post/triplet-loss-r-keras/</guid>
+      <guid>https://nanx.me/blog/post/triplet-loss-r-keras/</guid>
       <description>All the R code for this post is available on GitHub: road2stat/deep-learning-recipes.
 Photo: Three Palms by Jamie Davies
  At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
@@ -45,20 +45,20 @@ Photo: Three Palms by Jamie Davies
     
     <item>
       <title>Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras</title>
-      <link>/blog/post/recsys-binary-implicit-feedback-r-keras/</link>
+      <link>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</link>
       <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
       
-      <guid>/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
+      <guid>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
       <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
 Photo: One in A Million by Veronica Benavides</description>
     </item>
     
     <item>
       <title>Why Everyone Should #DeletePython</title>
-      <link>/blog/post/why-everyone-should-delete-python/</link>
+      <link>https://nanx.me/blog/post/why-everyone-should-delete-python/</link>
       <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
       
-      <guid>/blog/post/why-everyone-should-delete-python/</guid>
+      <guid>https://nanx.me/blog/post/why-everyone-should-delete-python/</guid>
       <description>Disclaimer: this article reflects my personal opinion only. Reader discretion is advised.
 How BMO changes batteries (Adventure Time). Cute but dangerous, just like working with Python 2 and 3 simultaneously.
  OK. There I said it. Everybody should consider #DeletePython.

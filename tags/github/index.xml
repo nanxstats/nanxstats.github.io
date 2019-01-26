@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on Nan Xiao | 肖楠</title>
-    <link>/tags/github/</link>
+    <link>https://nanx.me/tags/github/</link>
     <description>Recent content in Github on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 18 May 2018 15:50:00 +0000</lastBuildDate>
     
-	<atom:link href="/tags/github/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://nanx.me/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>An HTTPS-Censored Future</title>
-      <link>/blog/post/https-censored-future/</link>
+      <link>https://nanx.me/blog/post/https-censored-future/</link>
       <pubDate>Fri, 18 May 2018 15:50:00 +0000</pubDate>
       
-      <guid>/blog/post/https-censored-future/</guid>
+      <guid>https://nanx.me/blog/post/https-censored-future/</guid>
       <description>The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.
  The Good News One of the good news from the past weeks is that GitHub Pages finally supports HTTPS for custom domains. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them can be a lengthy process.</description>
     </item>
