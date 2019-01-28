@@ -6,10 +6,20 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 04 Dec 2018 14:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Jan 2019 15:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Removing Google Analytics from All My Websites</title>
+      <link>https://nanx.me/blog/post/remove-google-analytics/</link>
+      <pubDate>Mon, 28 Jan 2019 15:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/remove-google-analytics/</guid>
+      <description>Like cameras, online trackers are everywhere. Photo by Matthew Henry.
+ What happened After using it (or being used) for about ten years, today I consciously removed the Google Analytics tracking code from all the personal websites I control, including this blogdown (Hugo) site, the pkgdown sites for my R packages, and my Shiny apps. I never felt better, as from now on, people are browsing my websites tracking-free.</description>
+    </item>
     
     <item>
       <title>A List of Awesome Shiny Extension Packages</title>
