@@ -28,7 +28,7 @@
       
       <guid>https://nanx.me/blog/post/awesome-shiny-extensions/</guid>
       <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
-  TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: road2stat/awesome-shiny-extensions. Pull requests welcomed!
+  TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
  Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
     </item>
     
@@ -69,7 +69,7 @@ Microsoft is a software company, but they have made some excellent hardware prod
       <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/triplet-loss-r-keras/</guid>
-      <description>All the R code for this post is available on GitHub: road2stat/deep-learning-recipes.
+      <description>All the R code for this post is available on GitHub: nanxstats/deep-learning-recipes.
 Photo: Three Palms by Jamie Davies
  At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
     </item>

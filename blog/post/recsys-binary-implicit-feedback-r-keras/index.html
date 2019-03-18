@@ -18,7 +18,7 @@
     <meta property="og:description" content="" />
 
     
-        <meta property="twitter:site" content="@road2stat">
+        <meta property="twitter:site" content="@nanxstats">
     
 
     <meta property="twitter:title" content="Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras" />
@@ -198,7 +198,7 @@
 </div>
 <div id="applications-to-quantitative-systems-pharmacology" class="section level2">
 <h2>Applications to Quantitative Systems Pharmacology</h2>
-<p>Let’s try this model with our data. The <a href="https://github.com/road2stat/MEF">dataset</a> is from a <a href="https://doi.org/10.1002/psp4.12002">statistical methodology paper</a> we published in 2015. It contains 746 drugs and 817 adverse drug reactions (ADRs), with 24,803 known drug-ADR associations. This data can be represented by a 746 x 817 matrix with 0-1 entries, where 1 denotes for having a known association. It’s implicit feedback: we don’t know any non-association drug-ADR pairs here, and all the missing drug-ADR pairs (all the pairs other than the known associated pairs) are marked as 0. We are interested in predicting if there are any novel associations between all the missing drug-ADR pairs. If successful, we will be able to forecast if a specific drug has any potential but unreported side effects, which helps the clinical pharmacology and pharmacovigilance practice.</p>
+<p>Let’s try this model with our data. The <a href="https://github.com/nanxstats/MEF">dataset</a> is from a <a href="https://doi.org/10.1002/psp4.12002">statistical methodology paper</a> we published in 2015. It contains 746 drugs and 817 adverse drug reactions (ADRs), with 24,803 known drug-ADR associations. This data can be represented by a 746 x 817 matrix with 0-1 entries, where 1 denotes for having a known association. It’s implicit feedback: we don’t know any non-association drug-ADR pairs here, and all the missing drug-ADR pairs (all the pairs other than the known associated pairs) are marked as 0. We are interested in predicting if there are any novel associations between all the missing drug-ADR pairs. If successful, we will be able to forecast if a specific drug has any potential but unreported side effects, which helps the clinical pharmacology and pharmacovigilance practice.</p>
 <p>For our data, the model parameters are summarized below (only 15k parameters, yay):</p>
 <pre><output>
 _______________________________________________________________________________
@@ -231,7 +231,7 @@ _______________________________________________________________________________
 <div id="code-and-results" class="section level2">
 <h2>Code and Results</h2>
 <p>Let’s code it up with R + Keras and train it on GPU:</p>
-<script src="https://gist.github.com/road2stat/9a958fcd8c5a348a00116128afd7758f.js"></script>
+<script src="https://gist.github.com/nanxstats/9a958fcd8c5a348a00116128afd7758f.js"></script>
 <p>The key parameters to tune here are:</p>
 <ul>
 <li>The <code>optimizer</code>. We chose RMSProp since it gave us the most stable training results.</li>
@@ -252,7 +252,7 @@ _______________________________________________________________________________
 <li><strong>Model architecture</strong>. The barebone model here is easily extensible to build <strong>hybrid</strong> recommender systems as we did in our 2015 paper. Such extensions can be defined as <a href="http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf">feature-based matrix factorization</a>, meaning we can further incorporate features for the drugs and ADRs to improve the predictive performance. One can simply put them in a neural net architecture and let them play together with the latent factors learned here.</li>
 <li><strong>Loss function</strong>. It is possible to try more loss functions, such as the <a href="https://github.com/maciejkula/triplet_recommendations_keras">triplet loss</a> designed explicitly for one-class classification or metric learning problems.</li>
 </ul>
-<p>Here is the <a href="https://github.com/road2stat/deep-learning-recipes">GitHub repo</a> for the R code.</p>
+<p>Here is the <a href="https://github.com/nanxstats/deep-learning-recipes">GitHub repo</a> for the R code.</p>
 </div>
 
 
@@ -331,7 +331,7 @@ _______________________________________________________________________________
             <div class="col-sm-12 col-md-5">
                 <div class="mx-0 mx-md-4 text-right">
                     
-                        <a href="https://github.com/road2stat" target="_blank">
+                        <a href="https://github.com/nanxstats" target="_blank">
                             <img class="icon" src="https://nanx.me/img/github.svg" alt="GitHub" />
                         </a>
                     
@@ -341,13 +341,13 @@ _______________________________________________________________________________
                     
 
                     
-                    <a href="https://twitter.com/road2stat" target="_blank">
+                    <a href="https://twitter.com/nanxstats" target="_blank">
                         <img class="icon" src="https://nanx.me/img/twitter.svg" alt="Twitter" />
                     </a>
                     
 
                     
-                    <a href="https://www.linkedin.com/in/road2stat" target="_blank">
+                    <a href="https://www.linkedin.com/in/nanxstats" target="_blank">
                         <img class="icon" src="https://nanx.me/img/linkedin.svg" alt="LinkedIn" />
                     </a>
                     
