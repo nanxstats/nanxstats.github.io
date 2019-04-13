@@ -3,8 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/google-analytics/</loc>
+    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/remove-google-analytics/</loc>
     <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/online-privacy/</loc>
+    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/targeted-advertising/</loc>
+    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/web-tracking/</loc>
+    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -13,8 +53,44 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2018-12-04T14:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/shiny/</loc>
+    <lastmod>2018-12-04T14:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/hugo/</loc>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/renga/</loc>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/hugo-renga-theme/</loc>
     <lastmod>2018-11-10T23:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/blogdown/</loc>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/theme/</loc>
+    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -28,8 +104,62 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/categories/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/triplet-loss-r-keras/</loc>
     <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/keras/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/collaborative-filtering/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/deep-learning/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/implicit-feedback/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/categories/machine-learning/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/metric-learning/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/recommender-system/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/triplet-loss/</loc>
+    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -43,6 +173,12 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/neural-network/</loc>
+    <lastmod>2018-08-22T17:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/building-my-first-deep-learning-machine/</loc>
     <lastmod>2018-08-20T15:00:00+00:00</lastmod>
   </url>
@@ -53,8 +189,26 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/john-m-chambers-statistical-software-award/</loc>
+    <lastmod>2018-07-30T23:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/jmc-award/</loc>
     <lastmod>2018-07-30T23:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/liftr/</loc>
+    <lastmod>2018-07-30T23:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/reproducible-research/</loc>
+    <lastmod>2018-07-30T23:30:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -78,8 +232,50 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/async/</loc>
+    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/future/</loc>
+    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/promises/</loc>
+    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/scalability/</loc>
+    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/https-censored-future/</loc>
     <lastmod>2018-05-18T15:50:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/censorship/</loc>
+    <lastmod>2018-05-18T15:50:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/github/</loc>
+    <lastmod>2018-05-18T15:50:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/https/</loc>
+    <lastmod>2018-05-18T15:50:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -88,8 +284,20 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/documentary/</loc>
+    <lastmod>2018-05-02T05:40:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/</loc>
     <lastmod>2018-04-12T17:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/python/</loc>
+    <lastmod>2018-04-01T00:30:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -98,8 +306,50 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/data-science/</loc>
+    <lastmod>2018-04-01T00:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/programming-language/</loc>
+    <lastmod>2018-04-01T00:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</loc>
     <lastmod>2018-03-13T02:20:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/bootstrap-4/</loc>
+    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/css/</loc>
+    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/native-font-stack/</loc>
+    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/system-font-stack/</loc>
+    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/web-typography/</loc>
+    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -108,8 +358,26 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/open-source/</loc>
+    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/project-management/</loc>
+    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/nothing-without-love/</loc>
     <lastmod>2018-02-15T21:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/photo/</loc>
+    <lastmod>2018-02-15T21:00:00-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -118,8 +386,44 @@
   </url>
   
   <url>
+    <loc>https://nanx.me/tags/artificial-intelligence/</loc>
+    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/blockchain/</loc>
+    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/buzzword/</loc>
+    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/post/papers-in-my-heart-2017/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/omnigenic/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/paper/</loc>
+    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/tanka/</loc>
+    <lastmod>2017-12-27T07:00:00-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -138,196 +442,7 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/tags/artificial-intelligence/</loc>
-    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/async/</loc>
-    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/blockchain/</loc>
-    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/blogdown/</loc>
-    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/books/</loc>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/bootstrap-4/</loc>
-    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/buzzword/</loc>
-    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/censorship/</loc>
-    <lastmod>2018-05-18T15:50:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/collaborative-filtering/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/css/</loc>
-    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/data-science/</loc>
-    <lastmod>2018-04-01T00:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/deep-learning/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/documentary/</loc>
-    <lastmod>2018-05-02T05:40:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/future/</loc>
-    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/github/</loc>
-    <lastmod>2018-05-18T15:50:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/google-analytics/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/https/</loc>
-    <lastmod>2018-05-18T15:50:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/hugo/</loc>
-    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/implicit-feedback/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/john-m-chambers-statistical-software-award/</loc>
-    <lastmod>2018-07-30T23:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/keras/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/liftr/</loc>
-    <lastmod>2018-07-30T23:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/categories/machine-learning/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/metric-learning/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/native-font-stack/</loc>
-    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/neural-network/</loc>
-    <lastmod>2018-08-22T17:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/omnigenic/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/online-privacy/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/open-source/</loc>
-    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/paper/</loc>
-    <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -335,125 +450,11 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/tags/photo/</loc>
-    <lastmod>2018-02-15T21:00:00-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/programming-language/</loc>
-    <lastmod>2018-04-01T00:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/project-management/</loc>
-    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/promises/</loc>
-    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/python/</loc>
-    <lastmod>2018-04-01T00:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2018-12-04T14:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/recommender-system/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/renga/</loc>
-    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/reproducible-research/</loc>
-    <lastmod>2018-07-30T23:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/scalability/</loc>
-    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/shiny/</loc>
-    <lastmod>2018-12-04T14:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/software/</loc>
   </url>
   
   <url>
-    <loc>https://nanx.me/tags/system-font-stack/</loc>
-    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2018-01-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/talks/</loc>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/tanka/</loc>
-    <lastmod>2017-12-27T07:00:00-05:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/targeted-advertising/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/theme/</loc>
-    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/triplet-loss/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/web-tracking/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/web-typography/</loc>
-    <lastmod>2018-03-13T02:20:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
