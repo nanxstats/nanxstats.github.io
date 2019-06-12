@@ -3,8 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nanx.me/blog/post/64gb-ram/</loc>
+    <lastmod>2019-06-11T22:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
+    <lastmod>2019-06-11T22:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/categories/</loc>
+    <lastmod>2019-06-11T22:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2019-06-11T22:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2019-06-11T22:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/buildapc/</loc>
+    <lastmod>2019-06-11T22:30:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/categories/machine-learning/</loc>
+    <lastmod>2019-06-11T22:30:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -14,19 +48,8 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/blog/post/remove-google-analytics/</loc>
     <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -104,12 +127,6 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/categories/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/blog/post/triplet-loss-r-keras/</loc>
     <lastmod>2018-08-29T19:30:00+00:00</lastmod>
   </url>
@@ -134,12 +151,6 @@
   
   <url>
     <loc>https://nanx.me/tags/implicit-feedback/</loc>
-    <lastmod>2018-08-29T19:30:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/categories/machine-learning/</loc>
     <lastmod>2018-08-29T19:30:00+00:00</lastmod>
     <priority>0</priority>
   </url>

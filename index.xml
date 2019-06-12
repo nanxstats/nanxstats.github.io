@@ -6,10 +6,20 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Jan 2019 15:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jun 2019 22:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>64GB RAM</title>
+      <link>https://nanx.me/blog/post/64gb-ram/</link>
+      <pubDate>Tue, 11 Jun 2019 22:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/64gb-ram/</guid>
+      <description>In 2018, I built a PC to train models with GPU. Besides the GPU, the machine has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.
+Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models.</description>
+    </item>
     
     <item>
       <title>Removing Google Analytics from All My Websites</title>

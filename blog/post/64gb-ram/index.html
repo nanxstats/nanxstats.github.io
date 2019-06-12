@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Building My First Deep Learning Machine - Nan Xiao | 肖楠 </title>
+    <title> 64GB RAM - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
@@ -12,21 +12,21 @@
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/building-my-first-deep-learning-machine/" />
-    <meta property="og:title" content="Building My First Deep Learning Machine" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:url" content="https://nanx.me/blog/post/64gb-ram/" />
+    <meta property="og:title" content="64GB RAM" />
+    <meta property="og:image" content="https://nanx.me/image/64gb-ram-installed.jpg" />
     <meta property="og:description" content="" />
 
     
         <meta property="twitter:site" content="@nanxstats">
     
 
-    <meta property="twitter:title" content="Building My First Deep Learning Machine" />
-    <meta property="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="twitter:title" content="64GB RAM" />
+    <meta property="twitter:image" content="https://nanx.me/image/64gb-ram-installed.jpg" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:description" content="" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/building-my-first-deep-learning-machine/">
+    <link rel="canonical" href="https://nanx.me/blog/post/64gb-ram/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
 
@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    <h1 class="mx-0 mx-md-4 blog-post-title">Building My First Deep Learning Machine</h1>
+                    <h1 class="mx-0 mx-md-4 blog-post-title">64GB RAM</h1>
 
                     <div class="mb-md-4 meta">
                         
@@ -125,20 +125,16 @@
                             
                         
 
-                        <span class="date middot" title='Mon Aug 20 2018 15:00:00 UTC'>
-                            2018-08-20
+                        <span class="date middot" title='Tue Jun 11 2019 22:30:00 UTC'>
+                            2019-06-11
                         </span>
 
                         <span class="reading-time middot">
-                            4 minute read
+                            2 minute read
                         </span>
 
                         <div class="d-none d-md-inline tags">
                             <ul class="list-unstyled d-inline">
-                                
-                                    <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/deep-learning">deep learning</a>
-                                    </li>
                                 
                                     <li class="d-inline middot">
                                         <a href="https://nanx.me/tags/buildapc">buildapc</a>
@@ -160,53 +156,31 @@
     
 
 
-<p>Five years ago, GNOME 3’s immaturity was one of the reasons for me to switch to a Mac. After finished watching two seasons of <a href="https://www.imdb.com/title/tt4158110/">Mr. Robot</a>, I somehow missed it. With my AWS/GCP bills going up quite a bit recently, I quickly decided to invest a little and build a PC to retry the Linux desktop environment, also, to tackle some personal machine learning projects.</p>
-<div id="hardware" class="section level2">
-<h2>Hardware</h2>
-<p>Here is my <a href="https://pcpartpicker.com/user/nanx999/saved/NZwzYJ">PCPartPicker part list</a> for the parts of choice. It mostly comes from a <a href="https://medium.com/yanda/building-your-own-deep-learning-dream-machine-4f02ccdb0460">blog post</a> only with slight modifications that fit my needs (such as the 32 GB memory). Do a random search, and you will be able to find such posts with recommended parts — they will be good starting points. We will also know what are the popular choices on the market in general and be able to avoid glaring mistakes.</p>
+<p>In 2018, I <a href="https://nanx.me/blog/post/building-my-first-deep-learning-machine/">built a PC</a> to train models with GPU. Besides the GPU, <a href="https://pcpartpicker.com/user/nanx999/saved/NZwzYJ">the machine</a> has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.</p>
+<p>Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models. It’s often not worth the time to further “optimize” the memory usage because the algorithms will require some large matrices to be held in memory constantly and the fork-based parallelization will copy them as many times as you increase the number of CPU cores used.</p>
+<p>That’s when I decided to upgrade the RAM to 64GB — maxing out the 4 RAM slots on the Z370 motherboard.</p>
+<p>One immediate issue for the upgrade is that the CPU air cooler I used was too large and its lowest point blocks one of the RAM slots. If I reinstall the cooler in another direction, it blocks the GPU or something else.</p>
 <div class="figure">
-<img src="https://nanx.me/image/deep-learning-pc-parts.jpg" alt="This is all the parts needed." />
-<p class="caption">This is all the parts needed.</p>
+<img src="https://nanx.me/image/64gb-air-cooler-blocks-ram-slot.jpg" alt="The air cooler blocks one RAM slot. In fact, this is a common issue." />
+<p class="caption">The air cooler blocks one RAM slot. In fact, this is a common issue.</p>
 </div>
-</div>
-<div id="hardware-notes" class="section level2">
-<h2>Hardware Notes</h2>
-<p>This will be a machine pretty much built around the GPU, which costs about half of the price. Therefore our goal here is to optimize around the GPU. Some personal notes:</p>
-<ul>
-<li><strong>PSU.</strong> Purchase a decent power supply – it needs to be reliable for 24x7 training.</li>
-<li><strong>CPU</strong>. Doesn’t need to be a fancy one like i7-8700. Shouldn’t be too low-end either so it won’t be an accidental bottleneck. Plus sometimes we do train models on CPU.</li>
-<li><strong>RAM.</strong> As much as we could get. Can leave some upgrade potential there.</li>
-<li><strong>GPU.</strong> Buy brand new GPUs from reliable sellers. We don’t know what really happened to the used video cards these days… Sometimes they were used to mine cryptocurrencies intensively, and their lifespan could be severely affected.</li>
-<li><strong>Number of GPUs.</strong> One is ok for a starter. If you know for sure that you need to scale to 2 or 4 cards in the future, choose a motherboard that supports 4-way SLI, a larger chassis, and of course, a 1600W power supply. Parallelization across multiple cards can be non-trivial though for specific things, such as <a href="https://discuss.gluon.ai/t/topic/1156">cross-card synchronized batch normalization</a>.</li>
-</ul>
-</div>
-<div id="lets-build-it-up" class="section level2">
-<h2>Let’s Build It Up</h2>
-<p>It took me about four hours to build it up, nothing too challenging. In principle, all we need to do is connecting things like this: power supply &lt;&gt; wires &lt;&gt; motherboard &lt;&gt; wires/slots &lt;&gt; CPU/RAM/GPU/SSD. For overall steps, here is a video tutorial on <a href="https://www.youtube.com/watch?v=npGL2-pRXlU">how to build a PC in 2018</a>. Read the manual or search for videos about specific parts when confused.</p>
+<p>My solution is simple — replace the air cooler with an AIO (all-in-one) liquid CPU cooler. The liquid cooler will only cover the CPU with a small “cap” so it doesn’t take much of the space around it.</p>
 <div class="figure">
-<img src="https://nanx.me/image/deep-learning-pc-build-finished.jpg" alt="Finished build. Serviceable cable management." />
-<p class="caption">Finished build. Serviceable cable management.</p>
+<img src="https://nanx.me/image/64gb-ram-cooler.jpg" alt="The additional 32GB RAM and the AIO liquid cooler." />
+<p class="caption">The additional 32GB RAM and the AIO liquid cooler.</p>
 </div>
-</div>
-<div id="software" class="section level2">
-<h2>Software</h2>
-<p>For the Linux distribution, I personally like Arch Linux since AUR is so good (think Homebrew on Linux but can install anything with easy user contributions). While for this machine I don’t want to use too much time on upgrading the bleeding edge kernels — it just needs to work. Thus a stock Ubuntu 18.04 LTS was spinelessly installed. It’s a good thing that Canonical finally <a href="https://blog.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence">dropped Unity</a> and embraced the native GNOME Shell in 18.04.</p>
-<p>To set up the environment for deep learning, people generally recommend installing certain versions of software since the latest versions may not work properly. I followed <a href="https://hackernoon.com/ubuntu-18-04-deep-learning-environment-setup-345ba0b11892">this post to install the GPU driver</a>, and <a href="https://medium.com/@taylordenouden/installing-tensorflow-gpu-on-ubuntu-18-04-89a142325138">this post for CUDA and cuDNN</a>. For Tensorflow, simply follow the <a href="https://www.tensorflow.org/install/install_linux">official installation guide</a>. It should be done in 20 minutes if everything goes well.</p>
-<p>I’m just surprised that after all these years Nvidia’s proprietary GPU driver and computing SDK are still tricky to play with, and developers have to be locked-in by old versions.</p>
-</div>
-<div id="test-flight" class="section level2">
-<h2>Test Flight</h2>
-<p>First of all, myth busted: the 1080 Ti can run minesweeper effortlessly.</p>
+<p>The CPU cooler is among the very first things we install to the motherboard. It’s a fun process to take almost everything off the motherboard, fit in the new RAM, install the new cooler, and then put everything back. Anyways, installing the liquid cooler itself was much easier than I thought, even easier than the air cooler. No liquid leaked at all.</p>
 <div class="figure">
-<img src="https://nanx.me/image/gnome-mines.png" alt="Running GNOME Mines smoothly. The machine did restart itself once for no obvious reasons after the proprietary GPU driver was installed." />
-<p class="caption">Running GNOME Mines smoothly. The machine did restart itself once for no obvious reasons after the proprietary GPU driver was installed.</p>
+<img src="https://nanx.me/image/64gb-ram-installed.jpg" alt="New RAM (red) inserted." />
+<p class="caption">New RAM (red) inserted.</p>
 </div>
-<p>Back to the topic… Here is some R code for fitting a “<a href="https://arxiv.org/abs/1606.07792">wide and deep</a>” classification model with Tensorflow and Tensorflow Estimators API. The model is fundamentally a direct combination of a linear model and a DNN model. The synthetic data has 1 million observations, 100 features (20 being useful) and is generated by my R package <a href="https://nanx.me/msaenet/">msaenet</a>.</p>
-<script src="https://gist.github.com/nanxstats/d3d1c1099b779f69317f8f678b44d2e7.js"></script>
-<p>The training takes about 60 seconds on the GPU and 50 seconds on the CPU with identical results. For this particular case, the CPU is not bad at all! GPU should have a significant edge for training more complex neural nets for vision or language tasks though.</p>
-<p>On model performance, the 83% AUC is easily 5% to 10% higher than well-tuned sparse linear models. I guess the message here is that if we want to trade some of the full interpretability of a sparse linear model for some predictive performance, this model is a feasible choice — just with some additional parameters tuning.</p>
-<p>Here is the <a href="https://github.com/nanxstats/deep-learning-recipes">GitHub repo</a> for the R code.</p>
+<p>Light it up and say hello to the 62.8G RAM.</p>
+<div class="figure">
+<img src="https://nanx.me/image/64gb-finished-test.jpg" alt="htop works." />
+<p class="caption">htop works.</p>
 </div>
+<p>The lesson is, consider the size of the CPU cooler and decide the right type for your build from the beginning.</p>
+<p>I think I’m good for today. In the future, if we really need some 128GB of RAM, we have to switch to an X299 (Intel) or X399 (AMD) motherboard which has 8 RAM slots. We probably will also need a super high-end desktop CPU with even more cores (~30 threads?) to work with the memory of that size. Or… simply rent an on-demand instance on the cloud.</p>
 
 
 
@@ -218,15 +192,11 @@
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="https://nanx.me/blog/post/my-ocd-for-inbox-zero/">« My OCD for Inbox Zero</a>
+                                            <a href="https://nanx.me/blog/post/remove-google-analytics/">« Removing Google Analytics from All My Websites</a>
                                         </div>
                                     
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/">Prototyping a Recommender System for Binary Implicit Feedback Data With R and Keras »</a>
-                                        </div>
                                     
                                 </div>
                             </div>
