@@ -75,6 +75,15 @@
     </item>
     
     <item>
+      <title>blogdown</title>
+      <link>https://nanx.me/tags/blogdown/</link>
+      <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hugo</title>
       <link>https://nanx.me/tags/hugo/</link>
       <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
@@ -93,29 +102,11 @@
     </item>
     
     <item>
-      <title>blogdown</title>
-      <link>https://nanx.me/tags/blogdown/</link>
-      <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/blogdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>theme</title>
       <link>https://nanx.me/tags/theme/</link>
       <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/theme/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Keras</title>
-      <link>https://nanx.me/tags/keras/</link>
-      <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/keras/</guid>
       <description></description>
     </item>
     
@@ -143,6 +134,15 @@
       <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/implicit-feedback/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Keras</title>
+      <link>https://nanx.me/tags/keras/</link>
+      <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/keras/</guid>
       <description></description>
     </item>
     
@@ -282,15 +282,6 @@
     </item>
     
     <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>data science</title>
       <link>https://nanx.me/tags/data-science/</link>
       <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
@@ -305,6 +296,15 @@
       <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/programming-language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/python/</guid>
       <description></description>
     </item>
     
