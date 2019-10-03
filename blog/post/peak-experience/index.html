@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> 64GB RAM - Nan Xiao | 肖楠 </title>
+    <title> Peak Experience - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
@@ -12,21 +12,21 @@
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/64gb-ram/" />
-    <meta property="og:title" content="64GB RAM" />
-    <meta property="og:image" content="https://nanx.me/image/64gb-ram-installed.jpg" />
+    <meta property="og:url" content="https://nanx.me/blog/post/peak-experience/" />
+    <meta property="og:title" content="Peak Experience" />
+    <meta property="og:image" content="https://nanx.me/image/icy-blue-mountain-range-elena-prokofyeva.jpg" />
     <meta property="og:description" content="" />
 
     
         <meta property="twitter:site" content="@nanxstats">
     
 
-    <meta property="twitter:title" content="64GB RAM" />
-    <meta property="twitter:image" content="https://nanx.me/image/64gb-ram-installed.jpg" />
+    <meta property="twitter:title" content="Peak Experience" />
+    <meta property="twitter:image" content="https://nanx.me/image/icy-blue-mountain-range-elena-prokofyeva.jpg" />
     <meta property="twitter:card" content="summary" />
     <meta property="twitter:description" content="" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/64gb-ram/">
+    <link rel="canonical" href="https://nanx.me/blog/post/peak-experience/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
 
@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    <h1 class="mx-0 mx-md-4 blog-post-title">64GB RAM</h1>
+                    <h1 class="mx-0 mx-md-4 blog-post-title">Peak Experience</h1>
 
                     <div class="mb-md-4 meta">
                         
@@ -125,19 +125,19 @@
                             
                         
 
-                        <span class="date middot" title='Tue Jun 11 2019 22:30:00 UTC'>
-                            2019-06-11
+                        <span class="date middot" title='Wed Oct 2 2019 22:30:00 UTC'>
+                            2019-10-02
                         </span>
 
                         <span class="reading-time middot">
-                            2 minute read
+                            3 minute read
                         </span>
 
                         <div class="d-none d-md-inline tags">
                             <ul class="list-unstyled d-inline">
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/buildapc">buildapc</a>
+                                        <a href="https://nanx.me/tags/peak-experience">peak experience</a>
                                     </li>
                                 
                             </ul>
@@ -156,31 +156,18 @@
     
 
 
-<p>In 2018, I <a href="https://nanx.me/blog/post/building-my-first-deep-learning-machine/">built a PC</a> to train models with GPU. Besides the GPU, <a href="https://pcpartpicker.com/user/nanx999/saved/NZwzYJ">the machine</a> has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.</p>
-<p>Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models. It’s often not worth the time to further “optimize” the memory usage because the algorithms will require some large matrices to be held in memory constantly and the fork-based parallelization will copy them as many times as you increase the number of CPU cores used.</p>
-<p>That’s when I decided to upgrade the RAM to 64GB — maxing out the 4 RAM slots on the Z370 motherboard.</p>
-<p>One immediate issue for the upgrade is that the CPU air cooler I used was too large and its lowest point blocks one of the RAM slots. If I reinstall the cooler in another direction, it blocks the GPU or something else.</p>
 <div class="figure">
-<img src="https://nanx.me/image/64gb-air-cooler-blocks-ram-slot.jpg" alt="" />
-<p class="caption">The air cooler blocks one RAM slot. In fact, this is a common issue.</p>
+<img src="https://nanx.me/image/icy-blue-mountain-range-elena-prokofyeva.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/NDuPLKYRXQU">Elena Prokofyeva</a>.</p>
 </div>
-<p>My solution is simple — replace the air cooler with an AIO (all-in-one) liquid CPU cooler. The liquid cooler will only cover the CPU with a small “cap” so it doesn’t take much of the space around it.</p>
-<div class="figure">
-<img src="https://nanx.me/image/64gb-ram-cooler.jpg" alt="" />
-<p class="caption">The additional 32GB RAM and the AIO liquid cooler.</p>
-</div>
-<p>The CPU cooler is among the very first things we install to the motherboard. It’s a fun process to take almost everything off the motherboard, fit in the new RAM, install the new cooler, and then put everything back. Anyways, installing the liquid cooler itself was much easier than I thought, even easier than the air cooler. No liquid leaked at all.</p>
-<div class="figure">
-<img src="https://nanx.me/image/64gb-ram-installed.jpg" alt="" />
-<p class="caption">New RAM (red) inserted.</p>
-</div>
-<p>Light it up and say hello to the 62.8G RAM.</p>
-<div class="figure">
-<img src="https://nanx.me/image/64gb-finished-test.jpg" alt="" />
-<p class="caption">htop works.</p>
-</div>
-<p>The lesson is, consider the size of the CPU cooler and decide the right type for your build from the beginning.</p>
-<p>I think I’m good for today. In the future, if we really need some 128GB of RAM, we have to switch to an X299 (Intel) or X399 (AMD) motherboard which has 8 RAM slots. We probably will also need a super high-end desktop CPU with even more cores (~30 threads?) to work with the memory of that size. Or… simply rent an on-demand instance on the cloud.</p>
+<p>I feel that we have previously talked a lot about the material world in this blog. Today I want to briefly discuss something more spiritual, something in my mind for a while: <strong>peak experience</strong>.</p>
+<p>This concept belongs to the self-actualization part described in Maslow’s “hierarchy of needs”. The peculiar thing is, I knew what the feeling was but cannot express it verbally, until the day I knew the term coined by the psychologists.</p>
+<p>As a personal anecdote, I think I was fortunate enough to have (probably) experienced this in two cases. I haven’t experienced anything remotely similar for a long time though. Who knows that “being an adult” is fun but can be boring at the same time? Well, I have no idea.</p>
+<p>The first case happened more recently. It was about a math proof, although it was not anything profound in the real mathematical sense. While at that moment, the feeling of having discovered a tiny, pure, hidden truth of the universe was terrific. I think it was even more satisfying because the nature of constructing proofs is like “playing chess with the devil” (Charles Fefferman). One cannot possibly get to the destination without going through a rough path and getting lost in the middle, at least in most of the situations.</p>
+<p>The second case happened more than 10 years ago, and I have only fading memories of it. For some particular reasons, I don’t think I can describe the details here. One thing I can confirm, is that persistence through (intellectual) challenges, like in the first case, was also in the very nature of this one, too. For a brief moment, you may feel like you have finally reached the peak of the highest mountains. Looking down, and you have conquered the world.</p>
+<p>The “peak experience” I had was not a one-time physical thrill, but more of a psychological booster of self-confidence that lasted days. I believe they eventually changed how I view myself and the world. However, the experience is so rare that I cannot really expect it, but have to work hard to hope that one day it happens once again.</p>
+<p>This may sound corny, but, from the bottom of my heart, it is one reason why I do what I do, and love what I love nowadays. The lesson for me is: always trust your taste, always seek the truth, and always be persistent.</p>
+<p>I never imagined that I would write a “crazy” piece like this. At the end of this text, I just want to quote from one of my favorite films <em><a href="https://www.imdb.com/title/tt0460740/">Cashback</a></em>: “The bad news is that time flies. The good news… is that you’re the pilot.”</p>
 
 
 
@@ -192,15 +179,11 @@
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="https://nanx.me/blog/post/remove-google-analytics/">« Removing Google Analytics from All My Websites</a>
+                                            <a href="https://nanx.me/blog/post/64gb-ram/">« 64GB RAM</a>
                                         </div>
                                     
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="https://nanx.me/blog/post/peak-experience/">Peak Experience »</a>
-                                        </div>
                                     
                                 </div>
                             </div>
