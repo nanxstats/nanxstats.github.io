@@ -6,10 +6,73 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Oct 2019 22:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2019 00:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>automatic differentiation</title>
+      <link>https://nanx.me/tags/automatic-differentiation/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/automatic-differentiation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cgraph</title>
+      <link>https://nanx.me/tags/cgraph/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/cgraph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>computational graph</title>
+      <link>https://nanx.me/tags/computational-graph/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/computational-graph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linear models</title>
+      <link>https://nanx.me/tags/linear-models/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/linear-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logistic regression</title>
+      <link>https://nanx.me/tags/logistic-regression/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/logistic-regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regularization</title>
+      <link>https://nanx.me/tags/regularization/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/regularization/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>peak experience</title>
@@ -62,15 +125,6 @@
       <pubDate>Mon, 28 Jan 2019 15:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/web-tracking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Tue, 04 Dec 2018 14:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     

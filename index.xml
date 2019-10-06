@@ -6,10 +6,20 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Oct 2019 22:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2019 00:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Building Regularized Logistic Regressions from Scratch with Computational Graphs in R</title>
+      <link>https://nanx.me/blog/post/cgraph-logreg/</link>
+      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/cgraph-logreg/</guid>
+      <description>The R package built for this post is available on GitHub: nanxstats/logreg.
+As one of the cornerstones for deep learning frameworks, automatic differentiation was briefly mentioned in our previous post. Today let’s focus on the other important piece: the computational graph. I’m only able to write something about this, thanks to Ron Triepels, the author of the recently published R package cgraph. This package offers a decent, minimalist implementation for computational graphs and automatic differentiation in native C and R.</description>
+    </item>
     
     <item>
       <title>Peak Experience</title>
