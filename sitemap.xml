@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://nanx.me/tags/automatic-differentiation/</loc>
-    <lastmod>2019-10-06T00:30:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/biocompute-objects/</loc>
+    <lastmod>2019-12-14T00:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2019-12-14T00:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/common-workflow-language/</loc>
+    <lastmod>2019-12-14T00:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2019-12-14T00:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/blog/post/tidycwl-biocompute/</loc>
+    <lastmod>2019-12-14T00:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2019-12-14T00:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2019-12-14T00:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/automatic-differentiation/</loc>
     <lastmod>2019-10-06T00:30:00+00:00</lastmod>
   </url>
   
@@ -33,11 +63,6 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2019-10-06T00:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/tags/linear-models/</loc>
     <lastmod>2019-10-06T00:30:00+00:00</lastmod>
   </url>
@@ -53,17 +78,7 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2019-10-06T00:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/tags/regularization/</loc>
-    <lastmod>2019-10-06T00:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2019-10-06T00:30:00+00:00</lastmod>
   </url>
   

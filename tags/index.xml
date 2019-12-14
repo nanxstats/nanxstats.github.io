@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Oct 2019 00:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 00:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BioCompute Objects</title>
+      <link>https://nanx.me/tags/biocompute-objects/</link>
+      <pubDate>Sat, 14 Dec 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/biocompute-objects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Common Workflow Language</title>
+      <link>https://nanx.me/tags/common-workflow-language/</link>
+      <pubDate>Sat, 14 Dec 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/common-workflow-language/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sat, 14 Dec 2019 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>automatic differentiation</title>
@@ -53,15 +80,6 @@
       <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/logistic-regression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     

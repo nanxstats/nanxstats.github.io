@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Building Regularized Logistic Regressions from Scratch with Computational Graphs in R - Nan Xiao | 肖楠 </title>
+    <title> New Packages on CRAN: tidycwl and biocompute - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="An overview of the new R packages: tidycwl and biocompute" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/cgraph-logreg/" />
-    <meta property="og:title" content="Building Regularized Logistic Regressions from Scratch with Computational Graphs in R" />
-    <meta property="og:image" content="https://nanx.me/image/downhill-into-the-forest-joakim-honkasalo.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/tidycwl-biocompute/" />
+    <meta property="og:title" content="New Packages on CRAN: tidycwl and biocompute" />
+    <meta property="og:image" content="https://nanx.me/image/tidycwl-gatk4-wgs.png" />
+    <meta property="og:description" content="An overview of the new R packages: tidycwl and biocompute" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Building Regularized Logistic Regressions from Scratch with Computational Graphs in R" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/downhill-into-the-forest-joakim-honkasalo.jpg" />
+    <meta name="twitter:title" content="New Packages on CRAN: tidycwl and biocompute" />
+    <meta name="twitter:description" content="An overview of the new R packages: tidycwl and biocompute" />
+    <meta name="twitter:image" content="https://nanx.me/image/tidycwl-gatk4-wgs.png" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/cgraph-logreg/">
+    <link rel="canonical" href="https://nanx.me/blog/post/tidycwl-biocompute/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
 
@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    <h1 class="mx-0 mx-md-4 blog-post-title">Building Regularized Logistic Regressions from Scratch with Computational Graphs in R</h1>
+                    <h1 class="mx-0 mx-md-4 blog-post-title">New Packages on CRAN: tidycwl and biocompute</h1>
 
                     <div class="mb-md-4 meta">
                         
@@ -125,43 +125,27 @@
                             
                         
 
-                        <span class="date middot" title='Sun Oct 6 2019 00:30:00 UTC'>
-                            2019-10-06
+                        <span class="date middot" title='Sat Dec 14 2019 00:30:00 UTC'>
+                            2019-12-14
                         </span>
 
                         <span class="reading-time middot">
-                            3 minute read
+                            2 minute read
                         </span>
 
                         <div class="d-none d-md-inline tags">
                             <ul class="list-unstyled d-inline">
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/computational-graph">computational graph</a>
-                                    </li>
-                                
-                                    <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/automatic-differentiation">automatic differentiation</a>
-                                    </li>
-                                
-                                    <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/logistic-regression">logistic regression</a>
-                                    </li>
-                                
-                                    <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/linear-models">linear models</a>
-                                    </li>
-                                
-                                    <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/regularization">regularization</a>
-                                    </li>
-                                
-                                    <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/cgraph">cgraph</a>
-                                    </li>
-                                
-                                    <li class="d-inline middot">
                                         <a href="https://nanx.me/tags/r">R</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="https://nanx.me/tags/common-workflow-language">Common Workflow Language</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="https://nanx.me/tags/biocompute-objects">BioCompute Objects</a>
                                     </li>
                                 
                             </ul>
@@ -180,59 +164,32 @@
     
 
 
-<p>The R package built for this post is available on GitHub: <a href="https://github.com/nanxstats/logreg">nanxstats/logreg</a>.</p>
-<p>As one of the cornerstones for deep learning frameworks, automatic differentiation was briefly <a href="https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/">mentioned</a> in our previous post. Today let’s focus on the other important piece: the computational graph. I’m only able to write something about this, thanks to Ron Triepels, the author of the recently published R package <a href="https://github.com/triepels/cgraph">cgraph</a>. This package offers a decent, minimalist implementation for computational graphs and automatic differentiation in native C and R.</p>
+<p>On the journey of achieving reproducibility in genomic data analysis projects, one often faces challenges with documenting workflows and computations systematically. To provide one way for tackling these problems, we (me and my colleagues) have recently released two new R packages — <a href="https://sbg.github.io/tidycwl/">tidycwl</a> and <a href="https://sbg.github.io/biocompute/">biocompute</a> — to CRAN.</p>
+<div id="tidycwl" class="section level2">
+<h2>tidycwl</h2>
+<p>As the name implies, the package <a href="https://sbg.github.io/tidycwl/">tidycwl</a> aims at offering a native toolchain for R to analyze tools and workflows written in the <a href="https://www.commonwl.org/">Common Workflow Language</a> (CWL), while following the tidyverse design principles. What it does is not complicated at all: reading the raw CWL workflows encoded in JSON or YAML, parsing the workflow elements into data frames, lists, or directed graph representations, and visualizing the workflows.</p>
+<p>For example, to visualize a CWL <a href="https://cgc.sbgenomics.com/public/apps#admin/sbg-public-data/whole-genome-sequencing-bwa-gatk-4-0/">BWA + GATK 4 whole genome sequencing workflow</a>, a few pipes get the job done:</p>
+<pre class="r"><code>library(&quot;tidycwl&quot;)
+
+flow &lt;- system.file(&quot;cwl/sbg/workflow/gatk4-wgs.json&quot;, package = &quot;tidycwl&quot;) %&gt;% read_cwl_json()
+
+get_graph(
+  flow %&gt;% parse_inputs(),
+  flow %&gt;% parse_outputs(),
+  flow %&gt;% parse_steps()
+) %&gt;% visualize_graph()</code></pre>
 <div class="figure">
-<img src="https://nanx.me/image/downhill-into-the-forest-joakim-honkasalo.jpg" alt="" />
-<p class="caption">Downhill into the forest. Photo by <a href="https://unsplash.com/photos/BT9e-1olEkY">Joakim Honkasalo</a>.</p>
+<img src="https://nanx.me/image/tidycwl-gatk4-wgs.png" alt="" />
+<p class="caption">A tidycwl visualization of the GATK 4 WGS workflow. You can see the interactive version <a href="https://sbg.github.io/tidycwl/articles/tidycwl.html#visualize-workflow">here</a>.</p>
 </div>
-<p>The computational graph is a useful abstraction/framework for describing and executing computational workflows for data. In many cases, the workflows/pipelines are composed of very reusable components, such as all the types of layers in neural networks. Besides machine learning applications, another interesting example is the <a href="https://www.commonwl.org/">Common Workflow Language (CWL)</a>. CWL is widely used for describing bioinformatics workflows. The components in the workflow described in YAML or JSON formats are parsed to create a computational graph to run through later.</p>
-<p>To me, one of the benefits of using computational graphs is that you will notice the issues immediately if there is an error compiling the graph before even running things, say, mistakes were made when describing the workflow. This may help enforce and improve code quality and reproducibility. Plus, The modularized computational components makes it particularly easy to prototype new machine learning algorithms, just like legos. On the performance side, since the data and computation flow is predictable, many aggressive optimizations are possible, for example, on parallelization.</p>
-<p>To experience how powerful computational graph + automatic differentiation is for solving classical machine learning problems, I took a few hours to use cgraph and built an R package <a href="https://github.com/nanxstats/logreg">logreg</a>. I implemented three methods here:</p>
-<ul>
-<li>Logistic regression</li>
-<li>Logistic regression with the ridge (<span class="math inline">\(\ell_2\)</span>) penalty</li>
-<li>Logistic regression with the <a href="http://www3.stat.sinica.edu.tw/statistica/oldpdf/A23n220.pdf">seamless-<span class="math inline">\(\ell_0\)</span> (SELO) penalty</a>, a differentiable approximation of the <span class="math inline">\(\ell_0\)</span> penalty.</li>
-</ul>
-<p>Although these methods could be implemented very differently before, the core implementation with cgraph is surprisingly similar: pretty much just replacing the loss/cost functions, as is shown below (SELO). Check out this <a href="https://nanx.me/logreg/articles/logreg.html">vignette</a> for test examples, and please feel free to leave me a message if you find any bugs in the code.</p>
-<pre class="r"><code># initialize graph
-graph &lt;- cg_graph()
-
-# initialize input (X), target (y)
-input &lt;- cg_input(&quot;input&quot;)
-target &lt;- cg_input(&quot;target&quot;)
-
-# intialize parameters (beta, alpha)
-parms &lt;- list(
-  beta = cg_parameter(initialize_glorot_normal(ncol(x), 1), &quot;beta&quot;),
-  alpha = cg_parameter(initialize_constant(0), &quot;alpha&quot;)
-)
-
-# define the model (yhat = beta X + alpha)
-output &lt;- cg_sigmoid(cg_add(cg_matmul(input, parms$beta), cg_as_numeric(parms$alpha)), &quot;output&quot;)
-
-# define the selo loss (y, yhat, beta)
-loss &lt;- cg_add(
-  cg_mean(crossentropy(target, output)),
-  cg_div(
-    cg_mean(cg_ln(cg_add(cg_div(cg_abs(parms$beta), cg_add(cg_abs(parms$beta), tau)), 1))),
-    log(2)
-  ),
-  &quot;loss&quot;
-)
-
-# track errors
-error &lt;- rep(0, n_epochs)
-
-# optimize parameters via sgd
-for (i in 1:n_epochs) {
-  values &lt;- cg_graph_run(graph, loss, list(input = x, target = y))
-  grads &lt;- cg_graph_gradients(graph, loss, values)
-  for (parm in parms) parm$value &lt;- parm$value - learning_rate * grads[[parm$name]]
-  error[i] &lt;- values$loss
-}</code></pre>
-<p>On the other hand, treating code as graph data also comes with some side effects and limitations. Lazy evaluation on a static computational graph makes it almost impossible to do real-time debugging and writing loops/conditionals, as these things cannot be naturally represented in a static graph. As I’m writing this, TensorFlow 2.0 is released and switched to eager execution by default, which employs a tape recorder + dynamic computational graph, following the PyTorch approach. Automatic differentiation also requires the model to be designed as differentiable, or differentiable with approximations, which is unfortunate for tree-based models.</p>
-<p>In the end, I feel using computational graphs is still overwhelmingly beneficial. With more low-level APIs to access computational graphs in R, we will be able to essentially build the “TensorFlow” or “Keras” for our domains of interest in R. There are so many exciting research topics waiting there for our exploration, after all.</p>
+<p>The number of workflows written in the Common Workflow Language is <a href="https://github.com/search?l=cwl&amp;p=3&amp;q=workflow&amp;type=Code">growing</a> every day. I believe the workflows themselves are becoming a valuable data type that can be displayed and analyzed by the data science community. My hope for tidycwl is to help people achieve these goals reliably without hassles at the toolchain level.</p>
+</div>
+<div id="biocompute" class="section level2">
+<h2>biocompute</h2>
+<p>The <a href="https://en.wikipedia.org/wiki/BioCompute_Object">BioCompute Object</a> (BCO) is an emerging open standard for documenting and sharing next-generation sequencing (NGS) data analyses. The standard has the potential to lower the burden for scientists to share, communicate, and review such computations across organizations, thus improve the speed of discovery, promote computational reproducibility, and in general, encourage open science. For more details about the BioCompute project, you can check out the excellent introductory <a href="https://www.sevenbridges.com/biocompute-object/">blog post</a> written by my colleagues.</p>
+<p>The R package <a href="https://sbg.github.io/biocompute/">biocompute</a> offers an implementation of the BioCompute Object specification. With the package, users can compose, validate, convert, and export BioCompute Objects in R with a functional API.</p>
+<p>Thanks to the awesome infrastructure built by the R community in this decade, we can accomplish interoperability-related missions such as JSON schema validation or exporting to Word documents without reinventing many wheels. Let’s keep making it better.</p>
+</div>
 
 
 
@@ -244,15 +201,11 @@ for (i in 1:n_epochs) {
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="https://nanx.me/blog/post/peak-experience/">« Peak Experience</a>
+                                            <a href="https://nanx.me/blog/post/cgraph-logreg/">« Building Regularized Logistic Regressions from Scratch with Computational Graphs in R</a>
                                         </div>
                                     
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="https://nanx.me/blog/post/tidycwl-biocompute/">New Packages on CRAN: tidycwl and biocompute »</a>
-                                        </div>
                                     
                                 </div>
                             </div>
@@ -375,9 +328,6 @@ for (i in 1:n_epochs) {
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>
