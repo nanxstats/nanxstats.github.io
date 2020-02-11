@@ -130,7 +130,7 @@
                         </span>
 
                         <span class="reading-time middot">
-                            3 minute read
+                            4 minute read
                         </span>
 
                         <div class="d-none d-md-inline tags">
@@ -182,7 +182,8 @@
 
 
 <p>The R package built for this post is available on GitHub: <a href="https://github.com/nanxstats/logreg">nanxstats/logreg</a>.</p>
-<p>As one of the cornerstones for deep learning frameworks, automatic differentiation was briefly <a href="https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/">mentioned</a> in our previous post. Today let’s focus on the other important piece: the computational graph. I’m only able to write something about this, thanks to Ron Triepels, the author of the recently published R package <a href="https://github.com/triepels/cgraph">cgraph</a>. This package offers a decent, minimalist implementation for computational graphs and automatic differentiation in native C and R.</p>
+<p><strong>Update 2020-02-11</strong>: there has been some major API <a href="https://github.com/triepels/cgraph/blob/master/NEWS.md">updates and improvements</a> since cgraph 5.0.0. The logreg package is now <a href="https://github.com/nanxstats/logreg/pull/1">updated</a> to reflect these changes. The code example in this post is updated, too.</p>
+<p>As one of the cornerstones for deep learning frameworks, automatic differentiation was briefly <a href="https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/">mentioned</a> in our previous post. Today let’s focus on the other important piece: the computational graph. I’m only able to write something about this, thanks to <a href="https://github.com/triepels/">Ron Triepels</a>, the author of the recently published R package <a href="https://github.com/triepels/cgraph">cgraph</a>. This package offers a decent, minimalist implementation for computational graphs and automatic differentiation in native C and R.</p>
 <div class="figure">
 <img src="https://nanx.me/image/downhill-into-the-forest-joakim-honkasalo.jpg" alt="" />
 <p class="caption">Downhill into the forest. Photo by <a href="https://unsplash.com/photos/BT9e-1olEkY">Joakim Honkasalo</a>.</p>
@@ -197,11 +198,11 @@
 </ul>
 <p>Although these methods could be implemented very differently before, the core implementation with cgraph is surprisingly similar: pretty much just replacing the loss/cost functions, as is shown below (SELO). Check out this <a href="https://nanx.me/logreg/articles/logreg.html">vignette</a> for test examples, and please feel free to leave me a message if you find any bugs in the code.</p>
 <pre class="r"><code># initialize graph
-graph &lt;- cg_graph()
+graph &lt;- cg_graph(eager = FALSE)
 
 # initialize input (X), target (y)
-input &lt;- cg_input(&quot;input&quot;)
-target &lt;- cg_input(&quot;target&quot;)
+input &lt;- cg_constant(x, &quot;input&quot;)
+target &lt;- cg_constant(y, &quot;target&quot;)
 
 # intialize parameters (beta, alpha)
 parms &lt;- list(
@@ -210,15 +211,12 @@ parms &lt;- list(
 )
 
 # define the model (yhat = beta X + alpha)
-output &lt;- cg_sigmoid(cg_add(cg_matmul(input, parms$beta), cg_as_numeric(parms$alpha)), &quot;output&quot;)
+output &lt;- cg_sigmoid(cg_linear(input, parms$beta, parms$alpha), &quot;output&quot;)
 
 # define the selo loss (y, yhat, beta)
 loss &lt;- cg_add(
   cg_mean(crossentropy(target, output)),
-  cg_div(
-    cg_mean(cg_ln(cg_add(cg_div(cg_abs(parms$beta), cg_add(cg_abs(parms$beta), tau)), 1))),
-    log(2)
-  ),
+  cg_mean(cg_ln((cg_abs(parms$beta) / (cg_abs(parms$beta) + tau)) + 1)) / log(2),
   &quot;loss&quot;
 )
 
@@ -227,10 +225,10 @@ error &lt;- rep(0, n_epochs)
 
 # optimize parameters via sgd
 for (i in 1:n_epochs) {
-  values &lt;- cg_graph_run(graph, loss, list(input = x, target = y))
-  grads &lt;- cg_graph_gradients(graph, loss, values)
-  for (parm in parms) parm$value &lt;- parm$value - learning_rate * grads[[parm$name]]
-  error[i] &lt;- values$loss
+  cg_graph_forward(graph, loss)
+  cg_graph_backward(graph, loss)
+  for (parm in parms) parm$value &lt;- parm$value - learning_rate * parm$grad
+  error[i] &lt;- loss$value
 }</code></pre>
 <p>On the other hand, treating code as graph data also comes with some side effects and limitations. Lazy evaluation on a static computational graph makes it almost impossible to do real-time debugging and writing loops/conditionals, as these things cannot be naturally represented in a static graph. As I’m writing this, TensorFlow 2.0 is released and switched to eager execution by default, which employs a tape recorder + dynamic computational graph, following the PyTorch approach. Automatic differentiation also requires the model to be designed as differentiable, or differentiable with approximations, which is unfortunate for tree-based models.</p>
 <p>In the end, I feel using computational graphs is still overwhelmingly beneficial. With more low-level APIs to access computational graphs in R, we will be able to essentially build the “TensorFlow” or “Keras” for our domains of interest in R. There are so many exciting research topics waiting there for our exploration, after all.</p>
