@@ -150,14 +150,14 @@ R packages:
 
 <p>
 Web applications:
-<a href="#gcs">gcs</a>
-&middot; <a href="#DockFlow">dockflow</a>
-&middot; <a href="#hdnom-app">hdnom</a>
+<a href="#gcs">genomics-compliance-suite</a>
+&middot; <a href="#cwl-upgrader">cwl-upgrader</a>
+&middot; <a href="#protrweb">protrweb</a>
 &middot; <a href="#targetnet">targetnet</a>
-&middot; <a href="#protrweb">protr</a>
 &middot; <a href="#imgsvd">imgsvd</a>
-&middot; <a href="#signify">signify</a>
+&middot; <a href="#hdnom-app">hdnom-app</a>
 &middot; <a href="#conjugate-normal-umkv">conjugate-normal-umkv</a>
+&middot; <a href="#signify">signify</a>
 </p>
 
 <p>
@@ -177,6 +177,12 @@ R code contributor:
 Hugo/Blogdown themes:
 <a href="#hugo-renga">hugo-renga</a>
 &middot; <a href="#hugo-tanka">hugo-tanka</a>
+</p>
+
+<p>
+Collections:
+<a href="#dockflow">dockflow.org</a>
+&middot; <a href="#nanx-app">nanx.app</a>
 </p>
 
 </div>
@@ -680,7 +686,7 @@ sbgr provides an R client for accessing Seven Bridges Genomics API (v1).
 
 <h2 id="web-applications">Web Applications</h2>
 
-<p>A collection of my Shiny apps for interactive data analysis.</p>
+<p>A collection of my shiny apps for interactive data analysis.</p>
 
 <hr>
 
@@ -695,9 +701,9 @@ sbgr provides an R client for accessing Seven Bridges Genomics API (v1).
 <img src="../image/project-generic.png" class="img-fluid" alt="" />
 </div>
 <div class="col-md-9">
-<h3>gcs: Genomics Compliance Suite by Seven Bridges</h3>
+<h3>Genomics Compliance Suite by Seven Bridges</h3>
 <p>
-Genomics Compliance Suite (GCS) is a Shiny app to create, validate, and browse BioCompute Objects.
+The Genomics Compliance Suite (GCS) is a shiny app to create, validate, and browse BioCompute Objects.
 </p>
 <p>
 <a href="https://github.com/sbg/gcs" class="btn btn-outline-primary">GitHub</a>
@@ -712,7 +718,7 @@ Genomics Compliance Suite (GCS) is a Shiny app to create, validate, and browse B
 
 <hr>
 
-<p><a class="anchor" id="DockFlow"></a></p>
+<p><a class="anchor" id="cwl-upgrader"></a></p>
 
 <div class="py-3">
 <div class="container">
@@ -720,87 +726,16 @@ Genomics Compliance Suite (GCS) is a Shiny app to create, validate, and browse B
 <div class="col">
 <div class="row">
 <div class="col-md-3">
-<img src="../image/project-dockflow.png" class="img-fluid" alt="" />
+<img src="../image/project-generic.png" class="img-fluid" alt="" />
 </div>
 <div class="col-md-9">
-<h3>DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr</h3>
+<h3>cwl-upgrader: upgrade CWL apps</h3>
 <p>
-Proof-of-concept project exploring the technical possibility and complexity
-for bioinformatics workflow containerization and orchestration using Docker
-and <a href="https://nanx.me/liftr/">liftr</a>.
-All 18 available Bioconductor workflows were containerized.
+A shiny app to upgrade Common Workflow Language (CWL) apps from sbg:draft2 to v1.0.
 </p>
 <p>
-<a href="https://dockflow.org" class="btn btn-outline-primary">DockFlow.org</a>
-<a href="https://github.com/nanxstats/dockflow" class="btn btn-outline-primary">GitHub</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<hr>
-
-<p><a class="anchor" id="hdnom-app"></a></p>
-
-<div class="py-3">
-<div class="container">
-<div class="row">
-<div class="col">
-<div class="row">
-<div class="col-md-3">
-<img src="../image/project-hdnom.png" class="img-fluid" alt="" />
-</div>
-<div class="col-md-9">
-<h3>hdnom-app: Web Application for Building Nomograms with High-Dimensional Data</h3>
-<p>
-hdnom-app is a shiny app built on the hdnom package.
-All the 9 model types in the hdnom package are supported.
-It streamlined the process of nomogram building, model validation,
-model calibration, and reproducible report generation.
-</p>
-<p>
-This app has been selected as one of the
-<a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">Shiny User Showcase</a>.
-</p>
-<p>
-<a href="https://nanx.app/hdnom/" class="btn btn-outline-primary">Mirror 1</a>
-<a href="https://nanx.shinyapps.io/hdnom-app/" class="btn btn-outline-primary">Mirror 2</a>
-<a href="https://github.com/nanxstats/hdnom-app" class="btn btn-outline-primary">GitHub</a>
-<a href="https://www.biorxiv.org/content/biorxiv/early/2016/08/23/065524.full.pdf" class="btn btn-outline-primary">Paper</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<hr>
-
-<p><a class="anchor" id="targetnet"></a></p>
-
-<div class="py-3">
-<div class="container">
-<div class="row">
-<div class="col">
-<div class="row">
-<div class="col-md-3">
-<img src="../image/project-targetnet.png" class="img-fluid" alt="" />
-</div>
-<div class="col-md-9">
-<h3>TargetNet: Shiny Web Application for Drug Target Identification with Large-Scale Public Binding Affinities Data</h3>
-<p>
-Web application for predicting the binding probability of 623 potential drug
-targets for given molecule(s).
-Driven by machine learning modeling of large-scale public chemogenomics data.
-</p>
-<p>
-<a href="https://nanx.app/targetnet/" class="btn btn-outline-primary">Mirror 1</a>
-<a href="https://nanx.shinyapps.io/targetnet/" class="btn btn-outline-primary">Mirror 2</a>
-<a href="https://github.com/nanxstats/targetnet" class="btn btn-outline-primary">GitHub</a>
+<a href="https://nanx.app/cwl-upgrader/" class="btn btn-outline-primary">Mirror 1</a>
+<a href="https://github.com/nanxstats/cwl-upgrader" class="btn btn-outline-primary">GitHub</a>
 </p>
 </div>
 </div>
@@ -822,7 +757,7 @@ Driven by machine learning modeling of large-scale public chemogenomics data.
 <img src="../image/project-protr.png" class="img-fluid" alt="" />
 </div>
 <div class="col-md-9">
-<h3>ProtrWeb: Shiny Web Application for Computing Protein Sequence-Derived Descriptors</h3>
+<h3>ProtrWeb: Shiny app for computing protein sequence-derived descriptors</h3>
 <p>
 Web application for computing 14 types of protein sequence-derived structural and
 physicochemical features in bioinformatics.
@@ -832,6 +767,37 @@ physicochemical features in bioinformatics.
 <a href="https://nanx.shinyapps.io/protrweb/" class="btn btn-outline-primary">Mirror 2</a>
 <a href="https://github.com/nanxstats/protrweb" class="btn btn-outline-primary">GitHub</a>
 <a href="../papers/protr.pdf" class="btn btn-outline-primary">Paper</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<hr>
+
+<p><a class="anchor" id="targetnet"></a></p>
+
+<div class="py-3">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="row">
+<div class="col-md-3">
+<img src="../image/project-targetnet.png" class="img-fluid" alt="" />
+</div>
+<div class="col-md-9">
+<h3>TargetNet: Shiny app for drug target identification with large-scale public binding affinities data</h3>
+<p>
+Web application for predicting the binding probability of 623 potential drug
+targets for given molecule(s).
+Driven by machine learning modeling of large-scale public chemogenomics data.
+</p>
+<p>
+<a href="https://nanx.app/targetnet/" class="btn btn-outline-primary">Mirror 1</a>
+<a href="https://nanx.shinyapps.io/targetnet/" class="btn btn-outline-primary">Mirror 2</a>
+<a href="https://github.com/nanxstats/targetnet" class="btn btn-outline-primary">GitHub</a>
 </p>
 </div>
 </div>
@@ -853,9 +819,9 @@ physicochemical features in bioinformatics.
 <img src="../image/project-imgsvd.png" class="img-fluid" alt="" />
 </div>
 <div class="col-md-9">
-<h3>ImgSVD: Shiny Web Application for Image Compression via Singular Value Decomposition</h3>
+<h3>ImgSVD: Shiny app for image compression via singular value decomposition</h3>
 <p>
-ImgSVD is a Shiny app for image compression via singular value decomposition (SVD).
+Shiny app for image compression via singular value decomposition (SVD).
 ImgSVD is inspired by Yihui Xie's comment in
 Yixuan Qiu's <a href="https://cos.name/2014/02/svd-and-image-compression/">article</a>
 on image compression via singular value decomposition with the R package
@@ -865,6 +831,42 @@ on image compression via singular value decomposition with the R package
 <a href="https://nanx.app/imgsvd/" class="btn btn-outline-primary">Mirror 1</a>
 <a href="https://nanx.shinyapps.io/imgsvd/" class="btn btn-outline-primary">Mirror 2</a>
 <a href="https://github.com/nanxstats/imgsvd" class="btn btn-outline-primary">GitHub</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<hr>
+
+<p><a class="anchor" id="hdnom-app"></a></p>
+
+<div class="py-3">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="row">
+<div class="col-md-3">
+<img src="../image/project-hdnom.png" class="img-fluid" alt="" />
+</div>
+<div class="col-md-9">
+<h3>hdnom-app: interactive benchmarking and visualization of penalized Cox models</h3>
+<p>
+A shiny app built on the hdnom package.
+Streamlines nomogram building, model validation,
+model calibration, and reproducible report generation.
+</p>
+<p>
+Selected as one of the
+<a href="https://www.rstudio.com/products/shiny/shiny-user-showcase/">Shiny User Showcase</a>.
+</p>
+<p>
+<a href="https://nanx.app/hdnom/" class="btn btn-outline-primary">Mirror 1</a>
+<a href="https://nanx.shinyapps.io/hdnom-app/" class="btn btn-outline-primary">Mirror 2</a>
+<a href="https://github.com/nanxstats/hdnom-app" class="btn btn-outline-primary">GitHub</a>
+<a href="https://www.biorxiv.org/content/biorxiv/early/2016/08/23/065524.full.pdf" class="btn btn-outline-primary">Paper</a>
 </p>
 </div>
 </div>
@@ -915,11 +917,10 @@ A demo of Bayesian inference for normal mean (known variance).
 <img src="../image/project-signify.png" class="img-fluid" alt="" />
 </div>
 <div class="col-md-9">
-<h3>Signify: Shiny Web Application for Making Your <em>p</em>-value Sound Significant</h3>
+<h3>Signify: Make your <em>p</em>-value "sound significant"</h3>
 <p>
-Signify is a Shiny-based web application for making your (>0.05) <em>p</em>-values
-sound significant.
-The application is powered by the data from
+A shiny app for making your (>0.05) <em>p</em>-values "sound significant".
+Powered by the data from
 <a href="https://mchankins.wordpress.com/2013/04/21/still-not-significant-2/">Matthew Hankins</a>.
 </p>
 <p>
@@ -1147,6 +1148,71 @@ A minimalist, text-oriented, and performant blog theme for Hugo/blogdown.
 <p>
 <a href="https://github.com/nanxstats/hugo-tanka" class="btn btn-outline-primary">GitHub</a>
 <a href="https://nanx.me/hugo-tanka/" class="btn btn-outline-primary">Live Preview</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<hr>
+
+<h2 id="collections">Collections</h2>
+
+<p>Hosted resources and collections.</p>
+
+<hr>
+
+<p><a class="anchor" id="dockflow"></a></p>
+
+<div class="py-3">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="row">
+<div class="col-md-3">
+<img src="../image/project-dockflow.png" class="img-fluid" alt="" />
+</div>
+<div class="col-md-9">
+<h3>DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr</h3>
+<p>
+Proof-of-concept project exploring the technical possibility and complexity
+for bioinformatics workflow containerization and orchestration using Docker
+and <a href="https://nanx.me/liftr/">liftr</a>.
+All 18 available Bioconductor workflows were containerized.
+</p>
+<p>
+<a href="https://dockflow.org" class="btn btn-outline-primary">DockFlow.org</a>
+<a href="https://github.com/nanxstats/dockflow" class="btn btn-outline-primary">GitHub</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<hr>
+
+<p><a class="anchor" id="nanx-app"></a></p>
+
+<div class="py-3">
+<div class="container">
+<div class="row">
+<div class="col">
+<div class="row">
+<div class="col-md-3">
+<img src="../image/project-generic.png" class="img-fluid" alt="" />
+</div>
+<div class="col-md-9">
+<h3>nanx.app</h3>
+<p>
+A collection of shiny apps built by me.
+</p>
+<p>
+<a href="https://nanx.app" class="btn btn-outline-primary">nanx.app</a>
+<a href="https://github.com/nanxstats/nanx.app" class="btn btn-outline-primary">GitHub</a>
 </p>
 </div>
 </div>
