@@ -6,10 +6,21 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Dec 2019 00:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 01:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Self-Hosting Shiny Apps with Linode and Cloudflare</title>
+      <link>https://nanx.me/blog/post/self-host-shiny-apps/</link>
+      <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
+      <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by RStudio.
+A collection of my shiny apps, now also self-hosted.
+ The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
+    </item>
     
     <item>
       <title>New Packages on CRAN: tidycwl and biocompute</title>

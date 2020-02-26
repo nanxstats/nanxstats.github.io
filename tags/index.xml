@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 14 Dec 2019 00:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 01:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hosting</title>
+      <link>https://nanx.me/tags/hosting/</link>
+      <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/hosting/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>infrastructure</title>
+      <link>https://nanx.me/tags/infrastructure/</link>
+      <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/infrastructure/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>https://nanx.me/tags/shiny/</link>
+      <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/shiny/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>BioCompute Objects</title>
@@ -26,15 +62,6 @@
       <pubDate>Sat, 14 Dec 2019 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/common-workflow-language/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sat, 14 Dec 2019 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     
@@ -143,15 +170,6 @@
       <pubDate>Mon, 28 Jan 2019 15:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/web-tracking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shiny</title>
-      <link>https://nanx.me/tags/shiny/</link>
-      <pubDate>Tue, 04 Dec 2018 14:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/shiny/</guid>
       <description></description>
     </item>
     

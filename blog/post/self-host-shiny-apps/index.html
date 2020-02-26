@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> New Packages on CRAN: tidycwl and biocompute - Nan Xiao | 肖楠 </title>
+    <title> Self-Hosting Shiny Apps with Linode and Cloudflare - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="An overview of the new R packages: tidycwl and biocompute" />
+    <meta name="description" content="The motivation and setup to self-host my shiny apps with Linode and Cloudflare." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/tidycwl-biocompute/" />
-    <meta property="og:title" content="New Packages on CRAN: tidycwl and biocompute" />
-    <meta property="og:image" content="https://nanx.me/image/tidycwl-gatk4-wgs.png" />
-    <meta property="og:description" content="An overview of the new R packages: tidycwl and biocompute" />
+    <meta property="og:url" content="https://nanx.me/blog/post/self-host-shiny-apps/" />
+    <meta property="og:title" content="Self-Hosting Shiny Apps with Linode and Cloudflare" />
+    <meta property="og:image" content="https://nanx.me/image/nanx.app.png" />
+    <meta property="og:description" content="The motivation and setup to self-host my shiny apps with Linode and Cloudflare." />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="New Packages on CRAN: tidycwl and biocompute" />
-    <meta name="twitter:description" content="An overview of the new R packages: tidycwl and biocompute" />
-    <meta name="twitter:image" content="https://nanx.me/image/tidycwl-gatk4-wgs.png" />
+    <meta name="twitter:title" content="Self-Hosting Shiny Apps with Linode and Cloudflare" />
+    <meta name="twitter:description" content="The motivation and setup to self-host my shiny apps with Linode and Cloudflare." />
+    <meta name="twitter:image" content="https://nanx.me/image/nanx.app.png" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/tidycwl-biocompute/">
+    <link rel="canonical" href="https://nanx.me/blog/post/self-host-shiny-apps/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
 
@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    <h1 class="mx-0 mx-md-4 blog-post-title">New Packages on CRAN: tidycwl and biocompute</h1>
+                    <h1 class="mx-0 mx-md-4 blog-post-title">Self-Hosting Shiny Apps with Linode and Cloudflare</h1>
 
                     <div class="mb-md-4 meta">
                         
@@ -125,8 +125,8 @@
                             
                         
 
-                        <span class="date middot" title='Sat Dec 14 2019 00:30:00 UTC'>
-                            2019-12-14
+                        <span class="date middot" title='Wed Feb 26 2020 01:00:00 UTC'>
+                            2020-02-26
                         </span>
 
                         <span class="reading-time middot">
@@ -141,11 +141,15 @@
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/common-workflow-language">Common Workflow Language</a>
+                                        <a href="https://nanx.me/tags/shiny">shiny</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/biocompute-objects">BioCompute Objects</a>
+                                        <a href="https://nanx.me/tags/hosting">hosting</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="https://nanx.me/tags/infrastructure">infrastructure</a>
                                     </li>
                                 
                             </ul>
@@ -165,31 +169,51 @@
 <script src="https://nanx.me/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
-<p>On the journey of achieving reproducibility in genomic data analysis projects, one often faces challenges with documenting workflows and computations systematically. To provide one way for tackling these problems, we (me and my colleagues) have recently released two new R packages — <a href="https://sbg.github.io/tidycwl/">tidycwl</a> and <a href="https://sbg.github.io/biocompute/">biocompute</a> — to CRAN.</p>
-<div id="tidycwl" class="section level2">
-<h2>tidycwl</h2>
-<p>As the name implies, the package <a href="https://sbg.github.io/tidycwl/">tidycwl</a> aims at offering a native toolchain for R to analyze tools and workflows written in the <a href="https://www.commonwl.org/">Common Workflow Language</a> (CWL), while following the tidyverse design principles. What it does is not complicated at all: reading the raw CWL workflows encoded in JSON or YAML, parsing the workflow elements into data frames, lists, or directed graph representations, and visualizing the workflows.</p>
-<p>For example, to visualize a CWL <a href="https://cgc.sbgenomics.com/public/apps#admin/sbg-public-data/whole-genome-sequencing-bwa-gatk-4-0/">BWA + GATK 4 whole genome sequencing workflow</a>, a few pipes get the job done:</p>
-<pre class="r"><code>library(&quot;tidycwl&quot;)
-
-flow &lt;- system.file(&quot;cwl/sbg/workflow/gatk4-wgs.json&quot;, package = &quot;tidycwl&quot;) %&gt;% read_cwl_json()
-
-get_graph(
-  flow %&gt;% parse_inputs(),
-  flow %&gt;% parse_outputs(),
-  flow %&gt;% parse_steps()
-) %&gt;% visualize_graph()</code></pre>
+<p>After procrastinating for some time, I finally set up a dedicated self-hosting server, <a href="https://nanx.app">nanx.app</a>, for my public shiny apps. From now on, most of the web applications listed on <a href="https://nanx.me/software/">my software page</a> will be available from two mirrors — the self-hosting server and the public cloud hosting solution <a href="https://www.shinyapps.io">shinyapps.io</a> kindly provided by RStudio.</p>
 <div class="figure">
-<img src="https://nanx.me/image/tidycwl-gatk4-wgs.png" alt="" />
-<p class="caption">A tidycwl visualization of the GATK 4 WGS workflow. You can see the interactive version <a href="https://sbg.github.io/tidycwl/articles/tidycwl.html#visualize-workflow">here</a>.</p>
+<img src="https://nanx.me/image/nanx.app.png" alt="" />
+<p class="caption">A collection of my shiny apps, now also self-hosted.</p>
 </div>
-<p>The number of workflows written in the Common Workflow Language is <a href="https://github.com/search?l=cwl&amp;p=3&amp;q=workflow&amp;type=Code">growing</a> every day. I believe the workflows themselves are becoming a valuable data type that can be displayed and analyzed by the data science community. My hope for tidycwl is to help people achieve these goals reliably without hassles at the toolchain level.</p>
+<div id="the-motivation" class="section level2">
+<h2>The Motivation</h2>
+<p>I have built many shiny apps over the years — a few of them are public and open source. As a fully managed solution, shinyapps.io has provided a handy and flexible enough hosting venue for 95% of the apps I built.</p>
+<p>It wasn’t always rainbows and butterflies, though. Sometimes, I feel I still need extra flexibility and control over the system environments, especially when we can now use the incredible <a href="https://rstudio.github.io/reticulate/">reticulate</a> to call Python modules directly. One example is my recent app <a href="https://github.com/nanxstats/cwl-upgrader">cwl-upgrader</a>, where the dependency could not be easily installed and discovered by the correct version of Python (if any) on shinyapps.io. To host this app, I decided to set up my own server.</p>
+<p>In my opinion, the main technical reasons to create a self-hosting server may include:</p>
+<ul>
+<li>Better technical flexibility.
+<ul>
+<li>Install and use any “non-standard” dependencies.</li>
+<li>Explore new web frameworks such as <a href="https://twitter.com/nanxstats/status/1155992482993205251">Dash for R</a> and <a href="https://github.com/thomasp85/fiery">Fiery</a>.</li>
+</ul></li>
+<li>Better personal branding.
+<ul>
+<li>All apps are accessible under a single, personalized domain.</li>
+</ul></li>
+<li>Better pricing model.
+<ul>
+<li>Switch from time usage-based pricing to traffic-based pricing (harder to exhaust for me).</li>
+<li>HTTPS for the custom domain with no nominal cost.</li>
+</ul></li>
+</ul>
 </div>
-<div id="biocompute" class="section level2">
-<h2>biocompute</h2>
-<p>The <a href="https://en.wikipedia.org/wiki/BioCompute_Object">BioCompute Object</a> (BCO) is an emerging open standard for documenting and sharing next-generation sequencing (NGS) data analyses. The standard has the potential to lower the burden for scientists to share, communicate, and review such computations across organizations, thus improve the speed of discovery, promote computational reproducibility, and in general, encourage open science. For more details about the BioCompute project, you can check out the excellent introductory <a href="https://www.sevenbridges.com/biocompute-object/">blog post</a> written by my colleagues.</p>
-<p>The R package <a href="https://sbg.github.io/biocompute/">biocompute</a> offers an implementation of the BioCompute Object specification. With the package, users can compose, validate, convert, and export BioCompute Objects in R with a functional API.</p>
-<p>Thanks to the awesome infrastructure built by the R community in this decade, we can accomplish interoperability-related missions such as JSON schema validation or exporting to Word documents without reinventing many wheels. Let’s keep making it better.</p>
+<div id="the-setup" class="section level2">
+<h2>The Setup</h2>
+<p>In brief, it looks like this:</p>
+<div class="figure">
+<img src="https://nanx.me/image/self-hosting-shiny-diagram.svg" alt="" />
+<p class="caption">A diagram of the checkpoints. Made with the <a href="https://mermaid-js.github.io/mermaid-live-editor/">Mermaid live editor</a>.</p>
+</div>
+<p>Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:</p>
+<ul>
+<li><a href="https://www.linode.com/docs/security/securing-your-server/">How to secure your server</a></li>
+<li><a href="https://www.linode.com/docs/networking/dns/how-to-set-up-cloudflare-with-linode/">How to set up Cloudflare with Linode</a></li>
+<li><a href="https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy">Running Shiny Server with a proxy</a></li>
+</ul>
+<p>It may take some time to figure out every detail when setting things up (DevOps can be intimidating), but one can often get it done after a little research. For example, two ops related issues I encountered:</p>
+<ul>
+<li>When uploading “large” files under the default Nginx settings, it returned a “413 Request Entity Too Large” error. We can usually set the <code>client_max_body_size</code> in <code>nginx.conf</code> to resolve this issue.</li>
+<li>On the $5/month 1GB RAM node I used, <a href="https://github.com/RcppCore/RcppEigen/issues/53">compiling some particular dependencies</a> can max out the memory. I just temporarily resized the node to a bigger RAM node to compile them, and then resized back.</li>
+</ul>
 </div>
 
 
@@ -202,15 +226,11 @@ get_graph(
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="https://nanx.me/blog/post/cgraph-logreg/">« Building Regularized Logistic Regressions from Scratch with Computational Graphs in R</a>
+                                            <a href="https://nanx.me/blog/post/tidycwl-biocompute/">« New Packages on CRAN: tidycwl and biocompute</a>
                                         </div>
                                     
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="https://nanx.me/blog/post/self-host-shiny-apps/">Self-Hosting Shiny Apps with Linode and Cloudflare »</a>
-                                        </div>
                                     
                                 </div>
                             </div>
@@ -333,6 +353,9 @@ get_graph(
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>
