@@ -4,12 +4,37 @@
   
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2020-02-26T01:00:00+00:00</lastmod>
+    <lastmod>2020-04-11T17:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/callr/</loc>
+    <lastmod>2020-04-11T17:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/blog/post/disposable-computing-with-callr/</loc>
+    <lastmod>2020-04-11T17:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2020-02-26T01:00:00+00:00</lastmod>
+    <lastmod>2020-04-11T17:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2020-04-11T17:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/rcpi/</loc>
+    <lastmod>2020-04-11T17:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2020-04-11T17:30:00+00:00</lastmod>
   </url>
   
   <url>
@@ -23,22 +48,12 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2020-02-26T01:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/blog/post/self-host-shiny-apps/</loc>
     <lastmod>2020-02-26T01:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nanx.me/tags/shiny/</loc>
-    <lastmod>2020-02-26T01:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2020-02-26T01:00:00+00:00</lastmod>
   </url>
   

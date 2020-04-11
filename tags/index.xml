@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Feb 2020 01:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 17:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>callr</title>
+      <link>https://nanx.me/tags/callr/</link>
+      <pubDate>Sat, 11 Apr 2020 17:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/callr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sat, 11 Apr 2020 17:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Rcpi</title>
+      <link>https://nanx.me/tags/rcpi/</link>
+      <pubDate>Sat, 11 Apr 2020 17:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/rcpi/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>hosting</title>
@@ -26,15 +53,6 @@
       <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/infrastructure/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     

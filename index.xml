@@ -6,10 +6,21 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 26 Feb 2020 01:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Apr 2020 17:30:00 +0000</lastBuildDate>
     
 	<atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Disposable Computing with callr</title>
+      <link>https://nanx.me/blog/post/disposable-computing-with-callr/</link>
+      <pubDate>Sat, 11 Apr 2020 17:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/disposable-computing-with-callr/</guid>
+      <description>Photo by @uniqueton.
+ Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when managing (file) connections. Boris posted such an issue when using my R package Rcpi. I rephrase it here as:
+library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in 1:2000) { file.copy( system.file(&amp;quot;compseq/DB00530.sdf&amp;quot;, package = &amp;quot;Rcpi&amp;quot;), paste0(&amp;quot;test/&amp;quot;, i, &amp;quot;.sdf&amp;quot;) ) } fns &amp;lt;- list.files(&amp;quot;test/&amp;quot;, pattern = &amp;quot;.sdf$&amp;quot;, full.names = TRUE) for (i in 1:length(fns)) { cat(&amp;quot;\014&amp;quot;, i, &amp;quot;\n&amp;quot;) Rcpi::convMolFormat(infile = fns[i], outfile = &amp;quot;temp.</description>
+    </item>
     
     <item>
       <title>Self-Hosting Shiny Apps with Linode and Cloudflare</title>
