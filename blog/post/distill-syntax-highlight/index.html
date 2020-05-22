@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Disposable Computing with callr - Nan Xiao | 肖楠 </title>
+    <title> Customize Syntax Highlighting for R distill Websites - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Use callr to work around manual connection management." />
+    <meta name="description" content="Customize the distill syntax highlighting theme with a few lines of R code." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/disposable-computing-with-callr/" />
-    <meta property="og:title" content="Disposable Computing with callr" />
-    <meta property="og:image" content="https://nanx.me/image/disposable-gloves-thumb-up-uniqueton.jpg" />
-    <meta property="og:description" content="Use callr to work around manual connection management." />
+    <meta property="og:url" content="https://nanx.me/blog/post/distill-syntax-highlight/" />
+    <meta property="og:title" content="Customize Syntax Highlighting for R distill Websites" />
+    <meta property="og:image" content="https://nanx.me/image/wine-bottles-chuttersnap.jpg" />
+    <meta property="og:description" content="Customize the distill syntax highlighting theme with a few lines of R code." />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Disposable Computing with callr" />
-    <meta name="twitter:description" content="Use callr to work around manual connection management." />
-    <meta name="twitter:image" content="https://nanx.me/image/disposable-gloves-thumb-up-uniqueton.jpg" />
+    <meta name="twitter:title" content="Customize Syntax Highlighting for R distill Websites" />
+    <meta name="twitter:description" content="Customize the distill syntax highlighting theme with a few lines of R code." />
+    <meta name="twitter:image" content="https://nanx.me/image/wine-bottles-chuttersnap.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/disposable-computing-with-callr/">
+    <link rel="canonical" href="https://nanx.me/blog/post/distill-syntax-highlight/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha256-YLGeXaapI0/5IgZopewRJcFXomhRMlYYjugPLSyNjTY=" crossorigin="anonymous" />
 
@@ -114,7 +114,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-md-10">
-                    <h1 class="mx-0 mx-md-4 blog-post-title">Disposable Computing with callr</h1>
+                    <h1 class="mx-0 mx-md-4 blog-post-title">Customize Syntax Highlighting for R distill Websites</h1>
 
                     <div class="mb-md-4 meta">
                         
@@ -125,12 +125,12 @@
                             
                         
 
-                        <span class="date middot" title='Sat Apr 11 2020 17:30:00 UTC'>
-                            2020-04-11
+                        <span class="date middot" title='Fri May 22 2020 00:30:00 UTC'>
+                            2020-05-22
                         </span>
 
                         <span class="reading-time middot">
-                            3 minute read
+                            2 minute read
                         </span>
 
                         <div class="d-none d-md-inline tags">
@@ -141,11 +141,11 @@
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/callr">callr</a>
+                                        <a href="https://nanx.me/tags/r-markdown">R Markdown</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/rcpi">Rcpi</a>
+                                        <a href="https://nanx.me/tags/distill">distill</a>
                                     </li>
                                 
                             </ul>
@@ -166,72 +166,26 @@
 
 
 <div class="figure">
-<img src="https://nanx.me/image/disposable-gloves-thumb-up-uniqueton.jpg" alt="" />
-<p class="caption">Photo by <a href="https://unsplash.com/photos/oemojNQYYe4"><span class="citation">@uniqueton</span></a>.</p>
+<img src="https://nanx.me/image/wine-bottles-chuttersnap.jpg" alt="" />
+<p class="caption">You have more options than you think. Photo by <a href="https://unsplash.com/photos/eKlezhItE5U"><span class="citation">@chuttersnap</span></a>.</p>
 </div>
-<p>Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/connections.html">managing (file) connections</a>. Boris posted such an <a href="https://github.com/nanxstats/Rcpi/issues/9">issue</a> when using my R package <a href="https://bioconductor.org/packages/Rcpi/">Rcpi</a>. I rephrase it here as:</p>
-<pre class="r"><code>library(&quot;Rcpi&quot;)
-
-dir.create(&quot;test&quot;)
-for (i in 1:2000) {
-  file.copy(
-    system.file(&quot;compseq/DB00530.sdf&quot;, package = &quot;Rcpi&quot;),
-    paste0(&quot;test/&quot;, i, &quot;.sdf&quot;)
-  )
-}
-
-fns &lt;- list.files(&quot;test/&quot;, pattern = &quot;.sdf$&quot;, full.names = TRUE)
-
-for (i in 1:length(fns)) {
-  cat(&quot;\014&quot;, i, &quot;\n&quot;)
-  Rcpi::convMolFormat(infile = fns[i], outfile = &quot;temp.smi&quot;, from = &quot;sdf&quot;, to = &quot;smiles&quot;)
-  Rcpi::readMolFromSmi(smifile = &quot;temp.smi&quot;, type = &quot;text&quot;)[1]
-}</code></pre>
-<p>The purpose of the code is simple: convert a collection of files existing in the SDF format to SMILES format (both are common chemical file formats), then read the SMILES format files as character strings sequentially. Nothing surprising.</p>
-<p>However, after looping over about 500 input files, R yields an error saying:</p>
-<pre class="text"><code>Error in file(file, &quot;r&quot;) : cannot open the connection
-In addition: Warning message:
-In file(file, &quot;r&quot;) : cannot open file &#39;temp.smi&#39;: Too many open files</code></pre>
-<p>This is because there are certain limits on the number of connections one can open in R. See Matthew Shotwell’s <a href="https://biostatmatt.com/R/R-conn-ints.pdf">R Connection Internals</a> for technical details. If we look closely, the connection-related code is:</p>
-<pre class="r"><code>for (i in input_files) {
-  read_compute_write(input = i, output = &quot;output_file&quot;)
-  read_file(&quot;output_file&quot;)
-  ...
-}</code></pre>
-<p>where the <code>read_compute_write()</code> function is a wrapper of a function from another package that uses C++ to open low-level connections to read and write files, and <code>read_file()</code> uses R’s native <code>scan()</code> to read files. More often than not, there could be additional operations that manipulate connections in the for loop.</p>
-<p>In such situations, I usually do not want to spend a few hours fighting with the “proper” solution — manual connection life cycle management. This is not so dissimilar with garbage collection (GC) in memory management — although you want to enjoy the manual control once a while, sometimes you wish it to be automatic.</p>
-<p>What could be an alternative solution? Since the core issue here is that one R process cannot open many connections at once, what if we open a below-the-limit number of connections in separate child R processes, do the computation, and collect the results back to the parent process? Yes, this is easily doable via the <a href="https://cran.r-project.org/package=callr">callr</a> package if you haven’t heard of it:</p>
-<pre class="r"><code>library(&quot;Rcpi&quot;)
-library(&quot;callr&quot;)
-
-dir.create(&quot;test&quot;)
-for (i in 1:2000) {
-  file.copy(
-    system.file(&quot;compseq/DB00530.sdf&quot;, package = &quot;Rcpi&quot;),
-    paste0(&quot;test/&quot;, i, &quot;.sdf&quot;)
-  )
-}
-
-fns &lt;- list.files(&quot;test/&quot;, pattern = &quot;.sdf$&quot;, full.names = TRUE)
-
-convert &lt;- function(fns, idx) {
-  callr::r(function(fns, idx) {
-    smiles &lt;- c()
-    for (i in idx) {
-      Rcpi::convMolFormat(infile = fns[i], outfile = &quot;temp.smi&quot;, from = &quot;sdf&quot;, to = &quot;smiles&quot;)
-      smiles &lt;- c(smiles, Rcpi::readMolFromSmi(smifile = &quot;temp.smi&quot;, type = &quot;text&quot;)[1])
-    }
-    smiles
-  }, args = list(fns, idx))
-}
-
-
-k &lt;- length(fns)
-chunks &lt;- split(1:k, ceiling(seq_along(1:k) / 400))
-smi &lt;- rep(NA, k)
-for (i in 1:length(chunks)) smi[chunks[[i]]] &lt;- convert(fns, chunks[[i]])
-smi</code></pre>
-<p>The code can still be further vectorized, but you got the idea. Note that extending such a workaround to other use cases may create an antipattern. Although I do not think writing “disposable code” for “disposable computing” is a problem if it gets the work done, I do not recommend such approaches either unless you are in a hurry.</p>
+<div id="the-problem" class="section level2">
+<h2>The Problem</h2>
+<p>The <a href="https://rstudio.github.io/distill/">distill</a> (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found <a href="https://github.com/rstudio/distill/issues/19">this issue</a>:</p>
+<div class="figure">
+<img src="https://nanx.me/image/distill-custom-highlight-theme.png" alt="" />
+<p class="caption"> </p>
+</div>
+<p>I was a bit surprised and sad that there is no easy way to customize it. As a person with some opinions myself, I entirely respect the design choices, while I do hold some alternative views on two aspects of this.</p>
+<p>First of all, I agree that the philosophy behind a software product is critical, and sometimes we have to balance the experience and flexibility one offers in the software. However, in reality, it is easy to use “experience” as an excuse for the lack of flexibility. For example, <em>enforcing</em> a unified theme within a website does not mean that one cannot <em>specify</em> that theme (or its details such as syntax highlighting) for their websites.</p>
+<p>The second point is purely technical. If you look into the distill source code, it encodes all the syntax highlighting related CSS code (and others) in JavaScript (inst/www/distill/template.v2.js) and renders the styles with JS. This was done in a quite elegant but rather obscure way that makes simple CSS overrides challenging. Plus, CSS-in-JS does not seem to be a good engineering practice to me as it unnecessarily increases the developer’s cognitive load.</p>
+</div>
+<div id="a-solution" class="section level2">
+<h2>A solution</h2>
+<p>Since there is no formal extension mechanism for this part of distill and I’m not interested in deciphering the JS code, here comes a pure R solution. The following function finds and replaces the syntax highlighting CSS in the JS file from the installed distill package. You can choose or modify any custom CSS themes created for Prism.js, which are widely available and easily customizable.</p>
+<script src="https://gist.github.com/nanxstats/ef265d4322168a049daa9154a38afa86.js"></script>
+<p>This is a hot patch, meaning you can rebuild the websites and see the results immediately without restarting the R session or reloading the package. It is also a binary patch, meaning the patched package is prone to updates or reinstalls (the patched JS file is overridden). In case the patch didn’t work, a simple reinstall of distill would restore things to normal. It is far from ideal, and I believe people can build more permanent solutions, such as creating an R package with renderers that allow such “extra customizations.”</p>
+</div>
 
 
 
@@ -243,15 +197,11 @@ smi</code></pre>
                                 <div class="col-12 col-md-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="https://nanx.me/blog/post/self-host-shiny-apps/">« Self-Hosting Shiny Apps with Linode and Cloudflare</a>
+                                            <a href="https://nanx.me/blog/post/disposable-computing-with-callr/">« Disposable Computing with callr</a>
                                         </div>
                                     
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="https://nanx.me/blog/post/distill-syntax-highlight/">Customize Syntax Highlighting for R distill Websites »</a>
-                                        </div>
                                     
                                 </div>
                             </div>
@@ -374,9 +324,6 @@ smi</code></pre>
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>

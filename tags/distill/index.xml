@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>distill on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/distill/</link>
+    <description>Recent content in distill on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 22 May 2020 00:30:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://nanx.me/tags/distill/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Customize Syntax Highlighting for R distill Websites</title>
+      <link>https://nanx.me/blog/post/distill-syntax-highlight/</link>
+      <pubDate>Fri, 22 May 2020 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/distill-syntax-highlight/</guid>
+      <description>You have more options than you think. Photo by @chuttersnap.
+ The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
+ I was a bit surprised and sad that there is no easy way to customize it. As a person with some opinions myself, I entirely respect the design choices, while I do hold some alternative views on two aspects of this.</description>
+    </item>
+    
+  </channel>
+</rss>
