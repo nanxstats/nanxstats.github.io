@@ -375,7 +375,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/books/</guid>
-      <description>应用预测建模 &amp;middot; R数据可视化手册 &amp;middot; ggplot2: 数据分析与图形艺术 &amp;middot; R语言实战 应用预测建模 Applied Predictive Modeling (Chinese Edition) Chinese edition of Applied Predictive Modeling by Max Kuhn and Kjell Johnson. With Yi-Xuan Qiu, we translated Part II: Regression Modelsand the Appendix. Published by China Machine</description>
+      <description>应用预测建模 Applied Predictive Modeling (Chinese Edition) Chinese edition of Applied Predictive Modeling by Max Kuhn and Kjell Johnson. With Yi-Xuan Qiu, we translated Part II: Regression Modelsand the Appendix. Published by China Machine Press in April, 2016. Exercises More Info R 数据可视化手册 R Graphics Cookbook (Chinese Edition) Chinese edition of R Graphics Cookbook by Winston Chang. I translated Chapter</description>
     </item>
     
     <item>
@@ -402,9 +402,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/talks/</guid>
-      <description>Posters
- The Deep Connection between Drugs and Side Effects (ISCB/ECCB 2017) DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr (BioC 2017) ChromaClust: Latent Color Topic Modeling for Images (HGEN 48600/STAT 35450, 2016) liftr: Reproducible Bioinformatics and Statistical Data Analysis with Docker, Rabix, and knitr (BioC 2015)  Talks
- liftr: an R Package for Persistent Reproducible Research (JSM 2018) Persistent Reproducible Reporting with Docker and R (China R Conference 2017) Reproducible Dynamic Report Generation with Docker and R (DockerCon 2017) Cancer Genomics Cloud &amp; R (Boston R/Bioconductor for Genomics Meetup, 2017) High-Dimensional Survival Modeling with Shiny (Shiny Developer Conference 2016) Introduction to Reproducible Research in Bioinformatics (CRI @ UChicago, 2015) liftr &amp; sbgr kickstart (BioC 2015) Supervised Distance Metric Learning: A Retrospective (2013) Web Scraping with R (China R Conference 2013) Linear and Circular Layouts for Network Visualization (2012)  Visualization of CRAN Package Dependency Network (2010)        Posters Sometimes, I make posters.</description>
+      <description>   Posters  The Deep Connection between Drugs and Side Effects (ISCB/ECCB 2017) DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr (BioC 2017) ChromaClust: Latent Color Topic Modeling for Images (HGEN 48600/STAT 35450, Winter 2016) liftr: Reproducible Bioinformatics and Statistical Data Analysis with Docker, Rabix, and knitr (BioC 2015)  Talks  liftr: an R Package for Persistent Reproducible Research (JSM 2018) Persistent Reproducible Reporting with Docker and R (China R Conference, 2017) Reproducible Dynamic Report Generation with Docker and R (DockerCon 2017) Cancer Genomics Cloud &amp;amp; R (Boston R/Bioconductor for Genomics Meetup, 2017) High-Dimensional Survival Modeling with Shiny (Shiny Developer Conference 2016, video) Introduction to Reproducible Research in Bioinformatics (CRI Workshop @ UChicago, 2015) liftr &amp;amp; sbgr kickstart (BioC 2015) Supervised Distance Metric Learning: A Retrospective (2013) Web Scraping with R (China R Conference, 2013) Linear and Circular Layouts for Network Visualization (2012) Visualization of CRAN Package Dependency Network (2010)    </description>
     </item>
     
   </channel>
