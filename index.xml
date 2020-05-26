@@ -393,7 +393,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/software/</guid>
-      <description>R packages My R packages for machine learning, data visualization, and reproducible research. msaenet - Multi-step adaptive estimation for sparse regressions [CRAN] [GitHub] [Paper] ggsci - Scientific journal and sci-fi themed color palettes for ggplot2 [CRAN] [GitHub] liftr - Containerize R Markdown documents [CRAN] [GitHub] [Preprint] logreg - Regularized logistic regressions with computational graphs [GitHub] protr - Protein sequence feature extraction [CRAN] [GitHub] [Paper] Rcpi - Feature extraction for proteins,</description>
+      <description>R packages My R packages for statistical machine learning, data visualization, and computational reproducibility. msaenet - Multi-step adaptive estimation for sparse regressions [CRAN] [GitHub] [Paper] ggsci - Scientific journal and sci-fi themed color palettes for ggplot2 [CRAN] [GitHub] liftr - Containerize R Markdown documents [CRAN] [GitHub] [Preprint] logreg - Regularized logistic regressions with computational graphs [GitHub] protr - Protein sequence feature extraction [CRAN] [GitHub] [Paper] Rcpi - Feature extraction for</description>
     </item>
     
     <item>
