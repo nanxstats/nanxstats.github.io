@@ -393,7 +393,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/software/</guid>
-      <description>R packages I build R packages to improve my skills or my workflow. Statistical machine learning msaenet - Multi-step adaptive estimation for sparse regressions [CRAN] [GitHub] [Paper] stackgbm - Model stacking for gradient boosted tree models built by xgboost, lightgbm, and catboost [GitHub] logreg - Regularized logistic regressions with computational graphs [GitHub] OHPL - Ordered homogeneity pursuit lasso for group variable selection [CRAN] [GitHub] [Paper] RECA - Relevant component analysis</description>
+      <description>R packages I build R packages to improve my skills or my workflow. Statistical machine learning msaenet - Multi-step adaptive estimation for sparse regressions [CRAN] [GitHub] [Paper] stackgbm - Model stacking for gradient boosted tree models built by xgboost, lightgbm, and catboost [GitHub] oneclust - Maximum homogeneity clustering for one-dimensional data [GitHub] logreg - Regularized logistic regressions with computational graphs [GitHub] OHPL - Ordered homogeneity pursuit lasso for group variable</description>
     </item>
     
     <item>
