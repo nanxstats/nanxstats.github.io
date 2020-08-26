@@ -275,18 +275,6 @@ After walking a long road in such a changing world, it is easy to forget why we 
     </item>
     
     <item>
-      <title>Why Everyone Should #DeletePython</title>
-      <link>https://nanx.me/blog/post/why-everyone-should-delete-python/</link>
-      <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/blog/post/why-everyone-should-delete-python/</guid>
-      <description>Disclaimer: this article reflects my personal opinion only. Reader discretion is advised.
-How BMO changes batteries (Adventure Time). Cute but dangerous, just like working with Python 2 and 3 simultaneously.
- OK. There I said it. Everybody should consider #DeletePython.
-Recently, people have raised significant concerns regarding Facebook’s privacy protection practice on their user’s data, with the discussions on Twitter: #DeleteFacebook. This inspired me to say something about another spicy topic: #DeletePython.</description>
-    </item>
-    
-    <item>
       <title>The Return of the Native Font Stack</title>
       <link>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</link>
       <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
@@ -402,7 +390,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/talks/</guid>
-      <description>   Posters  The Deep Connection between Drugs and Side Effects (ISCB/ECCB 2017) DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr (BioC 2017) ChromaClust: Latent Color Topic Modeling for Images (HGEN 48600/STAT 35450, Winter 2016) liftr: Reproducible Bioinformatics and Statistical Data Analysis with Docker, Rabix, and knitr (BioC 2015)  Talks  liftr: an R Package for Persistent Reproducible Research (JSM 2018) Persistent Reproducible Reporting with Docker and R (China R Conference, 2017) Reproducible Dynamic Report Generation with Docker and R (DockerCon 2017) Cancer Genomics Cloud &amp;amp; R (Boston R/Bioconductor for Genomics Meetup, 2017) High-Dimensional Survival Modeling with Shiny (Shiny Developer Conference 2016, video) Introduction to Reproducible Research in Bioinformatics (CRI Workshop @ UChicago, 2015) liftr &amp;amp; sbgr kickstart (BioC 2015) Supervised Distance Metric Learning: A Retrospective (2013) Web Scraping with R (China R Conference, 2013) Linear and Circular Layouts for Network Visualization (2012) Visualization of CRAN Package Dependency Network (2010)    </description>
+      <description>   Posters  The Deep Connection between Drugs and Side Effects (ISCB/ECCB 2017) DockFlow: Bioconductor Workflow Containerization and Orchestration with liftr (BioC 2017) ChromaClust: Latent Color Topic Modeling for Images (HGEN 48600/STAT 35450, Winter 2016) liftr: Reproducible Bioinformatics and Statistical Data Analysis with Docker, Rabix, and knitr (BioC 2015)  Talks  Winners lightning talk for the precisionFDA biomarker discovery challenge (9th Annual Health Informatics &amp;amp; Data Science Virtual Symposium) liftr: an R Package for Persistent Reproducible Research (JSM 2018) Persistent Reproducible Reporting with Docker and R (China R Conference, 2017) Reproducible Dynamic Report Generation with Docker and R (DockerCon 2017) Cancer Genomics Cloud &amp;amp; R (Boston R/Bioconductor for Genomics Meetup, 2017) High-Dimensional Survival Modeling with Shiny (Shiny Developer Conference 2016, video) Introduction to Reproducible Research in Bioinformatics (CRI Workshop @ UChicago, 2015) liftr &amp;amp; sbgr kickstart (BioC 2015) Supervised Distance Metric Learning: A Retrospective (2013) Web Scraping with R (China R Conference, 2013) Linear and Circular Layouts for Network Visualization (2012) Visualization of CRAN Package Dependency Network (2010)    </description>
     </item>
     
   </channel>

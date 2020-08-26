@@ -106,17 +106,5 @@ Photo: Three Palms by Jamie Davies
       <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.</description>
     </item>
     
-    <item>
-      <title>Why Everyone Should #DeletePython</title>
-      <link>https://nanx.me/blog/post/why-everyone-should-delete-python/</link>
-      <pubDate>Sun, 01 Apr 2018 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/blog/post/why-everyone-should-delete-python/</guid>
-      <description>Disclaimer: this article reflects my personal opinion only. Reader discretion is advised.
-How BMO changes batteries (Adventure Time). Cute but dangerous, just like working with Python 2 and 3 simultaneously.
- OK. There I said it. Everybody should consider #DeletePython.
-Recently, people have raised significant concerns regarding Facebook’s privacy protection practice on their user’s data, with the discussions on Twitter: #DeleteFacebook. This inspired me to say something about another spicy topic: #DeletePython.</description>
-    </item>
-    
   </channel>
 </rss>
