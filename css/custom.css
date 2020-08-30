@@ -359,6 +359,14 @@ hr {
     margin-right: 0;
 }
 
+.site-copyright {
+    min-width: 16em;
+}
+
+.site-social {
+    text-align: right;
+}
+
 .site-social ul {
     list-style-type: none;
     padding: 0;
@@ -374,7 +382,7 @@ hr {
     margin: 0 0.3rem 0 0.5rem;
 }
 
-/* Small devices (landscape phones, less than 768px) */
+/* < medium screens */
 
 @media (max-width: 767.98px) {
     html {
@@ -383,5 +391,22 @@ hr {
     .content .meta, .content .markdown h1, .content .markdown h2, .content .markdown h3, .content .markdown h4, .content .markdown h5, .content .markdown h6, .content .markdown p, .content .markdown ul, .content .markdown ol, .content .markdown dl, .content .markdown blockquote {
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+/* < large screens */
+
+@media (max-width: 991.98px) {
+    .header h1.name {
+        padding-left: 0;
+    }
+    .header ul.nav {
+        margin-left: -10px;
+    }
+    .footer hr {
+        margin: 1.3rem 0rem 1.3rem 0rem;
+    }
+    .site-social {
+        text-align: left;
     }
 }
