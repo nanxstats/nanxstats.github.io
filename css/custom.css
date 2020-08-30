@@ -57,12 +57,12 @@ author {
 
 /* landing content */
 
-.lead {
+.landing {
     font-size: 1.44rem;
     line-height: 2.25rem;
 }
 
-.lead p {
+.landing p {
     margin-bottom: 1.5rem;
 }
 
@@ -146,7 +146,7 @@ hr {
     color: #333333;
     font-weight: 600;
     font-size: 2.5rem;
-    padding-left: 8px;
+    padding-left: 10px;
 }
 
 .header ul.nav li a {
@@ -188,6 +188,8 @@ hr {
 
 .content h1, h2, h3, h4, h5, h6 {
     color: #333333;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .content .blog-post-title {
@@ -282,8 +284,8 @@ hr {
 
 .content .markdown blockquote {
     padding: 0.5rem 0.5rem;
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     color: #7a7a7a;
     border-left: 0.25rem solid #e5e5e5;
 }
@@ -300,6 +302,7 @@ hr {
     list-style: none;
     color: #333333;
     font-size: 2rem;
+    font-weight: 600;
     margin-top: 10px;
     margin-bottom: 8px;
 }
