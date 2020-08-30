@@ -313,23 +313,22 @@ hr {
     display: -ms-flexbox;
     display: -ms-flex;
     display: flex;
+    margin-bottom: 1rem;
 }
 
-.content .post-item .meta {
+.content .post-item .meta-date {
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 0.9rem;
     color: #738491;
     line-height: 2rem;
     display: block;
+    min-width: 10rem;
 }
 
-.content .post-item .meta a {
+.content .post-item .meta-title {
     font-size: 1.125rem;
-    font-family: "Source Serif Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.content .post-item .meta a:hover {
-    text-decoration: underline;
+    line-height: 2rem;
+    margin-left: -3rem;
 }
 
 .content .navigation .icon {
