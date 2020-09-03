@@ -192,10 +192,6 @@ hr {
     margin-bottom: 1rem;
 }
 
-.content .blog-post-title {
-    font-size: 2rem;
-}
-
 .content .meta {
     font-size: 1rem;
     color: #738491;
@@ -237,6 +233,18 @@ hr {
 .content .meta, .content .markdown h1, .content .markdown h2, .content .markdown h3, .content .markdown h4, .content .markdown h5, .content .markdown h6, .content .markdown p, .content .markdown ul, .content .markdown ol, .content .markdown dl, .content .markdown blockquote, .gist-file {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+}
+
+/* blog post typography */
+
+.content .blog-post-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+.content .blog-post-content {
+    font-size: 1.3125rem;
+    line-height: 2rem;
 }
 
 /* centered, boxed blog post images */
