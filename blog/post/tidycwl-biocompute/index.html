@@ -174,15 +174,16 @@
 <p>For example, to visualize a CWL <a href="https://cgc.sbgenomics.com/public/apps#admin/sbg-public-data/whole-genome-sequencing-bwa-gatk-4-0/">BWA + GATK 4 whole genome sequencing workflow</a>, a few pipes get the job done:</p>
 <pre class="r"><code>library(&quot;tidycwl&quot;)
 
-flow &lt;- system.file(&quot;cwl/sbg/workflow/gatk4-wgs.json&quot;, package = &quot;tidycwl&quot;) %&gt;% read_cwl_json()
+flow &lt;- system.file(&quot;cwl/sbg/workflow/gatk4-wgs.json&quot;, package = &quot;tidycwl&quot;) %&gt;%
+  read_cwl_json()
 
 get_graph(
   flow %&gt;% parse_inputs(),
   flow %&gt;% parse_outputs(),
   flow %&gt;% parse_steps()
-) %&gt;% visualize_graph()</code></pre>
+) %&gt;% visualize_graph(palette = c(&quot;#E69F00&quot;, &quot;#56B4E9&quot;, &quot;#009E73&quot;))</code></pre>
 <div class="figure">
-<img src="https://nanx.me/image/tidycwl-gatk4-wgs.png" alt="" />
+<img src="https://nanx.me/image/tidycwl-gatk4-wgs-new.png" alt="" />
 <p class="caption">A tidycwl visualization of the GATK 4 WGS workflow. You can see the interactive version <a href="https://sbg.github.io/tidycwl/articles/tidycwl.html#visualize-workflow">here</a>.</p>
 </div>
 <p>The number of workflows written in the Common Workflow Language is <a href="https://github.com/search?l=cwl&amp;p=3&amp;q=workflow&amp;type=Code">growing</a> every day. I believe the workflows themselves are becoming a valuable data type that can be displayed and analyzed by the data science community. My hope for tidycwl is to help people achieve these goals reliably without hassles at the toolchain level.</p>

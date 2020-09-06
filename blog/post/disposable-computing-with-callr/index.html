@@ -220,7 +220,9 @@ convert &lt;- function(fns, idx) {
   callr::r(function(fns, idx) {
     smiles &lt;- c()
     for (i in idx) {
-      Rcpi::convMolFormat(infile = fns[i], outfile = &quot;temp.smi&quot;, from = &quot;sdf&quot;, to = &quot;smiles&quot;)
+      Rcpi::convMolFormat(
+        infile = fns[i], outfile = &quot;temp.smi&quot;, from = &quot;sdf&quot;, to = &quot;smiles&quot;
+      )
       smiles &lt;- c(smiles, Rcpi::readMolFromSmi(smifile = &quot;temp.smi&quot;, type = &quot;text&quot;)[1])
     }
     smiles
