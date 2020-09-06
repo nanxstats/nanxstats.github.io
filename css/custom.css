@@ -286,7 +286,7 @@ hr {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
     border: 1px solid #ddd;
-    border-radius: 6px 6px 6px 6px;
+    border-radius: 6px;
 }
 
 .content .markdown pre code, .content .markdown pre output {
@@ -295,6 +295,7 @@ hr {
     font-size: 0.75rem;
     line-height: 20px;
     background-color: #fff;
+    border-radius: 0;
 }
 
 .content .markdown blockquote {
