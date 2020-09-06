@@ -260,14 +260,17 @@ hr {
 
 .content .markdown code, .content .markdown pre {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 0.9rem;
-    background-color: #f7f7f7;
+    background-color: #fff;
 }
 
 .content .markdown code {
     /* enclosed by single backtick (`) */
-    padding: 0.15em 0.5em;
-    border-radius: 2px;
+    color: #333;
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 1rem;
+    background-color: rgba(27, 31, 35, .05);
+    border-radius: 6px;
 }
 
 .content .markdown pre {
@@ -276,18 +279,22 @@ hr {
     margin-top: 1rem;
     margin-bottom: 2rem;
     padding: 1rem;
-    line-height: 1.5em;
+    line-height: 20px;
     white-space: pre;
     word-break: break-all;
     word-wrap: break-word;
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px 6px 6px 6px;
 }
 
-.content .markdown pre code {
+.content .markdown pre code, .content .markdown pre output {
     /* enclosed by 4 backticks (````) */
     padding: 0;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    line-height: 20px;
+    background-color: #fff;
 }
 
 .content .markdown blockquote {
