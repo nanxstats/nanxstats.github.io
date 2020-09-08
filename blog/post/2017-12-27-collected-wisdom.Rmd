@@ -1,0 +1,58 @@
+---
+title: Collected Wisdom
+author: Nan Xiao
+date: '2017-12-27T03:00:00-05:00'
+slug: collected-wisdom
+categories: []
+tags: []
+---
+
+Here I will post some collected quotes that influenced my opinion on how learning, inference, and science should be.
+
+## Choose problems
+
+One thing Grothendieck said was that one should never try to prove anything that is not almost obvious. This does not mean that one should not be ambitious in choosing things to work on. Rather, "if you don't see that what you are working on is almost obvious, then you are not ready to work on that yet," explained Arthur Ogus of UC Berkeley.
+
+_[Comme Appelé du Néant — As If Summoned from the Void: The Life of Alexandre Grothendieck](http://www.ams.org/notices/200410/fea-grothendieck-part2.pdf)_
+
+## Patterns and solutions
+
+A mathematician, like a painter or a poet, is a maker of patterns. If his patterns are more permanent than theirs, it is because they are made with _ideas_. ... The mathematician's patterns, like the painter's or the poet's must be _beautiful_; the ideas like the colours or the words, must fit together in a harmonious way.
+
+_[A Mathematician's Apology by G. H. Hardy](https://www.math.ualberta.ca/mss/misc/A%20Mathematician's%20Apology.pdf)_
+
+A good solution improves the balances, symmetries, or harmonies within a pattern — it is a qualitative solution — rather than enlarging or complicating some part of a pattern at the expense or in neglect of the rest.
+
+<em>[Solving for Pattern by Wendell Berry](http://www.seedbed.org/wp-content/uploads/2013/09/Berry_Solving_for_Pattern.pdf)</em>
+
+## Theory, method, and applications
+
+A method is more important than a discovery, since the right method will lead to new and even more important discoveries.
+
+_[Lev Landau](https://www.math.columbia.edu/~woit/TheCase.pdf)_
+
+## Complexity
+
+We're against complexity. We believe designing systems is a fight against complexity.
+
+We'll accept to fight the complexity when it's worthwhile but we'll try hard to recognize when a small feature is not worth 1000s of lines of code. Most of the time the best way to fight complexity is by not creating it at all.
+
+_[Redis Manifesto by Salvatore Sanfilippo](http://oldblog.antirez.com/post/redis-manifesto.html)_
+
+## Learn to stop
+
+持而盈之，不如其已；<br>
+揣而锐之，不可长保。<br>
+金玉盈室，莫之能守；<br>
+富贵而骄，自遗其咎。<br>
+功成身退，天之道也。
+
+<em>[老子《道德经》](https://zh.wikipedia.org/wiki/%E8%80%81%E5%AD%90_(%E6%9B%B8))</em>
+
+Rather than filling it overfull, better to stop in time.<br>
+Sharpen it to a point, the edge won't last forever.<br>
+Gold and jade may fill the house, but no one can retain them.<br>
+Boasting of wealth and virtue, brings trouble on oneself.<br>
+Reticence when the job is done, is the Way of heaven.
+
+<em>[Tao Te Ching by Lao Tzu](https://en.wikipedia.org/wiki/Tao_Te_Ching)</em>

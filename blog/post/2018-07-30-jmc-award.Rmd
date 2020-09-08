@@ -1,0 +1,43 @@
+---
+title: John M. Chambers Award, Product Sense, and the Feature Roadmap for liftr
+author: Nan Xiao
+date: '2018-07-30T23:30:00'
+slug: jmc-award
+tags:
+  - liftr
+  - reproducible research
+  - John M Chambers Statistical Software Award
+meta_img: image/jsm-vancouver.jpg
+---
+
+I feel super honored to say that I have received the 2018 [John M. Chambers Statistical Software Award](http://stat-computing.org/awards/jmc/) from the American Statistical Association this year, for my R package [liftr](https://nanx.me/liftr/) on reproducible research. This year's award also has another recipient: Dustin Tran, for his excellent Python library [Edward](http://edwardlib.org/) on probabilistic programming. We just had a great [session of invited talks](https://ww2.amstat.org/meetings/JSM/2018/onlineprogram/ActivityDetails.cfm?SessionID=215482) today at the 2018 Joint Statistical Meetings in Vancouver, Canada. In case you missed it, here is [the slide deck](https://nanx.me/talks/jsm2018-liftr-nanxiao.pdf) for my talk, with the [talk abstract](https://ww2.amstat.org/meetings/JSM/2018/onlineprogram/AbstractDetails.cfm?abstractid=329348) available.
+
+![Photo: Vancouver, BC, Canada.](/image/jsm-vancouver.jpg)
+
+There was a significant moment today. Professor [Dianne Cook](http://www.dicook.org/) asked an (awesome) question during my talk: what was the most difficult part for developing this package? My answer is: there are usually many challenging design choices to make, since there could be 10,000 ways to do something if it was never done before, while finding the best way to do it, is extremely difficult. Therefore, beyond the regular software engineering skill sets, we must learn to have a right amount of **product sense** to build really influential software systems.
+
+As one of the lucky few [who received the award](http://stat-computing.org/awards/jmc/winners.html), and mostly, as an active R developer, I'm delighted to see that more and more people use and value the open source statistical software we wrote. Just by empowering people to do better statistics with better software, we are more likely to make an actual impact in the real world, as a professional community.
+
+OK, so much for the thinking, let's focus on the doing --- my plan for improving liftr. As was mentioned in my talk slides, the feature roadmap for liftr will focus on four major aspects. I guess I should elaborate a bit here to give more details on this roadmap:
+
+1. Automatic inference of R Markdown document **dependencies** and metadata generation.
+
+   In fact, the core of this feature can be already done by the perfect [packrat](https://github.com/rstudio/packrat) package from RStudio. I will check if we could interact with packrat directly or if it is better to adopt and tailor some existing code for our specific purpose. With this set of features developed, the need of manual creation of [liftr metadata](https://nanx.me/liftr/articles/liftr-intro.html#metadata-for-containerization) would be minimized: at least the explicitly invoked packages can be automatically added.
+
+2. New **renderers** for bookdown, blogdown, xaringan, and many others.
+
+   To have a better coverage for the R Markdown ecosystem, I plan to first fix the issues for rendering the [R Markdown-based websites](https://rmarkdown.rstudio.com/lesson-13.html) and other less used formats with liftr.
+
+   Most importantly, in the past one or two years, some fantastic new document types were supported by the R Markdown ecosystem, namely, [bookdown](https://github.com/rstudio/bookdown) for authoring books, [blogdown](https://github.com/rstudio/blogdown) for building websites, and [xaringan](https://github.com/yihui/xaringan) for creating slides. Their renderers can be a bit different, so the extra care is necessary.
+
+   Ultimately, I want to offer a complete set of R Markdown renderers --- only all containerized.
+
+3. Improve the CLI message **interface**.
+
+   The previous CLI messaging part of liftr is pretty old-school. We need to thoroughly revamp that part with the modern CLI builder toolkit in R, aka [cli](https://github.com/r-lib/cli) and [crayon](https://github.com/r-lib/crayon), to provide colorful and elegant console outputs, just like what [pkgdown](https://github.com/r-lib/pkgdown) has.
+
+4. Better Docker **integration**.
+
+   We intentionally limited our development in building an interface between Docker and R, partially because the solutions were too _ad hoc_. The recently matured [reticulate](https://github.com/rstudio/reticulate) package would be the key for creating a high-quality R Docker client that simply calls the Docker Python API. As a result, liftr and R will communicate with Docker in a more managed way. We will also be able to offer extra flexibility for the containerization.
+
+OK, that's pretty much it. I aim to make these changes happen within 2018 if I could effectively make this a top priority in my free time. So stay tuned!

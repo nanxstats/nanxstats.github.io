@@ -1,0 +1,45 @@
+---
+title: 'Taking the Long View'
+author: Nan Xiao
+date: '2018-05-02T05:40:00'
+slug: taking-the-long-view
+categories: []
+tags:
+  - documentary
+---
+
+The world is a fast-changing place. Eleven years ago, when iPhone was
+first launched, people probably didn't anticipate that was the end of Nokia.
+Today, I don't even use the voice calling feature on my phone anymore,
+unless really necessary. This might not be good news for AT&T, and maybe
+I'm an outlier, but this is the truth, this is the world we live.
+
+After walking a long road in such a changing world, it is easy to
+forget why we started at first. For example, we judge things by
+their _values_, instead of their _merits_, and make short-term decisions.
+Sometimes, when consciously realizing that I'm losing directions,
+I would rewatch this documentary about a mathematician:
+_Taking the Long View: The Life of Shiing-shen Chern_.
+Here is a short, digested version.
+
+<div class="py-3 col-10 offset-1">
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/16185312" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+</div>
+
+In the full version of the film, among many good interviews, there was
+an interesting description of Chern's pure, dignified lifestyle of choice:
+
+<blockquote>
+His routine was to get up, have a cup of tea, do his math. Have another
+cup of tea, then do his math. Have lunch, take a nap, have a cup of tea,
+and do his math...
+</blockquote>
+
+This might sound pretty idealistic, but I guess it reflects Chern's love of
+the career he devoted to, his purely spiritual pursue of mathematics ---
+for math itself, and not for anything else.
+
+He peacefully worked with the world, while did not lose himself in the world.
+I think that is an admirable lifetime achievement.

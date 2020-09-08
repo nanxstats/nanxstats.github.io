@@ -1,0 +1,37 @@
+---
+title: 64GB RAM
+author: Nan Xiao
+date: "2019-06-11T22:30:00"
+slug: 64gb-ram
+categories:
+  - machine learning
+tags:
+  - buildapc
+meta_img: image/64gb-ram-installed.jpg
+---
+
+In 2018, I [built a PC](https://nanx.me/blog/post/building-my-first-deep-learning-machine/) to train models with GPU. Besides the GPU, [the machine](https://pcpartpicker.com/user/nanx999/saved/NZwzYJ) has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.
+
+Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models. It's often not worth the time to further "optimize" the memory usage because the algorithms will require some large matrices to be held in memory constantly and the fork-based parallelization will copy them as many times as you increase the number of CPU cores used.
+
+That's when I decided to upgrade the RAM to 64GB --- maxing out the 4 RAM slots on the Z370 motherboard.
+
+One immediate issue for the upgrade is that the CPU air cooler I used was too large and its lowest point blocks one of the RAM slots. If I reinstall the cooler in another direction, it blocks the GPU or something else.
+
+![The air cooler blocks one RAM slot. In fact, this is a common issue.](/image/64gb-air-cooler-blocks-ram-slot.jpg)
+
+My solution is simple --- replace the air cooler with an AIO (all-in-one) liquid CPU cooler. The liquid cooler will only cover the CPU with a small "cap" so it doesn't take much of the space around it.
+
+![The additional 32GB RAM and the AIO liquid cooler.](/image/64gb-ram-cooler.jpg)
+
+The CPU cooler is among the very first things we install to the motherboard. It's a fun process to take almost everything off the motherboard, fit in the new RAM, install the new cooler, and then put everything back. Anyways, installing the liquid cooler itself was much easier than I thought, even easier than the air cooler. No liquid leaked at all.
+
+![New RAM (red) inserted.](/image/64gb-ram-installed.jpg)
+
+Light it up and say hello to the 62.8G RAM.
+
+![htop works.](/image/64gb-finished-test.jpg)
+
+The lesson is, consider the size of the CPU cooler and decide the right type for your build from the beginning.
+
+I think I'm good for today. In the future, if we really need some 128GB of RAM, we have to switch to an X299 (Intel) or X399 (AMD) motherboard which has 8 RAM slots. We probably will also need a super high-end desktop CPU with even more cores (~30 threads?) to work with the memory of that size. Or... simply rent an on-demand instance on the cloud.

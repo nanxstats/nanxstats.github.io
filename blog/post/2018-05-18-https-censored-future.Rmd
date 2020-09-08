@@ -1,0 +1,30 @@
+---
+title: An HTTPS-Censored Future
+author: Nan Xiao
+date: '2018-05-18T15:50:00'
+slug: https-censored-future
+categories: []
+tags:
+  - https
+  - github
+  - censorship
+meta_img: image/the-fall-of-phaeton-peter-rubens.jpg
+---
+
+![_The Fall of Phaeton_ by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.](/image/the-fall-of-phaeton-peter-rubens.jpg)
+
+## The Good News
+
+One of the good news from the past weeks is that [GitHub Pages finally supports HTTPS for custom domains](https://blog.github.com/2018-05-01-github-pages-custom-domains-https/). The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of "backlog" and "roadmap" and implement them [can be a lengthy process](https://github.com/isaacs/github/issues/156).
+
+Before this, regular people like me probably need to add an extra layer which supports HTTPS for your custom domain, such as Cloudflare or Netlify, to host their static content on GitHub/GitHub Pages. Cloudflare is professional at security while Netlify is mastering build and deploy especially if you use the [JAMstack](https://jamstack.org/).
+
+In reality, for various reasons, these solutions are not 100% perfect, regarding security, simplicity, or efficiency. Still, I should say they are worth trying (esp. Netlify) if you want to know [more possibilities](https://yihui.name/en/2017/06/netlify-instead-of-github-pages/) out there, beyond directly serving static websites.
+
+## The Bad News
+
+HTTPS could also be a double-edged sword, in many ways. To establish a secure communication channel, the server and the client have to trust a centralized, third-party certificate authority (CA) who issues the certificates. The first issue is, some of the CAs themselves are not exactly playing by the book: [backdating the certificates](https://blog.mozilla.org/security/2016/10/24/distrusting-new-wosign-and-startcom-certificates/), [misissuing certificates](https://security.googleblog.com/2017/09/chromes-plan-to-distrust-symantec.html), to name a few. An even more pressing issue is, the universal application of HTTPS might bring up the possibility of a new type of censorship. One of the very recent examples _could be_ [Sci-Hub's TLS certificate incident](https://news.ycombinator.com/item?id=16951831). If you connect it to its domain name takedowns [[1](https://news.ycombinator.com/item?id=16823067)], [[2](https://news.ycombinator.com/item?id=11635647)] which happened quite a while ago, it could be quite alarming.
+
+## Reimagine the System
+
+After 30 years when the Internet was first created, it might be the time to rethink some of its design, for example, the CA system and the domain system. Ideally, we want to be both secure and decentralized. At the end of the day, what Pied Piper is building in HBO's _Silicon Valley_ might not sound that crazy anymore.

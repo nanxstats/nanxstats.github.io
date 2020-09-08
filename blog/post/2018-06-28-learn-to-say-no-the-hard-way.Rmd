@@ -1,0 +1,38 @@
+---
+title: Learn to Say No The Hard Way
+author: Nan Xiao
+date: '2018-06-28T16:00:00'
+slug: learn-to-say-no-the-hard-way
+categories: []
+tags: []
+---
+
+![Photo by <a href="https://unsplash.com/photos/6yjAC0-OwkA">Esteban Lopez</a>.](/image/esteban-lopez-6yjAC0-OwkA-unsplash.jpg)
+
+Sometimes I feel guilty that I have not been able to do some real impactful research during my PhD studies. Although, I feel blessed that I have super cool advisors, who have taught me things that are even more important than doing good research. One particular thing I learned, is about saying no -- I was terrible at it, and honestly, still learning more about it.
+
+The world will never lack for ideas, no matter if it is the world of academia or startups. Sadly but frankly, most of the ideas are not good enough. Learning to say no means being able to tell the good from the bad, to focus more on the better things, to become a rational decision maker, and to explore more uncharted territories.
+
+## Being Principled
+
+I have learned some hard lessons for being too shy to say no. Surprisingly, most of these situations can be effectively mitigated by just having some basic principles at first: let's set up the principles, expectations, and bottom lines before anything happens.
+
+Time is the ultimate touchstone for ideas. Great ideas can overcome time, while mediocre ideas annihilate with time. By establishing principles, expectations, and bottom lines, we might be able to evaluate ideas for longer-term impacts and make wiser decisions.
+
+## Being Focused
+
+Learning to say no also means ruthless prioritization. Life is short, and we really should focus on the top priorities. You may ask, what should be on the top of the list? The answer depends, while in my personal opinion they should be the things that _you_ want to do the most. Maybe it sounds like cliché, but the point of saying no is about taking control and focusing on what you want to do, although that does not guarantee you success.
+
+For example, I have written more than 10 R packages in the past few years, but today, when I look back, I cannot say a lot of the code I wrote is that useful. For some projects, sometimes I hope I did not start them in the first place and feel the urge to scratch them from the surface of the earth.
+
+Maybe my bar got higher during the years, but if I have not wasted time on some of them, perhaps I would be able to focus more on the projects I like from the bottom of my heart and made contributions with higher quality. That being said, all this relies on one presumption: you are 100% confident about your taste.
+
+## Being Human
+
+Saying no sometimes means making counter-intuitive decisions, and even fighting human nature. It is natural to feel pain when saying no because we don't live for interests --- we live for feelings, hopes, and possibilities. To say no means to reject these beautiful things, whereas it may be beneficial for all other aspects in the long term.
+
+It might be excruciatingly painful at first to say no to a lot of possibilities. All we need is to learn to disconnect our feelings with our choices as much as possible.
+
+## Being Adventurous
+
+Learning to say no does not mean we cannot be a little adventurous. We have to choose wisely, accept reality, and minimize regrets. Goldman Sachs may sound like a good career choice, but it surely is not for everybody. Although we may say no to a lot of things in the end, it is always good to know what is out there. So, be adventurous!

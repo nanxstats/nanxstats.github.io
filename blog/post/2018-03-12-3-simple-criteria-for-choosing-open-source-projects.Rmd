@@ -1,0 +1,131 @@
+---
+title: 3 Simple Criteria for Choosing Open Source Projects
+author: Nan Xiao
+date: '2018-03-12'
+slug: choose-open-source-projects
+categories: []
+tags:
+  - open source
+  - project management
+meta_img: image/street-art-banksy.jpg
+---
+
+As programming languages and their ecosystems evolve, we have many
+more powerful tools in our toolbox(es) than ten years ago.
+Ideas are also becoming cheaper than ever, especially when
+we want to implement them as open source projects.
+
+![Everything looks like a nail when we have a mighty hammer.](/image/street-art-banksy.jpg)
+
+We may come up with five ideas in the morning every day.
+While at the end of the day, we may have to pick only one to build,
+because we are just humans: limited by the time and resources
+we could have. This also means that our decision is important
+--- it is critical for us to choose the "optimal" project to develop,
+and ditch the unimportant ideas ruthlessly
+("[ruthless prioritization](https://www.inc.com/justin-bariso/sheryl-sandberg-just-gave-some-brilliant-career-ad.html)"
+according to Sheryl Sandberg).
+
+I have been working on more than a dozen open source and non-open source
+software projects that involve statistical computing, machine learning,
+and data visualization for a few years. Most of them (well, overwhelmingly)
+are written in R. The cold hard fact is, unlike [statistical models](https://en.wikipedia.org/wiki/All_models_are_wrong),
+though most of these projects are not wrong or bad, they also do not have
+too much impact either --- they are not that useful, at least not for a
+broad audience.
+
+Therefore, I think it would be good to share some of the lessons I learned
+during the decision of initializing these projects. Some of the following
+ideas might also apply to projects in commercial settings.
+I summarize them as three simple criteria for choosing (open source)
+projects: value, visibility, and velocity.
+
+## 1. Value
+
+"Am I working on the right direction?" This should probably be the first
+question we ask ourselves before starting anything. "Value" is an abstraction
+reflecting if the direction for the project is right enough. The value should
+be the final dominating factor that decides if a project is worth starting at all.
+
+<div class="text-center">
+![Shut up and take my money! (Futurama)](/image/shut-up-and-take-my-money.gif)
+</div>
+
+In real life, sometimes it is challenging for us to give up the
+seemingly (maybe actually) important directions and devote
+ourselves to a single promising direction. Sometimes it is
+purely a gamble. I have two very similar stories on a popular
+topic: deep learning.
+There is a story that the author of Caffe was encouraged to develop
+the software when he was also focusing on his Ph.D. thesis
+([full story in Chinese](https://perma.cc/XWK8-334V)),
+by his advisor. Another story is from one of the core developers of MXNet
+--- Andrew Ng gave the surprisingly similar suggestion on entirely focusing
+on the development of the deep learning framework instead of a matrix
+factorization framework ([full story in Chinese](https://perma.cc/467K-UKJG)),
+back when deep learning was not that cool.
+
+I should say communication and listen to people is crucial in these cases.
+While when making the decision, always listen to THE voice from your heart.
+
+Another standard issue is that sometimes it is difficult to quantify the
+"value" of a project using simple metrics like monetary returns.
+For this scenario, the decision ultimately depends on one's vision.
+Take the long view, think about how things would be (better) done
+differently with your contribution. You will know it when you are
+in the right direction.
+
+## 2. Visibility
+
+Visibility is another concern that we often ignore when starting
+a new project. Visibility does not only mean that your project
+should be known by as many people as possible. Visibility also means
+that sometimes, we should prefer projects with user-visible deliverables.
+For example, a plot with distinctive visual patterns, such as
+the [joyplot/ridgeline plot](http://blog.revolutionanalytics.com/2017/07/joyplots.html),
+or a web/mobile application that users could see and experience in person.
+
+<div class="text-center">
+![Homer backs into things... (The Simpsons)](/image/homer-backs-into-things.gif)
+</div>
+
+In reality, it is not that simple. A project could have both
+user-visible components and backend components. Let's say we want to
+build a new R package for [t-SNE](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding).
+I would personally prefer to
+prioritize the visualization part, for example, create new and better
+interactive plots built with ggplot2/Shiny. After this is done, I would
+then consider a new low-level optimization for the algorithm itself.
+
+By prioritizing the visible projects/components, you will also
+get continuous positive feedbacks on the progress you made,
+which is necessary for creating open source software.
+
+## 3. Velocity
+
+"In the world of Kung Fu, speed defines the winner." (天下武功, 唯快不破.)
+
+This also happens to be very, very accurate for developing a one-person project.
+
+![Jaguar (Rick and Morty)](/image/rick-and-morty-jaguar.png)
+
+Before we start, we should try to make a general plan and sketch a timeline
+for the project. We should focus on the projects which could be done or
+at least the proof-of-concept could be done in a relatively short amount of time.
+
+Just like when people do their homework: we only get two productivity
+peaks around the beginning and the deadline.
+Other than that, nothing is being done. Sadly, for open source
+projects, there is no hard deadline, which means we would probably
+only get one productivity peak at the beginning. If a project does
+not give promising results at the beginning, it could sink into a low
+maintenance mode very quickly. After a while, the developer just
+gives up and never look at it anymore.
+
+Personally, I believe if a project's prototype can be implemented
+within one or two weeks (like for an R package), it can be well
+finished and delivered to the public in the end, especially if
+you are the only developer of the project. Just like the
+"minimal viable product" philosophy suggested, we need to
+sprint to the first deliverable version as quickly as possible,
+then improve it iteratively.

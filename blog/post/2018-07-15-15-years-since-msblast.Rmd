@@ -1,0 +1,27 @@
+---
+title: It Has Been 15 Years Since MSBlast
+author: Nan Xiao
+date: '2018-07-15T00:20:00'
+slug: 15-years-since-msblast
+categories: []
+tags: []
+meta_img: image/msblast.png
+---
+
+It was August 2003, when I was in the 8th grade, enjoying the summer break.
+
+One day, my dad came home from work. He tried to call me during the day asking for help on some computer issues. Unfortunately, he couldn't reach me because I was using the dial-up Internet with a good old 56k modem, so the landline was busy the whole time. (You'll know what I mean if you're old enough.)
+
+Obviously, that was not a very productive day for a lot of people, because they were not able to use their computers at all. The machines just kept falling into an indefinite loop of rebooting, with an ambiguous error message like this (conceptual art):
+
+!["The Remote Procedure Call (RPC) service terminated unexpectedly."](/image/msblast.png)
+
+Even if they formatted the hard drive and did a clean installation of the OS entirely, the rebooting issue would still exist. It was not too late until people realized this was some virus that can repeatedly infect unpatched machines through the Internet and Intranets. Luckily, I happened to patch my machine about a month ago, therefore, I wasn't affected.
+
+The worm was later known as the Blaster (MSBlast), which exploited a stack buffer overflow issue (MS03-026). Retrospectively, it was probably one of the most infamously influential computer programs ever written. In the following years, Microsoft made improvements such as DEP and ASLR to make it difficult to exploit such vulnerabilities. The world seems to become a safer place since then, and I've never experienced any relevant events as shocking to me like that.
+
+Finally, three take-home messages from the story:
+
+1. Always keep your phone reachable.
+1. Always upgrade software regularly.
+2. Never trust user input in your programs, and always overdo sanity checks.

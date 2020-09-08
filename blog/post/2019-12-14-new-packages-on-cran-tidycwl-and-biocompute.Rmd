@@ -1,0 +1,46 @@
+---
+title: "New Packages on CRAN: tidycwl and biocompute"
+author: Nan Xiao
+date: "2019-12-14T00:30:00"
+slug: tidycwl-biocompute
+categories: []
+tags:
+  - R
+  - Common Workflow Language
+  - BioCompute Objects
+meta_img: image/tidycwl-gatk4-wgs.png
+description: "An overview of the new R packages: tidycwl and biocompute"
+---
+
+On the journey of achieving reproducibility in genomic data analysis projects, one often faces challenges with documenting workflows and computations systematically. To provide one way for tackling these problems, we (me and my colleagues) have recently released two new R packages --- [tidycwl](https://sbg.github.io/tidycwl/) and [biocompute](https://sbg.github.io/biocompute/) --- to CRAN.
+
+## tidycwl
+
+As the name implies, the package [tidycwl](https://sbg.github.io/tidycwl/) aims at offering a native toolchain for R to analyze tools and workflows written in the [Common Workflow Language](https://www.commonwl.org/) (CWL), while following the tidyverse design principles. What it does is not complicated at all: reading the raw CWL workflows encoded in JSON or YAML, parsing the workflow elements into data frames, lists, or directed graph representations, and visualizing the workflows.
+
+For example, to visualize a CWL [BWA + GATK 4 whole genome sequencing workflow](https://cgc.sbgenomics.com/public/apps#admin/sbg-public-data/whole-genome-sequencing-bwa-gatk-4-0/), a few pipes get the job done:
+
+```{r, eval=FALSE}
+library("tidycwl")
+
+flow <- system.file("cwl/sbg/workflow/gatk4-wgs.json", package = "tidycwl") %>%
+  read_cwl_json()
+
+get_graph(
+  flow %>% parse_inputs(),
+  flow %>% parse_outputs(),
+  flow %>% parse_steps()
+) %>% visualize_graph(palette = c("#E69F00", "#56B4E9", "#009E73"))
+```
+
+![A tidycwl visualization of the GATK 4 WGS workflow. You can see the interactive version [here](https://sbg.github.io/tidycwl/articles/tidycwl.html#visualize-workflow).](/image/tidycwl-gatk4-wgs-new.png)
+
+The number of workflows written in the Common Workflow Language is [growing](https://github.com/search?l=cwl&p=3&q=workflow&type=Code) every day. I believe the workflows themselves are becoming a valuable data type that can be displayed and analyzed by the data science community. My hope for tidycwl is to help people achieve these goals reliably without hassles at the toolchain level.
+
+## biocompute
+
+The [BioCompute Object](https://en.wikipedia.org/wiki/BioCompute_Object) (BCO) is an emerging open standard for documenting and sharing next-generation sequencing (NGS) data analyses. The standard has the potential to lower the burden for scientists to share, communicate, and review such computations across organizations, thus improve the speed of discovery, promote computational reproducibility, and in general, encourage open science. For more details about the BioCompute project, you can check out the excellent introductory [blog post](https://www.sevenbridges.com/biocompute-object/) written by my colleagues.
+
+The R package [biocompute](https://sbg.github.io/biocompute/) offers an implementation of the BioCompute Object specification. With the package, users can compose, validate, convert, and export BioCompute Objects in R with a functional API.
+
+Thanks to the awesome infrastructure built by the R community in this decade, we can accomplish interoperability-related missions such as JSON schema validation or exporting to Word documents without reinventing many wheels. Let's keep making it better.

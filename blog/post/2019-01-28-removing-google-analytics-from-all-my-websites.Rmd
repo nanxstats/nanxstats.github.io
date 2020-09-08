@@ -1,0 +1,45 @@
+---
+title: Removing Google Analytics from All My Websites
+author: Nan Xiao
+date: "2019-01-28T15:30:00"
+slug: remove-google-analytics
+categories: []
+tags:
+  - Google Analytics
+  - web tracking
+  - targeted advertising
+  - online privacy
+meta_img: "image/women-look-at-security-cameras-matthew-henry.jpg"
+description: "After removing Google Analytics from all my websites, I never felt better."
+---
+
+![Like cameras, online trackers are everywhere. Photo by [Matthew Henry](https://unsplash.com/photos/fPxOowbR6ls).](/image/women-look-at-security-cameras-matthew-henry.jpg)
+
+## What happened
+
+After using it (or being used) for about ten years, today I consciously removed the Google Analytics tracking code from all the personal websites I control, including this blogdown (Hugo) site, the pkgdown sites for my R packages, and my Shiny apps. I never felt better, as from now on, people are browsing my websites tracking-free.
+
+## Why I did it
+
+I think the blog posts by the pioneers who [realized](https://www.jessesquires.com/blog/removing-google-analytics-too/) this [before](https://tristandenyer.com/why-i-removed-google-analytics-from-my-website/) explained the economic reasons pretty well. If we look at the bigger picture, we see more than the "free product" that meets the eye: Google Analytics is not helping the content creators, while it poaches the content viewer's private experience for its own purpose and greed of data. Maybe we cannot stop the fast-evolving [surveillance capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism), but I decided to slow it down, starting from myself, today.
+
+## What it really means
+
+Besides the economics, let's take it from the technical perspective to see what deleting Google Analytics from our websites means. I have no idea how exactly their targeted advertising system works, but we can probably make an educated guess. Conceptually, a hypothetical system for CTR estimation could work like this:
+
+**Data**. There will be three matrices involved. The first matrix $A_{ij}$ stores each user $i$'s click records for page (or ad) $j$. Matrix $B_{ip}$ stores the each user $i$'s profile features $p$ (e.g. demographics, device, browser). Matrix $C_{jq}$ stores each page (or ad) $j$ and the features $q$ derived from its contents or metadata. Google Analytics allows Google to collect highly detailed user behavior data for matrix $A$ and a good part of the user profiling data in matrix $B$ from multiple dimensions, across more than ten million websites which embedded the JavaScript code snippet.
+
+**Model**. You can achieve recommendation by learning the user preference solely from matrix $A$, but usually, all the information from the three matrices will be used to make it a hybrid recommender system. Mostly, we're doing a regression here for predicting the likelihood if a user will click an ad. You can use a linear model, a deep neural network, a matrix factorization model, or combinations of them. This is slightly off-topic so let's stop it there.
+
+For these models to play well, the user data in $A$ and $B$ is critical, but also, sensitive and private. If not appropriately used or carelessly shared with third-parties, it can cause serious privacy issues. By removing Google Analytics, we only deleted **a small part** of the data from (maybe) one feature in matrix $A$ --- users who visit the websites directly will not be tracked, but users from Google's search results or referral websites which has Google Analytics embedded are still tracked for the outbound clicks. Now we know that the camera photo above is not an exaggeration at all.
+
+## What's next
+
+There is probably no good way to substantially reduce the amount of online activity data that the data oligarchs track from us unless we stop using their products. For example, the [#DeleteFacebook](https://twitter.com/brianacton/status/976231995846963201) movement on the social network and instant messaging products. To resist unnecessary web tracking, we can do one or more of these things:
+
+- Switch to a privacy-aware search engine, for example, [DuckDuckGo](https://duckduckgo.com/).
+- Switch to a privacy-aware web browser, such as [Brave](https://brave.com/), since somebody might [use browsing data to tailor ads](https://news.ycombinator.com/item?id=12112352).
+- Install a decent wide-spectrum blocker. Yes, I'm talking about [uBlock Origin](https://github.com/gorhill/uBlock).
+- Use the "incognito mode" when appropriate, or as much as possible. It might not be as effective as you thought, though, partially due to the existence of "supercookies" or such unethical digital fingerprinting methods.
+
+"Everything that has a beginning has an end" --- the end for privacy-invading web tracking is long due. As the young progressive generation, we can start small, but we must think big, and start fighting back. ✊

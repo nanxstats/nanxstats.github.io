@@ -1,0 +1,26 @@
+---
+title: General-Purpose Programming with R (as of 2018)
+author: Nan Xiao
+date: "2018-10-25T23:30:00"
+slug: general-purpose-programming-with-r
+categories: []
+tags:
+  - R
+---
+
+!["They'll take your soul if you let them --- don't let them." (Carole King, You've Got a Friend) <br> Photo by <a href="https://unsplash.com/photos/MohB4LCIPyM">Jelleke Vanooteghem</a>.](/image/jelleke-vanooteghem-MohB4LCIPyM-unsplash.jpg)
+
+<p></p>
+
+I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics ([pun](https://simplystatistics.org/) intended), but everything related to data, or everything that can be done programmatically.
+
+Recently, I found [a fascinating thread posted in the r/rstats subreddit](https://www.reddit.com/r/rstats/comments/9hviwd/am_i_crazy_for_loving_r_as_a_generalpurpose/). The discussion summarized some of the excellent designs deeply embedded in R. In the comments section, there are also some good debates of R's strengths/weaknesses for a few everyday general-purpose programming tasks, such as web scraping. Apparently, some people love to use R for general-purpose programming, just like I do.
+
+Some additional thoughts on the two notable aspects discussed in the thread:
+
+- **Functional Programming**. I believe everyone should read the [Functional Programming chapter](http://adv-r.had.co.nz/Functional-programming.html) in Hadley's _Advanced R_ book to have a better understanding of this awesome aspect of R. From my perspective, R has just the right amount of FP support. Although Haskell is super good (with a cool motto: _avoid "success at all costs"_), it took a rather extreme approach. As a result, you have to introduce some unintuitive concepts to compensate for the fact that not everything in the world is best abstracted under that paradigm. With R, in most cases, you can be both elegant and comfortable.
+- **Package Management**. R has one single package management system, and _the_ package repository: CRAN. CRAN has a decently high bar for package acceptance. All packages there should conceptually work even if the latest stable version of R is rolled out every few months. Beyond this, active open source communities are autonomously formed in recent years to collectively build high-quality "suites" of contributed packages, such as the [tidyverse](https://www.tidyverse.org/) and [rOpenSci](https://ropensci.org/). I do want to emphasize this because it's obviously not a trivial thing to have in practice, for example, the-language-which-must-not-be-named.
+
+No language is perfect. We should see that every language makes fundamental mistakes in their designs. R happens to be correct in a lot of critical design choices, and I happen to love it for general-purpose (+statistical) programming. It's all probabilistic.
+
+_Conflict of interest_: I donated $25 to the [R Foundation](https://www.r-project.org/foundation/) in 2017, to support the best language for statistical computing on the planet. You can also [do it here](https://www.r-project.org/foundation/donations.html).

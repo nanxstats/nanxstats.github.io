@@ -1,0 +1,23 @@
+---
+title: My OCD for Inbox Zero
+author: Nan Xiao
+date: '2018-08-15T21:00:00'
+slug: my-ocd-for-inbox-zero
+categories: []
+tags: []
+meta_img: image/fraser-valley.jpg
+---
+
+Inbox zero means having zero unread emails in your email's inbox. I have an OCD for it.
+
+![Photo: Fraser Valley, British Columbia, Canada.](/image/fraser-valley.jpg)
+
+Many years ago, like many people, I used to "mark as unread" some emails I received, when I cannot decide to reply or not reply immediately for whatever reasons.
+
+Obviously, pretending things as unread is not an effective strategy to get them done. I didn't reply to the things I want to say yes quickly enough, which could make people think that I'm not interested. Then again, I also didn't [say no as early as possible](https://nanx.me/blog/post/learn-to-say-no-the-hard-way/) to the uninteresting stuff, so people may think that I'm a jerk. As a results-oriented person, the "unread" emails created so much psychological burden for me -- I have to think about clearing that unread number all the time, while it just kept rising most of the time.
+
+One day, I got my epiphany. I suddenly realized that, in terms of creating values for the world, >99% of the information we exchange is useless, or, per Jerzy Neyman, [worse than useless](https://andrewgelman.com/2014/05/23/neyman-really-say-fishers-work-easy-get-right-answer-never-define-question-fisher-really-describe-neyman-theorem-proving-poseur-wouldnt-re/). It means, statistically speaking, we don't need to be overly serious about these communications, although a super small number of them might be the life changer when we look back someday. Time persists, and almost everything else is insignificant.
+
+After unblocking my mind, I wrapped up all the unfinished business in all my unread emails and achieved inbox zero in a day. Now, when I receive a communication in any form, I will make a fast decision with three possible outcomes: 1) reply yes with an action plan, mark as read; 2) say no directly but politely to set people free, mark as read; 3) not reply and not think about it, mark as read. I don't like seeing any unread emails in my inboxes at all.
+
+I have been keeping all my inboxes clean for a long time, and probably also applied this OCD to other venues: Slack, IMs, GitHub, and so on. I should say, it's really working out.

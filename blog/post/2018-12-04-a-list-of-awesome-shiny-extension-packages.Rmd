@@ -1,0 +1,26 @@
+---
+title: A List of Awesome Shiny Extension Packages
+author: Nan Xiao
+date: "2018-12-04T14:30:00"
+slug: awesome-shiny-extensions
+categories: []
+tags:
+  - shiny
+  - R
+meta_img: "image/awesome-shiny-extensions.jpg"
+description: "A list of awesome Shiny extension packages."
+---
+
+!["Everything looks official with tiny leaves around it." Original photo by [Kelli Tungay](https://unsplash.com/photos/2LJ4rqK2qfU).](/image/awesome-shiny-extensions.jpg)
+
+> TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: [nanxstats/awesome-shiny-extensions](https://github.com/nanxstats/awesome-shiny-extensions). Pull requests welcomed!
+
+Five years ago, I wrote my first research software paper, and it eventually got published in _Bioinformatics_. If you know me, it's probably not surprising that the paper was about an R package and a companion Shiny app. So when the topic comes to Shiny, my observations are probably biased --- but, as an early adopter of the web framework, I really never cease to be amazed by it. I enjoyed the excitement of creation from every single app I built, no matter if they are created for research purposes, or for operational data science needs under the enterprise context, or just for fun.
+
+We have to say that most of the web development today happens under some boilerplate and reusable components, despite the language or framework. With this in mind, I love two things that make Shiny apps unique and lightning fast to build: 1. the reactive programming paradigm which avoids a lot of plumbing work; 2. all the user-contributed widgets (mostly based on htmlwidgets) which avoids reinventing the wheel for 95% of the cases. In short, the solid fundamental design and the strong ecosystem ensure that Shiny is going to be something both elegant and useful.
+
+Of course, the Shiny ecosystem evolved a lot (for the better) these years, and there is so many stuff I don't even know exist or possible before. Therefore, I decided to start a repo on GitHub to collect and organize the awesome R packages that offer reusable, extended UI or server components for Shiny: [nanxstats/awesome-shiny-extensions](https://github.com/nanxstats/awesome-shiny-extensions). In case it helps someone save time to find something or gain knowledge about what's out there, that would be all I wished for.
+
+Currently, the list contains about 130 R packages, all classified into a specific category, such as app theming, UI components, backend components, visualization components, app deployment, and so on. Since things are evolving fast, please feel free to send pull requests to help add new packages or fix broken links.
+
+Keep coding, keep shining.

@@ -1,0 +1,100 @@
+---
+title: Disposable Computing with callr
+author: Nan Xiao
+date: "2020-04-11T17:30:00"
+slug: disposable-computing-with-callr
+categories: []
+tags:
+  - R
+  - callr
+  - Rcpi
+meta_img: image/disposable-gloves-thumb-up-uniqueton.jpg
+description: Use callr to work around manual connection management.
+---
+
+![Photo by <a href="https://unsplash.com/photos/oemojNQYYe4">@uniqueton</a>.](/image/disposable-gloves-thumb-up-uniqueton.jpg)
+
+Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when [managing (file) connections](https://stat.ethz.ch/R-manual/R-devel/library/base/html/connections.html). Boris posted such an [issue](https://github.com/nanxstats/Rcpi/issues/9) when using my R package [Rcpi](https://bioconductor.org/packages/Rcpi/). I rephrase it here as:
+
+```r
+library("Rcpi")
+
+dir.create("test")
+for (i in 1:2000) {
+  file.copy(
+    system.file("compseq/DB00530.sdf", package = "Rcpi"),
+    paste0("test/", i, ".sdf")
+  )
+}
+
+fns <- list.files("test/", pattern = ".sdf$", full.names = TRUE)
+
+for (i in 1:length(fns)) {
+  cat("\014", i, "\n")
+  Rcpi::convMolFormat(infile = fns[i], outfile = "temp.smi", from = "sdf", to = "smiles")
+  Rcpi::readMolFromSmi(smifile = "temp.smi", type = "text")[1]
+}
+```
+
+The purpose of the code is simple: convert a collection of files existing in the SDF format to SMILES format (both are common chemical file formats), then read the SMILES format files as character strings sequentially. Nothing surprising.
+
+However, after looping over about 500 input files, R yields an error saying:
+
+```text
+Error in file(file, "r") : cannot open the connection
+In addition: Warning message:
+In file(file, "r") : cannot open file 'temp.smi': Too many open files
+```
+
+This is because there are certain limits on the number of connections one can open in R. See Matthew Shotwell's [R Connection Internals](https://biostatmatt.com/R/R-conn-ints.pdf) for technical details. If we look closely, the connection-related code is:
+
+```r
+for (i in input_files) {
+  read_compute_write(input = i, output = "output_file")
+  read_file("output_file")
+  ...
+}
+```
+
+where the `read_compute_write()` function is a wrapper of a function from another package that uses C++ to open low-level connections to read and write files, and `read_file()` uses R's native `scan()` to read files. More often than not, there could be additional operations that manipulate connections in the for loop.
+
+In such situations, I usually do not want to spend a few hours fighting with the "proper" solution --- manual connection life cycle management. This is not so dissimilar with garbage collection (GC) in memory management --- although you want to enjoy the manual control once a while, sometimes you wish it to be automatic.
+
+What could be an alternative solution? Since the core issue here is that one R process cannot open many connections at once, what if we open a below-the-limit number of connections in separate child R processes, do the computation, and collect the results back to the parent process? Yes, this is easily doable via the [callr](https://cran.r-project.org/package=callr) package if you haven't heard of it:
+
+```r
+library("Rcpi")
+library("callr")
+
+dir.create("test")
+for (i in 1:2000) {
+  file.copy(
+    system.file("compseq/DB00530.sdf", package = "Rcpi"),
+    paste0("test/", i, ".sdf")
+  )
+}
+
+fns <- list.files("test/", pattern = ".sdf$", full.names = TRUE)
+
+convert <- function(fns, idx) {
+  callr::r(function(fns, idx) {
+    smiles <- c()
+    for (i in idx) {
+      Rcpi::convMolFormat(
+        infile = fns[i], outfile = "temp.smi", from = "sdf", to = "smiles"
+      )
+      smiles <- c(smiles, Rcpi::readMolFromSmi(smifile = "temp.smi", type = "text")[1])
+    }
+    smiles
+  }, args = list(fns, idx))
+}
+
+
+k <- length(fns)
+chunks <- split(1:k, ceiling(seq_along(1:k) / 400))
+smi <- rep(NA, k)
+for (i in 1:length(chunks)) smi[chunks[[i]]] <- convert(fns, chunks[[i]])
+smi
+```
+
+The code can still be further vectorized, but you got the idea. Note that extending such a workaround to other use cases may create an antipattern. Although I do not think writing "disposable code" for "disposable computing" is a problem if it gets the work done, I do not recommend such approaches either unless you are in a hurry.

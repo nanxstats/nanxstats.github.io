@@ -1,0 +1,22 @@
+---
+title: Nothing Without Love
+author: Nan Xiao
+date: '2018-02-15T21:00:00-05:00'
+slug: nothing-without-love
+categories: []
+tags:
+  - photo
+meta_img: image/wind-turbine-north-kingstown.jpg
+---
+
+Nate Ruess's songs have magnificent voices and amazing arrangements,
+while often unbelievably sad at their cores, such as Grammy's favourite
+"We Are Young". This one, on the other hand, is an exception.
+
+> Send up a signal, that everything's fine
+>
+> Come on slide up right here by my side
+>
+> You know that I, I want to rest in your light
+
+![Photo: Wind turbine near North Kingstown, RI, from the morning train to NYC.](/image/wind-turbine-north-kingstown.jpg)

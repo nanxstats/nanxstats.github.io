@@ -1,0 +1,77 @@
+---
+title: "Building Regularized Logistic Regressions from Scratch with Computational Graphs in R"
+author: Nan Xiao
+date: "2019-10-06T00:30:00"
+slug: cgraph-logreg
+categories:
+  - machine learning
+tags:
+  - computational graph
+  - automatic differentiation
+  - logistic regression
+  - linear models
+  - regularization
+  - cgraph
+  - R
+meta_img: image/downhill-into-the-forest-joakim-honkasalo.jpg
+---
+
+The R package built for this post is available on GitHub: [nanxstats/logreg](https://github.com/nanxstats/logreg).
+
+**Update 2020-02-11**: there has been some major API [updates and improvements](https://github.com/triepels/cgraph/blob/master/NEWS.md) since cgraph 5.0.0. The logreg package is now [updated](https://github.com/nanxstats/logreg/pull/1) to reflect these changes. The code example in this post is updated, too.
+
+As one of the cornerstones for deep learning frameworks, automatic differentiation was briefly [mentioned](https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/) in our previous post. Today let's focus on the other important piece: the computational graph. I'm only able to write something about this, thanks to [Ron Triepels](https://github.com/triepels/), the author of the recently published R package [cgraph](https://github.com/triepels/cgraph). This package offers a decent, minimalist implementation for computational graphs and automatic differentiation in native C and R.
+
+![Downhill into the forest. Photo by [Joakim Honkasalo](https://unsplash.com/photos/BT9e-1olEkY).](/image/downhill-into-the-forest-joakim-honkasalo.jpg)
+
+The computational graph is a useful abstraction/framework for describing and executing computational workflows for data. In many cases, the workflows/pipelines are composed of very reusable components, such as all the types of layers in neural networks. Besides machine learning applications, another interesting example is the [Common Workflow Language (CWL)](https://www.commonwl.org/). CWL is widely used for describing bioinformatics workflows. The components in the workflow described in YAML or JSON formats are parsed to create a computational graph to run through later.
+
+To me, one of the benefits of using computational graphs is that you will notice the issues immediately if there is an error compiling the graph before even running things, say, mistakes were made when describing the workflow. This may help enforce and improve code quality and reproducibility. Plus, The modularized computational components makes it particularly easy to prototype new machine learning algorithms, just like legos. On the performance side, since the data and computation flow is predictable, many aggressive optimizations are possible, for example, on parallelization.
+
+To experience how powerful computational graph + automatic differentiation is for solving classical machine learning problems, I took a few hours to use cgraph and built an R package [logreg](https://github.com/nanxstats/logreg). I implemented three methods here:
+
+- Logistic regression
+- Logistic regression with the ridge ($\ell_2$) penalty
+- Logistic regression with the [seamless-$\ell_0$ (SELO) penalty](http://www3.stat.sinica.edu.tw/statistica/oldpdf/A23n220.pdf), a differentiable approximation of the $\ell_0$ penalty.
+
+Although these methods could be implemented very differently before, the core implementation with cgraph is surprisingly similar: pretty much just replacing the loss/cost functions, as is shown below (SELO). Check out this [vignette](https://nanx.me/logreg/articles/logreg.html) for test examples, and please feel free to leave me a message if you find any bugs in the code.
+
+```{r, eval=FALSE}
+# initialize graph
+graph <- cg_graph(eager = FALSE)
+
+# initialize input (X), target (y)
+input <- cg_constant(x, "input")
+target <- cg_constant(y, "target")
+
+# intialize parameters (beta, alpha)
+parms <- list(
+  beta = cg_parameter(initialize_glorot_normal(ncol(x), 1), "beta"),
+  alpha = cg_parameter(initialize_constant(0), "alpha")
+)
+
+# define the model (yhat = beta X + alpha)
+output <- cg_sigmoid(cg_linear(input, parms$beta, parms$alpha), "output")
+
+# define the selo loss (y, yhat, beta)
+loss <- cg_add(
+  cg_mean(crossentropy(target, output)),
+  cg_mean(cg_ln((cg_abs(parms$beta) / (cg_abs(parms$beta) + tau)) + 1)) / log(2),
+  "loss"
+)
+
+# track errors
+error <- rep(0, n_epochs)
+
+# optimize parameters via sgd
+for (i in 1:n_epochs) {
+  cg_graph_forward(graph, loss)
+  cg_graph_backward(graph, loss)
+  for (parm in parms) parm$value <- parm$value - learning_rate * parm$grad
+  error[i] <- loss$value
+}
+```
+
+On the other hand, treating code as graph data also comes with some side effects and limitations. Lazy evaluation on a static computational graph makes it almost impossible to do real-time debugging and writing loops/conditionals, as these things cannot be naturally represented in a static graph. As I'm writing this, TensorFlow 2.0 is released and switched to eager execution by default, which employs a tape recorder + dynamic computational graph, following the PyTorch approach. Automatic differentiation also requires the model to be designed as differentiable, or differentiable with approximations, which is unfortunate for tree-based models.
+
+In the end, I feel using computational graphs is still overwhelmingly beneficial. With more low-level APIs to access computational graphs in R, we will be able to essentially build the "TensorFlow" or "Keras" for our domains of interest in R. There are so many exciting research topics waiting there for our exploration, after all.

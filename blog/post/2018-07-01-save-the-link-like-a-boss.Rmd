@@ -1,0 +1,34 @@
+---
+title: Save the Link Like a Boss
+author: Nan Xiao
+date: '2018-07-01T17:00:00'
+slug: save-the-link-like-a-boss
+categories: []
+tags: []
+meta_img: image/middle-of-nowhere-david-kovalenko.jpg
+---
+
+![Photo: [Middle of Nowhere](https://unsplash.com/photos/G85VuTpw6jg) by David Kovalenko](/image/middle-of-nowhere-david-kovalenko.jpg)
+
+> Anything posted on the Internet, stays there forever.
+
+I'm a firm believer of such assertions. The reality is, however, even if something is published on the Internet, due to technical reasons, it still probably won't live there forever. The situation becomes more like
+
+> If something isn't on the web, it doesn't exist at all.
+
+Yes, as time goes, content on the Internet fades away. This is particularly correlated to the fact that the core feature of the web, hyperlinks --- probably one of the greatest human inventions ever --- are super prone to changes. As we know, people like to adjust URL schemes and move things around. Information got lost when websites are renovated or closed. Eventually, many things could happen to the links that used to work.
+
+## The Problem
+
+It might be just ok if the link only contains some unimportant content, while it is not ideal if the link contains valuable information and people already cited them. According to [an article](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/) on _Harvard Law Review_, about 50% of the links cited in the U.S. Supreme Court opinions no longer have the cited material and suffer from such "link rot" issues. Even for this blog, I just realized that a few linked pages I used to prove my points three months ago are not accessible anymore.
+
+## The Solution
+
+So, in some cases, it's time for us to save the link, like a boss!
+
+Vintage services such as [archive.org](https://archive.org/) which scrapes the Internet generically isn't too helpful for our use case. What we need is a service that can preserve the content of specific pages in response to explicit requests. To date, two relevant on-demand archiving services can satisfy our needs. They both have some unique quirks and perks:
+
+- [perma.cc](https://perma.cc/). Saves up to ten pages per month with one personal account. Search support for your own archived links. The service is relatively available and stable: built by the Library Innovation Lab at Harvard University and backed by many libraries.
+- [archive.is](https://archive.is/). Unlimited archives without registration. All archived links are publicly searchable. Offers a cool page navigation feature: you can select a part of the archived page, copy the anchored URL, and the selected part will be highlighted when opened via that URL. [Being censored](https://en.wikipedia.org/wiki/Archive.is) in part of the world so it might not be that stable.
+
+Of course, using these archiving services also associates one risk: if they close down someday, people could lose all the archived pages. So, a predictable, stable, maybe decentralized, or even commercialized service is probably needed in the future.
