@@ -6,11 +6,7 @@
     <description>Recent content in blogdown on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 Nov 2018 23:30:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://nanx.me/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 10 Nov 2018 23:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Renga: A Clean Bootstrap 4 Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-renga-theme/</link>
