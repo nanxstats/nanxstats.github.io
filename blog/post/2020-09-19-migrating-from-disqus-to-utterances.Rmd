@@ -1,0 +1,37 @@
+---
+title: Migrating from Disqus to Utterances
+author: "Nan Xiao"
+date: "2020-09-19T23:00:00"
+slug: migrating-from-disqus-to-utterances
+categories: []
+tags:
+  - Hugo
+  - blogdown
+  - web tracking
+  - targeted advertising
+  - online privacy
+meta_img: image/safari-14-intelligent-tracking-prevention.png
+description: "Migrating the comment system of my Hugo/blogdown site from Disqus to Utterances."
+---
+
+Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit's Intelligent Tracking Prevention (ITP). Following this progress and [removing Google Analytics](https://nanx.me/blog/post/remove-google-analytics/) last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.
+
+![Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.](/image/safari-14-intelligent-tracking-prevention.png)
+
+The process is much easier than I thought. I would recommend this to anyone who prioritizes the online privacy of the readers. The following steps should generally work for most Hugo/blogdown sites.
+
+**Set up utterances**
+
+1. Check out the [utterances docs](https://utteranc.es/) to set up a GitHub repo with the utterances app installed for storing the comments in issues. I created a [dedicated new repo](https://github.com/nanxstats/blog-comments) for this.
+2. Add the utterances partial to the theme. It includes adding a partial and calling it in `single.html`. Here is the [changeset for my current theme](https://github.com/nanxstats/hugo-nanx2020/commit/60e0c939775a7a85ff391c83d88512ddd19cd58f). Remove Disqus related variables such as `disqusShortname` in your site configuration file (e.g., `config.toml`). Set the utterances repo value if you have placed it as a `.Site.Params` variable, as I did in the partial template.
+3. Recompile the site to see if the new system works. If it does, a GitHub issue style comment box should show up under every post.
+
+**Migrate comment data from Disqus**
+
+1. Export the previous comments data via `Admin` > `Community` > `Export`. An XML file tarball will be sent via email.
+2. Import comments into the new system. I did this by manually posting the original comments as there were only around 30 comments. I find the [R script by Maëlle Salmon](https://masalmon.eu/2019/10/02/disqus/) and the [formatting provided by Juergen Gutsch](https://github.com/utterance/utterances/issues/7) useful. By doing this, we can also verify if the utterances bot works (new issues being created and comments being posted). For a higher number of comments, it might be worthwhile to automate via the GitHub issue comments API.
+3. Since everything works beautifully with the new comment system, I chose to remove my site from Disqus so that they don't keep an obvious copy of the data.
+
+That's it. Now every single page on this blogdown site is tracking free. Maybe it's the placebo effect, but I can almost feel the pages loading faster. The side effect that a GitHub identity is required for commenting is enjoyable --- it might actually improve the conversation's quality.
+
+Unlike Orpheus, I'm never looking back.

@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Customize Syntax Highlighting for R distill Websites - Nan Xiao | 肖楠 </title>
+    <title> Migrating from Disqus to Utterances - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Customize the distill syntax highlighting theme with a few lines of R code." />
+    <meta name="description" content="Migrating the comment system of my Hugo/blogdown site from Disqus to Utterances." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/distill-syntax-highlight/" />
-    <meta property="og:title" content="Customize Syntax Highlighting for R distill Websites" />
-    <meta property="og:image" content="https://nanx.me/image/wine-bottles-chuttersnap.jpg" />
-    <meta property="og:description" content="Customize the distill syntax highlighting theme with a few lines of R code." />
+    <meta property="og:url" content="https://nanx.me/blog/post/migrating-from-disqus-to-utterances/" />
+    <meta property="og:title" content="Migrating from Disqus to Utterances" />
+    <meta property="og:image" content="https://nanx.me/image/safari-14-intelligent-tracking-prevention.png" />
+    <meta property="og:description" content="Migrating the comment system of my Hugo/blogdown site from Disqus to Utterances." />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Customize Syntax Highlighting for R distill Websites" />
-    <meta name="twitter:description" content="Customize the distill syntax highlighting theme with a few lines of R code." />
-    <meta name="twitter:image" content="https://nanx.me/image/wine-bottles-chuttersnap.jpg" />
+    <meta name="twitter:title" content="Migrating from Disqus to Utterances" />
+    <meta name="twitter:description" content="Migrating the comment system of my Hugo/blogdown site from Disqus to Utterances." />
+    <meta name="twitter:image" content="https://nanx.me/image/safari-14-intelligent-tracking-prevention.png" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/distill-syntax-highlight/">
+    <link rel="canonical" href="https://nanx.me/blog/post/migrating-from-disqus-to-utterances/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous" />
 
@@ -116,7 +116,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-12 col-lg-8">
-                    <h1 class="mx-0 mx-md-4 blog-post-title">Customize Syntax Highlighting for R distill Websites</h1>
+                    <h1 class="mx-0 mx-md-4 blog-post-title">Migrating from Disqus to Utterances</h1>
 
                     <div class="mb-md-4 meta">
                         
@@ -127,8 +127,8 @@
                             
                         
 
-                        <span class="date middot" title='Fri May 22 2020 00:30:00 UTC'>
-                            2020-05-22
+                        <span class="date middot" title='Sat Sep 19 2020 23:00:00 UTC'>
+                            2020-09-19
                         </span>
 
                         <span class="reading-time middot">
@@ -139,15 +139,23 @@
                             <ul class="list-unstyled d-inline">
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/r">R</a>
+                                        <a href="https://nanx.me/tags/hugo">Hugo</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/r-markdown">R Markdown</a>
+                                        <a href="https://nanx.me/tags/blogdown">blogdown</a>
                                     </li>
                                 
                                     <li class="d-inline middot">
-                                        <a href="https://nanx.me/tags/distill">distill</a>
+                                        <a href="https://nanx.me/tags/web-tracking">web tracking</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="https://nanx.me/tags/targeted-advertising">targeted advertising</a>
+                                    </li>
+                                
+                                    <li class="d-inline middot">
+                                        <a href="https://nanx.me/tags/online-privacy">online privacy</a>
                                     </li>
                                 
                             </ul>
@@ -167,27 +175,26 @@
 <script src="https://nanx.me/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
+<p>Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit’s Intelligent Tracking Prevention (ITP). Following this progress and <a href="https://nanx.me/blog/post/remove-google-analytics/">removing Google Analytics</a> last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.</p>
 <div class="figure">
-<img src="https://nanx.me/image/wine-bottles-chuttersnap.jpg" alt="" />
-<p class="caption">“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) <br> Photo by <a href="https://unsplash.com/photos/eKlezhItE5U"><span class="citation">@chuttersnap</span></a>.</p>
+<img src="https://nanx.me/image/safari-14-intelligent-tracking-prevention.png" alt="" />
+<p class="caption">Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.</p>
 </div>
-<div id="the-problem" class="section level2">
-<h2>The Problem</h2>
-<p>The <a href="https://rstudio.github.io/distill/">distill</a> (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found <a href="https://github.com/rstudio/distill/issues/19">this issue</a>:</p>
-<div class="figure">
-<img src="https://nanx.me/image/distill-custom-highlight-theme.png" alt="" />
-<p class="caption"> </p>
-</div>
-<p>I was a bit surprised and sad that there is no easy way to customize it. As a person with some opinions myself, I entirely respect the design choices, while I do hold some alternative views on two aspects of this.</p>
-<p>First of all, I agree that the philosophy behind a software product is critical, and sometimes we have to balance the experience and flexibility one offers in the software. However, in reality, it is easy to use “experience” as an excuse for the lack of flexibility. For example, <em>enforcing</em> a unified theme within a website does not mean that one cannot <em>specify</em> that theme (or its details such as syntax highlighting) for their websites.</p>
-<p>The second point is purely technical. If you look into the distill source code, it encodes all the syntax highlighting related CSS code (and others) in JavaScript (inst/www/distill/template.v2.js) and renders the styles with JS. This was done in a quite elegant but rather obscure way that makes simple CSS overrides challenging. Plus, CSS-in-JS does not seem to be a good engineering practice to me as it unnecessarily increases the developer’s cognitive load.</p>
-</div>
-<div id="a-solution" class="section level2">
-<h2>A solution</h2>
-<p>Since there is no formal extension mechanism for this part of distill and I’m not interested in deciphering the JS code, here comes a pure R solution. The following function finds and replaces the syntax highlighting CSS in the JS file from the installed distill package. You can choose or modify any custom CSS themes created for Prism.js, which are widely available and easily customizable.</p>
-<script src="https://gist.github.com/nanxstats/ef265d4322168a049daa9154a38afa86.js"></script>
-<p>This is a hot patch, meaning you can rebuild the websites and see the results immediately without restarting the R session or reloading the package. It is also a binary patch, meaning the patched package is prone to updates or reinstalls (the patched JS file is overridden). In case the patch didn’t work, a simple reinstall of distill would restore things to normal. It is far from ideal, and I believe people can build more permanent solutions, such as creating an R package with renderers that allow such “extra customizations.”</p>
-</div>
+<p>The process is much easier than I thought. I would recommend this to anyone who prioritizes the online privacy of the readers. The following steps should generally work for most Hugo/blogdown sites.</p>
+<p><strong>Set up utterances</strong></p>
+<ol style="list-style-type: decimal">
+<li>Check out the <a href="https://utteranc.es/">utterances docs</a> to set up a GitHub repo with the utterances app installed for storing the comments in issues. I created a <a href="https://github.com/nanxstats/blog-comments">dedicated new repo</a> for this.</li>
+<li>Add the utterances partial to the theme. It includes adding a partial and calling it in <code>single.html</code>. Here is the <a href="https://github.com/nanxstats/hugo-nanx2020/commit/60e0c939775a7a85ff391c83d88512ddd19cd58f">changeset for my current theme</a>. Remove Disqus related variables such as <code>disqusShortname</code> in your site configuration file (e.g., <code>config.toml</code>). Set the utterances repo value if you have placed it as a <code>.Site.Params</code> variable, as I did in the partial template.</li>
+<li>Recompile the site to see if the new system works. If it does, a GitHub issue style comment box should show up under every post.</li>
+</ol>
+<p><strong>Migrate comment data from Disqus</strong></p>
+<ol style="list-style-type: decimal">
+<li>Export the previous comments data via <code>Admin</code> &gt; <code>Community</code> &gt; <code>Export</code>. An XML file tarball will be sent via email.</li>
+<li>Import comments into the new system. I did this by manually posting the original comments as there were only around 30 comments. I find the <a href="https://masalmon.eu/2019/10/02/disqus/">R script by Maëlle Salmon</a> and the <a href="https://github.com/utterance/utterances/issues/7">formatting provided by Juergen Gutsch</a> useful. By doing this, we can also verify if the utterances bot works (new issues being created and comments being posted). For a higher number of comments, it might be worthwhile to automate via the GitHub issue comments API.</li>
+<li>Since everything works beautifully with the new comment system, I chose to remove my site from Disqus so that they don’t keep an obvious copy of the data.</li>
+</ol>
+<p>That’s it. Now every single page on this blogdown site is tracking free. Maybe it’s the placebo effect, but I can almost feel the pages loading faster. The side effect that a GitHub identity is required for commenting is enjoyable — it might actually improve the conversation’s quality.</p>
+<p>Unlike Orpheus, I’m never looking back.</p>
 
 
 
@@ -199,15 +206,11 @@
                                 <div class="col-12 col-lg-6">
                                     
                                         <div class="mx-0 mx-md-4 mt-4 text-left">
-                                            <a href="https://nanx.me/blog/post/disposable-computing-with-callr/">« Disposable Computing with callr</a>
+                                            <a href="https://nanx.me/blog/post/distill-syntax-highlight/">« Customize Syntax Highlighting for R distill Websites</a>
                                         </div>
                                     
                                 </div>
                                 <div class="col-12 col-lg-6">
-                                    
-                                        <div class="mx-0 mx-md-4 mt-4 text-right">
-                                            <a href="https://nanx.me/blog/post/migrating-from-disqus-to-utterances/">Migrating from Disqus to Utterances »</a>
-                                        </div>
                                     
                                 </div>
                             </div>

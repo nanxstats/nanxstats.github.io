@@ -4,7 +4,47 @@
   
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2020-05-22T00:30:00+00:00</lastmod>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/blogdown/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/hugo/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/online-privacy/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/targeted-advertising/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/web-tracking/</loc>
+    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,22 +58,12 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2020-05-22T00:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2020-05-22T00:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nanx.me/tags/r-markdown/</loc>
-    <lastmod>2020-05-22T00:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2020-05-22T00:30:00+00:00</lastmod>
   </url>
   
@@ -158,38 +188,13 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/tags/online-privacy/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/blog/post/remove-google-analytics/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/targeted-advertising/</loc>
-    <lastmod>2019-01-28T15:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/web-tracking/</loc>
     <lastmod>2019-01-28T15:30:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://nanx.me/blog/post/awesome-shiny-extensions/</loc>
     <lastmod>2018-12-04T14:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/blogdown/</loc>
-    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/hugo/</loc>
-    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
   </url>
   
   <url>
