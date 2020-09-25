@@ -1,5 +1,5 @@
 ---
-title: General-Purpose Programming with R (as of 2018)
+title: General-Purpose Programming with R
 author: Nan Xiao
 date: "2018-10-25T23:30:00"
 slug: general-purpose-programming-with-r

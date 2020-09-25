@@ -1,7 +1,8 @@
 /* Global styles */
 
 body {
-    font-family: "Source Serif Pro", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Lyon Text Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: "liga", "kern";
     background-color: #fafaf8;
 }
 
@@ -58,7 +59,7 @@ author {
 /* landing content */
 
 .landing {
-    font-size: 1.44rem;
+    font-size: 1.47rem;
     line-height: 2.25rem;
 }
 
@@ -70,18 +71,12 @@ author {
 
 .pretty-links a {
     color: #4072AF;
-    text-shadow: 0.04545em 0 0 #fafaf8, 0.09091em 0 0 #fafaf8, 0.13636em 0 0 #fafaf8, -0.04545em 0 0 #fafaf8, -0.09091em 0 0 #fafaf8, -0.13636em 0 0 #fafaf8, 0 0.04545em 0 #fafaf8, 0 0.09091em 0 #fafaf8, 0 -0.04545em 0 #fafaf8, 0 -0.09091em 0 #fafaf8;
-    background-image: linear-gradient(#4072AF, #4072AF);
-    background-position: 0 1.10em;
-    background-size: 1px 1px;
-    background-repeat: repeat-x;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .pretty-links a:hover, .pretty-links a:active {
     color: #254164;
-    text-decoration: none;
-    background-image: linear-gradient(#254164, #254164);
+    text-decoration: underline;
 }
 
 .pretty-links a:focus {
@@ -143,8 +138,9 @@ hr {
 }
 
 .header h1.name {
+    font-family: "Lyon Display Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
     color: #333333;
-    font-weight: 600;
     font-size: 2.5rem;
     padding-left: 10px;
 }
@@ -187,8 +183,9 @@ hr {
 }
 
 .content h1, h2, h3, h4, h5, h6 {
+    font-family: "Lyon Display Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
     color: #333333;
-    font-weight: 600;
     margin-bottom: 1rem;
 }
 
@@ -215,7 +212,8 @@ hr {
 }
 
 .content .markdown {
-    font-family: "Source Serif Pro", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Lyon Text Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 400;
     font-size: 1.125rem;
     color: #333333;
     line-height: 1.75rem;
@@ -333,8 +331,7 @@ hr {
 }
 
 .content .post-item .meta-date {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    font-size: 0.9rem;
+    font-size: 1.125rem;
     color: #738491;
     line-height: 2rem;
     display: block;
