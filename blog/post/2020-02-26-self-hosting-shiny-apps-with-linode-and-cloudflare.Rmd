@@ -38,18 +38,7 @@ In my opinion, the main technical reasons to create a self-hosting server may in
 
 In brief, it looks like this:
 
-```{asis, echo=FALSE, eval=FALSE}
-graph LR
-	A(Domain <br> Nameserver) -->
-  |point to| B("Cloudflare" )
-	B --> |verify cert| C(Nginx)
-  C -->|reverse proxy| D(Shiny Server)
-	D --> E(App 1)
-	D --> F(App 2)
-	D --> G(App 3)
-```
-
-![A diagram of the checkpoints. Made with the [Mermaid live editor](https://mermaid-js.github.io/mermaid-live-editor/).](/image/self-hosting-shiny-diagram.svg)
+![A diagram of the checkpoints.](/image/self-hosting-shiny-diagram.png)
 
 Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:
 
