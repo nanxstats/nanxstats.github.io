@@ -67,27 +67,6 @@ author {
     margin-bottom: 1.5rem;
 }
 
-/* pretty links */
-
-.pretty-links a {
-    color: #4072AF;
-    text-decoration: underline;
-}
-
-.pretty-links a:hover, .pretty-links a:active {
-    color: #254164;
-    text-decoration: underline;
-}
-
-.pretty-links a:focus {
-    outline: 0;
-    transition: none;
-    text-shadow: none;
-    background: #4072AF;
-    color: #fafaf8;
-    text-decoration: none;
-}
-
 /* horizontal rule */
 
 hr {
