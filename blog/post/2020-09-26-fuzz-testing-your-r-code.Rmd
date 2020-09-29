@@ -17,7 +17,7 @@ Good software requires even better testing. Particularly, [unit testing](https:/
 
 As the name indicates, fuzz testing focuses on revealing hidden exceptions through the automated generation of a large number of randomized inputs and feeding them to the program (law of large numbers helps). This is especially useful for validating large programs' robustness where the computational components have complex interactions, and the edge cases are tricky to realize. I agree that this description fits the characteristics of some statistical estimation or inference procedures due to their numerical or probabilistic nature.
 
-# Example: fuzz testing oneclust
+## Example: fuzz testing oneclust
 
 In R, there is a nice R package [fuzzr](https://cran.r-project.org/package=fuzzr) written by [Matthew Lincoln](https://github.com/mdlincoln). The package offers an example framework for fuzz testing R code. The off-the-shelf functions primarily emphasize the unexpected or non-standard input **types**, while custom tests can be easily created and evaluated.
 
