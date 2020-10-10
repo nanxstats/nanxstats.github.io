@@ -3,7 +3,7 @@
 body {
     font-family: "Lyon Text Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-feature-settings: "liga", "kern";
-    background-color: #fafaf8;
+    background-color: #fffff8;
 }
 
 /* Fix jumping scrollbar when switching to long pages */
