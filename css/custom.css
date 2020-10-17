@@ -135,20 +135,20 @@ hr {
 }
 
 .header ul.nav li a {
-    color: #4072AF;
+    color: #738491;
     font-size: 1.375rem;
     padding: 0 10px 0 10px;
 }
 
 .header ul.nav li a:hover {
-    color: #4072AF;
-    background-color: #e1e9f4;
+    color: #738491;
+    background-color: #F5F5F5;
     text-decoration: none;
 }
 
 .header ul.nav li a:focus, .header ul.nav li a:active {
     color: #fff;
-    background-color: #4072AF;
+    background-color: #738491;
     text-decoration: none;
 }
 
@@ -347,6 +347,14 @@ hr {
 .footer {
     font-family: "Metric Web", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     font-size: 1.15rem;
+}
+
+.footer a {
+    color: #738491;
+}
+
+.footer a:hover, a:focus {
+    color: #394248;
 }
 
 .footer a {
