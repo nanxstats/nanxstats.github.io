@@ -413,7 +413,7 @@ hr {
 
 @media (max-width: 991.98px) {
     .header h1.name {
-        padding-left: 0;
+        margin-left: -10px;
     }
     .header ul.nav {
         margin-left: -10px;
