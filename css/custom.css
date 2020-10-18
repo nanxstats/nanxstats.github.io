@@ -127,6 +127,7 @@ hr {
 .header ul.nav li {
     font-family: "Work Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     font-weight: 400;
+    font-size: 1.125rem;
 }
 
 .header ul.nav li a {
@@ -137,19 +138,18 @@ hr {
 
 .header ul.nav li a {
     color: #333333;
-    font-size: 1.3125rem;
     padding: 0 10px 0 10px;
 }
 
 .header ul.nav li a:hover {
     color: #ffffff;
-    background-color: #4072AF;
+    background-color: #6a94c8;
     text-decoration: none;
 }
 
 .header ul.nav li a:focus, .header ul.nav li a:active {
     color: #ffffff;
-    background-color: #254164;
+    background-color: #4072AF;
     text-decoration: none;
 }
 
