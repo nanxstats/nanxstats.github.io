@@ -59,7 +59,7 @@ author {
 /* landing content */
 
 .landing {
-    font-size: 1.47rem;
+    font-size: 1.34rem;
     line-height: 2.25rem;
 }
 
@@ -135,20 +135,20 @@ hr {
 }
 
 .header ul.nav li a {
-    color: #738491;
+    color: #333333;
     font-size: 1.375rem;
     padding: 0 10px 0 10px;
 }
 
 .header ul.nav li a:hover {
-    color: #738491;
-    background-color: #F5F5F5;
+    color: #ffffff;
+    background-color: #4072AF;
     text-decoration: none;
 }
 
 .header ul.nav li a:focus, .header ul.nav li a:active {
-    color: #fff;
-    background-color: #738491;
+    color: #ffffff;
+    background-color: #4072AF;
     text-decoration: none;
 }
 
@@ -350,11 +350,11 @@ hr {
 }
 
 .footer a {
-    color: #738491;
+    color: #333333;
 }
 
 .footer a:hover, a:focus {
-    color: #394248;
+    color: #4072AF;
 }
 
 .footer a {
