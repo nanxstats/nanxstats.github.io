@@ -3,7 +3,7 @@
 body {
     font-family: "Lyon Text Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-feature-settings: "liga", "kern";
-    background-color: #fffff8;
+    background-color: #fff;
 }
 
 /* Fix jumping scrollbar when switching to long pages */
@@ -16,8 +16,8 @@ html {
 /* link */
 
 a {
-    color: #4072AF;
-    text-decoration: none;
+    color: #333333;
+    text-decoration-line: underline;
     background-color: transparent;
 }
 
@@ -26,14 +26,8 @@ a:active, a:hover {
 }
 
 a:hover, a:focus {
-    color: #254164;
-    text-decoration: underline;
-}
-
-a:focus {
-    outline: thin dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
+    color: #333333;
+    text-decoration-line: underline;
 }
 
 /* button */
@@ -53,7 +47,7 @@ a:focus {
 
 author {
     font-weight: 600;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* landing content */
@@ -71,7 +65,7 @@ author {
 
 hr {
     border: 0;
-    border-top: 1px solid #e1e9f4;
+    border-top: 1px solid #DCDCDC;
 }
 
 .footer hr {
@@ -80,7 +74,7 @@ hr {
 
 /* selection color */
 
-::-moz-selection {
+/* ::-moz-selection {
     background-color: #4072AF;
     color: #fff;
     text-shadow: none;
@@ -90,7 +84,7 @@ hr {
     background-color: #4072AF;
     color: #fff;
     text-shadow: none;
-}
+} */
 
 /* Partial: Colors */
 
@@ -108,7 +102,7 @@ hr {
 
 /* Partial: Header */
 
-.header a:hover {
+.header a, .header a:hover {
     text-decoration: none;
 }
 
@@ -141,13 +135,13 @@ hr {
 
 .header ul.nav li a:hover {
     color: #ffffff;
-    background-color: #6a94c8;
+    background-color: #505050;
     text-decoration: none;
 }
 
 .header ul.nav li a:focus, .header ul.nav li a:active {
     color: #ffffff;
-    background-color: #4072AF;
+    background-color: #333333;
     text-decoration: none;
 }
 
@@ -174,7 +168,7 @@ hr {
 .content .meta {
     font-weight: 400;
     font-size: 1.125rem;
-    color: #738491;
+    color: #586069;
     margin-bottom: 10px;
 }
 
@@ -190,7 +184,7 @@ hr {
 .content .caption {
     text-align: center;
     margin-top: 10px;
-    color: #738491;
+    color: #586069;
     font-size: 0.9rem;
 }
 
@@ -315,7 +309,7 @@ hr {
 
 .content .post-item .meta-date {
     font-size: 1.125rem;
-    color: #738491;
+    color: #586069;
     line-height: 2rem;
     display: block;
     min-width: 10rem;
@@ -349,10 +343,11 @@ hr {
 
 .footer a {
     color: #333333;
+    text-decoration: none;
 }
 
 .footer a:hover, a:focus {
-    color: #4072AF;
+    color: #333333;
 }
 
 .footer a {
@@ -387,7 +382,7 @@ hr {
 
 .site-social li:not(:last-child)::after {
     content: '|';
-    color: #e1e9f4;
+    color: #DCDCDC;
     margin: 0 0.3rem 0 0.5rem;
 }
 
