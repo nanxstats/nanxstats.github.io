@@ -33,14 +33,14 @@ a:hover, a:focus {
 /* button */
 
 .btn-outline-primary {
-    color: #4582EC;
-    border-color: #4582EC;
+    color: #333333;
+    border-color: #333333;
 }
 
 .btn-outline-primary:hover {
     color: #FFFFFF;
-    background-color: #4582EC;
-    border-color: #4582EC;
+    background-color: #333333;
+    border-color: #333333;
 }
 
 /* author */
@@ -53,8 +53,8 @@ author {
 /* landing content */
 
 .landing {
-    font-size: 1.34rem;
-    line-height: 2.25rem;
+    font-size: 1.5rem;
+    line-height: 2.19rem;
 }
 
 .landing p {
@@ -107,19 +107,19 @@ hr {
 }
 
 .header .logo {
-    max-height: 90px;
+    max-height: 120px;
 }
 
 .header h1.name {
     font-family: "Lyon Display Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     color: #333333;
     padding-left: 9px;
 }
 
 .header ul.nav li {
-    font-size: 1.25rem;
+    font-size: 1.5625rem;
 }
 
 .header ul.nav li a {
