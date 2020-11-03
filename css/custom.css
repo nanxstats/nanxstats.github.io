@@ -17,7 +17,7 @@ html {
 
 a {
     color: #333333;
-    text-decoration-line: underline;
+    text-decoration: underline;
     background-color: transparent;
 }
 
@@ -27,7 +27,7 @@ a:active, a:hover {
 
 a:hover, a:focus {
     color: #333333;
-    text-decoration-line: underline;
+    text-decoration: underline;
 }
 
 /* button */
