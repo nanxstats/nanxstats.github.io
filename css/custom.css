@@ -290,10 +290,11 @@ hr {
 }
 
 .content .groupby {
-    list-style: none;
-    color: #333333;
+    font-family: "Lyon Display Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
     font-size: 2rem;
-    font-weight: 600;
+    color: #333333;
+    list-style: none;
     margin-top: 10px;
     margin-bottom: 8px;
 }
