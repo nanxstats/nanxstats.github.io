@@ -26,7 +26,7 @@ a:active, a:hover {
 }
 
 a:hover, a:focus {
-    color: #333333;
+    color: #707070;
     text-decoration: underline;
 }
 
@@ -39,8 +39,8 @@ a:hover, a:focus {
 
 .btn-outline-primary:hover {
     color: #FFFFFF;
-    background-color: #333333;
-    border-color: #333333;
+    background-color: #707070;
+    border-color: #707070;
 }
 
 /* author */
@@ -349,7 +349,7 @@ hr {
 }
 
 .footer a:hover, a:focus {
-    color: #333333;
+    color: #707070;
 }
 
 .footer a {
