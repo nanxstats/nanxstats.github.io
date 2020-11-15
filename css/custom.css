@@ -131,6 +131,7 @@ hr {
 .header ul.nav li a {
     color: #333333;
     padding: 3px 10px 0 10px;
+    border-radius: 5px;
 }
 
 .header ul.nav li a:hover {
