@@ -6,7 +6,18 @@
     <description>Recent content in Tanka on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Dec 2017 07:00:00 -0500</lastBuildDate><atom:link href="https://nanx.me/tags/tanka/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 22:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/tanka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tanka: A Minimalist Bootstrap 4 Theme for Hugo and Blogdown</title>
+      <link>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</link>
+      <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</guid>
+      <description>TL;DR: I have rewritten the Hugo Tanka theme entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.
+ A screenshot of the updated Hugo Tanka theme.
+ Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).</description>
+    </item>
+    
     <item>
       <title>Tanka: A Minimalist Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-tanka-theme/</link>

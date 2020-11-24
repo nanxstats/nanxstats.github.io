@@ -1,0 +1,28 @@
+---
+title: "Tanka: A Minimalist Bootstrap 4 Theme for Hugo and Blogdown"
+author: "Nan Xiao"
+date: "2020-11-23T22:00:00"
+slug: hugo-tanka-theme-bootstrap
+categories: []
+tags:
+  - Hugo
+  - blogdown
+  - Tanka
+  - theme
+meta_img: image/hugo-tanka-theme-bootstrap.png
+description: "The Hugo Tanka theme is now rewritten with Bootstrap 4."
+---
+
+> TL;DR: I have rewritten the Hugo [Tanka theme](https://github.com/nanxstats/hugo-tanka) entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.
+
+![A screenshot of the updated Hugo Tanka theme.](/image/hugo-tanka-theme-bootstrap.png)
+
+Almost three years ago, when I first started blogging with Hugo/blogdown, I [forked and modified](https://nanx.me/blog/post/hugo-tanka-theme/) a Hugo theme [Black & Light](https://github.com/davidhampgonsalves/hugo-black-and-light-theme), and named it **Tanka** ([Repo](https://github.com/nanxstats/hugo-tanka), [Live Preview](https://nanx.me/hugo-tanka/)).
+
+Hugo has received several major updates in the past three years. The [most significant update](https://twitter.com/nanxstats/status/1200508338561310721) for me was replacing the default Markdown engine Blackfriday with Goldmark in 0.60.0. If you have been using services like Netlify where the Hugo version can be specified, you might not experience too many issues so far. However, as a person who uses Homebrew and still has to compile Hugo sites locally, it is painful to stay on a non-latest version. I started to receive [bug reports](https://github.com/nanxstats/hugo-tanka/issues/3) that the theme does not work correctly. Eventually, a [conversation](https://github.com/rstudio/blogdown/pull/479) with some RStudio folks on GitHub motivated me to update the theme.
+
+To do a decent update, I chose to completely revamp its entire codebase with Bootstrap 4, which has been instrumental for another previous Hugo theme, [Renga](https://nanx.me/blog/post/hugo-renga-theme/). The look is almost the same --- with slight adjustments. To give it a stamp of authenticity and better discoverability, I have [submitted](https://github.com/gohugoio/hugoThemes/issues/945) it to the official Hugo theme gallery.
+
+Please note that some of the fields in `config.toml` have changed. You may consult the [latest version](https://github.com/nanxstats/hugo-tanka/blob/master/exampleSite/config.toml) in the example site for the current naming scheme. I removed the tracker-embedded analytics and commenting options and added support for the (optional) [utterances comment system](https://nanx.me/blog/post/migrating-from-disqus-to-utterances/).
+
+Oh, if you have ever wondered, the example long title on the live preview site is from [Aoife O'Donovan](https://aoifeodonovan.com/)'s song [Detour Sign](https://aoifeodonovan.bandcamp.com/track/detour-sign-live-2).

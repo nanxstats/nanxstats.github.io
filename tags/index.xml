@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Sep 2020 22:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Nov 2020 22:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>blogdown</title>
+      <link>https://nanx.me/tags/blogdown/</link>
+      <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://nanx.me/tags/hugo/</link>
+      <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tanka</title>
+      <link>https://nanx.me/tags/tanka/</link>
+      <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/tanka/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>theme</title>
+      <link>https://nanx.me/tags/theme/</link>
+      <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/theme/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>fuzz testing</title>
       <link>https://nanx.me/tags/fuzz-testing/</link>
@@ -22,24 +58,6 @@
       <pubDate>Mon, 28 Sep 2020 22:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blogdown</title>
-      <link>https://nanx.me/tags/blogdown/</link>
-      <pubDate>Sat, 19 Sep 2020 23:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/blogdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://nanx.me/tags/hugo/</link>
-      <pubDate>Sat, 19 Sep 2020 23:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/hugo/</guid>
       <description></description>
     </item>
     
@@ -238,15 +256,6 @@
       <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/renga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>theme</title>
-      <link>https://nanx.me/tags/theme/</link>
-      <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/theme/</guid>
       <description></description>
     </item>
     
@@ -535,15 +544,6 @@
       <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/paper/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tanka</title>
-      <link>https://nanx.me/tags/tanka/</link>
-      <pubDate>Wed, 27 Dec 2017 07:00:00 -0500</pubDate>
-      
-      <guid>https://nanx.me/tags/tanka/</guid>
       <description></description>
     </item>
     

@@ -4,7 +4,42 @@
   
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2020-09-28T22:30:00+00:00</lastmod>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/blogdown/</loc>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/hugo/</loc>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/tanka/</loc>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</loc>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/theme/</loc>
+    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -18,28 +53,8 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2020-09-28T22:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2020-09-28T22:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2020-09-28T22:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/blogdown/</loc>
-    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/hugo/</loc>
-    <lastmod>2020-09-19T23:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -214,11 +229,6 @@
   
   <url>
     <loc>https://nanx.me/blog/post/hugo-renga-theme/</loc>
-    <lastmod>2018-11-10T23:30:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/theme/</loc>
     <lastmod>2018-11-10T23:30:00+00:00</lastmod>
   </url>
   
@@ -480,11 +490,6 @@
   <url>
     <loc>https://nanx.me/blog/post/papers-in-my-heart-2017/</loc>
     <lastmod>2017-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/tanka/</loc>
-    <lastmod>2017-12-27T07:00:00-05:00</lastmod>
   </url>
   
   <url>
