@@ -1,6 +1,5 @@
 ---
-title: Prototyping a Recommender System for Binary Implicit Feedback Data With R and
-  Keras
+title: "Prototyping a Recommender System for Binary Implicit Feedback Data with R and Keras"
 author: Nan Xiao
 date: "2018-08-22T17:30:00"
 slug: recsys-binary-implicit-feedback-r-keras
