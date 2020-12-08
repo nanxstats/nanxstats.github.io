@@ -118,7 +118,7 @@ Plot the posterior mean and 95% credible interval of the coefficients:
 
 The model selected 16 variables: all the 10 true variables with 6 false positive variables. The MSE is 217.
 
-For more theoretical discussions and empirical comparisons on Bayesian sparse shrinkage in regression, I find the notes from [Jeffrey Arnold](https://jrnold.github.io/bayesian_notes/shrinkage-and-regularized-regression.html#section) and [Michael Betancourt](https://betanalpha.github.io/assets/case_studies/bayes_sparse_regression.html) useful. To me, it is still a bit magical how intuitively the lasso and Bayesian lasso are connected. I like this type of connection.
+For more theoretical discussions and empirical comparisons on Bayesian sparse shrinkage in regression, I find the notes from [Jeffrey Arnold](https://jrnold.github.io/bayesian_notes/shrinkage-and-regularized-regression.html) and [Michael Betancourt](https://betanalpha.github.io/assets/case_studies/bayes_sparse_regression.html) useful. To me, it is still a bit magical how intuitively the lasso and Bayesian lasso are connected. I like this type of connection.
 
 ## Summary
 
