@@ -6,7 +6,19 @@
     <description>Recent content in automatic differentiation on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Oct 2019 00:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/automatic-differentiation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Dec 2020 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/automatic-differentiation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bayesian Lasso with greta</title>
+      <link>https://nanx.me/blog/post/bayesian-lasso-with-greta/</link>
+      <pubDate>Mon, 07 Dec 2020 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/bayesian-lasso-with-greta/</guid>
+      <description>The R code to reproduce the results is available from GitHub Gist.
+ Horseshoe Bend, Arizona. Photo by Madeline Pere.
+ Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
+ Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
+    </item>
+    
     <item>
       <title>Building Regularized Logistic Regressions from Scratch with Computational Graphs in R</title>
       <link>https://nanx.me/blog/post/cgraph-logreg/</link>
