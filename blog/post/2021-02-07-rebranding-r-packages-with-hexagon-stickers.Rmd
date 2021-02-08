@@ -52,7 +52,7 @@ The rest is easy:
 I chose to use `inst/logo/logo.R` to match the image name.
 1. Generate the hex sticker image. It is placed as `man/figures/logo.png`.
 This follows the guidelines in
-[Writing R extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Figures)
+[Writing R Extensions](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Figures)
 and makes roxygen2 and pkgdown happy.
 1. Link the sticker in the `README.md` title. The wonderful `usethis::use_logo()`
 helps this process when the logo is ready.
