@@ -41,10 +41,10 @@ will add extra work, I simplified things a bit. I use beige as the fill color,
 with the text and the sticker border sharing the same color. This color is decided by
 the category of the package and comes from a single color palette.
 I selected a low-saturated, pastel color palette
-[Kopia vintage card](https://color.adobe.com/Kopia-vintage-card-color-theme-11990015/)
+[vintage card](https://color.adobe.com/Kopia-vintage-card-color-theme-11990015/)
 to convey a mild, sophisticated message.
 
-![Kopia vintage card color palette.](/image/kopia-vintage-card.png)
+![Vintage card color palette.](/image/kopia-vintage-card.png)
 
 The rest is easy:
 
