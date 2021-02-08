@@ -15,7 +15,7 @@ description: "Rebranding my R packages with hexagon stickers."
 
 I have built [a few R packages](https://nanx.me/software/) over the years.
 I have always been adding some forms of an ad hoc logo to them, trying to
-make a visual impression. As the portfolio size gets larger, I realized
+make a visual impression. As the portfolio size grows larger, I realized
 that I would need a principled way to create the logos and refresh my
 packages' look. Hexagon stickers seem to be an acceptable form
 of logos that are [heavily used](https://github.com/search?q=hex+sticker)
@@ -40,7 +40,7 @@ Adjust the size as needed.
 will add extra work, I simplified things a bit. I use beige as the fill color,
 with the text and the sticker border sharing the same color. This color is decided by
 the category of the package and comes from a single color palette.
-I selected a low-saturated, pastel color palette
+I selected a low-saturated color palette
 [vintage card](https://color.adobe.com/Kopia-vintage-card-color-theme-11990015/)
 to convey a mild, sophisticated message.
 
