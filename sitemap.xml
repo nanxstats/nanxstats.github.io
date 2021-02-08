@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2021-02-08T01:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2021-02-08T01:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/open-source/</loc>
+    <lastmod>2021-02-08T01:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2021-02-08T01:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</loc>
+    <lastmod>2021-02-08T01:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2021-02-08T01:30:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://nanx.me/tags/automatic-differentiation/</loc>
     <lastmod>2020-12-07T20:00:00+00:00</lastmod>
   </url>
@@ -18,17 +48,7 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2020-12-07T20:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/tags/greta/</loc>
-    <lastmod>2020-12-07T20:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2020-12-07T20:00:00+00:00</lastmod>
   </url>
   
@@ -38,17 +58,7 @@
   </url>
   
   <url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2020-12-07T20:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://nanx.me/tags/regularization/</loc>
-    <lastmod>2020-12-07T20:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2020-12-07T20:00:00+00:00</lastmod>
   </url>
   
@@ -449,11 +459,6 @@
   
   <url>
     <loc>https://nanx.me/blog/post/choose-open-source-projects/</loc>
-    <lastmod>2018-03-12T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://nanx.me/tags/open-source/</loc>
     <lastmod>2018-03-12T00:00:00+00:00</lastmod>
   </url>
   

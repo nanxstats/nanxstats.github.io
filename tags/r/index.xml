@@ -6,7 +6,17 @@
     <description>Recent content in R on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Dec 2020 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Feb 2021 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rebranding R Packages with Hexagon Stickers: A Minimalist Approach</title>
+      <link>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</link>
+      <pubDate>Mon, 08 Feb 2021 01:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</guid>
+      <description>A new hex sticker wall of my R packages.
+ I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size gets larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
+    </item>
+    
     <item>
       <title>Bayesian Lasso with greta</title>
       <link>https://nanx.me/blog/post/bayesian-lasso-with-greta/</link>
