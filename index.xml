@@ -415,6 +415,15 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
     </item>
     
     <item>
+      <title>Colophon</title>
+      <link>https://nanx.me/colophon/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/colophon/</guid>
+      <description>  Typography  Lyon Text and Lyon Display designed by Kai Bernau  Content  Site generator: blogdown, driven by Hugo Theme: hugo-nanx2020, built on Bootstrap 4 Commenting: utterances  Editing  R Markdown: RStudio Desktop HTML, CSS, JavaScript: Visual Studio Code  </description>
+    </item>
+    
+    <item>
       <title>Papers</title>
       <link>https://nanx.me/papers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
