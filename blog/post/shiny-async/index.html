@@ -173,8 +173,6 @@
                         
     
 <script src="https://nanx.me/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-<link href="https://nanx.me/rmarkdown-libs/anchor-sections/anchor-sections.css" rel="stylesheet" />
-<script src="https://nanx.me/rmarkdown-libs/anchor-sections/anchor-sections.js"></script>
 
 
 <p>Shiny is my favorite web application framework. It is simply awesome. <a href="https://shiny.rstudio.com/reference/shiny/1.1.0/upgrade.html">Shiny 1.1.0</a> was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of <a href="https://github.com/HenrikBengtsson/future">future</a>, <a href="https://github.com/rstudio/promises">promises</a> (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.</p>
@@ -191,7 +189,7 @@
 <li>After the <code>future</code> object, chain the following computations using the promises pipe operator <code>%...&gt;%</code> instead of the magrittr pipe operator <code>%&gt;%,</code> to get the object to render.</li>
 </ol>
 <p>In reality, it might be a bit more complicated than this, since you might want to modify some of your previous R code before you can chain them using the pipe operator, but in principle, this should work.</p>
-<p>In summary, the new async execution support in Shiny could potentially help eliminate the previous performance bottlenecks and scale up some of your apps substantially, especially if you want to create enterprise-grade web applications. I would recommend watching Joe Cheng’s <a href="https://www.rstudio.com/resources/videos/scaling-shiny-apps-with-async-programming/">introductory talk video</a> to have a general idea and <a href="https://rstudio.github.io/promises/articles/shiny.html">this vignette</a> explaining the technical details on how to appropriately modify your app to achieve this.</p>
+<p>In summary, the new async execution support in Shiny could potentially help eliminate the previous performance bottlenecks and scale up some of your apps substantially, especially if you want to create enterprise-grade web applications. I would recommend watching Joe Cheng’s <a href="https://www.rstudio.com/resources/webinars/scaling-shiny-apps-with-asynchronous-programming/">introductory talk video</a> to have a general idea and <a href="https://rstudio.github.io/promises/articles/shiny.html">this vignette</a> explaining the technical details on how to appropriately modify your app to achieve this.</p>
 
 
 

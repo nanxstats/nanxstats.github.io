@@ -5,10 +5,10 @@ date: "2018-10-15T21:30:00"
 slug: accidental-product-success
 categories: []
 tags: []
-meta_img: image/map-rawpixel-211022-unsplash.jpg
+meta_img: image/product-roadmap-slidebean.jpg
 ---
 
-![A roadmap may tell how you can get there but doesn't tell you where to go. Photo: [rawpixel](https://unsplash.com/photos/qYgDrCHV1B0)/Unsplash.](/image/map-rawpixel-211022-unsplash.jpg)
+![A roadmap may tell how you can get there but doesn't tell you where to go. Photo by [\@slidebean](https://unsplash.com/photos/iW9oP7Ljkbg).](/image/product-roadmap-slidebean.jpg)
 
 Technology companies are sometimes quirky but always quite interesting.
 
