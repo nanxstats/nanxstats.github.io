@@ -1,7 +1,7 @@
 /* Global styles */
 
 body {
-    font-family: "Lyon Text Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-feature-settings: "liga", "kern";
     background-color: #fff;
 }
@@ -46,7 +46,7 @@ a:hover, a:focus {
 /* author */
 
 author {
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -65,11 +65,12 @@ author {
 
 hr {
     border: 0;
-    border-top: 1px solid #DCDCDC;
+    border-top: 1px solid rgb(140, 140, 140);
 }
 
 .footer hr {
-    margin: 1.3rem 1.52rem 1.3rem 1.52rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
 }
 
 /* selection color */
@@ -111,8 +112,7 @@ hr {
 }
 
 .header h1.name {
-    font-family: "Lyon Display Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 500;
+    font-weight: 300;
     font-size: 2.5rem;
     color: #333333;
     padding-left: 9px;
@@ -130,8 +130,8 @@ hr {
 
 .header ul.nav li a {
     color: #333333;
-    padding: 3px 10px 0 10px;
-    border-radius: 5px;
+    padding: 3px 10px 3px 10px;
+    border-radius: 3px;
 }
 
 .header ul.nav li a:hover {
@@ -148,20 +148,8 @@ hr {
 
 /* Partial: Content */
 
-.content .page-heading {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: -0.005rem;
-    text-transform: "capitalize";
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    color: #333333;
-    margin-bottom: 16px;
-}
-
 .content h1, h2, h3, h4, h5, h6 {
-    font-family: "Lyon Display Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 500;
+    font-weight: 300;
     color: #333333;
     margin-bottom: 1rem;
 }
@@ -190,7 +178,6 @@ hr {
 }
 
 .content .markdown {
-    font-family: "Lyon Text Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 400;
     font-size: 1.125rem;
     color: #333333;
@@ -204,11 +191,6 @@ hr {
 
 .content twitterwidget {
     margin: auto;
-}
-
-.content .meta, .content .markdown h1, .content .markdown h2, .content .markdown h3, .content .markdown h4, .content .markdown h5, .content .markdown h6, .content .markdown p, .content .markdown ul, .content .markdown ol, .content .markdown dl, .content .markdown blockquote, .gist-file {
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
 }
 
 /* blog post typography */
@@ -229,8 +211,6 @@ hr {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     max-width: 100%;
 }
 
@@ -259,8 +239,6 @@ hr {
     white-space: pre;
     word-break: break-all;
     word-wrap: break-word;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
     border: 1px solid #ddd;
     border-radius: 6px;
 }
@@ -291,8 +269,7 @@ hr {
 }
 
 .content .groupby {
-    font-family: "Lyon Display Web", Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 500;
+    font-weight: 300;
     font-size: 2rem;
     color: #333333;
     list-style: none;
@@ -314,13 +291,13 @@ hr {
     color: #586069;
     line-height: 2rem;
     display: block;
-    min-width: 10rem;
+    min-width: 12rem;
+    margin-right: -5rem;
 }
 
 .content .post-item .meta-title {
     font-size: 1.125rem;
     line-height: 2rem;
-    margin-left: -2.3em;
 }
 
 .content .navigation .icon {
@@ -331,8 +308,6 @@ hr {
 /* Partial: Utterances Comments */
 
 .comments {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
     max-width: 100%;
 }
 
@@ -384,7 +359,7 @@ hr {
 
 .site-social li:not(:last-child)::after {
     content: '|';
-    color: #DCDCDC;
+    color: rgb(220, 220, 220);
     margin: 0 0.3rem 0 0.5rem;
 }
 
@@ -394,24 +369,11 @@ hr {
     html {
         font-size: 0.9rem;
     }
-    .content .meta, .content .markdown h1, .content .markdown h2, .content .markdown h3, .content .markdown h4, .content .markdown h5, .content .markdown h6, .content .markdown p, .content .markdown ul, .content .markdown ol, .content .markdown dl, .content .markdown blockquote {
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
 
 /* < large screens */
 
 @media (max-width: 991.98px) {
-    .header h1.name {
-        margin-left: -10px;
-    }
-    .header ul.nav {
-        margin-left: -10px;
-    }
-    .footer hr {
-        margin: 1.3rem 0rem 1.3rem 0rem;
-    }
     .site-social {
         text-align: left;
     }
