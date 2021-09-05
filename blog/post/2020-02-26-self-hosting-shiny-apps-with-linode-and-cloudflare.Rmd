@@ -42,8 +42,8 @@ In brief, it looks like this:
 
 Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:
 
-- [How to secure your server](https://www.linode.com/docs/security/securing-your-server/)
-- [How to set up Cloudflare with Linode](https://www.linode.com/docs/networking/dns/how-to-set-up-cloudflare-with-linode/)
+- [How to secure your server](https://www.linode.com/docs/guides/securing-your-server/)
+- [How to set up Cloudflare with Linode](https://www.linode.com/docs/guides/how-to-set-up-cloudflare-with-linode/)
 - [Running Shiny Server with a proxy](https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy)
 
 It may take some time to figure out every detail when setting things up (DevOps can be intimidating), but one can often get it done after a little research. For example, two ops related issues I encountered:
