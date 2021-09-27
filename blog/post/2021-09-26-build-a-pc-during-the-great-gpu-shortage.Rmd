@@ -1,0 +1,36 @@
+---
+title: "Build a PC During the Great GPU Shortage"
+author: "Nan Xiao"
+date: "2021-09-26"
+slug: build-a-pc-during-the-great-gpu-shortage
+categories: []
+tags:
+  - buildapc
+meta_img: image/buildapc-2021-02.jpg
+description: "Build a PC during the great GPU shortage."
+---
+
+Apparently, I underestimated the severity of the ongoing GPU shortage
+when I decided to Marie Kondo my
+[previous PC build](https://nanx.me/blog/post/building-my-first-deep-learning-machine/)
+and build a new one: people almost cannot find ANY graphics cards
+at a reasonable price for a custom build.
+After checking a few prebuilt options where one does not need to find a card,
+I still feel all the options out there are not optimal.
+
+Nevertheless, my solution is to find the cheapest possible
+"new previous generation" card, and not compromising any other components.
+Here is my [pcpartpicker list](https://pcpartpicker.com/user/nanx999/saved/3TZN6h).
+
+![Make sure we sanitize everything before starting...](/image/buildapc-2021-01.jpg)
+
+With the previous experience, this build was relatively easy.
+Installing the AIO CPU liquid cooler might be a bit more complicated
+than expected since I had to reverse the direction of the fans and ensure
+all the plates and screws were set in the proper place.
+
+![Why RGB?](/image/buildapc-2021-02.jpg)
+
+![It still took a few hours.](/image/many-unbearable-hours-later.jpg)
+
+![Test drive.](/image/buildapc-2021-03.jpg)
