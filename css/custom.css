@@ -112,8 +112,8 @@ hr {
 }
 
 .header h1.name {
-    font-weight: 300;
     font-size: 2.5rem;
+    font-weight: 400;
     color: #333333;
     padding-left: 9px;
 }
@@ -149,7 +149,7 @@ hr {
 /* Partial: Content */
 
 .content h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 400;
     color: #333333;
     margin-bottom: 1rem;
 }
@@ -269,8 +269,8 @@ hr {
 }
 
 .content .groupby {
-    font-weight: 300;
     font-size: 2rem;
+    font-weight: 400;
     color: #333333;
     list-style: none;
     margin-top: 10px;
