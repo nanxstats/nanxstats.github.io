@@ -1,7 +1,7 @@
 /* Global styles */
 
 body {
-    font-family: "Source Sans Pro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-feature-settings: "liga", "kern";
     background-color: #fff;
 }
@@ -46,19 +46,15 @@ a:hover, a:focus {
 /* author */
 
 author {
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
 }
 
 /* landing content */
 
 .landing {
-    font-size: 1.3125rem;
-    line-height: 2rem;
-}
-
-.landing p {
-    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.8rem;
 }
 
 /* horizontal rule */
@@ -69,8 +65,8 @@ hr {
 }
 
 .footer hr {
-    margin-top: 1.3rem;
-    margin-bottom: 1.3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 /* selection color */
@@ -108,18 +104,18 @@ hr {
 }
 
 .header .logo {
-    max-height: 100px;
+    max-height: 80px;
 }
 
 .header h1.name {
-    font-size: 2.5rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 600;
     color: #333333;
     padding-left: 9px;
 }
 
 .header ul.nav li {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
 }
 
 .header ul.nav li a {
@@ -149,16 +145,28 @@ hr {
 /* Partial: Content */
 
 .content h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
+    font-weight: 600;
     color: #333333;
     margin-bottom: 1rem;
 }
 
+.content h1 {
+    font-size: 2rem;
+}
+
+.content h2 {
+    font-size: 1.6rem;
+}
+
+.content h3 {
+    font-size: 1.2rem;
+}
+
 .content .meta {
+    font-size: 1rem;
     font-weight: 400;
-    font-size: 1.125rem;
     color: #586069;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .content .meta a {
@@ -174,14 +182,14 @@ hr {
     text-align: center;
     margin-top: 10px;
     color: #586069;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .content .markdown {
-    font-weight: 400;
     font-size: 1.125rem;
+    line-height: 1.8rem;
+    font-weight: 400;
     color: #333333;
-    line-height: 1.75rem;
 }
 
 .content .markdown li {
@@ -196,13 +204,13 @@ hr {
 /* blog post typography */
 
 .content .blog-post-title {
-    font-size: 2.5rem;
-    line-height: 3rem;
+    font-size: 2rem;
+    line-height: 2.6rem;
 }
 
 .content .blog-post-content {
-    font-size: 1.3125rem;
-    line-height: 2rem;
+    font-size: 1.125rem;
+    line-height: 1.8rem;
 }
 
 /* centered, boxed blog post images */
@@ -269,12 +277,12 @@ hr {
 }
 
 .content .groupby {
-    font-size: 2rem;
-    font-weight: 400;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
     color: #333333;
     list-style: none;
-    margin-top: 10px;
-    margin-bottom: 8px;
 }
 
 .content .post-item {
@@ -288,16 +296,16 @@ hr {
 
 .content .post-item .meta-date {
     font-size: 1.125rem;
+    line-height: 1.8rem;
     color: #586069;
-    line-height: 2rem;
     display: block;
-    min-width: 12rem;
+    min-width: 13rem;
     margin-right: -5rem;
 }
 
 .content .post-item .meta-title {
     font-size: 1.125rem;
-    line-height: 2rem;
+    line-height: 1.8rem;
 }
 
 .content .navigation .icon {
@@ -315,7 +323,7 @@ hr {
 
 .footer {
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 .footer a {
@@ -344,10 +352,6 @@ hr {
     min-width: 16em;
 }
 
-.site-social {
-    text-align: right;
-}
-
 .site-social ul {
     list-style-type: none;
     padding: 0;
@@ -368,13 +372,5 @@ hr {
 @media (max-width: 767.98px) {
     html {
         font-size: 0.9rem;
-    }
-}
-
-/* < large screens */
-
-@media (max-width: 991.98px) {
-    .site-social {
-        text-align: left;
     }
 }
