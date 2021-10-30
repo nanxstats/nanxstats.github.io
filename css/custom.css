@@ -15,7 +15,7 @@ html {
 /* link */
 
 a {
-    color: #333333;
+    color: #212529;
     text-decoration: underline;
     background-color: transparent;
 }
@@ -32,8 +32,8 @@ a:hover, a:focus {
 /* button */
 
 .btn-outline-primary {
-    color: #333333;
-    border-color: #333333;
+    color: #212529;
+    border-color: #212529;
 }
 
 .btn-outline-primary:hover {
@@ -52,8 +52,8 @@ author {
 /* landing content */
 
 .landing {
-    font-size: 1.125rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* horizontal rule */
@@ -103,13 +103,13 @@ hr {
 }
 
 .header .logo {
-    max-height: 80px;
+    max-height: 85px;
 }
 
 .header h1.name {
     font-size: 2rem;
     font-weight: 600;
-    color: #333333;
+    color: #212529;
     padding-left: 9px;
 }
 
@@ -124,7 +124,7 @@ hr {
 }
 
 .header ul.nav li a {
-    color: #333333;
+    color: #212529;
     padding: 3px 10px 3px 10px;
     border-radius: 3px;
 }
@@ -137,7 +137,7 @@ hr {
 
 .header ul.nav li a:focus, .header ul.nav li a:active {
     color: #ffffff;
-    background-color: #333333;
+    background-color: #212529;
     text-decoration: none;
 }
 
@@ -145,7 +145,7 @@ hr {
 
 .content h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
-    color: #333333;
+    color: #212529;
     margin-bottom: 1rem;
 }
 
@@ -185,10 +185,10 @@ hr {
 }
 
 .content .markdown {
-    font-size: 1.125rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
     font-weight: 400;
-    color: #333333;
+    color: #212529;
 }
 
 .content .markdown li {
@@ -204,12 +204,12 @@ hr {
 
 .content .blog-post-title {
     font-size: 2rem;
-    line-height: 2.6rem;
+    line-height: 1.45;
 }
 
 .content .blog-post-content {
-    font-size: 1.125rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* centered, boxed blog post images */
@@ -228,7 +228,7 @@ hr {
 
 .content .markdown code {
     /* enclosed by single backtick (`) */
-    color: #333;
+    color: #212529;
     padding: .2em .4em;
     margin: 0;
     font-size: 1rem;
@@ -280,7 +280,7 @@ hr {
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
-    color: #333333;
+    color: #212529;
     list-style: none;
 }
 
@@ -294,8 +294,8 @@ hr {
 }
 
 .content .post-item .meta-date {
-    font-size: 1.125rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
     color: #586069;
     display: block;
     min-width: 13rem;
@@ -303,8 +303,8 @@ hr {
 }
 
 .content .post-item .meta-title {
-    font-size: 1.125rem;
-    line-height: 1.8rem;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 .content .navigation .icon {
@@ -326,7 +326,7 @@ hr {
 }
 
 .footer a {
-    color: #333333;
+    color: #212529;
     text-decoration: none;
 }
 
