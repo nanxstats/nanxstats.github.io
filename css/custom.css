@@ -25,7 +25,7 @@ a:active, a:hover {
 }
 
 a:hover, a:focus {
-    color: #707070;
+    color: #6c757d;
     text-decoration: underline;
 }
 
@@ -38,8 +38,8 @@ a:hover, a:focus {
 
 .btn-outline-primary:hover {
     color: #FFFFFF;
-    background-color: #707070;
-    border-color: #707070;
+    background-color: #6c757d;
+    border-color: #6c757d;
 }
 
 /* author */
@@ -63,8 +63,8 @@ author {
 /* horizontal rule */
 
 hr {
-    border: 0;
-    border-top: 1px solid rgb(140, 140, 140);
+    border-top: 1px solid #212529;
+    opacity: 1;
 }
 
 .footer hr {
@@ -75,30 +75,16 @@ hr {
 /* selection color */
 
 /* ::-moz-selection {
-    background-color: #4072AF;
+    background-color: #6c757d;
     color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background-color: #4072AF;
+    background-color: #6c757d;
     color: #fff;
     text-shadow: none;
 } */
-
-/* Partial: Colors */
-
-.text-patreon {
-    color: #F96854 !important;
-}
-
-.text-ko-fi {
-    color: #DF5000 !important;
-}
-
-.text-bmc {
-    color: #FF813F !important;
-}
 
 /* Partial: Header */
 
@@ -130,7 +116,7 @@ hr {
 .header ul.nav li a {
     color: #212529;
     padding: 3px 10px 3px 10px;
-    border-radius: 3px;
+    border-radius: 0;
 }
 
 .header ul.nav li a:hover {
@@ -168,7 +154,7 @@ hr {
 .content .meta {
     font-size: 1rem;
     font-weight: 400;
-    color: #586069;
+    color: #6c757d;
     margin-bottom: 1rem;
 }
 
@@ -182,10 +168,10 @@ hr {
 }
 
 .content .caption {
+    font-size: 0.9rem;
+    color: #6c757d;
     text-align: center;
-    margin-top: 10px;
-    color: #586069;
-    font-size: 1rem;
+    margin-top: 0.625rem;
 }
 
 .content .markdown {
@@ -208,7 +194,7 @@ hr {
 
 .content .blog-post-title {
     font-size: 2rem;
-    line-height: 1.45;
+    line-height: 1.25;
 }
 
 .content .blog-post-content {
@@ -264,7 +250,7 @@ hr {
 }
 
 .content .markdown blockquote {
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: #7a7a7a;
@@ -300,9 +286,9 @@ hr {
 .content .post-item .meta-date {
     font-size: 1rem;
     line-height: 1.6;
-    color: #586069;
+    color: #6c757d;
     display: block;
-    min-width: 13rem;
+    min-width: 12.2rem;
     margin-right: -5rem;
 }
 
@@ -335,7 +321,7 @@ hr {
 }
 
 .footer a:hover, a:focus {
-    color: #707070;
+    color: #6c757d;
 }
 
 .footer a {
@@ -365,8 +351,8 @@ hr {
 }
 
 .site-social li:not(:last-child)::after {
-    content: '|';
-    color: rgb(220, 220, 220);
+    content: '·';
+    color: #212529;
     margin: 0 0.3rem 0 0.5rem;
 }
 
