@@ -56,6 +56,10 @@ author {
     line-height: 1.6;
 }
 
+.landing>p:last-child {
+    margin-bottom: 0;
+}
+
 /* horizontal rule */
 
 hr {
