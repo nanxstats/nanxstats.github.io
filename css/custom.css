@@ -100,7 +100,7 @@ hr {
     font-size: 2rem;
     font-weight: 600;
     color: #212529;
-    padding-left: 9px;
+    margin-left: 7px;
 }
 
 .header ul.nav li {
@@ -110,24 +110,20 @@ hr {
 .header ul.nav li a {
     flex: 0 1 auto;
     margin-right: 0.5rem;
-    transition: background 0.1s ease-out;
 }
 
 .header ul.nav li a {
     color: #212529;
-    padding: 3px 10px 3px 10px;
-    border-radius: 3px;
+    padding: 3px 8px 3px 8px;
 }
 
 .header ul.nav li a:hover {
-    color: #ffffff;
-    background-color: #6c757d;
+    color: #6c757d;
     text-decoration: none;
 }
 
 .header ul.nav li a:focus, .header ul.nav li a:active {
-    color: #ffffff;
-    background-color: #212529;
+    color: #6c757d;
     text-decoration: none;
 }
 
