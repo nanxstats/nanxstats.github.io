@@ -3,6 +3,8 @@
 body {
     font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: #fff;
+    letter-spacing: -0.01rem;
+    font-variant-ligatures: contextual common-ligatures;
 }
 
 /* Fix jumping scrollbar when switching to long pages */
