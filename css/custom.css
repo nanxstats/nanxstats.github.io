@@ -213,7 +213,7 @@ hr {
 }
 
 .content .markdown code, .content .markdown pre {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: "DM Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     background-color: #fff;
 }
 
@@ -285,12 +285,13 @@ hr {
 }
 
 .content .post-item .meta-date {
+    font-family: "DM Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-size: 1.125rem;
     line-height: 1.75;
     color: #6c757d;
     display: block;
     min-width: 12.2rem;
-    margin-right: -4rem;
+    margin-right: -3.5rem;
 }
 
 .content .post-item .meta-title {
