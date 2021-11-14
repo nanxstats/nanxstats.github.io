@@ -22,10 +22,8 @@ I would rewatch this documentary about a mathematician:
 _Taking the Long View: The Life of Shiing-shen Chern_.
 Here is a short, digested version.
 
-<div class="py-3 col-10 offset-1">
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/16185312" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
+<div class="ratio ratio-16x9">
+<iframe class="embed-responsive-item" src="https://player.vimeo.com/video/16185312" allowfullscreen></iframe>
 </div>
 
 In the full version of the film, among many good interviews, there was
