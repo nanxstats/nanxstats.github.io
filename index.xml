@@ -6,7 +6,19 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>More Than 1,500 File Extensions Are Used Inside R Packages</title>
+      <link>https://nanx.me/blog/post/cran-file-exts/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/cran-file-exts/</guid>
+      <description>The R code to reproduce the results is available from the GitHub repo nanxstats/cran-file-exts.
+ Photo by Pawel Czerwinski.
+ When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.
+To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.</description>
+    </item>
+    
     <item>
       <title>Build a PC During the Great GPU Shortage</title>
       <link>https://nanx.me/blog/post/build-a-pc-during-the-great-gpu-shortage/</link>

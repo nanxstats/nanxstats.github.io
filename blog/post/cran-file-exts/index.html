@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> More Than 1,500 File Extensions Are Used Inside R Packages - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="A glimpse of the file extensions used in R packages." />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nanx.me/blog/post/cran-file-exts/" />
+    <meta property="og:title" content="More Than 1,500 File Extensions Are Used Inside R Packages" />
+    <meta property="og:image" content="https://nanx.me/image/tomatoes-pattern.jpg" />
+    <meta property="og:description" content="A glimpse of the file extensions used in R packages." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="More Than 1,500 File Extensions Are Used Inside R Packages" />
+    <meta name="twitter:description" content="A glimpse of the file extensions used in R packages." />
+    <meta name="twitter:image" content="https://nanx.me/image/tomatoes-pattern.jpg" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/cran-file-exts/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+    <link href="https://nanx.me/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
+    
+</head>
+
+<body>
+    
+<div class="my-4 my-lg-5 header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        
+                        <a href="https://nanx.me/">
+                            <img class="logo img-fluid d-block rounded-circle"
+                                src="https://nanx.me/image/nanxiao.jpg" alt="Portrait of Nan Xiao">
+                        </a>
+                        
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="https://nanx.me/">
+                            <h1 class="name">Nan Xiao</h1>
+                        </a>
+
+                        <ul class="nav nav-primary">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-blog"
+                                    href="https://nanx.me/blog/">
+                                    
+                                    Blog
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-software"
+                                    href="https://nanx.me/software/">
+                                    
+                                    Software
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-papers"
+                                    href="https://nanx.me/papers/">
+                                    
+                                    Papers
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-talks"
+                                    href="https://nanx.me/talks/">
+                                    
+                                    Talks
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-books"
+                                    href="https://nanx.me/books/">
+                                    
+                                    Books
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <h1 class="blog-post-title">More Than 1,500 File Extensions Are Used Inside R Packages</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Wed Dec 1 2021 00:00:00 UTC'>
+                        2021-12-01
+                    </span>
+
+                    <span class="reading-time middot">
+                        6 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+<script src="https://nanx.me/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="https://nanx.me/rmarkdown-libs/core-js/shim.min.js"></script>
+<script src="https://nanx.me/rmarkdown-libs/react/react.min.js"></script>
+<script src="https://nanx.me/rmarkdown-libs/react/react-dom.min.js"></script>
+<script src="https://nanx.me/rmarkdown-libs/reactwidget/react-tools.js"></script>
+<script src="https://nanx.me/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="https://nanx.me/rmarkdown-libs/reactable-binding/reactable.js"></script>
+
+
+<blockquote>
+<p>The R code to reproduce the results is available from the GitHub repo
+<a href="https://github.com/nanxstats/cran-file-exts">nanxstats/cran-file-exts</a>.</p>
+</blockquote>
+<div class="figure">
+<img src="https://nanx.me/image/tomatoes-pattern.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/3T4rfR_XZf0">Pawel Czerwinski</a>.</p>
+</div>
+<p>When applied correctly, file extensions can be informative.
+They are the very first clue on handling a specific file
+without parsing the file content.</p>
+<p>To properly <a href="https://github.com/Merck/pkglite/issues/20">capture</a> and
+<a href="https://github.com/Merck/pkglite/issues/18">classify</a> files in
+source R packages, I am interested in learning what file extensions
+are frequently used by R packages.</p>
+<p>We can achieve this easily by downloading all R packages available
+from CRAN one at a time and collect the file extensions inside:</p>
+<pre class="r"><code>library(&quot;curl&quot;)
+library(&quot;tools&quot;)
+
+repo &lt;- &quot;https://cran.rstudio.com/&quot;
+db &lt;- as.data.frame(available.packages(paste0(repo, &quot;src/contrib/&quot;)), stringsAsFactors = FALSE)
+pkgs &lt;- db$Package
+files &lt;- paste0(pkgs, &quot;_&quot;, db$Version, &quot;.tar.gz&quot;)
+links &lt;- paste0(repo, &quot;src/contrib/&quot;, files)
+
+find_ext &lt;- function(path) {
+  x &lt;- unique(file_ext(untar(path, list = TRUE)))
+  x[!(x %in% &quot;&quot;)]
+}
+
+for (i in seq_along(pkgs)) {
+  cat(&quot;Downloading&quot;, i, &quot;/&quot;, length(pkgs), &quot;\n&quot;)
+  curl_download(links[i], destfile = files[i])
+  x &lt;- find_ext(files[i])
+  write(paste0(x, collapse = &quot;\t&quot;), file = &quot;exts.txt&quot;, append = TRUE)
+  unlink(files[i])
+}</code></pre>
+<p>Since this is very one-dimensional, we should look into the frequency table:</p>
+<pre class="r"><code>x &lt;- readLines(&quot;exts.txt&quot;)
+x &lt;- tolower(unlist(strsplit(x, split = &quot;\t&quot;)))
+y &lt;- sort(table(x), decreasing = TRUE)</code></pre>
+<p>It looks like we have 1,529 file extensions.
+It is also likely a heavy-tailed distribution,
+with 96% of all files designated 5% of the unique file types.</p>
+<pre class="r"><code>length(y)</code></pre>
+<pre><code>#&gt; [1] 1529</code></pre>
+<pre class="r"><code>z &lt;- y[y &gt; 50L]
+length(z) / length(y)</code></pre>
+<pre><code>#&gt; [1] 0.04905167</code></pre>
+<pre class="r"><code>sum(z) / sum(y)</code></pre>
+<pre><code>#&gt; [1] 0.9611313</code></pre>
+<p>We can also cluster this frequency data with any one-dimensional data
+clustering algorithm such as the maximum homogeneity clustering,
+implemented in my R package <a href="https://nanx.me/oneclust/">oneclust</a>.
+Say, we are interested in file extensions that appeared &gt;=5 times:</p>
+<pre class="r"><code>library(&quot;oneclust&quot;)
+
+eoi &lt;- y[y &gt; 4L]
+cl &lt;- oneclust(eoi, 4)
+cl$cluster</code></pre>
+<pre><code>#&gt;   [1] 4 4 3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt;  [38] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt;  [75] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [112] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [186] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [223] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [260] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+<p>Create a table for everything and display it with the awesome
+<a href="https://glin.github.io/reactable/">reactable</a>:</p>
+<pre class="r"><code>df &lt;- data.frame(
+  &quot;ext&quot; = names(eoi),
+  &quot;mime&quot; = mime::guess_type(paste0(&quot;.&quot;, names(eoi))),
+  &quot;count&quot; = as.vector(eoi),
+  &quot;cluster&quot; = dplyr::recode(cl$cluster, `1` = 4, `2` = 3, `3` = 2, `4` = 1)
+)</code></pre>
+<p>After looking into the table, what is <strong>your</strong> interesting discovery?</p>
+<div id="htmlwidget-1" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"ext":["r","rd","md","rds","rda","rmd","html","png","pdf","cpp","rdata","c","h","rdb","bib","win","txt","rnw","csv","svg","css","js","jpg","gz","in","save","f","json","yaml","gif","tex","dcf","hpp","asis","ac","xml","cc","yml","sh","rinstignore","xlsx","csl","zip","note","sty","dat","f90","py","jar","pot","tif","stan","dbf","shp","shx","tsv","ttf","jpeg","mo","map","po","bst","log","prj","def","java","xls","fasta","db","ico","orig","rdx","ucrt","woff","out","bed","docx","tab","pptx","cls","eot","rout","nc","bin","el","bat","bz2","ltx","eps","woff2","bim","fam","pl","xz","sav","m4","wav","gpkg","f95","dta","grd","scss","cmake","stex","m","tre","xsd","gri","ini","org","asc","aux","conf","rsp","cpg","geojson","sbn","sbx","class","ped","rtex","s","sql","mat","snw","guess","pyc","sqlite","sub","vcf","cu","fa","ps","q","rst","tiff","bibtex","lua","mk","nex","rtf","inp","og","properties","raw","data","doc","enc","ipp","ods","otf","pdb","rproj","rs","1","am","awk","bam","bmp","dtd","dtx","fas","hdr","hh","htm","inc","kml","lock","lst","mp3","qpj","sas","xsl","brew","markdown","old","rc","tcl","tmpl","toml","xpt","ai","cfg","do","gmt","id","lyx","mod","mp4","odg","odt","par","patch","pgm","rhtml","sas7bdat","template","tgz","tmp","0","arff","cmd","cov","h5","jl","less","parquet","pem","ppm","proto","rb","sample","sqlite3","t","tbi","test","textgrid","toc","3","bai","bbl","cl","ctl","fastq","gen","gpx","graffle","idx","jags","l","mtx","nii","nw","pnm","rdc","scala","sln","tpl","tree","xcf","y","afm","bash","blg","bug","cdf","cor","crt","cuh","diff","ext","feather","fits","fls","for","gff","img","inl","input","jdx","key","md5","mdb","mingw","msf","net","php","ply","pub","rasciidoc","rt","seq","spc","srt","tar","windows"],"mime":["text/plain","text/plain","text/markdown","application/octet-stream","application/octet-stream","text/x-markdown","text/html","image/png","application/pdf","text/x-c++src","application/octet-stream","text/x-csrc","text/x-chdr","application/octet-stream","text/x-bibtex","application/octet-stream","text/plain","text/x-sweave","text/csv","image/svg+xml","text/css","application/javascript","image/jpeg","application/gzip","application/octet-stream","application/octet-stream","application/octet-stream","application/json","application/octet-stream","image/gif","text/x-tex","application/octet-stream","text/x-c++hdr","application/octet-stream","application/octet-stream","application/xml","text/x-c++src","text/yaml","application/x-sh","application/octet-stream","application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","application/octet-stream","application/zip","application/octet-stream","text/x-tex","application/octet-stream","application/octet-stream","text/x-python","application/java-archive","text/plain","image/tiff","application/octet-stream","application/octet-stream","application/x-qgis","application/x-qgis","text/tab-separated-values","application/font-sfnt","image/jpeg","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","text/x-java","application/vnd.ms-excel","application/octet-stream","application/octet-stream","image/vnd.microsoft.icon","application/octet-stream","application/octet-stream","application/octet-stream","application/font-woff","application/octet-stream","application/octet-stream","application/vnd.openxmlformats-officedocument.wordprocessingml.document","application/octet-stream","application/vnd.openxmlformats-officedocument.presentationml.presentation","text/x-tex","application/vnd.ms-fontobject","application/octet-stream","application/x-netcdf","application/octet-stream","application/octet-stream","application/x-msdos-program","application/octet-stream","text/x-tex","application/postscript","application/octet-stream","application/octet-stream","application/octet-stream","text/x-perl","application/x-xz","application/octet-stream","application/octet-stream","audio/x-wav","application/geopackage+sqlite3","application/octet-stream","application/octet-stream","application/octet-stream","text/css","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/xml","application/octet-stream","application/octet-stream","application/octet-stream","text/plain","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/vnd.geo+json","application/octet-stream","application/octet-stream","application/java-vm","application/octet-stream","application/octet-stream","application/octet-stream","application/x-sql","application/octet-stream","application/octet-stream","application/octet-stream","application/x-python-code","application/octet-stream","application/octet-stream","text/vcard","application/cu-seeme","application/octet-stream","application/postscript","application/octet-stream","application/octet-stream","image/tiff","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/rtf","chemical/x-gamess-input","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/msword","application/octet-stream","application/octet-stream","application/vnd.oasis.opendocument.spreadsheet","application/font-sfnt","chemical/x-pdb","text/rstudio","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","image/x-ms-bmp","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","text/x-c++hdr","text/html","application/octet-stream","application/vnd.google-earth.kml+xml","application/octet-stream","application/octet-stream","audio/mpeg","application/octet-stream","application/octet-stream","application/xslt+xml","application/octet-stream","text/markdown","application/x-trash","application/octet-stream","application/x-tcl","application/octet-stream","application/octet-stream","application/octet-stream","application/postscript","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/x-lyx","application/octet-stream","video/mp4","application/vnd.oasis.opendocument.graphics","application/vnd.oasis.opendocument.text","application/octet-stream","text/x-diff","image/x-portable-graymap","application/octet-stream","application/octet-stream","application/octet-stream","application/x-gtar-compressed","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","image/x-portable-pixmap","application/octet-stream","application/x-ruby","application/octet-stream","application/octet-stream","application/x-troff","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","chemical/x-genbank","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","image/x-portable-anymap","application/octet-stream","text/x-scala","application/octet-stream","application/octet-stream","application/octet-stream","application/x-xcf","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/x-cdf","application/octet-stream","application/x-x509-ca-cert","application/octet-stream","text/x-diff","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","chemical/x-jcamp-dx","application/pgp-keys","application/octet-stream","application/msaccess","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","application/octet-stream","chemical/x-galactic-spc","text/plain","application/x-tar","application/octet-stream"],"count":[19725,18615,8983,7157,6706,5869,5670,3826,2689,2680,2442,2211,2192,1932,1801,1569,1447,1259,1002,688,641,537,506,489,311,311,296,275,273,259,259,254,254,240,213,204,190,181,179,174,161,140,136,128,125,123,120,113,111,99,99,96,92,83,82,79,76,75,74,73,72,68,66,65,64,60,60,59,57,57,55,55,55,53,51,48,48,46,43,41,40,40,39,36,36,34,34,34,32,32,31,31,30,29,28,27,27,26,24,23,23,23,22,22,21,21,21,20,20,20,19,19,19,19,18,18,18,18,17,17,17,17,17,16,16,15,15,15,15,15,14,14,14,14,14,14,13,13,13,13,13,12,12,12,12,11,11,11,11,11,11,11,11,11,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,9,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5],"cluster":[1,1,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4]},"columns":[{"accessor":"ext","name":"File Extension","type":"character"},{"accessor":"mime","name":"Media Type","type":"character","style":{"fontSize":"12px"}},{"accessor":"count","name":"Count","type":"numeric","style":{"fontFamily":"'DM Mono', monospace"}},{"accessor":"cluster","name":"Cluster","type":"numeric","style":[{"color":"#e69f00","fontFamily":"'DM Mono', monospace"},{"color":"#e69f00","fontFamily":"'DM Mono', monospace"},{"color":"#56b4e9","fontFamily":"'DM Mono', monospace"},{"color":"#56b4e9","fontFamily":"'DM Mono', monospace"},{"color":"#56b4e9","fontFamily":"'DM Mono', monospace"},{"color":"#56b4e9","fontFamily":"'DM Mono', monospace"},{"color":"#56b4e9","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#009e73","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"},{"color":"#f0e442","fontFamily":"'DM Mono', monospace"}]}],"searchable":true,"defaultPageSize":10,"paginationType":"numbers","showPageInfo":true,"minRows":1,"theme":{"style":{"fontFamily":"'DM Sans', sans-serif","fontSize":"16px"}},"dataKey":"e44fb55cc2a72c2ae65442d42e75fbb2","key":"e44fb55cc2a72c2ae65442d42e75fbb2"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/build-a-pc-during-the-great-gpu-shortage/">« Build a PC During the Great GPU Shortage</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer mt-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                
+                <div class="site-copyright">
+                    © 2011–2021 Nan Xiao
+                </div>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1 mb-5">
+            <div class="col-sm-12 col-lg-6">
+                <div class="site-social">
+                    <ul>
+                        
+
+                        
+                        <li><a href="https://github.com/nanxstats" target="_blank"
+                                rel="noopener">GitHub</a></li>
+                        
+
+                        
+
+                        
+
+                        
+                        <li><a href="https://twitter.com/nanxstats" target="_blank"
+                                rel="noopener">Twitter</a></li>
+                        
+
+                        
+                        <li><a href="https://www.linkedin.com/in/nanxstats" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/colophon/">Colophon</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/index.xml" class="mr-0">RSS</a></li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/r.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.highlightAll();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>

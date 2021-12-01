@@ -1,0 +1,145 @@
+---
+title: "More Than 1,500 File Extensions Are Used Inside R Packages"
+author: "Nan Xiao"
+date: "2021-12-01"
+slug: cran-file-exts
+categories: []
+tags:
+  - R
+meta_img: image/tomatoes-pattern.jpg
+description: "A glimpse of the file extensions used in R packages."
+---
+
+> The R code to reproduce the results is available from the GitHub repo
+> [nanxstats/cran-file-exts](https://github.com/nanxstats/cran-file-exts).
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(comment = "#>", echo = TRUE, message = FALSE)
+```
+
+![Photo by [Pawel Czerwinski](https://unsplash.com/photos/3T4rfR_XZf0).](/image/tomatoes-pattern.jpg)
+
+When applied correctly, file extensions can be informative.
+They are the very first clue on handling a specific file
+without parsing the file content.
+
+To properly [capture](https://github.com/Merck/pkglite/issues/20) and
+[classify](https://github.com/Merck/pkglite/issues/18) files in
+source R packages, I am interested in learning what file extensions
+are frequently used by R packages.
+
+We can achieve this easily by downloading all R packages available
+from CRAN one at a time and collect the file extensions inside:
+
+```{r, eval=FALSE}
+library("curl")
+library("tools")
+
+repo <- "https://cran.rstudio.com/"
+db <- as.data.frame(available.packages(paste0(repo, "src/contrib/")), stringsAsFactors = FALSE)
+pkgs <- db$Package
+files <- paste0(pkgs, "_", db$Version, ".tar.gz")
+links <- paste0(repo, "src/contrib/", files)
+
+find_ext <- function(path) {
+  x <- unique(file_ext(untar(path, list = TRUE)))
+  x[!(x %in% "")]
+}
+
+for (i in seq_along(pkgs)) {
+  cat("Downloading", i, "/", length(pkgs), "\n")
+  curl_download(links[i], destfile = files[i])
+  x <- find_ext(files[i])
+  write(paste0(x, collapse = "\t"), file = "exts.txt", append = TRUE)
+  unlink(files[i])
+}
+```
+
+Since this is very one-dimensional, we should look into the frequency table:
+
+```{r}
+x <- readLines("exts.txt")
+x <- tolower(unlist(strsplit(x, split = "\t")))
+y <- sort(table(x), decreasing = TRUE)
+```
+
+It looks like we have 1,529 file extensions.
+It is also likely a heavy-tailed distribution,
+with 96\% of all files designated 5\% of the unique file types.
+
+```{r}
+length(y)
+z <- y[y > 50L]
+length(z) / length(y)
+sum(z) / sum(y)
+```
+
+We can also cluster this frequency data with any one-dimensional data
+clustering algorithm such as the maximum homogeneity clustering,
+implemented in my R package [oneclust](https://nanx.me/oneclust/).
+Say, we are interested in file extensions that appeared >=5 times:
+
+```{r}
+library("oneclust")
+
+eoi <- y[y > 4L]
+cl <- oneclust(eoi, 4)
+cl$cluster
+```
+
+Create a table for everything and display it with the awesome
+[reactable](https://glin.github.io/reactable/):
+
+```{r}
+df <- data.frame(
+  "ext" = names(eoi),
+  "mime" = mime::guess_type(paste0(".", names(eoi))),
+  "count" = as.vector(eoi),
+  "cluster" = dplyr::recode(cl$cluster, `1` = 4, `2` = 3, `3` = 2, `4` = 1)
+)
+```
+
+After looking into the table, what is **your** interesting discovery?
+
+```{r, echo=FALSE}
+library("reactable")
+
+reactable(
+  df,
+  searchable = TRUE,
+  pagination = TRUE,
+  showSortIcon = TRUE,
+  theme = reactableTheme(
+    style = list(
+      fontFamily = "'DM Sans', sans-serif",
+      fontSize = "16px"
+    )
+  ),
+  columns = list(
+    ext = colDef(
+      name = "File Extension"
+    ),
+    mime = colDef(
+      name = "Media Type",
+      style = list(
+        fontSize = "12px"
+      )
+    ),
+    count = colDef(
+      name = "Count",
+      style = list(
+        fontFamily = "'DM Mono', monospace"
+      )
+    ),
+    cluster = colDef(
+      name = "Cluster",
+      style = function(value) {
+        list(
+          color = oneclust::cud(value),
+          fontFamily = "'DM Mono', monospace"
+        )
+      }
+    )
+  )
+)
+```
