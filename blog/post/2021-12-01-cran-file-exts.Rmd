@@ -111,7 +111,6 @@ reactable(
   showSortIcon = TRUE,
   theme = reactableTheme(
     style = list(
-      fontFamily = "'DM Sans', sans-serif",
       fontSize = "16px"
     )
   ),
@@ -126,17 +125,13 @@ reactable(
       )
     ),
     count = colDef(
-      name = "Count",
-      style = list(
-        fontFamily = "'DM Mono', monospace"
-      )
+      name = "Count"
     ),
     cluster = colDef(
       name = "Cluster",
       style = function(value) {
         list(
-          color = oneclust::cud(value),
-          fontFamily = "'DM Mono', monospace"
+          color = oneclust::cud(value)
         )
       }
     )

@@ -1,7 +1,7 @@
 /* Global styles */
 
 body {
-    font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     background-color: #fff;
     font-variant-ligatures: contextual common-ligatures;
 }
@@ -213,7 +213,7 @@ hr {
 }
 
 .content .markdown code, .content .markdown pre {
-    font-family: "DM Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     background-color: #fff;
 }
 
@@ -285,7 +285,7 @@ hr {
 }
 
 .content .post-item .meta-date {
-    font-family: "DM Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
     font-size: 1.125rem;
     line-height: 1.75;
     color: #6c757d;
