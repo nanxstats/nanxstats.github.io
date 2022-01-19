@@ -6,13 +6,49 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>css</title>
+      <link>https://nanx.me/tags/css/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>native font stack</title>
+      <link>https://nanx.me/tags/native-font-stack/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/native-font-stack/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>system font stack</title>
+      <link>https://nanx.me/tags/system-font-stack/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/system-font-stack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web typography</title>
+      <link>https://nanx.me/tags/web-typography/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/web-typography/</guid>
       <description></description>
     </item>
     
@@ -463,42 +499,6 @@
       <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/bootstrap-4/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>css</title>
-      <link>https://nanx.me/tags/css/</link>
-      <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>native font stack</title>
-      <link>https://nanx.me/tags/native-font-stack/</link>
-      <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/native-font-stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>system font stack</title>
-      <link>https://nanx.me/tags/system-font-stack/</link>
-      <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/system-font-stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>web typography</title>
-      <link>https://nanx.me/tags/web-typography/</link>
-      <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/web-typography/</guid>
       <description></description>
     </item>
     

@@ -6,7 +6,19 @@
     <description>Recent content in css on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 13 Mar 2018 02:20:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Font Variant Numeric</title>
+      <link>https://nanx.me/blog/post/font-variant-numeric/</link>
+      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/font-variant-numeric/</guid>
+      <description>TL;DR: If you use the native font stack (the default in Bootstrap 4+), check the numbers displayed in tables, especially on Apple’s platforms.
+ Photo by Jen Theodore.
+ A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:
+ Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
+    </item>
+    
     <item>
       <title>The Return of the Native Font Stack</title>
       <link>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</link>
