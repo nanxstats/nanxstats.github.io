@@ -18,7 +18,7 @@ description: Customize the distill syntax highlighting theme with a few lines of
 
 The [distill](https://rstudio.github.io/distill/) (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found [this issue](https://github.com/rstudio/distill/issues/19):
 
-![&nbsp;](/image/distill-custom-highlight-theme.png)
+![&nbsp;](distill-custom-highlight-theme.png)
 
 I was a bit surprised and sad that there is no easy way to customize it. As a person with some opinions myself, I entirely respect the design choices, while I do hold some alternative views on two aspects of this.
 

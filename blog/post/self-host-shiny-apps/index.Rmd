@@ -38,7 +38,7 @@ In my opinion, the main technical reasons to create a self-hosting server may in
 
 In brief, it looks like this:
 
-![A diagram of the checkpoints.](/image/self-hosting-shiny-diagram.png)
+![A diagram of the checkpoints.](self-hosting-shiny-diagram.png)
 
 Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:
 

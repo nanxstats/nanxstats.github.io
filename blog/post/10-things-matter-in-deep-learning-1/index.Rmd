@@ -20,7 +20,7 @@ This post will be the beginning of a five post series. The series will not try t
 
 ## 1. Unified Learning Framework
 
-<img src="/image/tensors-flowing.gif" align="right" width="200">
+<img src="tensors-flowing.gif" align="right" width="200">
 
 _One framework to rule them all._
 
@@ -42,7 +42,7 @@ Not surprisingly, the similarity inspired people to explore renovating tradition
 
 Bayesian deep learning can be useful in many scenarios requiring probabilistic inference. However, for some cases, especially in NLP applications, I doubt the models will have decent (predictive) performance gains by incorporating a DNN component, since many problems in text modeling are not as difficult as the problems in image recognition or speech recognition. As an example, there are some possibilities for doing "deep topic modeling," but if I want to be more statistically rigorous, I would still prefer methods that do [exact inference using MCMC](https://dl.acm.org/citation.cfm?id=2741115). In the end, we would mostly expect such crossovers help improve the scalability or interpretability of the existing models.
 
-![Figure: [Latent color topics](https://nanx.me/posters/chromaclust-poster-hg48600.pdf) in movie poster design, learned by vanilla LDA.](/image/lda-movie-poster-color-topics.png)
+![Figure: [Latent color topics](https://nanx.me/posters/chromaclust-poster-hg48600.pdf) in movie poster design, learned by vanilla LDA.](lda-movie-poster-color-topics.png)
 
 Several probabilistic programming frameworks are being built for Bayesian deep learning (or just Bayesian modeling), including [Edward](http://edwardlib.org/), [ZhuSuan](https://github.com/thu-ml/zhusuan), and [greta](https://greta-stats.org/). To some degree, they are very similar to [Stan](https://mc-stan.org), whereas they took alternative approaches for optimization.
 

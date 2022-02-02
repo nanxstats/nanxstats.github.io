@@ -8,7 +8,6 @@ tags:
   - R
   - Common Workflow Language
   - BioCompute Objects
-meta_img: image/tidycwl-gatk4-wgs.png
 description: "An overview of the new R packages: tidycwl and biocompute"
 ---
 

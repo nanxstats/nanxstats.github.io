@@ -6,9 +6,11 @@ slug: build-a-pc-during-the-great-gpu-shortage
 categories: []
 tags:
   - buildapc
-meta_img: image/buildapc-2021-02.jpg
+meta_img: "image/will-porada-DH5183gvKUg-unsplash.jpg"
 description: "Build a PC during the great GPU shortage."
 ---
+
+![Photo by [Will Porada](https://unsplash.com/photos/DH5183gvKUg).](/image/will-porada-DH5183gvKUg-unsplash.jpg)
 
 Apparently, I underestimated the severity of the ongoing GPU shortage
 when I decided to Marie Kondo my
@@ -22,15 +24,15 @@ Nevertheless, my solution is to find the cheapest possible
 "new previous generation" card, and not compromising any other components.
 Here is my [pcpartpicker list](https://pcpartpicker.com/user/nanx999/saved/3TZN6h).
 
-![Make sure we sanitize everything before starting...](/image/buildapc-2021-01.jpg)
+![Make sure we sanitize everything before starting...](buildapc-2021-01.jpg)
 
 With the previous experience, this build was relatively easy.
 Installing the AIO CPU liquid cooler might be a bit more complicated
 than expected since I had to reverse the direction of the fans and ensure
 all the plates and screws were set in the proper place.
 
-![Why RGB?](/image/buildapc-2021-02.jpg)
+![Why RGB?](buildapc-2021-02.jpg)
 
-![It still took a few hours.](/image/many-unbearable-hours-later.jpg)
+![It still took a few hours.](many-unbearable-hours-later.jpg)
 
-![Test drive.](/image/buildapc-2021-03.jpg)
+![Test drive.](buildapc-2021-03.jpg)

@@ -233,7 +233,7 @@ Note: this is for illustrating the modeling processes only. It is not a comprehe
   nsteps = 20, tune.nsteps = &quot;ebic&quot;
 )</code></pre>
 <div class="figure">
-<img src="https://nanx.me/image/greta-msaenet-coef.png" alt="" />
+<img src="greta-msaenet-coef.png" alt="" />
 <p class="caption">Coefficient path and Extended BIC in 20 adaptive estimation steps.</p>
 </div>
 <p>We achieved the lowest EBIC in step 2, which is equivalent to an adaptive elastic-net model. We selected 36 variables in total: all the 10 true variables and 26 false positive variables. The MSE is 203.</p>
@@ -246,7 +246,7 @@ Note: this is for illustrating the modeling processes only. It is not a comprehe
 cv_lasso &lt;- cv.glmnet(x, y, family = &quot;gaussian&quot;, alpha = 1, nfolds = 10)
 fit_lasso &lt;- glmnet(x, y, family = &quot;gaussian&quot;, alpha = 1, lambda = cv_lasso$lambda.min)</code></pre>
 <div class="figure">
-<img src="https://nanx.me/image/greta-glmnet-cv.png" alt="" />
+<img src="greta-glmnet-cv.png" alt="" />
 <p class="caption">The lambda grid and cross-validation errors for lasso.</p>
 </div>
 <p>The model selected 56 variables in total: all the 10 true variables and 46 false positive variables. The MSE is 202.</p>
@@ -267,12 +267,12 @@ m &lt;- model(intercept, coefs, sd)
 draws_blasso &lt;- mcmc(m, warmup = 1000, n_samples = 5000, chains = 8)</code></pre>
 <p>The computational graph by plotting <code>m</code>:</p>
 <div class="figure">
-<img src="https://nanx.me/image/greta-bayesian-lasso-graph.png" alt="" />
+<img src="greta-bayesian-lasso-graph.png" alt="" />
 <p class="caption">Bayesian lasso</p>
 </div>
 <p>Plot the posterior mean and 95% credible interval of the coefficients:</p>
 <div class="figure">
-<img src="https://nanx.me/image/greta-bayesian-lasso-coef.png" alt="" />
+<img src="greta-bayesian-lasso-coef.png" alt="" />
 <p class="caption">Posterior of the coefficients from Bayesian lasso. We check whether the 95% credible interval covers 0 to determine if a variable is selected.</p>
 </div>
 <p>The model selected 16 variables: all the 10 true variables with 6 false positive variables. The MSE is 217.</p>

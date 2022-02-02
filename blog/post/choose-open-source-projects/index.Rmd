@@ -1,7 +1,7 @@
 ---
 title: 3 Simple Criteria for Choosing Open Source Projects
 author: Nan Xiao
-date: '2018-03-12'
+date: "2018-03-12"
 slug: choose-open-source-projects
 categories: []
 tags:
@@ -48,7 +48,7 @@ reflecting if the direction for the project is right enough. The value should
 be the final dominating factor that decides if a project is worth starting at all.
 
 <div class="text-center">
-![Shut up and take my money! (Futurama)](/image/shut-up-and-take-my-money.gif)
+![Shut up and take my money! (Futurama)](shut-up-and-take-my-money.gif)
 </div>
 
 In real life, sometimes it is challenging for us to give up the
@@ -86,7 +86,7 @@ the [joyplot/ridgeline plot](http://blog.revolutionanalytics.com/2017/07/joyplot
 or a web/mobile application that users could see and experience in person.
 
 <div class="text-center">
-![Homer backs into things... (The Simpsons)](/image/homer-backs-into-things.gif)
+![Homer backs into things... (The Simpsons)](homer-backs-into-things.gif)
 </div>
 
 In reality, it is not that simple. A project could have both
@@ -107,7 +107,7 @@ which is necessary for creating open source software.
 
 This also happens to be very, very accurate for developing a one-person project.
 
-![Jaguar (Rick and Morty)](/image/rick-and-morty-jaguar.png)
+![Jaguar (Rick and Morty)](rick-and-morty-jaguar.png)
 
 Before we start, we should try to make a general plan and sketch a timeline
 for the project. We should focus on the projects which could be done or

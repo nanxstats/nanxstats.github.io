@@ -34,6 +34,6 @@ Tanka theme in RStudio. Simply click `File` → `New Project` →
 `New Directory` → `Website using blogdown`, then fill the "Hugo theme"
 field with `nanxstats/hugo-tanka`.
 
-![Figure: Creating a blogdown site with the Hugo Tanka theme in RStudio.](/image/rstudio-tanka.png)
+![Figure: Creating a blogdown site with the Hugo Tanka theme in RStudio.](rstudio-tanka.png)
 
 Let me know if you have any questions or suggestions for this theme. Enjoy!

@@ -23,7 +23,7 @@ Boyle, Evan A., Yang I. Li, and Jonathan K. Pritchard. [An expanded view of comp
 
 This paper attracted a lot of discussions on social media. The hypothesis is straightforward: complex traits are affected by a few "core genes" and many highly interconnected "networks of genes" together. For me, this idea is intuitive and offers an almost direct explanation for unsolved issues like missing heritability. It pointed out a promising direction and infinite possibilities for follow-up research. The obvious question is, how to quantitatively model this idea in a way that is statistically or mathematically feasible.
 
-![Figure: The omnigenic model for complex traits.](/image/omnigenic-model.png)
+![Figure: The omnigenic model for complex traits.](omnigenic-model.png)
 
 For people who work in statistics, this probably means your regression model will not be necessarily sparse, and that could be a technical challenge for modeling high-dimensional data. At least, more subtlety or "levels" in your regularization is probably desired: beyond a few core true variables with large effect sizes, many more true variables can be highly-correlated, can be somehow clustered, or can be from networks of variables.
 

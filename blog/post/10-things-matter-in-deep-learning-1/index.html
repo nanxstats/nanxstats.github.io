@@ -172,7 +172,7 @@
 <p>This post will be the beginning of a five post series. The series will not try to be a comprehensive or even up-to-date overview of this topic. Instead, it serves as an opinionated record of the directions I think worth exploring in this field, according to my (limited) observations in the past five years. Note that a lot of the places in the DL land are still uncharted territories, so as usual, viewer discretion is advised.</p>
 <div id="unified-learning-framework" class="section level2">
 <h2>1. Unified Learning Framework</h2>
-<p><img src="https://nanx.me/image/tensors-flowing.gif" align="right" width="200"></p>
+<p><img src="tensors-flowing.gif" align="right" width="200"></p>
 <p><em>One framework to rule them all.</em></p>
 <p>If there is only one thing that really matters in DL, this is it.</p>
 <p>Deep learning offers a unified, scalable framework for large-scale machine learning modeling. You can simply formulate a machine learning problem as minimizing a loss function, reparameterize and replace the traditional components that connect the input and outcome with deep neural networks, then optimize the (differentiable) system with an off-the-shelve optimizer, most likely a derivative version of stochastic gradient descent (SGD).</p>
@@ -186,7 +186,7 @@
 <p>Not surprisingly, the similarity inspired people to explore renovating traditional Bayesian models with the help of deep neural networks, or vice versa, integrating uncertainty and probabilistic inference into deep neural network structures for better interpretability. Such efforts can be categorized under the name “Bayesian deep learning.”</p>
 <p>Bayesian deep learning can be useful in many scenarios requiring probabilistic inference. However, for some cases, especially in NLP applications, I doubt the models will have decent (predictive) performance gains by incorporating a DNN component, since many problems in text modeling are not as difficult as the problems in image recognition or speech recognition. As an example, there are some possibilities for doing “deep topic modeling,” but if I want to be more statistically rigorous, I would still prefer methods that do <a href="https://dl.acm.org/citation.cfm?id=2741115">exact inference using MCMC</a>. In the end, we would mostly expect such crossovers help improve the scalability or interpretability of the existing models.</p>
 <div class="figure">
-<img src="https://nanx.me/image/lda-movie-poster-color-topics.png" alt="" />
+<img src="lda-movie-poster-color-topics.png" alt="" />
 <p class="caption">Figure: <a href="https://nanx.me/posters/chromaclust-poster-hg48600.pdf">Latent color topics</a> in movie poster design, learned by vanilla LDA.</p>
 </div>
 <p>Several probabilistic programming frameworks are being built for Bayesian deep learning (or just Bayesian modeling), including <a href="http://edwardlib.org/">Edward</a>, <a href="https://github.com/thu-ml/zhusuan">ZhuSuan</a>, and <a href="https://greta-stats.org/">greta</a>. To some degree, they are very similar to <a href="https://mc-stan.org">Stan</a>, whereas they took alternative approaches for optimization.</p>

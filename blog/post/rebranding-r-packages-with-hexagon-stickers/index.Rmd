@@ -44,7 +44,7 @@ I selected a low-saturated color palette
 [vintage card](https://color.adobe.com/Kopia-vintage-card-color-theme-11990015/)
 to convey a mild, sophisticated message.
 
-![Vintage card color palette.](/image/kopia-vintage-card.png)
+![Vintage card color palette.](kopia-vintage-card.png)
 
 The rest is easy:
 

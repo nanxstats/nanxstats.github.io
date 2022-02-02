@@ -85,7 +85,7 @@ The key parameters to tune here are:
 
 The loss and accuracy changes in each epoch are visualized below:
 
-![Figure: Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7.](/image/r-keras-recsys-loss-accuracy.png)
+![Figure: Converges within 10 epochs (after some slight tuning). The accuracy is around 0.7.](r-keras-recsys-loss-accuracy.png)
 
 ## Comments
 

@@ -93,24 +93,24 @@ All table columns are right-aligned.
 
 San Francisco for macOS:
 
-![San Francisco (more accurately, SF Pro Text)](/image/tnum-sf-pro.png)
+![San Francisco (more accurately, SF Pro Text)](tnum-sf-pro.png)
 
 Apple's previous defaults, Helvetica Neue and Lucida Grande:
 
-![Helvetica Neue](/image/tnum-helvetica-neue.png)
+![Helvetica Neue](tnum-helvetica-neue.png)
 
-![Lucida Grande](/image/tnum-lucida-grande.png)
+![Lucida Grande](tnum-lucida-grande.png)
 
 Segoe UI for Windows:
 
-![Segoe UI](/image/tnum-segoe-ui.png)
+![Segoe UI](tnum-segoe-ui.png)
 
 Roboto for Android:
 
-![Roboto](/image/tnum-roboto.png)
+![Roboto](tnum-roboto.png)
 
 Oh, last but not least:
 
-![](/image/font-typeface-batman-slapping-robin-meme.png)
+![](font-typeface-batman-slapping-robin-meme.png)
 
 [Source](https://fuckyeahtypefacedesign.tumblr.com/post/42119630673/so-you-draw-fonts-anonymously-submitted).

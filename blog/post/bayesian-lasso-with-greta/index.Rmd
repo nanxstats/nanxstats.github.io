@@ -71,7 +71,7 @@ fit_msaenet <- msaenet(
 )
 ```
 
-![Coefficient path and Extended BIC in 20 adaptive estimation steps.](/image/greta-msaenet-coef.png)
+![Coefficient path and Extended BIC in 20 adaptive estimation steps.](greta-msaenet-coef.png)
 
 We achieved the lowest EBIC in step 2, which is equivalent to an adaptive elastic-net model. We selected 36 variables in total: all the 10 true variables and 26 false positive variables. The MSE is 203.
 
@@ -86,7 +86,7 @@ cv_lasso <- cv.glmnet(x, y, family = "gaussian", alpha = 1, nfolds = 10)
 fit_lasso <- glmnet(x, y, family = "gaussian", alpha = 1, lambda = cv_lasso$lambda.min)
 ```
 
-![The lambda grid and cross-validation errors for lasso.](/image/greta-glmnet-cv.png)
+![The lambda grid and cross-validation errors for lasso.](greta-glmnet-cv.png)
 
 The model selected 56 variables in total: all the 10 true variables and 46 false positive variables. The MSE is 202.
 
@@ -110,11 +110,11 @@ draws_blasso <- mcmc(m, warmup = 1000, n_samples = 5000, chains = 8)
 
 The computational graph by plotting `m`:
 
-![Bayesian lasso](/image/greta-bayesian-lasso-graph.png)
+![Bayesian lasso](greta-bayesian-lasso-graph.png)
 
 Plot the posterior mean and 95% credible interval of the coefficients:
 
-![Posterior of the coefficients from Bayesian lasso. We check whether the 95% credible interval covers 0 to determine if a variable is selected.](/image/greta-bayesian-lasso-coef.png)
+![Posterior of the coefficients from Bayesian lasso. We check whether the 95% credible interval covers 0 to determine if a variable is selected.](greta-bayesian-lasso-coef.png)
 
 The model selected 16 variables: all the 10 true variables with 6 false positive variables. The MSE is 217.
 

@@ -41,7 +41,7 @@ We binarized the 1 to 5 ratings to make it binary (interacting or non-interactin
 
 The model looks like this:
 
-![Figure: A barebone matrix factorization model with a triplet loss for recommender systems with implicit feedback data.](/image/triplet-loss-model-keras.png)
+![Figure: A barebone matrix factorization model with a triplet loss for recommender systems with implicit feedback data.](triplet-loss-model-keras.png)
 
 From the figure, the low-rank, dense embeddings for users and items are the inputs for the loss function (the Lambda layer). By minimizing the loss function, we achieved our goal: learning representations for users and items. Note that the embedding layer for items is shared by the positive and negative items since they are inherently both items thus should use the same representation.
 
@@ -57,7 +57,7 @@ The custom performance metric we implemented is a user-averaged AUC. In essence,
 
 The loss and AUC change on the training/test set is visualized below.
 
-![Figure: The first 20 epochs: loss and user-averaged AUC for the margin-based triplet loss model.](/image/triplet-loss-margin-movielens.png)
+![Figure: The first 20 epochs: loss and user-averaged AUC for the margin-based triplet loss model.](triplet-loss-margin-movielens.png)
 
 ## The BPR Triplet Loss
 
@@ -67,7 +67,7 @@ $$L_\text{BPR}(a, p, n) = \sum \big(1 - \sigma(f(a, p) - f(a, n)) \big)$$
 
 where $\sigma$ is the sigmoid function. For the sake of completeness, I also implemented it. It has a strikingly similar performance to the margin-based model for our data here, while it converges faster with the benefit of not needing to tune the margin parameter of the loss.
 
-![Figure: The first 20 epochs: loss and user-averaged AUC for the BPR triplet loss model.](/image/triplet-loss-bpr-movielens.png)
+![Figure: The first 20 epochs: loss and user-averaged AUC for the BPR triplet loss model.](triplet-loss-bpr-movielens.png)
 
 ## Comments
 
