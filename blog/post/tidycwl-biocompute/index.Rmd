@@ -33,7 +33,23 @@ get_graph(
 ) %>% visualize_graph(palette = c("#E69F00", "#56B4E9", "#009E73"))
 ```
 
-![A tidycwl visualization of the GATK 4 WGS workflow. You can see the interactive version [here](https://sbg.github.io/tidycwl/articles/tidycwl.html#visualize-workflow).](/image/tidycwl-gatk4-wgs-new.png)
+```{r, eval=FALSE, include=FALSE}
+library("tidycwl")
+
+flow <- system.file("cwl/sbg/workflow/gatk4-wgs.json", package = "tidycwl") %>%
+  read_cwl_json()
+
+get_graph(
+  flow %>% parse_inputs(),
+  flow %>% parse_outputs(),
+  flow %>% parse_steps()
+) %>%
+  visualize_graph(palette = c("#E69F00", "#56B4E9", "#009E73")) %>%
+  export_html(tempfile(fileext = ".html")) %>%
+  webshot2::webshot(file = "tidycwl-gatk4-wgs-new.png", vwidth = 3840, vheight = 2160, zoom = 3)
+```
+
+![A tidycwl visualization of the GATK 4 WGS workflow. You can see the interactive version [here](https://sbg.github.io/tidycwl/articles/tidycwl.html#visualize-workflow).](tidycwl-gatk4-wgs.png)
 
 The number of workflows written in the Common Workflow Language is [growing](https://github.com/search?l=cwl&p=3&q=workflow&type=Code) every day. I believe the workflows themselves are becoming a valuable data type that can be displayed and analyzed by the data science community. My hope for tidycwl is to help people achieve these goals reliably without hassles at the toolchain level.
 
