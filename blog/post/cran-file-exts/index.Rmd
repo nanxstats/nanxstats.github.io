@@ -14,7 +14,8 @@ description: "A glimpse of the file extensions used in R packages."
 > [nanxstats/cran-file-exts](https://github.com/nanxstats/cran-file-exts).
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(comment = "#>", echo = TRUE, message = FALSE)
+knitr::opts_chunk$set(comment = "#>", collapse = TRUE, echo = TRUE, message = FALSE)
+options(width = 70)
 ```
 
 ![Photo by [Pawel Czerwinski](https://unsplash.com/photos/3T4rfR_XZf0).](/image/tomatoes-pattern.jpg)

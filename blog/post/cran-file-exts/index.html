@@ -214,13 +214,13 @@ y &lt;- sort(table(x), decreasing = TRUE)</code></pre>
 <p>It looks like we have 1,529 file extensions.
 It is also likely a heavy-tailed distribution,
 with 96% of all files designated 5% of the unique file types.</p>
-<pre class="r"><code>length(y)</code></pre>
-<pre><code>#&gt; [1] 1529</code></pre>
-<pre class="r"><code>z &lt;- y[y &gt; 50L]
-length(z) / length(y)</code></pre>
-<pre><code>#&gt; [1] 0.04905167</code></pre>
-<pre class="r"><code>sum(z) / sum(y)</code></pre>
-<pre><code>#&gt; [1] 0.9611313</code></pre>
+<pre class="r"><code>length(y)
+#&gt; [1] 1529
+z &lt;- y[y &gt; 50L]
+length(z) / length(y)
+#&gt; [1] 0.04905167
+sum(z) / sum(y)
+#&gt; [1] 0.9611313</code></pre>
 <p>We can also cluster this frequency data with any one-dimensional data
 clustering algorithm such as the maximum homogeneity clustering,
 implemented in my R package <a href="https://nanx.me/oneclust/">oneclust</a>.
@@ -229,15 +229,16 @@ Say, we are interested in file extensions that appeared &gt;=5 times:</p>
 
 eoi &lt;- y[y &gt; 4L]
 cl &lt;- oneclust(eoi, 4)
-cl$cluster</code></pre>
-<pre><code>#&gt;   [1] 4 4 3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-#&gt;  [38] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-#&gt;  [75] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-#&gt; [112] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-#&gt; [149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-#&gt; [186] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-#&gt; [223] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-#&gt; [260] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+cl$cluster
+#&gt;   [1] 4 4 3 3 3 3 3 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt;  [33] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt;  [65] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt;  [97] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [129] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [161] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [193] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [225] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+#&gt; [257] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
 <p>Create a table for everything and display it with the awesome
 <a href="https://glin.github.io/reactable/">reactable</a>:</p>
 <pre class="r"><code>df &lt;- data.frame(
