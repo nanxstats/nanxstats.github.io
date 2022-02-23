@@ -82,7 +82,7 @@ a new project. Visibility does not only mean that your project
 should be known by as many people as possible. Visibility also means
 that sometimes, we should prefer projects with user-visible deliverables.
 For example, a plot with distinctive visual patterns, such as
-the [joyplot/ridgeline plot](http://blog.revolutionanalytics.com/2017/07/joyplots.html),
+the [ridgeline plot](https://blog.revolutionanalytics.com/2017/07/joyplots.html),
 or a web/mobile application that users could see and experience in person.
 
 <div class="text-center">

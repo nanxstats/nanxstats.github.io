@@ -17,7 +17,7 @@ with my then classmate [Arjun](https://aabiddanda.github.io/) about two years ag
 I remember that he said the name was nice.
 
 Time flies, and apparently, I did not have the chance to build it.
-Fortunately, [Yihui](https://yihui.name/) saved the world again, and now
+Fortunately, [Yihui](https://yihui.org/) saved the world again, and now
 [blogdown](https://github.com/rstudio/blogdown) has become the most elegant
 and powerful static website generator for R users,
 especially if you love R Markdown.

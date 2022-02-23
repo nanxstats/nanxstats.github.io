@@ -26,7 +26,7 @@ Now I've got [my new machine](https://nanx.me/blog/post/building-my-first-deep-l
 
 ## Poor Man's Neural Collaborative Filtering
 
-We will use the [simple SVD idea](https://www.netflixprize.com/assets/ProgressPrize2008_BellKor.pdf) popularized by the Netflix prize. Let's say we have a `m x n` matrix `R` with binary values `r_{ui}`. We want to decompose it into a `m x k` matrix `P` and a `k x n` matrix `Q` with `k` latent factors each. The inner product `p_u x q_i` derived by latent representations `p_u` and `q_i` from `P` and `Q` will be used to predict `r_{ui}`. Everything is differentiable here so it can be optimized by gradient descent methods.
+We will use the [simple SVD idea](https://web.archive.org/web/20210927004551/https://www.netflixprize.com/assets/ProgressPrize2008_BellKor.pdf) popularized by the Netflix prize. Let's say we have a `m x n` matrix `R` with binary values `r_{ui}`. We want to decompose it into a `m x k` matrix `P` and a `k x n` matrix `Q` with `k` latent factors each. The inner product `p_u x q_i` derived by latent representations `p_u` and `q_i` from `P` and `Q` will be used to predict `r_{ui}`. Everything is differentiable here so it can be optimized by gradient descent methods.
 
 Some modifications for dealing with the binary implicit feedback data:
 
@@ -34,7 +34,7 @@ Some modifications for dealing with the binary implicit feedback data:
 - As a remedy for the sparsity (or unbalanced classes) often presented in matrix `R`, we assign more weight to the less presented class (known interactions), which is necessarily "cost-sensitive learning". Another possibility is to use random sampling to get different, much smaller sets of negative samples to balance the training data for each batch.
 - The inner product layer or the part before it is easily replaceable by arbitrary DNN architectures. I didn't do it here though because I prefer to keep the model simple.
 
-As a reference, what we are trying to do here is similar to what [He et al. (WWW 2017)](https://dl.acm.org/citation.cfm?id=3052569) proposed, but even more straightforward. I call it "poor man's neural collaborative filtering".
+As a reference, what we are trying to do here is similar to what [He et al. (WWW 2017)](https://dl.acm.org/doi/10.1145/3038912.3052569) proposed, but even more straightforward. I call it "poor man's neural collaborative filtering".
 
 ## Applications to Quantitative Systems Pharmacology
 
@@ -91,7 +91,7 @@ The loss and accuracy changes in each epoch are visualized below:
 
 We have just prototyped a recommender system with only a few lines of R code, thanks to the flexibility offered by a modern machine learning framework with automatic differentiation and off-the-shelf optimizers. Two interesting topics to explore:
 
-- **Model architecture**. The barebone model here is easily extensible to build **hybrid** recommender systems as we did in our 2015 paper. Such extensions can be defined as [feature-based matrix factorization](http://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf), meaning we can further incorporate features for the drugs and ADRs to improve the predictive performance. One can simply put them in a neural net architecture and let them play together with the latent factors learned here.
+- **Model architecture**. The barebone model here is easily extensible to build **hybrid** recommender systems as we did in our 2015 paper. Such extensions can be defined as [feature-based matrix factorization](https://www.jmlr.org/papers/volume13/chen12a/chen12a.pdf), meaning we can further incorporate features for the drugs and ADRs to improve the predictive performance. One can simply put them in a neural net architecture and let them play together with the latent factors learned here.
 - **Loss function**. It is possible to try more loss functions, such as the [triplet loss](https://github.com/maciejkula/triplet_recommendations_keras) designed explicitly for one-class classification or metric learning problems.
 
 Here is the [GitHub repo](https://github.com/nanxstats/deep-learning-recipes) for the R code.

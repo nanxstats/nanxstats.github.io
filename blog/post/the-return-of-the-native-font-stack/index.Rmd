@@ -15,7 +15,7 @@ meta_img: image/lead-set-printing.jpg
 
 ![Photo: Lead type](/image/lead-set-printing.jpg)
 
-As people said, [web design is 95% typography](https://ia.net/topics/the-web-is-all-about-typography-period/).
+As people said, [web design is 95% typography](https://ia.net/topics/the-web-is-all-about-typography-period).
 Once upon a time, people who care about the typography of their website
 define their font stack using CSS like this:
 
@@ -48,7 +48,7 @@ worry if their website will look different across devices anymore.
 
 Time flies, they eventually realized that many of the available free
 web fonts are only designed with "acceptable" quality, while the high-quality
-fonts like [Lato](http://www.latofonts.com/), are overused way too much.
+fonts like [Lato](https://fonts.google.com/specimen/Lato), are overused way too much.
 In the same time, some commercial web font services who have
 high-qualify fonts, are often utterly expensive with a ridiculous
 subscription model.

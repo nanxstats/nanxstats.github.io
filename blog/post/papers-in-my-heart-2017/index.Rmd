@@ -33,7 +33,7 @@ Anyway, please remember that 2017 is Year One for the omnigenic model.
 
 ## 2. Same stats, different graphs
 
-Matejka, Justin, and George Fitzmaurice. [Same stats, different graphs: Generating datasets with varied appearance and identical statistics through simulated annealing](https://www.autodeskresearch.com/publications/samestats). _Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems_. ACM, 2017.
+Matejka, Justin, and George Fitzmaurice. [Same stats, different graphs: Generating datasets with varied appearance and identical statistics through simulated annealing](https://www.autodesk.com/research/publications/same-stats-different-graphs). _Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems_. ACM, 2017.
 
 This is a fascinating work done by people from Autodesk Research. In fact, it is a generalization of [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) that are known to statisticians. As is indicated in its title, this paper successfully formulated the problem of generating visually dissimilar datasets with identical summary statistics as an optimization problem.
 

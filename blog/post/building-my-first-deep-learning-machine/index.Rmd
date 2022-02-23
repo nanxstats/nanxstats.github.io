@@ -37,7 +37,7 @@ It took me about four hours to build it up, nothing too challenging. In principl
 
 ## Software
 
-For the Linux distribution, I personally like Arch Linux since AUR is so good (think Homebrew on Linux but can install anything with easy user contributions). While for this machine I don't want to use too much time on upgrading the bleeding edge kernels --- it just needs to work. Thus a stock Ubuntu 18.04 LTS was spinelessly installed. It's a good thing that Canonical finally [dropped Unity](https://blog.ubuntu.com/2017/04/05/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence) and embraced the native GNOME Shell in 18.04.
+For the Linux distribution, I personally like Arch Linux since AUR is so good (think Homebrew on Linux but can install anything with easy user contributions). While for this machine I don't want to use too much time on upgrading the bleeding edge kernels --- it just needs to work. Thus a stock Ubuntu 18.04 LTS was spinelessly installed. It's a good thing that Canonical finally [dropped Unity](https://ubuntu.com/blog/growing-ubuntu-for-cloud-and-iot-rather-than-phone-and-convergence) and embraced the native GNOME Shell in 18.04.
 
 To set up the environment for deep learning, people generally recommend installing certain versions of software since the latest versions may not work properly. I followed [this post to install the GPU driver](https://hackernoon.com/ubuntu-18-04-deep-learning-environment-setup-345ba0b11892), and [this post for CUDA and cuDNN](https://medium.com/@taylordenouden/installing-tensorflow-gpu-on-ubuntu-18-04-89a142325138). For Tensorflow, simply follow the [official installation guide](https://www.tensorflow.org/install). It should be done in 20 minutes if everything goes well.
 
