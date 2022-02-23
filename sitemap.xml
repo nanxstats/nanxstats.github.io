@@ -2,8 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/blog/post/link-checker/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/automation/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/blogdown/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/hugo/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/link-checker/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/urlchecker/</loc>
+    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/css/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
@@ -11,19 +38,10 @@
     <loc>https://nanx.me/blog/post/font-variant-numeric/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/native-font-stack/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/system-font-stack/</loc>
-    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/web-typography/</loc>
@@ -61,12 +79,6 @@
   </url><url>
     <loc>https://nanx.me/tags/regularization/</loc>
     <lastmod>2020-12-07T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/blogdown/</loc>
-    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/hugo/</loc>
-    <lastmod>2020-11-23T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/tanka/</loc>
     <lastmod>2020-11-23T22:00:00+00:00</lastmod>

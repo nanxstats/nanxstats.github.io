@@ -1,0 +1,179 @@
+---
+title: "A Simple Link Checker for Hugo and Blogdown Websites"
+author: "Nan Xiao"
+date: "2022-02-22T20:00:00"
+slug: link-checker
+categories: []
+tags:
+  - R
+  - link checker
+  - automation
+  - Hugo
+  - blogdown
+  - urlchecker
+meta_img: "image/katie-treadway-EwE4tBYh3ms-unsplash.jpg"
+description: "How to create a broken link checker for Hugo and blogdown websites."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  echo = TRUE,
+  message = FALSE
+)
+```
+
+![Photo by [Katie Treadway](https://unsplash.com/photos/EwE4tBYh3ms).](/image/katie-treadway-EwE4tBYh3ms-unsplash.jpg)
+
+## Some background
+
+I have been blogging with Hugo/blogdown for a while.
+One housekeeping task I have always wanted to [automate with R](https://nanx.me/blog/post/general-purpose-programming-with-r/)
+is scanning the entire website to ensure that all the links are still working.
+It is essential for maintaining an enjoyable reading experience without
+[archiving](https://nanx.me/blog/post/save-the-link-like-a-boss/) too many
+external links.
+
+Conceptually, the requirement for a generic broken link checker is quite simple:
+
+- Get the links to all pages on the site.
+- Scrape and parse the pages to get the links contained.
+- Check the link status.
+
+However, getting the links to all pages may involve recursive scraping and
+parsing of a site. It could make the program behavior unpredictable and
+add too many lines for exception handling.
+
+It is dramatically easier if we consider a more specific checker for
+Hugo and blogdown websites with certain configurations. For example,
+the [built-in sitemap in Hugo](https://gohugo.io/templates/sitemap-template/)
+allows us to discover the links to all internal pages with one simple
+step of XML parsing.
+
+We also have a decent infrastructure in R for page parsing and link checking:
+
+- [xml2](https://xml2.r-lib.org/) and [rvest](https://rvest.tidyverse.org/)
+  to parse and extract elements from the XML and HTML;
+- [urlchecker](https://cran.r-project.org/package=urlchecker) to check
+  links in parallel, with informative feedback.
+  It was initially built for checking the links in R packages before
+  submitting to CRAN but can be easily repurposed.
+
+Let's try building a minimum viable link checker with these in mind.
+
+## Get the links
+
+We first use the sitemap to get the links to all internal pages,
+then parse every internal page to extract the links contained.
+With the help of xml2 and rvest, we only need a few lines of code:
+
+```{r}
+#' Get all links on Hugo/blogdown site
+#'
+#' @param sitemap Sitemap URL of a Hugo/blogdown site
+#' @return Character vector of links from all pages
+get_blogdown_links <- function(sitemap) {
+  lst <- sitemap |>
+    xml2::read_xml() |>
+    xml2::as_list()
+  urlset <- lst[["urlset"]] |>
+    sapply("[[", "loc") |>
+    unlist(use.names = FALSE) |>
+    unique()
+
+  content <- lapply(urlset, xml2::read_html)
+  extract_links <- function(x, tag, attr) {
+    x |>
+      rvest::html_elements(tag) |>
+      rvest::html_attr(attr)
+  }
+
+  lapply(content, extract_links, tag = "a", attr = "href") |>
+    unlist() |>
+    unique()
+}
+```
+
+The returned vector will contain both internal and external links.
+
+## Check link status
+
+We can write the links into a file under a minimally sufficient R package
+format so that `urlchecker::url_check()` thinks this is an R package
+and can proceed to check them.
+
+```{r}
+#' Create a mockup package containing all links to check
+#'
+#' @param links Character vector of links to check
+#' @return Path to the package
+use_mockup_pkg <- function(links) {
+  pkgname <- paste(sample(letters, size = 10, replace = TRUE), collapse = "")
+  pkgpath <- file.path(tempdir(), pkgname)
+  dir.create(pkgpath)
+  writeLines(paste0("<", links, ">"), con = file.path(pkgpath, "README.md"))
+  writeLines(c("Package: placeholder"), con = file.path(pkgpath, "DESCRIPTION"))
+  pkgpath
+}
+```
+
+Connect the pipes:
+
+```{r, eval = FALSE}
+"https://nanx.me/sitemap.xml" |>
+  get_blogdown_links() |>
+  use_mockup_pkg() |>
+  urlchecker::url_check()
+```
+
+The outputs are self-explanatory. Most of the data points for my site
+are graceful [301 redirects](https://yihui.org/en/2017/11/301-redirect/),
+including common patterns such as HTTP to HTTPS migration,
+change of host domain names, and change of URL path scheme.
+Sometimes, there is a straightforward 404 that should be fixed.
+
+```text
+! Warning: README.md:286:2 Moved
+<http://jmlr.csail.mit.edu/papers/volume10/weinberger09a/weinberger09a.pdf>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ https://jmlr.csail.mit.edu/papers/volume10/weinberger09a/weinberger09a.pdf
+
+...
+
+! Warning: README.md:352:2 Moved
+<https://blog.github.com/2018-05-01-github-pages-custom-domains-https/>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ https://github.blog/2018-05-01-github-pages-custom-domains-https/
+
+...
+
+! Warning: README.md:285:2 Moved
+<https://dl.acm.org/citation.cfm?id=2968618.2968683>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ https://dl.acm.org/doi/10.5555/2968618.2968683
+
+...
+
+x Error: README.md:404:2 404: Not Found
+<https://www.math.ualberta.ca/mss/misc/A%20Mathematician's%20Apology.pdf>
+ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
+
+## Limitations
+
+A few limitations of this simple checker:
+
+- This checker did not handle the case where relative URLs are used for
+  linking internal pages. It worked for me because
+  - I use absolute URLs to link all pages when
+    creating content, even if it is an internal resource;
+  - I also did not enable `relativeURLs` in the
+    [Hugo configuration](https://gohugo.io/content-management/urls/#relative-urls).
+    Therefore, all rendered links to internal pages are absolute URLs.
+- This checker did not check resources linked using a tag other than `<a>`,
+  such as images linked with `<img src="...">`.
+  - It is trivial to extend it to handle resources linked with other
+    HTML tags and attributes.
+  - For external resources such as images, I have the habit of saving
+    and serving a local copy while explicitly linking the source with
+    `<a>` whenever possible.

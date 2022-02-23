@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Feb 2022 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blogdown</title>
+      <link>https://nanx.me/tags/blogdown/</link>
+      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://nanx.me/tags/hugo/</link>
+      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>link checker</title>
+      <link>https://nanx.me/tags/link-checker/</link>
+      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/link-checker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>urlchecker</title>
+      <link>https://nanx.me/tags/urlchecker/</link>
+      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/urlchecker/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>css</title>
       <link>https://nanx.me/tags/css/</link>
@@ -22,15 +76,6 @@
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/native-font-stack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     
@@ -112,24 +157,6 @@
       <pubDate>Mon, 07 Dec 2020 20:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/regularization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>blogdown</title>
-      <link>https://nanx.me/tags/blogdown/</link>
-      <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/blogdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://nanx.me/tags/hugo/</link>
-      <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/hugo/</guid>
       <description></description>
     </item>
     

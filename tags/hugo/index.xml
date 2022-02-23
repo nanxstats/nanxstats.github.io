@@ -6,7 +6,18 @@
     <description>Recent content in Hugo on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 22:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Feb 2022 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A Simple Link Checker for Hugo and Blogdown Websites</title>
+      <link>https://nanx.me/blog/post/link-checker/</link>
+      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/link-checker/</guid>
+      <description>Photo by Katie Treadway.
+ Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.
+Conceptually, the requirement for a generic broken link checker is quite simple:</description>
+    </item>
+    
     <item>
       <title>Tanka: A Minimalist Bootstrap 4 Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</link>
