@@ -99,7 +99,7 @@ hr {
 
 .header h1.name {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #212529;
     margin-left: 7px;
 }
@@ -131,7 +131,7 @@ hr {
 /* Partial: Content */
 
 .content h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+    font-weight: 600;
     color: #212529;
     margin-bottom: 1rem;
 }
@@ -268,7 +268,7 @@ hr {
 
 .content .groupby {
     font-size: 1.6rem;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: #212529;
