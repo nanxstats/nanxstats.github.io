@@ -89,7 +89,7 @@ cl$cluster
 ```
 
 Create a table for everything and display it with the awesome
-[reactable](https://glin.github.io/reactable/):
+[DT](https://rstudio.github.io/DT/):
 
 ```{r}
 df <- data.frame(
@@ -102,40 +102,25 @@ df <- data.frame(
 
 After looking into the table, what is **your** interesting discovery?
 
-```{r, echo=FALSE}
-library("reactable")
+<style>
+div.dataTables_info, div.dataTables_paginate { font-size: 12px; }
+table { font-variant-numeric: tabular-nums; }
+</style>
 
-reactable(
+```{r, echo=FALSE}
+library("DT")
+
+DT::datatable(
   df,
-  searchable = TRUE,
-  pagination = TRUE,
-  showSortIcon = TRUE,
-  theme = reactableTheme(
-    style = list(
-      fontSize = "16px"
+  rownames = FALSE,
+  colnames = c("Extension", "Media Type", "Count", "Cluster")
+) |>
+  formatStyle(
+    "cluster",
+    color = styleEqual(
+      unique(df$cluster), oneclust::cud()[unique(df$cluster)]
     )
-  ),
-  columns = list(
-    ext = colDef(
-      name = "File Extension"
-    ),
-    mime = colDef(
-      name = "Media Type",
-      style = list(
-        fontSize = "12px"
-      )
-    ),
-    count = colDef(
-      name = "Count"
-    ),
-    cluster = colDef(
-      name = "Cluster",
-      style = function(value) {
-        list(
-          color = oneclust::cud(value)
-        )
-      }
-    )
-  )
-)
+  ) |>
+  formatStyle(columns = c(1, 2, 3, 4), fontSize = "16px") |>
+  formatStyle("mime", fontSize = "12px")
 ```
