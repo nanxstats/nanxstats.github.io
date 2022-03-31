@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> A Simple Link Checker for Hugo and Blogdown Websites - Nan Xiao | 肖楠 </title>
+    <title> Architecting Large Shiny Apps with Minimal First Contentful Paint Time - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="How to create a broken link checker for Hugo and blogdown websites." />
+    <meta name="description" content="How to create a Shiny app with a loading screen that aims to minimize the first contentful paint (FCP) time." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/link-checker/" />
-    <meta property="og:title" content="A Simple Link Checker for Hugo and Blogdown Websites" />
-    <meta property="og:image" content="https://nanx.me/image/katie-treadway-EwE4tBYh3ms-unsplash.jpg" />
-    <meta property="og:description" content="How to create a broken link checker for Hugo and blogdown websites." />
+    <meta property="og:url" content="https://nanx.me/blog/post/shiny-fcp-loader/" />
+    <meta property="og:title" content="Architecting Large Shiny Apps with Minimal First Contentful Paint Time" />
+    <meta property="og:image" content="https://nanx.me/image/emma-fabbri-Vfs_zlhQr0o-unsplash.jpg" />
+    <meta property="og:description" content="How to create a Shiny app with a loading screen that aims to minimize the first contentful paint (FCP) time." />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="A Simple Link Checker for Hugo and Blogdown Websites" />
-    <meta name="twitter:description" content="How to create a broken link checker for Hugo and blogdown websites." />
-    <meta name="twitter:image" content="https://nanx.me/image/katie-treadway-EwE4tBYh3ms-unsplash.jpg" />
+    <meta name="twitter:title" content="Architecting Large Shiny Apps with Minimal First Contentful Paint Time" />
+    <meta name="twitter:description" content="How to create a Shiny app with a loading screen that aims to minimize the first contentful paint (FCP) time." />
+    <meta name="twitter:image" content="https://nanx.me/image/emma-fabbri-Vfs_zlhQr0o-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/link-checker/">
+    <link rel="canonical" href="https://nanx.me/blog/post/shiny-fcp-loader/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -120,7 +120,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-6">
-                <h1 class="blog-post-title">A Simple Link Checker for Hugo and Blogdown Websites</h1>
+                <h1 class="blog-post-title">Architecting Large Shiny Apps with Minimal First Contentful Paint Time</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -131,12 +131,12 @@
                     
                     
 
-                    <span class="date middot" title='Tue Feb 22 2022 20:00:00 UTC'>
-                        2022-02-22
+                    <span class="date middot" title='Wed Mar 30 2022 22:00:00 UTC'>
+                        2022-03-30
                     </span>
 
                     <span class="reading-time middot">
-                        4 min read
+                        3 min read
                     </span>
 
                     <div class="d-none d-md-inline tags">
@@ -147,23 +147,19 @@
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/link-checker">link checker</a>
+                                <a href="https://nanx.me/tags/shiny">shiny</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/automation">automation</a>
+                                <a href="https://nanx.me/tags/software-architecture">software architecture</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/hugo">Hugo</a>
+                                <a href="https://nanx.me/tags/loading-screen">loading screen</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/blogdown">blogdown</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/urlchecker">urlchecker</a>
+                                <a href="https://nanx.me/tags/first-contentful-paint">first contentful paint</a>
                             </li>
                             
                         </ul>
@@ -180,152 +176,114 @@
                 <div class="markdown blog-post-content">
                     
     
-<script src="https://nanx.me/blog/post/link-checker/index_files/header-attrs/header-attrs.js"></script>
 
 
+<blockquote>
+<p>The Shiny app skeleton is available from
+<a href="https://github.com/nanxstats/shiny-fcp-loader">nanxstats/shiny-fcp-loader</a>.</p>
+</blockquote>
 <div class="figure">
-<img src="https://nanx.me/image/katie-treadway-EwE4tBYh3ms-unsplash.jpg" alt="" />
-<p class="caption">Photo by <a href="https://unsplash.com/photos/EwE4tBYh3ms">Katie Treadway</a>.</p>
+<img src="https://nanx.me/image/emma-fabbri-Vfs_zlhQr0o-unsplash.jpg" alt="" />
+<p class="caption">Pantheon, Roma, Italy. Photo by <a href="https://unsplash.com/photos/Vfs_zlhQr0o">Emma Fabbri</a>.</p>
 </div>
-<div id="some-background" class="section level2">
-<h2>Some background</h2>
-<p>I have been blogging with Hugo/blogdown for a while.
-One housekeeping task I have always wanted to <a href="https://nanx.me/blog/post/general-purpose-programming-with-r/">automate with R</a>
-is scanning the entire website to ensure that all the links are still working.
-It is essential for maintaining an enjoyable reading experience without
-<a href="https://nanx.me/blog/post/save-the-link-like-a-boss/">archiving</a> too many
-external links.</p>
-<p>Conceptually, the requirement for a generic broken link checker is quite simple:</p>
+<p>More than a few people asked me similar questions about this when building
+large shiny apps. Therefore, it might be time to formulate a simple solution
+with a minimalist yet extensible code demo.</p>
+<div id="ux-side-effects-of-large-shiny-apps" class="section level2">
+<h2>UX side effects of large Shiny apps</h2>
+<p>For larger Shiny apps, users could wait a long time (in terms of 10s of seconds)
+with an embarrassing blank screen before seeing the rendered app content.
+There are many possible reasons, but the common ones are:</p>
 <ul>
-<li>Get the links to all pages on the site.</li>
-<li>Scrape and parse the pages to get the links contained.</li>
-<li>Check the link status.</li>
+<li>Loading a considerable number of render-blocking CSS/JS dependencies.</li>
+<li>Initializing the app state with some intensive computation.</li>
+<li>Connecting to servers with bandwidth and response time limitations.</li>
 </ul>
-<p>However, getting the links to all pages may involve recursive scraping and
-parsing of a site. It could make the program behavior unpredictable and
-add too many lines for exception handling.</p>
-<p>It is dramatically easier if we consider a more specific checker for
-Hugo and blogdown websites with certain configurations. For example,
-the <a href="https://gohugo.io/templates/sitemap-template/">built-in sitemap in Hugo</a>
-allows us to discover the links to all internal pages with one simple
-step of XML parsing.</p>
-<p>We also have a decent infrastructure in R for page parsing and link checking:</p>
-<ul>
-<li><a href="https://xml2.r-lib.org/">xml2</a> and <a href="https://rvest.tidyverse.org/">rvest</a>
-to parse and extract elements from the XML and HTML;</li>
-<li><a href="https://cran.r-project.org/package=urlchecker">urlchecker</a> to check
-links in parallel, with informative feedback.
-It was initially built for checking the links in R packages before
-submitting to CRAN but can be easily repurposed.</li>
-</ul>
-<p>Let’s try building a minimum viable link checker with these in mind.</p>
 </div>
-<div id="get-the-links" class="section level2">
-<h2>Get the links</h2>
-<p>We first use the sitemap to get the links to all internal pages,
-then parse every internal page to extract the links contained.
-With the help of xml2 and rvest, we only need a few lines of code:</p>
-<pre class="r"><code>#&#39; Get all links on Hugo/blogdown site
-#&#39;
-#&#39; @param sitemap Sitemap URL of a Hugo/blogdown site
-#&#39; @return Character vector of links from all pages
-get_blogdown_links &lt;- function(sitemap) {
-  lst &lt;- sitemap |&gt;
-    xml2::read_xml() |&gt;
-    xml2::as_list()
-  urlset &lt;- lst[[&quot;urlset&quot;]] |&gt;
-    sapply(&quot;[[&quot;, &quot;loc&quot;) |&gt;
-    unlist(use.names = FALSE) |&gt;
-    unique()
+<div id="the-solution" class="section level2">
+<h2>The solution</h2>
+<p>I created an example app at <a href="https://github.com/nanxstats/shiny-fcp-loader" class="uri">https://github.com/nanxstats/shiny-fcp-loader</a>,
+with a demo deployed at <a href="https://nanx.shinyapps.io/shiny-fcp-loader/" class="uri">https://nanx.shinyapps.io/shiny-fcp-loader/</a>.
+The goal is to minimize the <a href="https://web.dev/fcp/">First Contentful Paint (FCP)</a> time.</p>
+<p>This Shiny app solves the problems on the app code level by:</p>
+<ul>
+<li>Implementing a loading screen (loader); hiding it after the main UI resources
+are loaded + the state initialization is finished.</li>
+<li>Prioritizing loading the loader-related code (mostly CSS, maybe JS) so it can
+render before the main UI assets.</li>
+<li>Loading and rendering the main UI assets later separately without blocking
+the rendering of the loader.</li>
+</ul>
+</div>
+<div id="technical-details" class="section level2">
+<h2>Technical details</h2>
+<p>Here is how the logic looks at the entry point of the Shiny app (<code>app.R</code>):</p>
+<pre class="r"><code>ui &lt;- function(request) {
+  tagList(
+    useLoader(),
+    shinyjs::useShinyjs(),
+    uiOutput(&quot;ui_main&quot;)
+  )
+}
 
-  content &lt;- lapply(urlset, xml2::read_html)
-  extract_links &lt;- function(x, tag, attr) {
-    x |&gt;
-      rvest::html_elements(tag) |&gt;
-      rvest::html_attr(attr)
-  }
+server &lt;- function(input, output, session) {
+  output$ui_main &lt;- renderUI(source(&quot;ui/main.R&quot;, local = TRUE)$value)
+  source(&quot;server/main.R&quot;, local = TRUE)$value
+  shinyjs::delay(15000, shinyjs::hide(&quot;loading&quot;))
+}
 
-  lapply(content, extract_links, tag = &quot;a&quot;, attr = &quot;href&quot;) |&gt;
-    unlist() |&gt;
-    unique()
+shinyApp(ui, server)</code></pre>
+<ul>
+<li>The CSS loader is formally defined by using <code>htmltools::htmlDependencies()</code>
+and then attached so that it can be loaded first as an isolated dependency.</li>
+<li>Instead of defining the main UI directly in the UI function, we render the UI
+using <code>renderUI()</code> on the server side and used <code>uiOutput()</code> to output it.
+This makes the main UI loaded and rendered separately after the loader.</li>
+<li>The loader should be hidden when the main UI assets are loaded,
+while we also want to cover the case where the lengthy initialization is
+from computing. Therefore, we added a delay as another safeguard.
+One can tune the delay parameter (in ms) if they have a rough estimate for
+the computation to finish based on where the app is deployed.</li>
+</ul>
+<p>I also applied the idea of <a href="https://atomicdesign.bradfrost.com/">Atomic Design</a>
+to decouple the UI and server components so that the app structure is easy to
+understand and scale.</p>
+</div>
+<div id="waterfall-chart" class="section level2">
+<h2>Waterfall chart</h2>
+<p>Let’s check how the app is loaded using the waterfall chart in Chrome DevTools
+under the Network tab:</p>
+<p><img src="waterfall-chart.jpg" width="100%" /></p>
+<p>We can see that our loader is loaded and rendered at the very beginning, way
+before the XHR requests (which could be WebSocket requests in other cases)
+in the middle. These requests would trigger the rendering and loading of
+the main UI assets.</p>
+<p>To see how a minimal first contentful paint time helps more dramatically,
+you can simulate a limited bandwidth scenario by selecting Chrome DevTools →
+Network → Throttle → Fast 3G. This limits the loading speed of all resources.</p>
+</div>
+<div id="lighthouse" class="section level2">
+<h2>Lighthouse</h2>
+<p>We can also measure the page loading performance using
+<a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a>.</p>
+<p>It took 0.4 seconds (locally) to achieve First Contentful Paint.
+We only have 4 render-blocking resources: two from the loader,
+two from Shiny essentials.</p>
+<p><img src="lighthouse.jpg" width="100%" /></p>
+<p>I hope this example could help you build large Shiny apps with a
+better user experience in the future.</p>
+</div>
+<div id="bonus-thoughts" class="section level2">
+<h2>Bonus thoughts</h2>
+<p>The <code>-&gt;</code> assignment operator makes more sense logically and aesthetically
+if we write the server code like below, especially if you use a coding font
+with programming ligatures for <code>|&gt;</code> and <code>-&gt;</code>:</p>
+<pre class="r"><code>server &lt;- function(input, output, session) {
+  source(&quot;uiuiui/main.R&quot;, local = TRUE)$value |&gt; renderUI() -&gt; output$ui_main
+  source(&quot;server/main.R&quot;, local = TRUE)$value
 }</code></pre>
-<p>The returned vector will contain both internal and external links.</p>
-</div>
-<div id="check-link-status" class="section level2">
-<h2>Check link status</h2>
-<p>We can write the links into a file under a minimally sufficient R package
-format so that <code>urlchecker::url_check()</code> thinks this is an R package
-and can proceed to check them.</p>
-<pre class="r"><code>#&#39; Create a mockup package containing all links to check
-#&#39;
-#&#39; @param links Character vector of links to check
-#&#39; @return Path to the package
-use_mockup_pkg &lt;- function(links) {
-  pkgname &lt;- paste(sample(letters, size = 10, replace = TRUE), collapse = &quot;&quot;)
-  pkgpath &lt;- file.path(tempdir(), pkgname)
-  dir.create(pkgpath)
-  writeLines(paste0(&quot;&lt;&quot;, links, &quot;&gt;&quot;), con = file.path(pkgpath, &quot;README.md&quot;))
-  writeLines(c(&quot;Package: placeholder&quot;), con = file.path(pkgpath, &quot;DESCRIPTION&quot;))
-  pkgpath
-}</code></pre>
-<p>Connect the pipes:</p>
-<pre class="r"><code>&quot;https://nanx.me/sitemap.xml&quot; |&gt;
-  get_blogdown_links() |&gt;
-  use_mockup_pkg() |&gt;
-  urlchecker::url_check()</code></pre>
-<p>The outputs are self-explanatory. Most of the data points for my site
-are graceful <a href="https://yihui.org/en/2017/11/301-redirect/">301 redirects</a>,
-including common patterns such as HTTP to HTTPS migration,
-change of host domain names, and change of URL path scheme.
-Sometimes, there is a straightforward 404 that should be fixed.</p>
-<pre class="text"><code>! Warning: README.md:286:2 Moved
-&lt;http://jmlr.csail.mit.edu/papers/volume10/weinberger09a/weinberger09a.pdf&gt;
- ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- https://jmlr.csail.mit.edu/papers/volume10/weinberger09a/weinberger09a.pdf
-
-...
-
-! Warning: README.md:352:2 Moved
-&lt;https://blog.github.com/2018-05-01-github-pages-custom-domains-https/&gt;
- ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- https://github.blog/2018-05-01-github-pages-custom-domains-https/
-
-...
-
-! Warning: README.md:285:2 Moved
-&lt;https://dl.acm.org/citation.cfm?id=2968618.2968683&gt;
- ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- https://dl.acm.org/doi/10.5555/2968618.2968683
-
-...
-
-x Error: README.md:404:2 404: Not Found
-&lt;https://www.math.ualberta.ca/mss/misc/A%20Mathematician&#39;s%20Apology.pdf&gt;
- ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</code></pre>
-</div>
-<div id="limitations" class="section level2">
-<h2>Limitations</h2>
-<p>A few limitations of this simple checker:</p>
-<ul>
-<li>This checker did not handle the case where relative URLs are used for
-linking internal pages. It worked for me because
-<ul>
-<li>I use absolute URLs to link all pages when
-creating content, even if it is an internal resource;</li>
-<li>I also did not enable <code>relativeURLs</code> in the
-<a href="https://gohugo.io/content-management/urls/#relative-urls">Hugo configuration</a>.
-Therefore, all rendered links to internal pages are absolute URLs.</li>
-</ul></li>
-<li>This checker did not check resources linked using a tag other than <code>&lt;a&gt;</code>,
-such as images linked with <code>&lt;img src="..."&gt;</code>.
-<ul>
-<li>It is trivial to extend it to handle resources linked with other
-HTML tags and attributes.</li>
-<li>For external resources such as images, I have the habit of saving
-and serving a local copy while explicitly linking the source with
-<code>&lt;a&gt;</code> whenever possible.</li>
-</ul></li>
-</ul>
+<p>I guess this feeling was also discussed
+<a href="https://win-vector.com/2016/12/12/the-case-for-using-in-r/">here</a> by John Mount.</p>
 </div>
 
 
@@ -338,15 +296,11 @@ and serving a local copy while explicitly linking the source with
                         <div class="col-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/font-variant-numeric/">« Font Variant Numeric</a>
+                                <a href="https://nanx.me/blog/post/link-checker/">« A Simple Link Checker for Hugo and Blogdown Websites</a>
                             </div>
                             
                         </div>
                         <div class="col-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/shiny-fcp-loader/">Architecting Large Shiny Apps with Minimal First Contentful Paint Time »</a>
-                            </div>
                             
                         </div>
                     </div>
@@ -451,6 +405,9 @@ and serving a local copy while explicitly linking the source with
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>
