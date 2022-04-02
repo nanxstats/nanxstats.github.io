@@ -33,7 +33,7 @@ with a minimalist yet extensible code demo.
 ## UX side effects of large Shiny apps
 
 For larger Shiny apps, users could wait a long time (in terms of 10s of seconds)
-with an embarrassing blank screen before seeing the rendered app content.
+with an awkward blank screen before seeing the rendered app content.
 There are many possible reasons, but the common ones are:
 
 - Loading a considerable number of render-blocking CSS/JS dependencies.
