@@ -1,0 +1,152 @@
+---
+title: "Adaptive ggplot2 Color Scales with Color Interpolation"
+author: "Nan Xiao"
+date: "2022-04-06T01:30:00"
+slug: ggplot2-color-interpolation
+categories: []
+tags:
+  - R
+  - ggplot2
+  - color scales
+  - color interpolation
+meta_img: "image/mateo-giraud-wtBex4wQw60-unsplash.jpg"
+description: "Create discrete ggplot2 color scales that are adaptive to the number of categories in the data."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE
+)
+```
+
+![Photo by [Mateo Giraud](https://unsplash.com/photos/wtBex4wQw60).](/image/mateo-giraud-wtBex4wQw60-unsplash.jpg)
+
+My R package [ggsci](https://github.com/nanxstats/ggsci) has included a few
+popular discrete color palettes.
+The colors values in these palettes are not automatically generated from a
+color space but hand-picked instead, often containing only five to ten
+distinct colors.
+A [frequent question](https://github.com/nanxstats/ggsci/issues/8) from the
+users is: What should I do when the colors are running out due to a more
+significant number of categories in the data?
+
+Better approaches may exist, but an _ad hoc_ method is to interpolate
+the color values to generate more colors based on the number of categories.
+Here, I will demonstrate how to construct such an "adaptive" color palette
+generator and the ggplot2 color scales for all ggsci color palettes.
+
+<div class="alert alert-warning" role="alert">
+⚠️ It might be better not to encode too many categories in different colors.
+Please see the recommendations from the
+[common pitfalls of color use](https://clauswilke.com/dataviz/color-pitfalls.html)
+chapter in the _Fundamentals of Data Visualization_ book by Claus O. Wilke.
+</div>
+
+We start with the color interpolation logic as a
+[function factory](https://adv-r.hadley.nz/function-factories.html)
+and leverage `grDevices::colorRampPalette()`.
+
+```{r}
+#' Adaptive palette (discrete)
+#'
+#' Create a discrete palette that will use the first `n` colors from
+#' the supplied color values when the palette has enough colors.
+#' Otherwise, use an interpolated color palette.
+#'
+#' @param values Color values.
+pal_ramp <- function(values) {
+  force(values)
+  function(n) {
+    if (n <= length(values)) {
+      values[seq_len(n)]
+    } else {
+      colorRampPalette(values, alpha = TRUE)(n)
+    }
+  }
+}
+```
+
+Then, we create a color palette generator function,
+similar to the existing color palette generator functions in ggsci.
+The main difference here is that you can access and interpolate the raw color
+values of any palettes in ggsci.
+
+```{r}
+#' Adaptive color palette generator
+#'
+#' Adaptive color palette generator for ggsci color palettes using `pal_ramp()`.
+#'
+#' @param name Color palette name in ggsci
+#' @param palette Color palette type in ggsci
+#' @param alpha Transparency level, a real number in (0, 1].
+#'
+#' @details See `names(ggsci:::ggsci_db)` for all color palette names in ggsci.
+#' See `names(ggsci:::ggsci_db$"pal")` for available palette types under
+#' the palette `pal`.
+pal_adaptive <- function(name, palette, alpha = 1) {
+  if (alpha > 1L | alpha <= 0L) stop("alpha must be in (0, 1]")
+
+  raw_cols <- ggsci:::ggsci_db[[name]][[palette]]
+  raw_cols_rgb <- col2rgb(raw_cols)
+  alpha_cols <- rgb(
+    raw_cols_rgb[1L, ], raw_cols_rgb[2L, ], raw_cols_rgb[3L, ],
+    alpha = alpha * 255L, names = names(raw_cols),
+    maxColorValue = 255L
+  )
+
+  pal_ramp(unname(alpha_cols))
+}
+```
+
+Finishing up by creating the ggplot2 color scales as usual.
+
+```{r}
+#' Adaptive color scales
+#'
+#' @inheritParams pal_adaptive
+#' @param ... additional parameters for [ggplot2::discrete_scale()].
+scale_color_adaptive <- function(name, palette, alpha = 1, ...) {
+  ggplot2::discrete_scale("colour", name, pal_adaptive(name, palette, alpha), ...)
+}
+
+scale_fill_adaptive <- function(name, palette, alpha = 1, ...) {
+  ggplot2::discrete_scale("fill", name, pal_adaptive(name, palette, alpha), ...)
+}
+```
+
+Feels easy enough? Let's test it in the wild with some
+high-cardinality data.
+
+We trained some [tissue-specific gene embeddings on GTEx data using GloVe](https://github.com/nanxstats/exp2vec).
+The embeddings are then projected to a 2D plane with t-SNE.
+
+```{r}
+word_vectors <- readRDS(url(
+  "https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_embedding.rds"
+))
+tsne_out <- readRDS(url(
+  "https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_tsne.rds"
+))
+```
+
+Run k-means clustering on the projected coordinates and get 15 clusters:
+
+```{r}
+set.seed(42)
+cl <- kmeans(word_vectors, centers = 15, iter.max = 20)
+df <- cbind(as.data.frame(tsne_out$Y), as.factor(cl$cluster))
+names(df) <- c("x", "y", "cluster")
+```
+
+The [original color palette](https://nanx.me/ggsci/reference/pal_nejm.html)
+only has 8 colors, but it will work fine here:
+
+```{r, dev="ragg_png", fig.width=14, fig.height=14*0.618, fig.retina=3, out.width="100%"}
+ggplot2::ggplot(df, ggplot2::aes(x = x, y = y)) +
+  ggplot2::geom_point(ggplot2::aes(colour = cluster), alpha = 0.5, size = 1) +
+  cowplot::theme_minimal_grid() +
+  scale_color_adaptive(name = "nejm", palette = "default")
+```
+
+That's all, folks.

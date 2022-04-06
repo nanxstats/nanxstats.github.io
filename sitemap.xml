@@ -2,31 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/blog/post/shiny-fcp-loader/</loc>
-    <lastmod>2022-03-30T22:00:00+00:00</lastmod>
+    <loc>https://nanx.me/blog/post/ggplot2-color-interpolation/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/color-interpolation/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/color-scales/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ggplot2/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/shiny-fcp-loader/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/first-contentful-paint/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2022-03-30T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/loading-screen/</loc>
-    <lastmod>2022-03-30T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/shiny/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-architecture/</loc>
-    <lastmod>2022-03-30T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/link-checker/</loc>

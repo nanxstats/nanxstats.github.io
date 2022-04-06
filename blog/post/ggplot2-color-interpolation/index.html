@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Architecting Large Shiny Apps with Minimal First Contentful Paint Time - Nan Xiao | 肖楠 </title>
+    <title> Adaptive ggplot2 Color Scales with Color Interpolation - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="How to create a Shiny app with a loading screen that aims to minimize the first contentful paint (FCP) time." />
+    <meta name="description" content="Create discrete ggplot2 color scales that are adaptive to the number of categories in the data." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/shiny-fcp-loader/" />
-    <meta property="og:title" content="Architecting Large Shiny Apps with Minimal First Contentful Paint Time" />
-    <meta property="og:image" content="https://nanx.me/image/emma-fabbri-Vfs_zlhQr0o-unsplash.jpg" />
-    <meta property="og:description" content="How to create a Shiny app with a loading screen that aims to minimize the first contentful paint (FCP) time." />
+    <meta property="og:url" content="https://nanx.me/blog/post/ggplot2-color-interpolation/" />
+    <meta property="og:title" content="Adaptive ggplot2 Color Scales with Color Interpolation" />
+    <meta property="og:image" content="https://nanx.me/image/mateo-giraud-wtBex4wQw60-unsplash.jpg" />
+    <meta property="og:description" content="Create discrete ggplot2 color scales that are adaptive to the number of categories in the data." />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Architecting Large Shiny Apps with Minimal First Contentful Paint Time" />
-    <meta name="twitter:description" content="How to create a Shiny app with a loading screen that aims to minimize the first contentful paint (FCP) time." />
-    <meta name="twitter:image" content="https://nanx.me/image/emma-fabbri-Vfs_zlhQr0o-unsplash.jpg" />
+    <meta name="twitter:title" content="Adaptive ggplot2 Color Scales with Color Interpolation" />
+    <meta name="twitter:description" content="Create discrete ggplot2 color scales that are adaptive to the number of categories in the data." />
+    <meta name="twitter:image" content="https://nanx.me/image/mateo-giraud-wtBex4wQw60-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/shiny-fcp-loader/">
+    <link rel="canonical" href="https://nanx.me/blog/post/ggplot2-color-interpolation/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -120,7 +120,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-6">
-                <h1 class="blog-post-title">Architecting Large Shiny Apps with Minimal First Contentful Paint Time</h1>
+                <h1 class="blog-post-title">Adaptive ggplot2 Color Scales with Color Interpolation</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -131,8 +131,8 @@
                     
                     
 
-                    <span class="date middot" title='Wed Mar 30 2022 22:00:00 UTC'>
-                        2022-03-30
+                    <span class="date middot" title='Wed Apr 6 2022 01:30:00 UTC'>
+                        2022-04-06
                     </span>
 
                     <span class="reading-time middot">
@@ -147,19 +147,15 @@
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/shiny">shiny</a>
+                                <a href="https://nanx.me/tags/ggplot2">ggplot2</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/software-architecture">software architecture</a>
+                                <a href="https://nanx.me/tags/color-scales">color scales</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/loading-screen">loading screen</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/first-contentful-paint">first contentful paint</a>
+                                <a href="https://nanx.me/tags/color-interpolation">color interpolation</a>
                             </li>
                             
                         </ul>
@@ -178,113 +174,111 @@
     
 
 
-<blockquote>
-<p>The Shiny app skeleton is available from
-<a href="https://github.com/nanxstats/shiny-fcp-loader">nanxstats/shiny-fcp-loader</a>.</p>
-</blockquote>
 <div class="figure">
-<img src="https://nanx.me/image/emma-fabbri-Vfs_zlhQr0o-unsplash.jpg" alt="" />
-<p class="caption">Pantheon, Roma, Italy. Photo by <a href="https://unsplash.com/photos/Vfs_zlhQr0o">Emma Fabbri</a>.</p>
+<img src="https://nanx.me/image/mateo-giraud-wtBex4wQw60-unsplash.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/wtBex4wQw60">Mateo Giraud</a>.</p>
 </div>
-<p>More than a few people asked me similar questions about this when building
-large shiny apps. Therefore, it might be time to formulate a simple solution
-with a minimalist yet extensible code demo.</p>
-<div id="ux-side-effects-of-large-shiny-apps" class="section level2">
-<h2>UX side effects of large Shiny apps</h2>
-<p>For larger Shiny apps, users could wait a long time (in terms of 10s of seconds)
-with an awkward blank screen before seeing the rendered app content.
-There are many possible reasons, but the common ones are:</p>
-<ul>
-<li>Loading a considerable number of render-blocking CSS/JS dependencies.</li>
-<li>Initializing the app state with some intensive computation.</li>
-<li>Connecting to servers with bandwidth and response time limitations.</li>
-</ul>
+<p>My R package <a href="https://github.com/nanxstats/ggsci">ggsci</a> has included a few
+popular discrete color palettes.
+The colors values in these palettes are not automatically generated from a
+color space but hand-picked instead, often containing only five to ten
+distinct colors.
+A <a href="https://github.com/nanxstats/ggsci/issues/8">frequent question</a> from the
+users is: What should I do when the colors are running out due to a more
+significant number of categories in the data?</p>
+<p>Better approaches may exist, but an <em>ad hoc</em> method is to interpolate
+the color values to generate more colors based on the number of categories.
+Here, I will demonstrate how to construct such an “adaptive” color palette
+generator and the ggplot2 color scales for all ggsci color palettes.</p>
+<div class="alert alert-warning" role="alert">
+<p>⚠️ It might be better not to encode too many categories in different colors.
+Please see the recommendations from the
+<a href="https://clauswilke.com/dataviz/color-pitfalls.html">common pitfalls of color use</a>
+chapter in the <em>Fundamentals of Data Visualization</em> book by Claus O. Wilke.</p>
 </div>
-<div id="the-solution" class="section level2">
-<h2>The solution</h2>
-<p>I created an example app at <a href="https://github.com/nanxstats/shiny-fcp-loader" class="uri">https://github.com/nanxstats/shiny-fcp-loader</a>,
-with a demo deployed at <a href="https://nanx.shinyapps.io/shiny-fcp-loader/" class="uri">https://nanx.shinyapps.io/shiny-fcp-loader/</a>.
-The goal is to minimize the <a href="https://web.dev/fcp/">First Contentful Paint (FCP)</a> time.</p>
-<p>This Shiny app solves the problems on the app code level by:</p>
-<ul>
-<li>Implementing a loading screen (loader); hiding it after the main UI resources
-are loaded + the state initialization is finished.</li>
-<li>Prioritizing loading the loader-related code (mostly CSS, maybe JS) so it can
-render before the main UI assets.</li>
-<li>Loading and rendering the main UI assets later separately without blocking
-the rendering of the loader.</li>
-</ul>
-</div>
-<div id="technical-details" class="section level2">
-<h2>Technical details</h2>
-<p>Here is how the logic looks at the entry point of the Shiny app (<code>app.R</code>):</p>
-<pre class="r"><code>ui &lt;- function(request) {
-  tagList(
-    useLoader(),
-    shinyjs::useShinyjs(),
-    uiOutput(&quot;ui_main&quot;)
-  )
-}
-
-server &lt;- function(input, output, session) {
-  output$ui_main &lt;- renderUI(source(&quot;ui/main.R&quot;, local = TRUE)$value)
-  source(&quot;server/main.R&quot;, local = TRUE)$value
-  shinyjs::delay(15000, shinyjs::hide(&quot;loading&quot;))
-}
-
-shinyApp(ui, server)</code></pre>
-<ul>
-<li>The CSS loader is formally defined by using <code>htmltools::htmlDependencies()</code>
-and then attached so that it can be loaded first as an isolated dependency.</li>
-<li>Instead of defining the main UI directly in the UI function, we render the UI
-using <code>renderUI()</code> on the server side and used <code>uiOutput()</code> to output it.
-This makes the main UI loaded and rendered separately after the loader.</li>
-<li>The loader should be hidden when the main UI assets are loaded,
-while we also want to cover the case where the lengthy initialization is
-from computing. Therefore, we added a delay as another safeguard.
-One can tune the delay parameter (in ms) if they have a rough estimate for
-the computation to finish based on where the app is deployed.</li>
-</ul>
-<p>I also applied the idea of <a href="https://atomicdesign.bradfrost.com/">Atomic Design</a>
-to decouple the UI and server components so that the app structure is easy to
-understand and scale.</p>
-</div>
-<div id="waterfall-chart" class="section level2">
-<h2>Waterfall chart</h2>
-<p>Let’s check how the app is loaded using the waterfall chart in Chrome DevTools
-under the Network tab:</p>
-<p><img src="waterfall-chart.jpg" width="100%" /></p>
-<p>We can see that our loader is loaded and rendered at the very beginning, way
-before the XHR requests (which could be WebSocket requests in other cases)
-in the middle. These requests would trigger the rendering and loading of
-the main UI assets.</p>
-<p>To see how a minimal first contentful paint time helps more dramatically,
-you can simulate a limited bandwidth scenario by selecting Chrome DevTools →
-Network → Throttle → Fast 3G. This limits the loading speed of all resources.</p>
-</div>
-<div id="lighthouse" class="section level2">
-<h2>Lighthouse</h2>
-<p>We can also measure the page loading performance using
-<a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a>.</p>
-<p>It took 0.4 seconds (locally) to achieve First Contentful Paint.
-We only have 4 render-blocking resources: two from the loader,
-two from Shiny essentials.</p>
-<p><img src="lighthouse.jpg" width="100%" /></p>
-<p>I hope this example could help you build large Shiny apps with a
-better user experience in the future.</p>
-</div>
-<div id="bonus-thoughts" class="section level2">
-<h2>Bonus thoughts</h2>
-<p>The <code>-&gt;</code> assignment operator makes more sense logically and aesthetically
-if we write the server code like below, especially if you use a coding font
-with programming ligatures for <code>|&gt;</code> and <code>-&gt;</code>:</p>
-<pre class="r"><code>server &lt;- function(input, output, session) {
-  source(&quot;uiuiui/main.R&quot;, local = TRUE)$value |&gt; renderUI() -&gt; output$ui_main
-  source(&quot;server/main.R&quot;, local = TRUE)$value
+<p>We start with the color interpolation logic as a
+<a href="https://adv-r.hadley.nz/function-factories.html">function factory</a>
+and leverage <code>grDevices::colorRampPalette()</code>.</p>
+<pre class="r"><code>#&#39; Adaptive palette (discrete)
+#&#39;
+#&#39; Create a discrete palette that will use the first `n` colors from
+#&#39; the supplied color values when the palette has enough colors.
+#&#39; Otherwise, use an interpolated color palette.
+#&#39;
+#&#39; @param values Color values.
+pal_ramp &lt;- function(values) {
+  force(values)
+  function(n) {
+    if (n &lt;= length(values)) {
+      values[seq_len(n)]
+    } else {
+      colorRampPalette(values, alpha = TRUE)(n)
+    }
+  }
 }</code></pre>
-<p>I guess this feeling was also discussed
-<a href="https://win-vector.com/2016/12/12/the-case-for-using-in-r/">here</a> by John Mount.</p>
-</div>
+<p>Then, we create a color palette generator function,
+similar to the existing color palette generator functions in ggsci.
+The main difference here is that you can access and interpolate the raw color
+values of any palettes in ggsci.</p>
+<pre class="r"><code>#&#39; Adaptive color palette generator
+#&#39;
+#&#39; Adaptive color palette generator for ggsci color palettes using `pal_ramp()`.
+#&#39;
+#&#39; @param name Color palette name in ggsci
+#&#39; @param palette Color palette type in ggsci
+#&#39; @param alpha Transparency level, a real number in (0, 1].
+#&#39;
+#&#39; @details See `names(ggsci:::ggsci_db)` for all color palette names in ggsci.
+#&#39; See `names(ggsci:::ggsci_db$&quot;pal&quot;)` for available palette types under
+#&#39; the palette `pal`.
+pal_adaptive &lt;- function(name, palette, alpha = 1) {
+  if (alpha &gt; 1L | alpha &lt;= 0L) stop(&quot;alpha must be in (0, 1]&quot;)
+
+  raw_cols &lt;- ggsci:::ggsci_db[[name]][[palette]]
+  raw_cols_rgb &lt;- col2rgb(raw_cols)
+  alpha_cols &lt;- rgb(
+    raw_cols_rgb[1L, ], raw_cols_rgb[2L, ], raw_cols_rgb[3L, ],
+    alpha = alpha * 255L, names = names(raw_cols),
+    maxColorValue = 255L
+  )
+
+  pal_ramp(unname(alpha_cols))
+}</code></pre>
+<p>Finishing up by creating the ggplot2 color scales as usual.</p>
+<pre class="r"><code>#&#39; Adaptive color scales
+#&#39;
+#&#39; @inheritParams pal_adaptive
+#&#39; @param ... additional parameters for [ggplot2::discrete_scale()].
+scale_color_adaptive &lt;- function(name, palette, alpha = 1, ...) {
+  ggplot2::discrete_scale(&quot;colour&quot;, name, pal_adaptive(name, palette, alpha), ...)
+}
+
+scale_fill_adaptive &lt;- function(name, palette, alpha = 1, ...) {
+  ggplot2::discrete_scale(&quot;fill&quot;, name, pal_adaptive(name, palette, alpha), ...)
+}</code></pre>
+<p>Feels easy enough? Let’s test it in the wild with some
+high-cardinality data.</p>
+<p>We trained some <a href="https://github.com/nanxstats/exp2vec">tissue-specific gene embeddings on GTEx data using GloVe</a>.
+The embeddings are then projected to a 2D plane with t-SNE.</p>
+<pre class="r"><code>word_vectors &lt;- readRDS(url(
+  &quot;https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_embedding.rds&quot;
+))
+tsne_out &lt;- readRDS(url(
+  &quot;https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_tsne.rds&quot;
+))</code></pre>
+<p>Run k-means clustering on the projected coordinates and get 15 clusters:</p>
+<pre class="r"><code>set.seed(42)
+cl &lt;- kmeans(word_vectors, centers = 15, iter.max = 20)
+df &lt;- cbind(as.data.frame(tsne_out$Y), as.factor(cl$cluster))
+names(df) &lt;- c(&quot;x&quot;, &quot;y&quot;, &quot;cluster&quot;)</code></pre>
+<p>The <a href="https://nanx.me/ggsci/reference/pal_nejm.html">original color palette</a>
+only has 8 colors, but it will work fine here:</p>
+<pre class="r"><code>ggplot2::ggplot(df, ggplot2::aes(x = x, y = y)) +
+  ggplot2::geom_point(ggplot2::aes(colour = cluster), alpha = 0.5, size = 1) +
+  cowplot::theme_minimal_grid() +
+  scale_color_adaptive(name = &quot;nejm&quot;, palette = &quot;default&quot;)</code></pre>
+<p><img src="https://nanx.me/blog/post/ggplot2-color-interpolation/index_files/figure-html/unnamed-chunk-7-1.png" width="100%" /></p>
+<p>That’s all, folks.</p>
 
 
 
@@ -296,15 +290,11 @@ with programming ligatures for <code>|&gt;</code> and <code>-&gt;</code>:</p>
                         <div class="col-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/link-checker/">« A Simple Link Checker for Hugo and Blogdown Websites</a>
+                                <a href="https://nanx.me/blog/post/shiny-fcp-loader/">« Architecting Large Shiny Apps with Minimal First Contentful Paint Time</a>
                             </div>
                             
                         </div>
                         <div class="col-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/ggplot2-color-interpolation/">Adaptive ggplot2 Color Scales with Color Interpolation »</a>
-                            </div>
                             
                         </div>
                     </div>
