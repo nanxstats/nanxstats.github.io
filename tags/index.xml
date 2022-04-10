@@ -6,7 +6,52 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Apr 2022 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2022 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DataTables</title>
+      <link>https://nanx.me/tags/datatables/</link>
+      <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/datatables/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DT</title>
+      <link>https://nanx.me/tags/dt/</link>
+      <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/dt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://nanx.me/tags/r-markdown/</link>
+      <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shiny</title>
+      <link>https://nanx.me/tags/shiny/</link>
+      <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/shiny/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>color interpolation</title>
       <link>https://nanx.me/tags/color-interpolation/</link>
@@ -35,15 +80,6 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 06 Apr 2022 01:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>first contentful paint</title>
       <link>https://nanx.me/tags/first-contentful-paint/</link>
       <pubDate>Wed, 30 Mar 2022 22:00:00 +0000</pubDate>
@@ -58,15 +94,6 @@
       <pubDate>Wed, 30 Mar 2022 22:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/loading-screen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shiny</title>
-      <link>https://nanx.me/tags/shiny/</link>
-      <pubDate>Wed, 30 Mar 2022 22:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/shiny/</guid>
       <description></description>
     </item>
     
@@ -283,15 +310,6 @@
       <pubDate>Fri, 22 May 2020 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/distill/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>https://nanx.me/tags/r-markdown/</link>
-      <pubDate>Fri, 22 May 2020 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r-markdown/</guid>
       <description></description>
     </item>
     

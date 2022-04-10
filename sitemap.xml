@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/blog/post/ggplot2-color-interpolation/</loc>
-    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/dt-news-list/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/datatables/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/dt/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-markdown/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/shiny/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2022-04-10T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/ggplot2-color-interpolation/</loc>
     <lastmod>2022-04-06T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/color-interpolation/</loc>
@@ -17,15 +41,6 @@
     <loc>https://nanx.me/tags/ggplot2/</loc>
     <lastmod>2022-04-06T01:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2022-04-06T01:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/shiny-fcp-loader/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
@@ -33,9 +48,6 @@
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/loading-screen/</loc>
-    <lastmod>2022-03-30T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/shiny/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-architecture/</loc>
@@ -138,9 +150,6 @@
     <lastmod>2020-05-22T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/distill/</loc>
-    <lastmod>2020-05-22T00:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-markdown/</loc>
     <lastmod>2020-05-22T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/callr/</loc>

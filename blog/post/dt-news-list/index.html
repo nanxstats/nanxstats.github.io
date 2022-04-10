@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Building Paginated News Lists in R Markdown and Shiny with DT - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Create a paginated DT/DataTables widget to display complex lists in single-page R Markdown documents and Shiny apps." />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nanx.me/blog/post/dt-news-list/" />
+    <meta property="og:title" content="Building Paginated News Lists in R Markdown and Shiny with DT" />
+    <meta property="og:image" content="https://nanx.me/image/simon-lee-c17yhU11jyE-unsplash.jpg" />
+    <meta property="og:description" content="Create a paginated DT/DataTables widget to display complex lists in single-page R Markdown documents and Shiny apps." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Building Paginated News Lists in R Markdown and Shiny with DT" />
+    <meta name="twitter:description" content="Create a paginated DT/DataTables widget to display complex lists in single-page R Markdown documents and Shiny apps." />
+    <meta name="twitter:image" content="https://nanx.me/image/simon-lee-c17yhU11jyE-unsplash.jpg" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/dt-news-list/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+    <link href="https://nanx.me/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
+    
+</head>
+
+<body>
+    
+<div class="my-4 my-lg-5 header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        
+                        <a href="https://nanx.me/">
+                            <img class="logo img-fluid d-block rounded-circle"
+                                src="https://nanx.me/image/nanxiao.jpg" alt="Portrait of Nan Xiao">
+                        </a>
+                        
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="https://nanx.me/">
+                            <h1 class="name">Nan Xiao</h1>
+                        </a>
+
+                        <ul class="nav nav-primary">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-blog"
+                                    href="https://nanx.me/blog/">
+                                    
+                                    Blog
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-software"
+                                    href="https://nanx.me/software/">
+                                    
+                                    Software
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-papers"
+                                    href="https://nanx.me/papers/">
+                                    
+                                    Papers
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-talks"
+                                    href="https://nanx.me/talks/">
+                                    
+                                    Talks
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-books"
+                                    href="https://nanx.me/books/">
+                                    
+                                    Books
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <h1 class="blog-post-title">Building Paginated News Lists in R Markdown and Shiny with DT</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Sun Apr 10 2022 01:00:00 UTC'>
+                        2022-04-10
+                    </span>
+
+                    <span class="reading-time middot">
+                        5 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/dt">DT</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/datatables">DataTables</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r-markdown">R Markdown</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/shiny">Shiny</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+
+
+<blockquote>
+<p>The R code in this post is also available as <a href="https://gist.github.com/nanxstats/2f79e09060657e143b19d068bd6d79b8">this GitHub Gist</a>.</p>
+</blockquote>
+<div class="figure">
+<img src="https://nanx.me/image/simon-lee-c17yhU11jyE-unsplash.jpg" alt="" />
+<p class="caption">Mosaic Mondrian. Original photo by <a href="https://unsplash.com/photos/c17yhU11jyE">Simon Lee</a>.</p>
+</div>
+<div id="context-and-motivation" class="section level2">
+<h2>Context and motivation</h2>
+<p>A single-file R Markdown document often generates single-page HTML outputs.
+Similarly, Shiny is a single-page application framework. The single-page
+nature of these outputs makes it challenging to create experiences like
+pagination to display long and sophisticated lists, which is usually
+accomplished by creating multiple pages and URL routing.</p>
+<p>Serendipitously, I found a
+<a href="https://www.canada.ca/en/news.html">creative DataTables use case</a>
+for displaying a list of news articles metadata on a single page,
+with no additional pagination needed (<a href="datatables-news-list.png">screenshot</a>).
+So I decided to reproduce this use case with <a href="https://github.com/rstudio/DT">DT</a>,
+the time-tested, well-maintained, capable R wrapper for the DataTables JS library.</p>
+<p>You can <a href="dt.html">view the results here</a>. It works in both R Markdown static
+HTML pages and Shiny apps, and the steps are documented below.</p>
+</div>
+<div id="generate-mock-data" class="section level2">
+<h2>Generate mock data</h2>
+<p>To populate the news data into a table, we first generate some fake (mock)
+data using <a href="https://github.com/ropensci/charlatan/">charlatan</a>
+and the <em>lorem ipsum</em> generator in <a href="https://github.com/gagolews/stringi">stringi</a>.</p>
+<pre class="r"><code>set.seed(42)
+k &lt;- 100
+df &lt;- data.frame(
+  title = unlist(purrr::map2(
+    .x = stringr::word(stringi::stri_rand_lipsum(k), start = 1, end = 10),
+    .y = rep(&quot;#&quot;, k),
+    .f = function(.x, .y) as.character(htmltools::tags$a(.x, href = .y))
+  )),
+  time = as.POSIXct(unlist(
+    charlatan::ch_date_time(n = k)
+  ), origin = &quot;1970-01-01 00:00.00 UTC&quot;),
+  inst = sample(charlatan::ch_company(n = 20), size = k, replace = TRUE),
+  type = sample(
+    c(&quot;backgrounders&quot;, &quot;media advisories&quot;, &quot;news releases&quot;, &quot;readouts&quot;, &quot;speeches&quot;),
+    size = k, replace = TRUE
+  ),
+  desc = stringi::stri_rand_lipsum(k),
+  stringsAsFactors = FALSE
+)
+
+df$metadata &lt;- paste(df$time, df$inst, df$type, sep = &quot;&amp;nbsp; | &amp;nbsp;&quot;)
+df &lt;- df[, c(&quot;title&quot;, &quot;time&quot;, &quot;inst&quot;, &quot;type&quot;, &quot;metadata&quot;, &quot;desc&quot;)]
+df &lt;- df[order(df$time, decreasing = TRUE), ]</code></pre>
+</div>
+<div id="create-filter-widgets-using-crosstalk" class="section level2">
+<h2>Create filter widgets using crosstalk</h2>
+<p>I used <a href="https://github.com/rstudio/crosstalk">crosstalk</a> to implement filtering.
+We will need to bind the two example filters here in a list to ensure a joint
+selection behavior.</p>
+<pre class="r"><code>df_shared &lt;- crosstalk::SharedData$new(df)
+
+ui_filters &lt;- list(
+  crosstalk::filter_select(
+    id = &quot;selector-type&quot;,
+    label = &quot;News type&quot;,
+    sharedData = df_shared,
+    group = ~type
+  ),
+  crosstalk::filter_select(
+    id = &quot;selector-inst&quot;,
+    label = &quot;Institution&quot;,
+    sharedData = df_shared,
+    group = ~inst
+  )
+)</code></pre>
+</div>
+<div id="create-a-table-widget-using-dt" class="section level2">
+<h2>Create a table widget using DT</h2>
+<p>We then proceed to create a DataTables widget using <code>DT::datatable()</code>.
+A few less-used options are explained below.</p>
+<ul>
+<li><code>columnDefs</code>: Define the invisible columns for filtering only
+(and show the other columns).</li>
+<li><code>dom</code>: Rearrange the table control element positions.</li>
+<li><code>headerCallback</code>: Hide the table headers.</li>
+<li><code>style</code> and <code>class</code>: Leverage the Bootstrap table styling.</li>
+<li><code>escape = FALSE</code>: Display the news title as HTML links without HTML escaping.
+Please note that if the table content can be user-generated,
+we <strong>must</strong> use <code>htmltools::htmlEscape()</code> to escape the raw data
+to avoid security vulnerabilities like XSS.</li>
+</ul>
+<pre class="r"><code>ui_dt &lt;- DT::datatable(
+  df_shared,
+  options = list(
+    columnDefs = list(list(visible = FALSE, targets = c(1, 2, 3))),
+    dom = &quot;&lt;&#39;top&#39;fil&gt;rt&lt;&#39;bottom&#39;p&gt;&lt;&#39;clear&#39;&gt;&quot;,
+    language = list(search = &quot;Filter items:&quot;),
+    pageLength = 3,
+    headerCallback = DT::JS(
+      &quot;function(thead, data, start, end, display){&quot;,
+      &quot;  $(thead).remove();&quot;,
+      &quot;}&quot;
+    )
+  ),
+  class = c(&quot;table&quot;, &quot;table-striped&quot;, &quot;table-hover&quot;, &quot;table-borderless&quot;),
+  style = &quot;bootstrap4&quot;,
+  rownames = FALSE,
+  escape = FALSE,
+  width = &quot;850px&quot;,
+  selection = &quot;none&quot;
+)</code></pre>
+</div>
+<div id="define-custom-css-styles-for-table-elements" class="section level2">
+<h2>Define custom CSS styles for table elements</h2>
+<p>We can then customize the table style with CSS to match the original use case.
+Mostly, the table columns and table control elements need to be stylized.</p>
+<p>I encounter a blocker in making specific columns
+(title and description) fill the entire row. I asked
+<a href="https://d.cosx.org/d/423087-dt">this question</a> online, and fortunately,
+<a href="http://tc.rbind.io/">Tongchuan</a> offered a simple solution
+by setting <code>td { display: block; }</code>. Although this would make
+every column fill the row, I could create and display a formatted
+<code>metadata</code> column in the beginning and hide the filtering-only
+columns using the <code>columnDefs</code> specification above.</p>
+<pre class="r"><code>css_dt &lt;- textConnection(&quot;
+  table td { display: block; }
+  table td:nth-child(1) { font-size: 1.375rem; }
+  table td:nth-child(2) { color: #555; }
+  div.dataTables_wrapper div.dataTables_filter { display: inline; text-align: left; }
+  div.dataTables_wrapper div.dataTables_filter label { font-weight: 700; }
+  div.dataTables_wrapper div.dataTables_info { display: inline; margin-left: 1ch; padding-top: 0; }
+  div.dataTables_wrapper div.dataTables_length { display: inline; margin-left: 1ch; padding-left: 1ch; border-left: 1px solid;}
+  div.dataTables_wrapper div.dataTables_length label { font-weight: 700; }
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination { justify-content: center; }
+&quot;)</code></pre>
+</div>
+<div id="compose-widgets-into-an-html-page" class="section level2">
+<h2>Compose widgets into an HTML page</h2>
+<p>To preview the table, we compose the elements into an HTML page.</p>
+<p>Note that the <code>shiny</code> calls here are only a convenient way to include the
+Bootstrap dependency. We can then leverage the Bootstrap grid system and
+element styling to position and stylize things easily.</p>
+<p>To <a href="https://rstudio.github.io/DT/shiny.html">use DT in Shiny apps</a> formally,
+you need the <code>DT::renderDT()</code> and <code>DT::DTOutput()</code> construct.
+For R Markdown documents, use the <code>DT::datatable()</code> output
+in an R code chunk directly.</p>
+<pre class="r"><code>card &lt;- function(title, ...) {
+  htmltools::tags$div(
+    class = &quot;card&quot;,
+    htmltools::tags$div(class = &quot;card-header&quot;, title),
+    htmltools::tags$div(class = &quot;card-body&quot;, ...)
+  )
+}
+
+html &lt;- shiny::fluidPage(
+  title = &quot;DT News List Example&quot;,
+  theme = bslib::bs_theme(version = 5, primary = &quot;#295376&quot;),
+  lang = &quot;en&quot;,
+  shiny::includeCSS(css_dt),
+  shiny::fluidRow(
+    shiny::column(
+      width = 10, offset = 1,
+      shiny::fluidRow(
+        shiny::column(
+          width = 3,
+          card(
+            title = &quot;Filter news&quot;,
+            htmltools::tags$p(
+              &quot;Use filters to search for the most recent news articles.&quot;
+            ),
+            ui_filters
+          )
+        ),
+        shiny::column(
+          width = 9,
+          ui_dt
+        )
+      )
+    )
+  )
+)</code></pre>
+<pre class="r"><code>htmltools::browsable(html)</code></pre>
+</div>
+<div id="discussions" class="section level2">
+<h2>Discussions</h2>
+<p>There are still rough edges in this DT table, such as making the table
+responsive and the height of the HTML widget, but they are details.</p>
+<p>It would be fun to implement UI components involving a paginated list
+in Shiny, single-page R Markdown documents, or R Markdown static website
+generators, like distill and the
+<a href="https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html">simple site generator</a>.
+However, blogdown has Hugo’s <a href="https://gohugo.io/templates/pagination/">pagination</a>
+templating support; thus, there is a more native way to solve it.</p>
+<p>On scalability, to avoid stressing the web browser with too many DOM elements
+in a single page when the table gets large, one might want to use
+<a href="https://rstudio.github.io/DT/server.html">server-side processing</a>
+or have a content archiving mechanism.</p>
+</div>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/ggplot2-color-interpolation/">« Adaptive ggplot2 Color Scales with Color Interpolation</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer mt-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                
+                <div class="site-copyright">
+                    © 2011–2022 Nan Xiao
+                </div>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1 mb-5">
+            <div class="col-sm-12 col-lg-6">
+                <div class="site-social">
+                    <ul>
+                        
+
+                        
+                        <li><a href="https://github.com/nanxstats" target="_blank"
+                                rel="noopener">GitHub</a></li>
+                        
+
+                        
+
+                        
+
+                        
+                        <li><a href="https://twitter.com/nanxstats" target="_blank"
+                                rel="noopener">Twitter</a></li>
+                        
+
+                        
+                        <li><a href="https://www.linkedin.com/in/nanxstats" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/colophon/">Colophon</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/index.xml" class="mr-0">RSS</a></li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/r.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.highlightAll();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>

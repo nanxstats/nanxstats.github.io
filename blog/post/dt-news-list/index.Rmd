@@ -1,0 +1,256 @@
+---
+title: "Building Paginated News Lists in R Markdown and Shiny with DT"
+author: "Nan Xiao"
+date: "2022-04-10T01:00:00"
+slug: dt-news-list
+categories: []
+tags:
+  - R
+  - DT
+  - DataTables
+  - R Markdown
+  - Shiny
+meta_img: "image/simon-lee-c17yhU11jyE-unsplash.jpg"
+description: "Create a paginated DT/DataTables widget to display complex lists in single-page R Markdown documents and Shiny apps."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE
+)
+```
+
+> The R code in this post is also available as [this GitHub Gist](https://gist.github.com/nanxstats/2f79e09060657e143b19d068bd6d79b8).
+
+![Mosaic Mondrian. Original photo by [Simon Lee](https://unsplash.com/photos/c17yhU11jyE).](/image/simon-lee-c17yhU11jyE-unsplash.jpg)
+
+## Context and motivation
+
+A single-file R Markdown document often generates single-page HTML outputs.
+Similarly, Shiny is a single-page application framework. The single-page
+nature of these outputs makes it challenging to create experiences like
+pagination to display long and sophisticated lists, which is usually
+accomplished by creating multiple pages and URL routing.
+
+```{r, eval=FALSE, echo=FALSE}
+webshot2::webshot(
+  "https://www.canada.ca/en/news.html",
+  file = "datatables-news-list.png",
+  selector = ".mwscolumns",
+  zoom = 2,
+  delay = 5,
+  expand = 40
+)
+
+system("pngquant --speed=1 --force --ext .png datatables-news-list.png")
+```
+
+Serendipitously, I found a
+[creative DataTables use case](https://www.canada.ca/en/news.html)
+for displaying a list of news articles metadata on a single page,
+with no additional pagination needed ([screenshot](datatables-news-list.png)).
+So I decided to reproduce this use case with [DT](https://github.com/rstudio/DT),
+the time-tested, well-maintained, capable R wrapper for the DataTables JS library.
+
+You can [view the results here](dt.html). It works in both R Markdown static
+HTML pages and Shiny apps, and the steps are documented below.
+
+## Generate mock data
+
+To populate the news data into a table, we first generate some fake (mock)
+data using [charlatan](https://github.com/ropensci/charlatan/)
+and the _lorem ipsum_ generator in [stringi](https://github.com/gagolews/stringi).
+
+```{r}
+set.seed(42)
+k <- 100
+df <- data.frame(
+  title = unlist(purrr::map2(
+    .x = stringr::word(stringi::stri_rand_lipsum(k), start = 1, end = 10),
+    .y = rep("#", k),
+    .f = function(.x, .y) as.character(htmltools::tags$a(.x, href = .y))
+  )),
+  time = as.POSIXct(unlist(
+    charlatan::ch_date_time(n = k)
+  ), origin = "1970-01-01 00:00.00 UTC"),
+  inst = sample(charlatan::ch_company(n = 20), size = k, replace = TRUE),
+  type = sample(
+    c("backgrounders", "media advisories", "news releases", "readouts", "speeches"),
+    size = k, replace = TRUE
+  ),
+  desc = stringi::stri_rand_lipsum(k),
+  stringsAsFactors = FALSE
+)
+
+df$metadata <- paste(df$time, df$inst, df$type, sep = "&nbsp; | &nbsp;")
+df <- df[, c("title", "time", "inst", "type", "metadata", "desc")]
+df <- df[order(df$time, decreasing = TRUE), ]
+```
+
+## Create filter widgets using crosstalk
+
+I used [crosstalk](https://github.com/rstudio/crosstalk) to implement filtering.
+We will need to bind the two example filters here in a list to ensure a joint
+selection behavior.
+
+```{r}
+df_shared <- crosstalk::SharedData$new(df)
+
+ui_filters <- list(
+  crosstalk::filter_select(
+    id = "selector-type",
+    label = "News type",
+    sharedData = df_shared,
+    group = ~type
+  ),
+  crosstalk::filter_select(
+    id = "selector-inst",
+    label = "Institution",
+    sharedData = df_shared,
+    group = ~inst
+  )
+)
+```
+
+## Create a table widget using DT
+
+We then proceed to create a DataTables widget using `DT::datatable()`.
+A few less-used options are explained below.
+
+- `columnDefs`: Define the invisible columns for filtering only
+  (and show the other columns).
+- `dom`: Rearrange the table control element positions.
+- `headerCallback`: Hide the table headers.
+- `style` and `class`: Leverage the Bootstrap table styling.
+- `escape = FALSE`: Display the news title as HTML links without HTML escaping.
+  Please note that if the table content can be user-generated,
+  we **must** use `htmltools::htmlEscape()` to escape the raw data
+  to avoid security vulnerabilities like XSS.
+
+```{r}
+ui_dt <- DT::datatable(
+  df_shared,
+  options = list(
+    columnDefs = list(list(visible = FALSE, targets = c(1, 2, 3))),
+    dom = "<'top'fil>rt<'bottom'p><'clear'>",
+    language = list(search = "Filter items:"),
+    pageLength = 3,
+    headerCallback = DT::JS(
+      "function(thead, data, start, end, display){",
+      "  $(thead).remove();",
+      "}"
+    )
+  ),
+  class = c("table", "table-striped", "table-hover", "table-borderless"),
+  style = "bootstrap4",
+  rownames = FALSE,
+  escape = FALSE,
+  width = "850px",
+  selection = "none"
+)
+```
+
+## Define custom CSS styles for table elements
+
+We can then customize the table style with CSS to match the original use case.
+Mostly, the table columns and table control elements need to be stylized.
+
+I encounter a blocker in making specific columns
+(title and description) fill the entire row. I asked
+[this question](https://d.cosx.org/d/423087-dt) online, and fortunately,
+[Tongchuan](http://tc.rbind.io/) offered a simple solution
+by setting `td { display: block; }`. Although this would make
+every column fill the row, I could create and display a formatted
+`metadata` column in the beginning and hide the filtering-only
+columns using the `columnDefs` specification above.
+
+```{r}
+css_dt <- textConnection("
+  table td { display: block; }
+  table td:nth-child(1) { font-size: 1.375rem; }
+  table td:nth-child(2) { color: #555; }
+  div.dataTables_wrapper div.dataTables_filter { display: inline; text-align: left; }
+  div.dataTables_wrapper div.dataTables_filter label { font-weight: 700; }
+  div.dataTables_wrapper div.dataTables_info { display: inline; margin-left: 1ch; padding-top: 0; }
+  div.dataTables_wrapper div.dataTables_length { display: inline; margin-left: 1ch; padding-left: 1ch; border-left: 1px solid;}
+  div.dataTables_wrapper div.dataTables_length label { font-weight: 700; }
+  div.dataTables_wrapper div.dataTables_paginate ul.pagination { justify-content: center; }
+")
+```
+
+## Compose widgets into an HTML page
+
+To preview the table, we compose the elements into an HTML page.
+
+Note that the `shiny` calls here are only a convenient way to include the
+Bootstrap dependency. We can then leverage the Bootstrap grid system and
+element styling to position and stylize things easily.
+
+To [use DT in Shiny apps](https://rstudio.github.io/DT/shiny.html) formally,
+you need the `DT::renderDT()` and `DT::DTOutput()` construct.
+For R Markdown documents, use the `DT::datatable()` output
+in an R code chunk directly.
+
+```{r}
+card <- function(title, ...) {
+  htmltools::tags$div(
+    class = "card",
+    htmltools::tags$div(class = "card-header", title),
+    htmltools::tags$div(class = "card-body", ...)
+  )
+}
+
+html <- shiny::fluidPage(
+  title = "DT News List Example",
+  theme = bslib::bs_theme(version = 5, primary = "#295376"),
+  lang = "en",
+  shiny::includeCSS(css_dt),
+  shiny::fluidRow(
+    shiny::column(
+      width = 10, offset = 1,
+      shiny::fluidRow(
+        shiny::column(
+          width = 3,
+          card(
+            title = "Filter news",
+            htmltools::tags$p(
+              "Use filters to search for the most recent news articles."
+            ),
+            ui_filters
+          )
+        ),
+        shiny::column(
+          width = 9,
+          ui_dt
+        )
+      )
+    )
+  )
+)
+```
+
+```{r, eval=FALSE}
+htmltools::browsable(html)
+```
+
+```{r, echo=FALSE}
+htmltools::save_html(html, file = "dt.html", lang = "en")
+```
+
+## Discussions
+
+There are still rough edges in this DT table, such as making the table
+responsive and the height of the HTML widget, but they are details.
+
+It would be fun to implement UI components involving a paginated list
+in Shiny, single-page R Markdown documents, or R Markdown static website
+generators, like distill and the
+[simple site generator](https://bookdown.org/yihui/rmarkdown/rmarkdown-site.html).
+However, blogdown has Hugo's [pagination](https://gohugo.io/templates/pagination/)
+templating support; thus, there is a more native way to solve it.
+
+On scalability, to avoid stressing the web browser with too many DOM elements
+in a single page when the table gets large, one might want to use
+[server-side processing](https://rstudio.github.io/DT/server.html)
+or have a content archiving mechanism.

@@ -6,7 +6,18 @@
     <description>Recent content in Blog on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Apr 2022 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Apr 2022 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Paginated News Lists in R Markdown and Shiny with DT</title>
+      <link>https://nanx.me/blog/post/dt-news-list/</link>
+      <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/dt-news-list/</guid>
+      <description>The R code in this post is also available as this GitHub Gist.
+ Mosaic Mondrian. Original photo by Simon Lee.
+ Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
+    </item>
+    
     <item>
       <title>Adaptive ggplot2 Color Scales with Color Interpolation</title>
       <link>https://nanx.me/blog/post/ggplot2-color-interpolation/</link>
