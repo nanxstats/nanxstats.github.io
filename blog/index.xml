@@ -6,7 +6,19 @@
     <description>Recent content in Blog on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 10 Apr 2022 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 14 Apr 2022 00:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5</title>
+      <link>https://nanx.me/blog/post/shiny-bs5-switches/</link>
+      <pubDate>Thu, 14 Apr 2022 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
+      <description>The R code in this post is also available as this GitHub Gist.
+ Photo by Zonduurzaam Deventer.
+ Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
+Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
+    </item>
+    
     <item>
       <title>Building Paginated News Lists in R Markdown and Shiny with DT</title>
       <link>https://nanx.me/blog/post/dt-news-list/</link>

@@ -1,0 +1,120 @@
+---
+title: "Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5"
+author: "Nan Xiao"
+date: "2022-04-14T00:30:00"
+slug: shiny-bs5-switches
+categories: []
+tags:
+  - R
+  - Shiny
+  - "Bootstrap 5"
+meta_img: "image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg"
+description: "Implement the Bootstrap 5 switch input for Shiny in five minutes."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE,
+  eval = FALSE
+)
+```
+
+> The R code in this post is also available as [this GitHub Gist](https://gist.github.com/nanxstats/e43c1f207dc8b727f6c832d3226d1d16).
+
+![Photo by [Zonduurzaam Deventer](https://unsplash.com/photos/BFNi3TWB2fw).](/image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg)
+
+Bootstrap 4 and 5 have expanded the types of UI components compared to
+version 3. On the other hand, the available UI inputs and outputs in Shiny have
+been relatively stable while being carefully made compatible across
+different Bootstrap versions through bslib.
+
+Since we can already leverage the native UI components in Bootstrap 5 via bslib,
+it would be fun to create the R wrappers for the "missing" inputs that
+were not available in Bootstrap 3.
+One of the most straightforward examples is the switch input.
+
+A toggle switch input is a checkbox input, with only binary values and
+[different use cases](https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8).
+Therefore, we can borrow `shiny::checkboxInput()` and apply the necessary changes based on
+[Bootstrap 5 switches](https://getbootstrap.com/docs/5.1/forms/checks-radios/#switches)
+without creating custom input bindings in JavaScript.
+To update the switch inputs, we can even reuse `shiny::updateCheckboxInput()`.
+
+```{r}
+switchInput <- function(inputId, label, value = FALSE, disabled = FALSE, width = NULL) {
+  value <- shiny::restoreInput(id = inputId, default = value)
+  inputTag <- htmltools::tags$input(id = inputId, type = "checkbox", role = "switch", class = "form-check-input")
+  if (!is.null(value) && value) {
+    inputTag$attribs$checked <- NA
+  }
+  if (!is.null(disabled) && disabled) {
+    inputTag$attribs$disabled <- NA
+  }
+  htmltools::tags$div(
+    class = "form-group shiny-input-container", style = htmltools::css(width = shiny::validateCssUnit(width)),
+    htmltools::tags$div(
+      class = "from-check form-switch",
+      inputTag,
+      htmltools::tags$label(label, class = "form-check-label")
+    ),
+  )
+}
+
+updateSwitchInput <- shiny::updateCheckboxInput
+```
+
+Try it out (preview at <https://nanx.shinyapps.io/shiny-bs5-switches/>):
+
+```{r}
+card <- function(title, ...) {
+  htmltools::tags$div(
+    class = "card",
+    htmltools::tags$div(class = "card-header", title),
+    htmltools::tags$div(class = "card-body", ...)
+  )
+}
+
+ui <- shiny::fluidPage(
+  title = "Bootstrap 5 Switches for Shiny",
+  theme = bslib::bs_theme(
+    version = 5,
+    primary = "#002FA7",
+    `form-check-input-checked-bg-color` = "#002FA7"
+  ),
+  lang = "en",
+  shiny::fluidRow(
+    style = "margin-top: 20px;",
+    shiny::column(
+      width = 8, offset = 2,
+      card(
+        title = "Bootstrap 5 Switches for Shiny",
+        switchInput("input1", label = "Default switch checkbox input", width = "100%"),
+        verbatimTextOutput("value1"),
+        switchInput("input2", label = "Checked switch checkbox input", value = TRUE, width = "100%"),
+        verbatimTextOutput("value2"),
+        switchInput("input3", label = "Disabled switch checkbox input", disabled = TRUE, width = "100%"),
+        verbatimTextOutput("value3"),
+        switchInput("input4", label = "Disabled checked switch checkbox input", value = TRUE, disabled = TRUE, width = "100%"),
+        verbatimTextOutput("value4"),
+        sliderInput("controller", "Controller", min = 0, max = 4, value = 0, step = 1),
+        switchInput("input5", "Input switch that can be updated")
+      )
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  output$value1 <- renderText(input$input1)
+  output$value2 <- renderText(input$input2)
+  output$value3 <- renderText(input$input3)
+  output$value4 <- renderText(input$input4)
+  observe({
+    # TRUE if input$controller is odd, FALSE if even.
+    x_even <- input$controller %% 2 == 1
+    updateSwitchInput(session, "input5", value = x_even)
+  })
+}
+
+shiny::shinyApp(ui, server)
+```

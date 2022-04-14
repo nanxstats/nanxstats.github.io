@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5 - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Implement the Bootstrap 5 switch input for Shiny in five minutes." />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nanx.me/blog/post/shiny-bs5-switches/" />
+    <meta property="og:title" content="Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5" />
+    <meta property="og:image" content="https://nanx.me/image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg" />
+    <meta property="og:description" content="Implement the Bootstrap 5 switch input for Shiny in five minutes." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5" />
+    <meta name="twitter:description" content="Implement the Bootstrap 5 switch input for Shiny in five minutes." />
+    <meta name="twitter:image" content="https://nanx.me/image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/shiny-bs5-switches/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+    <link href="https://nanx.me/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
+    
+</head>
+
+<body>
+    
+<div class="my-4 my-lg-5 header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        
+                        <a href="https://nanx.me/">
+                            <img class="logo img-fluid d-block rounded-circle"
+                                src="https://nanx.me/image/nanxiao.jpg" alt="Portrait of Nan Xiao">
+                        </a>
+                        
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="https://nanx.me/">
+                            <h1 class="name">Nan Xiao</h1>
+                        </a>
+
+                        <ul class="nav nav-primary">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-blog"
+                                    href="https://nanx.me/blog/">
+                                    
+                                    Blog
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-software"
+                                    href="https://nanx.me/software/">
+                                    
+                                    Software
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-papers"
+                                    href="https://nanx.me/papers/">
+                                    
+                                    Papers
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-talks"
+                                    href="https://nanx.me/talks/">
+                                    
+                                    Talks
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-books"
+                                    href="https://nanx.me/books/">
+                                    
+                                    Books
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <h1 class="blog-post-title">Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Thu Apr 14 2022 00:30:00 UTC'>
+                        2022-04-14
+                    </span>
+
+                    <span class="reading-time middot">
+                        3 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/shiny">Shiny</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/bootstrap-5">Bootstrap 5</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+
+
+<blockquote>
+<p>The R code in this post is also available as <a href="https://gist.github.com/nanxstats/e43c1f207dc8b727f6c832d3226d1d16">this GitHub Gist</a>.</p>
+</blockquote>
+<div class="figure">
+<img src="https://nanx.me/image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/BFNi3TWB2fw">Zonduurzaam Deventer</a>.</p>
+</div>
+<p>Bootstrap 4 and 5 have expanded the types of UI components compared to
+version 3. On the other hand, the available UI inputs and outputs in Shiny have
+been relatively stable while being carefully made compatible across
+different Bootstrap versions through bslib.</p>
+<p>Since we can already leverage the native UI components in Bootstrap 5 via bslib,
+it would be fun to create the R wrappers for the “missing” inputs that
+were not available in Bootstrap 3.
+One of the most straightforward examples is the switch input.</p>
+<p>A toggle switch input is a checkbox input, with only binary values and
+<a href="https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8">different use cases</a>.
+Therefore, we can borrow <code>shiny::checkboxInput()</code> and apply the necessary changes based on
+<a href="https://getbootstrap.com/docs/5.1/forms/checks-radios/#switches">Bootstrap 5 switches</a>
+without creating custom input bindings in JavaScript.
+To update the switch inputs, we can even reuse <code>shiny::updateCheckboxInput()</code>.</p>
+<pre class="r"><code>switchInput &lt;- function(inputId, label, value = FALSE, disabled = FALSE, width = NULL) {
+  value &lt;- shiny::restoreInput(id = inputId, default = value)
+  inputTag &lt;- htmltools::tags$input(id = inputId, type = &quot;checkbox&quot;, role = &quot;switch&quot;, class = &quot;form-check-input&quot;)
+  if (!is.null(value) &amp;&amp; value) {
+    inputTag$attribs$checked &lt;- NA
+  }
+  if (!is.null(disabled) &amp;&amp; disabled) {
+    inputTag$attribs$disabled &lt;- NA
+  }
+  htmltools::tags$div(
+    class = &quot;form-group shiny-input-container&quot;, style = htmltools::css(width = shiny::validateCssUnit(width)),
+    htmltools::tags$div(
+      class = &quot;from-check form-switch&quot;,
+      inputTag,
+      htmltools::tags$label(label, class = &quot;form-check-label&quot;)
+    ),
+  )
+}
+
+updateSwitchInput &lt;- shiny::updateCheckboxInput</code></pre>
+<p>Try it out (preview at <a href="https://nanx.shinyapps.io/shiny-bs5-switches/" class="uri">https://nanx.shinyapps.io/shiny-bs5-switches/</a>):</p>
+<pre class="r"><code>card &lt;- function(title, ...) {
+  htmltools::tags$div(
+    class = &quot;card&quot;,
+    htmltools::tags$div(class = &quot;card-header&quot;, title),
+    htmltools::tags$div(class = &quot;card-body&quot;, ...)
+  )
+}
+
+ui &lt;- shiny::fluidPage(
+  title = &quot;Bootstrap 5 Switches for Shiny&quot;,
+  theme = bslib::bs_theme(
+    version = 5,
+    primary = &quot;#002FA7&quot;,
+    `form-check-input-checked-bg-color` = &quot;#002FA7&quot;
+  ),
+  lang = &quot;en&quot;,
+  shiny::fluidRow(
+    style = &quot;margin-top: 20px;&quot;,
+    shiny::column(
+      width = 8, offset = 2,
+      card(
+        title = &quot;Bootstrap 5 Switches for Shiny&quot;,
+        switchInput(&quot;input1&quot;, label = &quot;Default switch checkbox input&quot;, width = &quot;100%&quot;),
+        verbatimTextOutput(&quot;value1&quot;),
+        switchInput(&quot;input2&quot;, label = &quot;Checked switch checkbox input&quot;, value = TRUE, width = &quot;100%&quot;),
+        verbatimTextOutput(&quot;value2&quot;),
+        switchInput(&quot;input3&quot;, label = &quot;Disabled switch checkbox input&quot;, disabled = TRUE, width = &quot;100%&quot;),
+        verbatimTextOutput(&quot;value3&quot;),
+        switchInput(&quot;input4&quot;, label = &quot;Disabled checked switch checkbox input&quot;, value = TRUE, disabled = TRUE, width = &quot;100%&quot;),
+        verbatimTextOutput(&quot;value4&quot;),
+        sliderInput(&quot;controller&quot;, &quot;Controller&quot;, min = 0, max = 4, value = 0, step = 1),
+        switchInput(&quot;input5&quot;, &quot;Input switch that can be updated&quot;)
+      )
+    )
+  )
+)
+
+server &lt;- function(input, output, session) {
+  output$value1 &lt;- renderText(input$input1)
+  output$value2 &lt;- renderText(input$input2)
+  output$value3 &lt;- renderText(input$input3)
+  output$value4 &lt;- renderText(input$input4)
+  observe({
+    # TRUE if input$controller is odd, FALSE if even.
+    x_even &lt;- input$controller %% 2 == 1
+    updateSwitchInput(session, &quot;input5&quot;, value = x_even)
+  })
+}
+
+shiny::shinyApp(ui, server)</code></pre>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/dt-news-list/">« Building Paginated News Lists in R Markdown and Shiny with DT</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer mt-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                
+                <div class="site-copyright">
+                    © 2011–2022 Nan Xiao
+                </div>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1 mb-5">
+            <div class="col-sm-12 col-lg-6">
+                <div class="site-social">
+                    <ul>
+                        
+
+                        
+                        <li><a href="https://github.com/nanxstats" target="_blank"
+                                rel="noopener">GitHub</a></li>
+                        
+
+                        
+
+                        
+
+                        
+                        <li><a href="https://twitter.com/nanxstats" target="_blank"
+                                rel="noopener">Twitter</a></li>
+                        
+
+                        
+                        <li><a href="https://www.linkedin.com/in/nanxstats" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/colophon/">Colophon</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/index.xml" class="mr-0">RSS</a></li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/r.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.highlightAll();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>
