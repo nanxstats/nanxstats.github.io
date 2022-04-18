@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5 - Nan Xiao | 肖楠 </title>
+    <title> Five Minute Shiny: File Input Area Widget - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Implement the Bootstrap 5 switch input for Shiny in five minutes." />
+    <meta name="description" content="Implement a file input area UI widget for Shiny in five minutes." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/shiny-bs5-switches/" />
-    <meta property="og:title" content="Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5" />
-    <meta property="og:image" content="https://nanx.me/image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg" />
-    <meta property="og:description" content="Implement the Bootstrap 5 switch input for Shiny in five minutes." />
+    <meta property="og:url" content="https://nanx.me/blog/post/shiny-file-input-area/" />
+    <meta property="og:title" content="Five Minute Shiny: File Input Area Widget" />
+    <meta property="og:image" content="https://nanx.me/image/willian-justen-de-vasconcellos-wnmtuxbOuAs-unsplash.jpg" />
+    <meta property="og:description" content="Implement a file input area UI widget for Shiny in five minutes." />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5" />
-    <meta name="twitter:description" content="Implement the Bootstrap 5 switch input for Shiny in five minutes." />
-    <meta name="twitter:image" content="https://nanx.me/image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg" />
+    <meta name="twitter:title" content="Five Minute Shiny: File Input Area Widget" />
+    <meta name="twitter:description" content="Implement a file input area UI widget for Shiny in five minutes." />
+    <meta name="twitter:image" content="https://nanx.me/image/willian-justen-de-vasconcellos-wnmtuxbOuAs-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/shiny-bs5-switches/">
+    <link rel="canonical" href="https://nanx.me/blog/post/shiny-file-input-area/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -120,7 +120,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-6">
-                <h1 class="blog-post-title">Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5</h1>
+                <h1 class="blog-post-title">Five Minute Shiny: File Input Area Widget</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -131,8 +131,8 @@
                     
                     
 
-                    <span class="date middot" title='Thu Apr 14 2022 00:30:00 UTC'>
-                        2022-04-14
+                    <span class="date middot" title='Sun Apr 17 2022 21:00:00 UTC'>
+                        2022-04-17
                     </span>
 
                     <span class="reading-time middot">
@@ -171,47 +171,111 @@
 
 
 <blockquote>
-<p>The R code in this post is also available as <a href="https://gist.github.com/nanxstats/e43c1f207dc8b727f6c832d3226d1d16">this GitHub Gist</a>.</p>
+<p>The R code in this post is also available as <a href="https://gist.github.com/nanxstats/095c4b13eae339faf1783c96390d71cf">this GitHub Gist</a>.</p>
 </blockquote>
 <div class="figure">
-<img src="https://nanx.me/image/zonduurzaam-deventer-BFNi3TWB2fw-unsplash.jpg" alt="" />
-<p class="caption">Photo by <a href="https://unsplash.com/photos/BFNi3TWB2fw">Zonduurzaam Deventer</a>.</p>
+<img src="https://nanx.me/image/willian-justen-de-vasconcellos-wnmtuxbOuAs-unsplash.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/wnmtuxbOuAs">Willian Justen de Vasconcellos</a></p>
 </div>
-<p>Bootstrap 4 and 5 have expanded the types of UI components compared to
-version 3. On the other hand, the available UI inputs and outputs in Shiny have
-been relatively stable while being carefully made compatible across
-different Bootstrap versions through bslib.</p>
-<p>Since we can already leverage the native UI components in Bootstrap 5 via bslib,
-it would be fun to create the R wrappers for the “missing” inputs that
-were not available in Bootstrap 3.
-One of the most straightforward examples is the switch input.</p>
-<p>A toggle switch input is a checkbox input, with only binary values and
-<a href="https://uxplanet.org/checkbox-vs-toggle-switch-7fc6e83f10b8">different use cases</a>.
-Therefore, we can borrow <code>shiny::checkboxInput()</code> and apply the necessary changes based on
-<a href="https://getbootstrap.com/docs/5.1/forms/checks-radios/#switches">Bootstrap 5 switches</a>
-without creating custom input bindings in JavaScript.
-To update the switch inputs, we can even reuse <code>shiny::updateCheckboxInput()</code>.</p>
-<pre class="r"><code>switchInput &lt;- function(inputId, label, value = FALSE, disabled = FALSE, width = NULL) {
-  value &lt;- shiny::restoreInput(id = inputId, default = value)
-  inputTag &lt;- htmltools::tags$input(id = inputId, type = &quot;checkbox&quot;, role = &quot;switch&quot;, class = &quot;form-check-input&quot;)
-  if (!is.null(value) &amp;&amp; value) {
-    inputTag$attribs$checked &lt;- NA
+<p>Our goal today is to implement a file input <strong>area</strong> widget for Shiny.
+Compared to a regular file input button, a larger file input UI helps users
+focus on the task where an upload action is the central flow of the web application.</p>
+<p>Fortunately, the native
+<a href="https://github.com/rstudio/shiny/blob/66968904bfedba03648053094c35b06059f82e63/R/input-file.R"><code>shiny::fileInput()</code></a>
+offers a solid foundation for customization, as it already supports both
+click-to-browse and drag-and-drop for file selection.
+We only need to move the progress bar, make the button larger,
+and apply some custom styles to it.</p>
+<pre class="r"><code>fileInputArea &lt;- function(inputId, label, multiple = FALSE, accept = NULL,
+                          width = NULL, buttonLabel = &quot;Browse...&quot;, placeholder = &quot;No file selected&quot;) {
+  restoredValue &lt;- restoreInput(id = inputId, default = NULL)
+
+  # Catch potential edge case - ensure that it&#39;s either NULL or a data frame.
+  if (!is.null(restoredValue) &amp;&amp; !is.data.frame(restoredValue)) {
+    warning(&quot;Restored value for &quot;, inputId, &quot; has incorrect format.&quot;)
+    restoredValue &lt;- NULL
   }
-  if (!is.null(disabled) &amp;&amp; disabled) {
-    inputTag$attribs$disabled &lt;- NA
+
+  if (!is.null(restoredValue)) {
+    restoredValue &lt;- toJSON(restoredValue, strict_atomic = FALSE)
   }
-  htmltools::tags$div(
-    class = &quot;form-group shiny-input-container&quot;, style = htmltools::css(width = shiny::validateCssUnit(width)),
-    htmltools::tags$div(
-      class = &quot;from-check form-switch&quot;,
-      inputTag,
-      htmltools::tags$label(label, class = &quot;form-check-label&quot;)
-    ),
+
+  inputTag &lt;- tags$input(
+    id = inputId,
+    name = inputId,
+    type = &quot;file&quot;,
+    # Don&#39;t use &quot;display: none;&quot; style, which causes keyboard accessibility issue; instead use the following workaround: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+    style = &quot;position: absolute !important; top: -99999px !important; left: -99999px !important;&quot;,
+    `data-restore` = restoredValue
   )
+
+  if (multiple) {
+    inputTag$attribs$multiple &lt;- &quot;multiple&quot;
+  }
+  if (length(accept) &gt; 0) {
+    inputTag$attribs$accept &lt;- paste(accept, collapse = &quot;,&quot;)
+  }
+
+  div(
+    class = &quot;form-group shiny-input-container w-100&quot;,
+    style = htmltools::css(width = htmltools::validateCssUnit(width)),
+    shiny:::shinyInputLabel(inputId, &quot;&quot;),
+    div(
+      class = &quot;input-group mb-3&quot;,
+      # input-group-prepend is for bootstrap 4 compat
+      tags$label(
+        class = &quot;input-group-btn input-group-prepend w-100&quot;,
+        span(
+          class = &quot;btn btn-area w-100&quot;, inputTag,
+          div(tags$image(src = icon_encoded, width = &quot;80px;&quot;), style = &quot;margin-top: 2rem;&quot;),
+          div(p(label), style = &quot;font-size: 1.2rem; font-weight: 700; padding-top: 2rem;&quot;),
+          div(p(buttonLabel), style = &quot;font-size: 1rem; font-weight: 400; margin-bottom: 2rem;&quot;)
+        )
+      )
+    ),
+    tags$div(
+      id = paste(inputId, &quot;_progress&quot;, sep = &quot;&quot;),
+      class = &quot;progress active shiny-file-input-progress&quot;,
+      tags$div(class = &quot;progress-bar&quot;)
+    )
+  )
+}</code></pre>
+<p>Define the styles for the button and progress bar. Also, include the SVG icon.</p>
+<pre class="r"><code># Use Bootstrap 5 colors $gray-700 and $gray-600
+css_btn_area &lt;- textConnection(&quot;
+.btn-area {
+  color: #495057;
+  border-color: #495057;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 20px;
+  background-color: transparent;
 }
 
-updateSwitchInput &lt;- shiny::updateCheckboxInput</code></pre>
-<p>Try it out (preview at <a href="https://nanx.shinyapps.io/shiny-bs5-switches/" class="uri">https://nanx.shinyapps.io/shiny-bs5-switches/</a>):</p>
+.btn-area:hover {
+  color: #6c757d;
+}
+
+.progress {
+  height: 32px;
+}
+
+.progress .progress-bar {
+  font-size: 16px;
+  line-height: 28px;
+}&quot;)
+
+# Icon from &lt;https://icons.getbootstrap.com/icons/upload/&gt;
+icon_file &lt;- tempfile(fileext = &quot;.svg&quot;)
+writeLines(&#39;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;16&quot; height=&quot;16&quot; fill=&quot;#495057&quot; class=&quot;bi bi-upload&quot; viewBox=&quot;0 0 16 16&quot;&gt;
+  &lt;path d=&quot;M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z&quot;/&gt;
+  &lt;path d=&quot;M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z&quot;/&gt;
+&lt;/svg&gt;&#39;,
+  con = icon_file
+)
+icon_encoded &lt;- xfun::base64_uri(icon_file)</code></pre>
+<p>Try it out at <a href="https://nanx.shinyapps.io/shiny-file-input-area/" class="uri">https://nanx.shinyapps.io/shiny-file-input-area/</a>.</p>
 <pre class="r"><code>card &lt;- function(title, ...) {
   htmltools::tags$div(
     class = &quot;card&quot;,
@@ -221,46 +285,42 @@ updateSwitchInput &lt;- shiny::updateCheckboxInput</code></pre>
 }
 
 ui &lt;- shiny::fluidPage(
-  title = &quot;Bootstrap 5 Switches for Shiny&quot;,
-  theme = bslib::bs_theme(
-    version = 5,
-    primary = &quot;#002FA7&quot;,
-    `form-check-input-checked-bg-color` = &quot;#002FA7&quot;
-  ),
+  title = &quot;File input area for Shiny (Bootstrap 5)&quot;,
+  theme = bslib::bs_theme(version = 5),
   lang = &quot;en&quot;,
+  includeCSS(css_btn_area),
   shiny::fluidRow(
     style = &quot;margin-top: 20px;&quot;,
     shiny::column(
-      width = 8, offset = 2,
+      width = 10, offset = 1,
       card(
-        title = &quot;Bootstrap 5 Switches for Shiny&quot;,
-        switchInput(&quot;input1&quot;, label = &quot;Default switch checkbox input&quot;, width = &quot;100%&quot;),
-        verbatimTextOutput(&quot;value1&quot;),
-        switchInput(&quot;input2&quot;, label = &quot;Checked switch checkbox input&quot;, value = TRUE, width = &quot;100%&quot;),
-        verbatimTextOutput(&quot;value2&quot;),
-        switchInput(&quot;input3&quot;, label = &quot;Disabled switch checkbox input&quot;, disabled = TRUE, width = &quot;100%&quot;),
-        verbatimTextOutput(&quot;value3&quot;),
-        switchInput(&quot;input4&quot;, label = &quot;Disabled checked switch checkbox input&quot;, value = TRUE, disabled = TRUE, width = &quot;100%&quot;),
-        verbatimTextOutput(&quot;value4&quot;),
-        sliderInput(&quot;controller&quot;, &quot;Controller&quot;, min = 0, max = 4, value = 0, step = 1),
-        switchInput(&quot;input5&quot;, &quot;Input switch that can be updated&quot;)
+        title = &quot;File input area for Shiny (Bootstrap 5)&quot;,
+        shiny::fluidRow(
+          column(
+            width = 4, offset = 4,
+            fileInputArea(
+              &quot;upload&quot;,
+              label = &quot;Drop your plain text files here!&quot;,
+              buttonLabel = &quot;Any plain text file, max 100 KB each.&quot;,
+              multiple = TRUE,
+              accept = &quot;text/plain&quot;
+            ),
+            shiny::tableOutput(&quot;files&quot;)
+          )
+        )
       )
     )
   )
 )
 
 server &lt;- function(input, output, session) {
-  output$value1 &lt;- renderText(input$input1)
-  output$value2 &lt;- renderText(input$input2)
-  output$value3 &lt;- renderText(input$input3)
-  output$value4 &lt;- renderText(input$input4)
-  observe({
-    # TRUE if input$controller is odd, FALSE if even.
-    x_even &lt;- input$controller %% 2 == 1
-    updateSwitchInput(session, &quot;input5&quot;, value = x_even)
-  })
+  output$files &lt;- renderTable(
+    input$upload[, c(&quot;name&quot;, &quot;type&quot;, &quot;size&quot;)],
+    width = &quot;100%&quot;
+  )
 }
 
+options(shiny.maxRequestSize = 0.1 * 1024^2)
 shiny::shinyApp(ui, server)</code></pre>
 
 
@@ -273,15 +333,11 @@ shiny::shinyApp(ui, server)</code></pre>
                         <div class="col-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/dt-news-list/">« Building Paginated News Lists in R Markdown and Shiny with DT</a>
+                                <a href="https://nanx.me/blog/post/shiny-bs5-switches/">« Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5</a>
                             </div>
                             
                         </div>
                         <div class="col-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/shiny-file-input-area/">Five Minute Shiny: File Input Area Widget »</a>
-                            </div>
                             
                         </div>
                     </div>

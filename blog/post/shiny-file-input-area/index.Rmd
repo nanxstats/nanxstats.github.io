@@ -1,0 +1,183 @@
+---
+title: "Five Minute Shiny: File Input Area Widget"
+author: "Nan Xiao"
+date: "2022-04-17T21:00:00"
+slug: shiny-file-input-area
+categories: []
+tags:
+  - R
+  - Shiny
+  - "Bootstrap 5"
+meta_img: "image/willian-justen-de-vasconcellos-wnmtuxbOuAs-unsplash.jpg"
+description: "Implement a file input area UI widget for Shiny in five minutes."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE,
+  eval = FALSE
+)
+```
+
+> The R code in this post is also available as [this GitHub Gist](https://gist.github.com/nanxstats/095c4b13eae339faf1783c96390d71cf).
+
+![Photo by [Willian Justen de Vasconcellos](https://unsplash.com/photos/wnmtuxbOuAs)](/image/willian-justen-de-vasconcellos-wnmtuxbOuAs-unsplash.jpg)
+
+Our goal today is to implement a file input **area** widget for Shiny.
+Compared to a regular file input button, a larger file input UI helps users
+focus on the task where an upload action is the central flow of the web application.
+
+Fortunately, the native
+[`shiny::fileInput()`](https://github.com/rstudio/shiny/blob/66968904bfedba03648053094c35b06059f82e63/R/input-file.R)
+offers a solid foundation for customization, as it already supports both
+click-to-browse and drag-and-drop for file selection.
+We only need to move the progress bar, make the button larger,
+and apply some custom styles to it.
+
+```{r}
+fileInputArea <- function(inputId, label, multiple = FALSE, accept = NULL,
+                          width = NULL, buttonLabel = "Browse...", placeholder = "No file selected") {
+  restoredValue <- restoreInput(id = inputId, default = NULL)
+
+  # Catch potential edge case - ensure that it's either NULL or a data frame.
+  if (!is.null(restoredValue) && !is.data.frame(restoredValue)) {
+    warning("Restored value for ", inputId, " has incorrect format.")
+    restoredValue <- NULL
+  }
+
+  if (!is.null(restoredValue)) {
+    restoredValue <- toJSON(restoredValue, strict_atomic = FALSE)
+  }
+
+  inputTag <- tags$input(
+    id = inputId,
+    name = inputId,
+    type = "file",
+    # Don't use "display: none;" style, which causes keyboard accessibility issue; instead use the following workaround: https://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+    style = "position: absolute !important; top: -99999px !important; left: -99999px !important;",
+    `data-restore` = restoredValue
+  )
+
+  if (multiple) {
+    inputTag$attribs$multiple <- "multiple"
+  }
+  if (length(accept) > 0) {
+    inputTag$attribs$accept <- paste(accept, collapse = ",")
+  }
+
+  div(
+    class = "form-group shiny-input-container w-100",
+    style = htmltools::css(width = htmltools::validateCssUnit(width)),
+    shiny:::shinyInputLabel(inputId, ""),
+    div(
+      class = "input-group mb-3",
+      # input-group-prepend is for bootstrap 4 compat
+      tags$label(
+        class = "input-group-btn input-group-prepend w-100",
+        span(
+          class = "btn btn-area w-100", inputTag,
+          div(tags$image(src = icon_encoded, width = "80px;"), style = "margin-top: 2rem;"),
+          div(p(label), style = "font-size: 1.2rem; font-weight: 700; padding-top: 2rem;"),
+          div(p(buttonLabel), style = "font-size: 1rem; font-weight: 400; margin-bottom: 2rem;")
+        )
+      )
+    ),
+    tags$div(
+      id = paste(inputId, "_progress", sep = ""),
+      class = "progress active shiny-file-input-progress",
+      tags$div(class = "progress-bar")
+    )
+  )
+}
+```
+
+Define the styles for the button and progress bar. Also, include the SVG icon.
+
+```{r}
+# Use Bootstrap 5 colors $gray-700 and $gray-600
+css_btn_area <- textConnection("
+.btn-area {
+  color: #495057;
+  border-color: #495057;
+  border-style: dashed;
+  border-width: 2px;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.btn-area:hover {
+  color: #6c757d;
+}
+
+.progress {
+  height: 32px;
+}
+
+.progress .progress-bar {
+  font-size: 16px;
+  line-height: 28px;
+}")
+
+# Icon from <https://icons.getbootstrap.com/icons/upload/>
+icon_file <- tempfile(fileext = ".svg")
+writeLines('
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#495057" class="bi bi-upload" viewBox="0 0 16 16">
+  <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+  <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V11.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
+</svg>',
+  con = icon_file
+)
+icon_encoded <- xfun::base64_uri(icon_file)
+```
+
+Try it out at <https://nanx.shinyapps.io/shiny-file-input-area/>.
+
+```{r}
+card <- function(title, ...) {
+  htmltools::tags$div(
+    class = "card",
+    htmltools::tags$div(class = "card-header", title),
+    htmltools::tags$div(class = "card-body", ...)
+  )
+}
+
+ui <- shiny::fluidPage(
+  title = "File input area for Shiny (Bootstrap 5)",
+  theme = bslib::bs_theme(version = 5),
+  lang = "en",
+  includeCSS(css_btn_area),
+  shiny::fluidRow(
+    style = "margin-top: 20px;",
+    shiny::column(
+      width = 10, offset = 1,
+      card(
+        title = "File input area for Shiny (Bootstrap 5)",
+        shiny::fluidRow(
+          column(
+            width = 4, offset = 4,
+            fileInputArea(
+              "upload",
+              label = "Drop your plain text files here!",
+              buttonLabel = "Any plain text file, max 100 KB each.",
+              multiple = TRUE,
+              accept = "text/plain"
+            ),
+            shiny::tableOutput("files")
+          )
+        )
+      )
+    )
+  )
+)
+
+server <- function(input, output, session) {
+  output$files <- renderTable(
+    input$upload[, c("name", "type", "size")],
+    width = "100%"
+  )
+}
+
+options(shiny.maxRequestSize = 0.1 * 1024^2)
+shiny::shinyApp(ui, server)
+```

@@ -6,7 +6,19 @@
     <description>Recent content in Blog on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 14 Apr 2022 00:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Apr 2022 21:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five Minute Shiny: File Input Area Widget</title>
+      <link>https://nanx.me/blog/post/shiny-file-input-area/</link>
+      <pubDate>Sun, 17 Apr 2022 21:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/shiny-file-input-area/</guid>
+      <description>The R code in this post is also available as this GitHub Gist.
+ Photo by Willian Justen de Vasconcellos
+ Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
+Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
+    </item>
+    
     <item>
       <title>Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5</title>
       <link>https://nanx.me/blog/post/shiny-bs5-switches/</link>
