@@ -1,0 +1,78 @@
+---
+title: "Five Minute Shiny: Skeleton Loading Screen"
+author: "Nan Xiao"
+date: "2022-04-24T21:00:00"
+slug: shiny-loading-skeleton
+categories: []
+tags:
+  - R
+  - Shiny
+  - "Bootstrap 5"
+meta_img: "image/simon-lee-Irx24QuskMg-unsplash.jpg"
+description: "Implement a skeleton loader for Shiny apps in five minutes."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE,
+  eval = FALSE
+)
+```
+
+> The Shiny app template is available from
+> [nanxstats/shiny-loading-skeleton](https://github.com/nanxstats/shiny-loading-skeleton).
+> Preview the [demo at shinyapps.io](https://nanx.shinyapps.io/shiny-loading-skeleton/).
+
+![Mosaic _American Gothic_. Original photo by [Simon Lee](https://unsplash.com/photos/Irx24QuskMg).](/image/simon-lee-Irx24QuskMg-unsplash.jpg)
+
+Let's implement a "skeleton loader" for Shiny apps.
+A typical animated skeleton loading screen looks like this:
+
+![A [demo Shiny app](https://nanx.shinyapps.io/shiny-loading-skeleton/) with a skeleton loader. Recorded with QuickTime and converted by [gifski](https://gif.ski/).](shiny-skeleton-loading-screen.gif)
+
+Compared to the traditional loading screens provided by tools like
+[waiter](https://github.com/JohnCoene/waiter),
+the skeleton loading screen is a prominent way to show the app is currently
+loading and can give users an idea of the incoming page structure.
+
+We have to make a few decisions to build the skeleton loading screen.
+
+- We can leverage the flexible
+  [shiny-fcp-loader](https://github.com/nanxstats/shiny-fcp-loader)
+  template described in our [previous post](https://nanx.me/blog/post/shiny-fcp-loader/)
+  as the basis and only modify the loader code.
+- It would be ideal to use the same frontend framework as we used in the app UI
+  (Bootstrap 5) to construct the HTML part of this skeleton loader.
+- I found an excellent
+  [Bootstrap 5 loading skeleton example](https://codepen.io/taylorgorman/pen/GRojZwV)
+  by Taylor Gorman for the CSS part. It uses minimal, pure CSS to stylize the
+  HTML UI components as skeletons and apply animation effects.
+
+Assembling the pieces is then quite simple.
+The Shiny app template is available from
+<https://github.com/nanxstats/shiny-loading-skeleton>.
+You can preview the demo at <https://nanx.shinyapps.io/shiny-loading-skeleton/>.
+
+Here are a few notes on how to experiment with the template.
+
+- `app.R`
+  - Comment out the `shinyjs::hide()` line to keep showing the loader.
+    This is useful because you might need to preview the loader for
+    a longer time before it matches the ideal appearance.
+- `loader/loader.R`
+  - Preview the UI components before they are stylized as skeletons
+    by removing the `loading-skeleton` class from the `container-fluid`
+    div of the loader.
+  - Customize the loading skeleton using (almost) the same UI code
+    used for the landing page of your Shiny app: perhaps with a different
+    input ID or HTML constructed by `htmltools` calls.
+  - Since the Shiny (or bslib) Bootstrap CSS is not fetched yet when the loader
+    is rendered, we need to load our copy manually as a dependency
+    so that the loader's HTML components are correctly positioned and stylized.
+- `loader/loader.css`
+  - Add more names to the `.loading-skeleton` selector to cover more
+    component types.
+  - In this template, we backported two rules from Shiny-specific component
+    styles to ensure the loader components won't shift on screen after the
+    Shiny CSS files are loaded.

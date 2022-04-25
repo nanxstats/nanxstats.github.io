@@ -6,7 +6,20 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 17 Apr 2022 21:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Apr 2022 21:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Five Minute Shiny: Skeleton Loading Screen</title>
+      <link>https://nanx.me/blog/post/shiny-loading-skeleton/</link>
+      <pubDate>Sun, 24 Apr 2022 21:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/shiny-loading-skeleton/</guid>
+      <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.
+ Mosaic American Gothic. Original photo by Simon Lee.
+ Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
+A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.
+ Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
+    </item>
+    
     <item>
       <title>Five Minute Shiny: File Input Area Widget</title>
       <link>https://nanx.me/blog/post/shiny-file-input-area/</link>
