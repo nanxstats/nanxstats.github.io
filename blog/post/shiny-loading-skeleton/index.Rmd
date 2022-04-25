@@ -73,6 +73,6 @@ Here are a few notes on how to experiment with the template.
 - `loader/loader.css`
   - Add more names to the `.loading-skeleton` selector to cover more
     component types.
-  - In this template, we backported two rules from Shiny-specific component
+  - In this template, we ported two rules from Shiny-specific component
     styles to ensure the loader components won't shift on screen after the
     Shiny CSS files are loaded.
