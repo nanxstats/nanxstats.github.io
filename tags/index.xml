@@ -6,22 +6,58 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Apr 2022 21:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 01 May 2022 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Bootstrap 5</title>
-      <link>https://nanx.me/tags/bootstrap-5/</link>
-      <pubDate>Sun, 24 Apr 2022 21:00:00 +0000</pubDate>
+      <title>External Data Representation</title>
+      <link>https://nanx.me/tags/external-data-representation/</link>
+      <pubDate>Sun, 01 May 2022 20:00:00 +0000</pubDate>
       
-      <guid>https://nanx.me/tags/bootstrap-5/</guid>
+      <guid>https://nanx.me/tags/external-data-representation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>innoextract</title>
+      <link>https://nanx.me/tags/innoextract/</link>
+      <pubDate>Sun, 01 May 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/innoextract/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 24 Apr 2022 21:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 May 2022 20:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>serialization</title>
+      <link>https://nanx.me/tags/serialization/</link>
+      <pubDate>Sun, 01 May 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/serialization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XDR</title>
+      <link>https://nanx.me/tags/xdr/</link>
+      <pubDate>Sun, 01 May 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/xdr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bootstrap 5</title>
+      <link>https://nanx.me/tags/bootstrap-5/</link>
+      <pubDate>Sun, 24 Apr 2022 21:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/bootstrap-5/</guid>
       <description></description>
     </item>
     

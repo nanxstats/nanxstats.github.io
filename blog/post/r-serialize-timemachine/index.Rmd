@@ -1,0 +1,202 @@
+---
+title: "Honey, I Did Serialization in 83 R Versions"
+author: "Nan Xiao"
+date: "2022-05-01T20:00:00"
+slug: r-serialize-timemachine
+categories: []
+tags:
+  - R
+  - serialization
+  - External Data Representation
+  - XDR
+  - innoextract
+meta_img: "image/alex-o9isBQ25H-g-unsplash.jpg"
+description: "Look into the R serialization format in all R releases since 1.9.1."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE,
+  echo = FALSE
+)
+```
+
+> The R code to reproduce the results in this post is available from
+> <https://github.com/nanxstats/r-serialize-timemachine>.
+
+![Photo by [Alex Gogan](https://unsplash.com/photos/o9isBQ25H-g).](/image/alex-o9isBQ25H-g-unsplash.jpg)
+
+## A mystery on serialize()
+
+Serialization/deserialization is an important topic for exchanging data
+efficiently at scale. In R, there is a native choice for this:
+`serialize()`/`unserialize()` and their more convenient interface
+`saveRDS()`/`readRDS()`.
+
+Yihui once [asked](https://d.cosx.org/d/419804-serialize-17) why the
+first 14 bytes in R serialized data were skipped in `digest::digest()`,
+instead of the first 17 bytes for the binary format,
+as the additional three filling zero-bytes are always there.
+
+Although there is an entire section in _R Internals_ about
+[serialization formats](https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Serialization-Formats),
+I did not find any detailed technical explanations about the bytes in the header.
+So I decided to collect more empirical evidence to answer the question.
+
+## An unlikely solution
+
+My first assumption is that seeing the same data serialized in different
+R versions instead of different data serialized in the same R version
+might give us more information.
+This is because the non-data-encoding section in the header likely only changes
+when the R versions are different, which will make any minor variations
+more observable and thus more interpretable.
+
+This solution then becomes a pure automation exercise.
+To maximize the number of R versions I can test,
+we need to choose the right platform.
+
+- We should avoid compiling from source because it is almost
+  impossible to reuse the original toolchains after
+  so many years. Using compiled R binaries would be our best bet.
+- To run all the previously compiled R binaries on a single, modern platform,
+  we will want to choose Windows because it has probably the best
+  [ABI compatibility](https://en.wikipedia.org/wiki/Binary-code_compatibility)
+  among the common platforms.
+
+It eventually took ~130 lines of R code to accomplish this automation.
+The project is available at
+<https://github.com/nanxstats/r-serialize-timemachine>.
+You can click the button below to view the serialization results.
+
+<details>
+<summary>**Click here to expand the table**</summary>
+
+<!-- <https://yihui.org/en/2021/06/css-full-width/> -->
+
+```{css}
+.fullwidth table {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+        Consolas, "Liberation Mono", monospace;
+    font-size: 0.875rem;
+}
+
+details > summary {
+    border: 1px solid #6c757d;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+```
+
+::: {.fullwidth}
+```{r}
+rds <- stringr::str_sort(fs::dir_ls("output/"), numeric = TRUE) # Natural sorting
+version <- gsub(pattern = "R-|.rds", replacement = "", x = fs::path_file(rds))
+
+get_file_size <- function(file) {
+  file.info(file)$size
+}
+
+readbin_to_char <- function(path) {
+  as.character(readBin(path, what = "raw", n = get_file_size(path)))
+}
+
+k <- length(version)
+hex <- rep(NA, k)
+for (i in seq_len(k)) hex[i] <- paste(readbin_to_char(rds[i]), collapse = " ")
+df <- data.frame("version" = version, "hex" = hex)
+
+knitr::kable(
+  df,
+  format = "html",
+  table.attr = "class=\"table table-sm table-striped table-hover\"",
+  col.names = c("R Version", "Hex value of serialized \"ABCDEF\"")
+)
+```
+:::
+</details>
+
+<p></p>
+
+## An evolving language
+
+From this small window, we can have a glimpse at how the infrastructure in R
+evolved in the last 20 years, tracing from the earliest release we can test
+(R 1.9.1, released in 2004):
+
+- The differences in the serialized data since R 3.6.0 are apparent.
+  If you still remember, it was because the
+  [serialization format version 3 became the default](https://cran.r-project.org/doc/manuals/r-release/NEWS.3.html#:~:text=CHANGES%20IN%20R%203.6.0),
+  although it has already existed since R 3.5.0.
+- There are notable differences in R 4.2.0, although still using serialization
+  format version 3. Perhaps this is related to the
+  [UCRT update](https://developer.r-project.org/Blog/public/2021/12/07/upcoming-changes-in-r-4.2-on-windows/)?
+- `serialize()` return value. We cannot use `serialize(connection = NULL)`
+  as our test payload directly since [it returned a character string](https://cran-archive.r-project.org/bin/windows/base/old/2.4.0/NEWS.R-2.4.0)
+  instead of a raw vector until R 2.4.0.
+  Therefore, we used the higher-level function `saveRDS()`
+  as a proxy to get the outputs.
+- `saveRDS()` compression option. For our purpose of cross-version comparison,
+  we set `saveRDS(compress = FALSE)` because the default of `compress` was
+  flipped to `TRUE` since R 2.4.0.
+- `saveRDS()` was called `.saveRDS()` before R 2.13.0.
+- `Rscript.exe` did not exist until R 2.5.0. Therefore, we used `Rcmd.exe`
+  instead in the earlier versions.
+
+I think these are all very positive language and tooling improvements---which
+benefit all R developers every day!
+The consistency and compatibility in other aspects are also amazingly high.
+If we don't remove each R version after they are extracted into `dist/`,
+you can open them and run every `app/bin/Rgui.exe` on the latest
+Windows 10 without issues.
+
+## A possible answer
+
+Here is my answer to the original question on why the skipping offset
+should be 14 instead of 17.
+
+From the table above, there are many `00` as zero-bytes of fills.
+So naturally, it is critical to know how these filler bytes are used.
+If we look into the `serialize()` upstream serialization format
+[XDR](https://en.wikipedia.org/wiki/External_Data_Representation),
+its corresponding RFC 1832 offers an informative
+[example](https://datatracker.ietf.org/doc/html/rfc1832#section-6)
+and some
+[clues](https://datatracker.ietf.org/doc/html/rfc1832#section-2):
+
+> **BASIC BLOCK SIZE**
+>
+> The representation of all items requires a multiple of four bytes (or 32 bits) of data.
+> ... If the n bytes needed to contain the data are not
+> a multiple of four, then the n bytes are followed by enough (0 to 3)
+> residual zero bytes, r, to make the total byte count a multiple of 4.
+
+Using R 4.2.0 as an example, the serialized `"ABCDEF"` is:
+
+```text
+58 0a
+00 00 00 03
+00 04 02 00
+00 03 05 00
+00 00 00 05
+...
+```
+
+We can annotate it like this:
+
+```text
+OFFSET      HEX BYTES       ASCII    COMMENTS
+------      ---------       -----    --------
+     0      58 0a           X\n      -- X (XDR format) and line break
+     2      00 00 00 03     ...3     -- serialization format version = 3
+     6      00 04 02 00     .420     -- current R version = 4.2.0
+    10      00 03 05 00     .350     -- format available since 3.5.0
+    14      00 00 00 05     ...5     -- serialized data starting
+```
+
+This is a rough hypothesis, and I could be wrong.
+So, don't be shy and leave a comment to add the correct explanation.

@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Honey, I Did Serialization in 83 R Versions - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Look into the R serialization format in all R releases since 1.9.1." />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nanx.me/blog/post/r-serialize-timemachine/" />
+    <meta property="og:title" content="Honey, I Did Serialization in 83 R Versions" />
+    <meta property="og:image" content="https://nanx.me/image/alex-o9isBQ25H-g-unsplash.jpg" />
+    <meta property="og:description" content="Look into the R serialization format in all R releases since 1.9.1." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Honey, I Did Serialization in 83 R Versions" />
+    <meta name="twitter:description" content="Look into the R serialization format in all R releases since 1.9.1." />
+    <meta name="twitter:image" content="https://nanx.me/image/alex-o9isBQ25H-g-unsplash.jpg" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/r-serialize-timemachine/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+    <link href="https://nanx.me/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
+    
+</head>
+
+<body>
+    
+<div class="my-4 my-lg-5 header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        
+                        <a href="https://nanx.me/">
+                            <img class="logo img-fluid d-block rounded-circle"
+                                src="https://nanx.me/image/nanxiao.jpg" alt="Portrait of Nan Xiao">
+                        </a>
+                        
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="https://nanx.me/">
+                            <h1 class="name">Nan Xiao</h1>
+                        </a>
+
+                        <ul class="nav nav-primary">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-blog"
+                                    href="https://nanx.me/blog/">
+                                    
+                                    Blog
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-software"
+                                    href="https://nanx.me/software/">
+                                    
+                                    Software
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-papers"
+                                    href="https://nanx.me/papers/">
+                                    
+                                    Papers
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-talks"
+                                    href="https://nanx.me/talks/">
+                                    
+                                    Talks
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-books"
+                                    href="https://nanx.me/books/">
+                                    
+                                    Books
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <h1 class="blog-post-title">Honey, I Did Serialization in 83 R Versions</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Sun May 1 2022 20:00:00 UTC'>
+                        2022-05-01
+                    </span>
+
+                    <span class="reading-time middot">
+                        20 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/serialization">serialization</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/external-data-representation">External Data Representation</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/xdr">XDR</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/innoextract">innoextract</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+
+
+<blockquote>
+<p>The R code to reproduce the results in this post is available from
+<a href="https://github.com/nanxstats/r-serialize-timemachine" class="uri">https://github.com/nanxstats/r-serialize-timemachine</a>.</p>
+</blockquote>
+<div class="figure">
+<img src="https://nanx.me/image/alex-o9isBQ25H-g-unsplash.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/o9isBQ25H-g">Alex Gogan</a>.</p>
+</div>
+<div id="a-mystery-on-serialize" class="section level2">
+<h2>A mystery on serialize()</h2>
+<p>Serialization/deserialization is an important topic for exchanging data
+efficiently at scale. In R, there is a native choice for this:
+<code>serialize()</code>/<code>unserialize()</code> and their more convenient interface
+<code>saveRDS()</code>/<code>readRDS()</code>.</p>
+<p>Yihui once <a href="https://d.cosx.org/d/419804-serialize-17">asked</a> why the
+first 14 bytes in R serialized data were skipped in <code>digest::digest()</code>,
+instead of the first 17 bytes for the binary format,
+as the additional three filling zero-bytes are always there.</p>
+<p>Although there is an entire section in <em>R Internals</em> about
+<a href="https://cran.r-project.org/doc/manuals/r-devel/R-ints.html#Serialization-Formats">serialization formats</a>,
+I did not find any detailed technical explanations about the bytes in the header.
+So I decided to collect more empirical evidence to answer the question.</p>
+</div>
+<div id="an-unlikely-solution" class="section level2">
+<h2>An unlikely solution</h2>
+<p>My first assumption is that seeing the same data serialized in different
+R versions instead of different data serialized in the same R version
+might give us more information.
+This is because the non-data-encoding section in the header likely only changes
+when the R versions are different, which will make any minor variations
+more observable and thus more interpretable.</p>
+<p>This solution then becomes a pure automation exercise.
+To maximize the number of R versions I can test,
+we need to choose the right platform.</p>
+<ul>
+<li>We should avoid compiling from source because it is almost
+impossible to reuse the original toolchains after
+so many years. Using compiled R binaries would be our best bet.</li>
+<li>To run all the previously compiled R binaries on a single, modern platform,
+we will want to choose Windows because it has probably the best
+<a href="https://en.wikipedia.org/wiki/Binary-code_compatibility">ABI compatibility</a>
+among the common platforms.</li>
+</ul>
+<p>It eventually took ~130 lines of R code to accomplish this automation.
+The project is available at
+<a href="https://github.com/nanxstats/r-serialize-timemachine" class="uri">https://github.com/nanxstats/r-serialize-timemachine</a>.
+You can click the button below to view the serialization results.</p>
+<details>
+<summary>
+<strong>Click here to expand the table</strong>
+</summary>
+<!-- <https://yihui.org/en/2021/06/css-full-width/> -->
+<style type="text/css">
+.fullwidth table {
+    max-width: none;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo,
+        Consolas, "Liberation Mono", monospace;
+    font-size: 0.875rem;
+}
+
+details > summary {
+    border: 1px solid #6c757d;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+</style>
+<div class="fullwidth">
+<table class="table table-sm table-striped table-hover">
+<thead>
+<tr>
+<th style="text-align:left;">
+R Version
+</th>
+<th style="text-align:left;">
+Hex value of serialized "ABCDEF"
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1.9.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 01 09 01 00 01 04 00 00 00 04 10 00 00 00 01 00 00 04 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.0.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 00 00 00 01 04 00 00 00 04 10 00 00 00 01 00 00 04 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.0.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 00 01 00 01 04 00 00 00 04 10 00 00 00 01 00 00 04 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.1.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 01 00 00 01 04 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.1.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 01 01 00 01 04 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.2.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 02 00 00 01 04 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.2.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 02 01 00 01 04 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.3.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 03 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.3.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 03 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.4.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 04 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.4.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 04 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.5.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 05 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.5.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 05 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.6.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 06 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.6.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 06 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.6.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 06 02 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.7.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 07 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.7.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 07 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.7.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 07 02 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.8.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 08 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.8.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 08 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.9.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 09 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.9.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 09 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.9.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 09 02 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.10.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0a 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.10.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0a 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.11.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0b 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.11.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0b 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.12.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0c 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.12.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0c 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.12.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0c 02 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.13.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0d 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.13.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0d 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.13.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0d 02 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.14.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0e 00 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.14.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0e 01 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.14.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0e 02 00 02 03 00 00 00 00 10 00 00 00 01 00 00 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.15.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0f 00 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.15.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0f 01 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.15.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0f 02 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2.15.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 02 0f 03 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.0.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 00 00 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.0.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 00 01 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.0.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 00 02 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.0.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 00 03 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.1.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 01 00 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.1.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 01 01 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.1.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 01 02 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.1.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 01 03 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.2.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 02 00 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.2.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 02 01 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.2.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 02 02 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.2.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 02 03 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.2.4
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 02 04 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.2.5
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 02 05 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.3.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 03 00 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.3.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 03 01 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.3.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 03 02 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.3.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 03 03 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.4.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 04 00 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.4.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 04 01 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.4.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 04 02 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.4.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 04 03 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.4.4
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 04 04 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.5.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 05 00 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.5.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 05 01 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.5.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 05 02 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.5.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 02 00 03 05 03 00 02 03 00 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.6.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 03 06 00 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.6.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 03 06 01 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.6.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 03 06 02 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3.6.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 03 06 03 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.0.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 00 00 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.0.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 00 01 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.0.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 00 02 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.0.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 00 03 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.0.4
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 00 04 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.0.5
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 00 05 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.1.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 01 00 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.1.1
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 01 01 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.1.2
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 01 02 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.1.3
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 01 03 00 03 05 00 00 00 00 06 43 50 31 32 35 32 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+4.2.0
+</td>
+<td style="text-align:left;">
+58 0a 00 00 00 03 00 04 02 00 00 03 05 00 00 00 00 05 55 54 46 2d 38 00 00 00 10 00 00 00 01 00 04 00 09 00 00 00 06 41 42 43 44 45 46
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<p>
+</p>
+</div>
+<div id="an-evolving-language" class="section level2">
+<h2>An evolving language</h2>
+<p>From this small window, we can have a glimpse at how the infrastructure in R
+evolved in the last 20 years, tracing from the earliest release we can test
+(R 1.9.1, released in 2004):</p>
+<ul>
+<li>The differences in the serialized data since R 3.6.0 are apparent.
+If you still remember, it was because the
+<a href="https://cran.r-project.org/doc/manuals/r-release/NEWS.3.html#:~:text=CHANGES%20IN%20R%203.6.0">serialization format version 3 became the default</a>,
+although it has already existed since R 3.5.0.</li>
+<li>There are notable differences in R 4.2.0, although still using serialization
+format version 3. Perhaps this is related to the
+<a href="https://developer.r-project.org/Blog/public/2021/12/07/upcoming-changes-in-r-4.2-on-windows/">UCRT update</a>?</li>
+<li><code>serialize()</code> return value. We cannot use <code>serialize(connection = NULL)</code>
+as our test payload directly since <a href="https://cran-archive.r-project.org/bin/windows/base/old/2.4.0/NEWS.R-2.4.0">it returned a character string</a>
+instead of a raw vector until R 2.4.0.
+Therefore, we used the higher-level function <code>saveRDS()</code>
+as a proxy to get the outputs.</li>
+<li><code>saveRDS()</code> compression option. For our purpose of cross-version comparison,
+we set <code>saveRDS(compress = FALSE)</code> because the default of <code>compress</code> was
+flipped to <code>TRUE</code> since R 2.4.0.</li>
+<li><code>saveRDS()</code> was called <code>.saveRDS()</code> before R 2.13.0.</li>
+<li><code>Rscript.exe</code> did not exist until R 2.5.0. Therefore, we used <code>Rcmd.exe</code>
+instead in the earlier versions.</li>
+</ul>
+<p>I think these are all very positive language and tooling improvements—which
+benefit all R developers every day!
+The consistency and compatibility in other aspects are also amazingly high.
+If we don’t remove each R version after they are extracted into <code>dist/</code>,
+you can open them and run every <code>app/bin/Rgui.exe</code> on the latest
+Windows 10 without issues.</p>
+</div>
+<div id="a-possible-answer" class="section level2">
+<h2>A possible answer</h2>
+<p>Here is my answer to the original question on why the skipping offset
+should be 14 instead of 17.</p>
+<p>From the table above, there are many <code>00</code> as zero-bytes of fills.
+So naturally, it is critical to know how these filler bytes are used.
+If we look into the <code>serialize()</code> upstream serialization format
+<a href="https://en.wikipedia.org/wiki/External_Data_Representation">XDR</a>,
+its corresponding RFC 1832 offers an informative
+<a href="https://datatracker.ietf.org/doc/html/rfc1832#section-6">example</a>
+and some
+<a href="https://datatracker.ietf.org/doc/html/rfc1832#section-2">clues</a>:</p>
+<blockquote>
+<p><strong>BASIC BLOCK SIZE</strong></p>
+<p>The representation of all items requires a multiple of four bytes (or 32 bits) of data.
+… If the n bytes needed to contain the data are not
+a multiple of four, then the n bytes are followed by enough (0 to 3)
+residual zero bytes, r, to make the total byte count a multiple of 4.</p>
+</blockquote>
+<p>Using R 4.2.0 as an example, the serialized <code>"ABCDEF"</code> is:</p>
+<pre class="text"><code>58 0a
+00 00 00 03
+00 04 02 00
+00 03 05 00
+00 00 00 05
+...</code></pre>
+<p>We can annotate it like this:</p>
+<pre class="text"><code>OFFSET      HEX BYTES       ASCII    COMMENTS
+------      ---------       -----    --------
+     0      58 0a           X\n      -- X (XDR format) and line break
+     2      00 00 00 03     ...3     -- serialization format version = 3
+     6      00 04 02 00     .420     -- current R version = 4.2.0
+    10      00 03 05 00     .350     -- format available since 3.5.0
+    14      00 00 00 05     ...5     -- serialized data starting</code></pre>
+<p>This is a rough hypothesis, and I could be wrong.
+So, don’t be shy and leave a comment to add the correct explanation.</p>
+</div>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/shiny-loading-skeleton/">« Five Minute Shiny: Skeleton Loading Screen</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer mt-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <hr>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                
+                <div class="site-copyright">
+                    © 2011–2022 Nan Xiao
+                </div>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1 mb-5">
+            <div class="col-sm-12 col-lg-6">
+                <div class="site-social">
+                    <ul>
+                        
+
+                        
+                        <li><a href="https://github.com/nanxstats" target="_blank"
+                                rel="noopener">GitHub</a></li>
+                        
+
+                        
+
+                        
+
+                        
+                        <li><a href="https://twitter.com/nanxstats" target="_blank"
+                                rel="noopener">Twitter</a></li>
+                        
+
+                        
+                        <li><a href="https://www.linkedin.com/in/nanxstats" target="_blank"
+                                rel="noopener">LinkedIn</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/colophon/">Colophon</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/index.xml" class="mr-0">RSS</a></li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js" integrity="sha512-Pbb8o120v5/hN/a6LjF4N4Lxou+xYZ0QcVF8J6TWhBbHmctQWd8O6xTDmHpE/91OjPzCk4JRoiJsexHYg4SotQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/languages/r.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.highlightAll();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>
