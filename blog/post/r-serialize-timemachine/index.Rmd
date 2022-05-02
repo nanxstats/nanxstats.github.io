@@ -1,5 +1,5 @@
 ---
-title: "Honey, I Did Serialization in 83 R Versions"
+title: "Honey, I Serialized the Data"
 author: "Nan Xiao"
 date: "2022-05-01T20:00:00"
 slug: r-serialize-timemachine
