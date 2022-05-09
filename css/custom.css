@@ -18,16 +18,22 @@ html {
 a {
     color: #212529;
     text-decoration: underline;
+    text-decoration-color: #adb5bd;
+    text-underline-offset: 0.25rem;
     background-color: transparent;
+    transition: all .2s ease-in-out;
 }
 
-a:active, a:hover {
+a:active,
+a:hover {
     outline-width: 0;
 }
 
-a:hover, a:focus {
-    color: #6c757d;
+a:hover,
+a:focus {
+    color: #212529;
     text-decoration: underline;
+    text-decoration-color: #6c757d;
 }
 
 /* button */
@@ -89,7 +95,8 @@ hr {
 
 /* Partial: Header */
 
-.header a, .header a:hover {
+.header a,
+.header a:hover {
     text-decoration: none;
 }
 
@@ -123,14 +130,20 @@ hr {
     text-decoration: none;
 }
 
-.header ul.nav li a:focus, .header ul.nav li a:active {
+.header ul.nav li a:focus,
+.header ul.nav li a:active {
     color: #6c757d;
     text-decoration: none;
 }
 
 /* Partial: Content */
 
-.content h1, h2, h3, h4, h5, h6 {
+.content h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
     color: #212529;
     margin-bottom: 1rem;
@@ -212,7 +225,8 @@ hr {
     max-width: 100%;
 }
 
-.content .markdown code, .content .markdown pre {
+.content .markdown code,
+.content .markdown pre {
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     background-color: #fff;
 }
@@ -241,7 +255,8 @@ hr {
     border-radius: 6px;
 }
 
-.content .markdown pre code, .content .markdown pre output {
+.content .markdown pre code,
+.content .markdown pre output {
     /* enclosed by 4 backticks (````) */
     padding: 0;
     font-size: 0.75rem;
@@ -322,7 +337,8 @@ hr {
     text-decoration: none;
 }
 
-.footer a:hover, a:focus {
+.footer a:hover,
+a:focus {
     color: #6c757d;
 }
 
@@ -353,9 +369,16 @@ hr {
 }
 
 .site-social li:not(:last-child)::after {
-    content: '|';
+    content: '';
     color: #212529;
     margin: 0 0.3rem 0 0.5rem;
+}
+
+.svg-icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: #6c757d;
 }
 
 /* < medium screens */
