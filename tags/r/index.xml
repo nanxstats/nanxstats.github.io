@@ -14,8 +14,8 @@
       
       <guid>https://nanx.me/blog/post/r-serialize-timemachine/</guid>
       <description>The R code to reproduce the results in this post is available from https://github.com/nanxstats/r-serialize-timemachine.
- Photo by Alex Gogan.
- A mystery on serialize() Serialization/deserialization is an important topic for exchanging data efficiently at scale. In R, there is a native choice for this: serialize()/unserialize() and their more convenient interface saveRDS()/readRDS().
+Photo by Alex Gogan.
+A mystery on serialize() Serialization/deserialization is an important topic for exchanging data efficiently at scale. In R, there is a native choice for this: serialize()/unserialize() and their more convenient interface saveRDS()/readRDS().
 Yihui once asked why the first 14 bytes in R serialized data were skipped in digest::digest(), instead of the first 17 bytes for the binary format, as the additional three filling zero-bytes are always there.</description>
     </item>
     
@@ -26,10 +26,10 @@ Yihui once asked why the first 14 bytes in R serialized data were skipped in dig
       
       <guid>https://nanx.me/blog/post/shiny-loading-skeleton/</guid>
       <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.
- Mosaic American Gothic. Original photo by Simon Lee.
- Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
+Mosaic American Gothic. Original photo by Simon Lee.
+Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
 A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.
- Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
+Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
     </item>
     
     <item>
@@ -39,8 +39,8 @@ A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted b
       
       <guid>https://nanx.me/blog/post/shiny-file-input-area/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Photo by Willian Justen de Vasconcellos
- Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
+Photo by Willian Justen de Vasconcellos
+Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
 Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
     </item>
     
@@ -51,8 +51,8 @@ Fortunately, the native shiny::fileInput() offers a solid foundation for customi
       
       <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Photo by Zonduurzaam Deventer.
- Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
+Photo by Zonduurzaam Deventer.
+Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
 Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
     </item>
     
@@ -63,8 +63,8 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/dt-news-list/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Mosaic Mondrian. Original photo by Simon Lee.
- Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
+Mosaic Mondrian. Original photo by Simon Lee.
+Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
     </item>
     
     <item>
@@ -74,7 +74,7 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/ggplot2-color-interpolation/</guid>
       <description>Photo by Mateo Giraud.
- My R package ggsci has included a few popular discrete color palettes. The colors values in these palettes are not automatically generated from a color space but hand-picked instead, often containing only five to ten distinct colors. A frequent question from the users is: What should I do when the colors are running out due to a more significant number of categories in the data?</description>
+My R package ggsci has included a few popular discrete color palettes. The colors values in these palettes are not automatically generated from a color space but hand-picked instead, often containing only five to ten distinct colors. A frequent question from the users is: What should I do when the colors are running out due to a more significant number of categories in the data?</description>
     </item>
     
     <item>
@@ -84,8 +84,8 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/shiny-fcp-loader/</guid>
       <description>The Shiny app skeleton is available from nanxstats/shiny-fcp-loader.
- Pantheon, Roma, Italy. Photo by Emma Fabbri.
- More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
+Pantheon, Roma, Italy. Photo by Emma Fabbri.
+More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
 UX side effects of large Shiny apps For larger Shiny apps, users could wait a long time (in terms of 10s of seconds) with an awkward blank screen before seeing the rendered app content.</description>
     </item>
     
@@ -96,8 +96,9 @@ UX side effects of large Shiny apps For larger Shiny apps, users could wait a lo
       
       <guid>https://nanx.me/blog/post/link-checker/</guid>
       <description>Photo by Katie Treadway.
- Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.
-Conceptually, the requirement for a generic broken link checker is quite simple:</description>
+Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.
+Conceptually, the requirement for a generic broken link checker is quite simple:
+Get the links to all pages on the site.</description>
     </item>
     
     <item>
@@ -107,9 +108,9 @@ Conceptually, the requirement for a generic broken link checker is quite simple:
       
       <guid>https://nanx.me/blog/post/font-variant-numeric/</guid>
       <description>TL;DR: If you use the native font stack (the default in Bootstrap 4+), check the numbers displayed in tables, especially on Apple’s platforms.
- Photo by Jen Theodore.
- A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:
- Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
+Photo by Jen Theodore.
+A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:
+Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
     </item>
     
     <item>
@@ -119,9 +120,10 @@ Conceptually, the requirement for a generic broken link checker is quite simple:
       
       <guid>https://nanx.me/blog/post/cran-file-exts/</guid>
       <description>The R code to reproduce the results is available from the GitHub repo nanxstats/cran-file-exts.
- Photo by Pawel Czerwinski.
- When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.
-To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.</description>
+Photo by Pawel Czerwinski.
+When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.
+To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.
+We can achieve this easily by downloading all R packages available from CRAN one at a time and collect the file extensions inside:</description>
     </item>
     
     <item>
@@ -131,7 +133,7 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</guid>
       <description>A new hex sticker wall of my R packages.
- I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
+I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
     </item>
     
     <item>
@@ -141,9 +143,9 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/bayesian-lasso-with-greta/</guid>
       <description>The R code to reproduce the results is available from GitHub Gist.
- Horseshoe Bend, Arizona. Photo by Madeline Pere.
- Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
- Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
+Horseshoe Bend, Arizona. Photo by Madeline Pere.
+Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
+Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
     </item>
     
     <item>
@@ -162,8 +164,8 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/distill-syntax-highlight/</guid>
       <description>“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) Photo by @chuttersnap.
- The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
- I was a bit surprised and sad that there is no easy way to customize it.</description>
+The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
+I was a bit surprised and sad that there is no easy way to customize it.</description>
     </item>
     
     <item>
@@ -173,7 +175,7 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/disposable-computing-with-callr/</guid>
       <description>Photo by @uniqueton.
- Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when managing (file) connections. Boris posted such an issue when using my R package Rcpi. I rephrase it here as:
+Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when managing (file) connections. Boris posted such an issue when using my R package Rcpi. I rephrase it here as:
 library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in 1:2000) { file.copy( system.file(&amp;quot;compseq/DB00530.sdf&amp;quot;, package = &amp;quot;Rcpi&amp;quot;), paste0(&amp;quot;test/&amp;quot;, i, &amp;quot;.sdf&amp;quot;) ) } fns &amp;lt;- list.files(&amp;quot;test/&amp;quot;, pattern = &amp;quot;.sdf$&amp;quot;, full.names = TRUE) for (i in 1:length(fns)) { cat(&amp;quot;\014&amp;quot;, i, &amp;quot;\n&amp;quot;) Rcpi::convMolFormat(infile = fns[i], outfile = &amp;quot;temp.</description>
     </item>
     
@@ -185,7 +187,7 @@ library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in
       <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
       <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by RStudio.
 A collection of my shiny apps, now also self-hosted.
- The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
+The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
     </item>
     
     <item>
@@ -216,8 +218,8 @@ As one of the cornerstones for deep learning frameworks, automatic differentiati
       
       <guid>https://nanx.me/blog/post/awesome-shiny-extensions/</guid>
       <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
-  TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
- Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
+TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
+Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
     </item>
     
     <item>
@@ -227,7 +229,7 @@ As one of the cornerstones for deep learning frameworks, automatic differentiati
       
       <guid>https://nanx.me/blog/post/general-purpose-programming-with-r/</guid>
       <description>“They’ll take your soul if you let them — don’t let them.” (Carole King, You’ve Got a Friend) Photo by Jelleke Vanooteghem.
-  I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.
+I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.
 Recently, I found a fascinating thread posted in the r/rstats subreddit.</description>
     </item>
     
@@ -239,7 +241,7 @@ Recently, I found a fascinating thread posted in the r/rstats subreddit.</descri
       <guid>https://nanx.me/blog/post/triplet-loss-r-keras/</guid>
       <description>All the R code for this post is available on GitHub: nanxstats/deep-learning-recipes.
 Photo: Three Palms by Jamie Davies
- At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
+At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
     </item>
     
     <item>
@@ -248,7 +250,8 @@ Photo: Three Palms by Jamie Davies
       <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
-      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.</description>
+      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
+Photo: One in A Million by Veronica Benavides</description>
     </item>
     
   </channel>

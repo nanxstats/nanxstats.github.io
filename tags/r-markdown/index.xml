@@ -14,8 +14,8 @@
       
       <guid>https://nanx.me/blog/post/dt-news-list/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Mosaic Mondrian. Original photo by Simon Lee.
- Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
+Mosaic Mondrian. Original photo by Simon Lee.
+Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
     </item>
     
     <item>
@@ -25,8 +25,8 @@
       
       <guid>https://nanx.me/blog/post/distill-syntax-highlight/</guid>
       <description>“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) Photo by @chuttersnap.
- The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
- I was a bit surprised and sad that there is no easy way to customize it.</description>
+The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
+I was a bit surprised and sad that there is no easy way to customize it.</description>
     </item>
     
   </channel>

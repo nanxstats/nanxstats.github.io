@@ -305,11 +305,11 @@ h6 {
     line-height: 1.75;
     color: #6c757d;
     display: block;
-    min-width: 12.2rem;
-    margin-right: -3.5rem;
+    width: 12ch;
 }
 
 .content .post-item .meta-title {
+    font-variant-numeric: tabular-nums;
     font-size: 1.125rem;
     line-height: 1.75;
 }

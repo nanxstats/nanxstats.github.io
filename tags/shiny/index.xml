@@ -14,10 +14,10 @@
       
       <guid>https://nanx.me/blog/post/shiny-loading-skeleton/</guid>
       <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.
- Mosaic American Gothic. Original photo by Simon Lee.
- Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
+Mosaic American Gothic. Original photo by Simon Lee.
+Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
 A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.
- Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
+Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
     </item>
     
     <item>
@@ -27,8 +27,8 @@ A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted b
       
       <guid>https://nanx.me/blog/post/shiny-file-input-area/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Photo by Willian Justen de Vasconcellos
- Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
+Photo by Willian Justen de Vasconcellos
+Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
 Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
     </item>
     
@@ -39,8 +39,8 @@ Fortunately, the native shiny::fileInput() offers a solid foundation for customi
       
       <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Photo by Zonduurzaam Deventer.
- Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
+Photo by Zonduurzaam Deventer.
+Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
 Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
     </item>
     
@@ -51,8 +51,8 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/dt-news-list/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Mosaic Mondrian. Original photo by Simon Lee.
- Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
+Mosaic Mondrian. Original photo by Simon Lee.
+Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
     </item>
     
     <item>
@@ -62,8 +62,8 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/shiny-fcp-loader/</guid>
       <description>The Shiny app skeleton is available from nanxstats/shiny-fcp-loader.
- Pantheon, Roma, Italy. Photo by Emma Fabbri.
- More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
+Pantheon, Roma, Italy. Photo by Emma Fabbri.
+More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
 UX side effects of large Shiny apps For larger Shiny apps, users could wait a long time (in terms of 10s of seconds) with an awkward blank screen before seeing the rendered app content.</description>
     </item>
     
@@ -75,7 +75,7 @@ UX side effects of large Shiny apps For larger Shiny apps, users could wait a lo
       <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
       <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by RStudio.
 A collection of my shiny apps, now also self-hosted.
- The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
+The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
     </item>
     
     <item>
@@ -85,8 +85,8 @@ A collection of my shiny apps, now also self-hosted.
       
       <guid>https://nanx.me/blog/post/awesome-shiny-extensions/</guid>
       <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
-  TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
- Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
+TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
+Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
     </item>
     
     <item>
@@ -97,7 +97,7 @@ A collection of my shiny apps, now also self-hosted.
       <guid>https://nanx.me/blog/post/shiny-async/</guid>
       <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.
 You Want It When? (Zootopia)
-  In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
+In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
     </item>
     
   </channel>

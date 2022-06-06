@@ -14,8 +14,8 @@
       
       <guid>https://nanx.me/blog/post/r-serialize-timemachine/</guid>
       <description>The R code to reproduce the results in this post is available from https://github.com/nanxstats/r-serialize-timemachine.
- Photo by Alex Gogan.
- A mystery on serialize() Serialization/deserialization is an important topic for exchanging data efficiently at scale. In R, there is a native choice for this: serialize()/unserialize() and their more convenient interface saveRDS()/readRDS().
+Photo by Alex Gogan.
+A mystery on serialize() Serialization/deserialization is an important topic for exchanging data efficiently at scale. In R, there is a native choice for this: serialize()/unserialize() and their more convenient interface saveRDS()/readRDS().
 Yihui once asked why the first 14 bytes in R serialized data were skipped in digest::digest(), instead of the first 17 bytes for the binary format, as the additional three filling zero-bytes are always there.</description>
     </item>
     
@@ -26,10 +26,10 @@ Yihui once asked why the first 14 bytes in R serialized data were skipped in dig
       
       <guid>https://nanx.me/blog/post/shiny-loading-skeleton/</guid>
       <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.
- Mosaic American Gothic. Original photo by Simon Lee.
- Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
+Mosaic American Gothic. Original photo by Simon Lee.
+Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
 A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.
- Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
+Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
     </item>
     
     <item>
@@ -39,8 +39,8 @@ A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted b
       
       <guid>https://nanx.me/blog/post/shiny-file-input-area/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Photo by Willian Justen de Vasconcellos
- Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
+Photo by Willian Justen de Vasconcellos
+Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
 Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
     </item>
     
@@ -51,8 +51,8 @@ Fortunately, the native shiny::fileInput() offers a solid foundation for customi
       
       <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Photo by Zonduurzaam Deventer.
- Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
+Photo by Zonduurzaam Deventer.
+Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
 Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
     </item>
     
@@ -63,8 +63,8 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/dt-news-list/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
- Mosaic Mondrian. Original photo by Simon Lee.
- Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
+Mosaic Mondrian. Original photo by Simon Lee.
+Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
     </item>
     
     <item>
@@ -74,7 +74,7 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/ggplot2-color-interpolation/</guid>
       <description>Photo by Mateo Giraud.
- My R package ggsci has included a few popular discrete color palettes. The colors values in these palettes are not automatically generated from a color space but hand-picked instead, often containing only five to ten distinct colors. A frequent question from the users is: What should I do when the colors are running out due to a more significant number of categories in the data?</description>
+My R package ggsci has included a few popular discrete color palettes. The colors values in these palettes are not automatically generated from a color space but hand-picked instead, often containing only five to ten distinct colors. A frequent question from the users is: What should I do when the colors are running out due to a more significant number of categories in the data?</description>
     </item>
     
     <item>
@@ -84,8 +84,8 @@ Since we can already leverage the native UI components in Bootstrap 5 via bslib,
       
       <guid>https://nanx.me/blog/post/shiny-fcp-loader/</guid>
       <description>The Shiny app skeleton is available from nanxstats/shiny-fcp-loader.
- Pantheon, Roma, Italy. Photo by Emma Fabbri.
- More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
+Pantheon, Roma, Italy. Photo by Emma Fabbri.
+More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
 UX side effects of large Shiny apps For larger Shiny apps, users could wait a long time (in terms of 10s of seconds) with an awkward blank screen before seeing the rendered app content.</description>
     </item>
     
@@ -96,8 +96,9 @@ UX side effects of large Shiny apps For larger Shiny apps, users could wait a lo
       
       <guid>https://nanx.me/blog/post/link-checker/</guid>
       <description>Photo by Katie Treadway.
- Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.
-Conceptually, the requirement for a generic broken link checker is quite simple:</description>
+Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.
+Conceptually, the requirement for a generic broken link checker is quite simple:
+Get the links to all pages on the site.</description>
     </item>
     
     <item>
@@ -107,9 +108,9 @@ Conceptually, the requirement for a generic broken link checker is quite simple:
       
       <guid>https://nanx.me/blog/post/font-variant-numeric/</guid>
       <description>TL;DR: If you use the native font stack (the default in Bootstrap 4+), check the numbers displayed in tables, especially on Apple’s platforms.
- Photo by Jen Theodore.
- A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:
- Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
+Photo by Jen Theodore.
+A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:
+Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
     </item>
     
     <item>
@@ -119,9 +120,10 @@ Conceptually, the requirement for a generic broken link checker is quite simple:
       
       <guid>https://nanx.me/blog/post/cran-file-exts/</guid>
       <description>The R code to reproduce the results is available from the GitHub repo nanxstats/cran-file-exts.
- Photo by Pawel Czerwinski.
- When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.
-To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.</description>
+Photo by Pawel Czerwinski.
+When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.
+To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.
+We can achieve this easily by downloading all R packages available from CRAN one at a time and collect the file extensions inside:</description>
     </item>
     
     <item>
@@ -131,7 +133,7 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/build-a-pc-during-the-great-gpu-shortage/</guid>
       <description>Photo by Will Porada.
- Apparently, I underestimated the severity of the ongoing GPU shortage when I decided to Marie Kondo my previous PC build and build a new one: people almost cannot find ANY graphics cards at a reasonable price for a custom build. After checking a few prebuilt options where one does not need to find a card, I still feel all the options out there are not optimal.</description>
+Apparently, I underestimated the severity of the ongoing GPU shortage when I decided to Marie Kondo my previous PC build and build a new one: people almost cannot find ANY graphics cards at a reasonable price for a custom build. After checking a few prebuilt options where one does not need to find a card, I still feel all the options out there are not optimal.</description>
     </item>
     
     <item>
@@ -141,7 +143,7 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</guid>
       <description>A new hex sticker wall of my R packages.
- I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
+I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
     </item>
     
     <item>
@@ -151,9 +153,9 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/bayesian-lasso-with-greta/</guid>
       <description>The R code to reproduce the results is available from GitHub Gist.
- Horseshoe Bend, Arizona. Photo by Madeline Pere.
- Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
- Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
+Horseshoe Bend, Arizona. Photo by Madeline Pere.
+Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
+Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
     </item>
     
     <item>
@@ -163,8 +165,9 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</guid>
       <description>TL;DR: I have rewritten the Hugo Tanka theme entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.
- A screenshot of the updated Hugo Tanka theme.
- Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).</description>
+A screenshot of the updated Hugo Tanka theme.
+Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).
+Hugo has received several major updates in the past three years.</description>
     </item>
     
     <item>
@@ -183,7 +186,8 @@ To properly capture and classify files in source R packages, I am interested in 
       
       <guid>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</guid>
       <description>Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit’s Intelligent Tracking Prevention (ITP). Following this progress and removing Google Analytics last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.
-Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.</description>
+Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.
+The process is much easier than I thought.</description>
     </item>
     
     <item>
@@ -193,8 +197,8 @@ Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tra
       
       <guid>https://nanx.me/blog/post/distill-syntax-highlight/</guid>
       <description>“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) Photo by @chuttersnap.
- The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
- I was a bit surprised and sad that there is no easy way to customize it.</description>
+The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
+I was a bit surprised and sad that there is no easy way to customize it.</description>
     </item>
     
     <item>
@@ -204,7 +208,7 @@ Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tra
       
       <guid>https://nanx.me/blog/post/disposable-computing-with-callr/</guid>
       <description>Photo by @uniqueton.
- Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when managing (file) connections. Boris posted such an issue when using my R package Rcpi. I rephrase it here as:
+Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when managing (file) connections. Boris posted such an issue when using my R package Rcpi. I rephrase it here as:
 library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in 1:2000) { file.copy( system.file(&amp;quot;compseq/DB00530.sdf&amp;quot;, package = &amp;quot;Rcpi&amp;quot;), paste0(&amp;quot;test/&amp;quot;, i, &amp;quot;.sdf&amp;quot;) ) } fns &amp;lt;- list.files(&amp;quot;test/&amp;quot;, pattern = &amp;quot;.sdf$&amp;quot;, full.names = TRUE) for (i in 1:length(fns)) { cat(&amp;quot;\014&amp;quot;, i, &amp;quot;\n&amp;quot;) Rcpi::convMolFormat(infile = fns[i], outfile = &amp;quot;temp.</description>
     </item>
     
@@ -216,7 +220,7 @@ library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in
       <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
       <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by RStudio.
 A collection of my shiny apps, now also self-hosted.
- The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
+The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
     </item>
     
     <item>
@@ -247,7 +251,7 @@ As one of the cornerstones for deep learning frameworks, automatic differentiati
       
       <guid>https://nanx.me/blog/post/peak-experience/</guid>
       <description>Photo by Elena Prokofyeva.
- I feel that we have previously talked a lot about the material world in this blog. Today I want to briefly discuss something more spiritual, something in my mind for a while: peak experience.
+I feel that we have previously talked a lot about the material world in this blog. Today I want to briefly discuss something more spiritual, something in my mind for a while: peak experience.
 This concept belongs to the self-actualization part described in Maslow’s “hierarchy of needs”. The peculiar thing is, I knew what the feeling was but cannot express it verbally, until the day I knew the term coined by the psychologists.</description>
     </item>
     
@@ -268,7 +272,8 @@ Recently, I experienced an issue that probably all R users experienced: running 
       
       <guid>https://nanx.me/blog/post/remove-google-analytics/</guid>
       <description>Like cameras, online trackers are everywhere. Photo by Matthew Henry.
- What happened After using it (or being used) for about ten years, today I consciously removed the Google Analytics tracking code from all the personal websites I control, including this blogdown (Hugo) site, the pkgdown sites for my R packages, and my Shiny apps. I never felt better, as from now on, people are browsing my websites tracking-free.</description>
+What happened After using it (or being used) for about ten years, today I consciously removed the Google Analytics tracking code from all the personal websites I control, including this blogdown (Hugo) site, the pkgdown sites for my R packages, and my Shiny apps. I never felt better, as from now on, people are browsing my websites tracking-free.
+Why I did it I think the blog posts by the pioneers who realized this before explained the economic reasons pretty well.</description>
     </item>
     
     <item>
@@ -278,8 +283,8 @@ Recently, I experienced an issue that probably all R users experienced: running 
       
       <guid>https://nanx.me/blog/post/awesome-shiny-extensions/</guid>
       <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
-  TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
- Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
+TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
+Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
     </item>
     
     <item>
@@ -298,7 +303,7 @@ Recently, I experienced an issue that probably all R users experienced: running 
       
       <guid>https://nanx.me/blog/post/general-purpose-programming-with-r/</guid>
       <description>“They’ll take your soul if you let them — don’t let them.” (Carole King, You’ve Got a Friend) Photo by Jelleke Vanooteghem.
-  I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.
+I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.
 Recently, I found a fascinating thread posted in the r/rstats subreddit.</description>
     </item>
     
@@ -309,9 +314,9 @@ Recently, I found a fascinating thread posted in the r/rstats subreddit.</descri
       
       <guid>https://nanx.me/blog/post/accidental-product-success/</guid>
       <description>A roadmap may tell how you can get there but doesn’t tell you where to go. Photo by @slidebean.
- Technology companies are sometimes quirky but always quite interesting.
+Technology companies are sometimes quirky but always quite interesting.
 Often, we can witness accidental epic wins in products that don’t belong to a company’s main offerings. A few examples from the (almost) trillion dollar club:
-Microsoft is a software company, but they have made some excellent hardware products, especially accessories.</description>
+Microsoft is a software company, but they have made some excellent hardware products, especially accessories. Recently, they even remastered the legendary IntelliMouse, an ergonomic mouse designed for office use but highly acclaimed in the gaming community.</description>
     </item>
     
     <item>
@@ -322,7 +327,7 @@ Microsoft is a software company, but they have made some excellent hardware prod
       <guid>https://nanx.me/blog/post/triplet-loss-r-keras/</guid>
       <description>All the R code for this post is available on GitHub: nanxstats/deep-learning-recipes.
 Photo: Three Palms by Jamie Davies
- At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
+At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
     </item>
     
     <item>
@@ -332,9 +337,10 @@ Photo: Three Palms by Jamie Davies
       
       <guid>https://nanx.me/blog/post/how-a-financial-crisis-started/</guid>
       <description>Photo by Ablimit Ablet on Unsplash
- I once read a joke with some dry humor a long time ago. It’s almost a parable about how the system amplifies fragility. I’m not entirely sure where it originated, but here you go:
- A bunny bounced into a bakery and asked the baker: “do you have 100 croissants?”
-The baker: “Ahh, I’m so sorry we don’t have that many.”</description>
+I once read a joke with some dry humor a long time ago. It’s almost a parable about how the system amplifies fragility. I’m not entirely sure where it originated, but here you go:
+A bunny bounced into a bakery and asked the baker: “do you have 100 croissants?”
+The baker: “Ahh, I’m so sorry we don’t have that many.”
+The bunny: “Oh… okay.</description>
     </item>
     
     <item>
@@ -343,7 +349,8 @@ The baker: “Ahh, I’m so sorry we don’t have that many.”</description>
       <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
-      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.</description>
+      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
+Photo: One in A Million by Veronica Benavides</description>
     </item>
     
     <item>
@@ -364,7 +371,7 @@ Hardware Here is my PCPartPicker part list for the parts of choice.</description
       <guid>https://nanx.me/blog/post/my-ocd-for-inbox-zero/</guid>
       <description>Inbox zero means having zero unread emails in your email’s inbox. I have an OCD for it.
 Photo: Fraser Valley, British Columbia, Canada.
- Many years ago, like many people, I used to “mark as unread” some emails I received, when I cannot decide to reply or not reply immediately for whatever reasons.
+Many years ago, like many people, I used to “mark as unread” some emails I received, when I cannot decide to reply or not reply immediately for whatever reasons.
 Obviously, pretending things as unread is not an effective strategy to get them done. I didn’t reply to the things I want to say yes quickly enough, which could make people think that I’m not interested.</description>
     </item>
     
@@ -394,10 +401,10 @@ One day, my dad came home from work. He tried to call me during the day asking f
       
       <guid>https://nanx.me/blog/post/save-the-link-like-a-boss/</guid>
       <description>Photo: Middle of Nowhere by David Kovalenko
-  Anything posted on the Internet, stays there forever.
- I’m a firm believer of such assertions. The reality is, however, even if something is published on the Internet, due to technical reasons, it still probably won’t live there forever. The situation becomes more like
- If something isn’t on the web, it doesn’t exist at all.
- Yes, as time goes, content on the Internet fades away.</description>
+Anything posted on the Internet, stays there forever.
+I’m a firm believer of such assertions. The reality is, however, even if something is published on the Internet, due to technical reasons, it still probably won’t live there forever. The situation becomes more like
+If something isn’t on the web, it doesn’t exist at all.
+Yes, as time goes, content on the Internet fades away.</description>
     </item>
     
     <item>
@@ -407,7 +414,7 @@ One day, my dad came home from work. He tried to call me during the day asking f
       
       <guid>https://nanx.me/blog/post/learn-to-say-no-the-hard-way/</guid>
       <description>Photo by Esteban Lopez.
- Sometimes I feel guilty that I have not been able to do some real impactful research during my PhD studies. Although, I feel blessed that I have super cool advisors, who have taught me things that are even more important than doing good research. One particular thing I learned, is about saying no – I was terrible at it, and honestly, still learning more about it.</description>
+Sometimes I feel guilty that I have not been able to do some real impactful research during my PhD studies. Although, I feel blessed that I have super cool advisors, who have taught me things that are even more important than doing good research. One particular thing I learned, is about saying no – I was terrible at it, and honestly, still learning more about it.</description>
     </item>
     
     <item>
@@ -418,7 +425,7 @@ One day, my dad came home from work. He tried to call me during the day asking f
       <guid>https://nanx.me/blog/post/shiny-async/</guid>
       <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.
 You Want It When? (Zootopia)
-  In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
+In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
     </item>
     
     <item>
@@ -428,7 +435,7 @@ You Want It When? (Zootopia)
       
       <guid>https://nanx.me/blog/post/https-censored-future/</guid>
       <description>The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.
- The Good News One of the good news from the past weeks is that GitHub Pages finally supports HTTPS for custom domains. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them can be a lengthy process.</description>
+The Good News One of the good news from the past weeks is that GitHub Pages finally supports HTTPS for custom domains. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them can be a lengthy process.</description>
     </item>
     
     <item>
@@ -448,7 +455,7 @@ After walking a long road in such a changing world, it is easy to forget why we 
       
       <guid>https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/</guid>
       <description>Heart of the Matter by Otis Kaye, 1963. The Art Institute of Chicago.
- Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</description>
+Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</description>
     </item>
     
     <item>
@@ -458,7 +465,7 @@ After walking a long road in such a changing world, it is easy to forget why we 
       
       <guid>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</guid>
       <description>Photo: Lead type
- As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:
+As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:
 font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.
 Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
     </item>
@@ -479,10 +486,10 @@ Until one day, their sincerity impressed the god of typography, who granted them
       
       <guid>https://nanx.me/blog/post/nothing-without-love/</guid>
       <description>Nate Ruess’s songs have magnificent voices and amazing arrangements, while often unbelievably sad at their cores, such as Grammy’s favourite “We Are Young”. This one, on the other hand, is an exception.
- Send up a signal, that everything’s fine
+Send up a signal, that everything’s fine
 Come on slide up right here by my side
 You know that I, I want to rest in your light
- Photo: Wind turbine near North Kingstown, RI, from the morning train to NYC.</description>
+Photo: Wind turbine near North Kingstown, RI, from the morning train to NYC.</description>
     </item>
     
     <item>
@@ -493,7 +500,7 @@ You know that I, I want to rest in your light
       <guid>https://nanx.me/blog/post/buzzword-map-or-buzz-world-map/</guid>
       <description>I don’t always care about popular topics because they usually fade fast. But when I do, here is a 2017 world interest map for deep learning, artificial intelligence, and blockchain (courtesy of Google Trends, where you can reproduce it).
 Figure: Google Trends — comparing the search traffic in 2017.
- The dominant color shown in each region represents the most searched term there. The question is, what does this map tell us — everything, or nothing at all?</description>
+The dominant color shown in each region represents the most searched term there. The question is, what does this map tell us — everything, or nothing at all?</description>
     </item>
     
     <item>
@@ -503,7 +510,7 @@ Figure: Google Trends — comparing the search traffic in 2017.
       
       <guid>https://nanx.me/blog/post/papers-in-my-heart-2017/</guid>
       <description>Figure: Album cover for Skip to the Good Part by He Is We, 2011.
-  It is the last day of 2017. Looking back, it has been another fruitful year for statistical and machine intelligence research. Notably, a lot of new ideas have been published in the direction of deep learning. Although it is intriguing, I will probably talk about things I care about in deep learning in another post.</description>
+It is the last day of 2017. Looking back, it has been another fruitful year for statistical and machine intelligence research. Notably, a lot of new ideas have been published in the direction of deep learning. Although it is intriguing, I will probably talk about things I care about in deep learning in another post. Fingers crossed.</description>
     </item>
     
     <item>
@@ -549,7 +556,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/colophon/</guid>
-      <description> Typography  Native font stack  Content  Site generator: blogdown, driven by Hugo Theme: hugo-nanx2021, built on Bootstrap 5 Commenting: utterances  Editing  R Markdown: RStudio Desktop HTML, CSS, JavaScript: Visual Studio Code  </description>
+      <description> Typography Native font stack Content Site generator: blogdown, driven by Hugo Theme: hugo-nanx2021, built on Bootstrap 5 Commenting: utterances Editing R Markdown: RStudio Desktop HTML, CSS, JavaScript: Visual Studio Code </description>
     </item>
     
     <item>
@@ -558,7 +565,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/papers/</guid>
-      <description>Profiles  Google Scholar ORCID   2022  PDXNet portal: patient-derived Xenograft model, data, workflow and tool discovery.
+      <description>Profiles Google Scholar ORCID 2022 PDXNet portal: patient-derived Xenograft model, data, workflow and tool discovery.
 Soner Koc, Michael W Lloyd, Jeffrey W Grover, Nan Xiao, Sara Seepo, Sai Lakshmi Subramanian, Manisha Ray, Christian Frech, John DiGiovanna, Phillip Webster, Steven Neuhauser, Anuj Srivastava, Xing Yi Woo, Brian J Sanderson, Brian White, Paul Lott, Lacey E Dobrolecki, Heidi Dowst, PDXNet Consortium , Yvonne A Evrard, Tiffany A Wallace, Jeffrey A Moscow, James H Doroshow, Nicholas Mitsiades, Salma Kaochar, Chong-xian Pan, Moon S Chen, Luis Carvajal-Carmona, Alana L Welm, Bryan E Welm, Michael T Lewis, Ramaswamy Govindan, Li Ding, Shunqiang Li, Meenhard Herlyn, Michael A Davies, Jack Roth, Funda Meric-Bernstam, Peter N Robinson, Carol J Bult, Brandi Davis-Dusenbery, Dennis A Dean, II, Jeffrey H Chuang.</description>
     </item>
     
@@ -577,7 +584,7 @@ Soner Koc, Michael W Lloyd, Jeffrey W Grover, Nan Xiao, Sara Seepo, Sai Lakshmi 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/talks/</guid>
-      <description> 2021  Reimagine the R package distribution system for reproducible research and submissions R/Pharma Conference Video recording R for clinical study reports and submission R/Pharma Conference (workshop) pkglite: compact package representations R Consortium R Submissions Working Group  2020  Old Methods with New Tricks: Our Solution for the PrecisionFDA Brain Cancer Predictive Modeling &amp;amp; Biomarker Discovery Challenge 9th Annual Health Informatics &amp;amp; Data Science Virtual Symposium at Georgetown University Video recording  2018  liftr: an R Package for Persistent Reproducible Research Joint Statistical Meetings  2017  Persistent Reproducible Reporting with Docker and R China R Conference Reproducible Dynamic Report Generation with Docker and R DockerCon Cancer Genomics Cloud &amp;amp; R Boston R/Bioconductor for Genomics Meetup The Deep Connection between Drugs and Side Effects ISMB/ECCB (poster) DockFlow: Bioc Workflow Containerization and Orchestration with liftr BioC 2017 (poster)  2016  High-Dimensional Survival Modeling with Shiny Shiny Developer Conference Video recording ChromaClust: Latent Color Topic Modeling for Images HGEN 48600/STAT 35450 (poster)  2015  Introduction to Reproducible Research in Bioinformatics CRI Bioinformatics Workshop, University of Chicago liftr &amp;amp; sbgr kickstart BioC 2015 (workshop) liftr: Reproducible Bioinformatics and Statistical Data Analysis with Docker, Rabix, and knitr BioC 2015 (poster)  2013  Web Scraping with R China R Conference  </description>
+      <description> 2021 Reimagine the R package distribution system for reproducible research and submissions R/Pharma Conference Video recording R for clinical study reports and submission R/Pharma Conference (workshop) pkglite: compact package representations R Consortium R Submissions Working Group 2020 Old Methods with New Tricks: Our Solution for the PrecisionFDA Brain Cancer Predictive Modeling &amp;amp; Biomarker Discovery Challenge 9th Annual Health Informatics &amp;amp; Data Science Virtual Symposium at Georgetown University Video recording 2018 liftr: an R Package for Persistent Reproducible Research Joint Statistical Meetings 2017 Persistent Reproducible Reporting with Docker and R China R Conference Reproducible Dynamic Report Generation with Docker and R DockerCon Cancer Genomics Cloud &amp;amp; R Boston R/Bioconductor for Genomics Meetup The Deep Connection between Drugs and Side Effects ISMB/ECCB (poster) DockFlow: Bioc Workflow Containerization and Orchestration with liftr BioC 2017 (poster) 2016 High-Dimensional Survival Modeling with Shiny Shiny Developer Conference Video recording ChromaClust: Latent Color Topic Modeling for Images HGEN 48600/STAT 35450 (poster) 2015 Introduction to Reproducible Research in Bioinformatics CRI Bioinformatics Workshop, University of Chicago liftr &amp;amp; sbgr kickstart BioC 2015 (workshop) liftr: Reproducible Bioinformatics and Statistical Data Analysis with Docker, Rabix, and knitr BioC 2015 (poster) 2013 Web Scraping with R China R Conference </description>
     </item>
     
   </channel>

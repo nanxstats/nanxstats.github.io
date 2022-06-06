@@ -14,8 +14,8 @@
       
       <guid>https://nanx.me/blog/post/shiny-fcp-loader/</guid>
       <description>The Shiny app skeleton is available from nanxstats/shiny-fcp-loader.
- Pantheon, Roma, Italy. Photo by Emma Fabbri.
- More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
+Pantheon, Roma, Italy. Photo by Emma Fabbri.
+More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
 UX side effects of large Shiny apps For larger Shiny apps, users could wait a long time (in terms of 10s of seconds) with an awkward blank screen before seeing the rendered app content.</description>
     </item>
     
