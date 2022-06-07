@@ -3,12 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2022-05-01T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/external-data-representation/</loc>
-    <lastmod>2022-05-01T20:00:00+00:00</lastmod>
+    <lastmod>2022-06-07T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
+    <lastmod>2022-06-07T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2022-06-07T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/sensible-defaults/</loc>
+    <lastmod>2022-06-07T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/software-architecture/</loc>
+    <lastmod>2022-06-07T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2022-06-07T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/external-data-representation/</loc>
     <lastmod>2022-05-01T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/r-serialize-timemachine/</loc>
@@ -17,13 +29,7 @@
     <loc>https://nanx.me/tags/innoextract/</loc>
     <lastmod>2022-05-01T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2022-05-01T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/serialization/</loc>
-    <lastmod>2022-05-01T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2022-05-01T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/xdr/</loc>
@@ -75,9 +81,6 @@
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/loading-screen/</loc>
-    <lastmod>2022-03-30T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/software-architecture/</loc>
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/link-checker/</loc>

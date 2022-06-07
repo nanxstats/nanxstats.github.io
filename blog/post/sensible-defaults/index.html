@@ -4,29 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> software architecture - Nan Xiao | 肖楠 </title>
+    <title> Sensible Defaults - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="Sensible defaults make users&#39; lives easier." />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/software-architecture/" />
-    <meta property="og:title" content="software architecture" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/sensible-defaults/" />
+    <meta property="og:title" content="Sensible Defaults" />
+    <meta property="og:image" content="https://nanx.me/image/thomas-reaubourg-JRUVbgJJTBM-unsplash.jpg" />
+    <meta property="og:description" content="Sensible defaults make users&#39; lives easier." />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="software architecture" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="Sensible Defaults" />
+    <meta name="twitter:description" content="Sensible defaults make users&#39; lives easier." />
+    <meta name="twitter:image" content="https://nanx.me/image/thomas-reaubourg-JRUVbgJJTBM-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/tags/software-architecture/">
+    <link rel="canonical" href="https://nanx.me/blog/post/sensible-defaults/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -120,34 +120,169 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-6">
-                <h1>Posts about software architecture</h1>
-                <hr>
-                <ul>
+                <h1 class="blog-post-title">Sensible Defaults</h1>
+
+                <div class="mb-md-4 meta">
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2022-03-30
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/shiny-fcp-loader/">Architecting Large Shiny Apps with Minimal First Contentful Paint Time</a>
-    </div>
-</li>
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2022-06-07
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/sensible-defaults/">Sensible Defaults</a>
-    </div>
-</li>
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
                     
-                </ul>
+                    
+
+                    <span class="date middot" title='Tue Jun 7 2022 00:30:00 UTC'>
+                        2022-06-07
+                    </span>
+
+                    <span class="reading-time middot">
+                        3 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/software-architecture">software architecture</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+
+
+<div class="figure">
+<img src="https://nanx.me/image/thomas-reaubourg-JRUVbgJJTBM-unsplash.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/JRUVbgJJTBM">Thomas Reaubourg</a>.</p>
+</div>
+<div id="gtsummary" class="section level2">
+<h2>gtsummary</h2>
+<p>The other day, I looked into Daniel Sjoberg’s
+<a href="https://www.danieldsjoberg.com/gtsummary/">gtsummary</a>
+package for summarizing data tables and regression models.
+The README says:</p>
+<blockquote>
+<p>The {gtsummary} package summarizes data sets, regression models, and more,
+using <mark>sensible defaults</mark> with highly customizable capabilities.</p>
+</blockquote>
+<p>The concept of having sensible defaults in (research) software immediately
+resonated with me. Ideally, the default settings in software should be
+able to support the majority of users’ needs.
+Furthermore, it means we can perform a task without worrying about its many
+parameters while still being able to tweak them if we need to.
+Simply put, sensible defaults in software will save time and effort
+for researchers and help them focus on the science.</p>
+</div>
+<div id="ggsave" class="section level2">
+<h2>ggsave()</h2>
+<p>The <a href="https://ggplot2.tidyverse.org/reference/ggsave.html"><code>ggplot2::ggsave()</code></a>
+function is another good example.
+It automatically sets sensible defaults for each plot format so that we can
+write <code>ggsave("output.png")</code> with the expectation that it will work reasonably well.</p>
+<p>In contrast, the classic
+<a href="https://bookdown.org/rdpeng/exdata/graphics-devices.html">graphical device</a>
+implementations often guide us to be aware of the state of the devices,
+and they often require us to <a href="https://ragg.r-lib.org/">tune the details</a>
+to improve output quality as the default outputs tend to be too small.</p>
+<p>It is worth noting that both designs make sense because the goals of <code>ggsave()</code>
+and graphical devices are different: ggplot2 aims to provide something that
+works out of the box for a specific plotting system, while the graphical devices
+need to be much more low-level and generic.</p>
+</div>
+<div id="off-the-shelf" class="section level2">
+<h2>“off-the-shelf”</h2>
+<p>This discussion reminds me of another term, “off-the-shelf,” which is often
+seen in Leo Breiman’s seminal work on statistical methodology.
+Prof. Michael Jordan discussed this briefly in his
+<a href="https://doi.org/10.1214/10-AOAS387">article</a>:</p>
+<blockquote>
+<p>Another preferred piece of Breimanesque terminology was
+“<mark>off-the-shelf</mark>,” again a rather physical metaphor.
+Leo tended to be suspicious of “free parameters”; procedures should work with
+little or no “tuning.” Whenever I might tell Leo about a project of mine that
+had a Bayesian flavor this suspicion would come to the fore.
+While this might seem inconsistent with the notion of the
+“statistician as artist,” the more refined notion is perhaps that of the
+“statistician as artisan.” Hammers and screwdrivers don’t tend to have free
+parameters. Leo wanted each of the basic tools to do one job and do it well.</p>
+</blockquote>
+<p>If we can make some sophisticated statistical methods “off-the-shelf”,
+perhaps we should attempt to make statistical software operate similarly.</p>
+</div>
+<div id="exercise" class="section level2">
+<h2>Exercise</h2>
+<p>Can you point out which option(s) you will change after
+a fresh installation in the screenshot below?
+(<a href="https://rstats.wtf/save-source.html">Hint 1</a>,
+<a href="https://rmd4sci.njtierney.com/rstudio-what-and-why.html">Hint 2</a>).</p>
+<p><img src="rstudio-global-options.png" width="100%" /></p>
+<p>I believe that the default options to restore and save <code>.RData</code> are not sensible
+to most users, just like
+<a href="https://developer.r-project.org/Blog/public/2020/02/16/stringsasfactors/"><code>stringsAsFactors = TRUE</code></a>
+and <a href="https://win-vector.com/2018/02/27/r-tip-use-drop-false-with-data-frames/"><code>drop = TRUE</code></a>.
+These defaults should be changed from the user’s side so that R works in the
+best way possible, but there might be
+<a href="https://community.rstudio.com/t/defaults-of-saving-and-restoring-workspace/939/2">good reasons</a>
+not to change them from the software developer’s side—because one might
+face a <a href="https://yihui.org/en/2018/11/biggest-regret-knitr/">difficult choice</a>
+between doing the right thing and not breaking user’s code that worked.</p>
+</div>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/r-serialize-timemachine/">« Honey, I Serialized the Data</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
