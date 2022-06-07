@@ -17,7 +17,7 @@ description: "Sensible defaults make users' lives easier."
 
 The other day, I looked into Daniel Sjoberg's
 [gtsummary](https://www.danieldsjoberg.com/gtsummary/)
-package for summarizing data tables and regression models.
+package for summarizing tabular data and regression models.
 The README says:
 
 > The {gtsummary} package summarizes data sets, regression models, and more,
