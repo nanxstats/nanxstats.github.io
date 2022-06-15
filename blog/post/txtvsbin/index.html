@@ -256,9 +256,7 @@ containing mostly or only textual data, that is ok.</p>
 is_text_file &lt;- function(path, n = file.info(path)$size) {
   bytecode &lt;- readBin(path, what = &quot;raw&quot;, n = n)
 
-  if (length(bytecode) == 0L) {
-    return(FALSE)
-  }
+  if (length(bytecode) == 0L) return(FALSE)
 
   allow &lt;- as.raw(c(9, 10, 13, 32:255))
   block &lt;- as.raw(c(0:6, 14:31))
@@ -266,7 +264,7 @@ is_text_file &lt;- function(path, n = file.info(path)$size) {
   cond1 &lt;- any(bytecode %in% allow)
   cond2 &lt;- !any(bytecode %in% block)
 
-  if (cond1 &amp;&amp; cond2) TRUE else FALSE
+  cond1 &amp;&amp; cond2
 }</code></pre>
 <p>If you are concerned with reading large files, and would like to limit the
 I/O or memory consumption, set <code>n</code> to the maximal number of bytes to read.</p>
@@ -288,11 +286,11 @@ df &lt;- data.frame(
 # Use the entire file
 system.time(df$is_text &lt;- is_text_files(df$file))</code></pre>
 <pre><code>#&gt;    user  system elapsed 
-#&gt;  30.997   1.690  33.774</code></pre>
+#&gt;  29.156   1.320  30.536</code></pre>
 <pre class="r"><code># Use the first 100 KB (at maximum)
 system.time(df$is_text_100k &lt;- is_text_files(df$file, n = 0.1 * 1000^2))</code></pre>
 <pre><code>#&gt;    user  system elapsed 
-#&gt;   8.848   0.506   9.405</code></pre>
+#&gt;   8.249   0.455   8.731</code></pre>
 <pre class="r"><code>all.equal(df$is_text, df$is_text_100k)</code></pre>
 <pre><code>#&gt; [1] TRUE</code></pre>
 <p>We got 100% concordance between the full-file and first-100 KB versions.

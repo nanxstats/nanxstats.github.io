@@ -104,9 +104,7 @@ Here is an R implementation of the algorithm.
 is_text_file <- function(path, n = file.info(path)$size) {
   bytecode <- readBin(path, what = "raw", n = n)
 
-  if (length(bytecode) == 0L) {
-    return(FALSE)
-  }
+  if (length(bytecode) == 0L) return(FALSE)
 
   allow <- as.raw(c(9, 10, 13, 32:255))
   block <- as.raw(c(0:6, 14:31))
@@ -114,7 +112,7 @@ is_text_file <- function(path, n = file.info(path)$size) {
   cond1 <- any(bytecode %in% allow)
   cond2 <- !any(bytecode %in% block)
 
-  if (cond1 && cond2) TRUE else FALSE
+  cond1 && cond2
 }
 ```
 
