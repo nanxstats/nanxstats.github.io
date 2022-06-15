@@ -6,7 +6,18 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 07 Jun 2022 00:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jun 2022 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The zlib Algorithm for Text/Binary File Classification</title>
+      <link>https://nanx.me/blog/post/txtvsbin/</link>
+      <pubDate>Tue, 14 Jun 2022 20:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/txtvsbin/</guid>
+      <description>The R code in this post is also available at this GitHub Gist.
+Photo by Alp Duran.
+Intro In some situations, we want to know whether a file is a text file or a binary file programmatically. For example, as a text editor developer, you can use this information to choose the correct editing interface (text editor or hex editor). Similarly, if you want to pack or compress a collection of files into a compact format, it helps to know the type of file before encoding them.</description>
+    </item>
+    
     <item>
       <title>Sensible Defaults</title>
       <link>https://nanx.me/blog/post/sensible-defaults/</link>
