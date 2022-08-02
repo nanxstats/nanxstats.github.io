@@ -1,0 +1,265 @@
+---
+title: "Parsing Human-Readable Text Data from the Web with Readbility.js and R"
+author: "Nan Xiao"
+date: "2022-08-02T01:30:00"
+slug: "r-readability-parser"
+categories: []
+tags:
+  - R
+  - JavaScript
+  - Readability
+  - V8
+meta_img: "image/nick-hillier-IEkMMvdZFc0-unsplash.jpg"
+description: "In this post, I show how to implement an R wrapper for the JavaScript library Readability.js using the R package V8. The parser allows extracting human-readable text data from any web page."
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE,
+  eval = FALSE
+)
+```
+
+> The R and JavaScript code to reproduce the results in this post is available from
+> <https://github.com/nanxstats/r-readability-parser>.
+
+![Photo by [Nick Hillier](https://unsplash.com/photos/IEkMMvdZFc0).](/image/nick-hillier-IEkMMvdZFc0-unsplash.jpg)
+
+## Readability.js
+
+Maybe you have used tools like [rvest](https://rvest.tidyverse.org/) to
+harvest **text data** from web pages. Naturally, this often requires
+elaborated human efforts in the front to understand the structure of
+the target website.
+
+The picture looks quite different when we think at the web scale.
+To parse the content of many more sites and many more types of pages,
+we need to make our tool adaptive enough to extract the most relevant
+text instead of purely relying on manually crafted logic.
+We might tolerate missing some useful text and including some
+irrelevant text, which is acceptable because they probably won't matter
+when the text data we collect is big enough.
+
+Fortunately, [Readability.js](https://github.com/mozilla/readability)
+offers a tool for parsing human-readable text from any web page.
+It was built for the [Reader View](https://support.mozilla.org/en-US/kb/firefox-reader-view-clutter-free-web-pages) feature in Firefox but
+is also usable as an open source, standalone JavaScript library.
+
+In this post, I will create an R wrapper for Readability.js using the
+R package [V8](https://github.com/jeroen/V8).
+
+## Packing JS dependencies
+
+Before we write the wrapper, the first step is identifying and packing the
+JavaScript dependencies to run in the V8 engine. The three key dependencies
+are [@mozilla/readability](https://www.npmjs.com/package/@mozilla/readability),
+[jsdom](https://www.npmjs.com/package/jsdom),
+and [dompurify](https://www.npmjs.com/package/dompurify).
+
+Following the vignette
+[using NPM packages in V8](https://cran.r-project.org/web/packages/V8/vignettes/npm.html),
+we pack them as follows.
+
+```{bash}
+brew install node
+npm install -g browserify
+```
+
+Pack Readability.js:
+
+```{bash}
+npm install @mozilla/readability
+echo "window.Readability = require('@mozilla/readability');" > in.js
+browserify in.js -o readability.js
+```
+
+Pack jsdom for converting HTML into operable DOM document objects:
+
+```{bash}
+npm install jsdom
+echo "window.jsdom = require('jsdom');" > in.js
+browserify in.js -o jsdom.js
+```
+
+Pack DOMPurify mentioned in the readability.js
+[security recommendation](https://github.com/mozilla/readability#security)
+for sanitizing output to avoid script injection:
+
+```{bash}
+npm install dompurify
+echo "window.dompurify = require('dompurify');" > in.js
+browserify in.js -o dompurify.js
+```
+
+## Writing an R binding
+
+We will write some wrapper JavaScript functions to implement the workflow
+that uses all three JS libraries above.
+
+```{js}
+function readabilityParser(html, url, candidates, threshold) {
+  // Parse jsdom with readability.js
+  let doc = new jsdom.JSDOM(
+    html,
+    { url: url }
+  );
+  let reader = new Readability.Readability(
+    doc.window.document,
+    { nbTopCandidates: candidates, charThreshold: threshold }
+  );
+  let res = reader.parse();
+
+  // Sanitize results to avoid script injection
+  const purifyWindow = new jsdom.JSDOM('').window;
+  const DOMPurify = dompurify(purifyWindow);
+
+  let clean = DOMPurify.sanitize(res.content);
+  res.content = clean;
+
+  return res;
+}
+
+function isReadable(html, min_content_length, min_score) {
+  let doc = new jsdom.JSDOM(html);
+  return Readability.isProbablyReaderable(
+    doc.window.document,
+    { minContentLength: min_content_length, minScore: min_score }
+  );
+}
+```
+
+The R wrapper is quite straightforward if you follow the
+[V8 introduction vignette](https://cran.r-project.org/web/packages/V8/vignettes/v8_intro.html).
+As is suggested, the interactive JavaScript console via `ct$console()`
+is both fun and useful to play with when debugging.
+
+```{r}
+readability <- function(html, url, candidates = 5L, threshold = 500L) {
+  ct <- V8::v8(global = "window")
+
+  ct$eval("function setTimeout(){}")
+  ct$eval("function clearInterval(){}")
+  ct$source("js/encoding.min.js")
+  ct$source("js/jsdom.js")
+  ct$source("js/dompurify.js")
+  ct$source("js/readability.js")
+  ct$eval(readLines("js/readability-parser.js"))
+
+  # ct$get(V8::JS("Object.keys(window)"))
+  ct$call("readabilityParser", html, url, candidates, threshold)
+}
+
+is_readable <- function(html, min_content_length = 140, min_score = 20) {
+  ct <- V8::v8(global = "window")
+
+  ct$eval("function setTimeout(){}")
+  ct$eval("function clearInterval(){}")
+  ct$source("js/encoding.min.js")
+  ct$source("js/jsdom.js")
+  ct$source("js/readability.js")
+  ct$eval(readLines("js/readability-parser.js"))
+
+  # ct$get(V8::JS("Object.keys(window)"))
+  ct$call("isReadable", html, min_content_length, min_score)
+}
+```
+
+## Example
+
+Let's parse a recipe page
+([pasta with caramelized peppers, anchovies, and ricotta](https://cooking.nytimes.com/recipes/1021246-pasta-with-caramelized-peppers-anchovies-and-ricotta))
+from NYT Cooking.
+
+```{r, echo=FALSE, eval=TRUE}
+source("readability.R")
+```
+
+Check if it is likely that the page is suitable for readability parsing:
+
+```{r, eval=TRUE}
+url <- "https://cooking.nytimes.com/recipes/1021246-pasta-with-caramelized-peppers-anchovies-and-ricotta"
+
+html <- url |>
+  rvest::read_html() |>
+  as.character()
+
+html |> is_readable()
+```
+
+We can get the title and the clean, plain text corpus, usable for
+downstream text data modeling:
+
+```{r, eval=TRUE}
+lst <- html |> readability(url = url)
+cat(lst$title)
+```
+
+```{r}
+lst$textContent |>
+  gsub("\\n", " ", x = _, perl = TRUE) |>
+  gsub("^\\s+|\\s+$|\\s+(?=\\s)", "", x = _, perl = TRUE) |>
+  stringr::str_wrap(width = 74) |>
+  cat()
+```
+
+<details>
+<summary>**Click here to expand the output**</summary>
+
+```{css, echo=FALSE, eval=TRUE}
+details > summary {
+    border: 1px solid #6c757d;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+```
+
+```{r, echo=FALSE, eval=TRUE}
+lst$textContent |>
+  gsub("\\n", " ", x = _, perl = TRUE) |>
+  gsub("^\\s+|\\s+$|\\s+(?=\\s)", "", x = _, perl = TRUE) |>
+  stringr::str_wrap(width = 74) |>
+  cat()
+```
+
+</details>
+
+<p></p>
+
+We also got the clean HTML that preserves more structural information.
+We can process it further, for example, using xml2 or pandoc.
+
+```{r}
+lst$content |>
+  htmltools::HTML() |>
+  htmltools::browsable()
+```
+
+```{r, echo=FALSE, eval=TRUE}
+lst$content |>
+  htmltools::HTML() |>
+  htmltools::save_html(file = "example.html", lang = "en")
+```
+
+You can preview the [clean HTML here](example.html).
+
+## Common issues
+
+I encountered and resolved two common issues when using the JS libraries.
+
+### TextEncoder is not defined
+
+I used the hints
+[here](https://gist.github.com/tim-salabim/a9740baae9ab879b0c79893132d959a3)
+and saved [text-encoding](https://cdn.jsdelivr.net/npm/text-encoding@0.7.0/lib/encoding.min.js)
+explicitly as another dependency. Doing this will eliminate the error
+`ReferenceError: TextEncoder is not defined`
+when sourcing `jsdom.js` with `ct$source()`.
+
+### setTimeout/clearInterval is not defined
+
+It seems some web APIs are not available in the V8 standard library.
+I followed the suggestions [here](https://github.com/jeroen/V8/issues/18)
+and defined stubs for `setTimeout()` and `clearInterval()`
+to avoid errors like `ReferenceError: setTimeout is not defined`
+when running jsdom.

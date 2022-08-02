@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Readability on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/readability/</link>
+    <description>Recent content in Readability on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 02 Aug 2022 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/readability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Parsing Human-Readable Text Data from the Web with Readbility.js and R</title>
+      <link>https://nanx.me/blog/post/r-readability-parser/</link>
+      <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/r-readability-parser/</guid>
+      <description>The R and JavaScript code to reproduce the results in this post is available from https://github.com/nanxstats/r-readability-parser.
+Photo by Nick Hillier.
+Readability.js Maybe you have used tools like rvest to harvest text data from web pages. Naturally, this often requires elaborated human efforts in the front to understand the structure of the target website.
+The picture looks quite different when we think at the web scale. To parse the content of many more sites and many more types of pages, we need to make our tool adaptive enough to extract the most relevant text instead of purely relying on manually crafted logic.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,16 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2022-06-14T20:00:00+00:00</lastmod>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2022-06-14T20:00:00+00:00</lastmod>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/javascript/</loc>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/r-readability-parser/</loc>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2022-06-14T20:00:00+00:00</lastmod>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/readability/</loc>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/</loc>
-    <lastmod>2022-06-14T20:00:00+00:00</lastmod>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/v8/</loc>
+    <lastmod>2022-08-02T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/txtvsbin/</loc>
     <lastmod>2022-06-14T20:00:00+00:00</lastmod>

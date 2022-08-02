@@ -6,13 +6,40 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 14 Jun 2022 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Aug 2022 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JavaScript</title>
+      <link>https://nanx.me/tags/javascript/</link>
+      <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
-      <pubDate>Tue, 14 Jun 2022 20:00:00 +0000</pubDate>
+      <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Readability</title>
+      <link>https://nanx.me/tags/readability/</link>
+      <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/readability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>V8</title>
+      <link>https://nanx.me/tags/v8/</link>
+      <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/v8/</guid>
       <description></description>
     </item>
     
