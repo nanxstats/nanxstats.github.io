@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/python/</link>
+    <description>Recent content in Python on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 17 Aug 2022 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Past and Future of Shiny Keynote at rstudio::conf(2022)</title>
+      <link>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</link>
+      <pubDate>Wed, 17 Aug 2022 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</guid>
+      <description>I constantly feel lucky to witness the growth of the R web framework, Shiny, in the past ten years. In his keynote speech at rstudio::conf 2022, Joe Cheng shared an excellent summary of Shiny’s achievements and exciting outlook.
+I am deeply moved by the story about how Shiny was created and Joe’s journey, and I recommend you watch the talk recording below if you haven’t. Notably, after Hadley’s Mastering Shiny book, the community-maintained awesome list awesome-shiny-extensions was again highlighted in Joe’s talk from 24:00 to 24:33 (thanks so much for the shout-out!</description>
+    </item>
+    
+  </channel>
+</rss>

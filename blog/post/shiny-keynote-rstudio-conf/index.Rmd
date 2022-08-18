@@ -1,0 +1,79 @@
+---
+title: "The Past and Future of Shiny Keynote at rstudio::conf(2022)"
+author: "Nan Xiao"
+date: "2022-08-17T20:30:00"
+slug: "shiny-keynote-rstudio-conf"
+categories: []
+tags:
+  - Shiny
+  - R
+  - Python
+meta_img: "image/joe-cheng-keynote-the-past-and-future-of-shiny.jpg"
+description: "I am deeply moved by the story about how Shiny was created and Joe's journey."
+---
+
+I constantly feel lucky to witness the growth of _the_ R web framework,
+Shiny, in the past ten years.
+In his keynote speech at rstudio::conf 2022, Joe Cheng shared an excellent
+summary of Shiny's achievements and exciting outlook.
+
+I am deeply moved by the story about how Shiny was created and Joe's journey,
+and I recommend you watch the talk recording below if you haven't.
+Notably, after Hadley's [Mastering Shiny](https://mastering-shiny.org/basic-ui.html) book,
+the community-maintained awesome list
+[awesome-shiny-extensions](https://github.com/nanxstats/awesome-shiny-extensions)
+was again highlighted in Joe's talk from 24:00 to 24:33
+(thanks so much for the shout-out!).
+
+<div class="figure">
+[![rstudio::conf 2022 Keynotes - The Past and Future of Shiny - RStudio](/image/joe-cheng-keynote-the-past-and-future-of-shiny.jpg)](https://www.rstudio.com/conference/2022/keynotes/past-future-shiny/){target="_blank"}
+</div>
+
+<style>
+.timestamps {
+  font-variant-numeric: tabular-nums;
+}
+.timestamps ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.content .markdown li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+</style>
+
+**Timestamps**
+
+<div class="timestamps">
+- 0:00 Introduction
+- 1:45 10th anniversary of Shiny
+- 2:35 How Shiny started
+- 6:07 Why UI programming sucks
+- 8:33 Meteor
+- 11:44 The birth of Shiny
+- 13:05 A personal story
+- 16:53 Seven weeks later
+- 18:20 Team Shiny, 2012
+- 18:50 Three big questions
+- 20:20 Q: Are R users ready to write web apps?
+- 23:04 Q: Will the R community respond?
+- 28:06 Q: Can we even build it in R?
+- 35:28 Three big questions, answered!
+- 35:57 Introducing Shiny for Python
+- 39:18 Shiny for Python example: air mass calculator
+- 40:48 Editor support for Shiny for Python
+- 41:35 Deployment options for Shiny for Python
+- 44:20 The future of Shiny is R and Python
+- 44:40 Visual editor for Shiny UI
+- 46:11 shinytest2
+- 47:00 Team Shiny, 2022
+- 48:28 Q&A
+</div>
+
+<p></p>
+
+A heartfelt thank you, to Joe Cheng, Team Shiny, and all the developers
+in the community, for developing and extending this framework that helps
+numerous people create incredible interactive web experiences every day.
