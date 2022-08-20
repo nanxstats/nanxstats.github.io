@@ -6,22 +6,67 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Aug 2022 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 00:15:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Wed, 17 Aug 2022 20:30:00 +0000</pubDate>
+      <title>async</title>
+      <link>https://nanx.me/tags/async/</link>
+      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
       
-      <guid>https://nanx.me/tags/python/</guid>
+      <guid>https://nanx.me/tags/async/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome DevTools Protocol</title>
+      <link>https://nanx.me/tags/chrome-devtools-protocol/</link>
+      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/chrome-devtools-protocol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>chromote</title>
+      <link>https://nanx.me/tags/chromote/</link>
+      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/chromote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>promises</title>
+      <link>https://nanx.me/tags/promises/</link>
+      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/promises/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 17 Aug 2022 20:30:00 +0000</pubDate>
+      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Wed, 17 Aug 2022 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/python/</guid>
       <description></description>
     </item>
     
@@ -193,15 +238,6 @@
       <pubDate>Wed, 30 Mar 2022 22:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/loading-screen/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/automation/</guid>
       <description></description>
     </item>
     
@@ -611,29 +647,11 @@
     </item>
     
     <item>
-      <title>async</title>
-      <link>https://nanx.me/tags/async/</link>
-      <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/async/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>future</title>
       <link>https://nanx.me/tags/future/</link>
       <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/future/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>promises</title>
-      <link>https://nanx.me/tags/promises/</link>
-      <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/promises/</guid>
       <description></description>
     </item>
     

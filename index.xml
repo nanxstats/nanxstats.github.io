@@ -6,7 +6,18 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Aug 2022 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 00:15:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automate HTML to PDF Printing with {promises} and {chromote}</title>
+      <link>https://nanx.me/blog/post/chromote-pdf-automation/</link>
+      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/chromote-pdf-automation/</guid>
+      <description>The R code in this post is also available in this GitHub Gist.
+Photo by Bank Phrom.
+chromote is an R package that allows one to automate tasks driven by web browsers. It works by providing an API to communicate with Chromium-based browsers via the Chrome DevTools Protocol (CDP). For example, CDP can help us load and print HTML pages to PDF files programmatically, similar to what one could do in the web browser GUI but with mouse clicks.</description>
+    </item>
+    
     <item>
       <title>The Past and Future of Shiny Keynote at rstudio::conf(2022)</title>
       <link>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</link>

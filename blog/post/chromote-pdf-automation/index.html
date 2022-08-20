@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> The Past and Future of Shiny Keynote at rstudio::conf(2022) - Nan Xiao | 肖楠 </title>
+    <title> Automate HTML to PDF Printing with {promises} and {chromote} - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="I am deeply moved by the story about how Shiny was created and Joe&#39;s journey." />
+    <meta name="description" content="In this post, I wrote a function that implements a tiny end-to-end workflow to print a URL to a PDF, using the R package chromote and promises.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/shiny-keynote-rstudio-conf/" />
-    <meta property="og:title" content="The Past and Future of Shiny Keynote at rstudio::conf(2022)" />
-    <meta property="og:image" content="https://nanx.me/image/joe-cheng-keynote-the-past-and-future-of-shiny.jpg" />
-    <meta property="og:description" content="I am deeply moved by the story about how Shiny was created and Joe&#39;s journey." />
+    <meta property="og:url" content="https://nanx.me/blog/post/chromote-pdf-automation/" />
+    <meta property="og:title" content="Automate HTML to PDF Printing with {promises} and {chromote}" />
+    <meta property="og:image" content="https://nanx.me/image/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg" />
+    <meta property="og:description" content="In this post, I wrote a function that implements a tiny end-to-end workflow to print a URL to a PDF, using the R package chromote and promises.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="The Past and Future of Shiny Keynote at rstudio::conf(2022)" />
-    <meta name="twitter:description" content="I am deeply moved by the story about how Shiny was created and Joe&#39;s journey." />
-    <meta name="twitter:image" content="https://nanx.me/image/joe-cheng-keynote-the-past-and-future-of-shiny.jpg" />
+    <meta name="twitter:title" content="Automate HTML to PDF Printing with {promises} and {chromote}" />
+    <meta name="twitter:description" content="In this post, I wrote a function that implements a tiny end-to-end workflow to print a URL to a PDF, using the R package chromote and promises.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/shiny-keynote-rstudio-conf/">
+    <link rel="canonical" href="https://nanx.me/blog/post/chromote-pdf-automation/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" integrity="sha512-GQGU0fMMi238uA+a/bdWJfpUGKUkBdgfFdgBm72SUQ6BeyWjoY/ton0tEjH+OSH9iP4Dfh+7HM0I9f5eR0L/4w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -120,7 +123,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-6">
-                <h1 class="blog-post-title">The Past and Future of Shiny Keynote at rstudio::conf(2022)</h1>
+                <h1 class="blog-post-title">Automate HTML to PDF Printing with {promises} and {chromote}</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -131,27 +134,39 @@
                     
                     
 
-                    <span class="date middot" title='Wed Aug 17 2022 20:30:00 UTC'>
-                        2022-08-17
+                    <span class="date middot" title='Sat Aug 20 2022 00:15:00 UTC'>
+                        2022-08-20
                     </span>
 
                     <span class="reading-time middot">
-                        2 min read
+                        3 min read
                     </span>
 
                     <div class="d-none d-md-inline tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/shiny">Shiny</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
                                 <a href="https://nanx.me/tags/r">R</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/python">Python</a>
+                                <a href="https://nanx.me/tags/automation">automation</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/chromote">chromote</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/promises">promises</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/async">async</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/chrome-devtools-protocol">Chrome DevTools Protocol</a>
                             </li>
                             
                         </ul>
@@ -170,67 +185,146 @@
     
 
 
-<p>I constantly feel lucky to witness the growth of <em>the</em> R web framework,
-Shiny, in the past ten years.
-In his keynote speech at rstudio::conf 2022, Joe Cheng shared an excellent
-summary of Shiny’s achievements and exciting outlook.</p>
-<p>I am deeply moved by the story about how Shiny was created and Joe’s journey,
-and I recommend you watch the talk recording below if you haven’t.
-Notably, after Hadley’s <a href="https://mastering-shiny.org/basic-ui.html">Mastering Shiny</a> book,
-the community-maintained awesome list
-<a href="https://github.com/nanxstats/awesome-shiny-extensions">awesome-shiny-extensions</a>
-was again highlighted in Joe’s talk from 24:00 to 24:33
-(thanks so much for the shout-out!).</p>
+<blockquote>
+<p>The R code in this post is also available in
+this <a href="https://gist.github.com/nanxstats/22e8f0e4c68ed7d4a060b17f3dd6d58b">GitHub Gist</a>.</p>
+</blockquote>
 <div class="figure">
-<p><a href="https://www.rstudio.com/conference/2022/keynotes/past-future-shiny/" target="_blank"><img src="https://nanx.me/image/joe-cheng-keynote-the-past-and-future-of-shiny.jpg" alt="rstudio::conf 2022 Keynotes - The Past and Future of Shiny - RStudio" /></a></p>
+<img src="https://nanx.me/image/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/Tzm3Oyu_6sk">Bank Phrom</a>.</p>
 </div>
-<style>
-.timestamps {
-  font-variant-numeric: tabular-nums;
-}
-.timestamps ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-.content .markdown li {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-</style>
-<p><strong>Timestamps</strong></p>
-<div class="timestamps">
-<ul>
-<li>0:00 Introduction</li>
-<li>1:45 10th anniversary of Shiny</li>
-<li>2:35 How Shiny started</li>
-<li>6:07 Why UI programming sucks</li>
-<li>8:33 Meteor</li>
-<li>11:44 The birth of Shiny</li>
-<li>13:05 A personal story</li>
-<li>16:53 Seven weeks later</li>
-<li>18:20 Team Shiny, 2012</li>
-<li>18:50 Three big questions</li>
-<li>20:20 Q: Are R users ready to write web apps?</li>
-<li>23:04 Q: Will the R community respond?</li>
-<li>28:06 Q: Can we even build it in R?</li>
-<li>35:28 Three big questions, answered!</li>
-<li>35:57 Introducing Shiny for Python</li>
-<li>39:18 Shiny for Python example: air mass calculator</li>
-<li>40:48 Editor support for Shiny for Python</li>
-<li>41:35 Deployment options for Shiny for Python</li>
-<li>44:20 The future of Shiny is R and Python</li>
-<li>44:40 Visual editor for Shiny UI</li>
-<li>46:11 shinytest2</li>
-<li>47:00 Team Shiny, 2022</li>
-<li>48:28 Q&amp;A</li>
-</ul>
+<p><a href="https://github.com/rstudio/chromote">chromote</a> is an R package that
+allows one to automate tasks driven by web browsers.
+It works by providing an API to communicate with Chromium-based browsers
+via the Chrome DevTools Protocol (CDP). For example, CDP can help us
+load and print HTML pages to PDF files programmatically,
+similar to what one could do in the web browser GUI but with mouse clicks.</p>
+<p>Programming with CDP potentially involves asynchronous programming —
+something I personally find really hard to write! To the rescue, the
+<a href="https://rstudio.github.io/chromote/">chromote readme</a> gave some great examples.
+They demonstrated how to write principled async code using the <a href="https://en.wikipedia.org/wiki/Futures_and_promises">promise
+construct</a>
+via {promises} and chain them together, substantially improving code readability.</p>
+<p>As an exercise, I wrote a function to create a tiny end-to-end workflow
+to print a URL to a PDF. The function calls the low-level CDP API via chromote,
+is flexible to customize, and relatively easy to reason about.</p>
+<pre class="r"><code>library(&quot;promises&quot;)
+library(&quot;chromote&quot;)
+
+#&#39; Print HTML to PDF using chromote
+#&#39;
+#&#39; @param url Input URL
+#&#39; @param filename Output file name
+#&#39; @param wait_ If TRUE, run in synchronous mode,
+#&#39; otherwise, run in asynchronous mode.
+#&#39; @param ... Additional parameters for Page.printToPDF, see
+#&#39; &lt;https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF&gt;
+#&#39; for possible options.
+print_to_pdf &lt;- function(url, filename = NULL, wait_ = FALSE, ...) {
+  if (is.null(filename)) {
+    filename &lt;- url |&gt;
+      gsub(&quot;^.*://&quot;, &quot;&quot;, x = _) |&gt;
+      gsub(&quot;/$&quot;, &quot;&quot;, x = _) |&gt;
+      fs::path_sanitize(replacement = &quot;_&quot;) |&gt;
+      paste0(&quot;.pdf&quot;)
+  }
+
+  b &lt;- ChromoteSession$new()
+
+  p &lt;-
+    {
+      b$Page$navigate(url, wait_ = FALSE)
+    } %...&gt;%
+    {
+      b$Page$loadEventFired(wait_ = FALSE, timeout_ = 0.1)
+    } %...&gt;%
+    {
+      b$Page$printToPDF(..., wait_ = FALSE)
+    } %...&gt;%
+    {
+      .$data
+    } %...&gt;%
+    {
+      outfile &lt;- file(filename, &quot;wb&quot;)
+      base64enc::base64decode(., output = outfile)
+      close(outfile)
+    } %...&gt;%
+    {
+      message(filename)
+    } %&gt;%
+    finally(~ b$close())
+
+  if (wait_) {
+    b$wait_for(p)
+  } else {
+    p
+  }
+
+  invisible(filename)
+}</code></pre>
+<p>Note that there is already a
+<a href="https://rstudio.github.io/chromote/reference/ChromoteSession.html#method-screenshot_pdf"><code>screenshot_pdf()</code></a>
+method defined in chromote.
+It is a well-crafted wrapper for the
+<a href="https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF"><code>Page.printToPDF</code></a>
+method in CDP and is used to produce the PDF “screenshot” in <a href="https://github.com/rstudio/webshot2">webshot2</a>.</p>
+<div id="printing-paged-html-to-pdf" class="section level2">
+<h2>Printing paged HTML to PDF</h2>
+<p>Since PDF is page-based, the function will work the best when printing HTML
+documents with intentionally “paged” layouts. For example, we can run it
+on a customized <a href="https://nanx.me/talks/reimagine-rpkgs/">ioslides presentation</a>
+and a <a href="https://pagedown.rbind.io/">pagedown book</a>.</p>
+<pre class="r"><code>urls &lt;- c(
+  &quot;https://nanx.me/talks/reimagine-rpkgs/&quot;,
+  &quot;https://pagedown.rbind.io/&quot;
+)
+
+fn &lt;- lapply(urls, print_to_pdf, printBackground = TRUE)
+
+fn[[1]] |&gt;
+  pdftools::pdf_info() |&gt;
+  str()</code></pre>
+<pre class="text"><code>#&gt; List of 11
+#&gt;  $ version    : chr &quot;1.4&quot;
+#&gt;  $ pages      : int 11
+#&gt;  $ encrypted  : logi FALSE
+#&gt;  $ linearized : logi FALSE
+#&gt;  $ keys       :List of 2
+#&gt;   ..$ Creator : chr &quot;Chromium&quot;
+#&gt;   ..$ Producer: chr &quot;Skia/PDF m104&quot;
+#&gt;  $ created    : POSIXct[1:1], format: &quot;2022-08-18 23:40:57&quot;
+#&gt;  $ modified   : POSIXct[1:1], format: &quot;2022-08-18 23:40:57&quot;
+#&gt;  $ metadata   : chr &quot;&quot;
+#&gt;  $ locked     : logi FALSE
+#&gt;  $ attachments: logi FALSE
+#&gt;  $ layout     : chr &quot;no_layout&quot;</code></pre>
+<p>In the output, “Skia/PDF m104” means the PDF was produced using the
+<a href="https://skia.org/docs/user/sample/pdf/">Skia PDF backend</a>
+in the Chromium-based browser (major version 104).
+Notably, the function
+<a href="https://rdrr.io/cran/pagedown/man/chrome_print.html"><code>pagedown::chrome_print()</code></a>
+has a similar purpose to print HTML into PDF using headless Chrome.</p>
 </div>
-<p>
-</p>
-<p>A heartfelt thank you, to Joe Cheng, Team Shiny, and all the developers
-in the community, for developing and extending this framework that helps
-numerous people create incredible interactive web experiences every day.</p>
+<div id="file-url-support" class="section level2">
+<h2>File URL support</h2>
+<p>It appears that our function would also support <a href="https://en.wikipedia.org/wiki/File_URI_scheme">file URLs</a>.
+However, for unknown reasons, regardless of whether the
+asynchronous mode is used, or even when a local HTTP server
+(e.g., <a href="https://github.com/yihui/servr">servr</a>) serves the HTML,
+printing a local page could throw a time out error:</p>
+<pre class="text"><code>Unhandled promise error: Chromote: timed out waiting for event Page.loadEventFired</code></pre>
+<p>It works better when set to run in synchronous mode <strong>and</strong> after
+loading remote URLs like the above two.</p>
+<pre class="r"><code>f &lt;- &quot;https://nanx.me/blog/post/r-readability-parser/example.html&quot; |&gt;
+  curl::curl_download(tempfile(fileext = &quot;.html&quot;))
+
+print_to_pdf(
+  paste0(&quot;file://&quot;, normalizePath(f, winslash = &quot;/&quot;)),
+  filename = &quot;example.pdf&quot;,
+  wait_ = TRUE
+)</code></pre>
+<p>A good mystery to solve! Please comment below if you have any ideas.</p>
+</div>
 
 
 
@@ -242,15 +336,11 @@ numerous people create incredible interactive web experiences every day.</p>
                         <div class="col-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/r-readability-parser/">« Parsing Human-Readable Text Data from the Web with Readability.js and R</a>
+                                <a href="https://nanx.me/blog/post/shiny-keynote-rstudio-conf/">« The Past and Future of Shiny Keynote at rstudio::conf(2022)</a>
                             </div>
                             
                         </div>
                         <div class="col-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/chromote-pdf-automation/">Automate HTML to PDF Printing with {promises} and {chromote} »</a>
-                            </div>
                             
                         </div>
                     </div>
@@ -397,6 +487,9 @@ numerous people create incredible interactive web experiences every day.</p>
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>

@@ -2,22 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/tags/async/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/chromote-pdf-automation/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/automation/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2022-08-17T20:30:00+00:00</lastmod>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/chrome-devtools-protocol/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/chromote/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2022-08-17T20:30:00+00:00</lastmod>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/promises/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/python/</loc>
     <lastmod>2022-08-17T20:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2022-08-17T20:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/shiny/</loc>
-    <lastmod>2022-08-17T20:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2022-08-17T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</loc>
@@ -108,9 +126,6 @@
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/link-checker/</loc>
-    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/automation/</loc>
     <lastmod>2022-02-22T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/blogdown/</loc>
@@ -341,13 +356,7 @@
     <loc>https://nanx.me/blog/post/learn-to-say-no-the-hard-way/</loc>
     <lastmod>2018-06-28T16:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/async/</loc>
-    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/future/</loc>
-    <lastmod>2018-05-21T14:15:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/promises/</loc>
     <lastmod>2018-05-21T14:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/scalability/</loc>

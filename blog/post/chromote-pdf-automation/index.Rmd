@@ -1,0 +1,185 @@
+---
+title: "Automate HTML to PDF Printing with {promises} and {chromote}"
+author: "Nan Xiao"
+date: "2022-08-20T00:15:00"
+slug: "chromote-pdf-automation"
+categories: []
+tags:
+  - R
+  - automation
+  - chromote
+  - promises
+  - async
+  - Chrome DevTools Protocol
+meta_img: "image/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg"
+description: >
+  In this post, I wrote a function that implements a tiny end-to-end workflow
+  to print a URL to a PDF, using the R package chromote and promises.
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  message = FALSE,
+  eval = FALSE
+)
+```
+
+> The R code in this post is also available in
+> this [GitHub Gist](https://gist.github.com/nanxstats/22e8f0e4c68ed7d4a060b17f3dd6d58b).
+
+![Photo by [Bank Phrom](https://unsplash.com/photos/Tzm3Oyu_6sk).](/image/bank-phrom-Tzm3Oyu_6sk-unsplash.jpg)
+
+[chromote](https://github.com/rstudio/chromote) is an R package that
+allows one to automate tasks driven by web browsers.
+It works by providing an API to communicate with Chromium-based browsers
+via the Chrome DevTools Protocol (CDP). For example, CDP can help us
+load and print HTML pages to PDF files programmatically,
+similar to what one could do in the web browser GUI but with mouse clicks.
+
+Programming with CDP potentially involves asynchronous programming —
+something I personally find really hard to write! To the rescue, the
+[chromote readme](https://rstudio.github.io/chromote/) gave some great examples.
+They demonstrated how to write principled async code using the [promise
+construct](https://en.wikipedia.org/wiki/Futures_and_promises)
+via {promises} and chain them together, substantially improving code readability.
+
+As an exercise, I wrote a function to create a tiny end-to-end workflow
+to print a URL to a PDF. The function calls the low-level CDP API via chromote,
+is flexible to customize, and relatively easy to reason about.
+
+```{r}
+library("promises")
+library("chromote")
+
+#' Print HTML to PDF using chromote
+#'
+#' @param url Input URL
+#' @param filename Output file name
+#' @param wait_ If TRUE, run in synchronous mode,
+#' otherwise, run in asynchronous mode.
+#' @param ... Additional parameters for Page.printToPDF, see
+#' <https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF>
+#' for possible options.
+print_to_pdf <- function(url, filename = NULL, wait_ = FALSE, ...) {
+  if (is.null(filename)) {
+    filename <- url |>
+      gsub("^.*://", "", x = _) |>
+      gsub("/$", "", x = _) |>
+      fs::path_sanitize(replacement = "_") |>
+      paste0(".pdf")
+  }
+
+  b <- ChromoteSession$new()
+
+  p <-
+    {
+      b$Page$navigate(url, wait_ = FALSE)
+    } %...>%
+    {
+      b$Page$loadEventFired(wait_ = FALSE, timeout_ = 0.1)
+    } %...>%
+    {
+      b$Page$printToPDF(..., wait_ = FALSE)
+    } %...>%
+    {
+      .$data
+    } %...>%
+    {
+      outfile <- file(filename, "wb")
+      base64enc::base64decode(., output = outfile)
+      close(outfile)
+    } %...>%
+    {
+      message(filename)
+    } %>%
+    finally(~ b$close())
+
+  if (wait_) {
+    b$wait_for(p)
+  } else {
+    p
+  }
+
+  invisible(filename)
+}
+```
+
+Note that there is already a
+[`screenshot_pdf()`](https://rstudio.github.io/chromote/reference/ChromoteSession.html#method-screenshot_pdf)
+method defined in chromote.
+It is a well-crafted wrapper for the
+[`Page.printToPDF`](https://chromedevtools.github.io/devtools-protocol/tot/Page/#method-printToPDF)
+method in CDP and is used to produce the PDF "screenshot" in [webshot2](https://github.com/rstudio/webshot2).
+
+## Printing paged HTML to PDF
+
+Since PDF is page-based, the function will work the best when printing HTML
+documents with intentionally "paged" layouts. For example, we can run it
+on a customized [ioslides presentation](https://nanx.me/talks/reimagine-rpkgs/)
+and a [pagedown book](https://pagedown.rbind.io/).
+
+```{r, eval=FALSE}
+urls <- c(
+  "https://nanx.me/talks/reimagine-rpkgs/",
+  "https://pagedown.rbind.io/"
+)
+
+fn <- lapply(urls, print_to_pdf, printBackground = TRUE)
+
+fn[[1]] |>
+  pdftools::pdf_info() |>
+  str()
+```
+
+```text
+#> List of 11
+#>  $ version    : chr "1.4"
+#>  $ pages      : int 11
+#>  $ encrypted  : logi FALSE
+#>  $ linearized : logi FALSE
+#>  $ keys       :List of 2
+#>   ..$ Creator : chr "Chromium"
+#>   ..$ Producer: chr "Skia/PDF m104"
+#>  $ created    : POSIXct[1:1], format: "2022-08-18 23:40:57"
+#>  $ modified   : POSIXct[1:1], format: "2022-08-18 23:40:57"
+#>  $ metadata   : chr ""
+#>  $ locked     : logi FALSE
+#>  $ attachments: logi FALSE
+#>  $ layout     : chr "no_layout"
+```
+
+In the output, "Skia/PDF m104" means the PDF was produced using the
+[Skia PDF backend](https://skia.org/docs/user/sample/pdf/)
+in the Chromium-based browser (major version 104).
+Notably, the function
+[`pagedown::chrome_print()`](https://rdrr.io/cran/pagedown/man/chrome_print.html)
+has a similar purpose to print HTML into PDF using headless Chrome.
+
+## File URL support
+
+It appears that our function would also support [file URLs](https://en.wikipedia.org/wiki/File_URI_scheme).
+However, for unknown reasons, regardless of whether the
+asynchronous mode is used, or even when a local HTTP server
+(e.g., [servr](https://github.com/yihui/servr)) serves the HTML,
+printing a local page could throw a time out error:
+
+```text
+Unhandled promise error: Chromote: timed out waiting for event Page.loadEventFired
+```
+
+It works better when set to run in synchronous mode **and** after
+loading remote URLs like the above two.
+
+```{r}
+f <- "https://nanx.me/blog/post/r-readability-parser/example.html" |>
+  curl::curl_download(tempfile(fileext = ".html"))
+
+print_to_pdf(
+  paste0("file://", normalizePath(f, winslash = "/")),
+  filename = "example.pdf",
+  wait_ = TRUE
+)
+```
+
+A good mystery to solve! Please comment below if you have any ideas.
