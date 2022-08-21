@@ -1,0 +1,98 @@
+.hljs {
+    color: rgb(36, 41, 46);
+    background: rgb(255, 255, 255);
+}
+
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-template-tag,
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+    color: rgb(0, 0, 255);
+}
+
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-variable {
+    color: rgb(88, 72, 246);
+}
+
+.hljs-operator,
+.hljs-punctuation {
+    color: rgb(104, 118, 135);
+}
+
+.hljs-number {
+    color: rgb(0, 0, 205);
+}
+
+.hljs-meta .hljs-string,
+.hljs-regexp,
+.hljs-string {
+    color: rgb(3, 106, 7);
+}
+
+.hljs-built_in,
+.hljs-symbol {
+    color: rgb(0, 0, 255);
+}
+
+.hljs-code {
+    color: rgb(104, 118, 135);
+}
+
+.hljs-comment,
+.hljs-formula {
+    color: rgb(76, 136, 107);
+}
+
+.hljs-name,
+.hljs-quote,
+.hljs-selector-pseudo,
+.hljs-selector-tag {
+    color: rgb(3, 106, 7);
+}
+
+.hljs-subst {
+    color: rgb(36, 41, 46);
+}
+
+.hljs-section {
+    color: rgb(0, 0, 255);
+}
+
+.hljs-bullet {
+    color: rgb(0, 0, 255);
+}
+
+.hljs-emphasis {
+    color: rgb(36, 41, 46);
+    font-style: italic;
+}
+
+.hljs-strong {
+    color: rgb(36, 41, 46);
+    font-weight: 700
+}
+
+.hljs-addition {
+    color: #22863a;
+    background-color: #f0fff4;
+}
+
+.hljs-deletion {
+    color: #b31d28;
+    background-color: #ffeef0;
+}
+
+.hljs-link {
+    text-decoration: underline;
+    text-decoration-color: rgb(154, 154, 186);
+}
