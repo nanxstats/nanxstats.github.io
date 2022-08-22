@@ -1,5 +1,5 @@
 ---
-title: "Training Tissue-specific Gene Embeddings on GTEx Data"
+title: "Training Tissue-Specific Gene Embeddings on GTEx Data"
 author: "Nan Xiao"
 date: "2022-08-21T19:30:00"
 slug: exp2vec
