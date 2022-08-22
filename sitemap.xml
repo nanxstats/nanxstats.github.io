@@ -2,6 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/embeddings/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/gene-expression/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/glove/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/gtex/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/representation-learning/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/exp2vec/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/word2vec/</loc>
+    <lastmod>2022-08-21T19:30:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/tags/async/</loc>
     <lastmod>2022-08-20T00:15:00+00:00</lastmod>
   </url><url>
@@ -11,25 +44,13 @@
     <loc>https://nanx.me/tags/automation/</loc>
     <lastmod>2022-08-20T00:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/chrome-devtools-protocol/</loc>
     <lastmod>2022-08-20T00:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/chromote/</loc>
     <lastmod>2022-08-20T00:15:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/promises/</loc>
-    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2022-08-20T00:15:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2022-08-20T00:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/python/</loc>

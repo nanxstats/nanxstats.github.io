@@ -6,7 +6,70 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Aug 2022 00:15:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Aug 2022 19:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>embeddings</title>
+      <link>https://nanx.me/tags/embeddings/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/embeddings/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gene expression</title>
+      <link>https://nanx.me/tags/gene-expression/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/gene-expression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GloVe</title>
+      <link>https://nanx.me/tags/glove/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/glove/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GTEx</title>
+      <link>https://nanx.me/tags/gtex/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/gtex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>representation learning</title>
+      <link>https://nanx.me/tags/representation-learning/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/representation-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>word2vec</title>
+      <link>https://nanx.me/tags/word2vec/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/word2vec/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>async</title>
       <link>https://nanx.me/tags/async/</link>
@@ -49,15 +112,6 @@
       <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/promises/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     

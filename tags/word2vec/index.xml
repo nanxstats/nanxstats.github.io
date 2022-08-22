@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>word2vec on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/word2vec/</link>
+    <description>Recent content in word2vec on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 21 Aug 2022 19:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/word2vec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Training Tissue-specific Gene Embeddings on GTEx Data</title>
+      <link>https://nanx.me/blog/post/exp2vec/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/exp2vec/</guid>
+      <description>The gene embedding training code is available from https://github.com/nanxstats/exp2vec.
+The Shiny app is at https://nanx.shinyapps.io/exp2vec/, with code available from https://github.com/nanxstats/exp2vec-shiny.
+Photo by Amy Shamblen.
+Background We can often observe a mysterious connection between natural languages and the human genome when count data is derived from them. It is also straightforward to model them using the latest statistical or machine learning approaches developed for each field and borrow ideas from each other.</description>
+    </item>
+    
+  </channel>
+</rss>

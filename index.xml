@@ -6,7 +6,19 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Aug 2022 00:15:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 21 Aug 2022 19:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Training Tissue-specific Gene Embeddings on GTEx Data</title>
+      <link>https://nanx.me/blog/post/exp2vec/</link>
+      <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/exp2vec/</guid>
+      <description>The gene embedding training code is available from https://github.com/nanxstats/exp2vec.
+The Shiny app is at https://nanx.shinyapps.io/exp2vec/, with code available from https://github.com/nanxstats/exp2vec-shiny.
+Photo by Amy Shamblen.
+Background We can often observe a mysterious connection between natural languages and the human genome when count data is derived from them. It is also straightforward to model them using the latest statistical or machine learning approaches developed for each field and borrow ideas from each other.</description>
+    </item>
+    
     <item>
       <title>Automate HTML to PDF Printing with {promises} and {chromote}</title>
       <link>https://nanx.me/blog/post/chromote-pdf-automation/</link>

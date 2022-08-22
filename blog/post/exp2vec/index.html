@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Training Tissue-specific Gene Embeddings on GTEx Data - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="In this post, I showed how to train tissue-specific gene embeddings using GTEx data and text2vec. Two applications are presented to measure gene similarities and discover linear algebraic structure of genes.
+" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nanx.me/blog/post/exp2vec/" />
+    <meta property="og:title" content="Training Tissue-specific Gene Embeddings on GTEx Data" />
+    <meta property="og:image" content="https://nanx.me/image/amy-shamblen-h5yMpgOI5nI-unsplash.jpg" />
+    <meta property="og:description" content="In this post, I showed how to train tissue-specific gene embeddings using GTEx data and text2vec. Two applications are presented to measure gene similarities and discover linear algebraic structure of genes.
+" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Training Tissue-specific Gene Embeddings on GTEx Data" />
+    <meta name="twitter:description" content="In this post, I showed how to train tissue-specific gene embeddings using GTEx data and text2vec. Two applications are presented to measure gene similarities and discover linear algebraic structure of genes.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/amy-shamblen-h5yMpgOI5nI-unsplash.jpg" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/exp2vec/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+    <link href="https://nanx.me/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
+    
+</head>
+
+<body>
+    
+<div class="my-4 my-lg-5 header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        
+                        <a href="https://nanx.me/">
+                            <img class="logo img-fluid d-block rounded-circle"
+                                src="https://nanx.me/image/nanxiao.jpg" alt="Portrait of Nan Xiao">
+                        </a>
+                        
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="https://nanx.me/">
+                            <h1 class="name">Nan Xiao</h1>
+                        </a>
+
+                        <ul class="nav nav-primary">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-blog"
+                                    href="https://nanx.me/blog/">
+                                    
+                                    Blog
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-software"
+                                    href="https://nanx.me/software/">
+                                    
+                                    Software
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-papers"
+                                    href="https://nanx.me/papers/">
+                                    
+                                    Papers
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-talks"
+                                    href="https://nanx.me/talks/">
+                                    
+                                    Talks
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-books"
+                                    href="https://nanx.me/books/">
+                                    
+                                    Books
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <h1 class="blog-post-title">Training Tissue-specific Gene Embeddings on GTEx Data</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Sun Aug 21 2022 19:30:00 UTC'>
+                        2022-08-21
+                    </span>
+
+                    <span class="reading-time middot">
+                        12 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/representation-learning">representation learning</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/embeddings">embeddings</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/word2vec">word2vec</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/glove">GloVe</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/gene-expression">gene expression</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/gtex">GTEx</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+
+
+<blockquote>
+<p>The gene embedding training code is available from
+<a href="https://github.com/nanxstats/exp2vec" class="uri">https://github.com/nanxstats/exp2vec</a>.</p>
+</blockquote>
+<blockquote>
+<p>The Shiny app is at <a href="https://nanx.shinyapps.io/exp2vec/" class="uri">https://nanx.shinyapps.io/exp2vec/</a>,
+with code available from
+<a href="https://github.com/nanxstats/exp2vec-shiny" class="uri">https://github.com/nanxstats/exp2vec-shiny</a>.</p>
+</blockquote>
+<div class="figure">
+<img src="https://nanx.me/image/amy-shamblen-h5yMpgOI5nI-unsplash.jpg" alt="" />
+<p class="caption">Photo by <a href="https://unsplash.com/photos/h5yMpgOI5nI">Amy Shamblen</a>.</p>
+</div>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>We can often observe a mysterious connection between natural languages and
+the human genome when count data is derived from them. It is also
+straightforward to model them using the latest statistical or
+machine learning approaches developed for each field and
+borrow ideas from each other.</p>
+<p>For example, suppose we treat each gene as a “term” and say each sample is a
+“document”. In that case, we can use word embedding methods in NLP like
+word2vec or GloVe to learn low-dimensional vector representations
+for genes, given the gene expression count data for a collection of samples.</p>
+<p>Traditional methods might assume two genes are similar if
+they have highly correlated expression profiles or overlaps in labels.
+In contrast, we assume that two genes are only similar if their
+<strong>expression context</strong> is similar, i.e., the groups of genes that
+frequently express together with them are similar.
+This is not unlike the distributional hypothesis that words
+occurring in similar contexts tend to have similar meanings.</p>
+<p>Our approach would only require the expression data
+without side information such as functional annotations.
+It could also help us avoid
+<a href="https://doi.org/10.3905/jpm.2004.110">common challenges</a>
+when measuring correlations between variables in a high-dimensional space.
+We can then use the learned representations to measure the similarities
+between genes, discover linear algebraic structure of genes,
+and augment the input for downstream tasks.</p>
+</div>
+<div id="preprocess-gtex-data" class="section level2">
+<h2>Preprocess GTEx data</h2>
+<p>The GTEx project uses RNA sequencing to characterize tissue-specific
+gene expression patterns. First, I downloaded the open access read count data
+from the <a href="https://gtexportal.org/">GTEx Portal</a>. The expression data is
+encoded in gct (tsv) format, with metadata such as the tissue type
+presented in a separate tsv file.</p>
+<p>After a few basic data cleaning steps using my package <a href="https://nanx.me/grex/">grex</a>,
+a count matrix is created focusing on the tissue <em>pancreas</em>. The data contains
+328 samples and 25321 genes, with the expression count ranging from:</p>
+<pre class="r"><code>quantile(dtm_tissue)
+#&gt;    0%      25%      50%      75%     100%
+#&gt;     0        1      107      939 11344034</code></pre>
+</div>
+<div id="convert-dtm-into-tcm" class="section level2">
+<h2>Convert DTM into TCM</h2>
+<p>The tricky part is getting a term-co-occurrence matrix (TCM)
+from the document-term matrix (DTM) above because we need a TCM
+as the input for gene embedding training.</p>
+<p>We don’t have the type of raw sequence data like a text corpus to
+measure co-occurrence using sliding windows directly. Therefore, I took
+a quick and dirty approach: convert document-term matrix <span class="math inline">\(A\)</span> to a
+term co-occurrence matrix by the inner product <span class="math inline">\(A^T A\)</span> with corrections
+for the diagonal self-cooccurrence. This is inspired by
+<a href="https://github.com/quanteda/quanteda/blob/9a06c2b0256a6d260a1a2cc5a22ce088287d58da/R/fcm.R#L130">quanteda:::fcm.dfm()</a>.</p>
+<pre class="r"><code>dtm2tcm &lt;- function(x) {
+  # Equivalent to t(x) %*% x
+  y &lt;- Matrix::crossprod(x)
+  # Correct self-cooccurrence
+  Matrix::diag(y) &lt;- (Matrix::diag(y) - Matrix::colSums(x)) / 2L
+  y
+}</code></pre>
+</div>
+<div id="training-glove-model" class="section level2">
+<h2>Training GloVe model</h2>
+<p>My favorite <a href="https://dl.acm.org/doi/10.5555/2969033.2969070">interpretation of word2vec</a>
+or <a href="http://doi.org/10.1162/tacl_a_00134">GloVe</a> is that they are inexplicitly
+or explicitly factorizations of a word-context pointwise mutual information
+(PMI) matrix with a shift. In our example, if we set the embedding
+dimensionality to be 50, then it means factorizing the gene-context matrix
+<span class="math inline">\(M_{25321\times 25321}\)</span> into a gene embedding matrix <span class="math inline">\(G_{25321 \times 50}\)</span> and
+a context embedding matrix <span class="math inline">\(C_{50 \times 25321}\)</span> such that <span class="math inline">\(M = G \cdot C\)</span>.
+We then use <span class="math inline">\(G\)</span> to compute gene similarities and ruthlessly ignore <span class="math inline">\(C\)</span>. 🤔</p>
+<p>In my experiment, I used <a href="https://cran.r-project.org/package=text2vec">text2vec</a>
+to train a GloVe model, and set the embedding dimensionality as 100.
+The other parameters: the maximum number of
+co-occurrences used in the weighting function <span class="math inline">\(x_{\max}\)</span> = 100;
+learning rate = 0.05; number of iterations = 50.
+The embedding dimensionality is the key parameter here.
+It can be tuned and often ranges from 50 to 300, increasing by 50.</p>
+<p>On reproducibility, note that we can only
+<a href="https://github.com/dselivanov/text2vec/issues/251">get reproducible embeddings</a>
+in text2vec by setting the random seed AND not using parallelization.
+For training speed, I chose to use parallelization in this example.
+Therefore, the embeddings we got is only reflecting one possibility.
+More generally, the embedding stability between runs is an intriguing
+<a href="http://doi.org/10.18653/v1/N18-1190">open problem</a>.</p>
+</div>
+<div id="low-rank-projection" class="section level2">
+<h2>Low-rank projection</h2>
+<p>After getting the gene embedding, I projected it onto a 2D plane using t-SNE
+to see how well the embedding aligns with our perceived reality.
+I also used k-means on the embedding to get 15 clusters and colorize the
+projected points to make the patterns more distinguishable.</p>
+<div class="figure">
+<img src="Pancreas_tsne@0.5x.png" alt="" />
+<p class="caption">t-SNE</p>
+</div>
+<p>The dark blue cluster at the top-left corner looks unusual. So let’s check
+what genes are in it:</p>
+<details>
+<summary>
+Click here to expand the list of genes in the cluster
+</summary>
+<style type="text/css">
+details > summary {
+    border: 1px solid #6c757d;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+</style>
+<pre><code>#&gt;   [1] &quot;AKAP17A&quot;      &quot;AMIGO3&quot;       &quot;ASMT&quot;         &quot;ASMTL&quot;
+#&gt;   [5] &quot;BPY2&quot;         &quot;BPY2B&quot;        &quot;CD99&quot;         &quot;CD99P1&quot;
+#&gt;   [9] &quot;CDY1&quot;         &quot;CDY1B&quot;        &quot;CDY2B&quot;        &quot;CRLF2&quot;
+#&gt;  [13] &quot;CSF2RA&quot;       &quot;CT45A2&quot;       &quot;CT45A6&quot;       &quot;CT45A7&quot;
+#&gt;  [17] &quot;CT45A8&quot;       &quot;CT45A9&quot;       &quot;CT47A1&quot;       &quot;CT47A10&quot;
+#&gt;  [21] &quot;CT47A11&quot;      &quot;CT47A12&quot;      &quot;CT47A2&quot;       &quot;CT47A3&quot;
+#&gt;  [25] &quot;CT47A4&quot;       &quot;CT47A5&quot;       &quot;CT47A6&quot;       &quot;CT47A7&quot;
+#&gt;  [29] &quot;CT47A8&quot;       &quot;CT47A9&quot;       &quot;DAZ3&quot;         &quot;DAZ4&quot;
+#&gt;  [33] &quot;DCANP1&quot;       &quot;DEFB104B&quot;     &quot;DEFB106A&quot;     &quot;DEFB106B&quot;
+#&gt;  [37] &quot;DEFB107A&quot;     &quot;DEFB113&quot;      &quot;DEFB130A&quot;     &quot;DEFB130B&quot;
+#&gt;  [41] &quot;DEFT1P2&quot;      &quot;DHRSX&quot;        &quot;FAM197Y2&quot;     &quot;FAM197Y3&quot;
+#&gt;  [45] &quot;FAM197Y4&quot;     &quot;FAM197Y6&quot;     &quot;FAM197Y7&quot;     &quot;FAM197Y8&quot;
+#&gt;  [49] &quot;GAGE12C&quot;      &quot;GAGE12D&quot;      &quot;GAGE12E&quot;      &quot;GAGE2C&quot;
+#&gt;  [53] &quot;GAGE4&quot;        &quot;GTPBP6&quot;       &quot;HIST1H2AM&quot;    &quot;IL3RA&quot;
+#&gt;  [57] &quot;IL9R&quot;         &quot;KRTAP21-3&quot;    &quot;KRTAP22-2&quot;    &quot;KRTAP25-1&quot;
+#&gt;  [61] &quot;LINC00102&quot;    &quot;LINC00106&quot;    &quot;LINC00280&quot;    &quot;LINC00317&quot;
+#&gt;  [65] &quot;LINC00395&quot;    &quot;LINC00459&quot;    &quot;LINC00583&quot;    &quot;LINC00587&quot;
+#&gt;  [69] &quot;LINC00972&quot;    &quot;LINC01074&quot;    &quot;LINC01162&quot;    &quot;LINC01216&quot;
+#&gt;  [73] &quot;LINC01256&quot;    &quot;LINC01392&quot;    &quot;LINC01661&quot;    &quot;LINC01680&quot;
+#&gt;  [77] &quot;LINC01683&quot;    &quot;LINC01737&quot;    &quot;LINC01745&quot;    &quot;LINC01809&quot;
+#&gt;  [81] &quot;LINC01921&quot;    &quot;LINC01957&quot;    &quot;LINC02025&quot;    &quot;LINC02098&quot;
+#&gt;  [85] &quot;LINC02162&quot;    &quot;LINC02167&quot;    &quot;LINC02439&quot;    &quot;LINC02472&quot;
+#&gt;  [89] &quot;LINC02545&quot;    &quot;LINC02676&quot;    &quot;LOC101927908&quot; &quot;LOC101928775&quot;
+#&gt;  [93] &quot;LOC101929148&quot; &quot;LOC102723655&quot; &quot;LOC102724452&quot; &quot;LOC102725532&quot;
+#&gt;  [97] &quot;LOC105370586&quot; &quot;LOC105373524&quot; &quot;LOC105378311&quot; &quot;MBD3L2&quot;
+#&gt; [101] &quot;MBD3L4&quot;       &quot;MIR101-1&quot;     &quot;MIR101-2&quot;     &quot;MIR103A1&quot;
+#&gt; [105] &quot;MIR103A2&quot;     &quot;MIR105-1&quot;     &quot;MIR105-2&quot;     &quot;MIR1185-1&quot;
+#&gt; [109] &quot;MIR1200&quot;      &quot;MIR1202&quot;      &quot;MIR1205&quot;      &quot;MIR1206&quot;
+#&gt; [113] &quot;MIR1207&quot;      &quot;MIR1208&quot;      &quot;MIR124-2&quot;     &quot;MIR1243&quot;
+#&gt; [117] &quot;MIR1246&quot;      &quot;MIR1248&quot;      &quot;MIR1251&quot;      &quot;MIR1252&quot;
+#&gt; [121] &quot;MIR1255B1&quot;    &quot;MIR1255B2&quot;    &quot;MIR1258&quot;      &quot;MIR125B2&quot;
+#&gt; [125] &quot;MIR1261&quot;      &quot;MIR1263&quot;      &quot;MIR1264&quot;      &quot;MIR1265&quot;
+#&gt; [129] &quot;MIR1267&quot;      &quot;MIR1268B&quot;     &quot;MIR1269A&quot;     &quot;MIR1277&quot;
+#&gt; [133] &quot;MIR1278&quot;      &quot;MIR128-2&quot;     &quot;MIR1287&quot;      &quot;MIR1289-2&quot;
+#&gt; [137] &quot;MIR1291&quot;      &quot;MIR1293&quot;      &quot;MIR1295A&quot;     &quot;MIR1297&quot;
+#&gt; [141] &quot;MIR1298&quot;      &quot;MIR1302-1&quot;    &quot;MIR1302-10&quot;   &quot;MIR1302-4&quot;
+#&gt; [145] &quot;MIR1302-6&quot;    &quot;MIR1302-7&quot;    &quot;MIR1305&quot;      &quot;MIR1307&quot;
+#&gt; [149] &quot;MIR1321&quot;      &quot;MIR1323&quot;      &quot;MIR133A2&quot;     &quot;MIR139&quot;
+#&gt; [153] &quot;MIR1468&quot;      &quot;MIR1471&quot;      &quot;MIR147A&quot;      &quot;MIR148A&quot;
+#&gt; [157] &quot;MIR151A&quot;      &quot;MIR1537&quot;      &quot;MIR15A&quot;       &quot;MIR16-1&quot;
+#&gt; [161] &quot;MIR16-2&quot;      &quot;MIR1827&quot;      &quot;MIR184&quot;       &quot;MIR187&quot;
+#&gt; [165] &quot;MIR188&quot;       &quot;MIR190A&quot;      &quot;MIR1911&quot;      &quot;MIR196A1&quot;
+#&gt; [169] &quot;MIR1972-2&quot;    &quot;MIR1976&quot;      &quot;MIR203A&quot;      &quot;MIR204&quot;
+#&gt; [173] &quot;MIR205&quot;       &quot;MIR2052&quot;      &quot;MIR2054&quot;      &quot;MIR206&quot;
+#&gt; [177] &quot;MIR2113&quot;      &quot;MIR2114&quot;      &quot;MIR2115&quot;      &quot;MIR222&quot;
+#&gt; [181] &quot;MIR2278&quot;      &quot;MIR26A1&quot;      &quot;MIR297&quot;       &quot;MIR302A&quot;
+#&gt; [185] &quot;MIR302B&quot;      &quot;MIR302E&quot;      &quot;MIR302F&quot;      &quot;MIR3065&quot;
+#&gt; [189] &quot;MIR30A&quot;       &quot;MIR30B&quot;       &quot;MIR30C1&quot;      &quot;MIR30D&quot;
+#&gt; [193] &quot;MIR31&quot;        &quot;MIR3116-1&quot;    &quot;MIR3118-1&quot;    &quot;MIR3118-2&quot;
+#&gt; [197] &quot;MIR3118-3&quot;    &quot;MIR3118-4&quot;    &quot;MIR3121&quot;      &quot;MIR3122&quot;
+#&gt; [201] &quot;MIR3123&quot;      &quot;MIR3126&quot;      &quot;MIR3128&quot;      &quot;MIR3129&quot;
+#&gt; [205] &quot;MIR3134&quot;      &quot;MIR3137&quot;      &quot;MIR3141&quot;      &quot;MIR3144&quot;
+#&gt; [209] &quot;MIR3147&quot;      &quot;MIR3152&quot;      &quot;MIR3154&quot;      &quot;MIR3155A&quot;
+#&gt; [213] &quot;MIR3156-1&quot;    &quot;MIR3156-2&quot;    &quot;MIR3156-3&quot;    &quot;MIR3160-1&quot;
+#&gt; [217] &quot;MIR3165&quot;      &quot;MIR3166&quot;      &quot;MIR3167&quot;      &quot;MIR3169&quot;
+#&gt; [221] &quot;MIR3170&quot;      &quot;MIR3171&quot;      &quot;MIR3173&quot;      &quot;MIR3175&quot;
+#&gt; [225] &quot;MIR3179-2&quot;    &quot;MIR3179-3&quot;    &quot;MIR3179-4&quot;    &quot;MIR3190&quot;
+#&gt; [229] &quot;MIR3193&quot;      &quot;MIR3194&quot;      &quot;MIR3196&quot;      &quot;MIR3197&quot;
+#&gt; [233] &quot;MIR3200&quot;      &quot;MIR3201&quot;      &quot;MIR320B1&quot;     &quot;MIR320C2&quot;
+#&gt; [237] &quot;MIR320D1&quot;     &quot;MIR320D2&quot;     &quot;MIR329-1&quot;     &quot;MIR329-2&quot;
+#&gt; [241] &quot;MIR33A&quot;       &quot;MIR34C&quot;       &quot;MIR3606&quot;      &quot;MIR361&quot;
+#&gt; [245] &quot;MIR362&quot;       &quot;MIR3651&quot;      &quot;MIR3655&quot;      &quot;MIR3660&quot;
+#&gt; [249] &quot;MIR3661&quot;      &quot;MIR3667&quot;      &quot;MIR3668&quot;      &quot;MIR3670-3&quot;
+#&gt; [253] &quot;MIR3670-4&quot;    &quot;MIR3672&quot;      &quot;MIR3675&quot;      &quot;MIR3679&quot;
+#&gt; [257] &quot;MIR3681&quot;      &quot;MIR3683&quot;      &quot;MIR3686&quot;      &quot;MIR3688-1&quot;
+#&gt; [261] &quot;MIR3689A&quot;     &quot;MIR3689C&quot;     &quot;MIR3689D1&quot;    &quot;MIR3689E&quot;
+#&gt; [265] &quot;MIR3690&quot;      &quot;MIR3692&quot;      &quot;MIR3713&quot;      &quot;MIR374A&quot;
+#&gt; [269] &quot;MIR374B&quot;      &quot;MIR376C&quot;      &quot;MIR378A&quot;      &quot;MIR378B&quot;
+#&gt; [273] &quot;MIR378C&quot;      &quot;MIR378D1&quot;     &quot;MIR378E&quot;      &quot;MIR378G&quot;
+#&gt; [277] &quot;MIR380&quot;       &quot;MIR381&quot;       &quot;MIR382&quot;       &quot;MIR383&quot;
+#&gt; [281] &quot;MIR384&quot;       &quot;MIR3910-1&quot;    &quot;MIR3914-1&quot;    &quot;MIR3915&quot;
+#&gt; [285] &quot;MIR3917&quot;      &quot;MIR3919&quot;      &quot;MIR3920&quot;      &quot;MIR3921&quot;
+#&gt; [289] &quot;MIR3922&quot;      &quot;MIR3923&quot;      &quot;MIR3924&quot;      &quot;MIR3926-1&quot;
+#&gt; [293] &quot;MIR3929&quot;      &quot;MIR3937&quot;      &quot;MIR3938&quot;      &quot;MIR3974&quot;
+#&gt; [297] &quot;MIR3975&quot;      &quot;MIR3976&quot;      &quot;MIR422A&quot;      &quot;MIR424&quot;
+#&gt; [301] &quot;MIR4251&quot;      &quot;MIR4252&quot;      &quot;MIR4255&quot;      &quot;MIR4260&quot;
+#&gt; [305] &quot;MIR4262&quot;      &quot;MIR4266&quot;      &quot;MIR4267&quot;      &quot;MIR4268&quot;
+#&gt; [309] &quot;MIR4270&quot;      &quot;MIR4272&quot;      &quot;MIR4274&quot;      &quot;MIR4275&quot;
+#&gt; [313] &quot;MIR4278&quot;      &quot;MIR4279&quot;      &quot;MIR4280&quot;      &quot;MIR4281&quot;
+#&gt; [317] &quot;MIR4282&quot;      &quot;MIR4283-1&quot;    &quot;MIR4283-2&quot;    &quot;MIR4287&quot;
+#&gt; [321] &quot;MIR4289&quot;      &quot;MIR4290&quot;      &quot;MIR4291&quot;      &quot;MIR4293&quot;
+#&gt; [325] &quot;MIR4294&quot;      &quot;MIR4295&quot;      &quot;MIR4298&quot;      &quot;MIR4299&quot;
+#&gt; [329] &quot;MIR4300&quot;      &quot;MIR4301&quot;      &quot;MIR4302&quot;      &quot;MIR4303&quot;
+#&gt; [333] &quot;MIR4309&quot;      &quot;MIR4310&quot;      &quot;MIR4316&quot;      &quot;MIR4317&quot;
+#&gt; [337] &quot;MIR4318&quot;      &quot;MIR4320&quot;      &quot;MIR4321&quot;      &quot;MIR4325&quot;
+#&gt; [341] &quot;MIR4327&quot;      &quot;MIR4328&quot;      &quot;MIR4330&quot;      &quot;MIR4421&quot;
+#&gt; [345] &quot;MIR4422&quot;      &quot;MIR4423&quot;      &quot;MIR4425&quot;      &quot;MIR4427&quot;
+#&gt; [349] &quot;MIR4429&quot;      &quot;MIR4430&quot;      &quot;MIR4433B&quot;     &quot;MIR4434&quot;
+#&gt; [353] &quot;MIR4435-2&quot;    &quot;MIR4436B1&quot;    &quot;MIR4436B2&quot;    &quot;MIR4437&quot;
+#&gt; [357] &quot;MIR4438&quot;      &quot;MIR4439&quot;      &quot;MIR4442&quot;      &quot;MIR4445&quot;
+#&gt; [361] &quot;MIR4446&quot;      &quot;MIR4447&quot;      &quot;MIR4451&quot;      &quot;MIR4452&quot;
+#&gt; [365] &quot;MIR4454&quot;      &quot;MIR4455&quot;      &quot;MIR4456&quot;      &quot;MIR4457&quot;
+#&gt; [369] &quot;MIR4462&quot;      &quot;MIR4465&quot;      &quot;MIR4466&quot;      &quot;MIR4469&quot;
+#&gt; [373] &quot;MIR4470&quot;      &quot;MIR4471&quot;      &quot;MIR4472-2&quot;    &quot;MIR4473&quot;
+#&gt; [377] &quot;MIR4474&quot;      &quot;MIR4475&quot;      &quot;MIR4476&quot;      &quot;MIR4477A&quot;
+#&gt; [381] &quot;MIR4477B&quot;     &quot;MIR4478&quot;      &quot;MIR448&quot;       &quot;MIR4481&quot;
+#&gt; [385] &quot;MIR4482&quot;      &quot;MIR4486&quot;      &quot;MIR4487&quot;      &quot;MIR4490&quot;
+#&gt; [389] &quot;MIR4491&quot;      &quot;MIR4493&quot;      &quot;MIR4494&quot;      &quot;MIR4495&quot;
+#&gt; [393] &quot;MIR4496&quot;      &quot;MIR4499&quot;      &quot;MIR449C&quot;      &quot;MIR4500&quot;
+#&gt; [397] &quot;MIR4501&quot;      &quot;MIR4503&quot;      &quot;MIR4507&quot;      &quot;MIR4509-1&quot;
+#&gt; [401] &quot;MIR4509-2&quot;    &quot;MIR4509-3&quot;    &quot;MIR450A1&quot;     &quot;MIR450A2&quot;
+#&gt; [405] &quot;MIR450B&quot;      &quot;MIR4510&quot;      &quot;MIR4514&quot;      &quot;MIR4520-1&quot;
+#&gt; [409] &quot;MIR4521&quot;      &quot;MIR4524B&quot;     &quot;MIR4527&quot;      &quot;MIR4528&quot;
+#&gt; [413] &quot;MIR4529&quot;      &quot;MIR4531&quot;      &quot;MIR4533&quot;      &quot;MIR4535&quot;
+#&gt; [417] &quot;MIR4539&quot;      &quot;MIR4540&quot;      &quot;MIR4643&quot;      &quot;MIR4650-1&quot;
+#&gt; [421] &quot;MIR4650-2&quot;    &quot;MIR4654&quot;      &quot;MIR4658&quot;      &quot;MIR4659A&quot;
+#&gt; [425] &quot;MIR466&quot;       &quot;MIR4660&quot;      &quot;MIR4661&quot;      &quot;MIR4662B&quot;
+#&gt; [429] &quot;MIR4663&quot;      &quot;MIR4665&quot;      &quot;MIR4666B&quot;     &quot;MIR4669&quot;
+#&gt; [433] &quot;MIR4675&quot;      &quot;MIR4681&quot;      &quot;MIR4686&quot;      &quot;MIR4694&quot;
+#&gt; [437] &quot;MIR4696&quot;      &quot;MIR4699&quot;      &quot;MIR4704&quot;      &quot;MIR4705&quot;
+#&gt; [441] &quot;MIR4710&quot;      &quot;MIR4711&quot;      &quot;MIR4713&quot;      &quot;MIR4715&quot;
+#&gt; [445] &quot;MIR4716&quot;      &quot;MIR4718&quot;      &quot;MIR4719&quot;      &quot;MIR4727&quot;
+#&gt; [449] &quot;MIR4729&quot;      &quot;MIR4731&quot;      &quot;MIR4733&quot;      &quot;MIR4735&quot;
+#&gt; [453] &quot;MIR4736&quot;      &quot;MIR4739&quot;      &quot;MIR4743&quot;      &quot;MIR4756&quot;
+#&gt; [457] &quot;MIR4759&quot;      &quot;MIR4760&quot;      &quot;MIR4762&quot;      &quot;MIR4765&quot;
+#&gt; [461] &quot;MIR4769&quot;      &quot;MIR4770&quot;      &quot;MIR4771-1&quot;    &quot;MIR4771-2&quot;
+#&gt; [465] &quot;MIR4774&quot;      &quot;MIR4780&quot;      &quot;MIR4781&quot;      &quot;MIR4789&quot;
+#&gt; [469] &quot;MIR4790&quot;      &quot;MIR4791&quot;      &quot;MIR4793&quot;      &quot;MIR4797&quot;
+#&gt; [473] &quot;MIR4798&quot;      &quot;MIR4799&quot;      &quot;MIR4801&quot;      &quot;MIR4803&quot;
+#&gt; [477] &quot;MIR4804&quot;      &quot;MIR486-1&quot;     &quot;MIR487A&quot;      &quot;MIR488&quot;
+#&gt; [481] &quot;MIR494&quot;       &quot;MIR495&quot;       &quot;MIR499A&quot;      &quot;MIR5007&quot;
+#&gt; [485] &quot;MIR500A&quot;      &quot;MIR501&quot;       &quot;MIR5011&quot;      &quot;MIR502&quot;
+#&gt; [489] &quot;MIR505&quot;       &quot;MIR507&quot;       &quot;MIR508&quot;       &quot;MIR5089&quot;
+#&gt; [493] &quot;MIR509-1&quot;     &quot;MIR509-2&quot;     &quot;MIR509-3&quot;     &quot;MIR5092&quot;
+#&gt; [497] &quot;MIR510&quot;       &quot;MIR5100&quot;      &quot;MIR511&quot;       &quot;MIR512-1&quot;
+#&gt; [501] &quot;MIR512-2&quot;     &quot;MIR513A1&quot;     &quot;MIR513A2&quot;     &quot;MIR513B&quot;
+#&gt; [505] &quot;MIR513C&quot;      &quot;MIR514A1&quot;     &quot;MIR514A2&quot;     &quot;MIR514A3&quot;
+#&gt; [509] &quot;MIR514B&quot;      &quot;MIR515-1&quot;     &quot;MIR515-2&quot;     &quot;MIR516A1&quot;
+#&gt; [513] &quot;MIR516A2&quot;     &quot;MIR516B1&quot;     &quot;MIR516B2&quot;     &quot;MIR517A&quot;
+#&gt; [517] &quot;MIR517B&quot;      &quot;MIR5186&quot;      &quot;MIR518A1&quot;     &quot;MIR518A2&quot;
+#&gt; [521] &quot;MIR518C&quot;      &quot;MIR518D&quot;      &quot;MIR5197&quot;      &quot;MIR519B&quot;
+#&gt; [525] &quot;MIR519C&quot;      &quot;MIR519D&quot;      &quot;MIR520B&quot;      &quot;MIR520C&quot;
+#&gt; [529] &quot;MIR520D&quot;      &quot;MIR520F&quot;      &quot;MIR520G&quot;      &quot;MIR520H&quot;
+#&gt; [533] &quot;MIR521-1&quot;     &quot;MIR525&quot;       &quot;MIR526A1&quot;     &quot;MIR526B&quot;
+#&gt; [537] &quot;MIR539&quot;       &quot;MIR548A1&quot;     &quot;MIR548A2&quot;     &quot;MIR548AB&quot;
+#&gt; [541] &quot;MIR548AD&quot;     &quot;MIR548AE1&quot;    &quot;MIR548AE2&quot;    &quot;MIR548AG1&quot;
+#&gt; [545] &quot;MIR548AI&quot;     &quot;MIR548AJ1&quot;    &quot;MIR548AJ2&quot;    &quot;MIR548AL&quot;
+#&gt; [549] &quot;MIR548AO&quot;     &quot;MIR548AP&quot;     &quot;MIR548AQ&quot;     &quot;MIR548AS&quot;
+#&gt; [553] &quot;MIR548AU&quot;     &quot;MIR548AV&quot;     &quot;MIR548AX&quot;     &quot;MIR548BA&quot;
+#&gt; [557] &quot;MIR548F1&quot;     &quot;MIR548F4&quot;     &quot;MIR548F5&quot;     &quot;MIR548G&quot;
+#&gt; [561] &quot;MIR548H2&quot;     &quot;MIR548H3&quot;     &quot;MIR548H4&quot;     &quot;MIR548H5&quot;
+#&gt; [565] &quot;MIR548I4&quot;     &quot;MIR548M&quot;      &quot;MIR548O2&quot;     &quot;MIR548P&quot;
+#&gt; [569] &quot;MIR548S&quot;      &quot;MIR548T&quot;      &quot;MIR548U&quot;      &quot;MIR548W&quot;
+#&gt; [573] &quot;MIR548X&quot;      &quot;MIR548X2&quot;     &quot;MIR548Y&quot;      &quot;MIR555&quot;
+#&gt; [577] &quot;MIR557&quot;       &quot;MIR5571&quot;      &quot;MIR5579&quot;      &quot;MIR5580&quot;
+#&gt; [581] &quot;MIR5582&quot;      &quot;MIR5583-1&quot;    &quot;MIR5583-2&quot;    &quot;MIR5584&quot;
+#&gt; [585] &quot;MIR5586&quot;      &quot;MIR5590&quot;      &quot;MIR5591&quot;      &quot;MIR5680&quot;
+#&gt; [589] &quot;MIR5681A&quot;     &quot;MIR5682&quot;      &quot;MIR5687&quot;      &quot;MIR5688&quot;
+#&gt; [593] &quot;MIR5689&quot;      &quot;MIR5691&quot;      &quot;MIR5692A1&quot;    &quot;MIR5692A2&quot;
+#&gt; [597] &quot;MIR5692C1&quot;    &quot;MIR5693&quot;      &quot;MIR5694&quot;      &quot;MIR5696&quot;
+#&gt; [601] &quot;MIR5697&quot;      &quot;MIR5700&quot;      &quot;MIR5701-1&quot;    &quot;MIR5701-2&quot;
+#&gt; [605] &quot;MIR5701-3&quot;    &quot;MIR5702&quot;      &quot;MIR5703&quot;      &quot;MIR5704&quot;
+#&gt; [609] &quot;MIR5705&quot;      &quot;MIR5708&quot;      &quot;MIR572&quot;       &quot;MIR582&quot;
+#&gt; [613] &quot;MIR583&quot;       &quot;MIR586&quot;       &quot;MIR588&quot;       &quot;MIR6068&quot;
+#&gt; [617] &quot;MIR6072&quot;      &quot;MIR6077&quot;      &quot;MIR6078&quot;      &quot;MIR6079&quot;
+#&gt; [621] &quot;MIR6082&quot;      &quot;MIR6083&quot;      &quot;MIR6086&quot;      &quot;MIR6089&quot;
+#&gt; [625] &quot;MIR609&quot;       &quot;MIR610&quot;       &quot;MIR6130&quot;      &quot;MIR6134&quot;
+#&gt; [629] &quot;MIR617&quot;       &quot;MIR620&quot;       &quot;MIR625&quot;       &quot;MIR629&quot;
+#&gt; [633] &quot;MIR632&quot;       &quot;MIR642A&quot;      &quot;MIR6499&quot;      &quot;MIR650&quot;
+#&gt; [637] &quot;MIR6504&quot;      &quot;MIR6508&quot;      &quot;MIR651&quot;       &quot;MIR6511A2&quot;
+#&gt; [641] &quot;MIR6511A3&quot;    &quot;MIR6511A4&quot;    &quot;MIR652&quot;       &quot;MIR663A&quot;
+#&gt; [645] &quot;MIR663B&quot;      &quot;MIR664A&quot;      &quot;MIR665&quot;       &quot;MIR668&quot;
+#&gt; [649] &quot;MIR6715A&quot;     &quot;MIR6718&quot;      &quot;MIR6724-1&quot;    &quot;MIR6724-3&quot;
+#&gt; [653] &quot;MIR6731&quot;      &quot;MIR6744&quot;      &quot;MIR6754&quot;      &quot;MIR676&quot;
+#&gt; [657] &quot;MIR6760&quot;      &quot;MIR6769B&quot;     &quot;MIR6770-1&quot;    &quot;MIR6771&quot;
+#&gt; [661] &quot;MIR6779&quot;      &quot;MIR6783&quot;      &quot;MIR6788&quot;      &quot;MIR6813&quot;
+#&gt; [665] &quot;MIR6815&quot;      &quot;MIR6827&quot;      &quot;MIR6828&quot;      &quot;MIR6836&quot;
+#&gt; [669] &quot;MIR6838&quot;      &quot;MIR6841&quot;      &quot;MIR6844&quot;      &quot;MIR6853&quot;
+#&gt; [673] &quot;MIR6854&quot;      &quot;MIR6856&quot;      &quot;MIR6859-1&quot;    &quot;MIR6859-3&quot;
+#&gt; [677] &quot;MIR6861&quot;      &quot;MIR6862-1&quot;    &quot;MIR6866&quot;      &quot;MIR6868&quot;
+#&gt; [681] &quot;MIR6874&quot;      &quot;MIR6876&quot;      &quot;MIR6881&quot;      &quot;MIR6882&quot;
+#&gt; [685] &quot;MIR7-2&quot;       &quot;MIR711&quot;       &quot;MIR7151&quot;      &quot;MIR7153&quot;
+#&gt; [689] &quot;MIR7154&quot;      &quot;MIR7156&quot;      &quot;MIR7157&quot;      &quot;MIR7158&quot;
+#&gt; [693] &quot;MIR7159&quot;      &quot;MIR7160&quot;      &quot;MIR7162&quot;      &quot;MIR718&quot;
+#&gt; [697] &quot;MIR759&quot;       &quot;MIR761&quot;       &quot;MIR764&quot;       &quot;MIR766&quot;
+#&gt; [701] &quot;MIR767&quot;       &quot;MIR7846&quot;      &quot;MIR7847&quot;      &quot;MIR7852&quot;
+#&gt; [705] &quot;MIR7853&quot;      &quot;MIR7854&quot;      &quot;MIR7856&quot;      &quot;MIR7973-1&quot;
+#&gt; [709] &quot;MIR7973-2&quot;    &quot;MIR7976&quot;      &quot;MIR7977&quot;      &quot;MIR7978&quot;
+#&gt; [713] &quot;MIR8052&quot;      &quot;MIR8053&quot;      &quot;MIR8056&quot;      &quot;MIR8058&quot;
+#&gt; [717] &quot;MIR8059&quot;      &quot;MIR8062&quot;      &quot;MIR8065&quot;      &quot;MIR8067&quot;
+#&gt; [721] &quot;MIR8068&quot;      &quot;MIR8069-2&quot;    &quot;MIR8071-1&quot;    &quot;MIR8071-2&quot;
+#&gt; [725] &quot;MIR8074&quot;      &quot;MIR8077&quot;      &quot;MIR8081&quot;      &quot;MIR8082&quot;
+#&gt; [729] &quot;MIR8084&quot;      &quot;MIR8087&quot;      &quot;MIR8088&quot;      &quot;MIR8485&quot;
+#&gt; [733] &quot;MIR873&quot;       &quot;MIR876&quot;       &quot;MIR885&quot;       &quot;MIR887&quot;
+#&gt; [737] &quot;MIR888&quot;       &quot;MIR890&quot;       &quot;MIR891A&quot;      &quot;MIR892A&quot;
+#&gt; [741] &quot;MIR892B&quot;      &quot;MIR892C&quot;      &quot;MIR9-1&quot;       &quot;MIR9-3&quot;
+#&gt; [745] &quot;MIR920&quot;       &quot;MIR921&quot;       &quot;MIR924&quot;       &quot;MIR936&quot;
+#&gt; [749] &quot;MIR941-2&quot;     &quot;MIR941-3&quot;     &quot;MIR941-4&quot;     &quot;MIR941-5&quot;
+#&gt; [753] &quot;MIR944&quot;       &quot;MIR99A&quot;       &quot;MIRLET7A2&quot;    &quot;MIRLET7F2&quot;
+#&gt; [757] &quot;OPN1MW2&quot;      &quot;OPN1MW3&quot;      &quot;OR10R2&quot;       &quot;OR13C3&quot;
+#&gt; [761] &quot;OR4C45&quot;       &quot;P2RY8&quot;        &quot;PLCXD1&quot;       &quot;PPP2R3B&quot;
+#&gt; [765] &quot;PRR20A&quot;       &quot;PRR20B&quot;       &quot;PRR20C&quot;       &quot;PRR20D&quot;
+#&gt; [769] &quot;PRR20E&quot;       &quot;PRY2&quot;         &quot;RBMY1A1&quot;      &quot;RBMY1B&quot;
+#&gt; [773] &quot;RBMY1D&quot;       &quot;RBMY1F&quot;       &quot;RMRP&quot;         &quot;RN7SK&quot;
+#&gt; [777] &quot;RNA5S1&quot;       &quot;RNA5S10&quot;      &quot;RNA5S11&quot;      &quot;RNA5S12&quot;
+#&gt; [781] &quot;RNA5S13&quot;      &quot;RNA5S14&quot;      &quot;RNA5S15&quot;      &quot;RNA5S16&quot;
+#&gt; [785] &quot;RNA5S17&quot;      &quot;RNA5S2&quot;       &quot;RNA5S3&quot;       &quot;RNA5S4&quot;
+#&gt; [789] &quot;RNA5S5&quot;       &quot;RNA5S6&quot;       &quot;RNA5S7&quot;       &quot;RNA5S8&quot;
+#&gt; [793] &quot;RNU1-3&quot;       &quot;RNU105C&quot;      &quot;RNU11&quot;        &quot;RNU2-1&quot;
+#&gt; [797] &quot;SCEL-AS1&quot;     &quot;SHOX&quot;         &quot;SLC25A6&quot;      &quot;SNORA11C&quot;
+#&gt; [801] &quot;SNORA30B&quot;     &quot;SNORA35&quot;      &quot;SNORA36A&quot;     &quot;SNORA50A&quot;
+#&gt; [805] &quot;SNORA51&quot;      &quot;SNORA58B&quot;     &quot;SNORA69&quot;      &quot;SNORA75B&quot;
+#&gt; [809] &quot;SNORA84&quot;      &quot;SNORD109B&quot;    &quot;SNORD112&quot;     &quot;SNORD113-1&quot;
+#&gt; [813] &quot;SNORD113-5&quot;   &quot;SNORD113-6&quot;   &quot;SNORD113-7&quot;   &quot;SNORD113-8&quot;
+#&gt; [817] &quot;SNORD114-11&quot;  &quot;SNORD114-15&quot;  &quot;SNORD114-16&quot;  &quot;SNORD114-17&quot;
+#&gt; [821] &quot;SNORD114-19&quot;  &quot;SNORD114-20&quot;  &quot;SNORD114-22&quot;  &quot;SNORD114-24&quot;
+#&gt; [825] &quot;SNORD114-28&quot;  &quot;SNORD114-29&quot;  &quot;SNORD114-3&quot;   &quot;SNORD114-30&quot;
+#&gt; [829] &quot;SNORD114-5&quot;   &quot;SNORD114-6&quot;   &quot;SNORD114-9&quot;   &quot;SNORD115-1&quot;
+#&gt; [833] &quot;SNORD115-10&quot;  &quot;SNORD115-14&quot;  &quot;SNORD115-16&quot;  &quot;SNORD115-17&quot;
+#&gt; [837] &quot;SNORD115-18&quot;  &quot;SNORD115-19&quot;  &quot;SNORD115-2&quot;   &quot;SNORD115-23&quot;
+#&gt; [841] &quot;SNORD115-24&quot;  &quot;SNORD115-25&quot;  &quot;SNORD115-28&quot;  &quot;SNORD115-29&quot;
+#&gt; [845] &quot;SNORD115-3&quot;   &quot;SNORD115-30&quot;  &quot;SNORD115-32&quot;  &quot;SNORD115-34&quot;
+#&gt; [849] &quot;SNORD115-36&quot;  &quot;SNORD115-37&quot;  &quot;SNORD115-38&quot;  &quot;SNORD115-39&quot;
+#&gt; [853] &quot;SNORD115-41&quot;  &quot;SNORD115-42&quot;  &quot;SNORD115-44&quot;  &quot;SNORD115-46&quot;
+#&gt; [857] &quot;SNORD115-48&quot;  &quot;SNORD115-5&quot;   &quot;SNORD115-9&quot;   &quot;SNORD116-11&quot;
+#&gt; [861] &quot;SNORD116-22&quot;  &quot;SNORD116-29&quot;  &quot;SNORD116-5&quot;   &quot;SNORD121B&quot;
+#&gt; [865] &quot;SNORD15A&quot;     &quot;SNORD18B&quot;     &quot;SNORD28B&quot;     &quot;SNORD31B&quot;
+#&gt; [869] &quot;SNORD32B&quot;     &quot;SNORD36C&quot;     &quot;SNORD38C&quot;     &quot;SNORD38D&quot;
+#&gt; [873] &quot;SNORD42B&quot;     &quot;SNORD43&quot;      &quot;SNORD56&quot;      &quot;SNORD56B&quot;
+#&gt; [877] &quot;SNORD60&quot;      &quot;SNORD61&quot;      &quot;SNORD65B&quot;     &quot;SNORD65C&quot;
+#&gt; [881] &quot;SNORD7&quot;       &quot;SNORD74B&quot;     &quot;SNORD77B&quot;     &quot;SNORD82&quot;
+#&gt; [885] &quot;SNORD98&quot;      &quot;SPATA31A5&quot;    &quot;SPDYE17&quot;      &quot;SPRY3&quot;
+#&gt; [889] &quot;TRIM49D1&quot;     &quot;TRIM49D2&quot;     &quot;TRPC7-AS2&quot;    &quot;TSPY3&quot;
+#&gt; [893] &quot;TSPY4&quot;        &quot;TTTY1&quot;        &quot;TTTY17A&quot;      &quot;TTTY17B&quot;
+#&gt; [897] &quot;TTTY17C&quot;      &quot;TTTY19&quot;       &quot;TTTY1B&quot;       &quot;TTTY20&quot;
+#&gt; [901] &quot;TTTY21&quot;       &quot;TTTY22&quot;       &quot;TTTY23&quot;       &quot;TTTY3&quot;
+#&gt; [905] &quot;TTTY3B&quot;       &quot;TTTY5&quot;        &quot;TTTY6B&quot;       &quot;TTTY7B&quot;
+#&gt; [909] &quot;UGT2A2&quot;       &quot;USP17L12&quot;     &quot;USP17L13&quot;     &quot;USP17L15&quot;
+#&gt; [913] &quot;USP17L18&quot;     &quot;USP17L19&quot;     &quot;USP17L20&quot;     &quot;USP17L21&quot;
+#&gt; [917] &quot;USP17L22&quot;     &quot;USP17L24&quot;     &quot;USP17L25&quot;     &quot;USP17L26&quot;
+#&gt; [921] &quot;USP17L27&quot;     &quot;USP17L28&quot;     &quot;USP17L29&quot;     &quot;USP17L30&quot;
+#&gt; [925] &quot;USP17L6P&quot;     &quot;USP17L9P&quot;     &quot;VAMP7&quot;        &quot;WASIR1&quot;
+#&gt; [929] &quot;XKRY&quot;         &quot;ZBED1&quot;        &quot;ZBTB9&quot;</code></pre>
+</details>
+<p>
+</p>
+<p>The cluster contains mostly RNA genes, prefixed with LINC, MIR, RNA, SNOR, and TTTY. To a degree, this makes sense to me as genes involved in similar functions could
+share similar expression contexts, thus considered similar.</p>
+</div>
+<div id="gene-neighbors" class="section level2">
+<h2>Gene neighbors</h2>
+<p>As a direct application of the gene embedding,
+we can find the “most similar” genes for each gene
+in terms of expression context. For example,
+by querying four genes of interest (EGFR, TP53, PTEN, and KRAS), we get:</p>
+<table class="table table-hover">
+<thead>
+<tr>
+<th style="text-align:left;">
+term
+</th>
+<th style="text-align:left;">
+n1
+</th>
+<th style="text-align:left;">
+n2
+</th>
+<th style="text-align:left;">
+n3
+</th>
+<th style="text-align:left;">
+n4
+</th>
+<th style="text-align:left;">
+n5
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+EGFR
+</td>
+<td style="text-align:left;">
+CRCP
+</td>
+<td style="text-align:left;">
+HERPUD2
+</td>
+<td style="text-align:left;">
+CCT6A
+</td>
+<td style="text-align:left;">
+STK17A
+</td>
+<td style="text-align:left;">
+VKORC1L1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TP53
+</td>
+<td style="text-align:left;">
+TXNDC17
+</td>
+<td style="text-align:left;">
+VAMP2
+</td>
+<td style="text-align:left;">
+TOP3A
+</td>
+<td style="text-align:left;">
+DVL2
+</td>
+<td style="text-align:left;">
+TMEM102
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PTEN
+</td>
+<td style="text-align:left;">
+CCSER2
+</td>
+<td style="text-align:left;">
+ZNF33A
+</td>
+<td style="text-align:left;">
+BMPR1A
+</td>
+<td style="text-align:left;">
+CSTF2T
+</td>
+<td style="text-align:left;">
+EIF4EBP2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+KRAS
+</td>
+<td style="text-align:left;">
+SINHCAF
+</td>
+<td style="text-align:left;">
+GOLT1B
+</td>
+<td style="text-align:left;">
+IPO8
+</td>
+<td style="text-align:left;">
+ETNK1
+</td>
+<td style="text-align:left;">
+FGFR1OP2
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="gene-analogies" class="section level2">
+<h2>Gene analogies</h2>
+<p>Another application of gene embedding is exploring the
+linear algebraic structure of genes. For example, in word embeddings, we can ask:</p>
+<div style="text-align:center;">
+<p>
+<code>Berlin - Germany = [ ? ] - France</code>
+</p>
+</div>
+<p>where the word vectors would give us “Paris” as the answer.
+As a random example, here we try to find the following tissue-specific
+“gene analogies” with the gene embedding:</p>
+<div style="text-align:center;">
+<p>
+<code>BRCA1 - BRCA2 = [ ? ] - TP53</code>
+</p>
+</div>
+<p><strong>The motivation behind this question</strong>:
+BRCA1 and BRCA2 genes play a role in cancer by working together
+in a common pathway of genome protection.
+However, the two corresponding proteins work at different stages in
+DNA damage response and DNA repair.
+Faulty BRCA genes are associated with an increased risk of
+developing breast, ovarian, and prostate cancer.
+On the other side of the equation, TP53 is another well-known tumor
+suppressor gene. By searching for a gene analogy to BRCA1 − BRCA2 for TP53,
+we might find key genes that work in conjunction with TP53.</p>
+<pre class="r"><code>gene_unknown &lt;-
+  word_vectors[&quot;BRCA1&quot;, , drop = FALSE] -
+  word_vectors[&quot;BRCA2&quot;, , drop = FALSE] +
+  word_vectors[&quot;TP53&quot; , , drop = FALSE]
+#&gt;  UBE2O  LLGL2   SOX9   HID1   GGA3
+#&gt; 0.9427 0.9420 0.9412 0.9396 0.9390</code></pre>
+<p>Such capabilities could have potential applications in screening new leads for
+mechanisms like synthetic lethality.</p>
+</div>
+<div id="explore-results-interactively" class="section level2">
+<h2>Explore results interactively</h2>
+<p>Last but not least, I built a Shiny app:
+<a href="https://nanx.shinyapps.io/exp2vec/" class="uri">https://nanx.shinyapps.io/exp2vec/</a>.
+You can use it to explore the gene neighbors and gene analogies.</p>
+</div>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/chromote-pdf-automation/">« Automate HTML to PDF Printing with {promises} and {chromote}</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-6">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer mt-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                <hr>
+            </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="github" viewBox="0 0 16 16">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </symbol>
+            <symbol id="linkedin" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </symbol>
+            <symbol id="twitter" viewBox="0 0 16 16">
+                <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </symbol>
+            <symbol id="rss-fill" viewBox="0 0 16 16">
+                <path
+                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+            </symbol>
+            <symbol id="info-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+            </symbol>
+        </svg>
+
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-lg-6">
+                
+                <div class="site-copyright">
+                    © 2011–2022 Nan Xiao
+                </div>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center mt-1 mb-5">
+            <div class="col-sm-12 col-lg-6">
+                <div class="site-social">
+                    <ul>
+                        
+
+                        
+                        <li><a href="https://github.com/nanxstats" target="_blank" rel="noopener">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#github"></use>
+                                </svg>
+                                GitHub</a></li>
+                        
+
+                        
+
+                        
+
+                        
+                        <li><a href="https://twitter.com/nanxstats" target="_blank" rel="noopener">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                                Twitter
+                            </a></li>
+                        
+
+                        
+                        <li><a href="https://www.linkedin.com/in/nanxstats" target="_blank"
+                                rel="noopener">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg>
+                                LinkedIn</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/colophon/">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#info-circle-fill"></use>
+                                </svg>
+                                Colophon</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/index.xml" class="mr-0">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#rss-fill"></use>
+                                </svg>
+                                RSS</a></li>
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/r.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.highlightAll();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>
