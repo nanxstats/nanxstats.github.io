@@ -141,7 +141,7 @@ to see how well the embedding aligns with our perceived reality.
 I also used k-means on the embedding to get 15 clusters and colorize the
 projected points to make the patterns more distinguishable.
 
-![t-SNE](Pancreas_tsne@0.5x.png)
+![Projected gene embedding using t-SNE](Pancreas_tsne@0.5x.png)
 
 The dark blue cluster at the top-left corner looks unusual. So let's check
 what genes are in it:
