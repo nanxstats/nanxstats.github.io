@@ -6,7 +6,19 @@
     <description>Recent content in JavaScript on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Aug 2022 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Sep 2022 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GUI Automation with RobotJS</title>
+      <link>https://nanx.me/blog/post/gui-automation-robotjs/</link>
+      <pubDate>Mon, 05 Sep 2022 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/gui-automation-robotjs/</guid>
+      <description>The code in this post is also available in this GitHub Gist.
+Disclaimer: the tools and configurations mentioned in this post are only discussed as technical examples; they do not constitute an endorsement. Use at your own risk.
+Photo by Martin Reisch.
+Today’s internet is not like it was 20 years ago for an older millennial like me. Only judging by its appearance, the internet today is plagued with cookie consent popups and paywalls.</description>
+    </item>
+    
     <item>
       <title>Parsing Human-Readable Text Data from the Web with Readability.js and R</title>
       <link>https://nanx.me/blog/post/r-readability-parser/</link>
