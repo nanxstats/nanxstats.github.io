@@ -1,0 +1,90 @@
+---
+title: "New Paper Published: eCTD Submission with Analysis Using R"
+author: "Nan Xiao"
+date: "2022-09-28T11:30:00"
+slug: ectd-pkglite-paper
+categories: []
+tags:
+  - R
+  - R packages
+  - pkglite
+  - clinical trials
+  - regulatory submission
+  - reproducible research
+meta_img: "image/deepmind-ZJKE4XVlKIA-unsplash.jpg"
+description: >
+  I am thrilled to share that our paper, Electronic Common Technical Document
+  Submission with Analysis Using R, is published online today in Clinical Trials.
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  echo = TRUE,
+  message = FALSE
+)
+```
+
+![Photo by [DeepMind](https://unsplash.com/photos/ZJKE4XVlKIA).](/image/deepmind-ZJKE4XVlKIA-unsplash.jpg)
+
+I am thrilled to share that our paper,
+[_Electronic Common Technical Document Submission with Analysis Using R_](https://doi.org/10.1177/17407745221123244),
+is published online today in _Clinical Trials_.
+We have selected the open access (OA) option to ensure that everyone in the
+community can check out the full text freely.
+
+## A simple solution to a complex problem
+
+Our article presented a viable path to prepare proprietary R assets for submission,
+following the
+[electronic common technical document](https://www.fda.gov/drugs/electronic-regulatory-submission-and-review/electronic-common-technical-document-ectd)
+(eCTD) specification.
+The goal is to make the submission document self-contained, easy to
+create, transfer, restore, review, and submit, with confidence in
+transparency and reproducibility for both submitters and reviewers.
+
+The workflow is built upon the idea of organizing the submission assets
+as R packages. Our tool, [pkglite](https://github.com/merck/pkglite),
+can convert the proprietary source R packages with the analysis code into
+a compact text format and restore/install later.
+We provided real-world examples and templates, so you can try them out today.
+We also highlighted the successful pilot 1 open source submission
+from the R Consortium
+[R submission working group](https://rconsortium.github.io/submissions-wg/),
+leveraging the solution and workflow.
+More details of the workflow have been documented in our bookdown project
+[_R for Clinical Study Reports and Submission_](https://r4csr.org/).
+
+## A few more words on pkglite
+
+The pkglite package has accumulated 15k total downloads from the
+RStudio CRAN mirror.
+As a simple, generic text file-based dependency distribution solution for R,
+we have observed many other creative use cases for pkglite since it was
+first published on CRAN in March 2021.
+
+```{r, fig.cap="Download stats for pkglite, averaging ~800 downloads per month (September 2022).", fig.asp=1/4}
+dlstats::cran_stats("pkglite") |>
+  ggplot2::ggplot(ggplot2::aes(x = end, y = downloads, color = package)) +
+  ggplot2::geom_point() +
+  ggplot2::geom_line() +
+  cowplot::theme_cowplot() +
+  ggsci::scale_color_d3() +
+  ggplot2::theme(axis.title.x = ggplot2::element_blank())
+```
+
+We hope pkglite can continue to deliver
+value to people who need a lightweight R package exchange and distribution solution.
+We have some good ideas to further develop the toolchain. You can see
+them from my R/Pharma conference talk last year on
+[reimagining the R package distribution system for reproducible research and submissions](https://nanx.me/talks/reimagine-rpkgs/).
+
+## Acknowledgments
+
+I would like to thank the editors and the anonymous reviewers for offering
+constructive feedback that improved the quality of our manuscript.
+I also appreciate the outstanding contributions made by my collaborators
+[Yujie Zhao](https://www.linkedin.com/in/yujie-zhao-stat-phd/),
+[Keaven Anderson](https://keaven.github.io/),
+[Yilong Zhang](https://elong0527.github.io/),
+and many excellent colleagues for making this happen as a team. 🤗
