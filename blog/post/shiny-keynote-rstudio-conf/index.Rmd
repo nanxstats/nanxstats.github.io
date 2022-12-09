@@ -25,9 +25,11 @@ the community-maintained awesome list
 was again highlighted in Joe's talk from 24:00 to 24:33
 (thanks so much for the shout-out!).
 
-<div class="figure">
-[![rstudio::conf 2022 Keynotes - The Past and Future of Shiny - RStudio](/image/joe-cheng-keynote-the-past-and-future-of-shiny.jpg)](https://www.rstudio.com/conference/2022/keynotes/past-future-shiny/){target="_blank"}
+<div class="ratio ratio-16x9">
+<iframe src="https://www.youtube-nocookie.com/embed/HpqLXB_TnpI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+<p></p>
 
 <style>
 .timestamps {
