@@ -66,8 +66,8 @@ Pull requests are welcomed.
 I want to thank the authors of the following software:
 
 - Code highlighting colors were taken from
-  [RStudio IDE](https://github.com/rstudio/rstudio/blob/785be459684006f95e947fe4e6f13f6a91db6762/src/cpp/session/resources/themes/textmate.rstheme),
-  which was originally from the
+  [the default light theme in RStudio IDE](https://github.com/rstudio/rstudio/blob/785be459684006f95e947fe4e6f13f6a91db6762/src/cpp/session/resources/themes/textmate.rstheme).
+  The theme originally came from the
   [textmate theme in Ace](https://github.com/ajaxorg/ace/blob/f1f6517a30d6819d1c8ca045744cdeb2925ccf0a/src/theme/textmate.css.js).
   The results are not identical because of the subtle differences between
   the language tokenizers, but they are similar.
