@@ -6,7 +6,79 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Jan 2023 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Jan 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blogdown</title>
+      <link>https://nanx.me/tags/blogdown/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/blogdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bookdown</title>
+      <link>https://nanx.me/tags/bookdown/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/bookdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>link checker</title>
+      <link>https://nanx.me/tags/link-checker/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/link-checker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quarto</title>
+      <link>https://nanx.me/tags/quarto/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/quarto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://nanx.me/tags/r-markdown/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>urlchecker</title>
+      <link>https://nanx.me/tags/urlchecker/</link>
+      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/urlchecker/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Ace</title>
       <link>https://nanx.me/tags/ace/</link>
@@ -71,15 +143,6 @@
     </item>
     
     <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>R packages</title>
       <link>https://nanx.me/tags/r-packages/</link>
       <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
@@ -103,15 +166,6 @@
       <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/reproducible-research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Mon, 05 Sep 2022 20:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/automation/</guid>
       <description></description>
     </item>
     
@@ -341,15 +395,6 @@
     </item>
     
     <item>
-      <title>R Markdown</title>
-      <link>https://nanx.me/tags/r-markdown/</link>
-      <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>color interpolation</title>
       <link>https://nanx.me/tags/color-interpolation/</link>
       <pubDate>Wed, 06 Apr 2022 01:30:00 +0000</pubDate>
@@ -395,38 +440,11 @@
     </item>
     
     <item>
-      <title>blogdown</title>
-      <link>https://nanx.me/tags/blogdown/</link>
-      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/blogdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Hugo</title>
       <link>https://nanx.me/tags/hugo/</link>
       <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>link checker</title>
-      <link>https://nanx.me/tags/link-checker/</link>
-      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/link-checker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>urlchecker</title>
-      <link>https://nanx.me/tags/urlchecker/</link>
-      <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/urlchecker/</guid>
       <description></description>
     </item>
     

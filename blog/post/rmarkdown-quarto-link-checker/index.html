@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Announcing My First VS Code Extension: textmate.rstheme - Nan Xiao | 肖楠 </title>
+    <title> A General-Purpose Link Checker for R Markdown and Quarto Projects - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="I published a light theme for VS Code inspired by the TextMate (default) theme in RStudio IDE.
+    <meta name="description" content="How to build a fast, general-purpose link checker for R Markdown and Quarto projects with {urlchecker}.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/vscode-textmate-rstheme/" />
-    <meta property="og:title" content="Announcing My First VS Code Extension: textmate.rstheme" />
-    <meta property="og:image" content="https://nanx.me/image/vscode-textmate-rstheme-screenshot-rmd.png" />
-    <meta property="og:description" content="I published a light theme for VS Code inspired by the TextMate (default) theme in RStudio IDE.
+    <meta property="og:url" content="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/" />
+    <meta property="og:title" content="A General-Purpose Link Checker for R Markdown and Quarto Projects" />
+    <meta property="og:image" content="https://nanx.me/image/yves-alarie-Os5HONI1xf8-unsplash.jpg" />
+    <meta property="og:description" content="How to build a fast, general-purpose link checker for R Markdown and Quarto projects with {urlchecker}.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Announcing My First VS Code Extension: textmate.rstheme" />
-    <meta name="twitter:description" content="I published a light theme for VS Code inspired by the TextMate (default) theme in RStudio IDE.
+    <meta name="twitter:title" content="A General-Purpose Link Checker for R Markdown and Quarto Projects" />
+    <meta name="twitter:description" content="How to build a fast, general-purpose link checker for R Markdown and Quarto projects with {urlchecker}.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/vscode-textmate-rstheme-screenshot-rmd.png" />
+    <meta name="twitter:image" content="https://nanx.me/image/yves-alarie-Os5HONI1xf8-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/vscode-textmate-rstheme/">
+    <link rel="canonical" href="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -123,7 +123,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-lg-6">
-                <h1 class="blog-post-title">Announcing My First VS Code Extension: textmate.rstheme</h1>
+                <h1 class="blog-post-title">A General-Purpose Link Checker for R Markdown and Quarto Projects</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -134,35 +134,47 @@
                     
                     
 
-                    <span class="date middot" title='Mon Jan 2 2023 20:00:00 UTC'>
-                        2023-01-02
+                    <span class="date middot" title='Mon Jan 16 2023 20:30:00 UTC'>
+                        2023-01-16
                     </span>
 
                     <span class="reading-time middot">
-                        2 min read
+                        6 min read
                     </span>
 
                     <div class="d-none d-md-inline tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/vs-code">VS Code</a>
+                                <a href="https://nanx.me/tags/r">R</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/theme">Theme</a>
+                                <a href="https://nanx.me/tags/r-markdown">R Markdown</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/rstudio-ide">RStudio IDE</a>
+                                <a href="https://nanx.me/tags/quarto">Quarto</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/ace">Ace</a>
+                                <a href="https://nanx.me/tags/bookdown">bookdown</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/textmate">TextMate</a>
+                                <a href="https://nanx.me/tags/blogdown">blogdown</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/automation">automation</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/link-checker">link checker</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/urlchecker">urlchecker</a>
                             </li>
                             
                         </ul>
@@ -182,63 +194,209 @@
 
 
 <blockquote>
-<p>TL;DR: I published my first <a href="https://marketplace.visualstudio.com/items?itemName=nanxstats.textmate-rstheme">VS Code extension/theme</a> on Visual Studio Marketplace, with the source hosted on <a href="https://github.com/nanxstats/vscode-textmate-rstheme">GitHub</a>. Try it out today.</p>
+<p>The link checker code in this post is also available in
+this <a href="https://gist.github.com/nanxstats/dc6d2b780fd72b3874d3b3ee9631229f">GitHub Gist</a>.</p>
 </blockquote>
 <div class="figure">
-<img src="https://nanx.me/image/vscode-textmate-rstheme-screenshot-rmd.png" alt="" />
-<p class="caption">A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px.</p>
+<img src="https://nanx.me/image/yves-alarie-Os5HONI1xf8-unsplash.jpg" alt="" />
+<p class="caption">Puffins in the rain, Iceland. Photo by <a href="https://unsplash.com/photos/Os5HONI1xf8">Yves Alarie</a>.</p>
 </div>
-<p>It was not until late in my life that I realized my eyes were sensitive
-to the visual aesthetics of things. To make things worse, I care about
-them very much, at least in the name of productivity and inspiration.
-This probably explains why I have been rotating and “exhausting” the popular
-code editor syntax highlighting themes, light or dark, old or new,
-native or third-party, trying to find the perfect one in the past ten years.
-Eventually, for RStudio IDE/Workbench, my daily driver for writing
-R code, I returned to its default syntax highlighting theme (textmate)
-and stayed there.</p>
-<p>For a long time after that, I wanted to have a consistent
-syntax highlighting experience in Visual Studio Code, my default choice for
-coding with other languages. Still, I cannot find a functionally similar theme.
-The situation motivates me to create the VS Code extension
-<a href="https://marketplace.visualstudio.com/items?itemName=nanxstats.textmate-rstheme">textmate.rstheme</a>.
-You can install it by searching <code>textmate.rstheme</code> in VS Code “Extensions” panel
-or by visiting the above marketplace link and clicking the “Install” button.</p>
-<p>So far, I have added preliminary
-<a href="https://github.com/nanxstats/vscode-textmate-rstheme/tree/main/tests">test cases</a>
-for about 20 programming languages and file formats.
-In many cases, one would need to install additional extensions
-to add specific language support where syntax highlighting is provided.
-For example, extensions like
-<a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">vscode-R</a>,
-<a href="https://marketplace.visualstudio.com/items?itemName=quarto.quarto">Quarto</a>,
-<a href="https://marketplace.visualstudio.com/items?itemName=rstudio.pyshiny">Shiny for Python</a>,
-<a href="https://marketplace.visualstudio.com/items?itemName=ivan-bocharov.stan-vscode">stan-vscode</a>, and
-<a href="https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint">markdownlint</a>
-are all excellent options for daily data science development workflows.</p>
-<p>I had a lot of fun developing the extension.
-Writing a minimal, theme-only extension for VS Code is like curating
-a small key-value database stored in JSON.
-One only needs to know what files to edit and what color values to use.
-No knowledge of TypeScript or another language is required unless the
-key-value pairs need to be generated programmatically.
-The <a href="https://github.com/nanxstats/vscode-textmate-rstheme/blob/main/contributing.md">contributing guide</a>
-details the essential steps to develop and test the extension locally.
-Pull requests are welcomed.</p>
-<div id="credits" class="section level2">
-<h2>Credits</h2>
-<p>I want to thank the authors of the following software:</p>
+<div id="previously-on-link-checking" class="section level2">
+<h2>Previously on link checking…</h2>
+<p>We discussed the
+<a href="https://nanx.me/blog/post/save-the-link-like-a-boss/">link rot issue</a> before.
+We also built a <a href="https://nanx.me/blog/post/link-checker/">simple link checker</a>
+for blogdown projects based on the XML sitemap generated by Hugo.
+In reality, I maintain many more bookdown projects and Quarto projects
+than blogdown projects. Searching <code>site: bookdown::bookdown_site</code>also shows
+that there are 10,000+ bookdown projects hosted on GitHub alone.
+Can we build a general-purpose link checker to check them all?</p>
+<p>Conceptually, one can make the link checker a lot more generic by checking
+against the collection of source Markdown-like files directly. For example,
+the <code>.Rmd</code>, <code>.md</code>, and <code>.qmd</code> files in bookdown, blogdown, or Quarto projects.</p>
+<p>To do this, I still prefer leveraging the awesome
+<a href="https://github.com/r-lib/urlchecker">urlchecker</a>
+package because it marks the document with precise positions of the
+problematic links and explanations from rigorous rules that satisfy
+high standards.</p>
+<pre class="text"><code>✖ Error: vignettes/tlf-overview.Rmd:20:43 Error: Failed to connect to bitbucket.cdisc.org port 443 after 8572 ms: Network is unreachable
+[pilot project following ICH E3 guidance](https://bitbucket.cdisc.org/projects/CED/repos/sdtm-adam-pilot-project/browse).
+                                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+✖ Error: vignettes/slides⧸workshop-slides.Rmd:118:34 404: Not Found
+[Section 1.1 of R Packages book](https://r-pkgs.org/intro.html#intro-phil) and quote here.
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+! Warning: vignettes/tlf-overview.Rmd:101:44 Moved
+RStudio provided outstanding [cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                           https://posit.co/resources/cheatsheets/
+
+✖ Error: vignettes/tlf-overview.Rmd:98:28 Error: CRAN URL not in canonical form
+[the tidy tools manifesto](https://cran.r-project.org/web/packages/tidyverse/vignettes/manifesto.html)
+                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</code></pre>
+<div class="caption">
+<p>Example {urlchecker} markers for problematic URLs, covering situations
+where the network is unreachable, 404 not found, 301 moved permanently,
+and CRAN URL not in canonical form.</p>
+</div>
+</div>
+<div id="requirements" class="section level2">
+<h2>Requirements</h2>
+<p>We may face a few unique challenges when using urlchecker to check against the
+source files. Most importantly, urlchecker is almost specifically built for
+checking R packages and might only be used for checking other types of
+projects with modifications.
+Therefore, to check a list of Markdown-like files, a simple workaround is to
+check them as “vignettes” in a fake, skeleton R package.
+This results in the following technical considerations.</p>
+<div id="hallmarks-of-vignette" class="section level3">
+<h3>① Hallmarks of vignette</h3>
+<p>We should figure out the minimal requirements (e.g., directory structure,
+metadata) for the files copied into the fake package—then urlchecker can
+recognize them as vignettes and perform the check.</p>
 <ul>
-<li><p>Code highlighting colors were taken from
-<a href="https://github.com/rstudio/rstudio/blob/785be459684006f95e947fe4e6f13f6a91db6762/src/cpp/session/resources/themes/textmate.rstheme">the default light theme in RStudio IDE</a>.
-The theme originally came from the
-<a href="https://github.com/ajaxorg/ace/blob/f1f6517a30d6819d1c8ca045744cdeb2925ccf0a/src/theme/textmate.css.js">textmate theme in Ace</a>.
-The results are not identical because of the subtle differences between
-the language tokenizers, but they are similar.</p></li>
-<li><p>Outer UI colors were remixed from the <code>GitHub Light Default</code> theme in
-<a href="https://github.com/primer/github-vscode-theme">github-vscode-theme</a>
-and <a href="https://www.shinyapps.io/">shinyapps.io</a>.</p></li>
+<li><p>All files should be copied into a single, flat <code>vignettes/</code>
+directory under the fake package without creating any
+subdirectory structures.</p></li>
+<li><p>To get the metadata requirements, we need to know how the package
+vignettes are located and identified in urlchecker.</p></li>
 </ul>
+</div>
+<div id="file-type-support" class="section level3">
+<h3>② File type support</h3>
+<p>We should cover most file types containing URL content, including
+<code>.Rmd</code>, <code>.md</code>, and <code>.qmd</code> files.
+Note that the <code>.ipynb</code> files in (a small number of) Quarto projects are
+out of scope here for simplicity’s sake. However, one can convert them
+to Markdown first with <code>knitr::pandoc()</code> easily.</p>
+</div>
+<div id="file-name-mapping" class="section level3">
+<h3>③ File name mapping</h3>
+<p>The source R Markdown or Quarto project files can be stored in
+different subdirectories. They may also share identical file names
+(base name, base name + extension).</p>
+<p>We aim to create an informative and predictable mapping for these
+file names (and potentially, their subdirectory path) in the
+destination directory for urlchecker to give good hints on
+which source files have broken links.</p>
+</div>
+<div id="file-name-conflicts" class="section level3">
+<h3>④ File name conflicts</h3>
+<p>For everything above, a common goal is to make minimal assumptions about
+the source file name and directory structure patterns and avoid duplicated
+file names in the destination directory.</p>
+</div>
+</div>
+<div id="implementation" class="section level2">
+<h2>Implementation</h2>
+<p>“Flatten copy” of the source files can be a common task,
+so it would be ideal if we create a reusable function.</p>
+<ul>
+<li>I renamed the <code>.qmd</code> and <code>.md</code> files by adding a <code>.Rmd</code> extension
+so that they can be captured as vignettes.</li>
+<li>I used a trick to replace the forward slashes in the path with the
+Unicode character U+29F8: <code>⧸</code> (big solidus) so that they are visually
+similar to the directory separator <code>/</code> while still allowed in file names.</li>
+</ul>
+<p>This approach ensures an informative, non-conflicting, one to one mapping.
+Edge cases may exist, say, if you have <code>example.md.Rmd</code> and <code>example.md</code>
+under the same directory, but I would consider it rare.
+Overall, the file name mapping scheme looks like this.</p>
+<pre class="text"><code>/source-project/         →  /tempdir/pkg/vignettes/
+├── README.md            →  ├── README.md.Rmd
+├── ch01.Rmd             →  ├── ch01.Rmd
+├── ch02.qmd             →  ├── ch02.qmd.Rmd
+├── dir1                    │
+│   └── example.Rmd      →  ├── dir1⧸example.Rmd
+└── dir2                    │
+    └── dir3                │
+        └── example.Rmd  →  └── dir2⧸dir3⧸example.Rmd</code></pre>
+<pre class="r"><code>#&#39; Flatten copy
+#&#39;
+#&#39; @param from Source directory path.
+#&#39; @param to Destination directory path.
+#&#39;
+#&#39; @return Destination directory path.
+#&#39;
+#&#39; @details
+#&#39; Copy all `.Rmd`, `.qmd`, and `.md` files from source to destination,
+#&#39; rename the `.qmd` and `.md` files with an additional `.Rmd` extension,
+#&#39; and get a flat destination structure with path-preserving file names.
+flatten_copy &lt;- function(from, to) {
+  rmd &lt;- list.files(from, pattern = &quot;\\.Rmd$&quot;, recursive = TRUE, full.names = TRUE)
+  xmd &lt;- list.files(from, pattern = &quot;\\.qmd$|\\.md$&quot;, recursive = TRUE, full.names = TRUE)
+
+  src &lt;- c(rmd, xmd)
+  dst &lt;- c(rmd, paste0(xmd, &quot;.Rmd&quot;))
+
+  # Remove starting `./` (if any)
+  dst &lt;- gsub(&quot;^\\./&quot;, replacement = &quot;&quot;, x = dst)
+  # Replace the forward slash in path with Unicode big solidus
+  dst &lt;- gsub(&quot;/&quot;, replacement = &quot;\u29F8&quot;, x = dst)
+
+  file.copy(src, to = file.path(to, dst))
+
+  invisible(to)
+}</code></pre>
+<p>OK, now it finally comes to the minimal package structure. If we
+<a href="https://github.com/r-lib/urlchecker/blob/386db5b514670abcde81b0200979b3801a81b701/R/rmd.R#L3">look into urlchecker</a>,
+it calls <code>tools::pkgVignettes()$docs</code> to locate the vignettes.
+By further inspecting the
+<a href="https://github.com/wch/r-source/blob/511541adc94554b2e89a5fa2c701a446f55597fb/src/library/tools/R/Vignettes.R#L382-L435">relevant logic in the function</a>,
+it takes two core criteria to identify <code>.Rmd</code> files as vignettes:</p>
+<ul>
+<li>the <code>VignetteBuilder</code> field in the <code>DESCRIPTION</code> file;</li>
+<li>the <code>VignetteEngine</code> metadata entry in each <code>.Rmd</code> file.</li>
+</ul>
+<p>Then the logic to construct the package becomes natural:</p>
+<pre class="r"><code>#&#39; Check URLs in an R Markdown or Quarto project
+#&#39;
+#&#39; @param input Path to the project directory.
+#&#39;
+#&#39; @return URL checking results from `urlchecker::url_check()`
+#&#39; for all `.Rmd`, `.qmd`, and `.md` files in the project.
+#&#39;
+#&#39; @details
+#&#39; The `tools::pkgVignettes()$docs` call in urlchecker requires
+#&#39; two core criteria (`VignetteBuilder` and `VignetteEngine`)
+#&#39; to recognize `.Rmd` files as package vignettes.
+check_url &lt;- function(input = &quot;.&quot;) {
+  # Create a source package directory
+  pkg &lt;- tempfile()
+  dir.create(pkg)
+
+  # Flatten copy relevant files
+  vig &lt;- file.path(pkg, &quot;vignettes&quot;)
+  dir.create(vig)
+  flatten_copy(input, vig)
+
+  # Create a minimal DESCRIPTION file
+  write(&quot;VignetteBuilder: knitr&quot;, file = file.path(pkg, &quot;DESCRIPTION&quot;))
+
+  # Make the copied files look like vignettes
+  lapply(
+    list.files(vig, full.names = TRUE),
+    function(x) {
+      write(
+        &quot;---\nvignette: &gt;\n  %\\VignetteEngine{knitr::rmarkdown}\n---&quot;,
+        file = x, append = TRUE
+      )
+    }
+  )
+
+  urlchecker::url_check(pkg)
+}</code></pre>
+</div>
+<div id="dogfooding" class="section level2">
+<h2>Dogfooding</h2>
+<p>With the help of the URL checker, I
+<a href="https://github.com/elong0527/r4csr/pull/99">found and corrected</a>
+all the broken URLs by running <code>check_url()</code> for our bookdown project
+<a href="https://r4csr.org/"><em>R for Clinical Study Reports and Submission</em></a>.
+It feels so good to see:</p>
+<pre class="text"><code>fetching [ 126 / 126 ]
+✔ All URLs are correct!</code></pre>
 </div>
 
 
@@ -251,15 +409,11 @@ and <a href="https://www.shinyapps.io/">shinyapps.io</a>.</p></li>
                         <div class="col-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/ectd-pkglite-paper/">« New Paper Published: eCTD Submission with Analysis Using R</a>
+                                <a href="https://nanx.me/blog/post/vscode-textmate-rstheme/">« Announcing My First VS Code Extension: textmate.rstheme</a>
                             </div>
                             
                         </div>
                         <div class="col-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/">A General-Purpose Link Checker for R Markdown and Quarto Projects »</a>
-                            </div>
                             
                         </div>
                     </div>
@@ -406,6 +560,9 @@ and <a href="https://www.shinyapps.io/">shinyapps.io</a>.</p></li>
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>
