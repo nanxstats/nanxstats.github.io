@@ -331,7 +331,7 @@ library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in
       <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
-      <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by RStudio.
+      <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by Posit.
 A collection of my shiny apps, now also self-hosted.
 The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
     </item>
@@ -669,7 +669,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/colophon/</guid>
-      <description> Typography FiraGO (ss05) IBM Plex Mono Content Site generator: blogdown, driven by Hugo Theme: hugo-nanx2022, built on Bootstrap 5 Commenting: utterances Editing R Markdown: RStudio Desktop HTML, CSS, JavaScript: Visual Studio Code </description>
+      <description> Typography FiraGO (ss05) IBM Plex Mono Content Site generator: blogdown, driven by Hugo Theme: hugo-nanx2022, built on Bootstrap 5 Commenting: utterances Editing R Markdown: RStudio IDE HTML, CSS, JavaScript: Visual Studio Code </description>
     </item>
     
     <item>

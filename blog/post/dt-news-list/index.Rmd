@@ -159,7 +159,7 @@ Mostly, the table columns and table control elements need to be stylized.
 I encounter a blocker in making specific columns
 (title and description) fill the entire row. I asked
 [this question](https://d.cosx.org/d/423087-dt) online, and fortunately,
-[Tongchuan](http://tc.rbind.io/) offered a simple solution
+[Tongchuan](https://tc.rbind.io/) offered a simple solution
 by setting `td { display: block; }`. Although this would make
 every column fill the row, I could create and display a formatted
 `metadata` column in the beginning and hide the filtering-only

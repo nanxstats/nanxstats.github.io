@@ -10,7 +10,7 @@ tags:
 meta_img: image/jsm-vancouver.jpg
 ---
 
-I feel super honored to say that I have received the 2018 [John M. Chambers Statistical Software Award](https://community.amstat.org/jointscsg-section/awards/john-m-chambers) from the American Statistical Association this year, for my R package [liftr](https://nanx.me/liftr/) on reproducible research. This year's award also has another recipient: Dustin Tran, for his excellent Python library [Edward](http://edwardlib.org/) on probabilistic programming. We just had a great [session of invited talks](https://ww2.amstat.org/meetings/JSM/2018/onlineprogram/ActivityDetails.cfm?SessionID=215482) today at the 2018 Joint Statistical Meetings in Vancouver, Canada. In case you missed it, here is [the slide deck](https://nanx.me/talks/jsm2018-liftr-nanxiao.pdf) for my talk, with the [talk abstract](https://ww2.amstat.org/meetings/JSM/2018/onlineprogram/AbstractDetails.cfm?abstractid=329348) available.
+I feel super honored to say that I have received the 2018 [John M. Chambers Statistical Software Award](https://community.amstat.org/jointscsg-section/awards/john-m-chambers) from the American Statistical Association this year, for my R package [liftr](https://liftr.me/) on reproducible research. This year's award also has another recipient: Dustin Tran, for his excellent Python library [Edward](http://edwardlib.org/) on probabilistic programming. We just had a great [session of invited talks](https://ww2.amstat.org/meetings/JSM/2018/onlineprogram/ActivityDetails.cfm?SessionID=215482) today at the 2018 Joint Statistical Meetings in Vancouver, Canada. In case you missed it, here is [the slide deck](https://nanx.me/talks/jsm2018-liftr-nanxiao.pdf) for my talk, with the [talk abstract](https://ww2.amstat.org/meetings/JSM/2018/onlineprogram/AbstractDetails.cfm?abstractid=329348) available.
 
 ![Photo: Vancouver, BC, Canada.](/image/jsm-vancouver.jpg)
 
@@ -22,7 +22,7 @@ OK, so much for the thinking, let's focus on the doing --- my plan for improving
 
 1. Automatic inference of R Markdown document **dependencies** and metadata generation.
 
-   In fact, the core of this feature can be already done by the perfect [packrat](https://github.com/rstudio/packrat) package from RStudio. I will check if we could interact with packrat directly or if it is better to adopt and tailor some existing code for our specific purpose. With this set of features developed, the need of manual creation of [liftr metadata](https://nanx.me/liftr/articles/liftr-intro.html#metadata-for-containerization) would be minimized: at least the explicitly invoked packages can be automatically added.
+   In fact, the core of this feature can be already done by the perfect [packrat](https://github.com/rstudio/packrat) package from RStudio. I will check if we could interact with packrat directly or if it is better to adopt and tailor some existing code for our specific purpose. With this set of features developed, the need of manual creation of [liftr metadata](https://liftr.me/articles/liftr-intro.html#metadata-for-containerization) would be minimized: at least the explicitly invoked packages can be automatically added.
 
 2. New **renderers** for bookdown, blogdown, xaringan, and many others.
 

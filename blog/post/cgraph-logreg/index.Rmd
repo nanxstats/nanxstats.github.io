@@ -32,7 +32,7 @@ To experience how powerful computational graph + automatic differentiation is fo
 
 - Logistic regression
 - Logistic regression with the ridge ($\ell_2$) penalty
-- Logistic regression with the [seamless-$\ell_0$ (SELO) penalty](http://www3.stat.sinica.edu.tw/statistica/oldpdf/A23n220.pdf), a differentiable approximation of the $\ell_0$ penalty.
+- Logistic regression with the [seamless-$\ell_0$ (SELO) penalty](https://www3.stat.sinica.edu.tw/statistica/oldpdf/A23n220.pdf), a differentiable approximation of the $\ell_0$ penalty.
 
 Although these methods could be implemented very differently before, the core implementation with cgraph is surprisingly similar: pretty much just replacing the loss/cost functions, as is shown below (SELO). Check out this [vignette](https://nanx.me/logreg/articles/logreg.html) for test examples, and please feel free to leave me a message if you find any bugs in the code.
 

@@ -110,7 +110,7 @@ dtm2tcm <- function(x) {
 ## Training GloVe model
 
 My favorite [interpretation of word2vec](https://dl.acm.org/doi/10.5555/2969033.2969070)
-or [GloVe](http://doi.org/10.1162/tacl_a_00134) is that they are inexplicitly
+or [GloVe](https://doi.org/10.1162/tacl_a_00134) is that they are inexplicitly
 or explicitly factorizations of a word-context pointwise mutual information
 (PMI) matrix with a shift. In our example, if we set the embedding
 dimensionality to be 50, then it means factorizing the gene-context matrix
@@ -132,7 +132,7 @@ in text2vec by setting the random seed AND not using parallelization.
 For training speed, I chose to use parallelization in this example.
 Therefore, the embeddings we got is only reflecting one possibility.
 More generally, the embedding stability between runs is an intriguing
-[open problem](http://doi.org/10.18653/v1/N18-1190).
+[open problem](https://doi.org/10.18653/v1/N18-1190).
 
 ## Low-rank projection
 

@@ -41,6 +41,6 @@ To me, this sounds like a cool reverse engineering of human visual perception un
 
 ![Figure: All scatterplots (including each frame) have the same summary statistics.](https://i.imgur.com/WEYL9En.gif)
 
-Similar to Omar Wagih's [Guess the Correlation](http://guessthecorrelation.com/) game, this paper showed the importance of visualizing your data. It also demonstrated that a visualization alone or some summary statistics alone might not be enough for fully understanding your data --- it is better to combine the analytical and visual approaches.
+Similar to Omar Wagih's [Guess the Correlation](https://guessthecorrelation.com/) game, this paper showed the importance of visualizing your data. It also demonstrated that a visualization alone or some summary statistics alone might not be enough for fully understanding your data --- it is better to combine the analytical and visual approaches.
 
 OK, so much for this year. Happy 2018!

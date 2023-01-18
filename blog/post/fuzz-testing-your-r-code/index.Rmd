@@ -16,7 +16,7 @@ knitr::opts_chunk$set(comment = "#>", collapse = TRUE, echo = TRUE, message = FA
 options(width = 70)
 ```
 
-Good software requires even better testing. Particularly, [unit testing](https://r-pkgs.org/tests.html) has been widely used by many R packages as a tool for reducing the number of bugs and improving code structure. A unit test is often written when a single unit of functionality is created in the program. Is there a good way to test a large program or system after it is created? The answer is yes, and one of the approaches people developed is *fuzz testing*.
+Good software requires even better testing. Particularly, [unit testing](https://r-pkgs.org/testing-basics.html) has been widely used by many R packages as a tool for reducing the number of bugs and improving code structure. A unit test is often written when a single unit of functionality is created in the program. Is there a good way to test a large program or system after it is created? The answer is yes, and one of the approaches people developed is *fuzz testing*.
 
 ![Log book with computer bug. Source: National Museum of American History, accession number [1994.0191](https://americanhistory.si.edu/collections/search/object/nmah_334663).](/image/log-book-with-computer-bug.jpg)
 

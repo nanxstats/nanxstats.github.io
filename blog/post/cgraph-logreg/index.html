@@ -184,7 +184,6 @@
                 <div class="markdown blog-post-content">
                     
     
-<script src="https://nanx.me/blog/post/cgraph-logreg/index_files/header-attrs/header-attrs.js"></script>
 
 
 <p>The R package built for this post is available on GitHub: <a href="https://github.com/nanxstats/logreg">nanxstats/logreg</a>.</p>
@@ -200,7 +199,7 @@
 <ul>
 <li>Logistic regression</li>
 <li>Logistic regression with the ridge (<span class="math inline">\(\ell_2\)</span>) penalty</li>
-<li>Logistic regression with the <a href="http://www3.stat.sinica.edu.tw/statistica/oldpdf/A23n220.pdf">seamless-<span class="math inline">\(\ell_0\)</span> (SELO) penalty</a>, a differentiable approximation of the <span class="math inline">\(\ell_0\)</span> penalty.</li>
+<li>Logistic regression with the <a href="https://www3.stat.sinica.edu.tw/statistica/oldpdf/A23n220.pdf">seamless-<span class="math inline">\(\ell_0\)</span> (SELO) penalty</a>, a differentiable approximation of the <span class="math inline">\(\ell_0\)</span> penalty.</li>
 </ul>
 <p>Although these methods could be implemented very differently before, the core implementation with cgraph is surprisingly similar: pretty much just replacing the loss/cost functions, as is shown below (SELO). Check out this <a href="https://nanx.me/logreg/articles/logreg.html">vignette</a> for test examples, and please feel free to leave me a message if you find any bugs in the code.</p>
 <pre class="r"><code># initialize graph

@@ -113,7 +113,7 @@ Network → Throttle → Fast 3G. This limits the loading speed of all resources
 ## Lighthouse
 
 We can also measure the page loading performance using
-[Lighthouse](https://developers.google.com/web/tools/lighthouse).
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/).
 
 It took 0.4 seconds (locally) to achieve First Contentful Paint.
 We only have 4 render-blocking resources: two from the loader,

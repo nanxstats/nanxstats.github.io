@@ -13,7 +13,7 @@ meta_img: image/nanx.app.png
 description: The motivation and setup to self-host my shiny apps with Linode and Cloudflare.
 ---
 
-After procrastinating for some time, I finally set up a dedicated self-hosting server, [nanx.app](https://nanx.app), for my public shiny apps. From now on, most of the web applications listed on [my software page](https://nanx.me/software/) will be available from two mirrors --- the self-hosting server and the public cloud hosting solution [shinyapps.io](https://www.shinyapps.io) kindly provided by RStudio.
+After procrastinating for some time, I finally set up a dedicated self-hosting server, [nanx.app](https://nanx.app), for my public shiny apps. From now on, most of the web applications listed on [my software page](https://nanx.me/software/) will be available from two mirrors --- the self-hosting server and the public cloud hosting solution [shinyapps.io](https://www.shinyapps.io) kindly provided by Posit.
 
 ![A collection of my shiny apps, now also self-hosted.](/image/nanx.app.png)
 
@@ -42,9 +42,9 @@ In brief, it looks like this:
 
 Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:
 
-- [How to secure your server](https://www.linode.com/docs/guides/securing-your-server/)
+- [How to secure your server](https://www.linode.com/docs/guides/set-up-and-secure/)
 - [How to set up Cloudflare with Linode](https://www.linode.com/docs/guides/how-to-set-up-cloudflare-with-linode/)
-- [Running Shiny Server with a proxy](https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy)
+- [Running Shiny Server with a proxy](https://support.posit.co/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy)
 
 It may take some time to figure out every detail when setting things up (DevOps can be intimidating), but one can often get it done after a little research. For example, two ops related issues I encountered:
 

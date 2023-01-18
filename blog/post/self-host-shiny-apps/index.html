@@ -172,10 +172,9 @@
                 <div class="markdown blog-post-content">
                     
     
-<script src="https://nanx.me/blog/post/self-host-shiny-apps/index_files/header-attrs/header-attrs.js"></script>
 
 
-<p>After procrastinating for some time, I finally set up a dedicated self-hosting server, <a href="https://nanx.app">nanx.app</a>, for my public shiny apps. From now on, most of the web applications listed on <a href="https://nanx.me/software/">my software page</a> will be available from two mirrors — the self-hosting server and the public cloud hosting solution <a href="https://www.shinyapps.io">shinyapps.io</a> kindly provided by RStudio.</p>
+<p>After procrastinating for some time, I finally set up a dedicated self-hosting server, <a href="https://nanx.app">nanx.app</a>, for my public shiny apps. From now on, most of the web applications listed on <a href="https://nanx.me/software/">my software page</a> will be available from two mirrors — the self-hosting server and the public cloud hosting solution <a href="https://www.shinyapps.io">shinyapps.io</a> kindly provided by Posit.</p>
 <div class="figure">
 <img src="https://nanx.me/image/nanx.app.png" alt="" />
 <p class="caption">A collection of my shiny apps, now also self-hosted.</p>
@@ -211,9 +210,9 @@
 </div>
 <p>Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:</p>
 <ul>
-<li><a href="https://www.linode.com/docs/guides/securing-your-server/">How to secure your server</a></li>
+<li><a href="https://www.linode.com/docs/guides/set-up-and-secure/">How to secure your server</a></li>
 <li><a href="https://www.linode.com/docs/guides/how-to-set-up-cloudflare-with-linode/">How to set up Cloudflare with Linode</a></li>
-<li><a href="https://support.rstudio.com/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy">Running Shiny Server with a proxy</a></li>
+<li><a href="https://support.posit.co/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy">Running Shiny Server with a proxy</a></li>
 </ul>
 <p>It may take some time to figure out every detail when setting things up (DevOps can be intimidating), but one can often get it done after a little research. For example, two ops related issues I encountered:</p>
 <ul>
