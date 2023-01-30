@@ -1,0 +1,54 @@
+---
+title: "Deep Learning GPU Selector"
+author: "Nan Xiao"
+date: "2023-01-29T22:00:00"
+slug: gpu-selector
+categories: []
+tags:
+  - deep learning
+  - GPU
+  - buildapc
+meta_img: "image/deepmind-F5_x20zxLEI-unsplash.jpg"
+description: >
+  Discover the perfect GPU for your deep learning needs with this interactive tool.
+---
+
+I built a GPU selector for deep learning workflows at
+[nanx.me/gpu/](https://nanx.me/gpu/), based on the recommendations from the
+[blog post](https://timdettmers.com/2023/01/16/which-gpu-for-deep-learning/)
+written by Tim Dettmers.
+
+You can use this tool to decide the GPU you need for general training or
+inference needs by answering a few yes/no questions.
+It was a simple, pure client-side JavaScript implementation
+([GitHub repo](https://github.com/nanxstats/gpu)).
+
+<div class="figure">
+<img src="/image/deepmind-F5_x20zxLEI-unsplash.jpg" alt="">
+<p class="caption">AI and sustainability. Artwork from <a href="https://unsplash.com/photos/F5_x20zxLEI">DeepMind</a>. Artist: Nidia Dias.</p>
+</div>
+
+I first saw Tim's post when the Ampere series was released in 2020.
+It gave practical recommendations based on the workflow type and scale
+of deep learning research.
+Many things have changed since then: transformer architectures and
+large language models (LLMs) became mainstream,
+a new generation of GPUs was launched with FP8 support,
+the consumer/prosumer card shortage situation has improved...
+The latest update incorporated detailed analysis and suggestions
+based on these new developments.
+Tim is also kind enough to include a GPU recommendation chart in the
+updated post, and that is the source of the decision tree data for this tool.
+
+Note that the tool and the original chart do not cover every situation.
+It is likely that one still needs to evaluate specific hardware requirements
+on a case-by-case basis. For example, running inference on protein
+sequences using the AlphaFold model (which also uses a transformer architecture)
+is heavily memory-bound. To me, the primary considerations would be
+
+- the protein sequence lengths and the required GPU memory size,
+- the model and implementation used, for example, alternatives such as
+  AlphaFold-Multimer or OpenFold, and
+- the fact if we want to run such workflows on-demand or routinely.
+
+That's it! I hope the tool is useful for choosing your next card.
