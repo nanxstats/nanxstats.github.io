@@ -702,7 +702,7 @@ Yujie Zhao, Nan Xiao, Keaven Anderson, Yilong Zhang. Clinical Trials, 2022.</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/software/</guid>
-      <description>R packages | Web applications | Data analysis pipelines Code contributor | Awesome lists and code recipes VS Code extensions | Hugo/blogdown themes Collections | Archives R packages I build R packages to improve my workflow. Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm Minimalist implementation of model stacking for</description>
+      <description>R packages | Web applications | Data analysis pipelines Code contributor | Awesome lists and code recipes VS Code extensions | Hugo/blogdown themes R packages I build R packages to improve my workflow. Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm Minimalist implementation of model stacking for gradient boosted tree</description>
     </item>
     
     <item>
@@ -711,14 +711,14 @@ Yujie Zhao, Nan Xiao, Keaven Anderson, Yilong Zhang. Clinical Trials, 2022.</des
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/talks/</guid>
-      <description>YouTube | Vimeo
-2022 | 2021 | 2020 | 2018 | 2017 | 2016 | 2015 | 2013
-2022 Asynchronous processing of long-running tasks in Shiny
+      <description>2022 Asynchronous processing of long-running tasks in Shiny
 Nicole Jones, Nan Xiao, Shuqi Zhao, Lawrence A. Gould
 R/Pharma Conference
 Video recording R for clinical study reports and submission (short course, slides)
 Yilong Zhang, Nan Xiao, Keaven M. Anderson
-2022 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop, Rockville, MD. Grammar of group sequential design</description>
+2022 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop, Rockville, MD. Grammar of group sequential design
+Keaven M. Anderson, Yilong Zhang, Nan Xiao, Yujie Zhao
+MCP Conference 2022: The 12th International Conference on Multiple Comparison Procedures, Bremen, Germany.</description>
     </item>
     
   </channel>
