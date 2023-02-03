@@ -234,7 +234,7 @@ server &lt;- function(input, output, session) {
 
 shinyApp(ui, server)</code></pre>
 <ul>
-<li>The CSS loader is formally defined by using <code>htmltools::htmlDependencies()</code>
+<li>The CSS loader is formally defined by using <code>htmltools::htmlDependency()</code>
 and then attached so that it can be loaded first as an isolated dependency.</li>
 <li>Instead of defining the main UI directly in the UI function, we render the UI
 using <code>renderUI()</code> on the server side and used <code>uiOutput()</code> to output it.

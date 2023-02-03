@@ -77,7 +77,7 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 
-- The CSS loader is formally defined by using `htmltools::htmlDependencies()`
+- The CSS loader is formally defined by using `htmltools::htmlDependency()`
   and then attached so that it can be loaded first as an isolated dependency.
 - Instead of defining the main UI directly in the UI function, we render the UI
   using `renderUI()` on the server side and used `uiOutput()` to output it.
