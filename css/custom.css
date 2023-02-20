@@ -233,13 +233,6 @@ h6 {
     content: "·";
 }
 
-.content .caption {
-    font-size: 1.125rem;
-    color: #6c757d;
-    text-align: center;
-    margin-top: 0.625rem;
-}
-
 .content .markdown {
     font-size: 1.125rem;
     line-height: 1.75;
@@ -270,11 +263,35 @@ h6 {
 
 /* Blog post images: centered, boxed */
 
+/* pandoc < 3.0 */
 .content .figure img {
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
+}
+
+.content .caption {
+    font-size: 1.125rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 0.625rem;
+}
+
+/* pandoc >= 3.0 */
+.content .float img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+}
+
+.content .figcaption {
+    font-size: 1.125rem;
+    color: #6c757d;
+    text-align: center;
+    margin-top: 0.625rem;
+    margin-bottom: 1rem;
 }
 
 .content .markdown code,

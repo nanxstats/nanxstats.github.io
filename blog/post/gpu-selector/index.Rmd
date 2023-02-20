@@ -23,10 +23,7 @@ inference needs by answering a few yes/no questions.
 It was a simple, pure client-side JavaScript implementation
 ([GitHub repo](https://github.com/nanxstats/gpu)).
 
-<div class="figure">
-<img src="/image/deepmind-F5_x20zxLEI-unsplash.jpg" alt="">
-<p class="caption">AI and sustainability. Artwork from <a href="https://unsplash.com/photos/F5_x20zxLEI">DeepMind</a>. Artist: Nidia Dias.</p>
-</div>
+![AI and sustainability. Artwork from [DeepMind](https://unsplash.com/photos/F5_x20zxLEI). Artist: Nidia Dias.](/image/deepmind-F5_x20zxLEI-unsplash.jpg)
 
 I first saw Tim's post when the Ampere series was released in 2020.
 It gave practical recommendations based on the workflow type and scale
