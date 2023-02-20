@@ -23,7 +23,7 @@ _A Mathematician's Apology by G. H. Hardy_
 
 A good solution improves the balances, symmetries, or harmonies within a pattern — it is a qualitative solution — rather than enlarging or complicating some part of a pattern at the expense or in neglect of the rest.
 
-<em>[Solving for Pattern by Wendell Berry](http://www.seedbed.org/wp-content/uploads/2013/09/Berry_Solving_for_Pattern.pdf)</em>
+_Solving for Pattern by Wendell Berry_
 
 ## Theory, method, and applications
 
@@ -41,18 +41,18 @@ _[Redis Manifesto by Salvatore Sanfilippo](http://oldblog.antirez.com/post/redis
 
 ## Learn to stop
 
-持而盈之，不如其已；<br>
-揣而锐之，不可长保。<br>
-金玉盈室，莫之能守；<br>
-富贵而骄，自遗其咎。<br>
+持而盈之，不如其已；\
+揣而锐之，不可长保。\
+金玉盈室，莫之能守；\
+富贵而骄，自遗其咎。\
 功成身退，天之道也。
 
-<em>[老子《道德经》](https://zh.wikipedia.org/wiki/%E8%80%81%E5%AD%90_(%E6%9B%B8))</em>
+_[老子《道德经》](https://zh.wikipedia.org/wiki/%E8%80%81%E5%AD%90_(%E6%9B%B8))_
 
-Rather than filling it overfull, better to stop in time.<br>
-Sharpen it to a point, the edge won't last forever.<br>
-Gold and jade may fill the house, but no one can retain them.<br>
-Boasting of wealth and virtue, brings trouble on oneself.<br>
+Rather than filling it overfull, better to stop in time.\
+Sharpen it to a point, the edge won't last forever.\
+Gold and jade may fill the house, but no one can retain them.\
+Boasting of wealth and virtue, brings trouble on oneself.\
 Reticence when the job is done, is the Way of heaven.
 
-<em>[Tao Te Ching by Lao Tzu](https://en.wikipedia.org/wiki/Tao_Te_Ching)</em>
+_[Tao Te Ching by Lao Tzu](https://en.wikipedia.org/wiki/Tao_Te_Ching)_
