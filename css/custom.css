@@ -1,8 +1,8 @@
 /* Typography */
 
 @font-face {
-    font-family: "DM Serif Display";
-    src: url("fonts/dm-serif-display-v11-latin-regular.woff2") format("woff2");
+    font-family: "DM Serif Text";
+    src: url("fonts/dm-serif-text-v11-latin-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -150,7 +150,7 @@ hr {
 }
 
 .header h1.name {
-    font-family: "DM Serif Display", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: "DM Serif Text", Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 2.625rem;
     font-weight: 400;
     margin-left: 7px;
@@ -189,7 +189,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "DM Serif Display", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: "DM Serif Text", Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 400;
     color: #212529;
     margin-bottom: 1rem;
@@ -351,7 +351,7 @@ h6 {
 }
 
 .content .groupby {
-    font-family: "DM Serif Display", Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: "DM Serif Text", Georgia, Cambria, "Times New Roman", Times, serif;
     font-size: 1.6rem;
     font-weight: 400;
     margin-top: 2rem;
