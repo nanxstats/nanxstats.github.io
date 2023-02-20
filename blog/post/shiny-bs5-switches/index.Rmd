@@ -1,5 +1,5 @@
 ---
-title: "Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5"
+title: "Five Minute Shiny: Implement the Switch Input with Bootstrap 5"
 author: "Nan Xiao"
 date: "2022-04-14T00:30:00"
 slug: shiny-bs5-switches

@@ -63,14 +63,13 @@ I am deeply moved by the story about how Shiny was created and Joe’s journey, 
     </item>
     
     <item>
-      <title>Parsing Human-Readable Text Data from the Web with Readability.js and R</title>
+      <title>Parsing Human-Readable Text Data with Readability.js and R</title>
       <link>https://nanx.me/blog/post/r-readability-parser/</link>
       <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/r-readability-parser/</guid>
       <description>The R and JavaScript code to reproduce the results in this post is available from https://github.com/nanxstats/r-readability-parser.
-Photo by Nick Hillier.
-Readability.js Maybe you have used tools like rvest to harvest text data from web pages. Naturally, this often requires elaborated human efforts in the front to understand the structure of the target website.
+Photo by Nick Hillier. Readability.js Maybe you have used tools like rvest to harvest text data from web pages. Naturally, this often requires elaborated human efforts in the front to understand the structure of the target website.
 The picture looks quite different when we think at the web scale. To parse the content of many more sites and many more types of pages, we need to make our tool adaptive enough to extract the most relevant text instead of purely relying on manually crafted logic.</description>
     </item>
     
@@ -135,14 +134,13 @@ Fortunately, the native shiny::fileInput() offers a solid foundation for customi
     </item>
     
     <item>
-      <title>Five Minute Shiny: Implement the Missing Switch Input with Bootstrap 5</title>
+      <title>Five Minute Shiny: Implement the Switch Input with Bootstrap 5</title>
       <link>https://nanx.me/blog/post/shiny-bs5-switches/</link>
       <pubDate>Thu, 14 Apr 2022 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
-Photo by Zonduurzaam Deventer.
-Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
+Photo by Zonduurzaam Deventer. Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
 Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
     </item>
     

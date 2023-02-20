@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Parsing Human-Readable Text Data from the Web with Readability.js and R - Nan Xiao | 肖楠 </title>
+    <title> Parsing Human-Readable Text Data with Readability.js and R - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
@@ -13,7 +13,7 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://nanx.me/blog/post/r-readability-parser/" />
-    <meta property="og:title" content="Parsing Human-Readable Text Data from the Web with Readability.js and R" />
+    <meta property="og:title" content="Parsing Human-Readable Text Data with Readability.js and R" />
     <meta property="og:image" content="https://nanx.me/image/nick-hillier-IEkMMvdZFc0-unsplash.jpg" />
     <meta property="og:description" content="In this post, I show how to implement an R wrapper for the JavaScript library Readability.js using the R package V8. The parser allows extracting human-readable text data from any web page." />
 
@@ -22,7 +22,7 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Parsing Human-Readable Text Data from the Web with Readability.js and R" />
+    <meta name="twitter:title" content="Parsing Human-Readable Text Data with Readability.js and R" />
     <meta name="twitter:description" content="In this post, I show how to implement an R wrapper for the JavaScript library Readability.js using the R package V8. The parser allows extracting human-readable text data from any web page." />
     <meta name="twitter:image" content="https://nanx.me/image/nick-hillier-IEkMMvdZFc0-unsplash.jpg" />
 
@@ -120,7 +120,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Parsing Human-Readable Text Data from the Web with Readability.js and R</h1>
+                <h1 class="blog-post-title">Parsing Human-Readable Text Data with Readability.js and R</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -136,7 +136,7 @@
                     </span>
 
                     <span class="reading-time middot">
-                        6 min read
+                        7 min read
                     </span>
 
                     <div class="d-none d-md-inline tags">
@@ -178,9 +178,9 @@
 <p>The R and JavaScript code to reproduce the results in this post is available from
 <a href="https://github.com/nanxstats/r-readability-parser" class="uri">https://github.com/nanxstats/r-readability-parser</a>.</p>
 </blockquote>
-<div class="figure">
-<img src="https://nanx.me/image/nick-hillier-IEkMMvdZFc0-unsplash.jpg" alt="" />
-<p class="caption">Photo by <a href="https://unsplash.com/photos/IEkMMvdZFc0">Nick Hillier</a>.</p>
+<div class="float">
+<img src="https://nanx.me/image/nick-hillier-IEkMMvdZFc0-unsplash.jpg" alt="Photo by Nick Hillier." />
+<div class="figcaption">Photo by <a href="https://unsplash.com/photos/IEkMMvdZFc0">Nick Hillier</a>.</div>
 </div>
 <div id="readability.js" class="section level2">
 <h2>Readability.js</h2>
@@ -330,37 +330,60 @@ details > summary {
     padding: 1rem;
 }
 </style>
-<pre><code>#&gt; Ingredients Kosher salt 12 ounces short pasta, such as radiatori,
-#&gt; fusilli or campanelle 3 tablespoons extra-virgin olive oil, plus more
-#&gt; for drizzling 8 to 10 anchovy fillets, chopped, or use a dash or two of
-#&gt; soy sauce 2 large rosemary sprigs 6 garlic cloves, smashed and peeled
-#&gt; Large pinch of red-pepper flakes 2 sweet bell peppers (red, orange
-#&gt; or yellow), thinly sliced 2 tablespoons dry red, white or rosé wine,
-#&gt; or use dry vermouth or water 1 tablespoon unsalted butter Fresh lemon
-#&gt; juice ½ cup fresh ricotta 2 scallions, thinly sliced, or 1/4 cup sliced
-#&gt; red onion Freshly ground black pepper ¼ cup finely chopped fresh mint,
-#&gt; basil or thyme, plus torn mint or basil leaves and tender sprigs, for
-#&gt; garnish Freshly grated Parmesan (optional) Preparation Bring a large pot
-#&gt; of heavily salted water to a boil. Add the pasta and cook, according to
-#&gt; package instructions, until the pasta is just al dente. As pasta cooks,
-#&gt; heat a large sauté pan over medium-high, and add 3 tablespoons olive oil.
-#&gt; When the oil is hot, add the anchovies and rosemary, and sauté until the
-#&gt; anchovies start to dissolve, about 1 minute. Add the garlic and red-pepper
-#&gt; flakes, and sauté until the garlic turns pale golden in spots, about 1 to
-#&gt; 2 minutes. Add the bell peppers and a large pinch of salt to the pan, and
-#&gt; sauté until the bell peppers are very soft and well caramelized, 10 to 15
-#&gt; minutes, lowering the heat if the peppers start becoming too dark. Add the
-#&gt; wine (or water) and the butter, and sauté, scraping up the browned bits on
-#&gt; the bottom of the pan. Taste and season with lemon juice and more salt as
-#&gt; needed. Put 1/4 cup ricotta and the scallions in a large serving bowl, and
-#&gt; season aggressively with black pepper. Use a coffee mug or measuring cup
-#&gt; to scoop about 1/2 cup pasta water from the pot. Drain the pasta, then add
-#&gt; it to the bowl with the ricotta and scallions, tossing well. Add the bell
-#&gt; pepper mixture and the herbs, and toss well, adding a splash or two of
-#&gt; pasta water if the mixture looks dry. Taste and season with more salt if
-#&gt; needed. Spoon pasta into bowls, and top with dollops of the remaining 1/4
-#&gt; cup ricotta, a drizzle of oil and a little Parmesan, if you like. Shower
-#&gt; torn herb leaves over all.</code></pre>
+<pre><code>#&gt; Time 30 minutes Rating 4(1071) Notes Read community notes Caramelized
+#&gt; slivers of soft bell peppers and whole cloves of garlic serve as the
+#&gt; sweet vegetable-based sauce for this summery pasta. The ricotta gives
+#&gt; everything creaminess and body, while herbs and scallions lend freshness,
+#&gt; and anchovies depth. If you have an open bottle of wine on hand, you can
+#&gt; add a splash to deglaze the tasty browned bits on the bottom of the pan.
+#&gt; But don’t bother opening something new: A little water or dry vermouth
+#&gt; does the trick nearly as well. Featured in: What’s Better Than Caramelized
+#&gt; Onions? Caramelized Peppers Kosher salt 12ounces short pasta, such as
+#&gt; radiatori, fusilli or campanelle 3tablespoons extra-virgin olive oil,
+#&gt; plus more for drizzling 8 to 10anchovy fillets, chopped, or use a dash
+#&gt; or two of soy sauce 2large rosemary sprigs 6garlic cloves, smashed and
+#&gt; peeled Large pinch of red-pepper flakes 2sweet bell peppers (red, orange
+#&gt; or yellow), thinly sliced 2tablespoons dry red, white or rosé wine, or use
+#&gt; dry vermouth or water 1tablespoon unsalted butter Fresh lemon juice ½cup
+#&gt; fresh ricotta 2scallions, thinly sliced, or ¼ cup sliced red onion Freshly
+#&gt; ground black pepper ¼cup finely chopped fresh mint, basil or thyme, plus
+#&gt; torn mint or basil leaves and tender sprigs, for garnish Freshly grated
+#&gt; Parmesan (optional) Ingredient Substitution Guide Nutritional analysis per
+#&gt; serving (6 servings) 364 calories; 13 grams fat; 4 grams saturated fat; 0
+#&gt; grams trans fat; 7 grams monounsaturated fat; 1 gram polyunsaturated fat;
+#&gt; 48 grams carbohydrates; 4 grams dietary fiber; 3 grams sugars; 12 grams
+#&gt; protein; 356 milligrams sodium Note: The information shown is Edamam’s
+#&gt; estimate based on available ingredients and preparation. It should not
+#&gt; be considered a substitute for a professional nutritionist’s advice.
+#&gt; Powered by Bring a large pot of heavily salted water to a boil. Add the
+#&gt; pasta and cook, according to package instructions, until the pasta is
+#&gt; just al dente. As pasta cooks, heat a large sauté pan over medium-high,
+#&gt; and add 3 tablespoons olive oil. When the oil is hot, add the anchovies
+#&gt; and rosemary, and sauté until the anchovies start to dissolve, about 1
+#&gt; minute. Add the garlic and red-pepper flakes, and sauté until the garlic
+#&gt; turns pale golden in spots, about 1 to 2 minutes. Add the bell peppers
+#&gt; and a large pinch of salt to the pan, and sauté until the bell peppers
+#&gt; are very soft and well caramelized, 10 to 15 minutes, lowering the heat
+#&gt; if the peppers start becoming too dark. Add the wine (or water) and the
+#&gt; butter, and sauté, scraping up the browned bits on the bottom of the
+#&gt; pan. Taste and season with lemon juice and more salt as needed. Put ¼ cup
+#&gt; ricotta and the scallions in a large serving bowl, and season aggressively
+#&gt; with black pepper. Use a coffee mug or measuring cup to scoop about ½ cup
+#&gt; pasta water from the pot. Drain the pasta, then add it to the bowl with
+#&gt; the ricotta and scallions, tossing well. Add the bell pepper mixture and
+#&gt; the herbs, and toss well, adding a splash or two of pasta water if the
+#&gt; mixture looks dry. Taste and season with more salt if needed. Spoon pasta
+#&gt; into bowls, and top with dollops of the remaining ¼ cup ricotta, a drizzle
+#&gt; of oil and a little Parmesan, if you like. Shower torn herb leaves over
+#&gt; all. Have you cooked this? or to mark this recipe as cooked. Private Notes
+#&gt; Leave a Private Note on this recipe and see it here. There aren’t any
+#&gt; notes yet. Be the first to leave one. Trending on Cooking Cooking Guides
+#&gt; Cooking Guide Basic Knife Skills By Julia Moskin Cooking Guide How to
+#&gt; Make a Gingerbread House By Julia Moskin Cooking Guide How to Make Yogurt
+#&gt; By Melissa Clark Cooking Guide How to Cook Cauliflower By Alison Roman
+#&gt; Cooking Guide How to Make Pancakes By Alison Roman Cooking Guide How to
+#&gt; Make Soup By Samin Nosrat Cooking Guide How to Make an Omelet By Melissa
+#&gt; Clark Cooking Guide How to Make Pommes Anna By Melissa Clark</code></pre>
 </details>
 <p>
 </p>

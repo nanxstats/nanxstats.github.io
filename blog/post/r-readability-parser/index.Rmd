@@ -1,5 +1,5 @@
 ---
-title: "Parsing Human-Readable Text Data from the Web with Readability.js and R"
+title: "Parsing Human-Readable Text Data with Readability.js and R"
 author: "Nan Xiao"
 date: "2022-08-02T01:30:00"
 slug: "r-readability-parser"
