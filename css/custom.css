@@ -423,7 +423,7 @@ h6 {
 }
 
 .footer a {
-    color: var(--tw-prose-headings);
+    color: var(--tw-prose-links);
     text-decoration: none;
 }
 
@@ -446,7 +446,7 @@ a:focus {
 }
 
 .site-copyright {
-    color: var(--tw-prose-headings);
+    color: var(--tw-prose-captions);
     min-width: 16em;
 }
 
@@ -461,7 +461,7 @@ a:focus {
 
 .site-social li:not(:last-child)::after {
     content: '';
-    color: var(--tw-prose-body);
+    color: var(--tw-prose-captions);
     margin: 0 0.3rem 0 0.5rem;
 }
 
@@ -469,7 +469,7 @@ a:focus {
     width: 1em;
     height: 1em;
     vertical-align: -0.125em;
-    fill: var(--tw-prose-headings);
+    fill: var(--tw-prose-links);
 }
 
 /* < medium screens */
