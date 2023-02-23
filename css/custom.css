@@ -50,6 +50,7 @@
     --tw-prose-lead: #475569;
     --tw-prose-captions: #64748b;
     --tw-prose-counters: #64748b;
+    --tw-prose-code: #0f172a;
     --tw-prose-bullets: #cbd5e1;
     --tw-prose-hr: #e2e8f0;
     --tw-prose-quotes: #0f172a;
@@ -322,7 +323,7 @@ h6 {
 
 .content .markdown code {
     /* Enclosed by single backtick (`) */
-    color: var(--tw-prose-body);
+    color: var(--tw-prose-code);
     padding: .2em .4em;
     margin: 0;
     font-size: 1rem;
