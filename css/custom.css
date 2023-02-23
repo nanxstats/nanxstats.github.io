@@ -470,7 +470,7 @@ a:focus {
     width: 1em;
     height: 1em;
     vertical-align: -0.125em;
-    fill: var(--tw-prose-links);
+    fill: var(--tw-prose-captions);
 }
 
 /* < medium screens */
