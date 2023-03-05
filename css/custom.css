@@ -436,17 +436,12 @@ a:focus {
     color: var(--tw-prose-captions);
 }
 
-.footer a {
-    margin-left: 6px;
-    margin-right: 6px;
-}
-
 .footer a:first-child {
     margin-left: 0;
 }
 
 .footer a:last-child {
-    margin-right: 0;
+    margin-right: 6px;
 }
 
 .site-copyright {
