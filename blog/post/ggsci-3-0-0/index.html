@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> color scales - Nan Xiao | 肖楠 </title>
+    <title> ggsci 3.0.0 - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="ggsci 3.0.0 brings 7 new color palettes, multiple improvements, and a new FAQ vignette.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/color-scales/" />
-    <meta property="og:title" content="color scales" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/ggsci-3-0-0/" />
+    <meta property="og:title" content="ggsci 3.0.0" />
+    <meta property="og:image" content="https://nanx.me/image/rodion-kutsaiev-0d2zObuClQI-unsplash.jpg" />
+    <meta property="og:description" content="ggsci 3.0.0 brings 7 new color palettes, multiple improvements, and a new FAQ vignette.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="color scales" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="ggsci 3.0.0" />
+    <meta name="twitter:description" content="ggsci 3.0.0 brings 7 new color palettes, multiple improvements, and a new FAQ vignette.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/rodion-kutsaiev-0d2zObuClQI-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/tags/color-scales/">
+    <link rel="canonical" href="https://nanx.me/blog/post/ggsci-3-0-0/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -120,34 +123,177 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1>Posts about color scales</h1>
-                <hr>
-                <ul>
+                <h1 class="blog-post-title">ggsci 3.0.0</h1>
+
+                <div class="mb-md-4 meta">
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2022-04-06
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/ggplot2-color-interpolation/">Adaptive ggplot2 Color Scales with Color Interpolation</a>
-    </div>
-</li>
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2023-03-08
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/ggsci-3-0-0/">ggsci 3.0.0</a>
-    </div>
-</li>
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
                     
-                </ul>
+                    
+
+                    <span class="date middot" title='Wed Mar 8 2023 11:30:00 UTC'>
+                        2023-03-08
+                    </span>
+
+                    <span class="reading-time middot">
+                        2 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/ggplot2">ggplot2</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/color-scales">color scales</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/rodion-kutsaiev-0d2zObuClQI-unsplash.jpg" alt="3D render from Rodion Kutsaiev." />
+<div class="figcaption">3D render from <a href="https://unsplash.com/photos/0d2zObuClQI">Rodion Kutsaiev</a>.</div>
+</div>
+<p>I am delighted to announce the release of <a href="https://nanx.me/ggsci/">ggsci</a> 3.0.0.
+ggsci provides a collection of color palettes inspired by colors used in
+scientific journals, data visualization libraries, science fiction movies,
+and TV shows.</p>
+<p>You can install it from CRAN with:</p>
+<pre class="r"><code>install.packages(&quot;ggsci&quot;)</code></pre>
+<p>This version brings 7 new color palettes under 3 color scales
+(COSMIC, Flat UI, Frontiers), multiple improvements, and a new FAQ vignette,
+giving you more options to create effective data visualizations using ggplot2.</p>
+<div id="new-color-palettes" class="section level2">
+<h2>New color palettes</h2>
+<div id="cosmic" class="section level3">
+<h3>COSMIC</h3>
+<p>Three COSMIC color palettes are added in ggsci 3.0.0.
+These color palettes are inspired by the colors used in projects from the
+<a href="https://cancer.sanger.ac.uk/cosmic">Catalogue Of Somatic Mutations in Cancers (COSMIC)</a> and are contributed by <a href="https://github.com/jhrcook">Joshua H. Cook</a>.</p>
+<p>The hallmarks (light) palette:</p>
+<p><img src="https://nanx.me/blog/post/ggsci-3-0-0/index_files/figure-html/cosmic-hallmarks-light-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>The hallmarks (dark) palette:</p>
+<p><img src="https://nanx.me/blog/post/ggsci-3-0-0/index_files/figure-html/cosmic-hallmarks-dark-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>The signature (substitutions) palette:</p>
+<p><img src="https://nanx.me/blog/post/ggsci-3-0-0/index_files/figure-html/cosmic-signature-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="flat-ui" class="section level3">
+<h3>Flat UI</h3>
+<p>Three color palettes from <a href="https://flatuicolors.com/">Flat UI Colors 2</a>
+are included in ggsci 3.0.0, contributed by
+<a href="https://github.com/clarajegousse">Clara Jégousse</a>.</p>
+<p>The default palette:</p>
+<p><img src="https://nanx.me/blog/post/ggsci-3-0-0/index_files/figure-html/flatui-default-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>The “flattastic” palette:</p>
+<p><img src="https://nanx.me/blog/post/ggsci-3-0-0/index_files/figure-html/flatui-flattastic-1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>The “aussie” palette:</p>
+<p><img src="https://nanx.me/blog/post/ggsci-3-0-0/index_files/figure-html/flatui-aussie-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="frontiers" class="section level3">
+<h3>Frontiers</h3>
+<p>Clara also contributed one color palette with inspirations from
+<a href="https://www.frontiersin.org/">Frontiers</a>:</p>
+<p><img src="https://nanx.me/blog/post/ggsci-3-0-0/index_files/figure-html/frontiers-1.png" width="100%" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="other-notable-improvements" class="section level2">
+<h2>Other notable improvements</h2>
+<p>A new <a href="https://nanx.me/ggsci/articles/ggsci-faq.html">FAQ vignette</a> is added,
+with answers to two most frequently asked questions:</p>
+<ul>
+<li>A simple solution to interpolate the color palettes when the data has more
+categories than the number of colors in a discrete color scale.</li>
+<li>A method for applying color scales consistently for multiple ggplot2 plots by
+setting global options.</li>
+</ul>
+<p>The output figure size is now reduced in vignettes and <code>README.Rmd</code> by
+switching to the <a href="https://ragg.r-lib.org/">ragg</a> PNG device, plus using
+<a href="https://pngquant.org/">pngquant</a> via its knitr hook for compression.
+This change enables future scaling of the gallery, as it
+eliminates the <code>R CMD check</code> note when installed size &gt; 5Mb.
+See <a href="https://github.com/nanxstats/ggsci/issues/16">#16</a>
+for more technical details.</p>
+<p>Starting with this release, I have switched to a proper, three-component
+version number (x.y.z) following the Semantic Versioning recommendations.
+Previously, I have been using x.y only without the z component in every
+version, which is interpreted by CRAN as equivalent to x.y.0.</p>
+<p>See the <a href="https://nanx.me/ggsci/news/">ggsci changelog</a> for the full list of changes.</p>
+</div>
+<div id="acknowledgments" class="section level2">
+<h2>Acknowledgments</h2>
+<p>A big shout out to <a href="https://github.com/jhrcook">Joshua H. Cook</a>
+and <a href="https://github.com/clarajegousse">Clara Jégousse</a> for identifying
+and contributing the new color scales and
+<a href="https://github.com/DanChaltiel">Dan Chaltiel</a>
+for the pro tip on global options.
+A special thanks to the users (8 million total downloads)
+and package developers (16 reverse imports, 7 reverse suggests)
+for your consistent support and trust.</p>
+</div>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/gpu-selector/">« Deep Learning GPU Selector</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 

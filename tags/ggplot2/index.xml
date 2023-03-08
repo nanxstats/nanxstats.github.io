@@ -6,7 +6,18 @@
     <description>Recent content in ggplot2 on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Apr 2022 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Mar 2023 11:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ggsci 3.0.0</title>
+      <link>https://nanx.me/blog/post/ggsci-3-0-0/</link>
+      <pubDate>Wed, 08 Mar 2023 11:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/ggsci-3-0-0/</guid>
+      <description>3D render from Rodion Kutsaiev. I am delighted to announce the release of ggsci 3.0.0. ggsci provides a collection of color palettes inspired by colors used in scientific journals, data visualization libraries, science fiction movies, and TV shows.
+You can install it from CRAN with:
+install.packages(&amp;quot;ggsci&amp;quot;) This version brings 7 new color palettes under 3 color scales (COSMIC, Flat UI, Frontiers), multiple improvements, and a new FAQ vignette, giving you more options to create effective data visualizations using ggplot2.</description>
+    </item>
+    
     <item>
       <title>Adaptive ggplot2 Color Scales with Color Interpolation</title>
       <link>https://nanx.me/blog/post/ggplot2-color-interpolation/</link>

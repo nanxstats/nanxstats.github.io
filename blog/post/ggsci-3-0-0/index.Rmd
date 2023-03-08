@@ -1,0 +1,181 @@
+---
+title: "ggsci 3.0.0"
+author: "Nan Xiao"
+date: "2023-03-08T11:30:00"
+slug: ggsci-3-0-0
+categories: []
+tags:
+  - R
+  - ggplot2
+  - color scales
+meta_img: "image/rodion-kutsaiev-0d2zObuClQI-unsplash.jpg"
+description: >
+  ggsci 3.0.0 brings 7 new color palettes, multiple improvements,
+  and a new FAQ vignette.
+---
+
+```{r, include=FALSE}
+knitr::knit_hooks$set(pngquant = knitr::hook_pngquant)
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  dev = "ragg_png",
+  dpi = 96,
+  fig.retina = 2,
+  fig.width = 10.6667,
+  fig.height = 3.3334,
+  fig.align = "center",
+  out.width = "100%",
+  pngquant = "--speed=1 --quality=50"
+)
+```
+
+![3D render from [Rodion Kutsaiev](https://unsplash.com/photos/0d2zObuClQI).](/image/rodion-kutsaiev-0d2zObuClQI-unsplash.jpg)
+
+I am delighted to announce the release of [ggsci](https://nanx.me/ggsci/) 3.0.0.
+ggsci provides a collection of color palettes inspired by colors used in
+scientific journals, data visualization libraries, science fiction movies,
+and TV shows.
+
+You can install it from CRAN with:
+
+```r
+install.packages("ggsci")
+```
+
+This version brings 7 new color palettes under 3 color scales
+(COSMIC, Flat UI, Frontiers), multiple improvements, and a new FAQ vignette,
+giving you more options to create effective data visualizations using ggplot2.
+
+## New color palettes
+
+### COSMIC
+
+Three COSMIC color palettes are added in ggsci 3.0.0.
+These color palettes are inspired by the colors used in projects from the
+[Catalogue Of Somatic Mutations in Cancers (COSMIC)](https://cancer.sanger.ac.uk/cosmic) and are contributed by [Joshua H. Cook](https://github.com/jhrcook).
+
+```{r}
+library("ggsci")
+library("ggplot2")
+library("gridExtra")
+
+data("diamonds")
+
+p1 <- ggplot(
+  subset(diamonds, carat >= 2.2),
+  aes(x = table, y = price, colour = cut)
+) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "loess", alpha = 0.05, linewidth = 1, span = 1) +
+  theme_bw()
+p2 <- ggplot(
+  subset(diamonds, carat > 2.2 & depth > 55 & depth < 70),
+  aes(x = depth, fill = cut)
+) +
+  geom_histogram(colour = "black", binwidth = 1, position = "dodge") +
+  theme_bw()
+```
+
+The hallmarks (light) palette:
+
+```{r, cosmic-hallmarks-light}
+p1_cosmic_hallmarks_light <- p1 + scale_color_cosmic("hallmarks_light")
+p2_cosmic_hallmarks_light <- p2 + scale_fill_cosmic("hallmarks_light")
+grid.arrange(p1_cosmic_hallmarks_light, p2_cosmic_hallmarks_light, ncol = 2)
+```
+
+The hallmarks (dark) palette:
+
+```{r, cosmic-hallmarks-dark}
+p1_cosmic_hallmarks_dark <- p1 + scale_color_cosmic("hallmarks_dark")
+p2_cosmic_hallmarks_dark <- p2 + scale_fill_cosmic("hallmarks_dark")
+grid.arrange(p1_cosmic_hallmarks_dark, p2_cosmic_hallmarks_dark, ncol = 2)
+```
+
+The signature (substitutions) palette:
+
+```{r, cosmic-signature}
+p1_cosmic_signature <- p1 + scale_color_cosmic("signature_substitutions")
+p2_cosmic_signature <- p2 + scale_fill_cosmic("signature_substitutions")
+grid.arrange(p1_cosmic_signature, p2_cosmic_signature, ncol = 2)
+```
+
+### Flat UI
+
+Three color palettes from [Flat UI Colors 2](https://flatuicolors.com/)
+are included in ggsci 3.0.0, contributed by
+[Clara Jégousse](https://github.com/clarajegousse).
+
+The default palette:
+
+```{r, flatui-default}
+p1_flatui <- p1 + scale_color_flatui()
+p2_flatui <- p2 + scale_fill_flatui()
+grid.arrange(p1_flatui, p2_flatui, ncol = 2)
+```
+
+The "flattastic" palette:
+
+```{r, flatui-flattastic}
+p1_flatui <- p1 + scale_color_flatui("flattastic")
+p2_flatui <- p2 + scale_fill_flatui("flattastic")
+grid.arrange(p1_flatui, p2_flatui, ncol = 2)
+```
+
+The "aussie" palette:
+
+```{r, flatui-aussie}
+p1_flatui <- p1 + scale_color_flatui("aussie")
+p2_flatui <- p2 + scale_fill_flatui("aussie")
+grid.arrange(p1_flatui, p2_flatui, ncol = 2)
+```
+
+### Frontiers
+
+Clara also contributed one color palette with inspirations from
+[Frontiers](https://www.frontiersin.org/):
+
+```{r, frontiers}
+p1_frontiers <- p1 + scale_color_frontiers()
+p2_frontiers <- p2 + scale_fill_frontiers()
+grid.arrange(p1_frontiers, p2_frontiers, ncol = 2)
+```
+
+## Other notable improvements
+
+A new [FAQ vignette](https://nanx.me/ggsci/articles/ggsci-faq.html) is added,
+with answers to two most frequently asked questions:
+
+- A simple solution to interpolate the color palettes when the data has more
+  categories than the number of colors in a discrete color scale.
+- A method for applying color scales consistently for multiple ggplot2 plots by
+  setting global options.
+
+The output figure size is now reduced in vignettes and `README.Rmd` by
+switching to the [ragg](https://ragg.r-lib.org/) PNG device, plus using
+[pngquant](https://pngquant.org/) via its knitr hook for compression.
+This change enables future scaling of the gallery, as it
+eliminates the `R CMD check` note when installed size > 5Mb.
+See [#16](https://github.com/nanxstats/ggsci/issues/16)
+for more technical details.
+
+Starting with this release, I have switched to a proper, three-component
+version number (x.y.z) following the Semantic Versioning recommendations.
+Previously, I have been using x.y only without the z component in every
+version, which is interpreted by CRAN as equivalent to x.y.0.
+
+See the [ggsci changelog](https://nanx.me/ggsci/news/) for the full list of changes.
+
+## Acknowledgments
+
+A big shout out to [Joshua H. Cook](https://github.com/jhrcook)
+and [Clara Jégousse](https://github.com/clarajegousse) for identifying
+and contributing the new color scales and
+[Dan Chaltiel](https://github.com/DanChaltiel)
+for the pro tip on global options.
+A special thanks to the users (8 million total downloads)
+and package developers (16 reverse imports, 7 reverse suggests)
+for your consistent support and trust.
