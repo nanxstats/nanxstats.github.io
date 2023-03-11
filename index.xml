@@ -709,7 +709,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/software/</guid>
-      <description>Hex sticker wall for some of my R packages. R packages | Web applications | Data analysis pipelines Code contributor | Awesome lists and code recipes VS Code extensions | Hugo/blogdown themes R packages I build R packages to improve my workflow. Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm</description>
+      <description>Hex sticker wall for some of my R packages. R packages | Web applications | ML workflows Code contributor | Awesome lists and recipes VS Code extensions | Hugo/blogdown themes R packages I build R packages to improve my workflow. Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm Minimalist implementation</description>
     </item>
     
     <item>
