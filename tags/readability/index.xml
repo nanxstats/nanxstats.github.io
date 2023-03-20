@@ -6,7 +6,17 @@
     <description>Recent content in Readability on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Aug 2022 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/readability/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 06:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/readability/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bolden Your Typography in R Markdown and Quarto with MLModern</title>
+      <link>https://nanx.me/blog/post/mlmodern/</link>
+      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/mlmodern/</guid>
+      <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.
+To me, these default typefaces work fine, but they could be “thicker” to be more legible on HiDPI and Retina displays. MLModern offers such a sturdy rendition of the Computer Modern design.</description>
+    </item>
+    
     <item>
       <title>Parsing Human-Readable Text Data with Readability.js and R</title>
       <link>https://nanx.me/blog/post/r-readability-parser/</link>

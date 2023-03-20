@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Mar 2023 11:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 06:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MLModern</title>
+      <link>https://nanx.me/tags/mlmodern/</link>
+      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/mlmodern/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quarto</title>
+      <link>https://nanx.me/tags/quarto/</link>
+      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/quarto/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://nanx.me/tags/r-markdown/</link>
+      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Readability</title>
+      <link>https://nanx.me/tags/readability/</link>
+      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/readability/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>color scales</title>
       <link>https://nanx.me/tags/color-scales/</link>
@@ -94,24 +130,6 @@
       <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/link-checker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Quarto</title>
-      <link>https://nanx.me/tags/quarto/</link>
-      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/quarto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>https://nanx.me/tags/r-markdown/</link>
-      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r-markdown/</guid>
       <description></description>
     </item>
     
@@ -337,15 +355,6 @@
       <pubDate>Wed, 17 Aug 2022 20:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/shiny/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Readability</title>
-      <link>https://nanx.me/tags/readability/</link>
-      <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/readability/</guid>
       <description></description>
     </item>
     

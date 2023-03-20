@@ -1,0 +1,165 @@
+---
+title: "Bolden Your Typography in R Markdown and Quarto with MLModern"
+author: "Nan Xiao"
+date: "2023-03-20T6:00:00"
+slug: mlmodern
+categories: []
+tags:
+  - MLModern
+  - readability
+  - R Markdown
+  - Quarto
+meta_img: "image/mlmodern.png"
+description: >
+  MLModern is a sturdy rendition of the Computer Modern typeface, offering
+  a thicker and more legible design that is perfect for HiDPI and Retina
+  displays. With MLModern, you can enhance the typography of your PDF documents
+  and make them more readable. This blog post provides detailed instructions
+  on how to install and use MLModern with both R Markdown and Quarto,
+  and includes code examples to help you get started.
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{css}
+.float img { border: 1px solid #cbd5e1; }
+```
+
+![A visual comparison between Latin Modern (blue) and MLModern (red) at the same size.](/image/mlmodern.png)
+
+You probably have created PDF documents using R Markdown or Quarto.
+The default look and feel of these documents are driven by the default typeface,
+Computer Modern, or its extended implementation, Latin Modern.
+
+To me, these default typefaces work fine, but they could be "thicker" to be
+more legible on HiDPI and Retina displays. [MLModern](https://ctan.org/pkg/mlmodern)
+offers such a sturdy rendition of the Computer Modern design.
+It was kindly contributed by Daniel Benjamin Miller and was first published
+on CTAN in January 2021.
+
+## Specimen
+
+For direct use with LaTeX, you can preview MLModern on the
+[LaTeX Font Catalogue](https://tug.org/FontCatalogue/mlmodern/).
+As I often generate LaTeX-rendered PDF documents via R Markdown and Quarto,
+I created a GitHub repo at
+[nanxstats/rmarkdown-quarto-mlmodern](https://github.com/nanxstats/rmarkdown-quarto-mlmodern)
+to store examples specifically using these publishing systems.
+
+MLModern covers the serif, sans-serif, and monospace variants that are
+available in Latin Modern.
+As of March 2023, MLModern is available in TFM and Type 1 formats,
+although OpenType support is planned for the future.
+[Someone on Reddit](https://www.reddit.com/r/LaTeX/comments/p4r53g/where_can_i_get_the_mlmodern_font_as_a_ttf_file/)
+was able to convert the Type 1 version to TTF.
+
+## Install MLModern
+
+MLModern is included in TeXLive >= 2021. If you did not install the
+full distribution, you can install the LaTeX package from CTAN:
+
+```bash
+(sudo) tlmgr install mlmodern
+```
+
+If you use TinyTeX, run the following in R to install the LaTeX package:
+
+```r
+tinytex::tlmgr_install("mlmodern")
+```
+
+## Using MLModern with R Markdown
+
+For PDF documents rendered by the rmarkdown package and the default
+pdflatex engine, use the `extra_dependencies` option to
+[include additional LaTeX packages](https://bookdown.org/yihui/rmarkdown-cookbook/latex-extra.html):
+
+```yaml
+output:
+  pdf_document:
+    extra_dependencies: ["mlmodern"]
+```
+
+Conveniently, for PDF article templates in
+[rticles](https://github.com/rstudio/rticles) that use Computer Modern or
+Latin Modern as the default typeface, such as `arxiv_article()` and
+`asa_article()`, you can add the same option to the YAML header to use MLModern.
+
+To use MLModern with R Markdown + XeLaTeX engine, it will be a bit different:
+
+```yaml
+output:
+  pdf_document:
+    latex_engine: "xelatex"
+header-includes:
+  - \usepackage{mlmodern}
+  - \usepackage[T1]{fontenc}
+```
+
+```{css}
+.callout-warning {
+    --bd-callout-color: #997404;
+    --bd-callout-bg: #fff3cd;
+    --bd-callout-border: #ffe69c;
+}
+
+.callout {
+    padding: 1.25rem;
+    padding-bottom: 0.25rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    color: var(--bd-callout-color, inherit);
+    background-color: var(--bd-callout-bg, var(--bs-gray-100));
+    border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
+}
+```
+
+When combining XeLaTeX and the current version of MLModern,
+an issue encountered in my specimen repo was problematic math rendering,
+but I have not found a solution yet.
+Please let me know in the repo if you know a solution.
+
+::::: {.callout .callout-warning}
+
+Although it is okay to use the mlmodern and fontenc package with XeLaTeX,
+it might not be the optimal choice. It is recommended to use OpenType (OTF)
+fonts whenever possible with XeLaTeX since they offer more advanced
+typographic features and are supported better by modern applications.
+
+:::::
+
+## Using MLModern with Quarto
+
+The Quarto [LaTeX includes](https://quarto.org/docs/output-formats/pdf-basics.html#latex-includes)
+syntax offers several options to use additional LaTeX packages.
+For example, we can use the `text` sub key under `include-in-header`.
+Since Quarto uses XeLaTeX by default, we can write:
+
+```yaml
+format:
+  pdf:
+    include-in-header:
+      text: |
+        \usepackage{mlmodern}
+        \usepackage[T1]{fontenc}
+```
+
+Or, render with the pdflatex engine to avoid the math rendering issue:
+
+```yaml
+pdf-engine: pdflatex
+format:
+  pdf:
+    include-in-header:
+      text: |
+        \usepackage{mlmodern}
+        \usepackage[T1]{fontenc}
+```
+
+I hope MLModern can help improve the readability of your PDF documents.
