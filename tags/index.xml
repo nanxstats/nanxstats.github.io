@@ -6,11 +6,74 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Mar 2023 06:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Apr 2023 00:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>image compression</title>
+      <link>https://nanx.me/tags/image-compression/</link>
+      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/image-compression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PNG optimization</title>
+      <link>https://nanx.me/tags/png-optimization/</link>
+      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/png-optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pngquant</title>
+      <link>https://nanx.me/tags/pngquant/</link>
+      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/pngquant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://nanx.me/tags/r-markdown/</link>
+      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ragg</title>
+      <link>https://nanx.me/tags/ragg/</link>
+      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/ragg/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>MLModern</title>
       <link>https://nanx.me/tags/mlmodern/</link>
-      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/mlmodern/</guid>
       <description></description>
@@ -19,25 +82,16 @@
     <item>
       <title>Quarto</title>
       <link>https://nanx.me/tags/quarto/</link>
-      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/quarto/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>R Markdown</title>
-      <link>https://nanx.me/tags/r-markdown/</link>
-      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Readability</title>
       <link>https://nanx.me/tags/readability/</link>
-      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/readability/</guid>
       <description></description>
@@ -58,15 +112,6 @@
       <pubDate>Wed, 08 Mar 2023 11:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/ggplot2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 08 Mar 2023 11:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     
@@ -202,15 +247,6 @@
       <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/pkglite/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,113 @@
+---
+title: "Compressing PNG Output for R Packages with pngquant and ragg"
+author: "Nan Xiao"
+date: "2023-04-09T00:30:00"
+slug: rpkgs-pngquant-ragg
+categories: []
+tags:
+  - R
+  - R packages
+  - pngquant
+  - ragg
+  - R Markdown
+  - image compression
+  - PNG optimization
+meta_img: "image/jametlene-reskp-hiu5XMrTvn0-unsplash.jpg"
+description: >
+  Optimize PNG output sizes in R packages using pngquant and ragg,
+  ensuring CRAN check compliance without compromising image quality.
+---
+
+![Cassette collection. Photo by [Jametlene Reskp](https://unsplash.com/photos/hiu5XMrTvn0).](/image/jametlene-reskp-hiu5XMrTvn0-unsplash.jpg)
+
+## Introduction
+
+Dealing with large-scale image outputs in R packages can be challenging,
+especially when it comes to passing CRAN checks. In this blog post,
+I will share my experience in using pngquant and ragg to compress the PNG output
+size for readme and vignettes. This allows R packages with many figures in
+their documentation to pass the CRAN checks without compromising image quality.
+
+## Problem description
+
+I encountered a problem with my package, [ggsci](https://nanx.me/ggsci/),
+which outputs approximately 30 example figures from both vignettes and
+`README.Rmd`. This exceeds the directory and total file size limits that
+`R CMD check` allows. For example, without any optimization, running
+`R CMD check` on ggsci will issue a check note like this:
+
+```text
+installed size is  5.1Mb
+sub-directories of 1Mb or more:
+  doc    2.7Mb
+  help   2.3Mb
+```
+
+The `doc/` directory contains the HTML vignette with base64 encoded PNG images,
+while the `help/` directory includes PNG outputs from `README.Rmd` in the
+`man/figures/` folder. To avoid this check note, my goal is to compress
+the output images as much as possible without sacrificing observable
+image quality.
+
+## Initial solution: SVG
+
+I first attempted using SVG output. For my figures,
+[svglite](https://svglite.r-lib.org/) provided the smallest
+file size (100 Kb vs. 300 Kb) compared to
+[`grDevices::svg()`](https://rdrr.io/r/grDevices/cairo.html) and
+[gridSVG](https://cran.r-project.org/package=gridSVG).
+This is likely because svglite does not encode text as polygons.
+However, 100 Kb per image was still too large. As my examples included
+scatterplots with many data points, further reducing the vector-based SVG file
+size would require significantly reducing the number of data points in the examples.
+Consequently, I did not take this approach.
+
+## Final solution: optimizing PNG output with pngquant and ragg
+
+Eventually, I came back to optimizing PNG outputs. I discovered that
+the `ragg_png()` device in the [ragg](https://ragg.r-lib.org/) package
+produced the smallest PNG outputs, approximately 120 Kb per image.
+By using [pngquant](https://pngquant.org/) for lossy compression,
+I was able to reduce the size further to around 30 Kb per image.
+My knitr chunk options are as follows
+(please note that these might require tuning for your use case):
+
+```r
+knitr::knit_hooks$set(pngquant = knitr::hook_pngquant)
+
+knitr::opts_chunk$set(
+  dev = "ragg_png",
+  dpi = 72,
+  fig.retina = 2,
+  fig.width = 10.6667,
+  fig.height = 3.3334,
+  fig.align = "center",
+  out.width = "100%",
+  pngquant = "--speed=1 --quality=50"
+)
+```
+
+Some technical explanations on why this works:
+
+1. Since CRAN does not re-do `R CMD build` nor re-render vignettes and will
+   reuse the built vignettes in the uploaded tarball, it is only necessary
+   to have pngquant installed in the maintainer's build environment running
+   `R CMD build`. This ensures that the submitted tarball contains minimized images.
+2. Even with the pngquant hook set up, knitr can still render the R Markdown
+   vignettes normally in environments without pngquant installed, so there
+   will be no issues on CRAN build machines when they run `R CMD check`
+   on the tarball uploaded by the package maintainer.
+3. The r-lib/actions GitHub Actions workflows do not have pngquant installed.
+   In these workflows, `R CMD build` is ran first to build a tarball and
+   `R CMD check` is used to check it. In this case, there will be a check
+   note about the file and directory sizes. This is ok though because
+   having check notes is still considered as passing for these workflows
+   by default. You can change this default behavior by adjusting the `error-on`
+   [option](https://github.com/r-lib/actions/tree/v2-branch/check-r-package)
+   to make it more or less strict.
+4. The output images of `README.Rmd` will not be regenerated on any machines
+   besides the maintainer's build environment. Regeneration only happens when
+   the file is rendered manually. So they will just work ok.
+
+That's it. I hope these tips are useful for reducing your R package size
+without having to remove valuable figures from the documentation.

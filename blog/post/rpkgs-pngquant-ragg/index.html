@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> R Markdown - Nan Xiao | 肖楠 </title>
+    <title> Compressing PNG Output for R Packages with pngquant and ragg - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="Optimize PNG output sizes in R packages using pngquant and ragg, ensuring CRAN check compliance without compromising image quality.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/r-markdown/" />
-    <meta property="og:title" content="R Markdown" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/rpkgs-pngquant-ragg/" />
+    <meta property="og:title" content="Compressing PNG Output for R Packages with pngquant and ragg" />
+    <meta property="og:image" content="https://nanx.me/image/jametlene-reskp-hiu5XMrTvn0-unsplash.jpg" />
+    <meta property="og:description" content="Optimize PNG output sizes in R packages using pngquant and ragg, ensuring CRAN check compliance without compromising image quality.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="R Markdown" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="Compressing PNG Output for R Packages with pngquant and ragg" />
+    <meta name="twitter:description" content="Optimize PNG output sizes in R packages using pngquant and ragg, ensuring CRAN check compliance without compromising image quality.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/jametlene-reskp-hiu5XMrTvn0-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/tags/r-markdown/">
+    <link rel="canonical" href="https://nanx.me/blog/post/rpkgs-pngquant-ragg/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -120,61 +123,201 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1>Posts about R Markdown</h1>
-                <hr>
-                <ul>
+                <h1 class="blog-post-title">Compressing PNG Output for R Packages with pngquant and ragg</h1>
+
+                <div class="mb-md-4 meta">
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2020-05-22
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/distill-syntax-highlight/">Customize Syntax Highlighting for R distill Websites</a>
-    </div>
-</li>
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2022-04-10
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/dt-news-list/">Building Paginated News Lists in R Markdown and Shiny with DT</a>
-    </div>
-</li>
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2023-01-16
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/">A General-Purpose Link Checker for R Markdown and Quarto Projects</a>
-    </div>
-</li>
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2023-03-20
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/mlmodern/">Bolden Your Typography in R Markdown and Quarto with MLModern</a>
-    </div>
-</li>
+
+                    <span class="date middot" title='Sun Apr 9 2023 00:30:00 UTC'>
+                        2023-04-09
+                    </span>
+
+                    <span class="reading-time middot">
+                        3 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/pngquant">pngquant</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/ragg">ragg</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r-markdown">R Markdown</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/image-compression">image compression</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/png-optimization">PNG optimization</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
-                    <li class="post-item">
-    <div class="col-3 meta-date">
-        2023-04-09
-    </div>
-    <div class="col-9 meta-title">
-        <a href="https://nanx.me/blog/post/rpkgs-pngquant-ragg/">Compressing PNG Output for R Packages with pngquant and ragg</a>
-    </div>
-</li>
-                    
-                </ul>
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/jametlene-reskp-hiu5XMrTvn0-unsplash.jpg" alt="Cassette collection. Photo by Jametlene Reskp." />
+<div class="figcaption">Cassette collection. Photo by <a href="https://unsplash.com/photos/hiu5XMrTvn0">Jametlene Reskp</a>.</div>
+</div>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Dealing with large-scale image outputs in R packages can be challenging,
+especially when it comes to passing CRAN checks. In this blog post,
+I will share my experience in using pngquant and ragg to compress the PNG output
+size for readme and vignettes. This allows R packages with many figures in
+their documentation to pass the CRAN checks without compromising image quality.</p>
+</div>
+<div id="problem-description" class="section level2">
+<h2>Problem description</h2>
+<p>I encountered a problem with my package, <a href="https://nanx.me/ggsci/">ggsci</a>,
+which outputs approximately 30 example figures from both vignettes and
+<code>README.Rmd</code>. This exceeds the directory and total file size limits that
+<code>R CMD check</code> allows. For example, without any optimization, running
+<code>R CMD check</code> on ggsci will issue a check note like this:</p>
+<pre class="text"><code>installed size is  5.1Mb
+sub-directories of 1Mb or more:
+  doc    2.7Mb
+  help   2.3Mb</code></pre>
+<p>The <code>doc/</code> directory contains the HTML vignette with base64 encoded PNG images,
+while the <code>help/</code> directory includes PNG outputs from <code>README.Rmd</code> in the
+<code>man/figures/</code> folder. To avoid this check note, my goal is to compress
+the output images as much as possible without sacrificing observable
+image quality.</p>
+</div>
+<div id="initial-solution-svg" class="section level2">
+<h2>Initial solution: SVG</h2>
+<p>I first attempted using SVG output. For my figures,
+<a href="https://svglite.r-lib.org/">svglite</a> provided the smallest
+file size (100 Kb vs. 300 Kb) compared to
+<a href="https://rdrr.io/r/grDevices/cairo.html"><code>grDevices::svg()</code></a> and
+<a href="https://cran.r-project.org/package=gridSVG">gridSVG</a>.
+This is likely because svglite does not encode text as polygons.
+However, 100 Kb per image was still too large. As my examples included
+scatterplots with many data points, further reducing the vector-based SVG file
+size would require significantly reducing the number of data points in the examples.
+Consequently, I did not take this approach.</p>
+</div>
+<div id="final-solution-optimizing-png-output-with-pngquant-and-ragg" class="section level2">
+<h2>Final solution: optimizing PNG output with pngquant and ragg</h2>
+<p>Eventually, I came back to optimizing PNG outputs. I discovered that
+the <code>ragg_png()</code> device in the <a href="https://ragg.r-lib.org/">ragg</a> package
+produced the smallest PNG outputs, approximately 120 Kb per image.
+By using <a href="https://pngquant.org/">pngquant</a> for lossy compression,
+I was able to reduce the size further to around 30 Kb per image.
+My knitr chunk options are as follows
+(please note that these might require tuning for your use case):</p>
+<pre class="r"><code>knitr::knit_hooks$set(pngquant = knitr::hook_pngquant)
+
+knitr::opts_chunk$set(
+  dev = &quot;ragg_png&quot;,
+  dpi = 72,
+  fig.retina = 2,
+  fig.width = 10.6667,
+  fig.height = 3.3334,
+  fig.align = &quot;center&quot;,
+  out.width = &quot;100%&quot;,
+  pngquant = &quot;--speed=1 --quality=50&quot;
+)</code></pre>
+<p>Some technical explanations on why this works:</p>
+<ol style="list-style-type: decimal">
+<li>Since CRAN does not re-do <code>R CMD build</code> nor re-render vignettes and will
+reuse the built vignettes in the uploaded tarball, it is only necessary
+to have pngquant installed in the maintainer’s build environment running
+<code>R CMD build</code>. This ensures that the submitted tarball contains minimized images.</li>
+<li>Even with the pngquant hook set up, knitr can still render the R Markdown
+vignettes normally in environments without pngquant installed, so there
+will be no issues on CRAN build machines when they run <code>R CMD check</code>
+on the tarball uploaded by the package maintainer.</li>
+<li>The r-lib/actions GitHub Actions workflows do not have pngquant installed.
+In these workflows, <code>R CMD build</code> is ran first to build a tarball and
+<code>R CMD check</code> is used to check it. In this case, there will be a check
+note about the file and directory sizes. This is ok though because
+having check notes is still considered as passing for these workflows
+by default. You can change this default behavior by adjusting the <code>error-on</code>
+<a href="https://github.com/r-lib/actions/tree/v2-branch/check-r-package">option</a>
+to make it more or less strict.</li>
+<li>The output images of <code>README.Rmd</code> will not be regenerated on any machines
+besides the maintainer’s build environment. Regeneration only happens when
+the file is rendered manually. So they will just work ok.</li>
+</ol>
+<p>That’s it. I hope these tips are useful for reducing your R package size
+without having to remove valuable figures from the documentation.</p>
+</div>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/mlmodern/">« Bolden Your Typography in R Markdown and Quarto with MLModern</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -292,6 +435,9 @@
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>

@@ -3,28 +3,49 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/post/mlmodern/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <loc>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</loc>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/mlmodern/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/image-compression/</loc>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/quarto/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/png-optimization/</loc>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pngquant/</loc>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-markdown/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/readability/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ragg/</loc>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/</loc>
-    <lastmod>2023-03-20T06:00:00+00:00</lastmod>
+    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/mlmodern/</loc>
+    <lastmod>2023-03-20T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/mlmodern/</loc>
+    <lastmod>2023-03-20T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/quarto/</loc>
+    <lastmod>2023-03-20T16:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/readability/</loc>
+    <lastmod>2023-03-20T16:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/color-scales/</loc>
     <lastmod>2023-03-08T11:30:00+00:00</lastmod>
@@ -33,9 +54,6 @@
     <lastmod>2023-03-08T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/ggsci-3-0-0/</loc>
-    <lastmod>2023-03-08T11:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2023-03-08T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/buildapc/</loc>
@@ -93,9 +111,6 @@
     <lastmod>2022-09-28T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/pkglite/</loc>
-    <lastmod>2022-09-28T11:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
     <lastmod>2022-09-28T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/regulatory-submission/</loc>

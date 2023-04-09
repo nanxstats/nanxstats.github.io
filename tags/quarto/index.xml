@@ -6,11 +6,11 @@
     <description>Recent content in Quarto on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Mar 2023 06:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/quarto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 16:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/quarto/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bolden Your Typography in R Markdown and Quarto with MLModern</title>
       <link>https://nanx.me/blog/post/mlmodern/</link>
-      <pubDate>Mon, 20 Mar 2023 06:00:00 +0000</pubDate>
+      <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/mlmodern/</guid>
       <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.
