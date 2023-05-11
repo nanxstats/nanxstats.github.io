@@ -1,0 +1,58 @@
+---
+title: "Find Your Perfect Open Source Font: Introducing the Interactive Typeface Lookbook"
+author: "Nan Xiao"
+date: "2023-05-10T17:00:00"
+slug: open-source-typography
+categories: []
+tags:
+  - web typography
+  - font discovery
+  - Quarto
+meta_img: "image/kara-eads-FbXp5aOX-fs-unsplash.jpg"
+description: >
+  Introducing Open Source Typography, a curated lookbook for open source
+  fonts designed to help you find the perfect typeface for your projects
+  while offering customization and inspiration.
+---
+
+![Majesty Palm. Photo by [Kara Eads](https://unsplash.com/photos/FbXp5aOX-fs).](/image/kara-eads-FbXp5aOX-fs-unsplash.jpg)
+
+## Introduction
+
+There are more than 1,500 open source font families available on Google Fonts,
+presenting designers and developers with an extensive, yet often overwhelming,
+array of options.
+With such a vast selection, it can be challenging to sift through and find
+the perfect typeface for your projects, let alone remember the hidden gems
+you may have come across in the past.
+
+To address this challenge, I started
+[Open Source Typography](https://nanx.me/ost/), an **opinionated**,
+curated lookbook of outstanding open source fonts.
+This lookbook offers a practical tool that simplifies the process of
+discovering and experimenting with reliable fonts for your
+document, website, or software projects.
+
+## Structure and interactive features
+
+The lookbook organizes the typeface collection into five categories:
+serif, sans serif, monospace, display, and small caps.
+Each typeface is chosen based on its license, design, and relative uniqueness
+to provide you with a versatile selection for different design contexts.
+Most importantly, in most chapters, the interactive, editable text
+components allow you to easily experiment with custom content and
+typographic parameters, such as font size, horizontal spacing, and line height.
+
+## Behind the scenes
+
+I started the lookbook in May 2022 and it has grown from 5 to 37 typefaces.
+I have also migrated from bookdown to
+[Quarto book](https://quarto.org/docs/books/) to experiment with the new
+features provided by the new publishing framework.
+The interactive text component is derived from that on the
+[Inter samples website](https://rsms.me/inter/samples/) and is detailed in the
+[preface](https://nanx.me/ost/preface.html).
+
+That's all, folks. I hope this collection of open source typefaces can spark
+new ideas and help you create more compelling designs when working with
+text elements.

@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
+    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</loc>
-    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
+    <loc>https://nanx.me/blog/post/open-source-typography/</loc>
+    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/font-discovery/</loc>
+    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
+    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/quarto/</loc>
+    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/web-typography/</loc>
+    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</loc>
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/image-compression/</loc>
@@ -32,16 +47,10 @@
     <loc>https://nanx.me/tags/ragg/</loc>
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/mlmodern/</loc>
     <lastmod>2023-03-20T16:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/mlmodern/</loc>
-    <lastmod>2023-03-20T16:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/quarto/</loc>
     <lastmod>2023-03-20T16:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/readability/</loc>
@@ -258,9 +267,6 @@
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/system-font-stack/</loc>
-    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/web-typography/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/cran-file-exts/</loc>

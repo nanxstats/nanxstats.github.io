@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>font discovery on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/font-discovery/</link>
+    <description>Recent content in font discovery on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 10 May 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/font-discovery/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Find Your Perfect Open Source Font: Introducing the Interactive Typeface Lookbook</title>
+      <link>https://nanx.me/blog/post/open-source-typography/</link>
+      <pubDate>Wed, 10 May 2023 17:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/open-source-typography/</guid>
+      <description>Majesty Palm. Photo by Kara Eads. Introduction There are more than 1,500 open source font families available on Google Fonts, presenting designers and developers with an extensive, yet often overwhelming, array of options. With such a vast selection, it can be challenging to sift through and find the perfect typeface for your projects, let alone remember the hidden gems you may have come across in the past.
+To address this challenge, I started Open Source Typography, an opinionated, curated lookbook of outstanding open source fonts.</description>
+    </item>
+    
+  </channel>
+</rss>
