@@ -3,7 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/convex-optimization/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/regression/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/sparse-index-tracking/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/sparse-index-tracking/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/sparse-linear-models/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/sparse-portfolio/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/variable-selection/</loc>
+    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/open-source-typography/</loc>
     <lastmod>2023-05-10T17:00:00+00:00</lastmod>
@@ -11,13 +41,7 @@
     <loc>https://nanx.me/tags/font-discovery/</loc>
     <lastmod>2023-05-10T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/quarto/</loc>
-    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2023-05-10T17:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/web-typography/</loc>
@@ -33,9 +57,6 @@
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/pngquant/</loc>
-    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-markdown/</loc>

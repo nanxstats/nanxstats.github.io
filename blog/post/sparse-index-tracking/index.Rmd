@@ -1,0 +1,401 @@
+---
+title: "Sparse Index Tracking with msaenet and CVXR: A Two-Stage Regression Approach"
+author: "Nan Xiao"
+date: "2023-05-31T01:00:00"
+slug: sparse-index-tracking
+categories: []
+tags:
+  - sparse index tracking
+  - sparse portfolio
+  - sparse linear models
+  - regression
+  - variable selection
+  - convex optimization
+  - R
+meta_img: "image/kenny-eliason-SvhXD3kPSTY-unsplash.jpg"
+description: >
+  Explore the two-stage regression approach for sparse index tracking
+  with the R packages msaenet and CVXR. Uncover insights into creating
+  simpler and more parsimonious models.
+---
+
+> The code to reproduce the results in this post is also available
+> [here](https://gist.github.com/nanxstats/43ef32acbff6e946637fdda24a052710).
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  echo = TRUE,
+  message = FALSE,
+  out.width = "95%",
+  cache = TRUE
+)
+```
+
+![The illusion of choice. Photo by [Kenny Eliason](https://unsplash.com/photos/SvhXD3kPSTY).](/image/kenny-eliason-SvhXD3kPSTY-unsplash.jpg)
+
+```{css, echo=FALSE}
+.callout {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 0.25rem;
+    border-left: 5px solid #64748b;
+    border-right: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+```
+
+::::: {.callout}
+## Disclaimer
+
+The content in this blog post is for educational and research purposes only.
+It is not intended to be investment advice, and the author is not a licensed
+financial advisor. Any investment decisions should be based on your own
+analysis and consultation with a licensed financial advisor.
+The author is not responsible for any financial losses or damages
+resulting from the use of this information.
+:::::
+
+## Background
+
+I always appreciate recommender systems algorithms as they solve the
+information overload problem, which is quite prevalent in modern life.
+Sparse index tracking aims to use a limited number of equities to track a
+financial index. This approach addresses a similar problem as portfolio
+selection and optimization, with further implications for balancing
+investment returns and controlling risk.
+
+This topic of sparse portfolios has been discussed in, for example,
+[Brodie et al. (2009)](https://doi.org/10.1073/pnas.0904287106) and
+[Benidis, Feng, and Palomar (2018)](https://doi.org/10.1109/TSP.2017.2762286).
+In the Benidis paper and their amazing R package
+[sparseIndexTracking](https://cran.r-project.org/package=sparseIndexTracking),
+the sparse index tracking problem was formulated as a constrained,
+$\ell_0$-norm regression:
+
+$$
+\begin{array}{c}
+\min_\limits{\beta} || y - X\beta ||_2^2 + \lambda ||\beta||_0\\
+\text{s.t.} \sum \beta_i = 1, \beta_i >= 0\\
+\end{array}
+$$
+
+where $y$ can be the daily returns of the index we are tracking,
+$X$ is the daily returns of the (large number of) assets,
+and $\beta$ being the parameters to be estimated.
+We can also optimize for different types of tracking errors in this framework.
+
+In the experiments demonstrated by the package on a dataset of S&P 500
+returns of year 2010, they were able to use 40--50 assets to track the index.
+I am always curious about two things, though.
+First, can we have a even sparser portfolio? Since 40 assets
+still feels a lot to me.
+Second, whether we could use a simpler two-step approach (optimization-wise)
+briefly described in their paper, where one could do asset
+selection and capital allocation separately.
+At the end of the analysis below, my conclusion is that both of these
+are possible, but not without potential trade-offs,
+at least in terms of tracking error.
+
+## Data
+
+The dataset is S&P 500 returns in year 2010 used in the sparseIndexTracking
+[vignette](https://cran.r-project.org/web/packages/sparseIndexTracking/vignettes/SparseIndexTracking.html).
+Load the data and split into a training and a test set:
+
+```{r}
+library("xts")
+
+index2010 <- sparseIndexTracking::INDEX_2010
+x_tr <- index2010$X[1:126]
+x_te <- index2010$X[127:252]
+r_tr <- index2010$SP500[1:126]
+r_te <- index2010$SP500[127:252]
+```
+
+Create wrapper functions for P&L plotting using ggplot2, cowplot,
+and [ggsci](https://nanx.me/ggsci/):
+
+```{r}
+df_pnl <- function(x_te, beta, y_test, title) {
+  df <- cbind(
+    cumprod(1 + x_te %*% beta),
+    cumprod(1 + y_test)
+  )
+  names(df)[1] <- title
+  df
+}
+
+plot_pnl <- function(object, title = "Cumulative P&L") {
+  ggplot2::autoplot(object, facets = NULL) +
+    ggplot2::ggtitle(title) +
+    cowplot::theme_minimal_hgrid() +
+    ggsci::scale_color_d3() +
+    ggplot2::scale_y_continuous(breaks = seq(1, 1.5, .05), limits = c(1, 1.4)) +
+    ggplot2::scale_x_date(date_breaks = "1 months", date_labels = "%b") +
+    ggplot2::theme(
+      axis.title.x = ggplot2::element_blank(),
+      legend.position = "bottom"
+    )
+}
+```
+
+## Previous models
+
+The original vignette used $\ell_0$ penalty and optimized for four
+different tracking measures: empirical tracking error,
+downside risk, Huber empirical tracking error, and Huber downside risk.
+I will only show the empirical tracking error model here:
+
+```{r}
+w_ete <- sparseIndexTracking::spIndexTrack(
+  x_tr,
+  r = r_tr, lambda = 1e-7, u = 0.5, measure = "ete"
+)
+
+names(w_ete[w_ete > 1e-6])
+```
+
+<details>
+<summary>Click here to expand the detailed portfolio</summary>
+
+```{css, echo=FALSE, eval=TRUE}
+details > summary {
+    border: 1px solid #cbd5e1;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+```
+
+```{r}
+data.frame(sort(w_ete, decreasing = TRUE), fix.empty.names = FALSE)
+```
+
+</details>
+
+<p></p>
+
+```{r, fig.cap="ETE portfolio and SP500 cumulative P&L."}
+df_pnl(x_te, w_ete, r_te, "PortfolioETE") |> plot_pnl()
+```
+
+## A two-step algorithm for parsimonious solutions
+
+Revisiting my questions: can we get an more parsimonious model with
+fewer assets selected while still maintaining tracking performance relatively well?
+Additionally, instead of optimizing a constrained sparse regression objective,
+we could potentially use a two-stage algorithm.
+Following these ideas, things should work like this:
+
+1. Use an unconstrained sparse regression for selecting the assets,
+   preferably yielding sparser solutions.
+2. Use a constrained OLS regression on the selected assets where the
+   coefficients are non-negative and sum to 1.
+
+This is obviously a "poor man's approach" but is simpler in terms of
+implementation as even I can do it in no time, and it's shown below.
+
+### Stage 1
+
+Create wrapper functions for extracting $\beta$s from
+[msaenet](https://nanx.me/msaenet/) models:
+
+```{r}
+get_beta <- function(object) {
+  beta <- coef(object)
+  names(beta) <- if (inherits(object, "msaenet.msaenet")) {
+    rownames(object$beta)
+  } else {
+    colnames(object$model$X)
+  }
+  beta
+}
+
+get_nzv <- function(object) {
+  beta <- get_beta(object)
+  names(beta[which(beta != 0)])
+}
+```
+
+### Stage two
+
+Use CVXR by [Fu et al. (2020)](https://doi.org/10.18637/jss.v094.i14)
+to do a constrained sum-to-one OLS regression on
+the selected variables to get the weights:
+
+```{r}
+library("CVXR")
+
+storeg <- function(x, y) {
+  x <- as.matrix(x)
+  y <- as.vector(y)
+  p <- ncol(x)
+  beta <- Variable(p)
+
+  obj <- sum((y - x %*% beta)^2)
+  constr <- list(beta >= 0, sum(beta) == 1)
+  prob <- Problem(Minimize(obj), constr)
+  result <- solve(prob)
+
+  structure(
+    list(
+      result = result,
+      beta = result$getValue(beta)
+    ),
+    class = "storeg"
+  )
+}
+```
+
+Get asset names and coefficients in the portfolio:
+
+```{r}
+get_portfolio <- function(beta, nzv) {
+  as.vector(beta) |>
+    setNames(nzv) |>
+    sort(decreasing = TRUE) |>
+    data.frame(fix.empty.names = FALSE)
+}
+```
+
+Chaining things together:
+
+```{r, fig.cap="msaenet portfolio and SP500 cumulative P&L."}
+fit_enet <- msaenet::msaenet(
+  x = as.matrix(x_tr),
+  y = as.vector(r_tr),
+  family = "gaussian",
+  init = "ridge",
+  tune = "cv",
+  nsteps = 10,
+  lower.limits = 0,
+  verbose = FALSE,
+  seed = 42
+)
+
+fit_enet |> get_nzv()
+
+fit_enet_sto <- storeg(x_tr[, get_nzv(fit_enet)], r_tr)
+
+get_portfolio(fit_enet_sto$beta, get_nzv(fit_enet))
+
+df_pnl(x_te[, get_nzv(fit_enet)], fit_enet_sto$beta, r_te, "Portfolio.msaenet") |>
+  plot_pnl()
+```
+
+We have selected much fewer (five) assets to track the index.
+The tracking error was also not too big.
+
+## Stability of the solution
+
+Since we used cross validation to tune the hyperparameters,
+there is a possibility that we were "lucky" in getting a good model
+so it might be useful to check the stability of the selection results
+in many repeats with different seeds, and consequently, varying splits of the
+training data.
+
+```{r, eval=FALSE}
+library("doParallel")
+registerDoParallel(detectCores())
+
+fit_rep <- foreach::foreach(seed = 1:100) %dopar% {
+  msaenet::msaenet(
+    x = as.matrix(x_tr),
+    y = as.vector(r_tr),
+    family = "gaussian",
+    init = "ridge",
+    tune = "cv",
+    nsteps = 10,
+    lower.limits = 0,
+    verbose = FALSE,
+    seed = seed
+  )
+}
+```
+
+```{r, eval=FALSE, echo=FALSE}
+saveRDS(fit_rep, file = "fit_rep.rds")
+```
+
+```{r, echo=FALSE}
+fit_rep <- readRDS("fit_rep.rds")
+```
+
+```{r, fig.asp=0.25, fig.cap="Dot plot of asset selection frequency out of 100 experiments."}
+as.data.frame(table(unlist(sapply(fit_rep, get_nzv)))) |>
+  ggplot2::ggplot(ggplot2::aes(x = Freq, y = Var1)) +
+  ggplot2::geom_point(size = 3, color = ggsci::pal_d3()(1)) +
+  ggplot2::scale_x_continuous(
+    name = "Selection frequency out of 100 experiments",
+    limits = c(0, 100),
+    expand = c(0, 5)
+  ) +
+  ggplot2::scale_y_discrete(name = NULL, expand = c(0, 0.5)) +
+  cowplot::theme_minimal_grid()
+```
+
+## Even sparser solutions
+
+We can plug in different penalized regression methods in the first stage to
+get different portfolios with different degrees of sparsity and asset structure.
+For example, we can try to get an even sparser solution:
+
+```{r, fig.cap="Sparse portfolio using multi-step SCAD-net and SP500 cumulative P&L."}
+fit_snet <- suppressWarnings(msaenet::msasnet(
+  x = as.matrix(x_tr),
+  y = as.vector(r_tr),
+  family = "gaussian",
+  init = "ridge",
+  tune = "cv",
+  nsteps = 10,
+  verbose = FALSE,
+  seed = 42
+))
+
+fit_snet |> get_nzv()
+
+fit_snet_sto <- storeg(x_tr[, get_nzv(fit_snet)], r_tr)
+
+get_portfolio(fit_snet_sto$beta, get_nzv(fit_snet))
+
+df_pnl(x_te[, get_nzv(fit_snet)], fit_snet_sto$beta, r_te, "Portfolio.msasnet") |>
+  plot_pnl()
+```
+
+As we further reduce the number of assets from five to three,
+the tracking error was ok in the beginning of the testing period but
+went up in the latter part. Similar situation for another try:
+
+```{r, fig.cap="Sparse portfolio using multi-step MCP-net and SP500 cumulative P&L."}
+fit_mnet <- suppressWarnings(msaenet::msamnet(
+  x = as.matrix(x_tr),
+  y = as.vector(r_tr),
+  family = "gaussian",
+  init = "ridge",
+  tune = "cv",
+  nsteps = 10,
+  verbose = FALSE,
+  seed = 42
+))
+
+fit_mnet |> get_nzv()
+
+fit_mnet_sto <- storeg(x_tr[, get_nzv(fit_mnet)], r_tr)
+
+get_portfolio(fit_mnet_sto$beta, get_nzv(fit_mnet))
+
+df_pnl(x_te[, get_nzv(fit_mnet)], fit_mnet_sto$beta, r_te, "Portfolio.msamnet") |>
+  plot_pnl()
+```
+
+## Summary
+
+While there are still open challenges in sparse index tracking such as
+determining rebalancing frequency, refining backtest strategies,
+and ensuring portfolio stability, this two-stage regression approach
+provides a simpler and potentially more parsimonious model for tackling
+this problem.

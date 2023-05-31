@@ -6,7 +6,70 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 May 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 May 2023 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>convex optimization</title>
+      <link>https://nanx.me/tags/convex-optimization/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/convex-optimization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regression</title>
+      <link>https://nanx.me/tags/regression/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/regression/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sparse index tracking</title>
+      <link>https://nanx.me/tags/sparse-index-tracking/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/sparse-index-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sparse linear models</title>
+      <link>https://nanx.me/tags/sparse-linear-models/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/sparse-linear-models/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sparse portfolio</title>
+      <link>https://nanx.me/tags/sparse-portfolio/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/sparse-portfolio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variable selection</title>
+      <link>https://nanx.me/tags/variable-selection/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/variable-selection/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>font discovery</title>
       <link>https://nanx.me/tags/font-discovery/</link>
@@ -58,15 +121,6 @@
       <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/pngquant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     

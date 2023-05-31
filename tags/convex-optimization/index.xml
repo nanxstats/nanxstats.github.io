@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>convex optimization on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/convex-optimization/</link>
+    <description>Recent content in convex optimization on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 31 May 2023 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/convex-optimization/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sparse Index Tracking with msaenet and CVXR: A Two-Stage Regression Approach</title>
+      <link>https://nanx.me/blog/post/sparse-index-tracking/</link>
+      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/sparse-index-tracking/</guid>
+      <description>The code to reproduce the results in this post is also available here.
+The illusion of choice. Photo by Kenny Eliason. Disclaimer The content in this blog post is for educational and research purposes only. It is not intended to be investment advice, and the author is not a licensed financial advisor. Any investment decisions should be based on your own analysis and consultation with a licensed financial advisor. The author is not responsible for any financial losses or damages resulting from the use of this information.</description>
+    </item>
+    
+  </channel>
+</rss>

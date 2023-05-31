@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Sparse Index Tracking with msaenet and CVXR: A Two-Stage Regression Approach - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Explore the two-stage regression approach for sparse index tracking with the R packages msaenet and CVXR. Uncover insights into creating simpler and more parsimonious models.
+" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://nanx.me/blog/post/sparse-index-tracking/" />
+    <meta property="og:title" content="Sparse Index Tracking with msaenet and CVXR: A Two-Stage Regression Approach" />
+    <meta property="og:image" content="https://nanx.me/image/kenny-eliason-SvhXD3kPSTY-unsplash.jpg" />
+    <meta property="og:description" content="Explore the two-stage regression approach for sparse index tracking with the R packages msaenet and CVXR. Uncover insights into creating simpler and more parsimonious models.
+" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Sparse Index Tracking with msaenet and CVXR: A Two-Stage Regression Approach" />
+    <meta name="twitter:description" content="Explore the two-stage regression approach for sparse index tracking with the R packages msaenet and CVXR. Uncover insights into creating simpler and more parsimonious models.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/kenny-eliason-SvhXD3kPSTY-unsplash.jpg" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/sparse-index-tracking/">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body>
+    
+<div class="my-4 my-lg-5 header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mx-auto w-700">
+                <div class="d-flex align-items-center">
+                    <div class="flex-shrink-0">
+                        
+                        <a href="https://nanx.me/">
+                            <img class="logo img-fluid d-block rounded-circle"
+                                src="https://nanx.me/image/nanxiao.jpg" alt="Portrait of Nan Xiao">
+                        </a>
+                        
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                        <a href="https://nanx.me/">
+                            <h1 class="name">Nan Xiao</h1>
+                        </a>
+
+                        <ul class="nav nav-primary">
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-blog"
+                                    href="https://nanx.me/blog/">
+                                    
+                                    Blog
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-software"
+                                    href="https://nanx.me/software/">
+                                    
+                                    Software
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-papers"
+                                    href="https://nanx.me/papers/">
+                                    
+                                    Papers
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-talks"
+                                    href="https://nanx.me/talks/">
+                                    
+                                    Talks
+                                </a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link text-books"
+                                    href="https://nanx.me/books/">
+                                    
+                                    Books
+                                </a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mx-auto w-700">
+                <h1 class="blog-post-title">Sparse Index Tracking with msaenet and CVXR: A Two-Stage Regression Approach</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Wed May 31 2023 01:00:00 UTC'>
+                        2023-05-31
+                    </span>
+
+                    <span class="reading-time middot">
+                        17 min read
+                    </span>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/sparse-index-tracking">sparse index tracking</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/sparse-portfolio">sparse portfolio</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/sparse-linear-models">sparse linear models</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/regression">regression</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/variable-selection">variable selection</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/convex-optimization">convex optimization</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
+                    
+    
+
+
+<blockquote>
+<p>The code to reproduce the results in this post is also available
+<a href="https://gist.github.com/nanxstats/43ef32acbff6e946637fdda24a052710">here</a>.</p>
+</blockquote>
+<div class="float">
+<img src="https://nanx.me/image/kenny-eliason-SvhXD3kPSTY-unsplash.jpg" alt="The illusion of choice. Photo by Kenny Eliason." />
+<div class="figcaption">The illusion of choice. Photo by <a href="https://unsplash.com/photos/SvhXD3kPSTY">Kenny Eliason</a>.</div>
+</div>
+<style type="text/css">
+.callout {
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    border-radius: 0.25rem;
+    border-left: 5px solid #64748b;
+    border-right: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+</style>
+<div id="disclaimer" class="section level2 callout">
+<h2>Disclaimer</h2>
+<p>The content in this blog post is for educational and research purposes only.
+It is not intended to be investment advice, and the author is not a licensed
+financial advisor. Any investment decisions should be based on your own
+analysis and consultation with a licensed financial advisor.
+The author is not responsible for any financial losses or damages
+resulting from the use of this information.</p>
+</div>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>I always appreciate recommender systems algorithms as they solve the
+information overload problem, which is quite prevalent in modern life.
+Sparse index tracking aims to use a limited number of equities to track a
+financial index. This approach addresses a similar problem as portfolio
+selection and optimization, with further implications for balancing
+investment returns and controlling risk.</p>
+<p>This topic of sparse portfolios has been discussed in, for example,
+<a href="https://doi.org/10.1073/pnas.0904287106">Brodie et al. (2009)</a> and
+<a href="https://doi.org/10.1109/TSP.2017.2762286">Benidis, Feng, and Palomar (2018)</a>.
+In the Benidis paper and their amazing R package
+<a href="https://cran.r-project.org/package=sparseIndexTracking">sparseIndexTracking</a>,
+the sparse index tracking problem was formulated as a constrained,
+<span class="math inline">\(\ell_0\)</span>-norm regression:</p>
+<p><span class="math display">\[
+\begin{array}{c}
+\min_\limits{\beta} || y - X\beta ||_2^2 + \lambda ||\beta||_0\\
+\text{s.t.} \sum \beta_i = 1, \beta_i &gt;= 0\\
+\end{array}
+\]</span></p>
+<p>where <span class="math inline">\(y\)</span> can be the daily returns of the index we are tracking,
+<span class="math inline">\(X\)</span> is the daily returns of the (large number of) assets,
+and <span class="math inline">\(\beta\)</span> being the parameters to be estimated.
+We can also optimize for different types of tracking errors in this framework.</p>
+<p>In the experiments demonstrated by the package on a dataset of S&amp;P 500
+returns of year 2010, they were able to use 40–50 assets to track the index.
+I am always curious about two things, though.
+First, can we have a even sparser portfolio? Since 40 assets
+still feels a lot to me.
+Second, whether we could use a simpler two-step approach (optimization-wise)
+briefly described in their paper, where one could do asset
+selection and capital allocation separately.
+At the end of the analysis below, my conclusion is that both of these
+are possible, but not without potential trade-offs,
+at least in terms of tracking error.</p>
+</div>
+<div id="data" class="section level2">
+<h2>Data</h2>
+<p>The dataset is S&amp;P 500 returns in year 2010 used in the sparseIndexTracking
+<a href="https://cran.r-project.org/web/packages/sparseIndexTracking/vignettes/SparseIndexTracking.html">vignette</a>.
+Load the data and split into a training and a test set:</p>
+<pre class="r"><code>library(&quot;xts&quot;)
+
+index2010 &lt;- sparseIndexTracking::INDEX_2010
+x_tr &lt;- index2010$X[1:126]
+x_te &lt;- index2010$X[127:252]
+r_tr &lt;- index2010$SP500[1:126]
+r_te &lt;- index2010$SP500[127:252]</code></pre>
+<p>Create wrapper functions for P&amp;L plotting using ggplot2, cowplot,
+and <a href="https://nanx.me/ggsci/">ggsci</a>:</p>
+<pre class="r"><code>df_pnl &lt;- function(x_te, beta, y_test, title) {
+  df &lt;- cbind(
+    cumprod(1 + x_te %*% beta),
+    cumprod(1 + y_test)
+  )
+  names(df)[1] &lt;- title
+  df
+}
+
+plot_pnl &lt;- function(object, title = &quot;Cumulative P&amp;L&quot;) {
+  ggplot2::autoplot(object, facets = NULL) +
+    ggplot2::ggtitle(title) +
+    cowplot::theme_minimal_hgrid() +
+    ggsci::scale_color_d3() +
+    ggplot2::scale_y_continuous(breaks = seq(1, 1.5, .05), limits = c(1, 1.4)) +
+    ggplot2::scale_x_date(date_breaks = &quot;1 months&quot;, date_labels = &quot;%b&quot;) +
+    ggplot2::theme(
+      axis.title.x = ggplot2::element_blank(),
+      legend.position = &quot;bottom&quot;
+    )
+}</code></pre>
+</div>
+<div id="previous-models" class="section level2">
+<h2>Previous models</h2>
+<p>The original vignette used <span class="math inline">\(\ell_0\)</span> penalty and optimized for four
+different tracking measures: empirical tracking error,
+downside risk, Huber empirical tracking error, and Huber downside risk.
+I will only show the empirical tracking error model here:</p>
+<pre class="r"><code>w_ete &lt;- sparseIndexTracking::spIndexTrack(
+  x_tr,
+  r = r_tr, lambda = 1e-7, u = 0.5, measure = &quot;ete&quot;
+)
+
+names(w_ete[w_ete &gt; 1e-6])
+#&gt;  [1] &quot;AMZN UW Equity&quot;  &quot;ANTM UN Equity&quot;  &quot;AXP UN Equity&quot;   &quot;BAC UN Equity&quot;  
+#&gt;  [5] &quot;BLL UN Equity&quot;   &quot;CCL UN Equity&quot;   &quot;CSCO UW Equity&quot;  &quot;CVX UN Equity&quot;  
+#&gt;  [9] &quot;EQT UN Equity&quot;   &quot;EXPD UW Equity&quot;  &quot;FCX UN Equity&quot;   &quot;FOXA UW Equity&quot; 
+#&gt; [13] &quot;GIS UN Equity&quot;   &quot;GOOGL UW Equity&quot; &quot;HBAN UW Equity&quot;  &quot;HPQ UN Equity&quot;  
+#&gt; [17] &quot;IBM UN Equity&quot;   &quot;INTC UW Equity&quot;  &quot;IP UN Equity&quot;    &quot;JNJ UN Equity&quot;  
+#&gt; [21] &quot;JPM UN Equity&quot;   &quot;KO UN Equity&quot;    &quot;LNC UN Equity&quot;   &quot;LOW UN Equity&quot;  
+#&gt; [25] &quot;MCD UN Equity&quot;   &quot;NVDA UW Equity&quot;  &quot;OXY UN Equity&quot;   &quot;PAYX UW Equity&quot; 
+#&gt; [29] &quot;PEP UN Equity&quot;   &quot;PFE UN Equity&quot;   &quot;PNW UN Equity&quot;   &quot;QCOM UW Equity&quot; 
+#&gt; [33] &quot;RAI UN Equity&quot;   &quot;SE UN Equity&quot;    &quot;SJM UN Equity&quot;   &quot;SNDK UW Equity&quot; 
+#&gt; [37] &quot;SPLS UW Equity&quot;  &quot;SYMC UW Equity&quot;  &quot;T UN Equity&quot;     &quot;THC UN Equity&quot;  
+#&gt; [41] &quot;UTX UN Equity&quot;   &quot;VZ UN Equity&quot;    &quot;WFC UN Equity&quot;   &quot;XRAY UW Equity&quot; 
+#&gt; [45] &quot;ZION UW Equity&quot;</code></pre>
+<details>
+<summary>
+Click here to expand the detailed portfolio
+</summary>
+<style type="text/css">
+details > summary {
+    border: 1px solid #cbd5e1;
+    border-radius: 0.25rem;
+    padding: 1rem;
+}
+</style>
+<pre class="r"><code>data.frame(sort(w_ete, decreasing = TRUE), fix.empty.names = FALSE)
+#&gt;                               
+#&gt; JPM UN Equity      0.055246838
+#&gt; CVX UN Equity      0.051502618
+#&gt; JNJ UN Equity      0.041348636
+#&gt; T UN Equity        0.038607714
+#&gt; SJM UN Equity      0.035814772
+#&gt; MCD UN Equity      0.035779333
+#&gt; PFE UN Equity      0.035644779
+#&gt; HPQ UN Equity      0.032115541
+#&gt; PNW UN Equity      0.029731833
+#&gt; LOW UN Equity      0.029536601
+#&gt; GOOGL UW Equity    0.029102407
+#&gt; FOXA UW Equity     0.029005445
+#&gt; SE UN Equity       0.028251061
+#&gt; CSCO UW Equity     0.026028571
+#&gt; UTX UN Equity      0.024787528
+#&gt; PEP UN Equity      0.024660300
+#&gt; XRAY UW Equity     0.024074370
+#&gt; VZ UN Equity       0.023977678
+#&gt; FCX UN Equity      0.023237096
+#&gt; SYMC UW Equity     0.022017250
+#&gt; INTC UW Equity     0.020711075
+#&gt; PAYX UW Equity     0.020476856
+#&gt; IBM UN Equity      0.020418841
+#&gt; ANTM UN Equity     0.019794073
+#&gt; OXY UN Equity      0.019656921
+#&gt; LNC UN Equity      0.018175226
+#&gt; KO UN Equity       0.017535734
+#&gt; EQT UN Equity      0.017435204
+#&gt; BAC UN Equity      0.017309960
+#&gt; IP UN Equity       0.016389945
+#&gt; NVDA UW Equity     0.016203891
+#&gt; CCL UN Equity      0.016144022
+#&gt; QCOM UW Equity     0.015572908
+#&gt; GIS UN Equity      0.015380622
+#&gt; AXP UN Equity      0.014981645
+#&gt; SPLS UW Equity     0.012327110
+#&gt; BLL UN Equity      0.012045603
+#&gt; HBAN UW Equity     0.011914526
+#&gt; AMZN UW Equity     0.011789461
+#&gt; ZION UW Equity     0.010449785
+#&gt; EXPD UW Equity     0.008405398
+#&gt; WFC UN Equity      0.008395477
+#&gt; THC UN Equity      0.007807481
+#&gt; SNDK UW Equity     0.005869511
+#&gt; RAI UN Equity      0.004338352
+#&gt; 1436513D UN Equity 0.000000000
+#&gt; 1500785D UN Equity 0.000000000
+#&gt; 1518855D US Equity 0.000000000
+#&gt; 9876566D UN Equity 0.000000000
+#&gt; A UN Equity        0.000000000
+#&gt; AA UN Equity       0.000000000
+#&gt; AAPL UW Equity     0.000000000
+#&gt; ABC UN Equity      0.000000000
+#&gt; ABT UN Equity      0.000000000
+#&gt; ADBE UW Equity     0.000000000
+#&gt; ADM UN Equity      0.000000000
+#&gt; ADP UW Equity      0.000000000
+#&gt; ADSK UW Equity     0.000000000
+#&gt; AEE UN Equity      0.000000000
+#&gt; AEP UN Equity      0.000000000
+#&gt; AES UN Equity      0.000000000
+#&gt; AET UN Equity      0.000000000
+#&gt; AFL UN Equity      0.000000000
+#&gt; AGN UN Equity      0.000000000
+#&gt; AIG UN Equity      0.000000000
+#&gt; AIV UN Equity      0.000000000
+#&gt; AIZ UN Equity      0.000000000
+#&gt; AKAM UW Equity     0.000000000
+#&gt; ALL UN Equity      0.000000000
+#&gt; ALTR UW Equity     0.000000000
+#&gt; AMAT UW Equity     0.000000000
+#&gt; AMGN UW Equity     0.000000000
+#&gt; AMP UN Equity      0.000000000
+#&gt; AMT UN Equity      0.000000000
+#&gt; AN UN Equity       0.000000000
+#&gt; AON UN Equity      0.000000000
+#&gt; APA UN Equity      0.000000000
+#&gt; APC UN Equity      0.000000000
+#&gt; APD UN Equity      0.000000000
+#&gt; APH UN Equity      0.000000000
+#&gt; ARG UN Equity      0.000000000
+#&gt; AVB UN Equity      0.000000000
+#&gt; AVY UN Equity      0.000000000
+#&gt; AZO UN Equity      0.000000000
+#&gt; BA UN Equity       0.000000000
+#&gt; BAX UN Equity      0.000000000
+#&gt; BBBY UW Equity     0.000000000
+#&gt; BBT UN Equity      0.000000000
+#&gt; BBY UN Equity      0.000000000
+#&gt; BCR UN Equity      0.000000000
+#&gt; BDX UN Equity      0.000000000
+#&gt; BEN UN Equity      0.000000000
+#&gt; BF/B UN Equity     0.000000000
+#&gt; BHI UN Equity      0.000000000
+#&gt; BIIB UW Equity     0.000000000
+#&gt; BK UN Equity       0.000000000
+#&gt; BMY UN Equity      0.000000000
+#&gt; BRCM UW Equity     0.000000000
+#&gt; BSX UN Equity      0.000000000
+#&gt; BXP UN Equity      0.000000000
+#&gt; C UN Equity        0.000000000
+#&gt; CA UW Equity       0.000000000
+#&gt; CAG UN Equity      0.000000000
+#&gt; CAH UN Equity      0.000000000
+#&gt; CAM UN Equity      0.000000000
+#&gt; CAT UN Equity      0.000000000
+#&gt; CBG UN Equity      0.000000000
+#&gt; CBS UN Equity      0.000000000
+#&gt; CCE UN Equity      0.000000000
+#&gt; CELG UW Equity     0.000000000
+#&gt; CF UN Equity       0.000000000
+#&gt; CHK UN Equity      0.000000000
+#&gt; CHRW UW Equity     0.000000000
+#&gt; CI UN Equity       0.000000000
+#&gt; CINF UW Equity     0.000000000
+#&gt; CL UN Equity       0.000000000
+#&gt; CLX UN Equity      0.000000000
+#&gt; CMA UN Equity      0.000000000
+#&gt; CMCSA UW Equity    0.000000000
+#&gt; CME UW Equity      0.000000000
+#&gt; CMI UN Equity      0.000000000
+#&gt; CMS UN Equity      0.000000000
+#&gt; CNP UN Equity      0.000000000
+#&gt; CNX UN Equity      0.000000000
+#&gt; COF UN Equity      0.000000000
+#&gt; COG UN Equity      0.000000000
+#&gt; COH UN Equity      0.000000000
+#&gt; COL UN Equity      0.000000000
+#&gt; COP UN Equity      0.000000000
+#&gt; COST UW Equity     0.000000000
+#&gt; CPB UN Equity      0.000000000
+#&gt; CRM UN Equity      0.000000000
+#&gt; CSX UN Equity      0.000000000
+#&gt; CTAS UW Equity     0.000000000
+#&gt; CTL UN Equity      0.000000000
+#&gt; CTSH UW Equity     0.000000000
+#&gt; CTXS UW Equity     0.000000000
+#&gt; CVS UN Equity      0.000000000
+#&gt; D UN Equity        0.000000000
+#&gt; DD UN Equity       0.000000000
+#&gt; DE UN Equity       0.000000000
+#&gt; DFS UN Equity      0.000000000
+#&gt; DGX UN Equity      0.000000000
+#&gt; DHI UN Equity      0.000000000
+#&gt; DHR UN Equity      0.000000000
+#&gt; DIS UN Equity      0.000000000
+#&gt; DNB UN Equity      0.000000000
+#&gt; DO UN Equity       0.000000000
+#&gt; DOV UN Equity      0.000000000
+#&gt; DOW UN Equity      0.000000000
+#&gt; DPS UN Equity      0.000000000
+#&gt; DRI UN Equity      0.000000000
+#&gt; DTE UN Equity      0.000000000
+#&gt; DUK UN Equity      0.000000000
+#&gt; DVA UN Equity      0.000000000
+#&gt; DVN UN Equity      0.000000000
+#&gt; EA UW Equity       0.000000000
+#&gt; EBAY UW Equity     0.000000000
+#&gt; ECL UN Equity      0.000000000
+#&gt; ED UN Equity       0.000000000
+#&gt; EFX UN Equity      0.000000000
+#&gt; EIX UN Equity      0.000000000
+#&gt; EL UN Equity       0.000000000
+#&gt; EMC UN Equity      0.000000000
+#&gt; EMN UN Equity      0.000000000
+#&gt; EMR UN Equity      0.000000000
+#&gt; EOG UN Equity      0.000000000
+#&gt; EQR UN Equity      0.000000000
+#&gt; ES UN Equity       0.000000000
+#&gt; ESRX UW Equity     0.000000000
+#&gt; ETFC UW Equity     0.000000000
+#&gt; ETN UN Equity      0.000000000
+#&gt; ETR UN Equity      0.000000000
+#&gt; EXC UN Equity      0.000000000
+#&gt; EXPE UW Equity     0.000000000
+#&gt; F UN Equity        0.000000000
+#&gt; FAST UW Equity     0.000000000
+#&gt; FDX UN Equity      0.000000000
+#&gt; FE UN Equity       0.000000000
+#&gt; FIS UN Equity      0.000000000
+#&gt; FISV UW Equity     0.000000000
+#&gt; FITB UW Equity     0.000000000
+#&gt; FLIR UW Equity     0.000000000
+#&gt; FLR UN Equity      0.000000000
+#&gt; FLS UN Equity      0.000000000
+#&gt; FMC UN Equity      0.000000000
+#&gt; FSLR UW Equity     0.000000000
+#&gt; FTI UN Equity      0.000000000
+#&gt; GD UN Equity       0.000000000
+#&gt; GE UN Equity       0.000000000
+#&gt; GILD UW Equity     0.000000000
+#&gt; GLW UN Equity      0.000000000
+#&gt; GME UN Equity      0.000000000
+#&gt; GPC UN Equity      0.000000000
+#&gt; GPS UN Equity      0.000000000
+#&gt; GS UN Equity       0.000000000
+#&gt; GWW UN Equity      0.000000000
+#&gt; HAL UN Equity      0.000000000
+#&gt; HAR UN Equity      0.000000000
+#&gt; HCN UN Equity      0.000000000
+#&gt; HCP UN Equity      0.000000000
+#&gt; HD UN Equity       0.000000000
+#&gt; HES UN Equity      0.000000000
+#&gt; HIG UN Equity      0.000000000
+#&gt; HOG UN Equity      0.000000000
+#&gt; HON UN Equity      0.000000000
+#&gt; HOT UN Equity      0.000000000
+#&gt; HRB UN Equity      0.000000000
+#&gt; HRL UN Equity      0.000000000
+#&gt; HRS UN Equity      0.000000000
+#&gt; HST UN Equity      0.000000000
+#&gt; HSY UN Equity      0.000000000
+#&gt; HUM UN Equity      0.000000000
+#&gt; ICE UN Equity      0.000000000
+#&gt; IFF UN Equity      0.000000000
+#&gt; INTU UW Equity     0.000000000
+#&gt; IPG UN Equity      0.000000000
+#&gt; IRM UN Equity      0.000000000
+#&gt; ISRG UW Equity     0.000000000
+#&gt; ITW UN Equity      0.000000000
+#&gt; IVZ UN Equity      0.000000000
+#&gt; JEC UN Equity      0.000000000
+#&gt; JNPR UN Equity     0.000000000
+#&gt; JWN UN Equity      0.000000000
+#&gt; K UN Equity        0.000000000
+#&gt; KEY UN Equity      0.000000000
+#&gt; KIM UN Equity      0.000000000
+#&gt; KLAC UW Equity     0.000000000
+#&gt; KMB UN Equity      0.000000000
+#&gt; KR UN Equity       0.000000000
+#&gt; KSS UN Equity      0.000000000
+#&gt; L UN Equity        0.000000000
+#&gt; LB UN Equity       0.000000000
+#&gt; LEG UN Equity      0.000000000
+#&gt; LEN UN Equity      0.000000000
+#&gt; LH UN Equity       0.000000000
+#&gt; LLL UN Equity      0.000000000
+#&gt; LLTC UW Equity     0.000000000
+#&gt; LLY UN Equity      0.000000000
+#&gt; LM UN Equity       0.000000000
+#&gt; LMT UN Equity      0.000000000
+#&gt; LUK UN Equity      0.000000000
+#&gt; LUV UN Equity      0.000000000
+#&gt; M UN Equity        0.000000000
+#&gt; MA UN Equity       0.000000000
+#&gt; MAS UN Equity      0.000000000
+#&gt; MAT UW Equity      0.000000000
+#&gt; MCHP UW Equity     0.000000000
+#&gt; MCK UN Equity      0.000000000
+#&gt; MCO UN Equity      0.000000000
+#&gt; MDT UN Equity      0.000000000
+#&gt; MET UN Equity      0.000000000
+#&gt; MJN UN Equity      0.000000000
+#&gt; MKC UN Equity      0.000000000
+#&gt; MMC UN Equity      0.000000000
+#&gt; MMM UN Equity      0.000000000
+#&gt; MO UN Equity       0.000000000
+#&gt; MON UN Equity      0.000000000
+#&gt; MRK UN Equity      0.000000000
+#&gt; MRO UN Equity      0.000000000
+#&gt; MS UN Equity       0.000000000
+#&gt; MSFT UW Equity     0.000000000
+#&gt; MSI UN Equity      0.000000000
+#&gt; MTB UN Equity      0.000000000
+#&gt; MU UW Equity       0.000000000
+#&gt; MUR UN Equity      0.000000000
+#&gt; MYL UW Equity      0.000000000
+#&gt; NBL UN Equity      0.000000000
+#&gt; NDAQ UW Equity     0.000000000
+#&gt; NEE UN Equity      0.000000000
+#&gt; NEM UN Equity      0.000000000
+#&gt; NI UN Equity       0.000000000
+#&gt; NKE UN Equity      0.000000000
+#&gt; NOC UN Equity      0.000000000
+#&gt; NOV UN Equity      0.000000000
+#&gt; NSC UN Equity      0.000000000
+#&gt; NTAP UW Equity     0.000000000
+#&gt; NTRS UW Equity     0.000000000
+#&gt; NUE UN Equity      0.000000000
+#&gt; NWL UN Equity      0.000000000
+#&gt; OI UN Equity       0.000000000
+#&gt; OMC UN Equity      0.000000000
+#&gt; ORLY UW Equity     0.000000000
+#&gt; PBCT UW Equity     0.000000000
+#&gt; PBI UN Equity      0.000000000
+#&gt; PCAR UW Equity     0.000000000
+#&gt; PCG UN Equity      0.000000000
+#&gt; PCL UN Equity      0.000000000
+#&gt; PCLN UW Equity     0.000000000
+#&gt; PCP UN Equity      0.000000000
+#&gt; PDCO UW Equity     0.000000000
+#&gt; PEG UN Equity      0.000000000
+#&gt; PFG UN Equity      0.000000000
+#&gt; PG UN Equity       0.000000000
+#&gt; PGR UN Equity      0.000000000
+#&gt; PH UN Equity       0.000000000
+#&gt; PHM UN Equity      0.000000000
+#&gt; PKI UN Equity      0.000000000
+#&gt; PM UN Equity       0.000000000
+#&gt; PNC UN Equity      0.000000000
+#&gt; POM UN Equity      0.000000000
+#&gt; PPG UN Equity      0.000000000
+#&gt; PPL UN Equity      0.000000000
+#&gt; PRU UN Equity      0.000000000
+#&gt; PSA UN Equity      0.000000000
+#&gt; PWR UN Equity      0.000000000
+#&gt; PX UN Equity       0.000000000
+#&gt; PXD UN Equity      0.000000000
+#&gt; R UN Equity        0.000000000
+#&gt; RF UN Equity       0.000000000
+#&gt; RHI UN Equity      0.000000000
+#&gt; RHT UN Equity      0.000000000
+#&gt; RL UN Equity       0.000000000
+#&gt; ROK UN Equity      0.000000000
+#&gt; ROP UN Equity      0.000000000
+#&gt; ROST UW Equity     0.000000000
+#&gt; RRC UN Equity      0.000000000
+#&gt; RSG UN Equity      0.000000000
+#&gt; RTN UN Equity      0.000000000
+#&gt; SBUX UW Equity     0.000000000
+#&gt; SCG UN Equity      0.000000000
+#&gt; SEE UN Equity      0.000000000
+#&gt; SHW UN Equity      0.000000000
+#&gt; SLB UN Equity      0.000000000
+#&gt; SNA UN Equity      0.000000000
+#&gt; SNI UN Equity      0.000000000
+#&gt; SO UN Equity       0.000000000
+#&gt; SPG UN Equity      0.000000000
+#&gt; SPGI UN Equity     0.000000000
+#&gt; SRCL UW Equity     0.000000000
+#&gt; SRE UN Equity      0.000000000
+#&gt; STI UN Equity      0.000000000
+#&gt; STJ UN Equity      0.000000000
+#&gt; STT UN Equity      0.000000000
+#&gt; STZ UN Equity      0.000000000
+#&gt; SWK UN Equity      0.000000000
+#&gt; SWN UN Equity      0.000000000
+#&gt; SYK UN Equity      0.000000000
+#&gt; SYY UN Equity      0.000000000
+#&gt; TAP UN Equity      0.000000000
+#&gt; TDC UN Equity      0.000000000
+#&gt; TGNA UN Equity     0.000000000
+#&gt; TGT UN Equity      0.000000000
+#&gt; TIF UN Equity      0.000000000
+#&gt; TJX UN Equity      0.000000000
+#&gt; TMK UN Equity      0.000000000
+#&gt; TMO UN Equity      0.000000000
+#&gt; TROW UW Equity     0.000000000
+#&gt; TRV UN Equity      0.000000000
+#&gt; TSN UN Equity      0.000000000
+#&gt; TSO UN Equity      0.000000000
+#&gt; TSS UN Equity      0.000000000
+#&gt; TWC UN Equity      0.000000000
+#&gt; TWX UN Equity      0.000000000
+#&gt; TXT UN Equity      0.000000000
+#&gt; UNH UN Equity      0.000000000
+#&gt; UNM UN Equity      0.000000000
+#&gt; UNP UN Equity      0.000000000
+#&gt; UPS UN Equity      0.000000000
+#&gt; USB UN Equity      0.000000000
+#&gt; V UN Equity        0.000000000
+#&gt; VAR UN Equity      0.000000000
+#&gt; VFC UN Equity      0.000000000
+#&gt; VLO UN Equity      0.000000000
+#&gt; VMC UN Equity      0.000000000
+#&gt; VNO UN Equity      0.000000000
+#&gt; VRSN UW Equity     0.000000000
+#&gt; VTR UN Equity      0.000000000
+#&gt; WAT UN Equity      0.000000000
+#&gt; WEC UN Equity      0.000000000
+#&gt; WFM UW Equity      0.000000000
+#&gt; WHR UN Equity      0.000000000
+#&gt; WM UN Equity       0.000000000
+#&gt; WMB UN Equity      0.000000000
+#&gt; WMT UN Equity      0.000000000
+#&gt; WU UN Equity       0.000000000
+#&gt; WY UN Equity       0.000000000
+#&gt; WYN UN Equity      0.000000000
+#&gt; WYNN UW Equity     0.000000000
+#&gt; XEL UN Equity      0.000000000
+#&gt; XL UN Equity       0.000000000
+#&gt; XLNX UW Equity     0.000000000
+#&gt; XOM UN Equity      0.000000000
+#&gt; XRX UN Equity      0.000000000
+#&gt; YUM UN Equity      0.000000000
+#&gt; ZBH UN Equity      0.000000000</code></pre>
+</details>
+<p>
+</p>
+<pre class="r"><code>df_pnl(x_te, w_ete, r_te, &quot;PortfolioETE&quot;) |&gt; plot_pnl()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<img src="https://nanx.me/blog/post/sparse-index-tracking/index_files/figure-html/unnamed-chunk-8-1.png" alt="ETE portfolio and SP500 cumulative P&amp;L." width="95%" />
+<p class="caption">
+Figure 1: ETE portfolio and SP500 cumulative P&amp;L.
+</p>
+</div>
+</div>
+<div id="a-two-step-algorithm-for-parsimonious-solutions" class="section level2">
+<h2>A two-step algorithm for parsimonious solutions</h2>
+<p>Revisiting my questions: can we get an more parsimonious model with
+fewer assets selected while still maintaining tracking performance relatively well?
+Additionally, instead of optimizing a constrained sparse regression objective,
+we could potentially use a two-stage algorithm.
+Following these ideas, things should work like this:</p>
+<ol style="list-style-type: decimal">
+<li>Use an unconstrained sparse regression for selecting the assets,
+preferably yielding sparser solutions.</li>
+<li>Use a constrained OLS regression on the selected assets where the
+coefficients are non-negative and sum to 1.</li>
+</ol>
+<p>This is obviously a “poor man’s approach” but is simpler in terms of
+implementation as even I can do it in no time, and it’s shown below.</p>
+<div id="stage-1" class="section level3">
+<h3>Stage 1</h3>
+<p>Create wrapper functions for extracting <span class="math inline">\(\beta\)</span>s from
+<a href="https://nanx.me/msaenet/">msaenet</a> models:</p>
+<pre class="r"><code>get_beta &lt;- function(object) {
+  beta &lt;- coef(object)
+  names(beta) &lt;- if (inherits(object, &quot;msaenet.msaenet&quot;)) {
+    rownames(object$beta)
+  } else {
+    colnames(object$model$X)
+  }
+  beta
+}
+
+get_nzv &lt;- function(object) {
+  beta &lt;- get_beta(object)
+  names(beta[which(beta != 0)])
+}</code></pre>
+</div>
+<div id="stage-two" class="section level3">
+<h3>Stage two</h3>
+<p>Use CVXR by <a href="https://doi.org/10.18637/jss.v094.i14">Fu et al. (2020)</a>
+to do a constrained sum-to-one OLS regression on
+the selected variables to get the weights:</p>
+<pre class="r"><code>library(&quot;CVXR&quot;)
+
+storeg &lt;- function(x, y) {
+  x &lt;- as.matrix(x)
+  y &lt;- as.vector(y)
+  p &lt;- ncol(x)
+  beta &lt;- Variable(p)
+
+  obj &lt;- sum((y - x %*% beta)^2)
+  constr &lt;- list(beta &gt;= 0, sum(beta) == 1)
+  prob &lt;- Problem(Minimize(obj), constr)
+  result &lt;- solve(prob)
+
+  structure(
+    list(
+      result = result,
+      beta = result$getValue(beta)
+    ),
+    class = &quot;storeg&quot;
+  )
+}</code></pre>
+<p>Get asset names and coefficients in the portfolio:</p>
+<pre class="r"><code>get_portfolio &lt;- function(beta, nzv) {
+  as.vector(beta) |&gt;
+    setNames(nzv) |&gt;
+    sort(decreasing = TRUE) |&gt;
+    data.frame(fix.empty.names = FALSE)
+}</code></pre>
+<p>Chaining things together:</p>
+<pre class="r"><code>fit_enet &lt;- msaenet::msaenet(
+  x = as.matrix(x_tr),
+  y = as.vector(r_tr),
+  family = &quot;gaussian&quot;,
+  init = &quot;ridge&quot;,
+  tune = &quot;cv&quot;,
+  nsteps = 10,
+  lower.limits = 0,
+  verbose = FALSE,
+  seed = 42
+)
+
+fit_enet |&gt; get_nzv()
+#&gt; [1] &quot;CTAS UW Equity&quot; &quot;HON UN Equity&quot;  &quot;HPQ UN Equity&quot;  &quot;L UN Equity&quot;   
+#&gt; [5] &quot;XOM UN Equity&quot;
+
+fit_enet_sto &lt;- storeg(x_tr[, get_nzv(fit_enet)], r_tr)
+
+get_portfolio(fit_enet_sto$beta, get_nzv(fit_enet))
+#&gt;                         
+#&gt; L UN Equity    0.2518363
+#&gt; XOM UN Equity  0.2370656
+#&gt; CTAS UW Equity 0.1945193
+#&gt; HON UN Equity  0.1630314
+#&gt; HPQ UN Equity  0.1535473
+
+df_pnl(x_te[, get_nzv(fit_enet)], fit_enet_sto$beta, r_te, &quot;Portfolio.msaenet&quot;) |&gt;
+  plot_pnl()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-12"></span>
+<img src="https://nanx.me/blog/post/sparse-index-tracking/index_files/figure-html/unnamed-chunk-12-1.png" alt="msaenet portfolio and SP500 cumulative P&amp;L." width="95%" />
+<p class="caption">
+Figure 2: msaenet portfolio and SP500 cumulative P&amp;L.
+</p>
+</div>
+<p>We have selected much fewer (five) assets to track the index.
+The tracking error was also not too big.</p>
+</div>
+</div>
+<div id="stability-of-the-solution" class="section level2">
+<h2>Stability of the solution</h2>
+<p>Since we used cross validation to tune the hyperparameters,
+there is a possibility that we were “lucky” in getting a good model
+so it might be useful to check the stability of the selection results
+in many repeats with different seeds, and consequently, varying splits of the
+training data.</p>
+<pre class="r"><code>library(&quot;doParallel&quot;)
+registerDoParallel(detectCores())
+
+fit_rep &lt;- foreach::foreach(seed = 1:100) %dopar% {
+  msaenet::msaenet(
+    x = as.matrix(x_tr),
+    y = as.vector(r_tr),
+    family = &quot;gaussian&quot;,
+    init = &quot;ridge&quot;,
+    tune = &quot;cv&quot;,
+    nsteps = 10,
+    lower.limits = 0,
+    verbose = FALSE,
+    seed = seed
+  )
+}</code></pre>
+<pre class="r"><code>as.data.frame(table(unlist(sapply(fit_rep, get_nzv)))) |&gt;
+  ggplot2::ggplot(ggplot2::aes(x = Freq, y = Var1)) +
+  ggplot2::geom_point(size = 3, color = ggsci::pal_d3()(1)) +
+  ggplot2::scale_x_continuous(
+    name = &quot;Selection frequency out of 100 experiments&quot;,
+    limits = c(0, 100),
+    expand = c(0, 5)
+  ) +
+  ggplot2::scale_y_discrete(name = NULL, expand = c(0, 0.5)) +
+  cowplot::theme_minimal_grid()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-16"></span>
+<img src="https://nanx.me/blog/post/sparse-index-tracking/index_files/figure-html/unnamed-chunk-16-1.png" alt="Dot plot of asset selection frequency out of 100 experiments." width="95%" />
+<p class="caption">
+Figure 3: Dot plot of asset selection frequency out of 100 experiments.
+</p>
+</div>
+</div>
+<div id="even-sparser-solutions" class="section level2">
+<h2>Even sparser solutions</h2>
+<p>We can plug in different penalized regression methods in the first stage to
+get different portfolios with different degrees of sparsity and asset structure.
+For example, we can try to get an even sparser solution:</p>
+<pre class="r"><code>fit_snet &lt;- suppressWarnings(msaenet::msasnet(
+  x = as.matrix(x_tr),
+  y = as.vector(r_tr),
+  family = &quot;gaussian&quot;,
+  init = &quot;ridge&quot;,
+  tune = &quot;cv&quot;,
+  nsteps = 10,
+  verbose = FALSE,
+  seed = 42
+))
+
+fit_snet |&gt; get_nzv()
+#&gt; [1] &quot;CINF UW Equity&quot; &quot;COP UN Equity&quot;  &quot;HON UN Equity&quot;
+
+fit_snet_sto &lt;- storeg(x_tr[, get_nzv(fit_snet)], r_tr)
+
+get_portfolio(fit_snet_sto$beta, get_nzv(fit_snet))
+#&gt;                         
+#&gt; CINF UW Equity 0.4773397
+#&gt; HON UN Equity  0.3016434
+#&gt; COP UN Equity  0.2210169
+
+df_pnl(x_te[, get_nzv(fit_snet)], fit_snet_sto$beta, r_te, &quot;Portfolio.msasnet&quot;) |&gt;
+  plot_pnl()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-17"></span>
+<img src="https://nanx.me/blog/post/sparse-index-tracking/index_files/figure-html/unnamed-chunk-17-1.png" alt="Sparse portfolio using multi-step SCAD-net and SP500 cumulative P&amp;L." width="95%" />
+<p class="caption">
+Figure 4: Sparse portfolio using multi-step SCAD-net and SP500 cumulative P&amp;L.
+</p>
+</div>
+<p>As we further reduce the number of assets from five to three,
+the tracking error was ok in the beginning of the testing period but
+went up in the latter part. Similar situation for another try:</p>
+<pre class="r"><code>fit_mnet &lt;- suppressWarnings(msaenet::msamnet(
+  x = as.matrix(x_tr),
+  y = as.vector(r_tr),
+  family = &quot;gaussian&quot;,
+  init = &quot;ridge&quot;,
+  tune = &quot;cv&quot;,
+  nsteps = 10,
+  verbose = FALSE,
+  seed = 42
+))
+
+fit_mnet |&gt; get_nzv()
+#&gt; [1] &quot;CINF UW Equity&quot; &quot;HES UN Equity&quot;  &quot;HON UN Equity&quot;
+
+fit_mnet_sto &lt;- storeg(x_tr[, get_nzv(fit_mnet)], r_tr)
+
+get_portfolio(fit_mnet_sto$beta, get_nzv(fit_mnet))
+#&gt;                         
+#&gt; CINF UW Equity 0.5383087
+#&gt; HON UN Equity  0.3042618
+#&gt; HES UN Equity  0.1574295
+
+df_pnl(x_te[, get_nzv(fit_mnet)], fit_mnet_sto$beta, r_te, &quot;Portfolio.msamnet&quot;) |&gt;
+  plot_pnl()</code></pre>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-18"></span>
+<img src="https://nanx.me/blog/post/sparse-index-tracking/index_files/figure-html/unnamed-chunk-18-1.png" alt="Sparse portfolio using multi-step MCP-net and SP500 cumulative P&amp;L." width="95%" />
+<p class="caption">
+Figure 5: Sparse portfolio using multi-step MCP-net and SP500 cumulative P&amp;L.
+</p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>While there are still open challenges in sparse index tracking such as
+determining rebalancing frequency, refining backtest strategies,
+and ensuring portfolio stability, this two-stage regression approach
+provides a simpler and potentially more parsimonious model for tackling
+this problem.</p>
+</div>
+
+
+
+                </div>
+
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/open-source-typography/">« Find Your Perfect Open Source Font: Introducing the Interactive Typeface Lookbook</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="footer mt-5">
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="mx-auto w-700">
+                <hr>
+            </div>
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="github" viewBox="0 0 16 16">
+                <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+            </symbol>
+            <symbol id="linkedin" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+            </symbol>
+            <symbol id="twitter" viewBox="0 0 16 16">
+                <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+            </symbol>
+            <symbol id="rss-fill" viewBox="0 0 16 16">
+                <path
+                    d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+            </symbol>
+            <symbol id="info-circle-fill" viewBox="0 0 16 16">
+                <path
+                    d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+            </symbol>
+        </svg>
+
+        <div class="row justify-content-center">
+            <div class="mx-auto w-700">
+                
+                <div class="site-copyright">
+                    © 2011–2023 Nan Xiao
+                </div>
+                
+            </div>
+        </div>
+        <div class="row justify-content-center mt-2 mb-5">
+            <div class="mx-auto w-700">
+                <div class="site-social">
+                    <ul>
+                        
+
+                        
+                        <li><a href="https://github.com/nanxstats" target="_blank" rel="noopener">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#github"></use>
+                                </svg> @nanxstats</a></li>
+                        
+
+                        
+
+                        
+
+                        
+                        <li><a href="https://twitter.com/nanxstats" target="_blank" rel="noopener">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#twitter"></use>
+                                </svg> @nanxstats</a></li>
+                        
+
+                        
+                        <li><a href="https://www.linkedin.com/in/nanxstats" target="_blank"
+                                rel="noopener">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#linkedin"></use>
+                                </svg> @nanxstats</a></li>
+                        
+
+                        
+                        <li><a href="https://nanx.me/colophon/">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#info-circle-fill"></use>
+                                </svg>
+                                Colophon</a></li>
+                        
+
+                        
+
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/r.min.js" defer></script>
+        
+        <script>
+            window.addEventListener('load', function() {
+                hljs.highlightAll();
+            }, true);
+        </script>
+    
+
+    
+
+    
+    
+        
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>
