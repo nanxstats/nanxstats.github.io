@@ -1,0 +1,144 @@
+---
+title: "Responsive Design for Statistical Graphics with Shiny and ggplot2"
+author: "Nan Xiao"
+date: "2023-06-05T01:00:00"
+slug: responsive-design-for-statistical-graphics
+categories: []
+tags:
+  - R
+  - Shiny
+  - ggplot2
+meta_img: "image/amy-shamblen-DhULFYb5J9w-unsplash.jpg"
+description: >
+  Explore the new approach to adaptive visualizations using responsive
+  statistical graphics with Shiny and ggplot2.
+  This post breaks down the process of creating statistical graphics that
+  dynamically adapt to various screen sizes, transforming how data is
+  visualized and consumed. Discover the nuances of fitting responsive
+  graphics into responsive containers and optimizing layout behaviors.
+---
+
+![Photo by [Amy Shamblen](https://unsplash.com/photos/DhULFYb5J9w).](/image/amy-shamblen-DhULFYb5J9w-unsplash.jpg)
+
+If you have written any Shiny apps, you are probably familiar with the idea of
+[responsive web design](https://en.wikipedia.org/wiki/Responsive_web_design),
+which focuses on web page layouts adaptive to screen size and popularized by
+the front-end frameworks such as Bootstrap.
+
+Could the similar idea be applied to statistical graphics?
+In my opinion, the answer is yes, and it can be helpful for arranging
+multi-panel graphics under the context of creating effective visualizations
+that are adaptive to any screen sizes.
+
+## Starter example
+
+It is straightforward to demonstrate the idea of
+**responsive statistical graphics** with ggplot2 and Shiny.
+The key steps are:
+
+1. In Shiny, get the current plot output width and height detected in the
+   web browser using the session API provided by
+   [`session$clientData`](https://shiny.posit.co/r/articles/build/client-data/).
+2. In ggplot2, use the width data to decide the grid layout (number of columns)
+   and graphical details such as font size of the multi-facet plot.
+3. Save the output with proper pixel width and height using a graphical device.
+4. In Shiny, re-render the plot based on screen size changes using `renderImage()`.
+
+Following this logic, we can write a minimal prototype with 30 lines of R code:
+
+```r
+library("shiny")
+library("ggplot2")
+
+ui <- fluidPage(
+  plotOutput("plot_responsive")
+)
+
+server <- function(input, output, session) {
+  output$plot_responsive <- renderImage(
+    {
+      width <- session$clientData$output_plot_responsive_width
+      height <- session$clientData$output_plot_responsive_height
+
+      outfile <- tempfile(fileext = ".png")
+
+      png(outfile, width = width * 3, height = height * 3, res = 300)
+      p <- ggplot(mpg, aes(displ, hwy)) + geom_point()
+      i <- findInterval(width, c(540, 720, 960, 1140, 1320)) + 1
+      p <- p + facet_wrap(vars(class), ncol = c(1, 2, 3, 4, 6, 8)[i])
+      print(p)
+      dev.off()
+
+      list(src = outfile, width = width, height = height)
+    },
+    deleteFile = TRUE
+  )
+}
+
+shinyApp(ui, server)
+```
+
+For the purpose of displaying information in a more interpretable way,
+it might be a good idea to fix the aspect ratio of each panel or for
+single-facet displays. There is also previous research suggesting the optimal
+display ratio such as the
+[45° banking rule by Cleveland et al. (1988)](https://doi.org/10.2307/2288843).
+
+## Responsive graphics within responsive containers
+
+Of course, we can extend the idea of responsive graphics and fit them inside
+a multi-column responsive page layout.
+A more generic implementation with modularized plotting and saving functions
+to show both single-column and two-column layouts with vector-based
+SVG output is available in this
+[GitHub Gist](https://gist.github.com/nanxstats/59e91cc32548c1522ebff55ef6facd20).
+
+<div class="ratio ratio-16x9">
+<video controls autoplay class="object-fit-cover">
+<source src="https://user-images.githubusercontent.com/199363/243249155-69c07023-e122-4265-83e8-570825220d80.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="figcaption">
+A demo showing the single- and multi-column layout with responsive graphics.
+</div>
+
+The multi-column layout case is even more intriguing because unlike the
+single-column case, this is a "responsive graphics within responsive containers"
+situation:
+
+1. Image output width is not equal to the screen size anymore, and the default
+   output width could be much smaller than the single-column case.
+2. Image output width is not monotonic to screen size anymore because the
+   responsive layout effect of the Bootstrap fluid containers will also kick in:
+   columns can be rearranged to the next fluid row as screen size decreases.
+
+Therefore, if we want to keep the graphics to have consistent responsive layout
+behaviors, more deliberate calculations and parameter settings might be required.
+
+## A technical note on interval finding
+
+The reactive layout computation requires finding where the current plot width
+falls in consecutive intervals of container sizes.
+To achieve this, my original prototype implementation included many tedious
+`if` constructs.
+
+In fact, there are much better ways to handle such interval finding problems
+in R: the `findInterval()` function can simplify the logic into one function
+call. For fewer breaking points, you can also use a fancy approach with
+upcasting, for example:
+
+```r
+i <- (width >= 960) + (width >= 1140) + 1
+p <- p + facet_wrap(vars(class), ncol = c(1, 2, 4)[i])
+```
+
+These tricks were taken from an online [discussion](https://d.cosx.org/d/423852/5)
+(thanks, [@yihui](https://yihui.org/)).
+
+## Conclusion
+
+Of course, you can create a generic responsive plotting framework to automate
+all the fine details discussed above!
+Please kindly let me know if you or someone else has already done this
+as I would love to try it out.

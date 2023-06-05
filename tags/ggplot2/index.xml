@@ -6,7 +6,17 @@
     <description>Recent content in ggplot2 on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Mar 2023 11:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jun 2023 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/ggplot2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Responsive Design for Statistical Graphics with Shiny and ggplot2</title>
+      <link>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</link>
+      <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</guid>
+      <description>Photo by Amy Shamblen. If you have written any Shiny apps, you are probably familiar with the idea of responsive web design, which focuses on web page layouts adaptive to screen size and popularized by the front-end frameworks such as Bootstrap.
+Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and it can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
+    </item>
+    
     <item>
       <title>ggsci 3.0.0</title>
       <link>https://nanx.me/blog/post/ggsci-3-0-0/</link>
