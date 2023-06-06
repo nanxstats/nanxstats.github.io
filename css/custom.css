@@ -33,8 +33,8 @@
 }
 
 @font-face {
-    font-family: "Fira Code";
-    src: url("fonts/FiraCode-Regular.woff2") format("woff2");
+    font-family: "Hasklig";
+    src: url("fonts/Hasklig-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -45,7 +45,7 @@
 :root {
     --tw-prose-font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-headings: "DM Serif Text", Georgia, Cambria, "Times New Roman", Times, serif;
-    --tw-prose-font-monospace: "Fira Code", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
