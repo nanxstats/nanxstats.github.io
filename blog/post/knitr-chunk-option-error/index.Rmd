@@ -9,6 +9,7 @@ tags:
   - R Markdown
   - Quarto
   - knitr
+meta_img: "image/steve-tsang-OZjypvcu3uo-unsplash.jpg"
 description: >
   This post explains a common but confusing error message from knitr when
   rendering R Markdown or Quarto documents where a character value is
