@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>knitr on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/knitr/</link>
+    <description>Recent content in knitr on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 06 Jun 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/knitr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</title>
+      <link>https://nanx.me/blog/post/knitr-chunk-option-error/</link>
+      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
+      <description>If Google leads you here, you probably have assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
+For example, it is easy to make this mistake:
+```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:
+```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
+    </item>
+    
+  </channel>
+</rss>

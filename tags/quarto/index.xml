@@ -6,7 +6,19 @@
     <description>Recent content in Quarto on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 May 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/quarto/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jun 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/quarto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</title>
+      <link>https://nanx.me/blog/post/knitr-chunk-option-error/</link>
+      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
+      <description>If Google leads you here, you probably have assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
+For example, it is easy to make this mistake:
+```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:
+```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
+    </item>
+    
     <item>
       <title>Find Your Perfect Open Source Font: Introducing the Interactive Typeface Lookbook</title>
       <link>https://nanx.me/blog/post/open-source-typography/</link>

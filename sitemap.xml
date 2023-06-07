@@ -3,24 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2023-06-05T01:00:00+00:00</lastmod>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/ggplot2/</loc>
-    <lastmod>2023-06-05T01:00:00+00:00</lastmod>
+    <loc>https://nanx.me/blog/post/knitr-chunk-option-error/</loc>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2023-06-05T01:00:00+00:00</lastmod>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/knitr/</loc>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/quarto/</loc>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-markdown/</loc>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ggplot2/</loc>
     <lastmod>2023-06-05T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</loc>
     <lastmod>2023-06-05T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/shiny/</loc>
-    <lastmod>2023-06-05T01:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2023-06-05T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/convex-optimization/</loc>
@@ -50,9 +62,6 @@
     <loc>https://nanx.me/tags/font-discovery/</loc>
     <lastmod>2023-05-10T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/quarto/</loc>
-    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/web-typography/</loc>
     <lastmod>2023-05-10T17:00:00+00:00</lastmod>
   </url><url>
@@ -66,9 +75,6 @@
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/pngquant/</loc>
-    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-markdown/</loc>
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-packages/</loc>

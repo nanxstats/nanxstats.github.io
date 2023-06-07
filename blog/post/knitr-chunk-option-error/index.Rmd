@@ -1,0 +1,39 @@
+---
+title: "Error in options[[sprintf(\"fig.%s\", i)]] * options$dpi: ! non-numeric argument to binary operator"
+author: "Nan Xiao"
+date: "2023-06-06T20:30:00"
+slug: knitr-chunk-option-error
+categories: []
+tags:
+  - R
+  - R Markdown
+  - Quarto
+  - knitr
+description: >
+  This post explains a common but confusing error message from knitr when
+  rendering R Markdown or Quarto documents where a character value is
+  assigned to a chunk option that only accepts numeric values.
+---
+
+If Google leads you here, you probably have assigned a character value
+to a knitr chunk option such as `fig.width` or `fig.height`
+that only accepts numeric values, and your are trying to render
+that R Markdown or Quarto document.
+
+For example, it is easy to make this mistake:
+
+````{verbatim, lang="markdown"}
+```{r, fig.width="100%"}
+plot(1:10)
+```
+````
+
+where you probably meant:
+
+````{verbatim, lang="markdown"}
+```{r, fig.width=6, out.width="100%"}
+plot(1:10)
+```
+````
+
+That's all! I hope this helps.

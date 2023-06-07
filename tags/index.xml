@@ -6,22 +6,49 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Jun 2023 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 06 Jun 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ggplot2</title>
-      <link>https://nanx.me/tags/ggplot2/</link>
-      <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
+      <title>knitr</title>
+      <link>https://nanx.me/tags/knitr/</link>
+      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       
-      <guid>https://nanx.me/tags/ggplot2/</guid>
+      <guid>https://nanx.me/tags/knitr/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quarto</title>
+      <link>https://nanx.me/tags/quarto/</link>
+      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/quarto/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
-      <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
+      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R Markdown</title>
+      <link>https://nanx.me/tags/r-markdown/</link>
+      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ggplot2</title>
+      <link>https://nanx.me/tags/ggplot2/</link>
+      <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/ggplot2/</guid>
       <description></description>
     </item>
     
@@ -98,15 +125,6 @@
     </item>
     
     <item>
-      <title>Quarto</title>
-      <link>https://nanx.me/tags/quarto/</link>
-      <pubDate>Wed, 10 May 2023 17:00:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/quarto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>web typography</title>
       <link>https://nanx.me/tags/web-typography/</link>
       <pubDate>Wed, 10 May 2023 17:00:00 +0000</pubDate>
@@ -139,15 +157,6 @@
       <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/pngquant/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R Markdown</title>
-      <link>https://nanx.me/tags/r-markdown/</link>
-      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r-markdown/</guid>
       <description></description>
     </item>
     
