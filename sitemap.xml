@@ -2,13 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/automation/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/post/knitr-chunk-option-error/</loc>
-    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/r-package-release-checklist/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/continuous-delivery/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/software-release/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/usethis/</loc>
+    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/knitr-chunk-option-error/</loc>
     <lastmod>2023-06-06T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/knitr/</loc>
@@ -17,13 +41,7 @@
     <loc>https://nanx.me/tags/quarto/</loc>
     <lastmod>2023-06-06T20:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/r-markdown/</loc>
-    <lastmod>2023-06-06T20:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2023-06-06T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/ggplot2/</loc>
@@ -77,9 +95,6 @@
     <loc>https://nanx.me/tags/pngquant/</loc>
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
-    <lastmod>2023-04-09T00:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/ragg/</loc>
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
@@ -111,9 +126,6 @@
     <lastmod>2023-01-29T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/rmarkdown-quarto-link-checker/</loc>
-    <lastmod>2023-01-16T20:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/automation/</loc>
     <lastmod>2023-01-16T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/blogdown/</loc>

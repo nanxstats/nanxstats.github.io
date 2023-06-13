@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>usethis on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/usethis/</link>
+    <description>Recent content in usethis on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 12 Jun 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/usethis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Context-Free R Package Release Checklist Generation with usethis</title>
+      <link>https://nanx.me/blog/post/r-package-release-checklist/</link>
+      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/r-package-release-checklist/</guid>
+      <description>The release checklist generation function described in this post is also available in this GitHub Gist.
+Photo by David Marcu. Software release at scale An agile, automated, and reliable release process is a key component of continuous delivery for modern software engineering teams. In particular, releasing new versions of R packages often involves going through a sequence of manual and automated checks to ensure quality and compliance. To scale up such efforts within a development team, it is crucial to follow a consistent releases checklist.</description>
+    </item>
+    
+  </channel>
+</rss>

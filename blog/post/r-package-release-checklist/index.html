@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator - Nan Xiao | 肖楠 </title>
+    <title> Context-Free R Package Release Checklist Generation with usethis - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="This post explains a common but confusing error message from knitr when rendering R Markdown or Quarto documents where a character value is assigned to a chunk option that only accepts numeric values.
+    <meta name="description" content="Discover how to automate the creation of R package release checklists with the usethis package. The post discusses the need for consistent release checklists and presents a context-free generator function that does not require a specific project or version control context. You will also find how to customize the function for your specific needs, making your R package release process more standard and efficient.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/knitr-chunk-option-error/" />
-    <meta property="og:title" content="Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator" />
-    <meta property="og:image" content="https://nanx.me/image/steve-tsang-OZjypvcu3uo-unsplash.jpg" />
-    <meta property="og:description" content="This post explains a common but confusing error message from knitr when rendering R Markdown or Quarto documents where a character value is assigned to a chunk option that only accepts numeric values.
+    <meta property="og:url" content="https://nanx.me/blog/post/r-package-release-checklist/" />
+    <meta property="og:title" content="Context-Free R Package Release Checklist Generation with usethis" />
+    <meta property="og:image" content="https://nanx.me/image/david-marcu-VfUN94cUy4o-unsplash.jpg" />
+    <meta property="og:description" content="Discover how to automate the creation of R package release checklists with the usethis package. The post discusses the need for consistent release checklists and presents a context-free generator function that does not require a specific project or version control context. You will also find how to customize the function for your specific needs, making your R package release process more standard and efficient.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator" />
-    <meta name="twitter:description" content="This post explains a common but confusing error message from knitr when rendering R Markdown or Quarto documents where a character value is assigned to a chunk option that only accepts numeric values.
+    <meta name="twitter:title" content="Context-Free R Package Release Checklist Generation with usethis" />
+    <meta name="twitter:description" content="Discover how to automate the creation of R package release checklists with the usethis package. The post discusses the need for consistent release checklists and presents a context-free generator function that does not require a specific project or version control context. You will also find how to customize the function for your specific needs, making your R package release process more standard and efficient.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/steve-tsang-OZjypvcu3uo-unsplash.jpg" />
+    <meta name="twitter:image" content="https://nanx.me/image/david-marcu-VfUN94cUy4o-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/knitr-chunk-option-error/">
+    <link rel="canonical" href="https://nanx.me/blog/post/r-package-release-checklist/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -121,7 +121,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</h1>
+                <h1 class="blog-post-title">Context-Free R Package Release Checklist Generation with usethis</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -132,12 +132,12 @@
                     
                     
 
-                    <span class="date middot" title='Tue Jun 6 2023 20:30:00 UTC'>
-                        2023-06-06
+                    <span class="date middot" title='Mon Jun 12 2023 20:30:00 UTC'>
+                        2023-06-12
                     </span>
 
                     <span class="reading-time middot">
-                        1 min read
+                        5 min read
                     </span>
 
                     <div class="d-none d-md-inline tags">
@@ -148,15 +148,23 @@
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/r-markdown">R Markdown</a>
+                                <a href="https://nanx.me/tags/r-packages">R packages</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/quarto">Quarto</a>
+                                <a href="https://nanx.me/tags/usethis">usethis</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/knitr">knitr</a>
+                                <a href="https://nanx.me/tags/automation">automation</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/software-release">software release</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/continuous-delivery">continuous delivery</a>
                             </li>
                             
                         </ul>
@@ -175,19 +183,187 @@
     
 
 
-<p>If Google leads you here, you probably have assigned a character value
-to a knitr chunk option such as <code>fig.width</code> or <code>fig.height</code>
-that only accepts numeric values, and your are trying to render
-that R Markdown or Quarto document.</p>
-<p>For example, it is easy to make this mistake:</p>
-<pre class="markdown"><code>```{r, fig.width=&quot;100%&quot;}
-plot(1:10)
-```</code></pre>
-<p>where you probably meant:</p>
-<pre class="markdown"><code>```{r, fig.width=6, out.width=&quot;100%&quot;}
-plot(1:10)
-```</code></pre>
-<p>That’s all! I hope this helps.</p>
+<blockquote>
+<p>The release checklist generation function described in this post is also
+available in this <a href="https://gist.github.com/nanxstats/a8d386c019bfa6e7eab671c090bca8ce">GitHub Gist</a>.</p>
+</blockquote>
+<div class="float">
+<img src="https://nanx.me/image/david-marcu-VfUN94cUy4o-unsplash.jpg" alt="Photo by David Marcu." />
+<div class="figcaption">Photo by <a href="https://unsplash.com/photos/VfUN94cUy4o">David Marcu</a>.</div>
+</div>
+<div id="software-release-at-scale" class="section level2">
+<h2>Software release at scale</h2>
+<p>An agile, automated, and reliable release process is a key component of
+<a href="https://abseil.io/resources/swe-book/html/ch24.html">continuous delivery</a>
+for modern software engineering teams.
+In particular, releasing new versions of R packages often involves
+going through a sequence of manual and automated checks to ensure
+quality and compliance.
+To scale up such efforts within a development team, it is crucial to follow
+a consistent releases checklist.</p>
+</div>
+<div id="the-usethis-solution" class="section level2">
+<h2>The usethis solution</h2>
+<p>Without a doubt,
+<a href="https://usethis.r-lib.org/reference/use_release_issue.html"><code>usethis::use_release_issue()</code></a>
+provides an excellent option for automating the creation of R package release
+checklist as GitHub issues, where one can check off the items formatted as a
+<a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists">task list</a>.
+Since it first became available in April 2019
+(usethis 1.5.0), I have successfully used a digested version of the checklist
+for releasing many of the R packages I maintain or contribute to.</p>
+<p>The only minor inconvenience I had before was that the context required for
+using this function can be a bit challenging to meet sometimes.
+As of June 2023, running the function assumes the following context
+from the project directory, Git setup, and GitHub configuration:</p>
+<ol style="list-style-type: decimal">
+<li>An R project (package) directory.</li>
+<li>A Git directory that has been initialized.</li>
+<li>A Git directory that has been configured with (GitHub) remote.</li>
+<li>Has internet connection, can push to the remote GitHub repository and
+create a GitHub issue via GitHub API.</li>
+</ol>
+<p>Besides, I am a bit paranoid about anything that automates
+to the extent that they speak or push buttons for me.
+To me, “zero trust” is a good principle to follow in such cases,
+as the time to review and copy-paste is probably negligible.</p>
+</div>
+<div id="a-context-free-release-checklist-generator" class="section level2">
+<h2>A context-free release checklist generator</h2>
+<p>Fortunately, after understanding how the usethis function works, we can build
+a sandboxed version: a new function that returns release checklists
+without requiring any project or version control context and does not
+interact with GitHub.</p>
+<p>The new function can be built by leveraging <code>usethis:::release_checklist()</code> and
+creating minimal <a href="https://abseil.io/resources/swe-book/html/ch13.html">mocking</a>
+artifacts that we used in developing the
+<a href="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/">R Markdown and Quarto project link checker</a>.
+We can also set a small number of parameters with
+<a href="https://nanx.me/blog/post/sensible-defaults/">sensible default values</a>
+for flexibility.</p>
+<p>Here is how this new function <code>use_release_checklist()</code> could look like:</p>
+<pre class="r"><code>#&#39; Create a release checklist without requiring context
+#&#39;
+#&#39; @param package Package name.
+#&#39; @param version Release version number.
+#&#39; @param on_cran Is the package already on CRAN? Default is `TRUE`.
+#&#39; @param has_news Does the package use `NEWS.md`? Default is `TRUE`.
+#&#39; @param has_readme Does the package use `README.Rmd`? Default is `FALSE`.
+#&#39; @param has_lifecycle Does the package use lifecycle? Default is `FALSE`.
+#&#39;
+#&#39; @return Release checklist in Markdown format (invisibly).
+#&#39;
+#&#39; @examples
+#&#39; use_release_checklist(&quot;pkgname&quot;, version = &quot;0.2.0&quot;)
+#&#39; use_release_checklist(&quot;pkgname&quot;, version = &quot;0.1.0&quot;, on_cran = FALSE)
+use_release_checklist &lt;- function(
+    package,
+    version,
+    on_cran = TRUE,
+    has_news = TRUE,
+    has_readme = FALSE,
+    has_lifecycle = FALSE) {
+  checklist &lt;- getFromNamespace(&quot;release_checklist&quot;, &quot;usethis&quot;)
+
+  dir &lt;- tempfile()
+  dir.create(dir)
+  on.exit(unlink(dir, recursive = TRUE), add = TRUE)
+
+  withr::with_dir(dir, {
+    write(paste(&quot;Package:&quot;, package), &quot;DESCRIPTION&quot;)
+    if (has_news) file.create(&quot;NEWS.md&quot;)
+    if (has_lifecycle) write(&quot;Imports: lifecycle&quot;, &quot;DESCRIPTION&quot;, append = TRUE)
+    if (has_readme) file.create(&quot;README.Rmd&quot;)
+  })
+
+  mkd &lt;- usethis::with_project(
+    dir, checklist(version = version, on_cran = on_cran),
+    quiet = TRUE
+  )
+
+  cat(mkd, sep = &quot;\n&quot;)
+
+  invisible(mkd)
+}</code></pre>
+<p>For regular releases, one can run this function anywhere to get a release checklist:</p>
+<pre class="r"><code>use_release_checklist(&quot;pkgname&quot;, version = &quot;0.2.0&quot;)
+#&gt; Prepare for release:
+#&gt; 
+#&gt; * [ ] `git pull`
+#&gt; * [ ] Check [current CRAN check results](https://cran.rstudio.org/web/checks/check_results_pkgname.html)
+#&gt; * [ ] [Polish NEWS](https://style.tidyverse.org/news.html#news-release)
+#&gt; * [ ] `usethis::use_github_links()`
+#&gt; * [ ] `urlchecker::url_check()`
+#&gt; * [ ] `devtools::check(remote = TRUE, manual = TRUE)`
+#&gt; * [ ] `devtools::check_win_devel()`
+#&gt; * [ ] `revdepcheck::revdep_check(num_workers = 4)`
+#&gt; * [ ] Update `cran-comments.md`
+#&gt; * [ ] `git push`
+#&gt; * [ ] Draft blog post
+#&gt; 
+#&gt; Submit to CRAN:
+#&gt; 
+#&gt; * [ ] `usethis::use_version(&#39;minor&#39;)`
+#&gt; * [ ] `devtools::submit_cran()`
+#&gt; * [ ] Approve email
+#&gt; 
+#&gt; Wait for CRAN...
+#&gt; 
+#&gt; * [ ] Accepted 🎉
+#&gt; * [ ] Add preemptive link to blog post in pkgdown news menu
+#&gt; * [ ] `usethis::use_github_release()`
+#&gt; * [ ] `usethis::use_dev_version(push = TRUE)`
+#&gt; * [ ] Finish blog post
+#&gt; * [ ] Tweet</code></pre>
+<p>Similarly, for first releases that require additional checks, one can use:</p>
+<pre class="r"><code>use_release_checklist(&quot;pkgname&quot;, version = &quot;0.1.0&quot;, on_cran = FALSE)
+#&gt; First release:
+#&gt; 
+#&gt; * [ ] `usethis::use_cran_comments()`
+#&gt; * [ ] Update (aspirational) install instructions in README
+#&gt; * [ ] Proofread `Title:` and `Description:`
+#&gt; * [ ] Check that all exported functions have `@return` and `@examples`
+#&gt; * [ ] Check that `Authors@R:` includes a copyright holder (role &#39;cph&#39;)
+#&gt; * [ ] Check [licensing of included files](https://r-pkgs.org/license.html#sec-code-you-bundle)
+#&gt; * [ ] Review &lt;https://github.com/DavisVaughan/extrachecks&gt;
+#&gt; 
+#&gt; Prepare for release:
+#&gt; 
+#&gt; * [ ] `git pull`
+#&gt; * [ ] `usethis::use_github_links()`
+#&gt; * [ ] `urlchecker::url_check()`
+#&gt; * [ ] `devtools::check(remote = TRUE, manual = TRUE)`
+#&gt; * [ ] `devtools::check_win_devel()`
+#&gt; * [ ] `git push`
+#&gt; * [ ] Draft blog post
+#&gt; 
+#&gt; Submit to CRAN:
+#&gt; 
+#&gt; * [ ] `usethis::use_version(&#39;minor&#39;)`
+#&gt; * [ ] `devtools::submit_cran()`
+#&gt; * [ ] Approve email
+#&gt; 
+#&gt; Wait for CRAN...
+#&gt; 
+#&gt; * [ ] Accepted 🎉
+#&gt; * [ ] Add preemptive link to blog post in pkgdown news menu
+#&gt; * [ ] `usethis::use_github_release()`
+#&gt; * [ ] `usethis::use_dev_version(push = TRUE)`
+#&gt; * [ ] Finish blog post
+#&gt; * [ ] Tweet</code></pre>
+</div>
+<div id="closing-thoughts" class="section level2">
+<h2>Closing thoughts</h2>
+<p>You can adjust the other input arguments to suit the particular needs of
+your packages. In addition, you may consider customizing the returned
+character vector of Markdown text to incorporate package-specific or
+organization-specific workflows, and even copy the returned text
+to clipboard automatically.</p>
+<p>Of course, to enforce the same standard across team members,
+proper training and communication is essential to ensure that everyone
+understands what each checklist item means and how to handle common and
+new situations.</p>
+</div>
 
 
 
@@ -199,15 +375,11 @@ plot(1:10)
                         <div class="col-sm-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/responsive-design-for-statistical-graphics/">« Responsive Design for Statistical Graphics with Shiny and ggplot2</a>
+                                <a href="https://nanx.me/blog/post/knitr-chunk-option-error/">« Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</a>
                             </div>
                             
                         </div>
                         <div class="col-sm-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/r-package-release-checklist/">Context-Free R Package Release Checklist Generation with usethis »</a>
-                            </div>
                             
                         </div>
                     </div>
@@ -344,6 +516,9 @@ plot(1:10)
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>

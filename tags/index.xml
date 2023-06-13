@@ -6,7 +6,61 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 06 Jun 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jun 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>continuous delivery</title>
+      <link>https://nanx.me/tags/continuous-delivery/</link>
+      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/continuous-delivery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>software release</title>
+      <link>https://nanx.me/tags/software-release/</link>
+      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/software-release/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>usethis</title>
+      <link>https://nanx.me/tags/usethis/</link>
+      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/tags/usethis/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>knitr</title>
       <link>https://nanx.me/tags/knitr/</link>
@@ -22,15 +76,6 @@
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/quarto/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     
@@ -161,15 +206,6 @@
     </item>
     
     <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/r-packages/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>ragg</title>
       <link>https://nanx.me/tags/ragg/</link>
       <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
@@ -229,15 +265,6 @@
       <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/tags/gpu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
-      
-      <guid>https://nanx.me/tags/automation/</guid>
       <description></description>
     </item>
     

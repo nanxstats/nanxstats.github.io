@@ -1,0 +1,157 @@
+---
+title: "Context-Free R Package Release Checklist Generation with usethis"
+author: "Nan Xiao"
+date: "2023-06-12T20:30:00"
+slug: r-package-release-checklist
+categories: []
+tags:
+  - R
+  - R packages
+  - usethis
+  - automation
+  - software release
+  - continuous delivery
+meta_img: "image/david-marcu-VfUN94cUy4o-unsplash.jpg"
+description: >
+  Discover how to automate the creation of R package release checklists with
+  the usethis package. The post discusses the need for consistent release
+  checklists and presents a context-free generator function that does not
+  require a specific project or version control context.
+  You will also find how to customize the function for your specific needs,
+  making your R package release process more standard and efficient.
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+> The release checklist generation function described in this post is also
+> available in this [GitHub Gist](https://gist.github.com/nanxstats/a8d386c019bfa6e7eab671c090bca8ce).
+
+![Photo by [David Marcu](https://unsplash.com/photos/VfUN94cUy4o).](/image/david-marcu-VfUN94cUy4o-unsplash.jpg)
+
+## Software release at scale
+
+An agile, automated, and reliable release process is a key component of
+[continuous delivery](https://abseil.io/resources/swe-book/html/ch24.html)
+for modern software engineering teams.
+In particular, releasing new versions of R packages often involves
+going through a sequence of manual and automated checks to ensure
+quality and compliance.
+To scale up such efforts within a development team, it is crucial to follow
+a consistent releases checklist.
+
+## The usethis solution
+
+Without a doubt,
+[`usethis::use_release_issue()`](https://usethis.r-lib.org/reference/use_release_issue.html)
+provides an excellent option for automating the creation of R package release
+checklist as GitHub issues, where one can check off the items formatted as a
+[task list](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists).
+Since it first became available in April 2019
+(usethis 1.5.0), I have successfully used a digested version of the checklist
+for releasing many of the R packages I maintain or contribute to.
+
+The only minor inconvenience I had before was that the context required for
+using this function can be a bit challenging to meet sometimes.
+As of June 2023, running the function assumes the following context
+from the project directory, Git setup, and GitHub configuration:
+
+1. An R project (package) directory.
+2. A Git directory that has been initialized.
+3. A Git directory that has been configured with (GitHub) remote.
+4. Has internet connection, can push to the remote GitHub repository and
+   create a GitHub issue via GitHub API.
+
+Besides, I am a bit paranoid about anything that automates
+to the extent that they speak or push buttons for me.
+To me, "zero trust" is a good principle to follow in such cases,
+as the time to review and copy-paste is probably negligible.
+
+## A context-free release checklist generator
+
+Fortunately, after understanding how the usethis function works, we can build
+a sandboxed version: a new function that returns release checklists
+without requiring any project or version control context and does not
+interact with GitHub.
+
+The new function can be built by leveraging `usethis:::release_checklist()` and
+creating minimal [mocking](https://abseil.io/resources/swe-book/html/ch13.html)
+artifacts that we used in developing the
+[R Markdown and Quarto project link checker](https://nanx.me/blog/post/rmarkdown-quarto-link-checker/).
+We can also set a small number of parameters with
+[sensible default values](https://nanx.me/blog/post/sensible-defaults/)
+for flexibility.
+
+Here is how this new function `use_release_checklist()` could look like:
+
+```{r}
+#' Create a release checklist without requiring context
+#'
+#' @param package Package name.
+#' @param version Release version number.
+#' @param on_cran Is the package already on CRAN? Default is `TRUE`.
+#' @param has_news Does the package use `NEWS.md`? Default is `TRUE`.
+#' @param has_readme Does the package use `README.Rmd`? Default is `FALSE`.
+#' @param has_lifecycle Does the package use lifecycle? Default is `FALSE`.
+#'
+#' @return Release checklist in Markdown format (invisibly).
+#'
+#' @examples
+#' use_release_checklist("pkgname", version = "0.2.0")
+#' use_release_checklist("pkgname", version = "0.1.0", on_cran = FALSE)
+use_release_checklist <- function(
+    package,
+    version,
+    on_cran = TRUE,
+    has_news = TRUE,
+    has_readme = FALSE,
+    has_lifecycle = FALSE) {
+  checklist <- getFromNamespace("release_checklist", "usethis")
+
+  dir <- tempfile()
+  dir.create(dir)
+  on.exit(unlink(dir, recursive = TRUE), add = TRUE)
+
+  withr::with_dir(dir, {
+    write(paste("Package:", package), "DESCRIPTION")
+    if (has_news) file.create("NEWS.md")
+    if (has_lifecycle) write("Imports: lifecycle", "DESCRIPTION", append = TRUE)
+    if (has_readme) file.create("README.Rmd")
+  })
+
+  mkd <- usethis::with_project(
+    dir, checklist(version = version, on_cran = on_cran),
+    quiet = TRUE
+  )
+
+  cat(mkd, sep = "\n")
+
+  invisible(mkd)
+}
+```
+
+For regular releases, one can run this function anywhere to get a release checklist:
+
+```{r}
+use_release_checklist("pkgname", version = "0.2.0")
+```
+
+Similarly, for first releases that require additional checks, one can use:
+
+```{r}
+use_release_checklist("pkgname", version = "0.1.0", on_cran = FALSE)
+```
+
+## Closing thoughts
+
+You can adjust the other input arguments to suit the particular needs of
+your packages. In addition, you may consider customizing the returned
+character vector of Markdown text to incorporate package-specific or
+organization-specific workflows, and even copy the returned text
+to clipboard automatically.
+
+Of course, to enforce the same standard across team members,
+proper training and communication is essential to ensure that everyone
+understands what each checklist item means and how to handle common and
+new situations.
