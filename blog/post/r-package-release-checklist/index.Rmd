@@ -39,7 +39,7 @@ In particular, releasing new versions of R packages often involves
 going through a sequence of manual and automated checks to ensure
 quality and compliance.
 To scale up such efforts within a development team, it is crucial to follow
-a consistent releases checklist.
+a consistent release checklist.
 
 ## The usethis solution
 
