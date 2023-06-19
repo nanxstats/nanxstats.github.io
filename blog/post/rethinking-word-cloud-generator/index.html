@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Context-Free R Package Release Checklist Generation with usethis - Nan Xiao | 肖楠 </title>
+    <title> Rethinking the Word Cloud Generator - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Discover how to automate the creation of R package release checklists with the usethis package. The post discusses the need for consistent release checklists and presents a context-free generator function that does not require a specific project or version control context. You will also find how to customize the function for your specific needs, making your R package release process more standard and efficient.
+    <meta name="description" content="Discover the interactive word cloud generator, an enhanced fork of Jason Davies&#39; original project. Learn how the tool enables improved word cloud visualizations with additional features like color palettes, operating system-specific fonts, and sensible default values. Explore a streamlined, quality-focused SVG to PNG conversion workflow.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/r-package-release-checklist/" />
-    <meta property="og:title" content="Context-Free R Package Release Checklist Generation with usethis" />
-    <meta property="og:image" content="https://nanx.me/image/david-marcu-VfUN94cUy4o-unsplash.jpg" />
-    <meta property="og:description" content="Discover how to automate the creation of R package release checklists with the usethis package. The post discusses the need for consistent release checklists and presents a context-free generator function that does not require a specific project or version control context. You will also find how to customize the function for your specific needs, making your R package release process more standard and efficient.
+    <meta property="og:url" content="https://nanx.me/blog/post/rethinking-word-cloud-generator/" />
+    <meta property="og:title" content="Rethinking the Word Cloud Generator" />
+    <meta property="og:image" content="https://nanx.me/image/chatgpt-release-notes-wordcloud.png" />
+    <meta property="og:description" content="Discover the interactive word cloud generator, an enhanced fork of Jason Davies&#39; original project. Learn how the tool enables improved word cloud visualizations with additional features like color palettes, operating system-specific fonts, and sensible default values. Explore a streamlined, quality-focused SVG to PNG conversion workflow.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Context-Free R Package Release Checklist Generation with usethis" />
-    <meta name="twitter:description" content="Discover how to automate the creation of R package release checklists with the usethis package. The post discusses the need for consistent release checklists and presents a context-free generator function that does not require a specific project or version control context. You will also find how to customize the function for your specific needs, making your R package release process more standard and efficient.
+    <meta name="twitter:title" content="Rethinking the Word Cloud Generator" />
+    <meta name="twitter:description" content="Discover the interactive word cloud generator, an enhanced fork of Jason Davies&#39; original project. Learn how the tool enables improved word cloud visualizations with additional features like color palettes, operating system-specific fonts, and sensible default values. Explore a streamlined, quality-focused SVG to PNG conversion workflow.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/david-marcu-VfUN94cUy4o-unsplash.jpg" />
+    <meta name="twitter:image" content="https://nanx.me/image/chatgpt-release-notes-wordcloud.png" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/r-package-release-checklist/">
+    <link rel="canonical" href="https://nanx.me/blog/post/rethinking-word-cloud-generator/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -121,7 +121,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Context-Free R Package Release Checklist Generation with usethis</h1>
+                <h1 class="blog-post-title">Rethinking the Word Cloud Generator</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -132,39 +132,31 @@
                     
                     
 
-                    <span class="date middot" title='Mon Jun 12 2023 20:30:00 UTC'>
-                        2023-06-12
+                    <span class="date middot" title='Mon Jun 19 2023 18:00:00 UTC'>
+                        2023-06-19
                     </span>
 
                     <span class="reading-time middot">
-                        5 min read
+                        4 min read
                     </span>
 
                     <div class="d-none d-md-inline tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/r">R</a>
+                                <a href="https://nanx.me/tags/word-cloud">word cloud</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                                <a href="https://nanx.me/tags/data-visualization">data visualization</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/usethis">usethis</a>
+                                <a href="https://nanx.me/tags/color-scales">color scales</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/automation">automation</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/software-release">software release</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/continuous-delivery">continuous delivery</a>
+                                <a href="https://nanx.me/tags/software-architecture">software architecture</a>
                             </li>
                             
                         </ul>
@@ -183,186 +175,98 @@
     
 
 
-<blockquote>
-<p>The release checklist generation function described in this post is also
-available in this <a href="https://gist.github.com/nanxstats/a8d386c019bfa6e7eab671c090bca8ce">GitHub Gist</a>.</p>
-</blockquote>
+<p>As part of my JavaScript learning journey, I created a fork of
+<a href="https://www.jasondavies.com/wordcloud/">Jason Davies’ word cloud generator</a>
+and added some new features with a few adjustments to the default parameters.
+The fork is hosted at <a href="https://nanx.me/wordcloud/">nanx.me/wordcloud/</a> and
+the source code is available on <a href="https://github.com/nanxstats/wordcloud">GitHub</a>.
+Here is an example word cloud produced by the generator:</p>
 <div class="float">
-<img src="https://nanx.me/image/david-marcu-VfUN94cUy4o-unsplash.jpg" alt="Photo by David Marcu." />
-<div class="figcaption">Photo by <a href="https://unsplash.com/photos/VfUN94cUy4o">David Marcu</a>.</div>
+<img src="https://nanx.me/image/chatgpt-release-notes-wordcloud.png" alt="A word cloud visualization for ChatGPT release notes produced by the generator with default parameters. Font: Founders Grotesk Condensed Regular (included with macOS)." />
+<div class="figcaption">A word cloud visualization for <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a> produced by the generator with default parameters. Font: Founders Grotesk Condensed Regular (included with macOS).</div>
 </div>
-<div id="software-release-at-scale" class="section level2">
-<h2>Software release at scale</h2>
-<p>An agile, automated, and reliable release process is a key component of
-<a href="https://abseil.io/resources/swe-book/html/ch24.html">continuous delivery</a>
-for modern software engineering teams.
-In particular, releasing new versions of R packages often involves
-going through a sequence of manual and automated checks to ensure
-quality and compliance.
-To scale up such efforts within a development team, it is crucial to follow
-a consistent release checklist.</p>
+<p>You can use this tool to create word cloud visualizations by simply pasting
+text and clicking the “Go” button until a satisfactory layout is produced,
+then export the result as a SVG image for further editing.
+Like the <a href="https://nanx.me/blog/post/gpu-selector/">deep learning GPU selector</a>,
+it is a pure client-side JavaScript solution and does not require any
+server-side processing.</p>
+<div id="motivation" class="section level2">
+<h2>Motivation</h2>
+<p>Text data is more challenging to visualize without
+<a href="https://doi.org/10.3115/v1/W14-3110">explicit modeling</a>
+because of its unstructured nature compared to tabular data.
+Although sometimes controversial, word clouds are a common visualization
+method for text data. Owing to their popularity, you can find implementations
+for drawing word clouds in practically any programming language or
+visualization library. However, many of the existing implementations
+do not have the layout quality or aesthetic appeal that I am looking for,
+at least not without extensive parameter tuning efforts.</p>
 </div>
-<div id="the-usethis-solution" class="section level2">
-<h2>The usethis solution</h2>
-<p>Without a doubt,
-<a href="https://usethis.r-lib.org/reference/use_release_issue.html"><code>usethis::use_release_issue()</code></a>
-provides an excellent option for automating the creation of R package release
-checklist as GitHub issues, where one can check off the items formatted as a
-<a href="https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-task-lists">task list</a>.
-Since it first became available in April 2019
-(usethis 1.5.0), I have successfully used a digested version of the checklist
-for releasing many of the R packages I maintain or contribute to.</p>
-<p>The only minor inconvenience I had before was that the context required for
-using this function can be a bit challenging to meet sometimes.
-As of June 2023, running the function assumes the following context
-from the project directory, Git setup, and GitHub configuration:</p>
+<div id="solution" class="section level2">
+<h2>Solution</h2>
+<p>A few years back, Jason Davies launched an outstanding
+<a href="https://www.jasondavies.com/wordcloud/">word cloud generator</a> built on D3.js,
+a JavaScript library for creating dynamic, interactive data visualizations.
+Its layout algorithm, input parameter design, and user interface details
+make it one of the most satisfactory implementations in my opinion.
+However, as the original application has matured over the years,
+it appeared to be missing some essential options and a few default values
+could use an update.</p>
+<p>With this in mind, I created the forked version. The most visible changes
+are on colors, typefaces, and default values:</p>
+<ul>
+<li>Add a color palette selection feature, offering a wide range of options
+from Tableau, Viridis, ColorBrewer, ggplot2, D3, Okabe-Ito, and Gephi.</li>
+<li>Use a default font based on user’s operating system.
+<ul>
+<li>macOS: Avenir Next Condensed Medium</li>
+<li>Windows: Franklin Gothic Medium</li>
+<li>Linux: Liberation Sans Bold</li>
+</ul></li>
+<li>Update the default values for graphical parameter inputs.
+<ul>
+<li>Number of text orientations: from 5 to 2.</li>
+<li>Text angle range (from): from -60° to -90°.</li>
+<li>Text angle range (to): from 60° to 0°.</li>
+</ul></li>
+</ul>
+<p>For the detailed changeset, check out the GitHub repository.</p>
+</div>
+<div id="appendix-command-line-workflow-to-convert-svg-to-png" class="section level2">
+<h2>Appendix: Command-line workflow to convert SVG to PNG</h2>
+<p>Once you have tried different layouts and downloaded the result as
+<code>wordcloud.svg</code>, it is useful to convert the SVG image to a high-quality,
+optimized PNG image for further use because not all applications can render or
+embed SVG images consistently. Note that this workflow might not be the one
+with the least number of steps or most automated, but emphasizes conversion
+quality and robustness.</p>
 <ol style="list-style-type: decimal">
-<li>An R project (package) directory.</li>
-<li>A Git directory that has been initialized.</li>
-<li>A Git directory that has been configured with (GitHub) remote.</li>
-<li>Has internet connection, can push to the remote GitHub repository and
-create a GitHub issue via GitHub API.</li>
+<li><p>Convert SVG to PDF.</p>
+<p>Open the SVG file in the web browser and print it into a PDF file
+<code>wordcloud.pdf</code>. For large-scale conversion tasks, you can automate
+this step by using headless browsers, for example, via tools like
+<a href="https://nanx.me/blog/post/chromote-pdf-automation/">chromote</a>.</p>
+<p>To accurately print the SVG with the preferred typeface, make sure
+that your operating system has the specified font installed.
+The SVG image, in this case, does not embed the font as data or polygons.</p></li>
+<li><p>Crop the PDF.</p>
+<p>Use <code>pdfcrop</code> to crop the PDF image to remove the white margins:</p>
+<pre class="bash"><code>pdfcrop wordcloud.pdf</code></pre>
+<p>This will create a cropped PDF file <code>wordcloud-crop.pdf</code>.
+<code>pdfcrop</code> is a command-line tool that comes with TeX Live.</p></li>
+<li><p>Convert PDF to PNG.</p>
+<p>Use ImageMagick to convert the PDF image to a PNG image in 300 DPI:</p>
+<pre class="bash"><code>convert -density 300 wordcloud-crop.pdf wordcloud.png</code></pre></li>
+<li><p>Compress the PNG image.</p>
+<p>Use <code>pngquant</code> to compress the PNG image:</p>
+<pre class="bash"><code>pngquant wordcloud.png</code></pre>
+<p>This will create a compressed PNG file <code>wordcloud-fs8.png</code>.</p></li>
 </ol>
-<p>Besides, I am a bit paranoid about anything that automates
-to the extent that they speak or push buttons for me.
-To me, “zero trust” is a good principle to follow in such cases,
-as the time to review and copy-paste is probably negligible.</p>
-</div>
-<div id="a-context-free-release-checklist-generator" class="section level2">
-<h2>A context-free release checklist generator</h2>
-<p>Fortunately, after understanding how the usethis function works, we can build
-a sandboxed version: a new function that returns release checklists
-without requiring any project or version control context and does not
-interact with GitHub.</p>
-<p>The new function can be built by leveraging <code>usethis:::release_checklist()</code> and
-creating minimal <a href="https://abseil.io/resources/swe-book/html/ch13.html">mocking</a>
-artifacts that we used in developing the
-<a href="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/">R Markdown and Quarto project link checker</a>.
-We can also set a small number of parameters with
-<a href="https://nanx.me/blog/post/sensible-defaults/">sensible default values</a>
-for flexibility.</p>
-<p>Here is how this new function <code>use_release_checklist()</code> could look like:</p>
-<pre class="r"><code>#&#39; Create a release checklist without requiring context
-#&#39;
-#&#39; @param package Package name.
-#&#39; @param version Release version number.
-#&#39; @param on_cran Is the package already on CRAN? Default is `TRUE`.
-#&#39; @param has_news Does the package use `NEWS.md`? Default is `TRUE`.
-#&#39; @param has_readme Does the package use `README.Rmd`? Default is `FALSE`.
-#&#39; @param has_lifecycle Does the package use lifecycle? Default is `FALSE`.
-#&#39;
-#&#39; @return Release checklist in Markdown format (invisibly).
-#&#39;
-#&#39; @examples
-#&#39; use_release_checklist(&quot;pkgname&quot;, version = &quot;0.2.0&quot;)
-#&#39; use_release_checklist(&quot;pkgname&quot;, version = &quot;0.1.0&quot;, on_cran = FALSE)
-use_release_checklist &lt;- function(
-    package,
-    version,
-    on_cran = TRUE,
-    has_news = TRUE,
-    has_readme = FALSE,
-    has_lifecycle = FALSE) {
-  checklist &lt;- getFromNamespace(&quot;release_checklist&quot;, &quot;usethis&quot;)
-
-  dir &lt;- tempfile()
-  dir.create(dir)
-  on.exit(unlink(dir, recursive = TRUE), add = TRUE)
-
-  withr::with_dir(dir, {
-    write(paste(&quot;Package:&quot;, package), &quot;DESCRIPTION&quot;)
-    if (has_news) file.create(&quot;NEWS.md&quot;)
-    if (has_lifecycle) write(&quot;Imports: lifecycle&quot;, &quot;DESCRIPTION&quot;, append = TRUE)
-    if (has_readme) file.create(&quot;README.Rmd&quot;)
-  })
-
-  mkd &lt;- usethis::with_project(
-    dir, checklist(version = version, on_cran = on_cran),
-    quiet = TRUE
-  )
-
-  cat(mkd, sep = &quot;\n&quot;)
-
-  invisible(mkd)
-}</code></pre>
-<p>For regular releases, one can run this function anywhere to get a release checklist:</p>
-<pre class="r"><code>use_release_checklist(&quot;pkgname&quot;, version = &quot;0.2.0&quot;)
-#&gt; Prepare for release:
-#&gt; 
-#&gt; * [ ] `git pull`
-#&gt; * [ ] Check [current CRAN check results](https://cran.rstudio.org/web/checks/check_results_pkgname.html)
-#&gt; * [ ] [Polish NEWS](https://style.tidyverse.org/news.html#news-release)
-#&gt; * [ ] `usethis::use_github_links()`
-#&gt; * [ ] `urlchecker::url_check()`
-#&gt; * [ ] `devtools::check(remote = TRUE, manual = TRUE)`
-#&gt; * [ ] `devtools::check_win_devel()`
-#&gt; * [ ] `revdepcheck::revdep_check(num_workers = 4)`
-#&gt; * [ ] Update `cran-comments.md`
-#&gt; * [ ] `git push`
-#&gt; * [ ] Draft blog post
-#&gt; 
-#&gt; Submit to CRAN:
-#&gt; 
-#&gt; * [ ] `usethis::use_version(&#39;minor&#39;)`
-#&gt; * [ ] `devtools::submit_cran()`
-#&gt; * [ ] Approve email
-#&gt; 
-#&gt; Wait for CRAN...
-#&gt; 
-#&gt; * [ ] Accepted 🎉
-#&gt; * [ ] Add preemptive link to blog post in pkgdown news menu
-#&gt; * [ ] `usethis::use_github_release()`
-#&gt; * [ ] `usethis::use_dev_version(push = TRUE)`
-#&gt; * [ ] Finish blog post
-#&gt; * [ ] Tweet</code></pre>
-<p>Similarly, for first releases that require additional checks, one can use:</p>
-<pre class="r"><code>use_release_checklist(&quot;pkgname&quot;, version = &quot;0.1.0&quot;, on_cran = FALSE)
-#&gt; First release:
-#&gt; 
-#&gt; * [ ] `usethis::use_cran_comments()`
-#&gt; * [ ] Update (aspirational) install instructions in README
-#&gt; * [ ] Proofread `Title:` and `Description:`
-#&gt; * [ ] Check that all exported functions have `@return` and `@examples`
-#&gt; * [ ] Check that `Authors@R:` includes a copyright holder (role &#39;cph&#39;)
-#&gt; * [ ] Check [licensing of included files](https://r-pkgs.org/license.html#sec-code-you-bundle)
-#&gt; * [ ] Review &lt;https://github.com/DavisVaughan/extrachecks&gt;
-#&gt; 
-#&gt; Prepare for release:
-#&gt; 
-#&gt; * [ ] `git pull`
-#&gt; * [ ] `usethis::use_github_links()`
-#&gt; * [ ] `urlchecker::url_check()`
-#&gt; * [ ] `devtools::check(remote = TRUE, manual = TRUE)`
-#&gt; * [ ] `devtools::check_win_devel()`
-#&gt; * [ ] `git push`
-#&gt; * [ ] Draft blog post
-#&gt; 
-#&gt; Submit to CRAN:
-#&gt; 
-#&gt; * [ ] `usethis::use_version(&#39;minor&#39;)`
-#&gt; * [ ] `devtools::submit_cran()`
-#&gt; * [ ] Approve email
-#&gt; 
-#&gt; Wait for CRAN...
-#&gt; 
-#&gt; * [ ] Accepted 🎉
-#&gt; * [ ] Add preemptive link to blog post in pkgdown news menu
-#&gt; * [ ] `usethis::use_github_release()`
-#&gt; * [ ] `usethis::use_dev_version(push = TRUE)`
-#&gt; * [ ] Finish blog post
-#&gt; * [ ] Tweet</code></pre>
-</div>
-<div id="closing-thoughts" class="section level2">
-<h2>Closing thoughts</h2>
-<p>You can adjust the other input arguments to suit the particular needs of
-your packages. In addition, you may consider customizing the returned
-character vector of Markdown text to incorporate package-specific or
-organization-specific workflows, and even copy the returned text
-to clipboard automatically.</p>
-<p>Of course, to enforce the same standard across team members,
-proper training and communication is essential to ensure that everyone
-understands what each checklist item means and how to handle common and
-new situations.</p>
+<p>Finally, for macOS users, you can install all the mentioned command-line tools
+using Homebrew with the following commands:</p>
+<pre class="bash"><code>brew install imagemagick pngquant
+brew install --cask mactex</code></pre>
 </div>
 
 
@@ -375,15 +279,11 @@ new situations.</p>
                         <div class="col-sm-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/knitr-chunk-option-error/">« Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</a>
+                                <a href="https://nanx.me/blog/post/r-package-release-checklist/">« Context-Free R Package Release Checklist Generation with usethis</a>
                             </div>
                             
                         </div>
                         <div class="col-sm-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/rethinking-word-cloud-generator/">Rethinking the Word Cloud Generator »</a>
-                            </div>
                             
                         </div>
                     </div>
@@ -520,9 +420,6 @@ new situations.</p>
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>

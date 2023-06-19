@@ -1,0 +1,135 @@
+---
+title: "Rethinking the Word Cloud Generator"
+author: "Nan Xiao"
+date: "2023-06-19T18:00:00"
+slug: rethinking-word-cloud-generator
+categories: []
+tags:
+  - word cloud
+  - data visualization
+  - color scales
+  - software architecture
+meta_img: "image/chatgpt-release-notes-wordcloud.png"
+description: >
+  Discover the interactive word cloud generator, an enhanced fork of
+  Jason Davies' original project. Learn how the tool enables improved
+  word cloud visualizations with additional features like color palettes,
+  operating system-specific fonts, and sensible default values.
+  Explore a streamlined, quality-focused SVG to PNG conversion workflow.
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
+```
+
+As part of my JavaScript learning journey, I created a fork of
+[Jason Davies' word cloud generator](https://www.jasondavies.com/wordcloud/)
+and added some new features with a few adjustments to the default parameters.
+The fork is hosted at [nanx.me/wordcloud/](https://nanx.me/wordcloud/) and
+the source code is available on [GitHub](https://github.com/nanxstats/wordcloud).
+Here is an example word cloud produced by the generator:
+
+![A word cloud visualization for [ChatGPT release notes](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) produced by the generator with default parameters. Font: Founders Grotesk Condensed Regular (included with macOS).](/image/chatgpt-release-notes-wordcloud.png)
+
+You can use this tool to create word cloud visualizations by simply pasting
+text and clicking the "Go" button until a satisfactory layout is produced,
+then export the result as a SVG image for further editing.
+Like the [deep learning GPU selector](https://nanx.me/blog/post/gpu-selector/),
+it is a pure client-side JavaScript solution and does not require any
+server-side processing.
+
+## Motivation
+
+Text data is more challenging to visualize without
+[explicit modeling](https://doi.org/10.3115/v1/W14-3110)
+because of its unstructured nature compared to tabular data.
+Although sometimes controversial, word clouds are a common visualization
+method for text data. Owing to their popularity, you can find implementations
+for drawing word clouds in practically any programming language or
+visualization library. However, many of the existing implementations
+do not have the layout quality or aesthetic appeal that I am looking for,
+at least not without extensive parameter tuning efforts.
+
+## Solution
+
+A few years back, Jason Davies launched an outstanding
+[word cloud generator](https://www.jasondavies.com/wordcloud/) built on D3.js,
+a JavaScript library for creating dynamic, interactive data visualizations.
+Its layout algorithm, input parameter design, and user interface details
+make it one of the most satisfactory implementations in my opinion.
+However, as the original application has matured over the years,
+it appeared to be missing some essential options and a few default values
+could use an update.
+
+With this in mind, I created the forked version. The most visible changes
+are on colors, typefaces, and default values:
+
+- Add a color palette selection feature, offering a wide range of options
+  from Tableau, Viridis, ColorBrewer, ggplot2, D3, Okabe-Ito, and Gephi.
+- Use a default font based on user's operating system.
+  - macOS: Avenir Next Condensed Medium
+  - Windows: Franklin Gothic Medium
+  - Linux: Liberation Sans Bold
+- Update the default values for graphical parameter inputs.
+  - Number of text orientations: from 5 to 2.
+  - Text angle range (from): from -60&deg; to -90&deg;.
+  - Text angle range (to): from 60&deg; to 0&deg;.
+
+For the detailed changeset, check out the GitHub repository.
+
+## Appendix: Command-line workflow to convert SVG to PNG
+
+Once you have tried different layouts and downloaded the result as
+`wordcloud.svg`, it is useful to convert the SVG image to a high-quality,
+optimized PNG image for further use because not all applications can render or
+embed SVG images consistently. Note that this workflow might not be the one
+with the least number of steps or most automated, but emphasizes conversion
+quality and robustness.
+
+1. Convert SVG to PDF.
+
+   Open the SVG file in the web browser and print it into a PDF file
+   `wordcloud.pdf`. For large-scale conversion tasks, you can automate
+   this step by using headless browsers, for example, via tools like
+   [chromote](https://nanx.me/blog/post/chromote-pdf-automation/).
+
+   To accurately print the SVG with the preferred typeface, make sure
+   that your operating system has the specified font installed.
+   The SVG image, in this case, does not embed the font as data or polygons.
+
+2. Crop the PDF.
+
+   Use `pdfcrop` to crop the PDF image to remove the white margins:
+
+   ```bash
+   pdfcrop wordcloud.pdf
+   ```
+
+   This will create a cropped PDF file `wordcloud-crop.pdf`.
+   `pdfcrop` is a command-line tool that comes with TeX Live.
+
+3. Convert PDF to PNG.
+
+   Use ImageMagick to convert the PDF image to a PNG image in 300 DPI:
+
+   ```bash
+   convert -density 300 wordcloud-crop.pdf wordcloud.png
+   ```
+
+4. Compress the PNG image.
+
+   Use `pngquant` to compress the PNG image:
+
+   ```bash
+   pngquant wordcloud.png
+   ```
+
+   This will create a compressed PNG file `wordcloud-fs8.png`.
+
+Finally, for macOS users, you can install all the mentioned command-line tools
+using Homebrew with the following commands:
+
+```bash
+brew install imagemagick pngquant
+brew install --cask mactex
+```
