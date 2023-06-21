@@ -65,7 +65,7 @@ With this in mind, I created the forked version. The most visible changes
 are on colors, typefaces, and default values:
 
 - Add a color palette selection feature, offering a wide range of options
-  from Tableau, Viridis, ColorBrewer, ggplot2, D3, Okabe-Ito, and Gephi.
+  from Tableau, Viridis, ColorBrewer, ggplot2, D3, Okabe-Ito, Gephi, and FlatUI.
 - Use a default font based on user's operating system.
   - macOS: Avenir Next Condensed Medium
   - Windows: Franklin Gothic Medium
@@ -75,12 +75,12 @@ are on colors, typefaces, and default values:
   - Text angle range (from): from -60&deg; to -90&deg;.
   - Text angle range (to): from 60&deg; to 0&deg;.
 
-For the detailed changeset, check out the GitHub repository.
+For the detailed changeset, check out the
+[GitHub repository](https://github.com/nanxstats/wordcloud).
 
 ## Appendix: Command-line workflow to convert SVG to PNG
 
-Once you have tried different layouts and downloaded the result as
-`wordcloud.svg`, it is useful to convert the SVG image to a high-quality,
+Once you have tried different layouts and downloaded `wordcloud.svg`, it is useful to convert the SVG image to a high-quality,
 optimized PNG image for further use because not all applications can render or
 embed SVG images consistently. Note that this workflow might not be the one
 with the least number of steps or most automated, but emphasizes conversion
