@@ -6,7 +6,17 @@
     <description>Recent content in Python on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Aug 2022 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 23 Jun 2023 21:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Engaging Word Cloud Visualizations from Your Research in an Hour</title>
+      <link>https://nanx.me/blog/post/research-word-cloud/</link>
+      <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/research-word-cloud/</guid>
+      <description>Many outstanding researchers and labs have created visualizations of their research using word clouds. In this post, I present a simple, automated “paper2wordcloud” workflow to create eye-catching word cloud visualizations. It combines the efficiency of automation with the power of human intuition and aesthetic sense. The figure below was created using my published papers.
+A word cloud visualization generated for my papers using this workflow. The general steps in the workflow are:</description>
+    </item>
+    
     <item>
       <title>The Past and Future of Shiny Keynote at rstudio::conf(2022)</title>
       <link>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</link>

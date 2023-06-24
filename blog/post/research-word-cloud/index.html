@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Rethinking the Word Cloud Generator - Nan Xiao | 肖楠 </title>
+    <title> Create Engaging Word Cloud Visualizations from Your Research in an Hour - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Discover the interactive word cloud generator, an enhanced fork of Jason Davies&#39; original project. Learn how the tool enables improved word cloud visualizations with additional features like color palettes, operating system-specific fonts, and sensible default values. Explore a streamlined, quality-focused SVG to PNG conversion workflow.
+    <meta name="description" content="Create engaging word cloud visualizations from your research papers with this automated workflow. This post guides you through collecting text data, extracting top words using Python, refining the word list, generating and fine-tuning the word cloud, and converting it to PDF/PNG files. Ideal for researchers seeking an aesthetically pleasing way to showcase their work.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/rethinking-word-cloud-generator/" />
-    <meta property="og:title" content="Rethinking the Word Cloud Generator" />
-    <meta property="og:image" content="https://nanx.me/image/chatgpt-release-notes-wordcloud.png" />
-    <meta property="og:description" content="Discover the interactive word cloud generator, an enhanced fork of Jason Davies&#39; original project. Learn how the tool enables improved word cloud visualizations with additional features like color palettes, operating system-specific fonts, and sensible default values. Explore a streamlined, quality-focused SVG to PNG conversion workflow.
+    <meta property="og:url" content="https://nanx.me/blog/post/research-word-cloud/" />
+    <meta property="og:title" content="Create Engaging Word Cloud Visualizations from Your Research in an Hour" />
+    <meta property="og:image" content="https://nanx.me/image/wordcloud.png" />
+    <meta property="og:description" content="Create engaging word cloud visualizations from your research papers with this automated workflow. This post guides you through collecting text data, extracting top words using Python, refining the word list, generating and fine-tuning the word cloud, and converting it to PDF/PNG files. Ideal for researchers seeking an aesthetically pleasing way to showcase their work.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Rethinking the Word Cloud Generator" />
-    <meta name="twitter:description" content="Discover the interactive word cloud generator, an enhanced fork of Jason Davies&#39; original project. Learn how the tool enables improved word cloud visualizations with additional features like color palettes, operating system-specific fonts, and sensible default values. Explore a streamlined, quality-focused SVG to PNG conversion workflow.
+    <meta name="twitter:title" content="Create Engaging Word Cloud Visualizations from Your Research in an Hour" />
+    <meta name="twitter:description" content="Create engaging word cloud visualizations from your research papers with this automated workflow. This post guides you through collecting text data, extracting top words using Python, refining the word list, generating and fine-tuning the word cloud, and converting it to PDF/PNG files. Ideal for researchers seeking an aesthetically pleasing way to showcase their work.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/chatgpt-release-notes-wordcloud.png" />
+    <meta name="twitter:image" content="https://nanx.me/image/wordcloud.png" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/rethinking-word-cloud-generator/">
+    <link rel="canonical" href="https://nanx.me/blog/post/research-word-cloud/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -121,7 +121,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Rethinking the Word Cloud Generator</h1>
+                <h1 class="blog-post-title">Create Engaging Word Cloud Visualizations from Your Research in an Hour</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -132,8 +132,8 @@
                     
                     
 
-                    <span class="date middot" title='Mon Jun 19 2023 18:00:00 UTC'>
-                        2023-06-19
+                    <span class="date middot" title='Fri Jun 23 2023 21:00:00 UTC'>
+                        2023-06-23
                     </span>
 
                     <span class="reading-time middot">
@@ -152,11 +152,31 @@
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/color-scales">color scales</a>
+                                <a href="https://nanx.me/tags/d3.js">D3.js</a>
                             </li>
                             
                             <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/software-architecture">software architecture</a>
+                                <a href="https://nanx.me/tags/automation">automation</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/python">Python</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/natural-language-processing">natural language processing</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/spacy">spaCy</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/ftfy">ftfy</a>
+                            </li>
+                            
+                            <li class="d-inline middot">
+                                <a href="https://nanx.me/tags/pypdf">pypdf</a>
                             </li>
                             
                         </ul>
@@ -175,98 +195,123 @@
     
 
 
-<p>As part of my JavaScript learning journey, I created a fork of
-<a href="https://www.jasondavies.com/wordcloud/">Jason Davies’ word cloud generator</a>
-and added some new features with a few adjustments to the default parameters.
-The fork is hosted at <a href="https://nanx.me/wordcloud/">nanx.me/wordcloud/</a> and
-the source code is available on <a href="https://github.com/nanxstats/wordcloud">GitHub</a>.
-Here is an example word cloud produced by the generator:</p>
+<p>Many outstanding researchers and labs have created visualizations of their
+research using word clouds. In this post, I present a simple, automated
+“paper2wordcloud” workflow to create eye-catching word cloud visualizations.
+It combines the efficiency of automation with the power of human intuition
+and aesthetic sense. The figure below was created using
+<a href="https://nanx.me/papers/">my published papers</a>.</p>
 <div class="float">
-<img src="https://nanx.me/image/chatgpt-release-notes-wordcloud.png" alt="A word cloud visualization for ChatGPT release notes produced by the generator with default parameters. Font: Founders Grotesk Condensed Regular (included with macOS)." />
-<div class="figcaption">A word cloud visualization for <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes">ChatGPT release notes</a> produced by the generator with default parameters. Font: Founders Grotesk Condensed Regular (included with macOS).</div>
+<img src="https://nanx.me/image/wordcloud.png" alt="A word cloud visualization generated for my papers using this workflow." />
+<div class="figcaption">A word cloud visualization generated for my papers using this workflow.</div>
 </div>
-<p>You can use this tool to create word cloud visualizations by simply pasting
-text and clicking the “Go” button until a satisfactory layout is produced,
-then export the result as a SVG image for further editing.
-Like the <a href="https://nanx.me/blog/post/gpu-selector/">deep learning GPU selector</a>,
-it is a pure client-side JavaScript solution and does not require any
-server-side processing.</p>
-<div id="motivation" class="section level2">
-<h2>Motivation</h2>
-<p>Text data is more challenging to visualize without
-<a href="https://doi.org/10.3115/v1/W14-3110">explicit modeling</a>
-because of its unstructured nature compared to tabular data.
-Although sometimes controversial, word clouds are a common visualization
-method for text data. Owing to their popularity, you can find implementations
-for drawing word clouds in practically any programming language or
-visualization library. However, many of the existing implementations
-do not have the layout quality or aesthetic appeal that I am looking for,
-at least not without extensive parameter tuning efforts.</p>
-</div>
-<div id="solution" class="section level2">
-<h2>Solution</h2>
-<p>A few years back, Jason Davies launched an outstanding
-<a href="https://www.jasondavies.com/wordcloud/">word cloud generator</a> built on D3.js,
-a JavaScript library for creating dynamic, interactive data visualizations.
-Its layout algorithm, input parameter design, and user interface details
-make it one of the most satisfactory implementations in my opinion.
-However, as the original application has matured over the years,
-it appeared to be missing some essential options and a few default values
-could use an update.</p>
-<p>With this in mind, I created the forked version. The most visible changes
-are on colors, typefaces, and default values:</p>
+<p>The general steps in the workflow are:</p>
 <ul>
-<li>Add a color palette selection feature, offering a wide range of options
-from Tableau, Viridis, ColorBrewer, ggplot2, D3, Okabe-Ito, Gephi, and FlatUI.</li>
-<li>Use a default font based on user’s operating system.
-<ul>
-<li>macOS: Avenir Next Condensed Medium</li>
-<li>Windows: Franklin Gothic Medium</li>
-<li>Linux: Liberation Sans Bold</li>
-</ul></li>
-<li>Update the default values for graphical parameter inputs.
-<ul>
-<li>Number of text orientations: from 5 to 2.</li>
-<li>Text angle range (from): from -60° to -90°.</li>
-<li>Text angle range (to): from 60° to 0°.</li>
-</ul></li>
+<li>Collect PDF files representing your research (10 min).</li>
+<li>Run a Python script to extract the top words from the PDF files (10 min).</li>
+<li>Review, edit, and finalize the list of top words (20 min).</li>
+<li>Use a word cloud generator, adjust the look, and generate an SVG file (15 min).</li>
+<li>Convert the SVG file to a PDF/PNG file (5 min).</li>
 </ul>
-<p>For the detailed changeset, check out the
-<a href="https://github.com/nanxstats/wordcloud">GitHub repository</a>.</p>
+<p>Now let’s dive into it.</p>
+<div id="workflow" class="section level2">
+<h2>Workflow</h2>
+<div id="step-1-collect-your-research" class="section level3">
+<h3>Step 1: Collect your research</h3>
+<p>Collect all the PDF files that can represent your research, for example,
+papers, slides, posters, and proposals. Place all PDF files in a single,
+flat directory, without subfolders.
+The PDF files should be machine-readable, that is, the pages should not be
+scanned photocopies, and the text should be selectable in PDF viewers.</p>
 </div>
-<div id="appendix-command-line-workflow-to-convert-svg-to-png" class="section level2">
-<h2>Appendix: Command-line workflow to convert SVG to PNG</h2>
-<p>Once you have tried different layouts and downloaded <code>wordcloud.svg</code>, it is useful to convert the SVG image to a high-quality,
-optimized PNG image for further use because not all applications can render or
-embed SVG images consistently. Note that this workflow might not be the one
-with the least number of steps or most automated, but emphasizes conversion
-quality and robustness.</p>
-<ol style="list-style-type: decimal">
-<li><p>Convert SVG to PDF.</p>
-<p>Open the SVG file in the web browser and print it into a PDF file
-<code>wordcloud.pdf</code>. For large-scale conversion tasks, you can automate
-this step by using headless browsers, for example, via tools like
-<a href="https://nanx.me/blog/post/chromote-pdf-automation/">chromote</a>.</p>
-<p>To accurately print the SVG with the preferred typeface, make sure
-that your operating system has the specified font installed.
-The SVG image, in this case, does not embed the font as data or polygons.</p></li>
-<li><p>Crop the PDF.</p>
-<p>Use <code>pdfcrop</code> to crop the PDF image to remove the white margins:</p>
-<pre class="bash"><code>pdfcrop wordcloud.pdf</code></pre>
-<p>This will create a cropped PDF file <code>wordcloud-crop.pdf</code>.
-<code>pdfcrop</code> is a command-line tool that comes with TeX Live.</p></li>
-<li><p>Convert PDF to PNG.</p>
-<p>Use ImageMagick to convert the PDF image to a PNG image in 300 DPI:</p>
-<pre class="bash"><code>convert -density 300 wordcloud-crop.pdf wordcloud.png</code></pre></li>
-<li><p>Compress the PNG image.</p>
-<p>Use <code>pngquant</code> to compress the PNG image:</p>
-<pre class="bash"><code>pngquant wordcloud.png</code></pre>
-<p>This will create a compressed PNG file <code>wordcloud-fs8.png</code>.</p></li>
-</ol>
-<p>Finally, for macOS users, you can install all the mentioned command-line tools
-using Homebrew with the following commands:</p>
-<pre class="bash"><code>brew install imagemagick pngquant
-brew install --cask mactex</code></pre>
+<div id="step-2-extract-top-words" class="section level3">
+<h3>Step 2: Extract top words</h3>
+<div id="install-python" class="section level4">
+<h4>2.1 Install Python</h4>
+<p>Install Python if you haven’t. For macOS users, install
+<a href="https://docs.brew.sh/Homebrew-and-Python">Python via Homebrew</a>:</p>
+<pre class="bash"><code>brew install python</code></pre>
+<p>This will install the latest maintained release of Python 3 provided by Homebrew.</p>
+</div>
+<div id="get-text-processing-script-and-install-dependency" class="section level4">
+<h4>2.2 Get text processing script and install dependency</h4>
+<p>Clone this <a href="https://github.com/nanxstats/pdf-word-extraction">GitHub repo</a>
+to your workspace. It contains a Python script I wrote for extracting
+meaningful words, as defined by a statistical model, from the PDF files:</p>
+<pre class="bash"><code>git clone https://github.com/nanxstats/pdf-word-extraction.git</code></pre>
+<p>Enter the directory (everything below assumes you are in the directory):</p>
+<pre class="bash"><code>cd pdf-word-extraction</code></pre>
+<p>Install the Python package dependencies of the script described in the
+<a href="https://github.com/nanxstats/pdf-word-extraction#setup">setup section of the repo</a>.
+The simple way is to use <code>pip</code> and <code>requirements.txt</code>:</p>
+<pre class="bash"><code>pip install -r requirements.txt</code></pre>
+<p>This will install the essential toolchain in Python, including pypdf for PDF
+parsing, ftfy for text cleaning, and spaCy for natural language processing (NLP).</p>
+</div>
+<div id="run-the-script" class="section level4">
+<h4>2.3 Run the script</h4>
+<p>Now, copy all the PDF files prepared in step 1 into <code>pdf/</code>.</p>
+<p>Then, run the Python script:</p>
+<pre class="bash"><code>python3 pdf_word_extraction.py</code></pre>
+<p>This will print the top 250 words and their frequencies.</p>
+</div>
+</div>
+<div id="step-3-review-edit-and-finalize-top-words" class="section level3">
+<h3>Step 3: Review, edit, and finalize top words</h3>
+<p>Review the output and identify any words that should be removed or replaced.
+The common reasons include:</p>
+<ul>
+<li><p><strong>Removal</strong>: Words that are meaningful in general but not meaningful
+in your research context should be removed. Examples include
+“journal”, “conference”, “Figure”, “Table”, and author names.</p></li>
+<li><p><strong>Replacement</strong>: Uncommon proper nouns that should be stylized in a
+specific way can be fixed via replacement. The frequency counts for
+plural and singular forms of the same word can be merged via replacement, too.</p></li>
+</ul>
+<p>To add word removal or replacement rules, open <code>pdf_word_extraction.py</code>.
+Edit the entries in the list <code>words_to_remove</code> and the key-value pairs in the
+dictionary <code>replacements</code>. Save and run the script again with the same command:</p>
+<pre class="bash"><code>python3 pdf_word_extraction.py</code></pre>
+<p>Check the output again. Since some words in the original output have now been
+removed or replaced, the words newly popped into the list might give you more
+words to remove or replace. Continue this review-edit-run cycle until the
+top 250 words looks perfect. For me, I ended up removing 50 words and
+establishing 12 replacement rules.</p>
+<p>Each time after running the script, a <code>top_words.txt</code> will be generated or
+overwritten under the directory. We will use this file in the next step.</p>
+</div>
+<div id="step-4-use-the-word-cloud-generator" class="section level3">
+<h3>Step 4: Use the word cloud generator</h3>
+<p>Open <code>top_words.txt</code>, select all content, copy and paste into the
+<a href="https://nanx.me/wordcloud/">word cloud generator</a> described in my previous
+<a href="https://nanx.me/blog/post/rethinking-word-cloud-generator/">blog post</a>,
+then click the “Refresh Word Cloud” button to generate an initial layout.</p>
+<p>Adjust the graphical parameters based on your aesthetic preferences.
+Key parameters to consider include the color palette, font,
+scale transformation method, and the number of words to display.</p>
+<p>Keep clicking the “Refresh Word Cloud” button until you achieve a layout
+you are satisfied with. Personally, I prefer a layout where all the
+major words are displayed horizontally. Click the “Download SVG” button
+to save the word cloud as an SVG file.</p>
+</div>
+<div id="step-5-convert-word-cloud-to-a-pdfpng-file" class="section level3">
+<h3>Step 5: Convert word cloud to a PDF/PNG file</h3>
+<p>See the appendix section of my previous
+<a href="https://nanx.me/blog/post/rethinking-word-cloud-generator/">blog post</a>
+for a robust command-line workflow to convert the SVG file into a vector
+PDF file or a 300 DPI PNG file.</p>
+</div>
+</div>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>With these steps, you now have a professional word cloud visualization
+based on your research. Enjoy exploring your data in this visually
+engaging format!</p>
+<p>This “paper2wordcloud” workflow demonstrates how to use Python to
+automate a seemingly difficult task that involves processing natural language
+data, while allows incorporating human knowledge and preferences.
+I’m quite amazed by how the text data processing toolchain in Python has
+advanced, making it a perfect choice for tasks like this.</p>
 </div>
 
 
@@ -279,15 +324,11 @@ brew install --cask mactex</code></pre>
                         <div class="col-sm-12 col-lg-6">
                             
                             <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/r-package-release-checklist/">« Context-Free R Package Release Checklist Generation with usethis</a>
+                                <a href="https://nanx.me/blog/post/rethinking-word-cloud-generator/">« Rethinking the Word Cloud Generator</a>
                             </div>
                             
                         </div>
                         <div class="col-sm-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/research-word-cloud/">Create Engaging Word Cloud Visualizations from Your Research in an Hour »</a>
-                            </div>
                             
                         </div>
                     </div>

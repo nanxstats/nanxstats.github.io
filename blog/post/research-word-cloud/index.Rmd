@@ -1,0 +1,170 @@
+---
+title: "Create Engaging Word Cloud Visualizations from Your Research in an Hour"
+author: "Nan Xiao"
+date: "2023-06-23T21:00:00"
+slug: research-word-cloud
+categories: []
+tags:
+  - word cloud
+  - data visualization
+  - D3.js
+  - automation
+  - Python
+  - natural language processing
+  - spaCy
+  - ftfy
+  - pypdf
+meta_img: "image/wordcloud.png"
+description: >
+  Create engaging word cloud visualizations from your research papers with this
+  automated workflow. This post guides you through collecting text data,
+  extracting top words using Python, refining the word list, generating and
+  fine-tuning the word cloud, and converting it to PDF/PNG files. Ideal for
+  researchers seeking an aesthetically pleasing way to showcase their work.
+---
+
+Many outstanding researchers and labs have created visualizations of their
+research using word clouds. In this post, I present a simple, automated
+"paper2wordcloud" workflow to create eye-catching word cloud visualizations.
+It combines the efficiency of automation with the power of human intuition
+and aesthetic sense. The figure below was created using
+[my published papers](https://nanx.me/papers/).
+
+![A word cloud visualization generated for my papers using this workflow.](/image/wordcloud.png)
+
+The general steps in the workflow are:
+
+- Collect PDF files representing your research (10 min).
+- Run a Python script to extract the top words from the PDF files (10 min).
+- Review, edit, and finalize the list of top words (20 min).
+- Use a word cloud generator, adjust the look, and generate an SVG file (15 min).
+- Convert the SVG file to a PDF/PNG file (5 min).
+
+Now let's dive into it.
+
+## Workflow
+
+### Step 1: Collect your research
+
+Collect all the PDF files that can represent your research, for example,
+papers, slides, posters, and proposals. Place all PDF files in a single,
+flat directory, without subfolders.
+The PDF files should be machine-readable, that is, the pages should not be
+scanned photocopies, and the text should be selectable in PDF viewers.
+
+### Step 2: Extract top words
+
+#### 2.1 Install Python
+
+Install Python if you haven't. For macOS users, install
+[Python via Homebrew](https://docs.brew.sh/Homebrew-and-Python):
+
+```bash
+brew install python
+```
+
+This will install the latest maintained release of Python 3 provided by Homebrew.
+
+#### 2.2 Get text processing script and install dependency
+
+Clone this [GitHub repo](https://github.com/nanxstats/pdf-word-extraction)
+to your workspace. It contains a Python script I wrote for extracting
+meaningful words, as defined by a statistical model, from the PDF files:
+
+```bash
+git clone https://github.com/nanxstats/pdf-word-extraction.git
+```
+
+Enter the directory (everything below assumes you are in the directory):
+
+```bash
+cd pdf-word-extraction
+```
+
+Install the Python package dependencies of the script described in the
+[setup section of the repo](https://github.com/nanxstats/pdf-word-extraction#setup).
+The simple way is to use `pip` and `requirements.txt`:
+
+```bash
+pip install -r requirements.txt
+```
+
+This will install the essential toolchain in Python, including pypdf for PDF
+parsing, ftfy for text cleaning, and spaCy for natural language processing (NLP).
+
+#### 2.3 Run the script
+
+Now, copy all the PDF files prepared in step 1 into `pdf/`.
+
+Then, run the Python script:
+
+```bash
+python3 pdf_word_extraction.py
+```
+
+This will print the top 250 words and their frequencies.
+
+### Step 3: Review, edit, and finalize top words
+
+Review the output and identify any words that should be removed or replaced.
+The common reasons include:
+
+- **Removal**: Words that are meaningful in general but not meaningful
+  in your research context should be removed. Examples include
+  "journal", "conference", "Figure", "Table", and author names.
+
+- **Replacement**: Uncommon proper nouns that should be stylized in a
+  specific way can be fixed via replacement. The frequency counts for
+  plural and singular forms of the same word can be merged via replacement, too.
+
+To add word removal or replacement rules, open `pdf_word_extraction.py`.
+Edit the entries in the list `words_to_remove` and the key-value pairs in the
+dictionary `replacements`. Save and run the script again with the same command:
+
+```bash
+python3 pdf_word_extraction.py
+```
+
+Check the output again. Since some words in the original output have now been
+removed or replaced, the words newly popped into the list might give you more
+words to remove or replace. Continue this review-edit-run cycle until the
+top 250 words looks perfect. For me, I ended up removing 50 words and
+establishing 12 replacement rules.
+
+Each time after running the script, a `top_words.txt` will be generated or
+overwritten under the directory. We will use this file in the next step.
+
+### Step 4: Use the word cloud generator
+
+Open `top_words.txt`, select all content, copy and paste into the
+[word cloud generator](https://nanx.me/wordcloud/) described in my previous
+[blog post](https://nanx.me/blog/post/rethinking-word-cloud-generator/),
+then click the "Refresh Word Cloud" button to generate an initial layout.
+
+Adjust the graphical parameters based on your aesthetic preferences.
+Key parameters to consider include the color palette, font,
+scale transformation method, and the number of words to display.
+
+Keep clicking the "Refresh Word Cloud" button until you achieve a layout
+you are satisfied with. Personally, I prefer a layout where all the
+major words are displayed horizontally. Click the "Download SVG" button
+to save the word cloud as an SVG file.
+
+### Step 5: Convert word cloud to a PDF/PNG file
+
+See the appendix section of my previous
+[blog post](https://nanx.me/blog/post/rethinking-word-cloud-generator/)
+for a robust command-line workflow to convert the SVG file into a vector
+PDF file or a 300 DPI PNG file.
+
+## Summary
+
+With these steps, you now have a professional word cloud visualization
+based on your research. Enjoy exploring your data in this visually
+engaging format!
+
+This "paper2wordcloud" workflow demonstrates how to use Python to
+automate a seemingly difficult task that involves processing natural language
+data, while allows incorporating human knowledge and preferences.
+I'm quite amazed by how the text data processing toolchain in Python has
+advanced, making it a perfect choice for tasks like this.
