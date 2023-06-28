@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>idiomatic R on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/idiomatic-r/</link>
+    <description>Recent content in idiomatic R on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 27 Jun 2023 22:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/idiomatic-r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Base R Shortcuts: A Collection of Lesser-Known Idioms and Coding Patterns for Writing Concise and Fast R Code</title>
+      <link>https://nanx.me/blog/post/r-base-shortcuts/</link>
+      <pubDate>Tue, 27 Jun 2023 22:00:00 +0000</pubDate>
+      
+      <guid>https://nanx.me/blog/post/r-base-shortcuts/</guid>
+      <description>TL;DR: Please help me extend this GitHub repo by adding your own base R programming idioms today: https://github.com/nanxstats/r-base-shortcuts.
+Snowboarder on a cloudy hill. Photo by Boba Jovanovic. For a long time, I’ve told people that I am not an R expert. I don’t know too much about R. I just happen to write software that encounters the least resistance when implemented in R. I’m shy. I’d rather solve problems myself than ask.</description>
+    </item>
+    
+  </channel>
+</rss>

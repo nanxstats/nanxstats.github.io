@@ -1,0 +1,69 @@
+---
+title: "Base R Shortcuts: A Collection of Lesser-Known Idioms and Coding Patterns for Writing Concise and Fast R Code"
+author: "Nan Xiao"
+date: "2023-06-27T22:00:00"
+slug: r-base-shortcuts
+categories: []
+tags:
+  - R
+  - design patterns
+  - software engineering
+  - software architecture
+  - base R
+  - idiomatic R
+meta_img: "image/boba-jovanovic-cvaYET_S3_Q-unsplash.jpg"
+description: >
+  Announcing r-base-shortcuts, a GitHub repository that compiles idioms,
+  tricks, and programming patterns for writing efficient base R code.
+  Join the community and contribute to this growing resource
+  for R programming today.
+---
+
+> TL;DR: Please help me extend this GitHub repo by adding your own
+> base R programming idioms today:
+> <https://github.com/nanxstats/r-base-shortcuts>.
+
+![Snowboarder on a cloudy hill. Photo by [Boba Jovanovic](https://unsplash.com/photos/cvaYET_S3_Q).](/image/boba-jovanovic-cvaYET_S3_Q-unsplash.jpg)
+
+For a long time, I've told people that I am not an R expert. I don't know
+too much about R. I just happen to write software that encounters the
+[least resistance](https://en.wikipedia.org/wiki/Path_of_least_resistance)
+when implemented in R. I'm shy. I'd rather solve problems myself than ask.
+StackOverflow is my best friend.
+Every day, as I learn more about R, I realize that there's a lot I don't know.
+The things I've forgotten balance out with the new stuff I learn.
+
+I'm still all those things today. What can I do to help myself out?
+
+About twelve years ago, I started to answer R questions on
+[Capital of Statistics](https://d.cosx.org/), an online community.
+I didn't always know the answers, but the research process helped me
+understand what "idiomatic R code" looks like.
+I uncovered patterns, tricks, and elegant constructs that I never
+could have imagined existed.
+
+I loved the discussions. I can't say how many questions I answered or
+participated in total, but one day, I realized I could answer most questions
+confidently. Ironically, it was at this point when I realized I no longer
+had the time to participate in these exchanges. Such is adulthood, I suppose.
+I took a break, focused on other things in life.
+So many amazing things happened after that: the rise of the tidyverse in R,
+the Python data stack, and deep learning.
+
+Today, as I dive deeper into new tech stacks, I find myself cherishing the
+foundational knowledge of base R I've gained over the years even more.
+As a result, I've decided to launch this GitHub repository:
+[r-base-shortcuts](https://github.com/nanxstats/r-base-shortcuts).
+This project compiles practical solutions for base R coding challenges,
+distilled from recurring patterns in frequently asked questions---especially
+those requiring thoughtful consideration and prior experience to solve.
+
+I believe this collection of base R idioms and shortcuts can help you write
+concise, idiomatic, and fast R code. It could also be a valuable resource
+for training or interview preparation. My hope is that this collection will
+help flatten your learning curve, letting you enjoy solving common
+base R programming problems and writing ergonomic R code.
+
+If you find this repository useful, consider giving it a star on GitHub!
+Contributions are welcome as well, either by creating an issue or sending
+a pull request. 🤗
