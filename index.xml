@@ -781,7 +781,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/books/</guid>
-      <description>Bookdown and Quarto book projects R for Clinical Study Reports and Submission Prepare tables, listings, and figures for clinical study report and submit to regulatory agencies. Group Sequential Design Web Interface Technical manual of the group sequential design web interface. Group Sequential Design Under Non-Proportional Hazards 2021 Deming Conference course on group sequential design. Open Source Typography: A Curated Lookbook for Creative Expression Discover exceptional open source typefaces for web</description>
+      <description>Bookdown and Quarto book projects R for Clinical Study Reports and Submission Prepare tables, listings, and figures for clinical study report and submit to regulatory agencies Group Sequential Design Web Interface Technical manual of the group sequential design web interface Group Sequential Design Under Non-Proportional Hazards 2021 Deming Conference course on group sequential design Open Source Typography: A Curated Lookbook for Creative Expression Discover exceptional open source typefaces for web</description>
     </item>
     
     <item>
@@ -799,11 +799,11 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/papers/</guid>
-      <description>Word cloud visualization of the keywords in my publications. Google Scholar | ORCID | ResearchGate
+      <description>Word cloud visualization of the keywords in my publications Google Scholar | ORCID | ResearchGate
 2023 | 2022 | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 | 2015
-2023 Electronic common technical document submission with analysis using R.
-Yujie Zhao, Nan Xiao, Keaven Anderson, Yilong Zhang.
-Clinical Trials 20(1): 89&amp;ndash;92, 2023. Building an internal R Package for statistical analysis and reporting in clinical trials: a SAS user&amp;rsquo;s perspective.</description>
+2023 Electronic common technical document submission with analysis using R
+Yujie Zhao, Nan Xiao, Keaven Anderson, Yilong Zhang
+Clinical Trials 20(1): 89&amp;ndash;92, 2023 Building an internal R Package for statistical analysis and reporting in clinical trials: a SAS user&amp;rsquo;s perspective</description>
     </item>
     
     <item>
@@ -812,7 +812,7 @@ Clinical Trials 20(1): 89&amp;ndash;92, 2023. Building an internal R Package for
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/software/</guid>
-      <description>Hex sticker wall for some of my R packages. R packages | Web applications | ML workflows Open source code contributions | Awesome lists VS Code extensions | Hugo/blogdown themes R packages Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm Minimalist implementation of model stacking for gradient boosted tree models</description>
+      <description>Hex sticker wall for some of my R packages R packages | Web applications | ML workflows Open source code contributions | Awesome lists VS Code extensions | Hugo/blogdown themes R packages Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm Minimalist implementation of model stacking for gradient boosted tree models</description>
     </item>
     
     <item>
@@ -821,15 +821,15 @@ Clinical Trials 20(1): 89&amp;ndash;92, 2023. Building an internal R Package for
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/talks/</guid>
-      <description>2022 Asynchronous processing of long-running tasks in Shiny.
-Nicole Jones, Nan Xiao, Shuqi Zhao, Lawrence A. Gould.
-R/Pharma Conference.
-Video recording R for clinical study reports and submission.
-Yilong Zhang, Nan Xiao, Keaven M. Anderson.
-2022 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop.
-Short course slides Grammar of group sequential design.
-Keaven M. Anderson, Yilong Zhang, Nan Xiao, Yujie Zhao.
-MCP Conference 2022: The 12th International Conference on Multiple Comparison Procedures.</description>
+      <description>2022 Asynchronous processing of long-running tasks in Shiny
+Nicole Jones, Nan Xiao, Shuqi Zhao, Lawrence A. Gould
+R/Pharma Conference
+Video recording R for clinical study reports and submission
+Yilong Zhang, Nan Xiao, Keaven M. Anderson
+2022 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop
+Short course slides Grammar of group sequential design
+Keaven M. Anderson, Yilong Zhang, Nan Xiao, Yujie Zhao
+MCP Conference 2022: The 12th International Conference on Multiple Comparison Procedures Grammar of group sequential design</description>
     </item>
     
   </channel>
