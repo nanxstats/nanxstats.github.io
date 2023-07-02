@@ -4,32 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator - Nan Xiao | 肖楠 </title>
+    <title> About - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="This post explains a common but confusing error message from knitr when rendering R Markdown or Quarto documents where a character value is assigned to a chunk option that only accepts numeric values.
-" />
+    <meta name="description" content="" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/knitr-chunk-option-error/" />
-    <meta property="og:title" content="Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator" />
-    <meta property="og:image" content="https://nanx.me/image/steve-tsang-OZjypvcu3uo-unsplash.jpg" />
-    <meta property="og:description" content="This post explains a common but confusing error message from knitr when rendering R Markdown or Quarto documents where a character value is assigned to a chunk option that only accepts numeric values.
-" />
+    <meta property="og:url" content="https://nanx.me/about/" />
+    <meta property="og:title" content="About" />
+    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator" />
-    <meta name="twitter:description" content="This post explains a common but confusing error message from knitr when rendering R Markdown or Quarto documents where a character value is assigned to a chunk option that only accepts numeric values.
-" />
-    <meta name="twitter:image" content="https://nanx.me/image/steve-tsang-OZjypvcu3uo-unsplash.jpg" />
+    <meta name="twitter:title" content="About" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/knitr-chunk-option-error/">
+    <link rel="canonical" href="https://nanx.me/about/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -129,118 +126,49 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</h1>
-
-                <div class="mb-md-4 meta">
+                <h1>About</h1>
+                <div class="markdown">
                     
-                    
-                    <span class="author" title="Nan Xiao">
-                        Nan Xiao
-                    </span>
-                    
-                    
-
-                    <span class="date middot" title='Tue Jun 6 2023 20:30:00 UTC'>
-                        2023-06-06
-                    </span>
-
-                    <span class="reading-time middot">
-                        1 min read
-                    </span>
-
-                    <div class="d-none d-md-inline tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/r">R</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/r-markdown">R Markdown</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/quarto">Quarto</a>
-                            </li>
-                            
-                            <li class="d-inline middot">
-                                <a href="https://nanx.me/tags/knitr">knitr</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="d-none d-md-inline tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="markdown blog-post-content">
-                    
-    
-
-
-<p>If Google leads you here, you probably have assigned a character value
-to a knitr chunk option such as <code>fig.width</code> or <code>fig.height</code>
-that only accepts numeric values, and your are trying to render
-that R Markdown or Quarto document.</p>
-<p>For example, it is easy to make this mistake:</p>
-<pre class="markdown"><code>```{r, fig.width=&quot;100%&quot;}
-plot(1:10)
-```</code></pre>
-<p>where you probably meant:</p>
-<pre class="markdown"><code>```{r, fig.width=6, out.width=&quot;100%&quot;}
-plot(1:10)
-```</code></pre>
-<p>That’s all! I hope this helps.</p>
+    <hr>
+<p>I am a statistician from <a href="https://www.merck.com/">Merck &amp; Co.</a>
+I work in the Methodology Research group led by
+<a href="https://keaven.github.io/">Keaven M. Anderson</a>
+in the <a href="https://jobs.merck.com/bards">Biostatistics and Research Decision Sciences</a> (BARDS) department.
+I currently serve on the
+<a href="https://www.r-consortium.org/about/governance">R Consortium Infrastructure Steering Committee</a>
+as a representative of Merck &amp; Co., as well as on the
+<a href="https://rconsortium.github.io/submissions-wg/">R Submission Working Group</a>.</p>
+<p>In my daily work, I solve challenges at the intersection of
+statistical methodology research and software architecture innovation.
+My research interests include sparse linear models,
+representation learning, and computational reproducibility.
+I build <a href="https://nanx.me/software/">software</a> in R.
+My favorites include
+<a href="https://nanx.me/msaenet/">msaenet</a>,
+<a href="https://nanx.me/oneclust/">oneclust</a>,
+<a href="https://liftr.me/">liftr</a>,
+<a href="https://nanx.me/ggsci/">ggsci</a>,
+and
+<a href="https://merck.github.io/pkglite/">pkglite</a>.</p>
+<p>Previously, I worked as a data scientist at
+<a href="https://www.sevenbridges.com/">Seven Bridges</a>
+(now acquired by Summa Equity) in Boston, Massachusetts.
+Earlier in my career, I studied <a href="https://genes.uchicago.edu/">human genetics</a> in
+<a href="https://stephenslab.uchicago.edu/">Matthew Stephens Lab</a>
+at the University of Chicago.
+I earned my Ph.D. degree in statistics from Central South University, China.
+My thesis focused on developing statistical machine learning methods for
+high-dimensional data analysis, advised by
+<a href="https://scholar.google.com/citations?user=b98MXiYAAAAJ&amp;hl=en">Qing-Song Xu</a>.</p>
 
 
 
                 </div>
-
-                
-                <div class="navigation">
-                    <div class="row">
-                        <div class="col-sm-12 col-lg-6">
-                            
-                            <div class="mt-4 text-start">
-                                <a href="https://nanx.me/blog/post/responsive-design-for-statistical-graphics/">« Responsive Design for Statistical Graphics with Shiny and ggplot2</a>
-                            </div>
-                            
-                        </div>
-                        <div class="col-sm-12 col-lg-6">
-                            
-                            <div class="mt-4 text-end">
-                                <a href="https://nanx.me/blog/post/r-package-release-checklist/">Context-Free R Package Release Checklist Generation with usethis »</a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-                
             </div>
         </div>
     </div>
 </div>
 
-<section id="comments">
-    <div class="py-3 content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="mx-auto w-700">
-                    <div class="comments">
-                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
-                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
-                            </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <div class="footer mt-5">
     <div class="container">
 
