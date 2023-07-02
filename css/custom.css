@@ -196,13 +196,15 @@ hr {
 
 .header ul.nav li a:hover {
     color: var(--tw-prose-captions);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 0.75rem;
 }
 
 .header ul.nav li a:focus,
 .header ul.nav li a:active {
     color: var(--tw-prose-captions);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 0.75rem;
 }
 
 /* Partial: content */
