@@ -1,6 +1,14 @@
 /* Typography */
 
 @font-face {
+    font-family: "Freehand";
+    src: url("fonts/freehand-v27-latin-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
     font-family: "DM Serif Text";
     src: url("fonts/dm-serif-text-v11-latin-regular.woff2") format("woff2");
     font-weight: 400;
@@ -45,6 +53,7 @@
 :root {
     --tw-prose-font-body: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-headings: "DM Serif Text", Georgia, Cambria, "Times New Roman", Times, serif;
+    --tw-prose-font-pagetitle: "Freehand", Georgia, Cambria, "Times New Roman", Times, serif;
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -163,10 +172,13 @@ hr {
 }
 
 .header h1.name {
-    font-family: var(--tw-prose-font-headings);
-    font-size: 2.625rem;
+    font-family: var(--tw-prose-font-pagetitle);
+    font-size: 4rem;
     font-weight: 400;
-    margin-left: 7px;
+    text-transform: lowercase;
+    margin-left: 10px;
+    margin-top: -18px;
+    margin-bottom: 0px;
 }
 
 .header a {
