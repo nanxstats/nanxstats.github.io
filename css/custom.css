@@ -292,8 +292,8 @@ h6 {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-size: 2.25rem;
-    line-height: 1.25;
+    font-size: 2rem;
+    line-height: 1.45;
 }
 
 .content .blog-post-content {
