@@ -76,6 +76,8 @@ body {
     font-family: var(--tw-prose-font-body);
     background-color: var(--tw-bg);
     font-variant-ligatures: contextual common-ligatures;
+    /* Mona Sans */
+    font-feature-settings: "ss01";
 }
 
 /* Horizontally centering fixed-width block
@@ -338,6 +340,7 @@ h6 {
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
     background-color: var(--tw-bg);
+    font-feature-settings: normal;
 }
 
 .content .markdown code {
