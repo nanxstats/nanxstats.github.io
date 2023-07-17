@@ -221,7 +221,7 @@ get_nzv <- function(object) {
 }
 ```
 
-### Stage two
+### Stage 2
 
 Use CVXR by [Fu et al. (2020)](https://doi.org/10.18637/jss.v094.i14)
 to do a constrained sum-to-one OLS regression on
