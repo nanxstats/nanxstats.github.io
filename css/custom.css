@@ -1,14 +1,6 @@
 /* Typography */
 
 @font-face {
-    font-family: "Freehand";
-    src: url("fonts/freehand-v27-latin-regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
     font-family: "Mona Sans";
     src: url("fonts/Mona-Sans-Medium.woff2") format("woff2");
     font-weight: 500;
@@ -53,7 +45,7 @@
 :root {
     --tw-prose-font-body: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-headings: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-pagetitle: "Freehand", Georgia, Cambria, "Times New Roman", Times, serif;
+    --tw-prose-font-pagetitle: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -174,12 +166,9 @@ hr {
 
 .header h1.name {
     font-family: var(--tw-prose-font-pagetitle);
-    font-size: 4rem;
-    font-weight: 400;
-    text-transform: lowercase;
-    margin-left: 10px;
-    margin-top: -18px;
-    margin-bottom: 0px;
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-left: 6px;
 }
 
 .header a {
