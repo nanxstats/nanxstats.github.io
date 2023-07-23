@@ -421,6 +421,11 @@ h6 {
     height: 16px;
 }
 
+/* Tags page */
+.content .taxonomy-term {
+    margin-bottom: 1rem;
+}
+
 /* Partial: Utterances comments */
 
 .comments {
