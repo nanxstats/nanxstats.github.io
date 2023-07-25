@@ -440,13 +440,13 @@ h6 {
 }
 
 .footer a {
-    color: var(--tw-prose-links);
+    color: var(--tw-prose-captions);
     text-decoration: none;
 }
 
 .footer a:hover,
 a:focus {
-    color: var(--tw-prose-captions);
+    color: var(--tw-prose-links-hover);
 }
 
 .footer a:first-child {
