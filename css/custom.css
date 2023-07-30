@@ -393,27 +393,40 @@ h6 {
 }
 
 .content .post-item {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: -ms-flex;
-    display: flex;
-    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--tw-prose-hr);
+    /* To allow inner-post-item to have bleed */
+    overflow: visible;
 }
 
-.content .post-item .meta-date {
-    font-variant-numeric: tabular-nums;
-    font-size: 1rem;
-    line-height: 1.75;
-    color: var(--tw-prose-counters);
-    display: block;
-    width: 12ch;
+.content .post-item a {
+    text-decoration: none;
 }
 
 .content .post-item .meta-title {
     font-variant-numeric: tabular-nums;
-    font-size: 1rem;
-    line-height: 1.75;
+    font-size: 1.125rem;
+    line-height: 2.5rem;
+    font-weight: 500;
+}
+
+.content .post-item .meta-date {
+    font-variant-numeric: tabular-nums;
+    font-size: 0.875rem;
+    line-height: 2.5rem;
+    color: var(--tw-prose-counters);
+}
+
+/* Hover effect for post items */
+.content .inner-post-item {
+    padding: 1rem 1rem;
+    margin: 0 -1rem;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.content .post-item:hover .inner-post-item {
+    /* BS5 bg-light */
+    background-color: rgb(248, 249, 250);
 }
 
 .content .navigation .icon {
