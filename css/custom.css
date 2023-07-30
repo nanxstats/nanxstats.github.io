@@ -419,14 +419,13 @@ h6 {
 /* Hover effect for post items */
 .content .inner-post-item {
     padding: 1rem 1rem;
-    margin: 0 -1rem;
-    transition: background-color 0.3s ease-in-out;
+    margin: -1px -1rem;
     border-radius: 10px;
 }
 
 .content .post-item:hover .inner-post-item {
-    /* BS5 bg-light */
-    background-color: rgb(248, 249, 250);
+    /* BS5 --bs-secondary-bg */
+    background-color: #e9ecef;
 }
 
 .content .navigation .icon {
