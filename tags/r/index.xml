@@ -33,7 +33,7 @@ Photo by David Marcu. Software release at scale An agile, automated, and reliabl
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
-      <description>If Google leads you here, you probably have assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
+      <description>Photo by Timothy Dykes. If Google leads you here, you probably have assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
 For example, it is easy to make this mistake:
 ```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:
 ```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>

@@ -183,16 +183,20 @@
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/timothy-dykes-LhqLdDPcSV8-unsplash.jpg" alt="Photo by Timothy Dykes." />
+<div class="figcaption">Photo by <a href="https://unsplash.com/photos/LhqLdDPcSV8">Timothy Dykes</a>.</div>
+</div>
 <p>If Google leads you here, you probably have assigned a character value
 to a knitr chunk option such as <code>fig.width</code> or <code>fig.height</code>
 that only accepts numeric values, and your are trying to render
 that R Markdown or Quarto document.</p>
 <p>For example, it is easy to make this mistake:</p>
-<pre class="markdown"><code>```{r, fig.width=&quot;100%&quot;}
+<pre class="r"><code>```{r, fig.width=&quot;100%&quot;}
 plot(1:10)
 ```</code></pre>
 <p>where you probably meant:</p>
-<pre class="markdown"><code>```{r, fig.width=6, out.width=&quot;100%&quot;}
+<pre class="r"><code>```{r, fig.width=6, out.width=&quot;100%&quot;}
 plot(1:10)
 ```</code></pre>
 <p>That’s all! I hope this helps.</p>
