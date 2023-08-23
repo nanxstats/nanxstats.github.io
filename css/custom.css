@@ -1,32 +1,32 @@
 /* Typography */
 
 @font-face {
-    font-family: "Mona Sans";
-    src: url("fonts/Mona-Sans-Medium.woff2") format("woff2");
+    font-family: "Instrument Sans";
+    src: url("fonts/InstrumentSans-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    src: url("fonts/Mona-Sans-Regular.woff2") format("woff2");
+    font-family: "Instrument Sans";
+    src: url("fonts/InstrumentSans-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    src: url("fonts/Mona-Sans-RegularItalic.woff2") format("woff2");
+    font-family: "Instrument Sans";
+    src: url("fonts/InstrumentSans-Italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    src: url("fonts/Mona-Sans-Bold.woff2") format("woff2");
+    font-family: "Instrument Sans";
+    src: url("fonts/InstrumentSans-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -43,9 +43,9 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-body: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-headings: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-pagetitle: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-headings: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-pagetitle: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -68,8 +68,8 @@ body {
     font-family: var(--tw-prose-font-body);
     background-color: var(--tw-bg);
     font-variant-ligatures: contextual common-ligatures;
-    /* Mona Sans */
-    font-feature-settings: "ss01";
+    /* Instrument Sans */
+    font-feature-settings: "ss01", "ss04", "ss07", "ss08", "ss09", "ss12";
 }
 
 /* Horizontally centering fixed-width block
