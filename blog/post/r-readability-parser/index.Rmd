@@ -26,6 +26,14 @@ knitr::opts_chunk$set(
 
 ![Photo by [Nick Hillier](https://unsplash.com/photos/IEkMMvdZFc0).](/image/nick-hillier-IEkMMvdZFc0-unsplash.jpg)
 
+> **Update** (2023-09-04): Browserify support was
+> [removed](https://github.com/nanxstats/r-readability-parser/issues/1)
+> in jsdom v22.0.0.
+> This post has been updated to recommend installing jsdom v20.0.0 to
+> ensure the code examples work as intended.
+> The original versions of JS libraries in the GitHub repo
+> remain unchanged, as they continue to function correctly.
+
 ## Readability.js
 
 Maybe you have used tools like [rvest](https://rvest.tidyverse.org/) to
@@ -77,7 +85,7 @@ browserify in.js -o readability.js
 Pack jsdom for converting HTML into operable DOM document objects:
 
 ```{bash}
-npm install jsdom
+npm install jsdom@20.0.0
 echo "window.jsdom = require('jsdom');" > in.js
 browserify in.js -o jsdom.js
 ```
