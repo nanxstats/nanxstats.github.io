@@ -33,6 +33,30 @@
 }
 
 @font-face {
+    font-family: "IBM Plex Serif";
+    src: url("fonts/IBMPlexSerif-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "IBM Plex Serif";
+    src: url("fonts/IBMPlexSerif-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "IBM Plex Serif";
+    src: url("fonts/IBMPlexSerif-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
     font-family: "Hasklig";
     src: url("fonts/Hasklig-Regular.woff2") format("woff2");
     font-weight: 400;
@@ -43,9 +67,8 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-headings: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-pagetitle: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "IBM Plex Serif", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -65,11 +88,11 @@
 }
 
 body {
-    font-family: var(--tw-prose-font-body);
-    background-color: var(--tw-bg);
-    font-variant-ligatures: contextual common-ligatures;
+    font-family: var(--tw-prose-font-sans-serif);
     /* Instrument Sans */
     font-feature-settings: "ss01", "ss04", "ss07", "ss08", "ss09", "ss12";
+    background-color: var(--tw-bg);
+    font-variant-ligatures: contextual common-ligatures;
 }
 
 /* Horizontally centering fixed-width block
@@ -165,7 +188,6 @@ hr {
 }
 
 .header h1.name {
-    font-family: var(--tw-prose-font-pagetitle);
     font-size: 2.5rem;
     font-weight: 500;
     margin-left: 6px;
@@ -219,7 +241,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--tw-prose-font-headings);
+    font-family: var(--tw-prose-font-sans-serif);
+    /* Instrument Sans */
+    font-feature-settings: "ss01", "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 500;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
@@ -265,6 +289,8 @@ h6 {
 }
 
 .content .markdown {
+    font-family: var(--tw-prose-font-serif);
+    font-feature-settings: normal;
     font-size: 1rem;
     line-height: calc(30 / 18);
     font-weight: 400;
@@ -383,7 +409,6 @@ h6 {
 }
 
 .content .groupby {
-    font-family: var(--tw-prose-font-headings);
     font-size: 1.6rem;
     font-weight: 500;
     margin-top: 2rem;
