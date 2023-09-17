@@ -23,7 +23,7 @@ description: >
 ## Introduction
 
 Dealing with large-scale image outputs in R packages can be challenging,
-especially when it comes to passing CRAN checks. In this blog post,
+especially when it comes to passing CRAN checks. In this post,
 I will share my experience in using pngquant and ragg to compress the PNG output
 size for readme and vignettes. This allows R packages with many figures in
 their documentation to pass the CRAN checks without compromising image quality.
@@ -44,8 +44,8 @@ sub-directories of 1Mb or more:
 ```
 
 The `doc/` directory contains the HTML vignette with base64 encoded PNG images,
-while the `help/` directory includes PNG outputs from `README.Rmd` in the
-`man/figures/` folder. To avoid this check note, my goal is to compress
+while the `help/` directory includes PNG outputs from `README.Rmd` in
+`man/figures/`. To avoid this check note, my goal is to compress
 the output images as much as possible without sacrificing observable
 image quality.
 
@@ -62,14 +62,14 @@ scatterplots with many data points, further reducing the vector-based SVG file
 size would require significantly reducing the number of data points in the examples.
 Consequently, I did not take this approach.
 
-## Final solution: optimizing PNG output with pngquant and ragg
+## Final solution: optimize PNG output with pngquant + ragg
 
 Eventually, I came back to optimizing PNG outputs. I discovered that
 the `ragg_png()` device in the [ragg](https://ragg.r-lib.org/) package
 produced the smallest PNG outputs, approximately 120 Kb per image.
 By using [pngquant](https://pngquant.org/) for lossy compression,
 I was able to reduce the size further to around 30 Kb per image.
-My knitr chunk options are as follows
+My knitr chunk options are
 (please note that these might require tuning for your use case):
 
 ```r
@@ -90,7 +90,7 @@ knitr::opts_chunk$set(
 Some technical explanations on why this works:
 
 1. Since CRAN does not re-do `R CMD build` nor re-render vignettes and will
-   reuse the built vignettes in the uploaded tarball, it is only necessary
+   reuse the built vignettes in the uploaded tarball, it's only necessary
    to have pngquant installed in the maintainer's build environment running
    `R CMD build`. This ensures that the submitted tarball contains minimized images.
 2. Even with the pngquant hook set up, knitr can still render the R Markdown

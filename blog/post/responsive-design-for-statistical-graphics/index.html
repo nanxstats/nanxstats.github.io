@@ -188,7 +188,7 @@
 which focuses on web page layouts adaptive to screen size and popularized by
 the front-end frameworks such as Bootstrap.</p>
 <p>Could the similar idea be applied to statistical graphics?
-In my opinion, the answer is yes, and it can be helpful for arranging
+In my opinion, the answer is yes, and the idea can be helpful for arranging
 multi-panel graphics under the context of creating effective visualizations
 that are adaptive to any screen sizes.</p>
 <div id="starter-example" class="section level2">
@@ -202,8 +202,8 @@ web browser using the session API provided by
 <a href="https://shiny.posit.co/r/articles/build/client-data/"><code>session$clientData</code></a>.</li>
 <li>In ggplot2, use the width data to decide the grid layout (number of columns)
 and graphical details such as font size of the multi-facet plot.</li>
-<li>Save the output with proper pixel width and height using a graphical device.</li>
-<li>In Shiny, re-render the plot based on screen size changes using <code>renderImage()</code>.</li>
+<li>Save the output with proper pixel width and height using an appropriate graphical device.</li>
+<li>In Shiny, re-render the plot based on screen size changes using <code>shiny::renderImage()</code>.</li>
 </ol>
 <p>Following this logic, we can write a minimal prototype with 30 lines of R code:</p>
 <pre class="r"><code>library(&quot;shiny&quot;)
@@ -245,10 +245,10 @@ display ratio such as the
 <h2>Responsive graphics within responsive containers</h2>
 <p>Of course, we can extend the idea of responsive graphics and fit them inside
 a multi-column responsive page layout.
-A more generic implementation with modularized plotting and saving functions
+This <a href="https://gist.github.com/nanxstats/59e91cc32548c1522ebff55ef6facd20">GitHub Gist</a>
+has a more generic implementation with modularized plotting and saving functions
 to show both single-column and two-column layouts with vector-based
-SVG output is available in this
-<a href="https://gist.github.com/nanxstats/59e91cc32548c1522ebff55ef6facd20">GitHub Gist</a>.</p>
+SVG output.</p>
 <div class="ratio ratio-16x9">
 <video controls autoplay class="object-fit-cover">
 <source src="https://user-images.githubusercontent.com/199363/243249155-69c07023-e122-4265-83e8-570825220d80.mp4" type="video/mp4">

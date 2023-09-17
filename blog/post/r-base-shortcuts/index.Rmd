@@ -20,7 +20,7 @@ description: >
 ---
 
 > TL;DR: Please help me extend this GitHub repo by adding your own
-> base R programming idioms today:
+> base R programming idioms:
 > <https://github.com/nanxstats/r-base-shortcuts>.
 
 ![Snowboarder on a cloudy hill. Photo by [Boba Jovanovic](https://unsplash.com/photos/cvaYET_S3_Q).](/image/boba-jovanovic-cvaYET_S3_Q-unsplash.jpg)
@@ -39,7 +39,7 @@ About twelve years ago, I started to answer R questions on
 [Capital of Statistics](https://d.cosx.org/), an online community.
 I didn't always know the answers, but the research process helped me
 understand what "idiomatic R code" looks like.
-I uncovered patterns, tricks, and elegant constructs that I never
+I uncovered patterns, tricks, and constructs that I never
 could have imagined existed.
 
 I loved the discussions. I can't say how many questions I answered or

@@ -13,7 +13,7 @@
       <pubDate>Tue, 27 Jun 2023 22:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/r-base-shortcuts/</guid>
-      <description>TL;DR: Please help me extend this GitHub repo by adding your own base R programming idioms today: https://github.com/nanxstats/r-base-shortcuts.
+      <description>TL;DR: Please help me extend this GitHub repo by adding your own base R programming idioms: https://github.com/nanxstats/r-base-shortcuts.
 Snowboarder on a cloudy hill. Photo by Boba Jovanovic. For a long time, I’ve told people that I am not an R expert. I don’t know too much about R. I just happen to write software that encounters the least resistance when implemented in R. I’m shy. I’d rather solve problems myself than ask.</description>
     </item>
     
@@ -53,7 +53,7 @@ Photo by David Marcu. Software release at scale An agile, automated, and reliabl
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
-      <description>Photo by Timothy Dykes. If Google leads you here, you probably have assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
+      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
 For example, it is easy to make this mistake:
 ```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:
 ```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
@@ -66,7 +66,7 @@ For example, it is easy to make this mistake:
       
       <guid>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</guid>
       <description>Photo by Amy Shamblen. If you have written any Shiny apps, you are probably familiar with the idea of responsive web design, which focuses on web page layouts adaptive to screen size and popularized by the front-end frameworks such as Bootstrap.
-Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and it can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
+Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and the idea can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
     </item>
     
     <item>
@@ -95,7 +95,8 @@ To address this challenge, I started Open Source Typography, an opinionated, cur
       <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</guid>
-      <description>Cassette collection. Photo by Jametlene Reskp. Introduction Dealing with large-scale image outputs in R packages can be challenging, especially when it comes to passing CRAN checks. In this blog post, I will share my experience in using pngquant and ragg to compress the PNG output size for readme and vignettes. This allows R packages with many figures in their documentation to pass the CRAN checks without compromising image quality.</description>
+      <description>Cassette collection. Photo by Jametlene Reskp. Introduction Dealing with large-scale image outputs in R packages can be challenging, especially when it comes to passing CRAN checks. In this post, I will share my experience in using pngquant and ragg to compress the PNG output size for readme and vignettes. This allows R packages with many figures in their documentation to pass the CRAN checks without compromising image quality.
+Problem description I encountered a problem with my package, ggsci, which outputs approximately 30 example figures from both vignettes and README.</description>
     </item>
     
     <item>

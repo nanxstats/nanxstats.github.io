@@ -13,7 +13,7 @@
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
-      <description>Photo by Timothy Dykes. If Google leads you here, you probably have assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
+      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
 For example, it is easy to make this mistake:
 ```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:
 ```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
@@ -25,7 +25,8 @@ For example, it is easy to make this mistake:
       <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</guid>
-      <description>Cassette collection. Photo by Jametlene Reskp. Introduction Dealing with large-scale image outputs in R packages can be challenging, especially when it comes to passing CRAN checks. In this blog post, I will share my experience in using pngquant and ragg to compress the PNG output size for readme and vignettes. This allows R packages with many figures in their documentation to pass the CRAN checks without compromising image quality.</description>
+      <description>Cassette collection. Photo by Jametlene Reskp. Introduction Dealing with large-scale image outputs in R packages can be challenging, especially when it comes to passing CRAN checks. In this post, I will share my experience in using pngquant and ragg to compress the PNG output size for readme and vignettes. This allows R packages with many figures in their documentation to pass the CRAN checks without compromising image quality.
+Problem description I encountered a problem with my package, ggsci, which outputs approximately 30 example figures from both vignettes and README.</description>
     </item>
     
     <item>

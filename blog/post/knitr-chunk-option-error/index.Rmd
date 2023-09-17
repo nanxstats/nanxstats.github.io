@@ -16,9 +16,9 @@ description: >
   assigned to a chunk option that only accepts numeric values.
 ---
 
-![Photo by [Timothy Dykes](https://unsplash.com/photos/LhqLdDPcSV8).](/image/timothy-dykes-LhqLdDPcSV8-unsplash.jpg)
+![Rubber duck debugging. Photo by [Timothy Dykes](https://unsplash.com/photos/LhqLdDPcSV8).](/image/timothy-dykes-LhqLdDPcSV8-unsplash.jpg)
 
-If Google leads you here, you probably have assigned a character value
+If Google leads you here, you probably assigned a character value
 to a knitr chunk option such as `fig.width` or `fig.height`
 that only accepts numeric values, and your are trying to render
 that R Markdown or Quarto document.

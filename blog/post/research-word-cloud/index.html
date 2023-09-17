@@ -218,7 +218,7 @@ and aesthetic sense. The figure below was created using
 <li>Collect PDF files representing your research (10 min).</li>
 <li>Run a Python script to extract the top words from the PDF files (10 min).</li>
 <li>Review, edit, and finalize the list of top words (20 min).</li>
-<li>Use a word cloud generator, adjust the look, and generate an SVG file (15 min).</li>
+<li>Use a word cloud generator, adjust the look, and generate SVG (15 min).</li>
 <li>Convert the SVG file to a PDF/PNG file (5 min).</li>
 </ul>
 <p>Now let’s dive into it.</p>
@@ -254,7 +254,7 @@ meaningful words, as defined by a statistical model, from the PDF files:</p>
 The simple way is to use <code>pip</code> and <code>requirements.txt</code>:</p>
 <pre class="bash"><code>pip install -r requirements.txt</code></pre>
 <p>This will install the essential toolchain in Python, including pypdf for PDF
-parsing, ftfy for text cleaning, and spaCy for natural language processing (NLP).</p>
+parsing, ftfy for text cleaning, and spaCy for natural language processing.</p>
 </div>
 <div id="run-the-script" class="section level4">
 <h4>2.3 Run the script</h4>
@@ -278,7 +278,7 @@ plural and singular forms of the same word can be merged via replacement, too.</
 </ul>
 <p>To add word removal or replacement rules, open <code>pdf_word_extraction.py</code>.
 Edit the entries in the list <code>words_to_remove</code> and the key-value pairs in the
-dictionary <code>replacements</code>. Save and run the script again with the same command:</p>
+dictionary <code>replacements</code>. Save and run the Python script again with the same command as before:</p>
 <pre class="bash"><code>python3 pdf_word_extraction.py</code></pre>
 <p>Check the output again. Since some words in the original output have now been
 removed or replaced, the words newly popped into the list might give you more

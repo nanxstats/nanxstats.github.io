@@ -37,7 +37,7 @@ The general steps in the workflow are:
 - Collect PDF files representing your research (10 min).
 - Run a Python script to extract the top words from the PDF files (10 min).
 - Review, edit, and finalize the list of top words (20 min).
-- Use a word cloud generator, adjust the look, and generate an SVG file (15 min).
+- Use a word cloud generator, adjust the look, and generate SVG (15 min).
 - Convert the SVG file to a PDF/PNG file (5 min).
 
 Now let's dive into it.
@@ -90,7 +90,7 @@ pip install -r requirements.txt
 ```
 
 This will install the essential toolchain in Python, including pypdf for PDF
-parsing, ftfy for text cleaning, and spaCy for natural language processing (NLP).
+parsing, ftfy for text cleaning, and spaCy for natural language processing.
 
 #### 2.3 Run the script
 
@@ -119,7 +119,7 @@ The common reasons include:
 
 To add word removal or replacement rules, open `pdf_word_extraction.py`.
 Edit the entries in the list `words_to_remove` and the key-value pairs in the
-dictionary `replacements`. Save and run the script again with the same command:
+dictionary `replacements`. Save and run the Python script again with the same command as before:
 
 ```bash
 python3 pdf_word_extraction.py

@@ -26,7 +26,7 @@ which focuses on web page layouts adaptive to screen size and popularized by
 the front-end frameworks such as Bootstrap.
 
 Could the similar idea be applied to statistical graphics?
-In my opinion, the answer is yes, and it can be helpful for arranging
+In my opinion, the answer is yes, and the idea can be helpful for arranging
 multi-panel graphics under the context of creating effective visualizations
 that are adaptive to any screen sizes.
 
@@ -41,8 +41,8 @@ The key steps are:
    [`session$clientData`](https://shiny.posit.co/r/articles/build/client-data/).
 2. In ggplot2, use the width data to decide the grid layout (number of columns)
    and graphical details such as font size of the multi-facet plot.
-3. Save the output with proper pixel width and height using a graphical device.
-4. In Shiny, re-render the plot based on screen size changes using `renderImage()`.
+3. Save the output with proper pixel width and height using an appropriate graphical device.
+4. In Shiny, re-render the plot based on screen size changes using `shiny::renderImage()`.
 
 Following this logic, we can write a minimal prototype with 30 lines of R code:
 
@@ -88,10 +88,10 @@ display ratio such as the
 
 Of course, we can extend the idea of responsive graphics and fit them inside
 a multi-column responsive page layout.
-A more generic implementation with modularized plotting and saving functions
+This [GitHub Gist](https://gist.github.com/nanxstats/59e91cc32548c1522ebff55ef6facd20)
+has a more generic implementation with modularized plotting and saving functions
 to show both single-column and two-column layouts with vector-based
-SVG output is available in this
-[GitHub Gist](https://gist.github.com/nanxstats/59e91cc32548c1522ebff55ef6facd20).
+SVG output.
 
 <div class="ratio ratio-16x9">
 <video controls autoplay class="object-fit-cover">
