@@ -131,32 +131,131 @@
                     
     <hr>
 <h2 id="typography">Typography</h2>
-<ul>
-<li>Headline: <a href="https://nanx.me/ost/instrument-sans.html">Instrument Sans</a></li>
-<li>Body text: <a href="https://nanx.me/ost/source-serif.html">Source Serif 4</a></li>
-<li>Monospace: <a href="https://github.com/i-tu/Hasklig">Hasklig</a></li>
-<li>Favicon: <a href="https://fonts.google.com/specimen/Fira+Sans+Extra+Condensed">Fira Sans Extra Condensed</a></li>
-<li>Theme style: <a href="https://github.com/tailwindlabs/tailwindcss-typography">Tailwind CSS Typography</a></li>
-</ul>
+
+
+
+
+
+<table class="table table-hover table-responsive table-lg">
+<thead>
+<tr>
+<th>Usage</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Headline</td>
+<td><a href="https://nanx.me/ost/instrument-sans.html">Instrument Sans</a></td>
+<td>Contemporary, versatile sans-serif typeface.</td>
+</tr>
+<tr>
+<td>Body text</td>
+<td><a href="https://nanx.me/ost/source-serif.html">Source Serif 4</a></td>
+<td>Transitional style serif typeface for readability.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td><a href="https://github.com/i-tu/Hasklig">Hasklig</a></td>
+<td>Monospace font with ligature support.</td>
+</tr>
+<tr>
+<td>Favicon</td>
+<td><a href="https://fonts.google.com/specimen/Fira+Sans+Extra+Condensed">Fira Sans Extra Condensed</a></td>
+<td>Legible condensed typeface for tight spaces.</td>
+</tr>
+<tr>
+<td>Theme style</td>
+<td><a href="https://github.com/tailwindlabs/tailwindcss-typography">Tailwind CSS Typography</a></td>
+<td>Beautiful typographic defaults for vanilla HTML.</td>
+</tr>
+</tbody>
+</table>
+
 <h2 id="publishing">Publishing</h2>
-<ul>
-<li>Site generator: <a href="https://github.com/rstudio/blogdown">blogdown</a>, driven by <a href="https://gohugo.io/">Hugo</a></li>
-<li>Theme: <a href="https://github.com/nanxstats/hugo-nanx2023">hugo-nanx2023</a>, built on <a href="https://getbootstrap.com/">Bootstrap 5</a></li>
-<li>Commenting: <a href="https://utteranc.es/">utterances</a></li>
-</ul>
+
+
+
+
+
+<table class="table table-hover table-responsive">
+<thead>
+<tr>
+<th>Usage</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generator</td>
+<td><a href="https://github.com/rstudio/blogdown">blogdown</a></td>
+<td>Static site generator for R, driven by <a href="https://gohugo.io/">Hugo</a>.</td>
+</tr>
+<tr>
+<td>Theme</td>
+<td><a href="https://github.com/nanxstats/hugo-nanx2023">hugo-nanx2023</a></td>
+<td>Responsive Hugo theme built on <a href="https://getbootstrap.com/">Bootstrap 5</a>.</td>
+</tr>
+<tr>
+<td>Commenting</td>
+<td><a href="https://utteranc.es/">utterances</a></td>
+<td>Lightweight commenting system using GitHub issues.</td>
+</tr>
+</tbody>
+</table>
+
 <h2 id="editing">Editing</h2>
-<ul>
-<li><a href="https://code.visualstudio.com/">Visual Studio Code</a> with
-<a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">R extension</a>
-and <a href="https://marketplace.visualstudio.com/items?itemName=nanxstats.textmate-rstheme">textmate.rstheme</a></li>
-</ul>
+
+
+
+
+
+<table class="table table-hover table-responsive">
+<thead>
+<tr>
+<th>Usage</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Editor</td>
+<td><a href="https://code.visualstudio.com/">Visual Studio Code</a></td>
+<td>Code editor from Microsoft.</td>
+</tr>
+<tr>
+<td>Extension</td>
+<td><a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">R extension</a></td>
+<td>R language support in VS Code.</td>
+</tr>
+<tr>
+<td>Theme</td>
+<td><a href="https://marketplace.visualstudio.com/items?itemName=nanxstats.textmate-rstheme">textmate.rstheme</a></td>
+<td>VS Code theme optimized for R syntax highlighting.</td>
+</tr>
+</tbody>
+</table>
+
 <style>
-.markdown ul {
-  list-style: none;
-  padding-left: 2.5ch;
-  border-left: 1px solid var(--tw-prose-hr);
-  margin-left: 3ch;
-  line-height: 1.875rem;
+.table {
+  font-family: var(--tw-prose-font-sans-serif);
+  font-feature-settings: "ss01", "ss04", "ss07", "ss08", "ss09", "ss12";
+}
+
+.table tr {
+  border-color: var(--tw-prose-hr);
+}
+
+.table-hover tbody tr:hover td {
+  background-color: #f1f5f9;
+}
+
+.table td {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 </style>
 
