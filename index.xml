@@ -801,7 +801,8 @@ In my daily work, I solve challenges at the intersection of statistical methodol
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/colophon/</guid>
-      <description>Typography Usage Name Description Headline Instrument Sans Contemporary and versatile neo-grotesque sans-serif typeface. Body text Source Serif 4 Transitional style serif typeface optimized for readability. Code Hasklig Monospace font based on Source Code Pro with programming ligatures. Favicon Fira Sans Extra Condensed Legible condensed humanist typeface for tight spaces. Theme style Tailwind CSS Typography Beautiful typographic defaults for HTML you don&amp;rsquo;t control. Publishing Usage Name Description Generator blogdown Static site generator for R, driven by Hugo.</description>
+      <description>I launched this website in 2009, initially as a personal blog, before later expanding it to include a professional portfolio. Throughout the years, I have explored different publishing platforms: from WordPress and OpenScholar to hand-written HTML. My journey led me to adopt the static website generator: blogdown, driven by Hugo.
+This page lists the tools I use to build the site today. The entire stack is free and open source, and can be found on GitHub.</description>
     </item>
     
     <item>
