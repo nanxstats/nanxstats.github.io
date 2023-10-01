@@ -801,7 +801,7 @@ In my daily work, I solve challenges at the intersection of statistical methodol
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/colophon/</guid>
-      <description>Typography Usage Name Description Headline Instrument Sans Contemporary, versatile sans-serif typeface. Body text Source Serif 4 Transitional style serif typeface for readability. Code Hasklig Monospace font with ligature support. Favicon Fira Sans Extra Condensed Legible condensed typeface for tight spaces. Theme style Tailwind CSS Typography Beautiful typographic defaults for vanilla HTML. Publishing Usage Name Description Generator blogdown Static site generator for R, driven by Hugo. Theme hugo-nanx2023 Responsive Hugo theme built on Bootstrap 5.</description>
+      <description>Typography Usage Name Description Headline Instrument Sans Contemporary and versatile neo-grotesque sans-serif typeface. Body text Source Serif 4 Transitional style serif typeface optimized for readability. Code Hasklig Monospace font based on Source Code Pro with programming ligatures. Favicon Fira Sans Extra Condensed Legible condensed humanist typeface for tight spaces. Theme style Tailwind CSS Typography Beautiful typographic defaults for HTML you don&amp;rsquo;t control. Publishing Usage Name Description Generator blogdown Static site generator for R, driven by Hugo.</description>
     </item>
     
     <item>

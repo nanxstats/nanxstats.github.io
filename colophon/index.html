@@ -148,27 +148,27 @@
 <tr>
 <td>Headline</td>
 <td><a href="https://nanx.me/ost/instrument-sans.html">Instrument Sans</a></td>
-<td>Contemporary, versatile sans-serif typeface.</td>
+<td>Contemporary and versatile neo-grotesque sans-serif typeface.</td>
 </tr>
 <tr>
 <td>Body text</td>
 <td><a href="https://nanx.me/ost/source-serif.html">Source Serif 4</a></td>
-<td>Transitional style serif typeface for readability.</td>
+<td>Transitional style serif typeface optimized for readability.</td>
 </tr>
 <tr>
 <td>Code</td>
 <td><a href="https://github.com/i-tu/Hasklig">Hasklig</a></td>
-<td>Monospace font with ligature support.</td>
+<td>Monospace font based on Source Code Pro with programming ligatures.</td>
 </tr>
 <tr>
 <td>Favicon</td>
 <td><a href="https://fonts.google.com/specimen/Fira+Sans+Extra+Condensed">Fira Sans Extra Condensed</a></td>
-<td>Legible condensed typeface for tight spaces.</td>
+<td>Legible condensed humanist typeface for tight spaces.</td>
 </tr>
 <tr>
 <td>Theme style</td>
 <td><a href="https://github.com/tailwindlabs/tailwindcss-typography">Tailwind CSS Typography</a></td>
-<td>Beautiful typographic defaults for vanilla HTML.</td>
+<td>Beautiful typographic defaults for HTML you don&rsquo;t control.</td>
 </tr>
 </tbody>
 </table>
@@ -234,7 +234,7 @@
 <tr>
 <td>Theme</td>
 <td><a href="https://marketplace.visualstudio.com/items?itemName=nanxstats.textmate-rstheme">textmate.rstheme</a></td>
-<td>VS Code theme optimized for R syntax highlighting.</td>
+<td>Light VS Code theme optimized for R and R Markdown syntax highlighting.</td>
 </tr>
 </tbody>
 </table>
@@ -256,6 +256,16 @@
 .table td {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+@media (min-width: 540px) {
+  .table td:nth-child(1), table th:nth-child(1) {
+    min-width: 15ch;
+  }
+
+  .table td:nth-child(2), table th:nth-child(2) {
+    min-width: 20ch;
+  }
 }
 </style>
 
