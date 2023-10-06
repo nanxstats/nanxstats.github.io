@@ -1,0 +1,118 @@
+---
+title: "9 Questions About Adaptive Design"
+author: "Nan Xiao"
+date: "2023-10-06T11:30:00"
+slug: nine-questions-about-adaptive-design
+categories: []
+tags:
+  - adaptive designs
+  - clinical trials
+  - trial planning
+  - trial efficiency
+  - patient enrollment
+meta_img: "image/caleb-jones-J3JMyXWQHXU-unsplash.jpg"
+description: >
+  Explore 9 key questions about adaptive clinical trial design,
+  on its complexities, practicalities, and implementation challenges.
+---
+
+![Muir Woods trails. Photo by [Caleb Jones](https://unsplash.com/photos/J3JMyXWQHXU).](/image/caleb-jones-J3JMyXWQHXU-unsplash.jpg)
+
+For someone who has worked in the industry for years, one thing I miss about school
+is the [Socratic method](https://en.wikipedia.org/wiki/Socratic_method) of teaching used by some professors.
+It involves asking and answering questions to encourage critical thinking.
+By engaging in thoughtful Q&A sessions, I often find myself understanding
+the core elements of complex topics better compared to reading textbooks
+or papers alone.
+
+To me, adaptive clinical trial design is one of these complex topics.
+Adaptive design offers increased flexibility, allows modifications to the
+trial procedures based on interim results, and can potentially make the
+trial more efficient.
+Although sometimes, I'm a bit overwhelmed by the literature.
+It seems people often ask different questions under varying contexts,
+providing unique solutions. Not every adaptation strategy fits every situation.
+It becomes clear to me that having a perspective, understanding the context,
+and asking the right question is critical.
+
+To the rescue, my colleagues Keaven, Sabrina, and Hongtao published an article about
+[practical considerations for adaptive design](https://higherlogicdownload.s3.amazonaws.com/AMSTAT/fa4dd52c-8429-41d0-abdf-0011047bfa19/UploadedImages/BIOP%20Report/BIOPReport_Summer2023_Final.pdf)
+(page 11--15) in the summer 2023 issue of the
+[Biopharmaceutical Report](https://community.amstat.org/biop/biopharmreport).
+I enjoy how they approached this topic using a Q&A format and offering
+perspectives, just like teaching with the Socratic tradition.
+I highly recommend everyone interested in this topic to read the full article.
+Below is a brief summary of the 9 key questions on adaptive design discussed
+in the article.
+
+1. **Does adaptation slow planning?**
+
+   It could because this is complicated. To minimize potential delays,
+   one should get familiar with the designs, standardize the design
+   methods/software/templates, and get stakeholders on board early.
+
+2. **Does adaptation slow execution?**
+
+   Adaptive design demands efficient trial operations
+   due to the extra steps in the feedback loop.
+
+3. **How do adaptations impact cost considerations beyond patient enrollment?**
+
+   Opening too many sites before a decision, especially in a Phase 2/3 trial,
+   can increase costs. It's important to strike a balance between
+   enrollment continuation and data cleaning during decision-making phases.
+
+4. **Is interim decision-making appropriately executed?**
+
+   Interim data can be limited, making decisions challenging.
+   Ensuring the integrity of these decisions is important,
+   especially when operations teams need to stay blinded.
+
+5. **Operationally seamless or inferentially seamless adaptation?**
+
+   One should weigh the benefits of combined analysis against distinct
+   phase evaluations. While inferentially seamless trials can potentially
+   reduce sample size and accelerate trial completion, they may introduce
+   complexities. It is noteworthy that an inferentially seamless trial
+   with narrow review and adaptation can be converted to an
+   operationally seamless trial where adaptation can account for
+   complete review of interim data.
+
+6. **Data homogeneity issues before and after adaptation?**
+
+   Unblinded sample size estimation assumes consistent treatment effects
+   before and after adaptation.
+   This homogeneity is essential for the success of adaptive designs
+   and can be challenging to meet in practice.
+
+7. **Can simpler methods be more effective?**
+
+   Sometimes, traditional methods like
+   [group sequential design](https://keaven.github.io/gsDesign/)
+   can offer clarity and quick planning, avoiding the complexities of adaptation.
+
+8. **Can doses or treatments realistically be adapted mid-trial?**
+
+   Considering the nuances of various treatments and the minor differences
+   in their effectiveness can impact interim analysis outcomes.
+
+9. **Is futility analysis beneficial?**
+
+   Introducing futility analysis can save investments for more effective
+   alternatives, but also needs careful consideration about
+   delayed effects, conditional power, and timing of analyses.
+
+In the end, I think the article underscores that while adaptive designs
+are valuable tools, their successful implementation requires rigorous planning,
+meticulous consideration, and efficient execution.
+I hope you find the practical considerations in the article helpful, too.
+
+```{css, echo=FALSE}
+.content ol li {
+   font-weight: 700;
+}
+
+.content ol li p {
+   font-weight: 400;
+}
+```
