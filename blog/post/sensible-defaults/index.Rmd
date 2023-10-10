@@ -6,6 +6,7 @@ slug: sensible-defaults
 categories: []
 tags:
   - software architecture
+  - software engineering
   - R
 meta_img: "image/thomas-reaubourg-JRUVbgJJTBM-unsplash.jpg"
 description: "Sensible defaults make users' lives easier."
@@ -73,7 +74,7 @@ perhaps we should attempt to make statistical software operate similarly.
 
 Can you point out which option(s) you will change after
 a fresh installation in the screenshot below?
-([Hint 1](https://rstats.wtf/save-source.html),
+([Hint 1](https://rstats.wtf/source-and-blank-slates.html),
 [Hint 2](https://rmd4sci.njtierney.com/rstudio-what-and-why.html)).
 
 ```{r, echo=FALSE, out.width="100%"}

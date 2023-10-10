@@ -247,8 +247,7 @@ Intro In some situations, we want to know whether a file is a text file or a bin
       <pubDate>Tue, 07 Jun 2022 00:30:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/sensible-defaults/</guid>
-      <description>Photo by Thomas Reaubourg.
-gtsummary The other day, I looked into Daniel Sjoberg’s gtsummary package for summarizing tabular data and regression models. The README says:
+      <description>Photo by Thomas Reaubourg. gtsummary The other day, I looked into Daniel Sjoberg’s gtsummary package for summarizing tabular data and regression models. The README says:
 The {gtsummary} package summarizes data sets, regression models, and more, using sensible defaults with highly customizable capabilities.
 The concept of having sensible defaults in (research) software immediately resonated with me. Ideally, the default settings in software should be able to support the majority of users’ needs.</description>
     </item>
@@ -464,8 +463,7 @@ library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in
       
       <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
       <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by Posit.
-A collection of my shiny apps, now also self-hosted.
-The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
+A collection of my shiny apps, now also self-hosted. The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
     </item>
     
     <item>
@@ -645,8 +643,7 @@ One day, my dad came home from work. He tried to call me during the day asking f
       <pubDate>Sun, 01 Jul 2018 17:00:00 +0000</pubDate>
       
       <guid>https://nanx.me/blog/post/save-the-link-like-a-boss/</guid>
-      <description>Photo: Middle of Nowhere by David Kovalenko
-Anything posted on the Internet, stays there forever.
+      <description>Photo: Middle of Nowhere by David Kovalenko Anything posted on the Internet, stays there forever.
 I’m a firm believer of such assertions. The reality is, however, even if something is published on the Internet, due to technical reasons, it still probably won’t live there forever. The situation becomes more like
 If something isn’t on the web, it doesn’t exist at all.
 Yes, as time goes, content on the Internet fades away.</description>

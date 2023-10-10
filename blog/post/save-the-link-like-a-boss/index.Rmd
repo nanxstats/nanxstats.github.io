@@ -20,7 +20,7 @@ Yes, as time goes, content on the Internet fades away. This is particularly corr
 
 ## The Problem
 
-It might be just ok if the link only contains some unimportant content, while it is not ideal if the link contains valuable information and people already cited them. According to [an article](https://harvardlawreview.org/2014/03/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/) on _Harvard Law Review_, about 50% of the links cited in the U.S. Supreme Court opinions no longer have the cited material and suffer from such "link rot" issues. Even for this blog, I just realized that a few linked pages I used to prove my points three months ago are not accessible anymore.
+It might be just ok if the link only contains some unimportant content, while it is not ideal if the link contains valuable information and people already cited them. According to [an article](https://harvardlawreview.org/forum/vol-127/perma-scoping-and-addressing-the-problem-of-link-and-reference-rot-in-legal-citations/) on _Harvard Law Review_, about 50% of the links cited in the U.S. Supreme Court opinions no longer have the cited material and suffer from such "link rot" issues. Even for this blog, I just realized that a few linked pages I used to prove my points three months ago are not accessible anymore.
 
 ## The Solution
 

@@ -181,9 +181,9 @@
 
 
 <p>After procrastinating for some time, I finally set up a dedicated self-hosting server, <a href="https://nanx.app">nanx.app</a>, for my public shiny apps. From now on, most of the web applications listed on <a href="https://nanx.me/software/">my software page</a> will be available from two mirrors — the self-hosting server and the public cloud hosting solution <a href="https://www.shinyapps.io">shinyapps.io</a> kindly provided by Posit.</p>
-<div class="figure">
-<img src="https://nanx.me/image/nanx.app.png" alt="" />
-<p class="caption">A collection of my shiny apps, now also self-hosted.</p>
+<div class="float">
+<img src="https://nanx.me/image/nanx.app.png" alt="A collection of my shiny apps, now also self-hosted." />
+<div class="figcaption">A collection of my shiny apps, now also self-hosted.</div>
 </div>
 <div id="the-motivation" class="section level2">
 <h2>The Motivation</h2>
@@ -210,13 +210,13 @@
 <div id="the-setup" class="section level2">
 <h2>The Setup</h2>
 <p>In brief, it looks like this:</p>
-<div class="figure">
-<img src="self-hosting-shiny-diagram.png" alt="" />
-<p class="caption">A diagram of the checkpoints.</p>
+<div class="float">
+<img src="self-hosting-shiny-diagram.png" alt="A diagram of the checkpoints." />
+<div class="figcaption">A diagram of the checkpoints.</div>
 </div>
 <p>Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:</p>
 <ul>
-<li><a href="https://www.linode.com/docs/guides/set-up-and-secure/">How to secure your server</a></li>
+<li><a href="https://www.linode.com/docs/products/compute/compute-instances/guides/set-up-and-secure/">How to secure your server</a></li>
 <li><a href="https://www.linode.com/docs/guides/how-to-set-up-cloudflare-with-linode/">How to set up Cloudflare with Linode</a></li>
 <li><a href="https://support.posit.co/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy">Running Shiny Server with a proxy</a></li>
 </ul>
