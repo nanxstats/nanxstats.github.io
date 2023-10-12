@@ -510,6 +510,11 @@ a:focus {
     color: var(--tw-prose-links-hover);
 }
 
+.footer a:hover .svg-icon,
+.footer a:focus .svg-icon {
+    fill: var(--tw-prose-links-hover);
+}
+
 .footer a:first-child {
     margin-left: 0;
 }
@@ -526,6 +531,7 @@ a:focus {
 .site-social ul {
     list-style-type: none;
     padding: 0;
+    line-height: 2;
 }
 
 .site-social li {
@@ -535,7 +541,7 @@ a:focus {
 .site-social li:not(:last-child)::after {
     content: '';
     color: var(--tw-prose-captions);
-    margin: 0 0.3rem 0 0.5rem;
+    margin: 0 8px 0 8px;
 }
 
 .svg-icon {
