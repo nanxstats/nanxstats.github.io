@@ -510,11 +510,6 @@ a:focus {
     color: var(--tw-prose-links-hover);
 }
 
-.footer a:hover .svg-icon,
-.footer a:focus .svg-icon {
-    fill: var(--tw-prose-links-hover);
-}
-
 .footer a:first-child {
     margin-left: 0;
 }
@@ -544,11 +539,17 @@ a:focus {
     margin: 0 8px 0 8px;
 }
 
-.svg-icon {
+.footer a .svg-icon {
     width: 1em;
     height: 1em;
     vertical-align: -0.125em;
     fill: var(--tw-prose-captions);
+    transition: all .2s ease-in-out;
+}
+
+.footer a:hover .svg-icon,
+.footer a:focus .svg-icon {
+    fill: var(--tw-prose-links-hover);
 }
 
 /* < medium screens */
