@@ -1,32 +1,32 @@
 /* Typography */
 
 @font-face {
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-Regular.woff2") format("woff2");
+    font-family: "Libre Franklin";
+    src: url("fonts/LibreFranklin-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-Italic.woff2") format("woff2");
+    font-family: "Libre Franklin";
+    src: url("fonts/LibreFranklin-Italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-Medium.woff2") format("woff2");
+    font-family: "Libre Franklin";
+    src: url("fonts/LibreFranklin-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-Bold.woff2") format("woff2");
+    font-family: "Libre Franklin";
+    src: url("fonts/LibreFranklin-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -68,7 +68,7 @@
 
 :root {
     --tw-prose-font-serif: "Source Serif 4", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-sans-serif: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -89,8 +89,6 @@
 
 body {
     font-family: var(--tw-prose-font-sans-serif);
-    /* Instrument Sans */
-    font-feature-settings: "ss01", "ss04", "ss07", "ss08", "ss09", "ss12";
     background-color: var(--tw-bg);
     font-variant-ligatures: contextual common-ligatures;
 }
@@ -242,8 +240,6 @@ h4,
 h5,
 h6 {
     font-family: var(--tw-prose-font-sans-serif);
-    /* Instrument Sans */
-    font-feature-settings: "ss01", "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 500;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
@@ -309,7 +305,7 @@ h6 {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-size: 2rem;
+    font-size: 1.875rem;
     line-height: 1.45;
 }
 
