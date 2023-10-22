@@ -1,32 +1,32 @@
 /* Typography */
 
 @font-face {
-    font-family: "Libre Franklin";
-    src: url("fonts/LibreFranklin-Regular.woff2") format("woff2");
+    font-family: "Figtree";
+    src: url("fonts/Figtree-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Libre Franklin";
-    src: url("fonts/LibreFranklin-Italic.woff2") format("woff2");
+    font-family: "Figtree";
+    src: url("fonts/Figtree-Italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Libre Franklin";
-    src: url("fonts/LibreFranklin-Medium.woff2") format("woff2");
+    font-family: "Figtree";
+    src: url("fonts/Figtree-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Libre Franklin";
-    src: url("fonts/LibreFranklin-Bold.woff2") format("woff2");
+    font-family: "Figtree";
+    src: url("fonts/Figtree-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -68,7 +68,7 @@
 
 :root {
     --tw-prose-font-serif: "Source Serif 4", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-sans-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
