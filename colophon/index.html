@@ -175,7 +175,7 @@ The source code for this site itself is available at
 <td>Legible condensed humanist typeface.</td>
 </tr>
 <tr>
-<td>Theme style</td>
+<td>Color theme</td>
 <td><a href="https://github.com/tailwindlabs/tailwindcss-typography">Tailwind CSS Typography</a></td>
 <td>Beautiful typographic defaults.</td>
 </tr>
@@ -259,7 +259,7 @@ The source code for this site itself is available at
 
 .table {
   font-family: var(--tw-prose-font-sans-serif);
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .table tr {
@@ -275,14 +275,14 @@ The source code for this site itself is available at
   padding-left: 1px;
 }
 
-@media (min-width: 540px) {
-  .table td:nth-child(1), table th:nth-child(1) {
-    min-width: 15ch;
-  }
+.table td:nth-child(1),
+table th:nth-child(1) {
+  width: 25%;
+}
 
-  .table td:nth-child(2), table th:nth-child(2) {
-    min-width: 20ch;
-  }
+.table td:nth-child(2),
+table th:nth-child(2) {
+  width: 25%;
 }
 </style>
 
