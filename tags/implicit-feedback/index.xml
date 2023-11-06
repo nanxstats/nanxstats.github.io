@@ -6,27 +6,24 @@
     <description>Recent content in implicit feedback on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Aug 2018 19:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/implicit-feedback/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Aug 2018 19:30:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/implicit-feedback/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Implementing Triplet Losses for Implicit Feedback Recommender Systems with R and Keras</title>
       <link>https://nanx.me/blog/post/triplet-loss-r-keras/</link>
       <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/triplet-loss-r-keras/</guid>
       <description>All the R code for this post is available on GitHub: nanxstats/deep-learning-recipes.
 Photo: Three Palms by Jamie Davies
 At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
     </item>
-    
     <item>
       <title>Prototyping a Recommender System for Binary Implicit Feedback Data with R and Keras</title>
       <link>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</link>
       <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
       <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
 Photo: One in A Million by Veronica Benavides</description>
     </item>
-    
   </channel>
 </rss>

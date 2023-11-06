@@ -6,37 +6,32 @@
     <description>Recent content in R packages on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 12 Jun 2023 20:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/r-packages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jun 2023 20:30:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/r-packages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Context-Free R Package Release Checklist Generation with usethis</title>
       <link>https://nanx.me/blog/post/r-package-release-checklist/</link>
       <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/r-package-release-checklist/</guid>
       <description>The release checklist generation function described in this post is also available in this GitHub Gist.
 Photo by David Marcu. Software release at scale An agile, automated, and reliable release process is a key component of continuous delivery for modern software engineering teams. In particular, releasing new versions of R packages often involves going through a sequence of manual and automated checks to ensure quality and compliance. To scale up such efforts within a development team, it is crucial to follow a consistent release checklist.</description>
     </item>
-    
     <item>
       <title>Compressing PNG Output for R Packages with pngquant and ragg</title>
       <link>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</link>
       <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</guid>
       <description>Cassette collection. Photo by Jametlene Reskp. Introduction Dealing with large-scale image outputs in R packages can be challenging, especially when it comes to passing CRAN checks. In this post, I will share my experience in using pngquant and ragg to compress the PNG output size for readme and vignettes. This allows R packages with many figures in their documentation to pass the CRAN checks without compromising image quality.
 Problem description I encountered a problem with my package, ggsci, which outputs approximately 30 example figures from both vignettes and README.</description>
     </item>
-    
     <item>
       <title>New Paper Published: eCTD Submission with Analysis Using R</title>
       <link>https://nanx.me/blog/post/ectd-pkglite-paper/</link>
       <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/ectd-pkglite-paper/</guid>
       <description>Photo by DeepMind.
 I am thrilled to share that our paper, Electronic Common Technical Document Submission with Analysis Using R, is published online today in Clinical Trials. We have selected the open access (OA) option to ensure that everyone in the community can check out the full text freely.
 A simple solution to a complex problem Our article presented a viable path to prepare proprietary R assets for submission, following the electronic common technical document (eCTD) specification.</description>
     </item>
-    
   </channel>
 </rss>

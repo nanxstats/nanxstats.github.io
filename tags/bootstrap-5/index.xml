@@ -6,12 +6,12 @@
     <description>Recent content in Bootstrap 5 on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 24 Apr 2022 21:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/bootstrap-5/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Apr 2022 21:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/bootstrap-5/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Five Minute Shiny: Skeleton Loading Screen</title>
       <link>https://nanx.me/blog/post/shiny-loading-skeleton/</link>
       <pubDate>Sun, 24 Apr 2022 21:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-loading-skeleton/</guid>
       <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.
 Mosaic American Gothic. Original photo by Simon Lee.
@@ -19,29 +19,24 @@ Let’s implement a “skeleton loader” for Shiny apps. A typical animated ske
 A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.
 Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
     </item>
-    
     <item>
       <title>Five Minute Shiny: File Input Area Widget</title>
       <link>https://nanx.me/blog/post/shiny-file-input-area/</link>
       <pubDate>Sun, 17 Apr 2022 21:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-file-input-area/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
 Photo by Willian Justen de Vasconcellos
 Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
 Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
     </item>
-    
     <item>
       <title>Five Minute Shiny: Implement the Switch Input with Bootstrap 5</title>
       <link>https://nanx.me/blog/post/shiny-bs5-switches/</link>
       <pubDate>Thu, 14 Apr 2022 00:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
 Photo by Zonduurzaam Deventer. Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
 Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
     </item>
-    
   </channel>
 </rss>

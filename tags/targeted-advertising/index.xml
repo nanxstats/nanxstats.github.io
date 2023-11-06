@@ -6,28 +6,25 @@
     <description>Recent content in targeted advertising on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 19 Sep 2020 23:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/targeted-advertising/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Sep 2020 23:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/targeted-advertising/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Migrating from Disqus to Utterances</title>
       <link>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</link>
       <pubDate>Sat, 19 Sep 2020 23:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</guid>
       <description>Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit’s Intelligent Tracking Prevention (ITP). Following this progress and removing Google Analytics last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.
 Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.
 The process is much easier than I thought.</description>
     </item>
-    
     <item>
       <title>Removing Google Analytics from All My Websites</title>
       <link>https://nanx.me/blog/post/remove-google-analytics/</link>
       <pubDate>Mon, 28 Jan 2019 15:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/remove-google-analytics/</guid>
       <description>Like cameras, online trackers are everywhere. Photo by Matthew Henry.
 What happened After using it (or being used) for about ten years, today I consciously removed the Google Analytics tracking code from all the personal websites I control, including this blogdown (Hugo) site, the pkgdown sites for my R packages, and my Shiny apps. I never felt better, as from now on, people are browsing my websites tracking-free.
 Why I did it I think the blog posts by the pioneers who realized this before explained the economic reasons pretty well.</description>
     </item>
-    
   </channel>
 </rss>

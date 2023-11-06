@@ -6,25 +6,22 @@
     <description>Recent content in open source on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Feb 2021 01:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 08 Feb 2021 01:30:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rebranding R Packages with Hexagon Stickers: A Minimalist Approach</title>
       <link>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</link>
       <pubDate>Mon, 08 Feb 2021 01:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</guid>
       <description>A new hex sticker wall of my R packages.
 I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
     </item>
-    
     <item>
       <title>3 Simple Criteria for Choosing Open Source Projects</title>
       <link>https://nanx.me/blog/post/choose-open-source-projects/</link>
       <pubDate>Mon, 12 Mar 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/choose-open-source-projects/</guid>
       <description>As programming languages and their ecosystems evolve, we have many more powerful tools in our toolbox(es) than ten years ago. Ideas are also becoming cheaper than ever, especially when we want to implement them as open source projects. Everything looks like a nail when we have a mighty hammer. We may come up with five ideas in the morning every day. While at the end of the day, we may</description>
     </item>
-    
   </channel>
 </rss>

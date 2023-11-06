@@ -6,27 +6,24 @@
     <description>Recent content in software engineering on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Jun 2023 22:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jun 2023 22:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Base R Shortcuts: A Collection of Lesser-Known Idioms and Coding Patterns for Writing Concise and Fast R Code</title>
       <link>https://nanx.me/blog/post/r-base-shortcuts/</link>
       <pubDate>Tue, 27 Jun 2023 22:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/r-base-shortcuts/</guid>
       <description>TL;DR: Please help me extend this GitHub repo by adding your own base R programming idioms: https://github.com/nanxstats/r-base-shortcuts.
 Snowboarder on a cloudy hill. Photo by Boba Jovanovic. For a long time, I’ve told people that I am not an R expert. I don’t know too much about R. I just happen to write software that encounters the least resistance when implemented in R. I’m shy. I’d rather solve problems myself than ask.</description>
     </item>
-    
     <item>
       <title>Sensible Defaults</title>
       <link>https://nanx.me/blog/post/sensible-defaults/</link>
       <pubDate>Tue, 07 Jun 2022 00:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/sensible-defaults/</guid>
       <description>Photo by Thomas Reaubourg. gtsummary The other day, I looked into Daniel Sjoberg’s gtsummary package for summarizing tabular data and regression models. The README says:
 The {gtsummary} package summarizes data sets, regression models, and more, using sensible defaults with highly customizable capabilities.
 The concept of having sensible defaults in (research) software immediately resonated with me. Ideally, the default settings in software should be able to support the majority of users’ needs.</description>
     </item>
-    
   </channel>
 </rss>

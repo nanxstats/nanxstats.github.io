@@ -6,28 +6,25 @@
     <description>Recent content in promises on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 20 Aug 2022 00:15:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/promises/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 Aug 2022 00:15:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/promises/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Automate HTML to PDF Printing with {promises} and {chromote}</title>
       <link>https://nanx.me/blog/post/chromote-pdf-automation/</link>
       <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/chromote-pdf-automation/</guid>
       <description>The R code in this post is also available in this GitHub Gist.
 Photo by Bank Phrom.
 chromote is an R package that allows one to automate tasks driven by web browsers. It works by providing an API to communicate with Chromium-based browsers via the Chrome DevTools Protocol (CDP). For example, CDP can help us load and print HTML pages to PDF files programmatically, similar to what one could do in the web browser GUI but with mouse clicks.</description>
     </item>
-    
     <item>
       <title>Shiny Now Supports Async Execution</title>
       <link>https://nanx.me/blog/post/shiny-async/</link>
       <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-async/</guid>
       <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.
 You Want It When? (Zootopia)
 In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
     </item>
-    
   </channel>
 </rss>

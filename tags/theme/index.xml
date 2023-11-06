@@ -6,48 +6,41 @@
     <description>Recent content in theme on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Jan 2023 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/theme/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 20:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/theme/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcing My First VS Code Extension: textmate.rstheme</title>
       <link>https://nanx.me/blog/post/vscode-textmate-rstheme/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/vscode-textmate-rstheme/</guid>
       <description>TL;DR: I published my first VS Code extension/theme on Visual Studio Marketplace, with the source hosted on GitHub. Try it out today.
 A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px.
 It was not until late in my life that I realized my eyes were sensitive to the visual aesthetics of things. To make things worse, I care about them very much, at least in the name of productivity and inspiration.</description>
     </item>
-    
     <item>
       <title>Tanka: A Minimalist Bootstrap 4 Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</link>
       <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</guid>
       <description>TL;DR: I have rewritten the Hugo Tanka theme entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.
 A screenshot of the updated Hugo Tanka theme.
 Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).
 Hugo has received several major updates in the past three years.</description>
     </item>
-    
     <item>
       <title>Renga: A Clean Bootstrap 4 Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-renga-theme/</link>
       <pubDate>Sat, 10 Nov 2018 23:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/hugo-renga-theme/</guid>
       <description>For a long time, I have been maintaining my homepage and the portfolio pages (software, papers) with HTML purely written by hand. Skeleton was my frontend framework for about five years, then I switched to Bootstrap 4 this year. After I (re)-started blogging at the end of last year, things got a bit complicated. The blog and the portfolio pages don’t get a consistent look (the</description>
     </item>
-    
     <item>
       <title>Tanka: A Minimalist Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-tanka-theme/</link>
       <pubDate>Wed, 27 Dec 2017 07:00:00 -0500</pubDate>
-      
       <guid>https://nanx.me/blog/post/hugo-tanka-theme/</guid>
       <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.
 Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
     </item>
-    
   </channel>
 </rss>

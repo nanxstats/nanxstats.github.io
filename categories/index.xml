@@ -6,15 +6,14 @@
     <description>Recent content in Categories on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 06 Oct 2019 00:30:00 +0000</lastBuildDate><atom:link href="https://nanx.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Oct 2019 00:30:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>machine learning</title>
       <link>https://nanx.me/categories/machine-learning/</link>
       <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/categories/machine-learning/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -6,17 +6,16 @@
     <description>Recent content in TextMate on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 02 Jan 2023 20:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/textmate/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 20:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/textmate/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Announcing My First VS Code Extension: textmate.rstheme</title>
       <link>https://nanx.me/blog/post/vscode-textmate-rstheme/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/vscode-textmate-rstheme/</guid>
       <description>TL;DR: I published my first VS Code extension/theme on Visual Studio Marketplace, with the source hosted on GitHub. Try it out today.
 A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px.
 It was not until late in my life that I realized my eyes were sensitive to the visual aesthetics of things. To make things worse, I care about them very much, at least in the name of productivity and inspiration.</description>
     </item>
-    
   </channel>
 </rss>

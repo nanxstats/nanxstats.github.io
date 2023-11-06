@@ -1,56 +1,64 @@
 /* Typography */
 
 @font-face {
-    font-family: "Figtree";
-    src: url("fonts/Figtree-Regular.woff2") format("woff2");
+    font-family: "DM Sans";
+    src: url("fonts/DMSans-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Figtree";
-    src: url("fonts/Figtree-Italic.woff2") format("woff2");
+    font-family: "DM Sans";
+    src: url("fonts/DMSans-Italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Figtree";
-    src: url("fonts/Figtree-Medium.woff2") format("woff2");
+    font-family: "DM Sans";
+    src: url("fonts/DMSans-Medium.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Figtree";
-    src: url("fonts/Figtree-Bold.woff2") format("woff2");
+    font-family: "DM Sans";
+    src: url("fonts/DMSans-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-Regular.ttf.woff2") format("woff2");
+    font-family: "DM Sans Display";
+    src: url("fonts/DMSans36pt-Medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+}
+
+@font-face {
+    font-family: "Besley";
+    src: url("fonts/Besley-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-It.ttf.woff2") format("woff2");
+    font-family: "Besley";
+    src: url("fonts/Besley-Italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-Bold.ttf.woff2") format("woff2");
+    font-family: "Besley";
+    src: url("fonts/Besley-Bold.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -67,9 +75,10 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-serif: "Source Serif 4", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-sans-serif: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "Besley", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-display: "DM Sans Display", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -186,9 +195,10 @@ hr {
 }
 
 .header h1.name {
-    font-size: 2.5rem;
+    font-family: var(--tw-prose-font-display);
     font-weight: 500;
-    margin-left: 6px;
+    font-size: 2.5rem;
+    margin-left: 7px;
 }
 
 .header a {
@@ -239,26 +249,26 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-display);
     font-weight: 500;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
 
 .content h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 
 .content h2 {
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 .content h3 {
-    font-size: 1.2rem;
+    font-size: 1.75rem;
 }
 
 .content h4 {
-    font-size: 1.125rem;
+    font-size: 1.5rem;
 }
 
 .content .meta {
@@ -287,7 +297,7 @@ h6 {
 .content .markdown {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
-    font-size: 1rem;
+    font-size: 1.125rem;
     line-height: calc(30 / 18);
     font-weight: 400;
     color: var(--tw-prose-body);
@@ -305,7 +315,9 @@ h6 {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-size: 1.875rem;
+    font-family: var(--tw-prose-font-display);
+    font-weight: 500;
+    font-size: 2.25rem;
     line-height: 1.45;
 }
 
@@ -435,6 +447,7 @@ h6 {
 }
 
 .content .post-item .meta-date {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-variant-numeric: tabular-nums;
     font-size: 0.875rem;
     line-height: 2.5rem;

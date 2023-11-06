@@ -6,40 +6,35 @@
     <description>Recent content in web typography on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 10 May 2023 17:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/web-typography/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 May 2023 17:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/web-typography/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Find Your Perfect Open Source Font: Introducing the Interactive Typeface Lookbook</title>
       <link>https://nanx.me/blog/post/open-source-typography/</link>
       <pubDate>Wed, 10 May 2023 17:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/open-source-typography/</guid>
       <description>Majesty Palm. Photo by Kara Eads. Introduction There are more than 1,500 open source font families available on Google Fonts, presenting designers and developers with an extensive, yet often overwhelming, array of options. With such a vast selection, it can be challenging to sift through and find the perfect typeface for your projects, let alone remember the hidden gems you may have come across in the past.
 To address this challenge, I started Open Source Typography, an opinionated, curated lookbook of outstanding open source fonts.</description>
     </item>
-    
     <item>
       <title>Font Variant Numeric</title>
       <link>https://nanx.me/blog/post/font-variant-numeric/</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/font-variant-numeric/</guid>
       <description>TL;DR: If you use the native font stack (the default in Bootstrap 4+), check the numbers displayed in tables, especially on Apple’s platforms.
 Photo by Jen Theodore.
 A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:
 Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
     </item>
-    
     <item>
       <title>The Return of the Native Font Stack</title>
       <link>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</link>
       <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</guid>
       <description>Photo: Lead type
 As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:
 font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.
 Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
     </item>
-    
   </channel>
 </rss>

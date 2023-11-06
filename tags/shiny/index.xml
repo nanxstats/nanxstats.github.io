@@ -6,32 +6,28 @@
     <description>Recent content in shiny on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Jun 2023 01:00:00 +0000</lastBuildDate><atom:link href="https://nanx.me/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 05 Jun 2023 01:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/shiny/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Responsive Design for Statistical Graphics with Shiny and ggplot2</title>
       <link>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</link>
       <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</guid>
       <description>Photo by Amy Shamblen. If you have written any Shiny apps, you are probably familiar with the idea of responsive web design, which focuses on web page layouts adaptive to screen size and popularized by the front-end frameworks such as Bootstrap.
 Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and the idea can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
     </item>
-    
     <item>
       <title>The Past and Future of Shiny Keynote at rstudio::conf(2022)</title>
       <link>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</link>
       <pubDate>Wed, 17 Aug 2022 20:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</guid>
       <description>I constantly feel lucky to witness the growth of the R web framework, Shiny, in the past ten years. In his keynote speech at rstudio::conf 2022, Joe Cheng shared an excellent summary of Shiny’s achievements and exciting outlook.
 I am deeply moved by the story about how Shiny was created and Joe’s journey, and I recommend you watch the talk recording below if you haven’t. Notably, after Hadley’s Mastering Shiny book, the community-maintained awesome list awesome-shiny-extensions was again highlighted in Joe’s talk from 24:00 to 24:33 (thanks so much for the shout-out!</description>
     </item>
-    
     <item>
       <title>Five Minute Shiny: Skeleton Loading Screen</title>
       <link>https://nanx.me/blog/post/shiny-loading-skeleton/</link>
       <pubDate>Sun, 24 Apr 2022 21:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-loading-skeleton/</guid>
       <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.
 Mosaic American Gothic. Original photo by Simon Lee.
@@ -39,84 +35,69 @@ Let’s implement a “skeleton loader” for Shiny apps. A typical animated ske
 A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.
 Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
     </item>
-    
     <item>
       <title>Five Minute Shiny: File Input Area Widget</title>
       <link>https://nanx.me/blog/post/shiny-file-input-area/</link>
       <pubDate>Sun, 17 Apr 2022 21:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-file-input-area/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
 Photo by Willian Justen de Vasconcellos
 Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
 Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
     </item>
-    
     <item>
       <title>Five Minute Shiny: Implement the Switch Input with Bootstrap 5</title>
       <link>https://nanx.me/blog/post/shiny-bs5-switches/</link>
       <pubDate>Thu, 14 Apr 2022 00:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
 Photo by Zonduurzaam Deventer. Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
 Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
     </item>
-    
     <item>
       <title>Building Paginated News Lists in R Markdown and Shiny with DT</title>
       <link>https://nanx.me/blog/post/dt-news-list/</link>
       <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/dt-news-list/</guid>
       <description>The R code in this post is also available as this GitHub Gist.
 Mosaic Mondrian. Original photo by Simon Lee.
 Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
     </item>
-    
     <item>
       <title>Architecting Large Shiny Apps with Minimal First Contentful Paint Time</title>
       <link>https://nanx.me/blog/post/shiny-fcp-loader/</link>
       <pubDate>Wed, 30 Mar 2022 22:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-fcp-loader/</guid>
       <description>The Shiny app skeleton is available from nanxstats/shiny-fcp-loader.
 Pantheon, Roma, Italy. Photo by Emma Fabbri.
 More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
 UX side effects of large Shiny apps For larger Shiny apps, users could wait a long time (in terms of 10s of seconds) with an awkward blank screen before seeing the rendered app content.</description>
     </item>
-    
     <item>
       <title>Self-Hosting Shiny Apps with Linode and Cloudflare</title>
       <link>https://nanx.me/blog/post/self-host-shiny-apps/</link>
       <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
       <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by Posit.
 A collection of my shiny apps, now also self-hosted. The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
     </item>
-    
     <item>
       <title>A List of Awesome Shiny Extension Packages</title>
       <link>https://nanx.me/blog/post/awesome-shiny-extensions/</link>
       <pubDate>Tue, 04 Dec 2018 14:30:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/awesome-shiny-extensions/</guid>
       <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
 TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
 Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
     </item>
-    
     <item>
       <title>Shiny Now Supports Async Execution</title>
       <link>https://nanx.me/blog/post/shiny-async/</link>
       <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
-      
       <guid>https://nanx.me/blog/post/shiny-async/</guid>
       <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.
 You Want It When? (Zootopia)
 In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
     </item>
-    
   </channel>
 </rss>
