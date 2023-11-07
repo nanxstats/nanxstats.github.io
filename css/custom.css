@@ -73,8 +73,8 @@
 }
 
 @font-face {
-    font-family: "Hasklig";
-    src: url("fonts/Hasklig-Regular.woff2") format("woff2");
+    font-family: "Inconsolata";
+    src: url("fonts/Inconsolata-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -85,7 +85,7 @@
 :root {
     --tw-prose-font-serif: "Besley", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-sans-serif: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "Inconsolata", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-font-display: "DM Sans Display", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -129,7 +129,7 @@ a {
     color: var(--tw-prose-links);
     text-decoration: underline;
     text-decoration-color: var(--tw-prose-bullets);
-    text-underline-offset: 5px;
+    text-underline-offset: 6px;
     background-color: transparent;
     transition: all .2s ease-in-out;
 }
@@ -384,7 +384,7 @@ h6 {
     color: var(--tw-prose-code);
     padding: .2em .4em;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.375rem;
     background-color: rgba(27, 31, 35, .05);
     border-radius: 6px;
 }
@@ -407,8 +407,8 @@ h6 {
 .content .markdown pre output {
     /* Enclosed by 4 backticks (````) */
     padding: 0;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 26px;
     background-color: var(--tw-bg);
     border-radius: 0;
 }
