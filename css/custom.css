@@ -233,28 +233,23 @@ hr {
 .header ul.nav li a {
     color: var(--tw-prose-headings);
     padding: 3px 8px 3px 8px;
+    position: relative;
 }
 
 .header ul.nav li a:hover {
     color: var(--tw-prose-captions);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 1rem;
 }
 
 .header ul.nav li a:focus,
 .header ul.nav li a:active {
     color: var(--tw-prose-captions);
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-underline-offset: 1rem;
 }
 
 .header ul.nav li a.active {
     text-decoration-color: var(--tw-prose-headings);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-underline-offset: 1rem;
+    text-underline-offset: 16px;
 }
 
 @media (max-width: 767.98px) {
@@ -262,6 +257,38 @@ hr {
         font-weight: 500;
         text-decoration: none;
     }
+}
+
+/* Dynamic hover underline effect */
+
+.header ul.nav li a::after {
+    content: '';
+    display: block;
+    /* Adjust width to account for padding */
+    width: calc(100% - 16px);
+    /* Set the height of the underline */
+    height: 2px;
+    background-color: var(--tw-prose-captions);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Start with no height */
+    transform: scaleY(0);
+    /* Grow the line from the bottom */
+    transform-origin: bottom;
+    /* Start with underline invisible */
+    opacity: 0;
+    position: absolute;
+    /* Position at the bottom of the text */
+    bottom: -6px;
+    /* Adjust left position to account for padding */
+    left: 8px;
+}
+
+.header ul.nav li a:hover::after,
+.header ul.nav li a:focus::after {
+    /* Full height on hover/focus */
+    transform: scaleY(1);
+    /* Make underline visible on hover/focus */
+    opacity: 1;
 }
 
 /* Partial: content */
