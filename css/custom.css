@@ -49,24 +49,24 @@
 }
 
 @font-face {
-    font-family: "Besley";
-    src: url("fonts/Besley-Regular.woff2") format("woff2");
+    font-family: "Source Serif 4";
+    src: url("fonts/SourceSerif4-Regular.ttf.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Besley";
-    src: url("fonts/Besley-Italic.woff2") format("woff2");
+    font-family: "Source Serif 4";
+    src: url("fonts/SourceSerif4-It.ttf.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Besley";
-    src: url("fonts/Besley-Bold.woff2") format("woff2");
+    font-family: "Source Serif 4";
+    src: url("fonts/SourceSerif4-Bold.ttf.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -83,7 +83,7 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-serif: "Besley", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "Source Serif 4", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-sans-serif: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Inconsolata", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-font-display: "DM Sans Display", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -425,8 +425,8 @@ h6 {
     color: var(--tw-prose-code);
     padding: .2em .4em;
     margin: 0;
-    font-size: 1.375rem;
-    background-color: rgba(27, 31, 35, .05);
+    font-size: 1.125rem;
+    background-color: rgba(175, 184, 193, 0.2);
     border-radius: 6px;
 }
 
