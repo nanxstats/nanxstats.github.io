@@ -259,6 +259,10 @@ hr {
     }
 }
 
+.header ul.nav li a.active:hover {
+    color: var(--tw-prose-headings);
+}
+
 /* Dynamic hover underline effect */
 
 .header ul.nav li a::after {
@@ -289,6 +293,10 @@ hr {
     transform: scaleY(1);
     /* Make underline visible on hover/focus */
     opacity: 1;
+}
+
+.header ul.nav li a.active::after {
+    display: none;
 }
 
 /* Partial: content */
