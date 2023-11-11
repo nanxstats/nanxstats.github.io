@@ -87,7 +87,7 @@ using foreach and doParallel for parallelization.
 
 With the advancements in modern R parallel computing infrastructure,
 particularly in futureverse, these functions should be ideally written in
-a parallel backend agnostic style using `%doFuture%` so the parallel context
+a parallel backend agnostic style using `%dofuture%` so the parallel context
 can be configured in user land code and any available backend types can be used.
 See the articles linked in [nanxstats/r-future-recipes](https://github.com/nanxstats/r-future-recipes)
 for more details.
