@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> R packages - Nan Xiao | 肖楠 </title>
+    <title> protr 1.7-0 - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="protr 1.7-0 brings new tools for parallel protein sequence similarity computation between two sets of proteins based on sequence alignment.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/r-packages/" />
-    <meta property="og:title" content="R packages" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/protr-1-7-0/" />
+    <meta property="og:title" content="protr 1.7-0" />
+    <meta property="og:image" content="https://nanx.me/image/google-deepmind-Fv39DqWqtHw-unsplash.jpg" />
+    <meta property="og:description" content="protr 1.7-0 brings new tools for parallel protein sequence similarity computation between two sets of proteins based on sequence alignment.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="R packages" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="protr 1.7-0" />
+    <meta name="twitter:description" content="protr 1.7-0 brings new tools for parallel protein sequence similarity computation between two sets of proteins based on sequence alignment.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/google-deepmind-Fv39DqWqtHw-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/tags/r-packages/">
+    <link rel="canonical" href="https://nanx.me/blog/post/protr-1-7-0/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" integrity="sha512-t4GWSVZO1eC8BM339Xd7Uphw5s17a86tIZIj8qRxhnKub6WoyhnrxeCIMeAqBPgdZGlCcG2PrZjMc+Wr78+5Xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -41,8 +44,6 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
-    
-    <link href="https://nanx.me/tags/r-packages/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -70,7 +71,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog"
+                                <a class="nav-link text-blog active"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -129,91 +130,195 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <div class="markdown">
+                <h1 class="blog-post-title">protr 1.7-0</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Fri Nov 10 2023 21:00:00 UTC'>
+                        2023-11-10
+                    </span>
+
+                    <span class="reading-time middot">
+                        3 min read
+                    </span>
+
+                    <div class="d-none d-md-block mt-2 tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/protein-sequence">protein sequence</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/feature-engineering">feature engineering</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/google-deepmind-Fv39DqWqtHw-unsplash.jpg" alt="3D render from Google DeepMind. Artist: Wes Cockx." />
+<div class="figcaption">3D render from <a href="https://unsplash.com/photos/a-model-of-a-building-made-out-of-legos-Fv39DqWqtHw">Google DeepMind</a>. Artist: Wes Cockx.</div>
+</div>
+<p>I am glad to announce the release of <a href="https://nanx.me/protr/">protr</a> 1.7-0.
+Install it from CRAN with:</p>
+<pre class="r"><code>install.packages(&quot;protr&quot;)</code></pre>
+<p>You can also install it from
+<a href="https://anaconda.org/conda-forge/r-protr">conda-forge</a> in Python.</p>
+<p>First released in 2012, protr was my very first open source R package.
+The package generates representations for protein sequences such as
+numerical features and similarity measures.
+Since its inception, protr has evolved after 21 CRAN releases
+by incorporating user feedback. With 296 Google Scholar
+<a href="https://scholar.google.com/scholar?cites=14211153676111619910">citations</a>
+as of November 2023, it has demonstrated to be a useful
+component for many workflows in drug discovery and machine learning research.</p>
+<div id="whats-new" class="section level2">
+<h2>What’s new</h2>
+<p>A simple but common task in computational biology is to compute similarities
+between proteins based on their sequences. The capability to compute such
+similarities efficiently is essential for research in drug discovery,
+protein-protein interaction prediction, and biomarker identification, providing
+a foundation for kernel-based machine learning and deep learning methods.</p>
+<p>protr 1.7-0 adds a new function
+<a href="https://nanx.me/protr/reference/crossSetSim.html"><code>crossSetSim()</code></a>
+for computing sequence-derived similarity (using multiple sequence alignment)
+for all combinations of <span class="math inline">\(m \times n\)</span> sequences from two protein sets of
+size <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span>. Here is an example:</p>
+<pre class="r"><code>library(protr)
+
+# Find example UniProt FASTA files
+fasta_files &lt;- list.files(
+  system.file(&quot;protseq&quot;, package = &quot;protr&quot;),
+  pattern = &quot;^[A-Z][0-9][A-Z0-9]{3}[0-9]\\.fasta$&quot;,
+  full.names = TRUE
+)
+
+# Select 10 and 500 FASTA files for the two protein sets
+set.seed(42)
+protein_set_1 &lt;- sample(fasta_files, size = 10, replace = TRUE)
+protein_set_2 &lt;- sample(fasta_files, size = 500, replace = TRUE)
+
+# Read sequences from the FASTA files for both protein sets
+seq_set_1 &lt;- sapply(protein_set_1, readFASTA, USE.NAMES = FALSE)
+seq_set_2 &lt;- sapply(protein_set_2, readFASTA, USE.NAMES = FALSE)
+
+# Compute the similarity between the two sets of protein sequences in parallel
+seq_sim &lt;- crossSetSim(seq_set_1, seq_set_2, cores = 8)
+
+# Set the column and row names of the similarity matrix to proteins names
+colnames(seq_sim) &lt;- names(seq_set_1)
+rownames(seq_sim) &lt;- names(seq_set_2)
+
+# Preview the similarity matrix
+head(seq_sim)[, 1:2]</code></pre>
+<p>This function extends the existing functions for computing pairwise
+similarities within a single set of proteins.
+The API is made consistent with the previous implementations,
+using foreach and doParallel for parallelization.</p>
+<p>With the advancements in modern R parallel computing infrastructure,
+particularly in futureverse, these functions should be ideally written in
+a parallel backend agnostic style using <code>%doFuture%</code> so the parallel context
+can be configured in user land code and any available backend types can be used.
+See the articles linked in <a href="https://github.com/nanxstats/r-future-recipes">nanxstats/r-future-recipes</a>
+for more details.</p>
+</div>
+<div id="relevant-tools-for-sequence-similarity-in-protr" class="section level2">
+<h2>Relevant tools for sequence similarity in protr</h2>
+<p>In protr, two functions for computing pairwise similarity within
+a single list of protein sequences are the most frequently used:</p>
+<ul>
+<li><a href="https://nanx.me/protr/reference/parSeqSim.html"><code>parSeqSim()</code></a> -
+Computes the <span class="math inline">\(n^2/2 - n\)</span> pairwise similarities within a single
+protein sequence set of size <span class="math inline">\(n\)</span> in parallel.
+Our <a href="https://doi.org/10.1002/psp4.12002">multiple evidence fusion paper</a>
+published in 2015 leveraged this similarity information to generate
+features inspired by collaborative filtering for a classification algorithm.</li>
+<li><a href="https://nanx.me/protr/reference/parSeqSimDisk.html"><code>parSeqSimDisk()</code></a> -
+Sometimes, the sequence data and similarity matrices are too large
+to fit into RAM—especially when in parallel.
+This is a memory-aware version that splits the task into batches,
+writes the results in each batch to disk, and eventually merges the
+cached results together.</li>
+</ul>
+</div>
+<div id="acknowledgments" class="section level2">
+<h2>Acknowledgments</h2>
+<p>I want to thank <a href="https://github.com/seb-mueller">Sebastian Mueller</a>
+for raising the need and contributing the code
+(<a href="https://github.com/nanxstats/protr/issues/34">nanxstats/protr#34</a>).
+Also, a big shout out to the user community and
+package developers (3 reverse imports) for your continued trust and support.</p>
+</div>
+
+
+
                 </div>
 
-                <div class="posts">
-                    <h1>Posts about R packages</h1>
-                    <hr>
-                    <ul class="list-unstyled">
-                        
-                        <li class="groupby">2023</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/protr-1-7-0/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    protr 1.7-0
+                
+                <div class="navigation">
+                    <div class="row">
+                        <div class="col-sm-12 col-lg-6">
+                            
+                            <div class="mt-4 text-start">
+                                <a href="https://nanx.me/blog/post/nine-questions-about-adaptive-design/">« 9 Questions About Adaptive Design</a>
+                            </div>
+                            
+                        </div>
+                        <div class="col-sm-12 col-lg-6">
+                            
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-11-10
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/r-package-release-checklist/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Context-Free R Package Release Checklist Generation with usethis
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-06-12
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/rpkgs-pngquant-ragg/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Compressing PNG Output for R Packages with pngquant and ragg
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-04-09
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2022</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ectd-pkglite-paper/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    New Paper Published: eCTD Submission with Analysis Using R
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2022-09-28
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                    </ul>
-                </div>
+                
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -304,12 +409,6 @@
                         
 
                         
-                        <li><a href="https://nanx.me/tags/r-packages/index.xml" class="mr-0">
-                                <svg class="svg-icon mr-1">
-                                    <use xlink:href="#octicons-rss"></use>
-                                </svg>
-                                RSS</a></li>
-                        
 
                         
                     </ul>
@@ -339,6 +438,9 @@
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>

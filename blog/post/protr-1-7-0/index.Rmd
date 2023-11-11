@@ -1,0 +1,119 @@
+---
+title: "protr 1.7-0"
+author: "Nan Xiao"
+date: "2023-11-10T21:00:00"
+slug: protr-1-7-0
+categories: []
+tags:
+  - R
+  - R packages
+  - protein sequence
+  - feature engineering
+meta_img: "image/google-deepmind-Fv39DqWqtHw-unsplash.jpg"
+description: >
+  protr 1.7-0 brings new tools for parallel protein sequence similarity
+  computation between two sets of proteins based on sequence alignment.
+---
+
+![3D render from [Google DeepMind](https://unsplash.com/photos/a-model-of-a-building-made-out-of-legos-Fv39DqWqtHw). Artist: Wes Cockx.](/image/google-deepmind-Fv39DqWqtHw-unsplash.jpg)
+
+I am glad to announce the release of [protr](https://nanx.me/protr/) 1.7-0.
+Install it from CRAN with:
+
+```r
+install.packages("protr")
+```
+
+You can also install it from
+[conda-forge](https://anaconda.org/conda-forge/r-protr) in Python.
+
+First released in 2012, protr was my very first open source R package.
+The package generates representations for protein sequences such as
+numerical features and similarity measures.
+Since its inception, protr has evolved after 21 CRAN releases
+by incorporating user feedback. With 296 Google Scholar
+[citations](https://scholar.google.com/scholar?cites=14211153676111619910)
+as of November 2023, it has demonstrated to be a useful
+component for many workflows in drug discovery and machine learning research.
+
+## What's new
+
+A simple but common task in computational biology is to compute similarities
+between proteins based on their sequences. The capability to compute such
+similarities efficiently is essential for research in drug discovery,
+protein-protein interaction prediction, and biomarker identification, providing
+a foundation for kernel-based machine learning and deep learning methods.
+
+protr 1.7-0 adds a new function
+[`crossSetSim()`](https://nanx.me/protr/reference/crossSetSim.html)
+for computing sequence-derived similarity (using multiple sequence alignment)
+for all combinations of $m \times n$ sequences from two protein sets of
+size $m$ and $n$. Here is an example:
+
+```r
+library(protr)
+
+# Find example UniProt FASTA files
+fasta_files <- list.files(
+  system.file("protseq", package = "protr"),
+  pattern = "^[A-Z][0-9][A-Z0-9]{3}[0-9]\\.fasta$",
+  full.names = TRUE
+)
+
+# Select 10 and 500 FASTA files for the two protein sets
+set.seed(42)
+protein_set_1 <- sample(fasta_files, size = 10, replace = TRUE)
+protein_set_2 <- sample(fasta_files, size = 500, replace = TRUE)
+
+# Read sequences from the FASTA files for both protein sets
+seq_set_1 <- sapply(protein_set_1, readFASTA, USE.NAMES = FALSE)
+seq_set_2 <- sapply(protein_set_2, readFASTA, USE.NAMES = FALSE)
+
+# Compute the similarity between the two sets of protein sequences in parallel
+seq_sim <- crossSetSim(seq_set_1, seq_set_2, cores = 8)
+
+# Set the column and row names of the similarity matrix to proteins names
+colnames(seq_sim) <- names(seq_set_1)
+rownames(seq_sim) <- names(seq_set_2)
+
+# Preview the similarity matrix
+head(seq_sim)[, 1:2]
+```
+
+This function extends the existing functions for computing pairwise
+similarities within a single set of proteins.
+The API is made consistent with the previous implementations,
+using foreach and doParallel for parallelization.
+
+With the advancements in modern R parallel computing infrastructure,
+particularly in futureverse, these functions should be ideally written in
+a parallel backend agnostic style using `%doFuture%` so the parallel context
+can be configured in user land code and any available backend types can be used.
+See the articles linked in [nanxstats/r-future-recipes](https://github.com/nanxstats/r-future-recipes)
+for more details.
+
+## Relevant tools for sequence similarity in protr
+
+In protr, two functions for computing pairwise similarity within
+a single list of protein sequences are the most frequently used:
+
+- [`parSeqSim()`](https://nanx.me/protr/reference/parSeqSim.html) -
+  Computes the $n^2/2 - n$ pairwise similarities within a single
+  protein sequence set of size $n$ in parallel.
+  Our [multiple evidence fusion paper](https://doi.org/10.1002/psp4.12002)
+  published in 2015 leveraged this similarity information to generate
+  features inspired by collaborative filtering for a classification algorithm.
+- [`parSeqSimDisk()`](https://nanx.me/protr/reference/parSeqSimDisk.html) -
+  Sometimes, the sequence data and similarity matrices are too large
+  to fit into RAM---especially when in parallel.
+  This is a memory-aware version that splits the task into batches,
+  writes the results in each batch to disk, and eventually merges the
+  cached results together.
+
+## Acknowledgments
+
+I want to thank [Sebastian Mueller](https://github.com/seb-mueller)
+for raising the need and contributing the code
+([nanxstats/protr#34](https://github.com/nanxstats/protr/issues/34)).
+Also, a big shout out to the user community and
+package developers (3 reverse imports) for your continued trust and support.

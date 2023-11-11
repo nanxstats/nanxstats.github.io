@@ -6,8 +6,17 @@
     <description>Recent content in R on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 27 Jun 2023 22:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Nov 2023 21:00:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>protr 1.7-0</title>
+      <link>https://nanx.me/blog/post/protr-1-7-0/</link>
+      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/protr-1-7-0/</guid>
+      <description>3D render from Google DeepMind. Artist: Wes Cockx. I am glad to announce the release of protr 1.7-0. Install it from CRAN with:
+install.packages(&amp;quot;protr&amp;quot;) You can also install it from conda-forge in Python.
+First released in 2012, protr was my very first open source R package. The package generates representations for protein sequences such as numerical features and similarity measures. Since its inception, protr has evolved after 21 CRAN releases by incorporating user feedback.</description>
+    </item>
     <item>
       <title>Base R Shortcuts: A Collection of Lesser-Known Idioms and Coding Patterns for Writing Concise and Fast R Code</title>
       <link>https://nanx.me/blog/post/r-base-shortcuts/</link>

@@ -2,25 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/feature-engineering/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/protein-sequence/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/protr-1-7-0/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/blog/post/nine-questions-about-adaptive-design/</loc>
     <lastmod>2023-10-06T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/adaptive-designs/</loc>
     <lastmod>2023-10-06T11:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2023-10-06T11:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/clinical-trials/</loc>
     <lastmod>2023-10-06T11:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2023-10-06T11:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/patient-enrollment/</loc>
-    <lastmod>2023-10-06T11:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2023-10-06T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/trial-efficiency/</loc>
@@ -39,9 +54,6 @@
     <lastmod>2023-06-27T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/idiomatic-r/</loc>
-    <lastmod>2023-06-27T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2023-06-27T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-architecture/</loc>
@@ -90,9 +102,6 @@
     <lastmod>2023-06-12T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/continuous-delivery/</loc>
-    <lastmod>2023-06-12T20:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
     <lastmod>2023-06-12T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-release/</loc>

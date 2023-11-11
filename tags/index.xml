@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 06 Oct 2023 11:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Nov 2023 21:00:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>feature engineering</title>
+      <link>https://nanx.me/tags/feature-engineering/</link>
+      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/feature-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>protein sequence</title>
+      <link>https://nanx.me/tags/protein-sequence/</link>
+      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/protein-sequence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
     <item>
       <title>adaptive designs</title>
       <link>https://nanx.me/tags/adaptive-designs/</link>
@@ -62,13 +90,6 @@
       <link>https://nanx.me/tags/idiomatic-r/</link>
       <pubDate>Tue, 27 Jun 2023 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/idiomatic-r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Tue, 27 Jun 2023 22:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     <item>
@@ -160,13 +181,6 @@
       <link>https://nanx.me/tags/continuous-delivery/</link>
       <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/continuous-delivery/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
