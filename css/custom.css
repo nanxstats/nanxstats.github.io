@@ -432,6 +432,15 @@ h6 {
     margin-bottom: 1.875rem;
 }
 
+/* Tables */
+.content .markdown .table>:not(caption)>*>* {
+    color: var(--tw-prose-body);
+}
+
+.content .markdown .table th {
+    color: var(--tw-prose-headings);
+}
+
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
