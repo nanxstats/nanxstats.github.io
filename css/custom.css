@@ -299,6 +299,17 @@ hr {
     display: none;
 }
 
+/* nav on < medium screens */
+@media (max-width: 767.98px) {
+    .header .logo {
+        max-height: 160px;
+    }
+
+    .header ul.nav li {
+        font-size: 1.25rem;
+    }
+}
+
 /* Partial: content */
 
 .content h1,
