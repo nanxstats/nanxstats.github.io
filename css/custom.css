@@ -1,64 +1,56 @@
 /* Typography */
 
 @font-face {
-    font-family: "DM Sans";
-    src: url("fonts/DMSans-Regular.woff2") format("woff2");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/ibm-plex-sans-v19-latin-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "DM Sans";
-    src: url("fonts/DMSans-Italic.woff2") format("woff2");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/ibm-plex-sans-v19-latin-italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "DM Sans";
-    src: url("fonts/DMSans-Medium.woff2") format("woff2");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/ibm-plex-sans-v19-latin-500.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "DM Sans";
-    src: url("fonts/DMSans-Bold.woff2") format("woff2");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/ibm-plex-sans-v19-latin-700.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "DM Sans Display";
-    src: url("fonts/DMSans36pt-Medium.woff2") format("woff2");
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-Regular.ttf.woff2") format("woff2");
+    font-family: "IBM Plex Serif";
+    src: url("fonts/ibm-plex-serif-v19-latin-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-It.ttf.woff2") format("woff2");
+    font-family: "IBM Plex Serif";
+    src: url("fonts/ibm-plex-serif-v19-latin-italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-Bold.ttf.woff2") format("woff2");
+    font-family: "IBM Plex Serif";
+    src: url("fonts/ibm-plex-serif-v19-latin-700.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -75,10 +67,9 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-serif: "Source Serif 4", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-sans-serif: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "IBM Plex Serif", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    --tw-prose-font-display: "DM Sans Display", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -98,7 +89,6 @@
 
 body {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: "ss03";
     background-color: var(--tw-bg);
     font-variant-ligatures: contextual common-ligatures;
 }
@@ -196,8 +186,7 @@ hr {
 }
 
 .header h1.name {
-    font-family: var(--tw-prose-font-display);
-    font-feature-settings: "ss03";
+    font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
     font-size: 2.5rem;
     margin-left: 7px;
@@ -312,8 +301,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--tw-prose-font-display);
-    font-feature-settings: "ss03";
+    font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
@@ -379,15 +367,14 @@ h6 {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-family: var(--tw-prose-font-display);
-    font-feature-settings: "ss03";
+    font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
     font-size: 2.25rem;
     line-height: 1.45;
 }
 
 .content .blog-post-content {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     line-height: calc(30 / 18);
 }
 
@@ -521,7 +508,7 @@ h6 {
 }
 
 .content .post-item .meta-date {
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: var(--tw-prose-font-sans-serif);
     font-variant-numeric: tabular-nums;
     font-size: 0.875rem;
     line-height: 2.5rem;
