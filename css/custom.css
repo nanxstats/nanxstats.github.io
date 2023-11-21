@@ -232,7 +232,19 @@ hr {
     text-decoration-color: var(--tw-prose-headings);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-underline-offset: 16px;
+    text-underline-offset: 15.5px;
+}
+
+@supports (-webkit-text-decoration-skip: ink) {
+    .header ul.nav li a.active {
+        text-underline-offset: 15px;
+    }
+}
+
+@supports (-moz-text-decoration-skip-ink: auto) {
+    .header ul.nav li a.active {
+        text-underline-offset: 15px;
+    }
 }
 
 @media (max-width: 767.98px) {
