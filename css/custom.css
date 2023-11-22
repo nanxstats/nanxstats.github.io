@@ -314,7 +314,7 @@ h6 {
 }
 
 .content .meta {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
