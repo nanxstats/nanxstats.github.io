@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-Text-Latin1.woff2") format("woff2");
+    src: url("fonts/ibm-plex-sans-v19-latin-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -10,7 +10,7 @@
 
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-TextItalic-Latin1.woff2") format("woff2");
+    src: url("fonts/ibm-plex-sans-v19-latin-italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
     font-stretch: normal;
@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-Medium-Latin1.woff2") format("woff2");
+    src: url("fonts/ibm-plex-sans-v19-latin-500.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
     font-stretch: normal;
@@ -26,31 +26,7 @@
 
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-Bold-Latin1.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: "IBM Plex Serif";
-    src: url("fonts/IBMPlexSerif-Text-Latin1.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: "IBM Plex Serif";
-    src: url("fonts/IBMPlexSerif-TextItalic-Latin1.woff2") format("woff2");
-    font-weight: 400;
-    font-style: italic;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: "IBM Plex Serif";
-    src: url("fonts/IBMPlexSerif-Bold-Latin1.woff2") format("woff2");
+    src: url("fonts/ibm-plex-sans-v19-latin-700.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
@@ -58,7 +34,7 @@
 
 @font-face {
     font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-Text-Latin1.woff2") format("woff2");
+    src: url("fonts/ibm-plex-mono-v19-latin-regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -67,7 +43,7 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-serif: "IBM Plex Serif", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-sans-serif: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
@@ -78,6 +54,8 @@
     --tw-prose-captions: #64748b;
     --tw-prose-counters: #64748b;
     --tw-prose-code: #0f172a;
+    --tw-prose-pre-bg: #f9fafb;
+    --tw-prose-pre-border: #f3f4f6;
     --tw-prose-bullets: #cbd5e1;
     --tw-prose-hr: #e2e8f0;
     --tw-prose-quotes: #0f172a;
@@ -336,7 +314,7 @@ h6 {
 }
 
 .content .meta {
-    font-size: 1rem;
+    font-size: 0.875rem;
     font-weight: 400;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
@@ -381,12 +359,12 @@ h6 {
 .content .blog-post-title {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 2.25rem;
-    line-height: 1.45;
+    font-size: 2.625rem;
+    line-height: 3.125rem;
 }
 
 .content .blog-post-content {
-    font-size: 1.15625rem;
+    font-size: 1.25rem;
     line-height: calc(30 / 18);
 }
 
@@ -439,7 +417,7 @@ h6 {
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
-    background-color: var(--tw-bg);
+    background-color: var(--tw-prose-pre-bg);
     font-feature-settings: normal;
 }
 
@@ -448,8 +426,8 @@ h6 {
     color: var(--tw-prose-code);
     padding: .2em .4em;
     margin: 0;
-    font-size: 1rem;
-    background-color: rgba(175, 184, 193, 0.2);
+    font-size: 1.125rem;
+    background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
 
@@ -459,11 +437,11 @@ h6 {
     margin-top: 1rem;
     margin-bottom: 2rem;
     padding: 1.25rem;
-    line-height: 20px;
+    line-height: 24px;
     white-space: pre;
     word-break: break-all;
     word-wrap: break-word;
-    border: 1px solid var(--tw-prose-th-borders);
+    border: 1px solid var(--tw-prose-pre-border);
     border-radius: 6px;
 }
 
@@ -473,7 +451,7 @@ h6 {
     padding: 0;
     font-size: 14px;
     line-height: 24px;
-    background-color: var(--tw-bg);
+    background-color: var(--tw-prose-pre-bg);
     border-radius: 0;
 }
 
@@ -552,6 +530,7 @@ h6 {
 }
 
 .content .tags li a {
+    font-size: 0.875rem;
     line-height: calc(45 / 18);
 }
 
