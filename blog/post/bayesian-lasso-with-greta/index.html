@@ -187,15 +187,14 @@
                 <div class="markdown blog-post-content">
                     
     
-<script src="https://nanx.me/blog/post/bayesian-lasso-with-greta/index_files/header-attrs/header-attrs.js"></script>
 
 
 <blockquote>
 <p>The R code to reproduce the results is available from <a href="https://gist.github.com/nanxstats/4b64f81aa258959bef6ca06572307298">GitHub Gist</a>.</p>
 </blockquote>
-<div class="figure">
-<img src="https://nanx.me/image/horshebend-madeline-pere.jpg" alt="" />
-<p class="caption">Horseshoe Bend, Arizona. Photo by <a href="https://unsplash.com/photos/_QouAO6pJxE">Madeline Pere</a>.</p>
+<div class="float">
+<img src="https://nanx.me/image/horshebend-madeline-pere.jpg" alt="Horseshoe Bend, Arizona. Photo by Madeline Pere." />
+<div class="figcaption">Horseshoe Bend, Arizona. Photo by <a href="https://unsplash.com/photos/_QouAO6pJxE">Madeline Pere</a>.</div>
 </div>
 <p>Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:</p>
 <ul>
@@ -223,10 +222,25 @@ dat &lt;- msaenet.sim.gaussian(
 x &lt;- dat$x.tr
 y &lt;- dat$y.tr
 beta &lt;- c(rep(5, pnz), rep(0, p - pnz))</code></pre>
-<div class="alert alert-info" role="alert", style="margin-left:1.5rem;margin-right:1.5rem">
-
-Note: this is for illustrating the modeling processes only. It is not a comprehensive benchmark in any way. Under many other settings and parameter tuning methods, the results can be very different.
-
+<style type="text/css">
+.callout {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1.875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    border-left: 5px solid #64748b;
+    border-right: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+</style>
+<div class="callout">
+<p>Note: this is for illustrating the modeling processes only.
+It is not a comprehensive benchmark in any way. Under many other settings and
+parameter tuning methods, the results can be very different.</p>
 </div>
 </div>
 <div id="multi-step-adaptive-elastic-net" class="section level2">
@@ -239,9 +253,9 @@ Note: this is for illustrating the modeling processes only. It is not a comprehe
   tune = &quot;cv&quot;, nfolds = 10, rule = &quot;lambda.min&quot;,
   nsteps = 20, tune.nsteps = &quot;ebic&quot;
 )</code></pre>
-<div class="figure">
-<img src="greta-msaenet-coef.png" alt="" />
-<p class="caption">Coefficient path and Extended BIC in 20 adaptive estimation steps.</p>
+<div class="float">
+<img src="greta-msaenet-coef.png" alt="Coefficient path and Extended BIC in 20 adaptive estimation steps." />
+<div class="figcaption">Coefficient path and Extended BIC in 20 adaptive estimation steps.</div>
 </div>
 <p>We achieved the lowest EBIC in step 2, which is equivalent to an adaptive elastic-net model. We selected 36 variables in total: all the 10 true variables and 26 false positive variables. The MSE is 203.</p>
 </div>
@@ -252,9 +266,9 @@ Note: this is for illustrating the modeling processes only. It is not a comprehe
 
 cv_lasso &lt;- cv.glmnet(x, y, family = &quot;gaussian&quot;, alpha = 1, nfolds = 10)
 fit_lasso &lt;- glmnet(x, y, family = &quot;gaussian&quot;, alpha = 1, lambda = cv_lasso$lambda.min)</code></pre>
-<div class="figure">
-<img src="greta-glmnet-cv.png" alt="" />
-<p class="caption">The lambda grid and cross-validation errors for lasso.</p>
+<div class="float">
+<img src="greta-glmnet-cv.png" alt="The lambda grid and cross-validation errors for lasso." />
+<div class="figcaption">The lambda grid and cross-validation errors for lasso.</div>
 </div>
 <p>The model selected 56 variables in total: all the 10 true variables and 46 false positive variables. The MSE is 202.</p>
 </div>
@@ -273,14 +287,14 @@ m &lt;- model(intercept, coefs, sd)
 
 draws_blasso &lt;- mcmc(m, warmup = 1000, n_samples = 5000, chains = 8)</code></pre>
 <p>The computational graph by plotting <code>m</code>:</p>
-<div class="figure">
-<img src="greta-bayesian-lasso-graph.png" alt="" />
-<p class="caption">Bayesian lasso</p>
+<div class="float">
+<img src="greta-bayesian-lasso-graph.png" alt="Bayesian lasso" />
+<div class="figcaption">Bayesian lasso</div>
 </div>
 <p>Plot the posterior mean and 95% credible interval of the coefficients:</p>
-<div class="figure">
-<img src="greta-bayesian-lasso-coef.png" alt="" />
-<p class="caption">Posterior of the coefficients from Bayesian lasso. We check whether the 95% credible interval covers 0 to determine if a variable is selected.</p>
+<div class="float">
+<img src="greta-bayesian-lasso-coef.png" alt="Posterior of the coefficients from Bayesian lasso. We check whether the 95% credible interval covers 0 to determine if a variable is selected." />
+<div class="figcaption">Posterior of the coefficients from Bayesian lasso. We check whether the 95% credible interval covers 0 to determine if a variable is selected.</div>
 </div>
 <p>The model selected 16 variables: all the 10 true variables with 6 false positive variables. The MSE is 217.</p>
 <p>For more theoretical discussions and empirical comparisons on Bayesian sparse shrinkage in regression, I find the notes from <a href="https://jrnold.github.io/bayesian_notes/shrinkage-and-regularized-regression.html">Jeffrey Arnold</a> and <a href="https://betanalpha.github.io/assets/case_studies/bayes_sparse_regression.html">Michael Betancourt</a> useful. To me, it is still a bit magical how intuitively the lasso and Bayesian lasso are connected. I like this type of connection.</p>

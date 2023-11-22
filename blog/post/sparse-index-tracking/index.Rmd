@@ -37,10 +37,12 @@ knitr::opts_chunk$set(
 
 ```{css, echo=FALSE}
 .callout {
+    font-size: 1.125rem;
     margin-top: 1.25rem;
     margin-bottom: 1.25rem;
-    padding-top: 1rem;
+    padding-top: 1.875rem;
     padding-left: 1rem;
+    padding-right: 1rem;
     border-radius: 0.25rem;
     border-left: 5px solid #64748b;
     border-right: 1px solid #dee2e6;

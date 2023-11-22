@@ -202,8 +202,7 @@ Context and motivation A single-file R Markdown document often generates single-
       <link>https://nanx.me/blog/post/ggplot2-color-interpolation/</link>
       <pubDate>Wed, 06 Apr 2022 01:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/ggplot2-color-interpolation/</guid>
-      <description>Photo by Mateo Giraud.
-My R package ggsci has included a few popular discrete color palettes. The colors values in these palettes are not automatically generated from a color space but hand-picked instead, often containing only five to ten distinct colors. A frequent question from the users is: What should I do when the colors are running out due to a more significant number of categories in the data?</description>
+      <description>Photo by Mateo Giraud. My R package ggsci has included a few popular discrete color palettes. The colors values in these palettes are not automatically generated from a color space but hand-picked instead, often containing only five to ten distinct colors. A frequent question from the users is: What should I do when the colors are running out due to a more significant number of categories in the data?</description>
     </item>
     <item>
       <title>Architecting Large Shiny Apps with Minimal First Contentful Paint Time</title>
@@ -260,8 +259,7 @@ I have built a few R packages over the years. I have always been adding some for
       <pubDate>Mon, 07 Dec 2020 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/bayesian-lasso-with-greta/</guid>
       <description>The R code to reproduce the results is available from GitHub Gist.
-Horseshoe Bend, Arizona. Photo by Madeline Pere.
-Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
+Horseshoe Bend, Arizona. Photo by Madeline Pere. Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
 Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
     </item>
     <item>

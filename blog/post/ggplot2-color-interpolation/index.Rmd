@@ -36,12 +36,28 @@ the color values to generate more colors based on the number of categories.
 Here, I will demonstrate how to construct such an "adaptive" color palette
 generator and the ggplot2 color scales for all ggsci color palettes.
 
-<div class="alert alert-warning" role="alert">
+```{css, echo=FALSE}
+.callout {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1.875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    border-left: 5px solid #64748b;
+    border-right: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+```
+
+::::: {.callout}
 ⚠️ It might be better not to encode too many categories in different colors.
 Please see the recommendations from the
 [common pitfalls of color use](https://clauswilke.com/dataviz/color-pitfalls.html)
 chapter in the _Fundamentals of Data Visualization_ book by Claus O. Wilke.
-</div>
+:::::
 
 We start with the color interpolation logic as a
 [function factory](https://adv-r.hadley.nz/function-factories.html)

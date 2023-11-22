@@ -181,9 +181,9 @@
     
 
 
-<div class="figure">
-<img src="https://nanx.me/image/mateo-giraud-wtBex4wQw60-unsplash.jpg" alt="" />
-<p class="caption">Photo by <a href="https://unsplash.com/photos/wtBex4wQw60">Mateo Giraud</a>.</p>
+<div class="float">
+<img src="https://nanx.me/image/mateo-giraud-wtBex4wQw60-unsplash.jpg" alt="Photo by Mateo Giraud." />
+<div class="figcaption">Photo by <a href="https://unsplash.com/photos/wtBex4wQw60">Mateo Giraud</a>.</div>
 </div>
 <p>My R package <a href="https://github.com/nanxstats/ggsci">ggsci</a> has included a few
 popular discrete color palettes.
@@ -197,7 +197,22 @@ significant number of categories in the data?</p>
 the color values to generate more colors based on the number of categories.
 Here, I will demonstrate how to construct such an “adaptive” color palette
 generator and the ggplot2 color scales for all ggsci color palettes.</p>
-<div class="alert alert-warning" role="alert">
+<style type="text/css">
+.callout {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1.875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    border-left: 5px solid #64748b;
+    border-right: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+</style>
+<div class="callout">
 <p>⚠️ It might be better not to encode too many categories in different colors.
 Please see the recommendations from the
 <a href="https://clauswilke.com/dataviz/color-pitfalls.html">common pitfalls of color use</a>
@@ -284,7 +299,7 @@ only has 8 colors, but it will work fine here:</p>
   ggplot2::geom_point(ggplot2::aes(colour = cluster), alpha = 0.5, size = 1) +
   cowplot::theme_minimal_grid() +
   scale_color_adaptive(name = &quot;nejm&quot;, palette = &quot;default&quot;)</code></pre>
-<p><img src="https://nanx.me/blog/post/ggplot2-color-interpolation/index_files/figure-html/unnamed-chunk-7-1.png" width="100%" /></p>
+<p><img src="https://nanx.me/blog/post/ggplot2-color-interpolation/index_files/figure-html/unnamed-chunk-8-1.png" width="100%" /></p>
 <p>That’s all, folks.</p>
 
 

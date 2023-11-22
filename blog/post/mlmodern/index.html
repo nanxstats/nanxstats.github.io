@@ -241,28 +241,26 @@ Latin Modern as the default typeface, such as <code>arxiv_article()</code> and
 header-includes:
   - \usepackage{mlmodern}
   - \usepackage[T1]{fontenc}</code></pre>
-<style type="text/css">
-.callout-warning {
-    --bd-callout-color: #997404;
-    --bd-callout-bg: #fff3cd;
-    --bd-callout-border: #ffe69c;
-}
-
-.callout {
-    padding: 1.25rem;
-    padding-bottom: 0.25rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-    color: var(--bd-callout-color, inherit);
-    background-color: var(--bd-callout-bg, var(--bs-gray-100));
-    border-left: 0.25rem solid var(--bd-callout-border, var(--bs-gray-300));
-}
-</style>
 <p>When combining XeLaTeX and the current version of MLModern,
 an issue encountered in my specimen repo was problematic math rendering,
 but I have not found a solution yet.
 Please let me know in the repo if you know a solution.</p>
-<div class="callout callout-warning">
+<style type="text/css">
+.callout {
+    font-size: 1.125rem;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
+    padding-top: 1.875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.25rem;
+    border-left: 5px solid #64748b;
+    border-right: 1px solid #dee2e6;
+    border-top: 1px solid #dee2e6;
+    border-bottom: 1px solid #dee2e6;
+}
+</style>
+<div class="callout">
 <p>Although it is okay to use the mlmodern and fontenc package with XeLaTeX,
 it might not be the optimal choice. It is recommended to use OpenType (OTF)
 fonts whenever possible with XeLaTeX since they offer more advanced
