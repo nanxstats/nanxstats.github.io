@@ -13,9 +13,7 @@
       <link>https://nanx.me/blog/post/distill-syntax-highlight/</link>
       <pubDate>Fri, 22 May 2020 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/distill-syntax-highlight/</guid>
-      <description>“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) Photo by @chuttersnap.
-The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
-I was a bit surprised and sad that there is no easy way to customize it.</description>
+      <description>“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) Photo by @chuttersnap.&#xA;The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:&#xA;I was a bit surprised and sad that there is no easy way to customize it.</description>
     </item>
   </channel>
 </rss>

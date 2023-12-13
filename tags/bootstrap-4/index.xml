@@ -13,10 +13,7 @@
       <link>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</link>
       <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</guid>
-      <description>Photo: Lead type
-As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:
-font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.
-Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
+      <description>Photo: Lead type&#xA;As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:&#xA;font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.&#xA;Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
     </item>
   </channel>
 </rss>

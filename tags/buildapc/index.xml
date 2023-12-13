@@ -13,33 +13,28 @@
       <link>https://nanx.me/blog/post/gpu-selector/</link>
       <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/gpu-selector/</guid>
-      <description>I built a GPU selector for deep learning workflows at nanx.me/gpu/, based on the recommendations from the blog post written by Tim Dettmers.
-You can use this tool to decide the GPU you need for general training or inference needs by answering a few yes/no questions. It was a simple, pure client-side JavaScript implementation (GitHub repo).
-AI and sustainability. Artwork from DeepMind. Artist: Nidia Dias. I first saw Tim’s post when the Ampere series was released in 2020.</description>
+      <description>I built a GPU selector for deep learning workflows at nanx.me/gpu/, based on the recommendations from the blog post written by Tim Dettmers.&#xA;You can use this tool to decide the GPU you need for general training or inference needs by answering a few yes/no questions. It was a simple, pure client-side JavaScript implementation (GitHub repo).&#xA;AI and sustainability. Artwork from DeepMind. Artist: Nidia Dias. I first saw Tim’s post when the Ampere series was released in 2020.</description>
     </item>
     <item>
       <title>Build a PC During the Great GPU Shortage</title>
       <link>https://nanx.me/blog/post/build-a-pc-during-the-great-gpu-shortage/</link>
       <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/build-a-pc-during-the-great-gpu-shortage/</guid>
-      <description>Photo by Will Porada.
-Apparently, I underestimated the severity of the ongoing GPU shortage when I decided to Marie Kondo my previous PC build and build a new one: people almost cannot find ANY graphics cards at a reasonable price for a custom build. After checking a few prebuilt options where one does not need to find a card, I still feel all the options out there are not optimal.</description>
+      <description>Photo by Will Porada.&#xA;Apparently, I underestimated the severity of the ongoing GPU shortage when I decided to Marie Kondo my previous PC build and build a new one: people almost cannot find ANY graphics cards at a reasonable price for a custom build. After checking a few prebuilt options where one does not need to find a card, I still feel all the options out there are not optimal.</description>
     </item>
     <item>
       <title>64GB RAM</title>
       <link>https://nanx.me/blog/post/64gb-ram/</link>
       <pubDate>Tue, 11 Jun 2019 22:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/64gb-ram/</guid>
-      <description>In 2018, I built a PC to train models with GPU. Besides the GPU, the machine has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.
-Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models.</description>
+      <description>In 2018, I built a PC to train models with GPU. Besides the GPU, the machine has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.&#xA;Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models.</description>
     </item>
     <item>
       <title>Building My First Deep Learning Machine</title>
       <link>https://nanx.me/blog/post/building-my-first-deep-learning-machine/</link>
       <pubDate>Mon, 20 Aug 2018 15:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/building-my-first-deep-learning-machine/</guid>
-      <description>Five years ago, GNOME 3’s immaturity was one of the reasons for me to switch to a Mac. After finished watching two seasons of Mr. Robot, I somehow missed it. With my AWS/GCP bills going up quite a bit recently, I quickly decided to invest a little and build a PC to retry the Linux desktop environment, also, to tackle some personal machine learning projects.
-Hardware Here is my PCPartPicker part list for the parts of choice.</description>
+      <description>Five years ago, GNOME 3’s immaturity was one of the reasons for me to switch to a Mac. After finished watching two seasons of Mr. Robot, I somehow missed it. With my AWS/GCP bills going up quite a bit recently, I quickly decided to invest a little and build a PC to retry the Linux desktop environment, also, to tackle some personal machine learning projects.&#xA;Hardware Here is my PCPartPicker part list for the parts of choice.</description>
     </item>
   </channel>
 </rss>

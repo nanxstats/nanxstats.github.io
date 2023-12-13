@@ -13,8 +13,7 @@
       <link>https://nanx.me/blog/post/research-word-cloud/</link>
       <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/research-word-cloud/</guid>
-      <description>Many outstanding researchers and labs have created visualizations of their research using word clouds. In this post, I present a simple, automated “paper2wordcloud” workflow to create eye-catching word cloud visualizations. It combines the efficiency of automation with the power of human intuition and aesthetic sense. The figure below was created using my published papers.
-A word cloud visualization generated for my papers using this workflow. The general steps in the workflow are:</description>
+      <description>Many outstanding researchers and labs have created visualizations of their research using word clouds. In this post, I present a simple, automated “paper2wordcloud” workflow to create eye-catching word cloud visualizations. It combines the efficiency of automation with the power of human intuition and aesthetic sense. The figure below was created using my published papers.&#xA;A word cloud visualization generated for my papers using this workflow. The general steps in the workflow are:</description>
     </item>
   </channel>
 </rss>

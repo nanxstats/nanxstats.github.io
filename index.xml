@@ -13,257 +13,203 @@
       <link>https://nanx.me/blog/post/protr-1-7-0/</link>
       <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/protr-1-7-0/</guid>
-      <description>3D render from Google DeepMind. Artist: Wes Cockx. I am glad to announce the release of protr 1.7-0. Install it from CRAN with:
-install.packages(&amp;quot;protr&amp;quot;) You can also install it from conda-forge in Python.
-First released in 2012, protr was my very first open source R package. The package generates representations for protein sequences such as numerical features and similarity measures. Since its inception, protr has evolved after 21 CRAN releases by incorporating user feedback.</description>
+      <description>3D render from Google DeepMind. Artist: Wes Cockx. I am glad to announce the release of protr 1.7-0. Install it from CRAN with:&#xA;install.packages(&amp;quot;protr&amp;quot;) You can also install it from conda-forge in Python.&#xA;First released in 2012, protr was my very first open source R package. The package generates representations for protein sequences such as numerical features and similarity measures. Since its inception, protr has evolved after 21 CRAN releases by incorporating user feedback.</description>
     </item>
     <item>
       <title>9 Questions About Adaptive Design</title>
       <link>https://nanx.me/blog/post/nine-questions-about-adaptive-design/</link>
       <pubDate>Fri, 06 Oct 2023 11:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/nine-questions-about-adaptive-design/</guid>
-      <description>Muir Woods trails. Photo by Caleb Jones. For someone who has worked in the industry for years, one thing I miss about school is the Socratic method of teaching used by some professors. It involves asking and answering questions to encourage critical thinking. By engaging in thoughtful Q&amp;amp;A sessions, I often find myself understanding the core elements of complex topics better compared to reading textbooks or papers alone.
-To me, adaptive clinical trial design is one of these complex topics.</description>
+      <description>Muir Woods trails. Photo by Caleb Jones. For someone who has worked in the industry for years, one thing I miss about school is the Socratic method of teaching used by some professors. It involves asking and answering questions to encourage critical thinking. By engaging in thoughtful Q&amp;amp;A sessions, I often find myself understanding the core elements of complex topics better compared to reading textbooks or papers alone.&#xA;To me, adaptive clinical trial design is one of these complex topics.</description>
     </item>
     <item>
       <title>Base R Shortcuts: A Collection of Lesser-Known Idioms and Coding Patterns for Writing Concise and Fast R Code</title>
       <link>https://nanx.me/blog/post/r-base-shortcuts/</link>
       <pubDate>Tue, 27 Jun 2023 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-base-shortcuts/</guid>
-      <description>TL;DR: Please help me extend this GitHub repo by adding your own base R programming idioms: https://github.com/nanxstats/r-base-shortcuts.
-Snowboarder on a cloudy hill. Photo by Boba Jovanovic. For a long time, I’ve told people that I am not an R expert. I don’t know too much about R. I just happen to write software that encounters the least resistance when implemented in R. I’m shy. I’d rather solve problems myself than ask.</description>
+      <description>TL;DR: Please help me extend this GitHub repo by adding your own base R programming idioms: https://github.com/nanxstats/r-base-shortcuts.&#xA;Snowboarder on a cloudy hill. Photo by Boba Jovanovic. For a long time, I’ve told people that I am not an R expert. I don’t know too much about R. I just happen to write software that encounters the least resistance when implemented in R. I’m shy. I’d rather solve problems myself than ask.</description>
     </item>
     <item>
       <title>Create Engaging Word Cloud Visualizations from Your Research</title>
       <link>https://nanx.me/blog/post/research-word-cloud/</link>
       <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/research-word-cloud/</guid>
-      <description>Many outstanding researchers and labs have created visualizations of their research using word clouds. In this post, I present a simple, automated “paper2wordcloud” workflow to create eye-catching word cloud visualizations. It combines the efficiency of automation with the power of human intuition and aesthetic sense. The figure below was created using my published papers.
-A word cloud visualization generated for my papers using this workflow. The general steps in the workflow are:</description>
+      <description>Many outstanding researchers and labs have created visualizations of their research using word clouds. In this post, I present a simple, automated “paper2wordcloud” workflow to create eye-catching word cloud visualizations. It combines the efficiency of automation with the power of human intuition and aesthetic sense. The figure below was created using my published papers.&#xA;A word cloud visualization generated for my papers using this workflow. The general steps in the workflow are:</description>
     </item>
     <item>
       <title>Rethinking the Word Cloud Generator</title>
       <link>https://nanx.me/blog/post/rethinking-word-cloud-generator/</link>
       <pubDate>Mon, 19 Jun 2023 18:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/rethinking-word-cloud-generator/</guid>
-      <description>As part of my JavaScript learning journey, I created a fork of Jason Davies’ word cloud generator and added some new features with a few adjustments to the default parameters. The fork is hosted at nanx.me/wordcloud/ and the source code is available on GitHub. Here is an example word cloud produced by the generator:
-A word cloud visualization for ChatGPT release notes produced by the generator with default parameters. Font: Founders Grotesk Condensed Regular (included with macOS).</description>
+      <description>As part of my JavaScript learning journey, I created a fork of Jason Davies’ word cloud generator and added some new features with a few adjustments to the default parameters. The fork is hosted at nanx.me/wordcloud/ and the source code is available on GitHub. Here is an example word cloud produced by the generator:&#xA;A word cloud visualization for ChatGPT release notes produced by the generator with default parameters. Font: Founders Grotesk Condensed Regular (included with macOS).</description>
     </item>
     <item>
       <title>Context-Free R Package Release Checklist Generation with usethis</title>
       <link>https://nanx.me/blog/post/r-package-release-checklist/</link>
       <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-package-release-checklist/</guid>
-      <description>The release checklist generation function described in this post is also available in this GitHub Gist.
-Photo by David Marcu. Software release at scale An agile, automated, and reliable release process is a key component of continuous delivery for modern software engineering teams. In particular, releasing new versions of R packages often involves going through a sequence of manual and automated checks to ensure quality and compliance. To scale up such efforts within a development team, it is crucial to follow a consistent release checklist.</description>
+      <description>The release checklist generation function described in this post is also available in this GitHub Gist.&#xA;Photo by David Marcu. Software release at scale An agile, automated, and reliable release process is a key component of continuous delivery for modern software engineering teams. In particular, releasing new versions of R packages often involves going through a sequence of manual and automated checks to ensure quality and compliance. To scale up such efforts within a development team, it is crucial to follow a consistent release checklist.</description>
     </item>
     <item>
       <title>Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</title>
       <link>https://nanx.me/blog/post/knitr-chunk-option-error/</link>
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
-      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.
-For example, it is easy to make this mistake:
-```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:
-```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
+      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.&#xA;For example, it is easy to make this mistake:&#xA;```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:&#xA;```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
     </item>
     <item>
       <title>Responsive Design for Statistical Graphics with Shiny and ggplot2</title>
       <link>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</link>
       <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</guid>
-      <description>Photo by Amy Shamblen. If you have written any Shiny apps, you are probably familiar with the idea of responsive web design, which focuses on web page layouts adaptive to screen size and popularized by the front-end frameworks such as Bootstrap.
-Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and the idea can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
+      <description>Photo by Amy Shamblen. If you have written any Shiny apps, you are probably familiar with the idea of responsive web design, which focuses on web page layouts adaptive to screen size and popularized by the front-end frameworks such as Bootstrap.&#xA;Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and the idea can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
     </item>
     <item>
       <title>Sparse Index Tracking with msaenet and CVXR: A Two-Stage Regression Approach</title>
       <link>https://nanx.me/blog/post/sparse-index-tracking/</link>
       <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/sparse-index-tracking/</guid>
-      <description>The code to reproduce the results in this post is also available here.
-The illusion of choice. Photo by Kenny Eliason. Disclaimer The content in this blog post is for educational and research purposes only. It is not intended to be investment advice, and the author is not a licensed financial advisor. Any investment decisions should be based on your own analysis and consultation with a licensed financial advisor. The author is not responsible for any financial losses or damages resulting from the use of this information.</description>
+      <description>The code to reproduce the results in this post is also available here.&#xA;The illusion of choice. Photo by Kenny Eliason. Disclaimer The content in this blog post is for educational and research purposes only. It is not intended to be investment advice, and the author is not a licensed financial advisor. Any investment decisions should be based on your own analysis and consultation with a licensed financial advisor. The author is not responsible for any financial losses or damages resulting from the use of this information.</description>
     </item>
     <item>
       <title>Find Your Perfect Open Source Font: Introducing the Interactive Typeface Lookbook</title>
       <link>https://nanx.me/blog/post/open-source-typography/</link>
       <pubDate>Wed, 10 May 2023 17:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/open-source-typography/</guid>
-      <description>Majesty Palm. Photo by Kara Eads. Introduction There are more than 1,500 open source font families available on Google Fonts, presenting designers and developers with an extensive, yet often overwhelming, array of options. With such a vast selection, it can be challenging to sift through and find the perfect typeface for your projects, let alone remember the hidden gems you may have come across in the past.
-To address this challenge, I started Open Source Typography, an opinionated, curated lookbook of outstanding open source fonts.</description>
+      <description>Majesty Palm. Photo by Kara Eads. Introduction There are more than 1,500 open source font families available on Google Fonts, presenting designers and developers with an extensive, yet often overwhelming, array of options. With such a vast selection, it can be challenging to sift through and find the perfect typeface for your projects, let alone remember the hidden gems you may have come across in the past.&#xA;To address this challenge, I started Open Source Typography, an opinionated, curated lookbook of outstanding open source fonts.</description>
     </item>
     <item>
       <title>Compressing PNG Output for R Packages with pngquant and ragg</title>
       <link>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</link>
       <pubDate>Sun, 09 Apr 2023 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</guid>
-      <description>Cassette collection. Photo by Jametlene Reskp. Introduction Dealing with large-scale image outputs in R packages can be challenging, especially when it comes to passing CRAN checks. In this post, I will share my experience in using pngquant and ragg to compress the PNG output size for readme and vignettes. This allows R packages with many figures in their documentation to pass the CRAN checks without compromising image quality.
-Problem description I encountered a problem with my package, ggsci, which outputs approximately 30 example figures from both vignettes and README.</description>
+      <description>Cassette collection. Photo by Jametlene Reskp. Introduction Dealing with large-scale image outputs in R packages can be challenging, especially when it comes to passing CRAN checks. In this post, I will share my experience in using pngquant and ragg to compress the PNG output size for readme and vignettes. This allows R packages with many figures in their documentation to pass the CRAN checks without compromising image quality.&#xA;Problem description I encountered a problem with my package, ggsci, which outputs approximately 30 example figures from both vignettes and README.</description>
     </item>
     <item>
       <title>Bolden Your Typography in R Markdown and Quarto with MLModern</title>
       <link>https://nanx.me/blog/post/mlmodern/</link>
       <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/mlmodern/</guid>
-      <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.
-To me, these default typefaces work fine, but they could be “thicker” to be more legible on HiDPI and Retina displays. MLModern offers such a sturdy rendition of the Computer Modern design.</description>
+      <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.&#xA;To me, these default typefaces work fine, but they could be “thicker” to be more legible on HiDPI and Retina displays. MLModern offers such a sturdy rendition of the Computer Modern design.</description>
     </item>
     <item>
       <title>ggsci 3.0.0</title>
       <link>https://nanx.me/blog/post/ggsci-3-0-0/</link>
       <pubDate>Wed, 08 Mar 2023 11:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/ggsci-3-0-0/</guid>
-      <description>3D render from Rodion Kutsaiev. I am delighted to announce the release of ggsci 3.0.0. ggsci provides a collection of color palettes inspired by colors used in scientific journals, data visualization libraries, science fiction movies, and TV shows.
-You can install it from CRAN with:
-install.packages(&amp;quot;ggsci&amp;quot;) This version brings 7 new color palettes under 3 color scales (COSMIC, Flat UI, Frontiers), multiple improvements, and a new FAQ vignette, giving you more options to create effective data visualizations using ggplot2.</description>
+      <description>3D render from Rodion Kutsaiev. I am delighted to announce the release of ggsci 3.0.0. ggsci provides a collection of color palettes inspired by colors used in scientific journals, data visualization libraries, science fiction movies, and TV shows.&#xA;You can install it from CRAN with:&#xA;install.packages(&amp;quot;ggsci&amp;quot;) This version brings 7 new color palettes under 3 color scales (COSMIC, Flat UI, Frontiers), multiple improvements, and a new FAQ vignette, giving you more options to create effective data visualizations using ggplot2.</description>
     </item>
     <item>
       <title>Deep Learning GPU Selector</title>
       <link>https://nanx.me/blog/post/gpu-selector/</link>
       <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/gpu-selector/</guid>
-      <description>I built a GPU selector for deep learning workflows at nanx.me/gpu/, based on the recommendations from the blog post written by Tim Dettmers.
-You can use this tool to decide the GPU you need for general training or inference needs by answering a few yes/no questions. It was a simple, pure client-side JavaScript implementation (GitHub repo).
-AI and sustainability. Artwork from DeepMind. Artist: Nidia Dias. I first saw Tim’s post when the Ampere series was released in 2020.</description>
+      <description>I built a GPU selector for deep learning workflows at nanx.me/gpu/, based on the recommendations from the blog post written by Tim Dettmers.&#xA;You can use this tool to decide the GPU you need for general training or inference needs by answering a few yes/no questions. It was a simple, pure client-side JavaScript implementation (GitHub repo).&#xA;AI and sustainability. Artwork from DeepMind. Artist: Nidia Dias. I first saw Tim’s post when the Ampere series was released in 2020.</description>
     </item>
     <item>
       <title>A General-Purpose Link Checker for R Markdown and Quarto Projects</title>
       <link>https://nanx.me/blog/post/rmarkdown-quarto-link-checker/</link>
       <pubDate>Mon, 16 Jan 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/rmarkdown-quarto-link-checker/</guid>
-      <description>The link checker code in this post is also available in this GitHub Gist.
-Puffins in the rain, Iceland. Photo by Yves Alarie.
-Previously on link checking… We discussed the link rot issue before. We also built a simple link checker for blogdown projects based on the XML sitemap generated by Hugo. In reality, I maintain many more bookdown projects and Quarto projects than blogdown projects. Searching site: bookdown::bookdown_sitealso shows that there are 10,000+ bookdown projects hosted on GitHub alone.</description>
+      <description>The link checker code in this post is also available in this GitHub Gist.&#xA;Puffins in the rain, Iceland. Photo by Yves Alarie.&#xA;Previously on link checking… We discussed the link rot issue before. We also built a simple link checker for blogdown projects based on the XML sitemap generated by Hugo. In reality, I maintain many more bookdown projects and Quarto projects than blogdown projects. Searching site: bookdown::bookdown_sitealso shows that there are 10,000+ bookdown projects hosted on GitHub alone.</description>
     </item>
     <item>
       <title>Announcing My First VS Code Extension: textmate.rstheme</title>
       <link>https://nanx.me/blog/post/vscode-textmate-rstheme/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/vscode-textmate-rstheme/</guid>
-      <description>TL;DR: I published my first VS Code extension/theme on Visual Studio Marketplace, with the source hosted on GitHub. Try it out today.
-A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px.
-It was not until late in my life that I realized my eyes were sensitive to the visual aesthetics of things. To make things worse, I care about them very much, at least in the name of productivity and inspiration.</description>
+      <description>TL;DR: I published my first VS Code extension/theme on Visual Studio Marketplace, with the source hosted on GitHub. Try it out today.&#xA;A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px.&#xA;It was not until late in my life that I realized my eyes were sensitive to the visual aesthetics of things. To make things worse, I care about them very much, at least in the name of productivity and inspiration.</description>
     </item>
     <item>
       <title>New Paper Published: eCTD Submission with Analysis Using R</title>
       <link>https://nanx.me/blog/post/ectd-pkglite-paper/</link>
       <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/ectd-pkglite-paper/</guid>
-      <description>Photo by DeepMind.
-I am thrilled to share that our paper, Electronic Common Technical Document Submission with Analysis Using R, is published online today in Clinical Trials. We have selected the open access (OA) option to ensure that everyone in the community can check out the full text freely.
-A simple solution to a complex problem Our article presented a viable path to prepare proprietary R assets for submission, following the electronic common technical document (eCTD) specification.</description>
+      <description>Photo by DeepMind.&#xA;I am thrilled to share that our paper, Electronic Common Technical Document Submission with Analysis Using R, is published online today in Clinical Trials. We have selected the open access (OA) option to ensure that everyone in the community can check out the full text freely.&#xA;A simple solution to a complex problem Our article presented a viable path to prepare proprietary R assets for submission, following the electronic common technical document (eCTD) specification.</description>
     </item>
     <item>
       <title>GUI Automation with RobotJS</title>
       <link>https://nanx.me/blog/post/gui-automation-robotjs/</link>
       <pubDate>Mon, 05 Sep 2022 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/gui-automation-robotjs/</guid>
-      <description>The code in this post is also available in this GitHub Gist.
-Disclaimer: the tools and configurations mentioned in this post are only discussed as technical examples; they do not constitute an endorsement. Use at your own risk.
-Photo by Martin Reisch.
-Today’s internet is not like it was 20 years ago for an older millennial like me. Only judging by its appearance, the internet today is plagued with cookie consent popups and paywalls.</description>
+      <description>The code in this post is also available in this GitHub Gist.&#xA;Disclaimer: the tools and configurations mentioned in this post are only discussed as technical examples; they do not constitute an endorsement. Use at your own risk.&#xA;Photo by Martin Reisch.&#xA;Today’s internet is not like it was 20 years ago for an older millennial like me. Only judging by its appearance, the internet today is plagued with cookie consent popups and paywalls.</description>
     </item>
     <item>
       <title>Training Tissue-Specific Gene Embeddings on GTEx Data</title>
       <link>https://nanx.me/blog/post/exp2vec/</link>
       <pubDate>Sun, 21 Aug 2022 19:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/exp2vec/</guid>
-      <description>The gene embedding training code is available from https://github.com/nanxstats/exp2vec.
-The Shiny app is at https://nanx.shinyapps.io/exp2vec/, with code available from https://github.com/nanxstats/exp2vec-shiny.
-Photo by Amy Shamblen.
-Background We can often observe a mysterious connection between natural languages and the human genome when count data is derived from them. It is also straightforward to model them using the latest statistical or machine learning approaches developed for each field and borrow ideas from each other.</description>
+      <description>The gene embedding training code is available from https://github.com/nanxstats/exp2vec.&#xA;The Shiny app is at https://nanx.shinyapps.io/exp2vec/, with code available from https://github.com/nanxstats/exp2vec-shiny.&#xA;Photo by Amy Shamblen.&#xA;Background We can often observe a mysterious connection between natural languages and the human genome when count data is derived from them. It is also straightforward to model them using the latest statistical or machine learning approaches developed for each field and borrow ideas from each other.</description>
     </item>
     <item>
       <title>Automate HTML to PDF Printing with {promises} and {chromote}</title>
       <link>https://nanx.me/blog/post/chromote-pdf-automation/</link>
       <pubDate>Sat, 20 Aug 2022 00:15:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/chromote-pdf-automation/</guid>
-      <description>The R code in this post is also available in this GitHub Gist.
-Photo by Bank Phrom.
-chromote is an R package that allows one to automate tasks driven by web browsers. It works by providing an API to communicate with Chromium-based browsers via the Chrome DevTools Protocol (CDP). For example, CDP can help us load and print HTML pages to PDF files programmatically, similar to what one could do in the web browser GUI but with mouse clicks.</description>
+      <description>The R code in this post is also available in this GitHub Gist.&#xA;Photo by Bank Phrom.&#xA;chromote is an R package that allows one to automate tasks driven by web browsers. It works by providing an API to communicate with Chromium-based browsers via the Chrome DevTools Protocol (CDP). For example, CDP can help us load and print HTML pages to PDF files programmatically, similar to what one could do in the web browser GUI but with mouse clicks.</description>
     </item>
     <item>
       <title>The Past and Future of Shiny Keynote at rstudio::conf(2022)</title>
       <link>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</link>
       <pubDate>Wed, 17 Aug 2022 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/shiny-keynote-rstudio-conf/</guid>
-      <description>I constantly feel lucky to witness the growth of the R web framework, Shiny, in the past ten years. In his keynote speech at rstudio::conf 2022, Joe Cheng shared an excellent summary of Shiny’s achievements and exciting outlook.
-I am deeply moved by the story about how Shiny was created and Joe’s journey, and I recommend you watch the talk recording below if you haven’t. Notably, after Hadley’s Mastering Shiny book, the community-maintained awesome list awesome-shiny-extensions was again highlighted in Joe’s talk from 24:00 to 24:33 (thanks so much for the shout-out!</description>
+      <description>I constantly feel lucky to witness the growth of the R web framework, Shiny, in the past ten years. In his keynote speech at rstudio::conf 2022, Joe Cheng shared an excellent summary of Shiny’s achievements and exciting outlook.&#xA;I am deeply moved by the story about how Shiny was created and Joe’s journey, and I recommend you watch the talk recording below if you haven’t. Notably, after Hadley’s Mastering Shiny book, the community-maintained awesome list awesome-shiny-extensions was again highlighted in Joe’s talk from 24:00 to 24:33 (thanks so much for the shout-out!</description>
     </item>
     <item>
       <title>Parsing Human-Readable Text Data with Readability.js and R</title>
       <link>https://nanx.me/blog/post/r-readability-parser/</link>
       <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-readability-parser/</guid>
-      <description>The R and JavaScript code to reproduce the results in this post is available from https://github.com/nanxstats/r-readability-parser.
-Photo by Nick Hillier. Update (2023-09-04): Browserify support was removed in jsdom v22.0.0. This post has been updated to recommend installing jsdom v20.0.0 to ensure the code examples work as intended. The original versions of JS libraries in the GitHub repo remain unchanged, as they continue to function correctly.
-Readability.js Maybe you have used tools like rvest to harvest text data from web pages.</description>
+      <description>The R and JavaScript code to reproduce the results in this post is available from https://github.com/nanxstats/r-readability-parser.&#xA;Photo by Nick Hillier. Update (2023-09-04): Browserify support was removed in jsdom v22.0.0. This post has been updated to recommend installing jsdom v20.0.0 to ensure the code examples work as intended. The original versions of JS libraries in the GitHub repo remain unchanged, as they continue to function correctly.&#xA;Readability.js Maybe you have used tools like rvest to harvest text data from web pages.</description>
     </item>
     <item>
       <title>The zlib Algorithm for Text/Binary File Classification</title>
       <link>https://nanx.me/blog/post/txtvsbin/</link>
       <pubDate>Tue, 14 Jun 2022 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/txtvsbin/</guid>
-      <description>The R code in this post is also available at this GitHub Gist.
-Photo by Alp Duran.
-Intro In some situations, we want to know whether a file is a text file or a binary file programmatically. For example, as a text editor developer, you can use this information to choose the correct editing interface (text editor or hex editor). Similarly, if you want to pack or compress a collection of files into a compact format, it helps to know the type of file before encoding them.</description>
+      <description>The R code in this post is also available at this GitHub Gist.&#xA;Photo by Alp Duran.&#xA;Intro In some situations, we want to know whether a file is a text file or a binary file programmatically. For example, as a text editor developer, you can use this information to choose the correct editing interface (text editor or hex editor). Similarly, if you want to pack or compress a collection of files into a compact format, it helps to know the type of file before encoding them.</description>
     </item>
     <item>
       <title>Sensible Defaults</title>
       <link>https://nanx.me/blog/post/sensible-defaults/</link>
       <pubDate>Tue, 07 Jun 2022 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/sensible-defaults/</guid>
-      <description>Photo by Thomas Reaubourg. gtsummary The other day, I looked into Daniel Sjoberg’s gtsummary package for summarizing tabular data and regression models. The README says:
-The {gtsummary} package summarizes data sets, regression models, and more, using sensible defaults with highly customizable capabilities.
-The concept of having sensible defaults in (research) software immediately resonated with me. Ideally, the default settings in software should be able to support the majority of users’ needs.</description>
+      <description>Photo by Thomas Reaubourg. gtsummary The other day, I looked into Daniel Sjoberg’s gtsummary package for summarizing tabular data and regression models. The README says:&#xA;The {gtsummary} package summarizes data sets, regression models, and more, using sensible defaults with highly customizable capabilities.&#xA;The concept of having sensible defaults in (research) software immediately resonated with me. Ideally, the default settings in software should be able to support the majority of users’ needs.</description>
     </item>
     <item>
       <title>Honey, I Serialized the Data</title>
       <link>https://nanx.me/blog/post/r-serialize-timemachine/</link>
       <pubDate>Sun, 01 May 2022 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-serialize-timemachine/</guid>
-      <description>The R code to reproduce the results in this post is available from https://github.com/nanxstats/r-serialize-timemachine.
-Photo by Alex Gogan.
-A mystery on serialize() Serialization/deserialization is an important topic for exchanging data efficiently at scale. In R, there is a native choice for this: serialize()/unserialize() and their more convenient interface saveRDS()/readRDS().
-Yihui once asked why the first 14 bytes in R serialized data were skipped in digest::digest(), instead of the first 17 bytes for the binary format, as the additional three filling zero-bytes are always there.</description>
+      <description>The R code to reproduce the results in this post is available from https://github.com/nanxstats/r-serialize-timemachine.&#xA;Photo by Alex Gogan.&#xA;A mystery on serialize() Serialization/deserialization is an important topic for exchanging data efficiently at scale. In R, there is a native choice for this: serialize()/unserialize() and their more convenient interface saveRDS()/readRDS().&#xA;Yihui once asked why the first 14 bytes in R serialized data were skipped in digest::digest(), instead of the first 17 bytes for the binary format, as the additional three filling zero-bytes are always there.</description>
     </item>
     <item>
       <title>Five Minute Shiny: Skeleton Loading Screen</title>
       <link>https://nanx.me/blog/post/shiny-loading-skeleton/</link>
       <pubDate>Sun, 24 Apr 2022 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/shiny-loading-skeleton/</guid>
-      <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.
-Mosaic American Gothic. Original photo by Simon Lee.
-Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:
-A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.
-Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
+      <description>The Shiny app template is available from nanxstats/shiny-loading-skeleton. Preview the demo at shinyapps.io.&#xA;Mosaic American Gothic. Original photo by Simon Lee.&#xA;Let’s implement a “skeleton loader” for Shiny apps. A typical animated skeleton loading screen looks like this:&#xA;A demo Shiny app with a skeleton loader. Recorded with QuickTime and converted by gifski.&#xA;Compared to the traditional loading screens provided by tools like waiter, the skeleton loading screen is a prominent way to show the app is currently loading and can give users an idea of the incoming page structure.</description>
     </item>
     <item>
       <title>Five Minute Shiny: File Input Area Widget</title>
       <link>https://nanx.me/blog/post/shiny-file-input-area/</link>
       <pubDate>Sun, 17 Apr 2022 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/shiny-file-input-area/</guid>
-      <description>The R code in this post is also available as this GitHub Gist.
-Photo by Willian Justen de Vasconcellos
-Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.
-Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
+      <description>The R code in this post is also available as this GitHub Gist.&#xA;Photo by Willian Justen de Vasconcellos&#xA;Our goal today is to implement a file input area widget for Shiny. Compared to a regular file input button, a larger file input UI helps users focus on the task where an upload action is the central flow of the web application.&#xA;Fortunately, the native shiny::fileInput() offers a solid foundation for customization, as it already supports both click-to-browse and drag-and-drop for file selection.</description>
     </item>
     <item>
       <title>Five Minute Shiny: Implement the Switch Input with Bootstrap 5</title>
       <link>https://nanx.me/blog/post/shiny-bs5-switches/</link>
       <pubDate>Thu, 14 Apr 2022 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/shiny-bs5-switches/</guid>
-      <description>The R code in this post is also available as this GitHub Gist.
-Photo by Zonduurzaam Deventer. Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.
-Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
+      <description>The R code in this post is also available as this GitHub Gist.&#xA;Photo by Zonduurzaam Deventer. Bootstrap 4 and 5 have expanded the types of UI components compared to version 3. On the other hand, the available UI inputs and outputs in Shiny have been relatively stable while being carefully made compatible across different Bootstrap versions through bslib.&#xA;Since we can already leverage the native UI components in Bootstrap 5 via bslib, it would be fun to create the R wrappers for the “missing” inputs that were not available in Bootstrap 3.</description>
     </item>
     <item>
       <title>Building Paginated News Lists in R Markdown and Shiny with DT</title>
       <link>https://nanx.me/blog/post/dt-news-list/</link>
       <pubDate>Sun, 10 Apr 2022 01:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/dt-news-list/</guid>
-      <description>The R code in this post is also available as this GitHub Gist.
-Mosaic Mondrian. Original photo by Simon Lee.
-Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
+      <description>The R code in this post is also available as this GitHub Gist.&#xA;Mosaic Mondrian. Original photo by Simon Lee.&#xA;Context and motivation A single-file R Markdown document often generates single-page HTML outputs. Similarly, Shiny is a single-page application framework. The single-page nature of these outputs makes it challenging to create experiences like pagination to display long and sophisticated lists, which is usually accomplished by creating multiple pages and URL routing.</description>
     </item>
     <item>
       <title>Adaptive ggplot2 Color Scales with Color Interpolation</title>
@@ -277,76 +223,56 @@ Context and motivation A single-file R Markdown document often generates single-
       <link>https://nanx.me/blog/post/shiny-fcp-loader/</link>
       <pubDate>Wed, 30 Mar 2022 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/shiny-fcp-loader/</guid>
-      <description>The Shiny app skeleton is available from nanxstats/shiny-fcp-loader.
-Pantheon, Roma, Italy. Photo by Emma Fabbri.
-More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.
-UX side effects of large Shiny apps For larger Shiny apps, users could wait a long time (in terms of 10s of seconds) with an awkward blank screen before seeing the rendered app content.</description>
+      <description>The Shiny app skeleton is available from nanxstats/shiny-fcp-loader.&#xA;Pantheon, Roma, Italy. Photo by Emma Fabbri.&#xA;More than a few people asked me similar questions about this when building large shiny apps. Therefore, it might be time to formulate a simple solution with a minimalist yet extensible code demo.&#xA;UX side effects of large Shiny apps For larger Shiny apps, users could wait a long time (in terms of 10s of seconds) with an awkward blank screen before seeing the rendered app content.</description>
     </item>
     <item>
       <title>A Simple Link Checker for Hugo and Blogdown Websites</title>
       <link>https://nanx.me/blog/post/link-checker/</link>
       <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/link-checker/</guid>
-      <description>Photo by Katie Treadway.
-Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.
-Conceptually, the requirement for a generic broken link checker is quite simple:
-Get the links to all pages on the site.</description>
+      <description>Photo by Katie Treadway.&#xA;Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.&#xA;Conceptually, the requirement for a generic broken link checker is quite simple:&#xA;Get the links to all pages on the site.</description>
     </item>
     <item>
       <title>Font Variant Numeric</title>
       <link>https://nanx.me/blog/post/font-variant-numeric/</link>
       <pubDate>Wed, 19 Jan 2022 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/font-variant-numeric/</guid>
-      <description>TL;DR: If you use the native font stack (the default in Bootstrap 4+), check the numbers displayed in tables, especially on Apple’s platforms.
-Photo by Jen Theodore.
-A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:
-Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
+      <description>TL;DR: If you use the native font stack (the default in Bootstrap 4+), check the numbers displayed in tables, especially on Apple’s platforms.&#xA;Photo by Jen Theodore.&#xA;A new problem Many of the content creation frameworks that support HTML output in the R world are getting upgraded to Bootstrap 4+:&#xA;Shiny and R Markdown can use bslib to customize Bootstrap version; The three-column Bootstrap style for bookdown projects; The pkgdown 2.</description>
     </item>
     <item>
       <title>More Than 1,500 File Extensions Are Used Inside R Packages</title>
       <link>https://nanx.me/blog/post/cran-file-exts/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/cran-file-exts/</guid>
-      <description>The R code to reproduce the results is available from the GitHub repo nanxstats/cran-file-exts.
-Photo by Pawel Czerwinski.
-When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.
-To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.
-We can achieve this easily by downloading all R packages available from CRAN one at a time and collect the file extensions inside:</description>
+      <description>The R code to reproduce the results is available from the GitHub repo nanxstats/cran-file-exts.&#xA;Photo by Pawel Czerwinski.&#xA;When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.&#xA;To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.&#xA;We can achieve this easily by downloading all R packages available from CRAN one at a time and collect the file extensions inside:</description>
     </item>
     <item>
       <title>Build a PC During the Great GPU Shortage</title>
       <link>https://nanx.me/blog/post/build-a-pc-during-the-great-gpu-shortage/</link>
       <pubDate>Sun, 26 Sep 2021 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/build-a-pc-during-the-great-gpu-shortage/</guid>
-      <description>Photo by Will Porada.
-Apparently, I underestimated the severity of the ongoing GPU shortage when I decided to Marie Kondo my previous PC build and build a new one: people almost cannot find ANY graphics cards at a reasonable price for a custom build. After checking a few prebuilt options where one does not need to find a card, I still feel all the options out there are not optimal.</description>
+      <description>Photo by Will Porada.&#xA;Apparently, I underestimated the severity of the ongoing GPU shortage when I decided to Marie Kondo my previous PC build and build a new one: people almost cannot find ANY graphics cards at a reasonable price for a custom build. After checking a few prebuilt options where one does not need to find a card, I still feel all the options out there are not optimal.</description>
     </item>
     <item>
       <title>Rebranding R Packages with Hexagon Stickers: A Minimalist Approach</title>
       <link>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</link>
       <pubDate>Mon, 08 Feb 2021 01:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</guid>
-      <description>A new hex sticker wall of my R packages.
-I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
+      <description>A new hex sticker wall of my R packages.&#xA;I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
     </item>
     <item>
       <title>Bayesian Lasso with greta</title>
       <link>https://nanx.me/blog/post/bayesian-lasso-with-greta/</link>
       <pubDate>Mon, 07 Dec 2020 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/bayesian-lasso-with-greta/</guid>
-      <description>The R code to reproduce the results is available from GitHub Gist.
-Horseshoe Bend, Arizona. Photo by Madeline Pere. Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:
-Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
+      <description>The R code to reproduce the results is available from GitHub Gist.&#xA;Horseshoe Bend, Arizona. Photo by Madeline Pere. Although I am not an expert in Bayesian statistics, I always have an idealized version of the framework for Bayesian modeling in my mind:&#xA;Allows defining data models intuitively — preferably in native R. Handles the low-level computations such as MCMC automatically. Works on both CPU and GPU seamlessly would be perfect for 2020.</description>
     </item>
     <item>
       <title>Tanka: A Minimalist Bootstrap 4 Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</link>
       <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</guid>
-      <description>TL;DR: I have rewritten the Hugo Tanka theme entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.
-A screenshot of the updated Hugo Tanka theme.
-Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).
-Hugo has received several major updates in the past three years.</description>
+      <description>TL;DR: I have rewritten the Hugo Tanka theme entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.&#xA;A screenshot of the updated Hugo Tanka theme.&#xA;Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).&#xA;Hugo has received several major updates in the past three years.</description>
     </item>
     <item>
       <title>Fuzz Testing Your R Code</title>
@@ -360,87 +286,70 @@ Hugo has received several major updates in the past three years.</description>
       <link>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</link>
       <pubDate>Sat, 19 Sep 2020 23:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</guid>
-      <description>Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit’s Intelligent Tracking Prevention (ITP). Following this progress and removing Google Analytics last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.
-Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.
-The process is much easier than I thought.</description>
+      <description>Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit’s Intelligent Tracking Prevention (ITP). Following this progress and removing Google Analytics last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.&#xA;Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.&#xA;The process is much easier than I thought.</description>
     </item>
     <item>
       <title>Customize Syntax Highlighting for R distill Websites</title>
       <link>https://nanx.me/blog/post/distill-syntax-highlight/</link>
       <pubDate>Fri, 22 May 2020 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/distill-syntax-highlight/</guid>
-      <description>“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) Photo by @chuttersnap.
-The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:
-I was a bit surprised and sad that there is no easy way to customize it.</description>
+      <description>“Diversity is essential to happiness, and in Utopia there is hardly any.” (Bertrand Russell) Photo by @chuttersnap.&#xA;The Problem The distill (formerly radix) package offers an excellent option in the R Markdown ecosystem to create beautifully typed websites. I was using it one day and looking into customizing the syntax highlighting theme. Then I found this issue:&#xA;I was a bit surprised and sad that there is no easy way to customize it.</description>
     </item>
     <item>
       <title>Disposable Computing with callr</title>
       <link>https://nanx.me/blog/post/disposable-computing-with-callr/</link>
       <pubDate>Sat, 11 Apr 2020 17:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/disposable-computing-with-callr/</guid>
-      <description>Photo by @uniqueton.
-Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when managing (file) connections. Boris posted such an issue when using my R package Rcpi. I rephrase it here as:
-library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in 1:2000) { file.copy( system.file(&amp;quot;compseq/DB00530.sdf&amp;quot;, package = &amp;quot;Rcpi&amp;quot;), paste0(&amp;quot;test/&amp;quot;, i, &amp;quot;.sdf&amp;quot;) ) } fns &amp;lt;- list.files(&amp;quot;test/&amp;quot;, pattern = &amp;quot;.sdf$&amp;quot;, full.names = TRUE) for (i in 1:length(fns)) { cat(&amp;quot;\014&amp;quot;, i, &amp;quot;\n&amp;quot;) Rcpi::convMolFormat(infile = fns[i], outfile = &amp;quot;temp.</description>
+      <description>Photo by @uniqueton.&#xA;Runtime errors can be tricky and costly to resolve for any programming language, and these errors frequently happen when managing (file) connections. Boris posted such an issue when using my R package Rcpi. I rephrase it here as:&#xA;library(&amp;quot;Rcpi&amp;quot;) dir.create(&amp;quot;test&amp;quot;) for (i in 1:2000) { file.copy( system.file(&amp;quot;compseq/DB00530.sdf&amp;quot;, package = &amp;quot;Rcpi&amp;quot;), paste0(&amp;quot;test/&amp;quot;, i, &amp;quot;.sdf&amp;quot;) ) } fns &amp;lt;- list.files(&amp;quot;test/&amp;quot;, pattern = &amp;quot;.sdf$&amp;quot;, full.names = TRUE) for (i in 1:length(fns)) { cat(&amp;quot;\014&amp;quot;, i, &amp;quot;\n&amp;quot;) Rcpi::convMolFormat(infile = fns[i], outfile = &amp;quot;temp.</description>
     </item>
     <item>
       <title>Self-Hosting Shiny Apps with Linode and Cloudflare</title>
       <link>https://nanx.me/blog/post/self-host-shiny-apps/</link>
       <pubDate>Wed, 26 Feb 2020 01:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/self-host-shiny-apps/</guid>
-      <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by Posit.
-A collection of my shiny apps, now also self-hosted. The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
+      <description>After procrastinating for some time, I finally set up a dedicated self-hosting server, nanx.app, for my public shiny apps. From now on, most of the web applications listed on my software page will be available from two mirrors — the self-hosting server and the public cloud hosting solution shinyapps.io kindly provided by Posit.&#xA;A collection of my shiny apps, now also self-hosted. The Motivation I have built many shiny apps over the years — a few of them are public and open source.</description>
     </item>
     <item>
       <title>New Packages on CRAN: tidycwl and biocompute</title>
       <link>https://nanx.me/blog/post/tidycwl-biocompute/</link>
       <pubDate>Sat, 14 Dec 2019 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/tidycwl-biocompute/</guid>
-      <description>On the journey of achieving reproducibility in genomic data analysis projects, one often faces challenges with documenting workflows and computations systematically. To provide one way for tackling these problems, we (me and my colleagues) have recently released two new R packages — tidycwl and biocompute — to CRAN.
-tidycwl As the name implies, the package tidycwl aims at offering a native toolchain for R to analyze tools and workflows written in the Common Workflow Language (CWL), while following the tidyverse design principles.</description>
+      <description>On the journey of achieving reproducibility in genomic data analysis projects, one often faces challenges with documenting workflows and computations systematically. To provide one way for tackling these problems, we (me and my colleagues) have recently released two new R packages — tidycwl and biocompute — to CRAN.&#xA;tidycwl As the name implies, the package tidycwl aims at offering a native toolchain for R to analyze tools and workflows written in the Common Workflow Language (CWL), while following the tidyverse design principles.</description>
     </item>
     <item>
       <title>Building Regularized Logistic Regressions from Scratch with Computational Graphs in R</title>
       <link>https://nanx.me/blog/post/cgraph-logreg/</link>
       <pubDate>Sun, 06 Oct 2019 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/cgraph-logreg/</guid>
-      <description>The R package built for this post is available on GitHub: nanxstats/logreg.
-Update 2020-02-11: there has been some major API updates and improvements since cgraph 5.0.0. The logreg package is now updated to reflect these changes. The code example in this post is updated, too.
-As one of the cornerstones for deep learning frameworks, automatic differentiation was briefly mentioned in our previous post. Today let’s focus on the other important piece: the computational graph.</description>
+      <description>The R package built for this post is available on GitHub: nanxstats/logreg.&#xA;Update 2020-02-11: there has been some major API updates and improvements since cgraph 5.0.0. The logreg package is now updated to reflect these changes. The code example in this post is updated, too.&#xA;As one of the cornerstones for deep learning frameworks, automatic differentiation was briefly mentioned in our previous post. Today let’s focus on the other important piece: the computational graph.</description>
     </item>
     <item>
       <title>Peak Experience</title>
       <link>https://nanx.me/blog/post/peak-experience/</link>
       <pubDate>Wed, 02 Oct 2019 22:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/peak-experience/</guid>
-      <description>Photo by Elena Prokofyeva.
-I feel that we have previously talked a lot about the material world in this blog. Today I want to briefly discuss something more spiritual, something in my mind for a while: peak experience.
-This concept belongs to the self-actualization part described in Maslow’s “hierarchy of needs”. The peculiar thing is, I knew what the feeling was but cannot express it verbally, until the day I knew the term coined by the psychologists.</description>
+      <description>Photo by Elena Prokofyeva.&#xA;I feel that we have previously talked a lot about the material world in this blog. Today I want to briefly discuss something more spiritual, something in my mind for a while: peak experience.&#xA;This concept belongs to the self-actualization part described in Maslow’s “hierarchy of needs”. The peculiar thing is, I knew what the feeling was but cannot express it verbally, until the day I knew the term coined by the psychologists.</description>
     </item>
     <item>
       <title>64GB RAM</title>
       <link>https://nanx.me/blog/post/64gb-ram/</link>
       <pubDate>Tue, 11 Jun 2019 22:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/64gb-ram/</guid>
-      <description>In 2018, I built a PC to train models with GPU. Besides the GPU, the machine has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.
-Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models.</description>
+      <description>In 2018, I built a PC to train models with GPU. Besides the GPU, the machine has a 6-core (12 threads) CPU and 32GB of RAM. The hardware was nothing fancy compared to a lot of deep learning builds but gets the job done.&#xA;Recently, I experienced an issue that probably all R users experienced: running out of memory. Not for training neural networks, but for training some more traditional statistical learning models.</description>
     </item>
     <item>
       <title>Removing Google Analytics from All My Websites</title>
       <link>https://nanx.me/blog/post/remove-google-analytics/</link>
       <pubDate>Mon, 28 Jan 2019 15:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/remove-google-analytics/</guid>
-      <description>Like cameras, online trackers are everywhere. Photo by Matthew Henry.
-What happened After using it (or being used) for about ten years, today I consciously removed the Google Analytics tracking code from all the personal websites I control, including this blogdown (Hugo) site, the pkgdown sites for my R packages, and my Shiny apps. I never felt better, as from now on, people are browsing my websites tracking-free.
-Why I did it I think the blog posts by the pioneers who realized this before explained the economic reasons pretty well.</description>
+      <description>Like cameras, online trackers are everywhere. Photo by Matthew Henry.&#xA;What happened After using it (or being used) for about ten years, today I consciously removed the Google Analytics tracking code from all the personal websites I control, including this blogdown (Hugo) site, the pkgdown sites for my R packages, and my Shiny apps. I never felt better, as from now on, people are browsing my websites tracking-free.&#xA;Why I did it I think the blog posts by the pioneers who realized this before explained the economic reasons pretty well.</description>
     </item>
     <item>
       <title>A List of Awesome Shiny Extension Packages</title>
       <link>https://nanx.me/blog/post/awesome-shiny-extensions/</link>
       <pubDate>Tue, 04 Dec 2018 14:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/awesome-shiny-extensions/</guid>
-      <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.
-TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!
-Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
+      <description>“Everything looks official with tiny leaves around it.” Original photo by Kelli Tungay.&#xA;TL;DR: here is a curated list of R packages that offer extended UI or server components for Shiny: nanxstats/awesome-shiny-extensions. Pull requests welcomed!&#xA;Five years ago, I wrote my first research software paper, and it eventually got published in Bioinformatics. If you know me, it’s probably not surprising that the paper was about an R package and a companion Shiny app.</description>
     </item>
     <item>
       <title>Renga: A Clean Bootstrap 4 Theme for Hugo and Blogdown</title>
@@ -454,65 +363,49 @@ Five years ago, I wrote my first research software paper, and it eventually got 
       <link>https://nanx.me/blog/post/general-purpose-programming-with-r/</link>
       <pubDate>Thu, 25 Oct 2018 23:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/general-purpose-programming-with-r/</guid>
-      <description>“They’ll take your soul if you let them — don’t let them.” (Carole King, You’ve Got a Friend) Photo by Jelleke Vanooteghem.
-I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.
-Recently, I found a fascinating thread posted in the r/rstats subreddit.</description>
+      <description>“They’ll take your soul if you let them — don’t let them.” (Carole King, You’ve Got a Friend) Photo by Jelleke Vanooteghem.&#xA;I used R for almost every single computational task I do on my computer in the past ten years. I use R for things that are not simply statistics (pun intended), but everything related to data, or everything that can be done programmatically.&#xA;Recently, I found a fascinating thread posted in the r/rstats subreddit.</description>
     </item>
     <item>
       <title>The Accidental Product Success</title>
       <link>https://nanx.me/blog/post/accidental-product-success/</link>
       <pubDate>Mon, 15 Oct 2018 21:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/accidental-product-success/</guid>
-      <description>A roadmap may tell how you can get there but doesn’t tell you where to go. Photo by @slidebean.
-Technology companies are sometimes quirky but always quite interesting.
-Often, we can witness accidental epic wins in products that don’t belong to a company’s main offerings. A few examples from the (almost) trillion dollar club:
-Microsoft is a software company, but they have made some excellent hardware products, especially accessories. Recently, they even remastered the legendary IntelliMouse, an ergonomic mouse designed for office use but highly acclaimed in the gaming community.</description>
+      <description>A roadmap may tell how you can get there but doesn’t tell you where to go. Photo by @slidebean.&#xA;Technology companies are sometimes quirky but always quite interesting.&#xA;Often, we can witness accidental epic wins in products that don’t belong to a company’s main offerings. A few examples from the (almost) trillion dollar club:&#xA;Microsoft is a software company, but they have made some excellent hardware products, especially accessories. Recently, they even remastered the legendary IntelliMouse, an ergonomic mouse designed for office use but highly acclaimed in the gaming community.</description>
     </item>
     <item>
       <title>Implementing Triplet Losses for Implicit Feedback Recommender Systems with R and Keras</title>
       <link>https://nanx.me/blog/post/triplet-loss-r-keras/</link>
       <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/triplet-loss-r-keras/</guid>
-      <description>All the R code for this post is available on GitHub: nanxstats/deep-learning-recipes.
-Photo: Three Palms by Jamie Davies
-At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
+      <description>All the R code for this post is available on GitHub: nanxstats/deep-learning-recipes.&#xA;Photo: Three Palms by Jamie Davies&#xA;At the end of our last post, I briefly mentioned that the triplet loss function is a more proper loss designed for both recommendation problems with implicit feedback data and distance metric learning problems. For its importance in solving these practical problems, and also as an excellent programming exercise, I decided to implement it with R and Keras.</description>
     </item>
     <item>
       <title>How a Financial Crisis Started</title>
       <link>https://nanx.me/blog/post/how-a-financial-crisis-started/</link>
       <pubDate>Wed, 29 Aug 2018 14:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/how-a-financial-crisis-started/</guid>
-      <description>Photo by Ablimit Ablet on Unsplash
-I once read a joke with some dry humor a long time ago. It’s almost a parable about how the system amplifies fragility. I’m not entirely sure where it originated, but here you go:
-A bunny bounced into a bakery and asked the baker: “do you have 100 croissants?”
-The baker: “Ahh, I’m so sorry we don’t have that many.”
-The bunny: “Oh… okay.</description>
+      <description>Photo by Ablimit Ablet on Unsplash&#xA;I once read a joke with some dry humor a long time ago. It’s almost a parable about how the system amplifies fragility. I’m not entirely sure where it originated, but here you go:&#xA;A bunny bounced into a bakery and asked the baker: “do you have 100 croissants?”&#xA;The baker: “Ahh, I’m so sorry we don’t have that many.”&#xA;The bunny: “Oh… okay.</description>
     </item>
     <item>
       <title>Prototyping a Recommender System for Binary Implicit Feedback Data with R and Keras</title>
       <link>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</link>
       <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</guid>
-      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.
-Photo: One in A Million by Veronica Benavides</description>
+      <description>Ten years ago, the Netflix prize competition made a significant impact on recommender systems research. In the same time, such benchmark datasets, including MovieLens, are a bit misleading: in reality, implicit feedback data, or binary implicit feedback data (someone interacted with something) could be the best we can have. One to five star ratings type of continuous response data could be challenging to get or impossible to measure.&#xA;Photo: One in A Million by Veronica Benavides</description>
     </item>
     <item>
       <title>Building My First Deep Learning Machine</title>
       <link>https://nanx.me/blog/post/building-my-first-deep-learning-machine/</link>
       <pubDate>Mon, 20 Aug 2018 15:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/building-my-first-deep-learning-machine/</guid>
-      <description>Five years ago, GNOME 3’s immaturity was one of the reasons for me to switch to a Mac. After finished watching two seasons of Mr. Robot, I somehow missed it. With my AWS/GCP bills going up quite a bit recently, I quickly decided to invest a little and build a PC to retry the Linux desktop environment, also, to tackle some personal machine learning projects.
-Hardware Here is my PCPartPicker part list for the parts of choice.</description>
+      <description>Five years ago, GNOME 3’s immaturity was one of the reasons for me to switch to a Mac. After finished watching two seasons of Mr. Robot, I somehow missed it. With my AWS/GCP bills going up quite a bit recently, I quickly decided to invest a little and build a PC to retry the Linux desktop environment, also, to tackle some personal machine learning projects.&#xA;Hardware Here is my PCPartPicker part list for the parts of choice.</description>
     </item>
     <item>
       <title>My OCD for Inbox Zero</title>
       <link>https://nanx.me/blog/post/my-ocd-for-inbox-zero/</link>
       <pubDate>Wed, 15 Aug 2018 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/my-ocd-for-inbox-zero/</guid>
-      <description>Inbox zero means having zero unread emails in your email’s inbox. I have an OCD for it.
-Photo: Fraser Valley, British Columbia, Canada.
-Many years ago, like many people, I used to “mark as unread” some emails I received, when I cannot decide to reply or not reply immediately for whatever reasons.
-Obviously, pretending things as unread is not an effective strategy to get them done. I didn’t reply to the things I want to say yes quickly enough, which could make people think that I’m not interested.</description>
+      <description>Inbox zero means having zero unread emails in your email’s inbox. I have an OCD for it.&#xA;Photo: Fraser Valley, British Columbia, Canada.&#xA;Many years ago, like many people, I used to “mark as unread” some emails I received, when I cannot decide to reply or not reply immediately for whatever reasons.&#xA;Obviously, pretending things as unread is not an effective strategy to get them done. I didn’t reply to the things I want to say yes quickly enough, which could make people think that I’m not interested.</description>
     </item>
     <item>
       <title>John M. Chambers Award, Product Sense, and the Feature Roadmap for liftr</title>
@@ -526,69 +419,56 @@ Obviously, pretending things as unread is not an effective strategy to get them 
       <link>https://nanx.me/blog/post/15-years-since-msblast/</link>
       <pubDate>Sun, 15 Jul 2018 00:20:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/15-years-since-msblast/</guid>
-      <description>It was August 2003, when I was in the 8th grade, enjoying the summer break.
-One day, my dad came home from work. He tried to call me during the day asking for help on some computer issues. Unfortunately, he couldn’t reach me because I was using the dial-up Internet with a good old 56k modem, so the landline was busy the whole time. (You’ll know what I mean if you’re old enough.</description>
+      <description>It was August 2003, when I was in the 8th grade, enjoying the summer break.&#xA;One day, my dad came home from work. He tried to call me during the day asking for help on some computer issues. Unfortunately, he couldn’t reach me because I was using the dial-up Internet with a good old 56k modem, so the landline was busy the whole time. (You’ll know what I mean if you’re old enough.</description>
     </item>
     <item>
       <title>Save the Link Like a Boss</title>
       <link>https://nanx.me/blog/post/save-the-link-like-a-boss/</link>
       <pubDate>Sun, 01 Jul 2018 17:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/save-the-link-like-a-boss/</guid>
-      <description>Photo: Middle of Nowhere by David Kovalenko Anything posted on the Internet, stays there forever.
-I’m a firm believer of such assertions. The reality is, however, even if something is published on the Internet, due to technical reasons, it still probably won’t live there forever. The situation becomes more like
-If something isn’t on the web, it doesn’t exist at all.
-Yes, as time goes, content on the Internet fades away.</description>
+      <description>Photo: Middle of Nowhere by David Kovalenko Anything posted on the Internet, stays there forever.&#xA;I’m a firm believer of such assertions. The reality is, however, even if something is published on the Internet, due to technical reasons, it still probably won’t live there forever. The situation becomes more like&#xA;If something isn’t on the web, it doesn’t exist at all.&#xA;Yes, as time goes, content on the Internet fades away.</description>
     </item>
     <item>
       <title>Learn to Say No The Hard Way</title>
       <link>https://nanx.me/blog/post/learn-to-say-no-the-hard-way/</link>
       <pubDate>Thu, 28 Jun 2018 16:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/learn-to-say-no-the-hard-way/</guid>
-      <description>Photo by Esteban Lopez.
-Sometimes I feel guilty that I have not been able to do some real impactful research during my PhD studies. Although, I feel blessed that I have super cool advisors, who have taught me things that are even more important than doing good research. One particular thing I learned, is about saying no – I was terrible at it, and honestly, still learning more about it.</description>
+      <description>Photo by Esteban Lopez.&#xA;Sometimes I feel guilty that I have not been able to do some real impactful research during my PhD studies. Although, I feel blessed that I have super cool advisors, who have taught me things that are even more important than doing good research. One particular thing I learned, is about saying no – I was terrible at it, and honestly, still learning more about it.</description>
     </item>
     <item>
       <title>Shiny Now Supports Async Execution</title>
       <link>https://nanx.me/blog/post/shiny-async/</link>
       <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/shiny-async/</guid>
-      <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.
-You Want It When? (Zootopia)
-In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
+      <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.&#xA;You Want It When? (Zootopia)&#xA;In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
     </item>
     <item>
       <title>An HTTPS-Censored Future</title>
       <link>https://nanx.me/blog/post/https-censored-future/</link>
       <pubDate>Fri, 18 May 2018 15:50:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/https-censored-future/</guid>
-      <description>The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.
-The Good News One of the good news from the past weeks is that GitHub Pages finally supports HTTPS for custom domains. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them can be a lengthy process.</description>
+      <description>The Fall of Phaeton by Peter Paul Rubens, c. 1604/1605. National Gallery of Art.&#xA;The Good News One of the good news from the past weeks is that GitHub Pages finally supports HTTPS for custom domains. The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of “backlog” and “roadmap” and implement them can be a lengthy process.</description>
     </item>
     <item>
       <title>Taking the Long View</title>
       <link>https://nanx.me/blog/post/taking-the-long-view/</link>
       <pubDate>Wed, 02 May 2018 05:40:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/taking-the-long-view/</guid>
-      <description>The world is a fast-changing place. Eleven years ago, when iPhone was first launched, people probably didn’t anticipate that was the end of Nokia. Today, I don’t even use the voice calling feature on my phone anymore, unless really necessary. This might not be good news for AT&amp;amp;T, and maybe I’m an outlier, but this is the truth, this is the world we live.
-After walking a long road in such a changing world, it is easy to forget why we started at first.</description>
+      <description>The world is a fast-changing place. Eleven years ago, when iPhone was first launched, people probably didn’t anticipate that was the end of Nokia. Today, I don’t even use the voice calling feature on my phone anymore, unless really necessary. This might not be good news for AT&amp;amp;T, and maybe I’m an outlier, but this is the truth, this is the world we live.&#xA;After walking a long road in such a changing world, it is easy to forget why we started at first.</description>
     </item>
     <item>
       <title>10 Things That Matter in Deep Learning (1/5)</title>
       <link>https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/</link>
       <pubDate>Thu, 12 Apr 2018 17:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/</guid>
-      <description>Heart of the Matter by Otis Kaye, 1963. The Art Institute of Chicago.
-Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</description>
+      <description>Heart of the Matter by Otis Kaye, 1963. The Art Institute of Chicago.&#xA;Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</description>
     </item>
     <item>
       <title>The Return of the Native Font Stack</title>
       <link>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</link>
       <pubDate>Tue, 13 Mar 2018 02:20:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/the-return-of-the-native-font-stack/</guid>
-      <description>Photo: Lead type
-As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:
-font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.
-Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
+      <description>Photo: Lead type&#xA;As people said, web design is 95% typography. Once upon a time, people who care about the typography of their website define their font stack using CSS like this:&#xA;font-family: &amp;quot;Lucida Sans Unicode&amp;quot;, &amp;quot;Lucida Grande&amp;quot;, sans-serif; They secretly wish their website could look different from the mortal websites which use Times New Roman, Arial, or Georgia with the funny-looking numerals.&#xA;Until one day, their sincerity impressed the god of typography, who granted them a technology named web fonts.</description>
     </item>
     <item>
       <title>3 Simple Criteria for Choosing Open Source Projects</title>
@@ -602,36 +482,28 @@ Until one day, their sincerity impressed the god of typography, who granted them
       <link>https://nanx.me/blog/post/nothing-without-love/</link>
       <pubDate>Thu, 15 Feb 2018 21:00:00 -0500</pubDate>
       <guid>https://nanx.me/blog/post/nothing-without-love/</guid>
-      <description>Nate Ruess’s songs have magnificent voices and amazing arrangements, while often unbelievably sad at their cores, such as Grammy’s favourite “We Are Young”. This one, on the other hand, is an exception.
-Send up a signal, that everything’s fine
-Come on slide up right here by my side
-You know that I, I want to rest in your light
-Photo: Wind turbine near North Kingstown, RI, from the morning train to NYC.</description>
+      <description>Nate Ruess’s songs have magnificent voices and amazing arrangements, while often unbelievably sad at their cores, such as Grammy’s favourite “We Are Young”. This one, on the other hand, is an exception.&#xA;Send up a signal, that everything’s fine&#xA;Come on slide up right here by my side&#xA;You know that I, I want to rest in your light&#xA;Photo: Wind turbine near North Kingstown, RI, from the morning train to NYC.</description>
     </item>
     <item>
       <title>Buzzword Map, or Buzz World Map</title>
       <link>https://nanx.me/blog/post/buzzword-map-or-buzz-world-map/</link>
       <pubDate>Sat, 13 Jan 2018 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/buzzword-map-or-buzz-world-map/</guid>
-      <description>I don’t always care about popular topics because they usually fade fast. But when I do, here is a 2017 world interest map for deep learning, artificial intelligence, and blockchain (courtesy of Google Trends, where you can reproduce it).
-Figure: Google Trends — comparing the search traffic in 2017.
-The dominant color shown in each region represents the most searched term there. The question is, what does this map tell us — everything, or nothing at all?</description>
+      <description>I don’t always care about popular topics because they usually fade fast. But when I do, here is a 2017 world interest map for deep learning, artificial intelligence, and blockchain (courtesy of Google Trends, where you can reproduce it).&#xA;Figure: Google Trends — comparing the search traffic in 2017.&#xA;The dominant color shown in each region represents the most searched term there. The question is, what does this map tell us — everything, or nothing at all?</description>
     </item>
     <item>
       <title>Papers in My Heart (2017)</title>
       <link>https://nanx.me/blog/post/papers-in-my-heart-2017/</link>
       <pubDate>Sun, 31 Dec 2017 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/papers-in-my-heart-2017/</guid>
-      <description>Figure: Album cover for Skip to the Good Part by He Is We, 2011.
-It is the last day of 2017. Looking back, it has been another fruitful year for statistical and machine intelligence research. Notably, a lot of new ideas have been published in the direction of deep learning. Although it is intriguing, I will probably talk about things I care about in deep learning in another post. Fingers crossed.</description>
+      <description>Figure: Album cover for Skip to the Good Part by He Is We, 2011.&#xA;It is the last day of 2017. Looking back, it has been another fruitful year for statistical and machine intelligence research. Notably, a lot of new ideas have been published in the direction of deep learning. Although it is intriguing, I will probably talk about things I care about in deep learning in another post. Fingers crossed.</description>
     </item>
     <item>
       <title>Tanka: A Minimalist Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-tanka-theme/</link>
       <pubDate>Wed, 27 Dec 2017 07:00:00 -0500</pubDate>
       <guid>https://nanx.me/blog/post/hugo-tanka-theme/</guid>
-      <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.
-Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
+      <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.&#xA;Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
     </item>
     <item>
       <title>Collected Wisdom</title>
@@ -652,8 +524,7 @@ Time flies, and apparently, I did not have the chance to build it. Fortunately, 
       <link>https://nanx.me/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/about/</guid>
-      <description>I am a statistician from Merck &amp;amp; Co. I work in the Methodology Research group led by Keaven M. Anderson in the Biostatistics and Research Decision Sciences (BARDS) department. I currently serve on the R Consortium Infrastructure Steering Committee as a representative of Merck &amp;amp; Co., as well as on the R Submissions Working Group.
-In my daily work, I solve challenges at the intersection of statistical methodology research and software architecture innovation.</description>
+      <description>I am a statistician from Merck &amp;amp; Co. I work in the Methodology Research group led by Keaven M. Anderson in the Biostatistics and Research Decision Sciences (BARDS) department. I currently serve on the R Consortium Infrastructure Steering Committee as a representative of Merck &amp;amp; Co., as well as on the R Submissions Working Group.&#xA;In my daily work, I solve challenges at the intersection of statistical methodology research and software architecture innovation.</description>
     </item>
     <item>
       <title>Books</title>
@@ -667,20 +538,14 @@ In my daily work, I solve challenges at the intersection of statistical methodol
       <link>https://nanx.me/colophon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/colophon/</guid>
-      <description>I launched this website in 2009, initially as a personal blog, before later expanding it to include a professional portfolio. Throughout the years, I have explored different publishing platforms: from WordPress and OpenScholar to hand-written HTML. My journey led me to adopt the static website generator: blogdown, driven by Hugo.
-This page lists the tools I use to build the site today. The entire stack is free and open source, and can be found on GitHub.</description>
+      <description>I launched this website in 2009, initially as a personal blog, before later expanding it to include a professional portfolio. Throughout the years, I have explored different publishing platforms: from WordPress and OpenScholar to hand-written HTML. My journey led me to adopt the static website generator: blogdown, driven by Hugo.&#xA;This page lists the tools I use to build the site today. The entire stack is free and open source, and can be found on GitHub.</description>
     </item>
     <item>
       <title>Papers</title>
       <link>https://nanx.me/papers/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/papers/</guid>
-      <description>Word cloud visualization of the keywords in my publications. How to make it.
-Google Scholar | ORCID | ResearchGate
-2023 | 2022 | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 | 2015
-2023 Electronic Common Technical Document Submission With Analysis Using R
-Yujie Zhao, Nan Xiao, Keaven Anderson, Yilong Zhang
-Clinical Trials 20(1): 89&amp;ndash;92, 2023 Building an Internal R Package for Statistical Analysis and Reporting in Clinical Trials: A SAS User&amp;rsquo;s Perspective</description>
+      <description>Word cloud visualization of the keywords in my publications. How to make it.&#xA;Google Scholar | ORCID | ResearchGate&#xA;2023 | 2022 | 2021 | 2020 | 2019 | 2018 | 2017 | 2016 | 2015&#xA;2023 Electronic Common Technical Document Submission With Analysis Using R&#xA;Yujie Zhao, Nan Xiao, Keaven Anderson, Yilong Zhang&#xA;Clinical Trials 20(1): 89&amp;ndash;92, 2023 Building an Internal R Package for Statistical Analysis and Reporting in Clinical Trials: A SAS User&amp;rsquo;s Perspective</description>
     </item>
     <item>
       <title>Software</title>
@@ -694,15 +559,7 @@ Clinical Trials 20(1): 89&amp;ndash;92, 2023 Building an Internal R Package for 
       <link>https://nanx.me/talks/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/talks/</guid>
-      <description>2022 Asynchronous Processing of Long-Running Tasks in Shiny
-Nicole Jones, Nan Xiao, Shuqi Zhao, Lawrence A. Gould
-R/Pharma Conference
-Video recording R for Clinical Study Reports and Submission
-Yilong Zhang, Nan Xiao, Keaven M. Anderson
-2022 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop
-Short course slides Grammar of Group Sequential Design
-Keaven M. Anderson, Yilong Zhang, Nan Xiao, Yujie Zhao
-MCP Conference 2022: The 12th International Conference on Multiple Comparison Procedures Grammar of Group Sequential Design</description>
+      <description>2022 Asynchronous Processing of Long-Running Tasks in Shiny&#xA;Nicole Jones, Nan Xiao, Shuqi Zhao, Lawrence A. Gould&#xA;R/Pharma Conference&#xA;Video recording R for Clinical Study Reports and Submission&#xA;Yilong Zhang, Nan Xiao, Keaven M. Anderson&#xA;2022 ASA Biopharmaceutical Section Regulatory-Industry Statistics Workshop&#xA;Short course slides Grammar of Group Sequential Design&#xA;Keaven M. Anderson, Yilong Zhang, Nan Xiao, Yujie Zhao&#xA;MCP Conference 2022: The 12th International Conference on Multiple Comparison Procedures Grammar of Group Sequential Design</description>
     </item>
   </channel>
 </rss>

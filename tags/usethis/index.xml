@@ -13,8 +13,7 @@
       <link>https://nanx.me/blog/post/r-package-release-checklist/</link>
       <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-package-release-checklist/</guid>
-      <description>The release checklist generation function described in this post is also available in this GitHub Gist.
-Photo by David Marcu. Software release at scale An agile, automated, and reliable release process is a key component of continuous delivery for modern software engineering teams. In particular, releasing new versions of R packages often involves going through a sequence of manual and automated checks to ensure quality and compliance. To scale up such efforts within a development team, it is crucial to follow a consistent release checklist.</description>
+      <description>The release checklist generation function described in this post is also available in this GitHub Gist.&#xA;Photo by David Marcu. Software release at scale An agile, automated, and reliable release process is a key component of continuous delivery for modern software engineering teams. In particular, releasing new versions of R packages often involves going through a sequence of manual and automated checks to ensure quality and compliance. To scale up such efforts within a development team, it is crucial to follow a consistent release checklist.</description>
     </item>
   </channel>
 </rss>

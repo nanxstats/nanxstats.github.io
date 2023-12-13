@@ -13,17 +13,14 @@
       <link>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</link>
       <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</guid>
-      <description>Photo by Amy Shamblen. If you have written any Shiny apps, you are probably familiar with the idea of responsive web design, which focuses on web page layouts adaptive to screen size and popularized by the front-end frameworks such as Bootstrap.
-Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and the idea can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
+      <description>Photo by Amy Shamblen. If you have written any Shiny apps, you are probably familiar with the idea of responsive web design, which focuses on web page layouts adaptive to screen size and popularized by the front-end frameworks such as Bootstrap.&#xA;Could the similar idea be applied to statistical graphics? In my opinion, the answer is yes, and the idea can be helpful for arranging multi-panel graphics under the context of creating effective visualizations that are adaptive to any screen sizes.</description>
     </item>
     <item>
       <title>ggsci 3.0.0</title>
       <link>https://nanx.me/blog/post/ggsci-3-0-0/</link>
       <pubDate>Wed, 08 Mar 2023 11:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/ggsci-3-0-0/</guid>
-      <description>3D render from Rodion Kutsaiev. I am delighted to announce the release of ggsci 3.0.0. ggsci provides a collection of color palettes inspired by colors used in scientific journals, data visualization libraries, science fiction movies, and TV shows.
-You can install it from CRAN with:
-install.packages(&amp;quot;ggsci&amp;quot;) This version brings 7 new color palettes under 3 color scales (COSMIC, Flat UI, Frontiers), multiple improvements, and a new FAQ vignette, giving you more options to create effective data visualizations using ggplot2.</description>
+      <description>3D render from Rodion Kutsaiev. I am delighted to announce the release of ggsci 3.0.0. ggsci provides a collection of color palettes inspired by colors used in scientific journals, data visualization libraries, science fiction movies, and TV shows.&#xA;You can install it from CRAN with:&#xA;install.packages(&amp;quot;ggsci&amp;quot;) This version brings 7 new color palettes under 3 color scales (COSMIC, Flat UI, Frontiers), multiple improvements, and a new FAQ vignette, giving you more options to create effective data visualizations using ggplot2.</description>
     </item>
     <item>
       <title>Adaptive ggplot2 Color Scales with Color Interpolation</title>

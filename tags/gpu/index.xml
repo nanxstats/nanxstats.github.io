@@ -13,9 +13,7 @@
       <link>https://nanx.me/blog/post/gpu-selector/</link>
       <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/gpu-selector/</guid>
-      <description>I built a GPU selector for deep learning workflows at nanx.me/gpu/, based on the recommendations from the blog post written by Tim Dettmers.
-You can use this tool to decide the GPU you need for general training or inference needs by answering a few yes/no questions. It was a simple, pure client-side JavaScript implementation (GitHub repo).
-AI and sustainability. Artwork from DeepMind. Artist: Nidia Dias. I first saw Tim’s post when the Ampere series was released in 2020.</description>
+      <description>I built a GPU selector for deep learning workflows at nanx.me/gpu/, based on the recommendations from the blog post written by Tim Dettmers.&#xA;You can use this tool to decide the GPU you need for general training or inference needs by answering a few yes/no questions. It was a simple, pure client-side JavaScript implementation (GitHub repo).&#xA;AI and sustainability. Artwork from DeepMind. Artist: Nidia Dias. I first saw Tim’s post when the Ampere series was released in 2020.</description>
     </item>
   </channel>
 </rss>

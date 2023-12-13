@@ -13,17 +13,14 @@
       <link>https://nanx.me/blog/post/mlmodern/</link>
       <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/mlmodern/</guid>
-      <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.
-To me, these default typefaces work fine, but they could be “thicker” to be more legible on HiDPI and Retina displays. MLModern offers such a sturdy rendition of the Computer Modern design.</description>
+      <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.&#xA;To me, these default typefaces work fine, but they could be “thicker” to be more legible on HiDPI and Retina displays. MLModern offers such a sturdy rendition of the Computer Modern design.</description>
     </item>
     <item>
       <title>Parsing Human-Readable Text Data with Readability.js and R</title>
       <link>https://nanx.me/blog/post/r-readability-parser/</link>
       <pubDate>Tue, 02 Aug 2022 01:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-readability-parser/</guid>
-      <description>The R and JavaScript code to reproduce the results in this post is available from https://github.com/nanxstats/r-readability-parser.
-Photo by Nick Hillier. Update (2023-09-04): Browserify support was removed in jsdom v22.0.0. This post has been updated to recommend installing jsdom v20.0.0 to ensure the code examples work as intended. The original versions of JS libraries in the GitHub repo remain unchanged, as they continue to function correctly.
-Readability.js Maybe you have used tools like rvest to harvest text data from web pages.</description>
+      <description>The R and JavaScript code to reproduce the results in this post is available from https://github.com/nanxstats/r-readability-parser.&#xA;Photo by Nick Hillier. Update (2023-09-04): Browserify support was removed in jsdom v22.0.0. This post has been updated to recommend installing jsdom v20.0.0 to ensure the code examples work as intended. The original versions of JS libraries in the GitHub repo remain unchanged, as they continue to function correctly.&#xA;Readability.js Maybe you have used tools like rvest to harvest text data from web pages.</description>
     </item>
   </channel>
 </rss>

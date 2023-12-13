@@ -13,29 +13,21 @@
       <link>https://nanx.me/blog/post/link-checker/</link>
       <pubDate>Tue, 22 Feb 2022 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/link-checker/</guid>
-      <description>Photo by Katie Treadway.
-Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.
-Conceptually, the requirement for a generic broken link checker is quite simple:
-Get the links to all pages on the site.</description>
+      <description>Photo by Katie Treadway.&#xA;Some background I have been blogging with Hugo/blogdown for a while. One housekeeping task I have always wanted to automate with R is scanning the entire website to ensure that all the links are still working. It is essential for maintaining an enjoyable reading experience without archiving too many external links.&#xA;Conceptually, the requirement for a generic broken link checker is quite simple:&#xA;Get the links to all pages on the site.</description>
     </item>
     <item>
       <title>Tanka: A Minimalist Bootstrap 4 Theme for Hugo and Blogdown</title>
       <link>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</link>
       <pubDate>Mon, 23 Nov 2020 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/hugo-tanka-theme-bootstrap/</guid>
-      <description>TL;DR: I have rewritten the Hugo Tanka theme entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.
-A screenshot of the updated Hugo Tanka theme.
-Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).
-Hugo has received several major updates in the past three years.</description>
+      <description>TL;DR: I have rewritten the Hugo Tanka theme entirely using Bootstrap 4 while still keeping its original look and feel. This should also fix the compatibility issues from Hugo version updates.&#xA;A screenshot of the updated Hugo Tanka theme.&#xA;Almost three years ago, when I first started blogging with Hugo/blogdown, I forked and modified a Hugo theme Black &amp;amp; Light, and named it Tanka (Repo, Live Preview).&#xA;Hugo has received several major updates in the past three years.</description>
     </item>
     <item>
       <title>Migrating from Disqus to Utterances</title>
       <link>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</link>
       <pubDate>Sat, 19 Sep 2020 23:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/migrating-from-disqus-to-utterances/</guid>
-      <description>Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit’s Intelligent Tracking Prevention (ITP). Following this progress and removing Google Analytics last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.
-Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.
-The process is much easier than I thought.</description>
+      <description>Safari 14 introduced a new UI component that I cannot love more: a privacy report detailing all the third-party trackers blocked by WebKit’s Intelligent Tracking Prevention (ITP). Following this progress and removing Google Analytics last year, I decide to finish my part today by purging Disqus (comes with unsolicited tracking) from this website.&#xA;Privacy Report in Safari 14 showing the cross-site trackers that Intelligent Tracking Prevention (ITP) blocked.&#xA;The process is much easier than I thought.</description>
     </item>
     <item>
       <title>Renga: A Clean Bootstrap 4 Theme for Hugo and Blogdown</title>
@@ -49,8 +41,7 @@ The process is much easier than I thought.</description>
       <link>https://nanx.me/blog/post/hugo-tanka-theme/</link>
       <pubDate>Wed, 27 Dec 2017 07:00:00 -0500</pubDate>
       <guid>https://nanx.me/blog/post/hugo-tanka-theme/</guid>
-      <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.
-Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
+      <description>I used to mention creating a purely R-based static website generator named Haiku with my then classmate Arjun about two years ago. I remember that he said the name was nice.&#xA;Time flies, and apparently, I did not have the chance to build it. Fortunately, Yihui saved the world again, and now blogdown has become the most elegant and powerful static website generator for R users, especially if you love R Markdown.</description>
     </item>
   </channel>
 </rss>

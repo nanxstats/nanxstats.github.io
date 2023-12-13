@@ -13,8 +13,7 @@
       <link>https://nanx.me/blog/post/mlmodern/</link>
       <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/mlmodern/</guid>
-      <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.
-To me, these default typefaces work fine, but they could be “thicker” to be more legible on HiDPI and Retina displays. MLModern offers such a sturdy rendition of the Computer Modern design.</description>
+      <description>A visual comparison between Latin Modern (blue) and MLModern (red) at the same size. You probably have created PDF documents using R Markdown or Quarto. The default look and feel of these documents are driven by the default typeface, Computer Modern, or its extended implementation, Latin Modern.&#xA;To me, these default typefaces work fine, but they could be “thicker” to be more legible on HiDPI and Retina displays. MLModern offers such a sturdy rendition of the Computer Modern design.</description>
     </item>
   </channel>
 </rss>
