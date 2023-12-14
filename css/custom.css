@@ -183,7 +183,7 @@ hr {
 
 .header ul.nav li {
     font-weight: 400;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
 }
 
 .header ul.nav li a {
@@ -210,18 +210,18 @@ hr {
     text-decoration-color: var(--tw-prose-headings);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-underline-offset: 17.5px;
+    text-underline-offset: 18.5px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
     .header ul.nav li a.active {
-        text-underline-offset: 18px;
+        text-underline-offset: 19px;
     }
 }
 
 @supports (-moz-text-decoration-skip-ink: auto) {
     .header ul.nav li a.active {
-        text-underline-offset: 18px;
+        text-underline-offset: 19px;
     }
 }
 
@@ -276,10 +276,6 @@ hr {
 @media (max-width: 767.98px) {
     .header .logo {
         max-height: 160px;
-    }
-
-    .header ul.nav li {
-        font-size: 1.25rem;
     }
 }
 
@@ -492,7 +488,7 @@ h6 {
 
 .content .post-item .meta-title {
     font-variant-numeric: tabular-nums;
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 2.5rem;
     font-weight: 400;
 }
@@ -500,7 +496,7 @@ h6 {
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-variant-numeric: tabular-nums;
-    font-size: 0.875rem;
+    font-size: 1rem;
     line-height: 2.5rem;
     font-weight: 400;
     color: var(--tw-prose-counters);
