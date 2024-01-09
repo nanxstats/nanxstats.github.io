@@ -176,7 +176,7 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: "ss01";
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 2.25rem;
     margin-left: 6px;
 }
 
@@ -305,19 +305,19 @@ h6 {
 }
 
 .content h1 {
-    font-size: 2.25rem;
-}
-
-.content h2 {
     font-size: 2rem;
 }
 
-.content h3 {
+.content h2 {
     font-size: 1.75rem;
 }
 
-.content h4 {
+.content h3 {
     font-size: 1.5rem;
+}
+
+.content h4 {
+    font-size: 1.25rem;
 }
 
 .content .meta {
@@ -367,7 +367,7 @@ h6 {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: "ss01";
     font-weight: 600;
-    font-size: 2.25rem;
+    font-size: 2rem;
     line-height: 3.125rem;
 }
 
