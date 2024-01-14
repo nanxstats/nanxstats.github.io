@@ -1,34 +1,34 @@
 /* Typography */
 
 @font-face {
-    font-family: 'STIX Two Text';
-    src: url('fonts/STIXTwoText-VariableFont_wght.woff2') format('woff2');
+    font-family: "STIX Two Text";
+    src: url("fonts/STIXTwoText-VariableFont_wght.woff2") format("woff2");
     font-weight: 400 700;
 }
 
 @font-face {
-    font-family: 'STIX Two Text';
-    src: url('fonts/STIXTwoText-Italic-VariableFont_wght.woff2') format('woff2');
+    font-family: "STIX Two Text";
+    src: url("fonts/STIXTwoText-Italic-VariableFont_wght.woff2") format("woff2");
     font-style: italic;
     font-weight: 400 700;
 }
 
 @font-face {
-    font-family: 'Libre Franklin';
-    src: url('fonts/LibreFranklin-VariableFont_wght.woff2') format('woff2');
+    font-family: "Libre Franklin";
+    src: url("fonts/LibreFranklin-VariableFont_wght.woff2") format("woff2");
     font-weight: 100 900;
 }
 
 @font-face {
-    font-family: 'Libre Franklin';
-    src: url('fonts/LibreFranklin-Italic-VariableFont_wght.woff2') format('woff2');
+    font-family: "Libre Franklin";
+    src: url("fonts/LibreFranklin-Italic-VariableFont_wght.woff2") format("woff2");
     font-style: italic;
     font-weight: 100 900;
 }
 
 @font-face {
-    font-family: "Hasklig";
-    src: url("fonts/Hasklig-Regular.woff2") format("woff2");
+    font-family: "Roboto Mono";
+    src: url("fonts/RobotoMono-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
@@ -39,7 +39,7 @@
 :root {
     --tw-prose-font-sans-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "STIX Two Text", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "Roboto Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -48,8 +48,7 @@
     --tw-prose-captions: #64748b;
     --tw-prose-counters: #64748b;
     --tw-prose-code: #0f172a;
-    --tw-prose-pre-bg: #f9fafb;
-    --tw-prose-pre-border: #f3f4f6;
+    --tw-prose-pre-bg: #f6f8fa;
     --tw-prose-bullets: #cbd5e1;
     --tw-prose-hr: #e2e8f0;
     --tw-prose-quotes: #0f172a;
@@ -65,8 +64,7 @@ body {
     background-color: var(--tw-bg);
 }
 
-/* Horizontally centering fixed-width block
-   used together with .mx-auto */
+/* Horizontally centering fixed-width block used together with .mx-auto */
 .w-700 {
     width: 724px;
 }
@@ -114,7 +112,7 @@ a:focus {
     border-color: var(--tw-prose-links-hover);
 }
 
-/* landing content */
+/* Landing content */
 
 .landing {
     font-size: 1rem;
@@ -125,7 +123,7 @@ a:focus {
     margin-bottom: 0;
 }
 
-/* horizontal rule */
+/* Horizontal rule */
 
 hr {
     border-top: 1px solid var(--tw-prose-hr);
@@ -268,7 +266,7 @@ hr {
     display: none;
 }
 
-/* nav on < medium screens */
+/* Navigation on < medium screens */
 @media (max-width: 767.98px) {
     .header .logo {
         max-height: 160px;
@@ -417,7 +415,7 @@ h6 {
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
     font-weight: 400;
-    background-color: var(--tw-prose-pre-bg);
+    background-color: var(--tw-bg);
     font-feature-settings: normal;
 }
 
@@ -441,7 +439,7 @@ h6 {
     white-space: pre;
     word-break: break-all;
     word-wrap: break-word;
-    border: 1px solid var(--tw-prose-pre-border);
+    border: 1px solid var(--tw-prose-bullets);
     border-radius: 6px;
 }
 
@@ -451,7 +449,7 @@ h6 {
     padding: 0;
     font-size: 14px;
     line-height: 24px;
-    background-color: var(--tw-prose-pre-bg);
+    background-color: var(--tw-bg);
     border-radius: 0;
 }
 
@@ -630,7 +628,7 @@ a:focus {
     fill: var(--tw-prose-links-hover);
 }
 
-/* < medium screens */
+/* Screens < medium */
 
 @media (max-width: 767.98px) {
     html {
