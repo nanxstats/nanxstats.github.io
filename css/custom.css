@@ -1,43 +1,29 @@
 /* Typography */
 
 @font-face {
-    font-family: "Mona Sans";
-    src: url("fonts/MonaSans-Regular.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
+    font-family: 'STIX Two Text';
+    src: url('fonts/STIXTwoText-VariableFont_wght.woff2') format('woff2');
+    font-weight: 400 700;
 }
 
 @font-face {
-    font-family: "Mona Sans";
-    src: url("fonts/MonaSans-SemiBold.woff2") format("woff2");
-    font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-Regular.ttf.woff2") format("woff2");
-    font-weight: 400;
-    font-style: normal;
-    font-stretch: normal;
-}
-
-@font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-It.ttf.woff2") format("woff2");
-    font-weight: 400;
+    font-family: 'STIX Two Text';
+    src: url('fonts/STIXTwoText-Italic-VariableFont_wght.woff2') format('woff2');
     font-style: italic;
-    font-stretch: normal;
+    font-weight: 400 700;
 }
 
 @font-face {
-    font-family: "Source Serif 4";
-    src: url("fonts/SourceSerif4-Bold.ttf.woff2") format("woff2");
-    font-weight: 700;
-    font-style: normal;
-    font-stretch: normal;
+    font-family: 'Libre Franklin';
+    src: url('fonts/LibreFranklin-VariableFont_wght.woff2') format('woff2');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('fonts/LibreFranklin-Italic-VariableFont_wght.woff2') format('woff2');
+    font-style: italic;
+    font-weight: 100 900;
 }
 
 @font-face {
@@ -51,8 +37,8 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Source Serif 4", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "STIX Two Text", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -74,10 +60,9 @@
 }
 
 body {
-    font-family: var(--tw-prose-font-sans-serif);
-    background-color: var(--tw-bg);
+    font-family: var(--tw-prose-font-serif);
     font-variant-ligatures: contextual common-ligatures;
-    font-feature-settings: "ss01";
+    background-color: var(--tw-bg);
 }
 
 /* Horizontally centering fixed-width block
@@ -173,8 +158,7 @@ hr {
 }
 
 .header h1.name {
-    font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: "ss01";
+    font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 2.25rem;
     margin-left: 6px;
@@ -192,8 +176,9 @@ hr {
 }
 
 .header ul.nav li {
-    font-weight: 400;
-    font-size: 1.375rem;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
+    font-size: 1.25rem;
 }
 
 .header ul.nav li a {
@@ -220,23 +205,24 @@ hr {
     text-decoration-color: var(--tw-prose-headings);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-underline-offset: 15.5px;
+    text-underline-offset: 15px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
     .header ul.nav li a.active {
-        text-underline-offset: 16px;
+        text-underline-offset: 15px;
     }
 }
 
 @supports (-moz-text-decoration-skip-ink: auto) {
     .header ul.nav li a.active {
-        text-underline-offset: 16px;
+        text-underline-offset: 15px;
     }
 }
 
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
+        font-family: var(--tw-prose-font-sans-serif);
         font-weight: 600;
         text-decoration: none;
     }
@@ -298,7 +284,6 @@ h4,
 h5,
 h6 {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: "ss01";
     font-weight: 600;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
@@ -321,8 +306,9 @@ h6 {
 }
 
 .content .meta {
-    font-size: 1rem;
-    font-weight: 400;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
+    font-size: 0.875rem;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -345,10 +331,9 @@ h6 {
 
 .content .markdown {
     font-family: var(--tw-prose-font-serif);
-    font-feature-settings: normal;
+    font-weight: 450;
     font-size: 1.125rem;
     line-height: calc(30 / 18);
-    font-weight: 400;
     color: var(--tw-prose-body);
 }
 
@@ -364,20 +349,26 @@ h6 {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: "ss01";
+    font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 2rem;
     line-height: 3.125rem;
 }
 
 .content .blog-post-content {
-    font-size: 1.25rem;
+    font-family: var(--tw-prose-font-serif);
+    font-weight: 450;
+    font-size: 1.3125rem;
     line-height: calc(30 / 18);
 }
 
 .content .blog-post-content p {
     margin-bottom: 1.875rem;
+}
+
+.content .blog-post-content ol li p {
+    font-family: var(--tw-prose-font-serif);
+    font-weight: 450;
 }
 
 /* Blog post images: centered, boxed */
@@ -425,6 +416,7 @@ h6 {
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
+    font-weight: 400;
     background-color: var(--tw-prose-pre-bg);
     font-feature-settings: normal;
 }
@@ -480,8 +472,9 @@ h6 {
 }
 
 .content .groupby {
-    font-size: 1.6rem;
+    font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
+    font-size: 1.6rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -499,18 +492,18 @@ h6 {
 }
 
 .content .post-item .meta-title {
-    font-family: var(--tw-prose-font-serif);
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
     font-size: 1.125rem;
     line-height: 2.5rem;
-    font-weight: 400;
 }
 
 .content .post-item .meta-date {
-    font-family: var(--tw-prose-font-sans-serif);
-    font-variant-numeric: tabular-nums;
-    font-size: 0.875rem;
-    line-height: 2.5rem;
+    font-family: var(--tw-prose-font-serif);
     font-weight: 400;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
 }
 
@@ -526,6 +519,12 @@ h6 {
     background-color: #e9ecef;
 }
 
+.content .navigation {
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
+    font-size: 0.875rem;
+}
+
 .content .navigation .icon {
     width: 16px;
     height: 16px;
@@ -538,7 +537,9 @@ h6 {
 }
 
 .content .tags li a {
-    font-size: 0.9375rem;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
+    font-size: 0.875rem;
     line-height: calc(45 / 18);
 }
 
@@ -558,6 +559,8 @@ h6 {
 
 /* Tags page */
 .content .taxonomy-term {
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
     margin-bottom: 1rem;
 }
 
@@ -570,8 +573,9 @@ h6 {
 /* Partial: footer */
 
 .footer {
+    font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 1.0625rem;
+    font-size: 1rem;
 }
 
 .footer a {
