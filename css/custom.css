@@ -21,8 +21,8 @@
 
 @font-face {
     font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-Text.woff2") format("woff2");
-    font-weight: 450;
+    src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
+    font-weight: 400;
     font-style: normal;
     font-stretch: normal;
 }
@@ -322,7 +322,7 @@ h6 {
 
 .content .markdown {
     font-family: var(--tw-prose-font-serif);
-    font-weight: 450;
+    font-weight: 400;
     font-size: 1.125rem;
     line-height: calc(30 / 18);
     color: var(--tw-prose-body);
@@ -342,13 +342,13 @@ h6 {
 .content .blog-post-title {
     font-family: var(--tw-prose-font-serif);
     font-weight: 600;
-    font-size: 2rem;
+    font-size: 2.5rem;
     line-height: 3.125rem;
 }
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-serif);
-    font-weight: 450;
+    font-weight: 400;
     font-size: 1.3125rem;
     line-height: calc(30 / 18);
 }
@@ -359,7 +359,7 @@ h6 {
 
 .content .blog-post-content ol li p {
     font-family: var(--tw-prose-font-serif);
-    font-weight: 450;
+    font-weight: 400;
 }
 
 /* Blog post images: centered, boxed */
@@ -407,7 +407,7 @@ h6 {
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
-    font-weight: 450;
+    font-weight: 400;
     background-color: var(--tw-bg);
     font-feature-settings: normal;
 }
