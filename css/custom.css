@@ -21,8 +21,8 @@
 
 @font-face {
     font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
-    font-weight: 400;
+    src: url("fonts/IBMPlexMono-Text.woff2") format("woff2");
+    font-weight: 450;
     font-style: normal;
     font-stretch: normal;
 }
@@ -149,7 +149,7 @@ hr {
 }
 
 .header h1.name {
-    font-family: var(--tw-prose-font-serif);
+    font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
     font-size: 2.25rem;
     margin-left: 6px;
@@ -168,7 +168,7 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 500;
+    font-weight: 450;
     font-size: 1.25rem;
 }
 
@@ -214,7 +214,7 @@ hr {
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
-        font-weight: 700;
+        font-weight: 600;
         text-decoration: none;
     }
 }
@@ -407,7 +407,7 @@ h6 {
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
-    font-weight: 400;
+    font-weight: 450;
     background-color: var(--tw-bg);
     font-feature-settings: normal;
 }
@@ -484,15 +484,15 @@ h6 {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 500;
-    font-size: 1.125rem;
+    font-weight: 600;
+    font-size: 1rem;
     line-height: 2.5rem;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
