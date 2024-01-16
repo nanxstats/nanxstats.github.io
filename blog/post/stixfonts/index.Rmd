@@ -1,0 +1,113 @@
+---
+title: "Use STIX Fonts in R Markdown and Quarto for Readability"
+author: "Nan Xiao"
+date: "2024-01-15T21:00:00"
+slug: stixfonts
+categories: []
+tags:
+  - R
+  - R Markdown
+  - Quarto
+  - STIX
+  - readability
+meta_img: "image/seashore-with-shipwreck-by-moonlight.jpg"
+description: >
+  Explore the integration of STIX fonts in R Markdown and Quarto for enhanced
+  readability in PDF documents. This post covers practical methods,
+  known issues, and tips for using the STIX fonts in your documents,
+  drawing inspiration from the elegant UI of Elden Ring.
+---
+
+![_Seashore with Shipwreck by Moonlight_ by Caspar David Friedrich.](/image/seashore-with-shipwreck-by-moonlight.jpg)
+
+I have been playing a lot of [Elden Ring](https://en.wikipedia.org/wiki/Elden_Ring) lately.
+After investing 200 (!) hours into it, I learned three valuable lessons:
+
+1. Life is hard. Something that seems unachievable today doesn't mean it
+   will be tomorrow. Explore, learn, practice, and with efforts, and perhaps
+   a little luck, suddenly, you've done it.
+2. Life is unfair. You can choose to play aggressively, play conservatively,
+   or even move on---just don't be greedy.
+3. If your artwork or software has a Gothic theme, try use a serif typeface
+   for the UI; it will fit really well!
+
+Admiring the UI font of Elden Ring drove me to seek a professional-grade serif
+typeface with an open source license.
+This search led me to [STIX fonts](https://github.com/stipub/stixfonts).
+The transitional style text font (STIX Two Text) and math font (STIX Two Math)
+offer Times-like typography with unique design details.
+One particular benefit is the "familiarity" factor, which some UX research
+suggests improves readability, meaning higher reading speed and precision.
+
+Since serif fonts are often used in typesetting long documents,
+I created a GitHub repository,
+[nanxstats/rmarkdown-quarto-stix2](https://github.com/nanxstats/rmarkdown-quarto-stix2),
+to demonstrate how to use STIX fonts in both R Markdown and Quarto for
+PDF outputs via LaTeX.
+You can find the source document examples with rendered PDF specimen there,
+and here is a brief summary of how it works.
+
+## R Markdown
+
+The simplest way to use STIX fonts in R Markdown is to include the LaTeX package
+`stix2` with `extra_dependencies`:
+
+```yaml
+output:
+  pdf_document:
+    extra_dependencies:
+      stix2: ["notextcomp"]
+```
+
+Alternatively, use `header-includes` to write the LaTeX commands directly.
+You can also change the rendering engine from `pdflatex` to `xelatex`:
+
+```yaml
+output:
+  pdf_document:
+    latex_engine: "xelatex"
+header-includes:
+  - \usepackage[notextcomp,nomath]{stix2}
+```
+
+## Quarto
+
+Since Quarto's default LaTeX template uses a sans serif font (Latin Modern Sans)
+for the headings, it can look a bit odd when pairing with STIX fonts.
+Therefore, I used the `helvet` package to match the familiarity:
+
+```yaml
+pdf-engine: pdflatex
+format:
+  pdf:
+    include-in-header:
+      text: |
+        \usepackage[notextcomp]{stix2}
+        \usepackage[scaled=0.92]{helvet}
+```
+
+## Known issues
+
+There are some common issues that can be fixed or alleviated by using
+additional options from the `stix2` package.
+The [stix2-type1](https://ctan.org/pkg/stix2-type1) package
+documentation explains these options in detail.
+
+- **Loading textcomp twice**: You probably noticed that we used the `notextcomp`
+  option to avoid loading the `textcomp` package. This is because the default
+  pandoc template already loads it.
+- **Math font conflicts**: XeLaTeX has some issues with the math font, so we
+  used the `nomath` option to disable it when using XeLaTeX.
+  Otherwise, there will be errors related to "command already defined".
+
+  As a  simple solution, using `nomath` has no practical impact, especially
+  if you don't use math in the document. However, if you do use math
+  and try the [savesym method](https://texfaq.org/FAQ-alreadydef)
+  to avoid the errors, there will still be significant issues when rendering,
+  such as missing summation symbols in the formulas.
+
+  So far, I have not found a working solution for this issue yet, so if you
+  know how to make it work properly, please let me know.
+
+That's it. If you prefer the Computer Modern typeface but want a bolder version,
+see the [previous post about MLModern](https://nanx.me/blog/post/mlmodern/).

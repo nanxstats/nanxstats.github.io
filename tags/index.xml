@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 10 Nov 2023 21:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jan 2024 21:00:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Quarto</title>
+      <link>https://nanx.me/tags/quarto/</link>
+      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/quarto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R Markdown</title>
+      <link>https://nanx.me/tags/r-markdown/</link>
+      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Readability</title>
+      <link>https://nanx.me/tags/readability/</link>
+      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/readability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>STIX</title>
+      <link>https://nanx.me/tags/stix/</link>
+      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/stix/</guid>
+      <description></description>
+    </item>
     <item>
       <title>feature engineering</title>
       <link>https://nanx.me/tags/feature-engineering/</link>
@@ -20,13 +55,6 @@
       <link>https://nanx.me/tags/protein-sequence/</link>
       <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/protein-sequence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     <item>
@@ -205,20 +233,6 @@
       <description></description>
     </item>
     <item>
-      <title>Quarto</title>
-      <link>https://nanx.me/tags/quarto/</link>
-      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/quarto/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R Markdown</title>
-      <link>https://nanx.me/tags/r-markdown/</link>
-      <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>ggplot2</title>
       <link>https://nanx.me/tags/ggplot2/</link>
       <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
@@ -321,13 +335,6 @@
       <link>https://nanx.me/tags/mlmodern/</link>
       <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/mlmodern/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Readability</title>
-      <link>https://nanx.me/tags/readability/</link>
-      <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/readability/</guid>
       <description></description>
     </item>
     <item>
