@@ -14,9 +14,9 @@
 }
 
 @font-face {
-    font-family: "Inter Variable";
-    src: url("fonts/InterVariable.woff2") format("woff2");
-    font-weight: 100 900;
+    font-family: "Rubik Variable";
+    src: url("fonts/Rubik-VariableFont_wght.woff2") format("woff2");
+    font-weight: 300 900;
 }
 
 @font-face {
@@ -28,7 +28,7 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Rubik Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "STIX Two Text Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Inconsolata Variable", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
@@ -148,7 +148,7 @@ hr {
 
 .header h1.name {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 600;
+    font-weight: 450;
     font-size: 2.25rem;
     margin-left: 6px;
 }
@@ -166,7 +166,7 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
+    font-weight: 400;
     font-size: 1.25rem;
 }
 
@@ -194,7 +194,7 @@ hr {
     text-decoration-color: var(--tw-prose-headings);
     text-decoration: underline;
     text-decoration-thickness: 2px;
-    text-underline-offset: 15px;
+    text-underline-offset: 15.5px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
@@ -273,7 +273,7 @@ h4,
 h5,
 h6 {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 600;
+    font-weight: 450;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
@@ -296,7 +296,7 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
+    font-weight: 400;
     font-size: 1rem;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
@@ -462,7 +462,7 @@ h6 {
 
 .content .groupby {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 600;
+    font-weight: 450;
     font-size: 1.6rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
@@ -490,7 +490,7 @@ h6 {
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -510,8 +510,8 @@ h6 {
 
 .content .navigation {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 0.875rem;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 .content .navigation .icon {
@@ -527,7 +527,7 @@ h6 {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
+    font-weight: 400;
     font-size: 0.875rem;
     line-height: calc(45 / 18);
 }
