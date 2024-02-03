@@ -317,6 +317,12 @@ h6 {
     color: var(--tw-prose-body);
 }
 
+.content .markdown ul,
+ol,
+dl {
+    margin-bottom: 1.875rem;
+}
+
 .content .markdown li {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -415,7 +421,7 @@ h6 {
     /* Hugo specific: consider using the 'highlight' shortcode */
     display: block;
     margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2.25rem;
     padding: 1.25rem;
     line-height: 24px;
     white-space: pre;
