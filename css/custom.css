@@ -406,7 +406,7 @@ h6 {
     color: var(--tw-prose-code);
     padding: .2em .4em;
     margin: 0;
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
