@@ -61,6 +61,7 @@ html {
 a {
     color: var(--tw-prose-links);
     text-decoration: underline;
+    text-decoration-thickness: 1.5px;
     text-decoration-color: var(--tw-prose-bullets);
     text-underline-offset: 6px;
     background-color: transparent;
@@ -76,6 +77,7 @@ a:hover,
 a:focus {
     color: var(--tw-prose-links-hover);
     text-decoration: underline;
+    text-decoration-thickness: 1.5px;
     text-decoration-color: var(--tw-prose-counters);
 }
 
@@ -180,9 +182,9 @@ hr {
 }
 
 .header ul.nav li a.active {
-    text-decoration-color: var(--tw-prose-headings);
     text-decoration: underline;
     text-decoration-thickness: 2px;
+    text-decoration-color: var(--tw-prose-headings);
     text-underline-offset: 14.5px;
 }
 
