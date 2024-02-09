@@ -41,8 +41,6 @@
 body {
     font-family: var(--tw-prose-font-sans-serif);
     font-variant-ligatures: contextual common-ligatures;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     background-color: var(--tw-bg);
 }
 
