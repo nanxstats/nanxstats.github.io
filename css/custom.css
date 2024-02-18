@@ -505,17 +505,6 @@ dl {
     background-color: #e9ecef;
 }
 
-.content .navigation {
-    font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
-    font-size: 1rem;
-}
-
-.content .navigation .icon {
-    width: 16px;
-    height: 16px;
-}
-
 /* Tags in blog post */
 .content .tags li {
     /* Inline list item should not break */
@@ -550,9 +539,67 @@ dl {
     margin-bottom: 1rem;
 }
 
+/* Previous and next blog post */
+.pagination-nav .navigation-btns .col {
+    /* Flex container for equal height buttons */
+    display: flex;
+}
+
+.pagination-nav .btn-equal-height {
+    flex: 1;
+    /* Allows buttons to grow and ensures equal height */
+    display: flex;
+    flex-direction: column;
+    /* Keeps content aligned to the top */
+    justify-content: flex-start;
+    /* Aligns text to the left by default */
+    text-align: left;
+    padding: 1rem;
+}
+
+.pagination-nav .btn-next .btn-content {
+    /* Right-align text for the "Next" button */
+    text-align: right;
+}
+
+.pagination-nav .row.navigation-btns {
+    /* Ensure the row behaves as a flex container */
+    display: flex;
+}
+
+.pagination-nav .btn-outline-nav {
+    font-size: 1rem;
+    text-decoration: none;
+    border: 1px solid var(--tw-prose-bullets);
+    border-radius: 0.4rem;
+    transition: border-color 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+
+.pagination-nav .btn-outline-nav:hover {
+    border-color: var(--tw-prose-counters);
+}
+
+.pagination-nav .btn-outline-nav:active {
+    background-color: var(--tw-prose-hr);
+}
+
+.pagination-nav .btn-outline-nav:active .pagination-nav-label {
+    color: var(--tw-prose-links-hover);
+}
+
+.pagination-nav .pagination-nav-sublabel {
+    font-size: 0.875rem;
+    color: var(--tw-prose-captions);
+}
+
+.pagination-nav .pagination-nav-label {
+    font-size: 1rem;
+    color: var(--tw-prose-links);
+}
+
 /* Partial: Utterances comments */
 
-.comments {
+.utterances {
     max-width: 100%;
 }
 
