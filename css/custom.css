@@ -2,24 +2,46 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Spline Sans Variable";
-    src: url("fonts/SplineSans-VariableFont_wght.woff2") format("woff2");
-    font-weight: 300 700;
+    font-family: "Geologica Variable";
+    src: url("fonts/Geologica-VF.woff2") format("woff2");
+    font-weight: 100 900;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Spline Sans Mono Variable";
-    src: url("fonts/SplineSansMono-VariableFont_wght.woff2") format("woff2");
-    font-weight: 300 700;
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Roboto Serif";
+    src: url("fonts/RobotoSerif-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Roboto Serif";
+    src: url("fonts/RobotoSerif-Italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Roboto Serif";
+    src: url("fonts/RobotoSerif-Bold.woff2") format("woff2");
+    font-weight: 700;
 }
 
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Spline Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Spline Sans Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Spline Sans Mono Variable", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-sans-serif: "Geologica Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "Roboto Serif", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-monospace: "IBM Plex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -139,7 +161,7 @@ hr {
 
 .header h1.name {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 500;
+    font-weight: 450;
     font-size: 2.25rem;
     margin-left: 6px;
 }
@@ -157,7 +179,7 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1.25rem;
 }
 
@@ -185,7 +207,7 @@ hr {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--tw-prose-headings);
-    text-underline-offset: 14.5px;
+    text-underline-offset: 15px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
@@ -196,14 +218,14 @@ hr {
 
 @supports (-moz-text-decoration-skip-ink: auto) {
     .header ul.nav li a.active {
-        text-underline-offset: 16px;
+        text-underline-offset: 15px;
     }
 }
 
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
-        font-weight: 600;
+        font-weight: 550;
         text-decoration: none;
     }
 }
@@ -264,7 +286,7 @@ h4,
 h5,
 h6 {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 500;
+    font-weight: 450;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
@@ -287,7 +309,7 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1rem;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
@@ -335,16 +357,16 @@ dl {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-family: var(--tw-prose-font-serif);
-    font-weight: 500;
-    font-size: 2.25rem;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
+    font-size: 2.1875rem;
     line-height: 3.125rem;
 }
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-serif);
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.0625rem;
     line-height: calc(30 / 18);
 }
 
@@ -412,7 +434,7 @@ dl {
     color: var(--tw-prose-code);
     padding: .2em .4em;
     margin: 0;
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
@@ -459,7 +481,7 @@ dl {
 
 .content .groupby {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 500;
+    font-weight: 450;
     font-size: 1.6rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
@@ -479,7 +501,7 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1rem;
     line-height: 2.5rem;
 }
@@ -513,7 +535,7 @@ dl {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 0.875rem;
     line-height: calc(45 / 18);
 }
@@ -568,6 +590,8 @@ dl {
 }
 
 .pagination-nav .btn-outline-nav {
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 300;
     font-size: 1rem;
     text-decoration: none;
     border: 1px solid var(--tw-prose-bullets);
@@ -588,6 +612,8 @@ dl {
 }
 
 .pagination-nav .pagination-nav-sublabel {
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 400;
     font-size: 0.875rem;
     color: var(--tw-prose-captions);
 }
@@ -607,7 +633,7 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 300;
     font-size: 1rem;
 }
 
