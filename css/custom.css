@@ -179,7 +179,7 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1.25rem;
 }
 
@@ -309,7 +309,7 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1rem;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
@@ -501,7 +501,7 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1rem;
     line-height: 2.5rem;
 }
@@ -535,7 +535,7 @@ dl {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 300;
+    font-weight: 250;
     font-size: 0.875rem;
     line-height: calc(45 / 18);
 }
@@ -591,7 +591,7 @@ dl {
 
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1rem;
     text-decoration: none;
     border: 1px solid var(--tw-prose-bullets);
@@ -633,7 +633,7 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 300;
+    font-weight: 250;
     font-size: 1rem;
 }
 
