@@ -366,8 +366,8 @@ dl {
 
 .content .blog-post-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 600;
-    font-size: 2.125rem;
+    font-weight: 550;
+    font-size: 2.5rem;
     line-height: 3.125rem;
 }
 
