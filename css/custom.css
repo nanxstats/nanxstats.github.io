@@ -219,7 +219,7 @@ hr {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--tw-prose-headings);
-    text-underline-offset: 15.5px;
+    text-underline-offset: 15px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
