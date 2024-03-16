@@ -17,30 +17,30 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Source Serif";
-    src: url("fonts/SourceSerif4-Regular.ttf.woff2") format("woff2");
+    font-family: "Castoro";
+    src: url("fonts/Castoro-Regular.woff2") format("woff2");
     font-weight: 400;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Source Serif";
-    src: url("fonts/SourceSerif4-It.ttf.woff2") format("woff2");
+    font-family: "Castoro";
+    src: url("fonts/Castoro-Italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Source Serif";
-    src: url("fonts/SourceSerif4-Bold.ttf.woff2") format("woff2");
+    font-family: "Castoro";
+    src: url("fonts/STIXTwoText-Bold.woff2") format("woff2");
     font-weight: 700;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Hasklig";
-    src: url("fonts/Hasklig-Regular.woff2") format("woff2");
+    font-family: "Ligalex Mono";
+    src: url("fonts/LigalexMono.woff2") format("woff2");
     font-weight: 400;
 }
 
@@ -48,8 +48,8 @@
 
 :root {
     --tw-prose-font-sans-serif: "Albert Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Source Serif", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-serif: "Castoro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-monospace: "Ligalex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -454,7 +454,7 @@ dl {
     color: var(--tw-prose-code);
     padding: .2em .4em;
     margin: 0;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
