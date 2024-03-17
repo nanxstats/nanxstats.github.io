@@ -189,7 +189,7 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1.25rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
@@ -325,7 +325,7 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
@@ -523,7 +523,7 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
+    font-weight: 500;
     font-size: 1rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
@@ -532,7 +532,7 @@ dl {
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.875rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
@@ -561,7 +561,7 @@ dl {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
+    font-weight: 500;
     font-size: 0.875rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
@@ -585,7 +585,7 @@ dl {
 /* Tags page */
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
     margin-bottom: 1rem;
@@ -621,7 +621,7 @@ dl {
 
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
@@ -645,7 +645,7 @@ dl {
 
 .pagination-nav .pagination-nav-sublabel {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.875rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
@@ -667,7 +667,7 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1rem;
     font-feature-settings: "ss02", "ss05";
     letter-spacing: -0.01em;
