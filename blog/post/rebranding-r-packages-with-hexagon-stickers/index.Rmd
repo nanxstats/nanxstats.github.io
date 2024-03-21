@@ -6,6 +6,7 @@ slug: rebranding-r-packages-with-hexagon-stickers
 categories: []
 tags:
   - R
+  - R packages
   - open source
 meta_img: image/hex-stickers-nanxiao.png
 description: "Rebranding my R packages with hexagon stickers."

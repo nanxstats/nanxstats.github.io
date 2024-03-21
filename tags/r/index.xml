@@ -195,14 +195,14 @@
       <link>https://nanx.me/blog/post/cran-file-exts/</link>
       <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/cran-file-exts/</guid>
-      <description>The R code to reproduce the results is available from the GitHub repo nanxstats/cran-file-exts.&#xA;Photo by Pawel Czerwinski.&#xA;When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.&#xA;To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.&#xA;We can achieve this easily by downloading all R packages available from CRAN one at a time and collect the file extensions inside:</description>
+      <description>The R code to reproduce the results is available from the GitHub repo nanxstats/cran-file-exts.&#xA;Photo by Pawel Czerwinski. When applied correctly, file extensions can be informative. They are the very first clue on handling a specific file without parsing the file content.&#xA;To properly capture and classify files in source R packages, I am interested in learning what file extensions are frequently used by R packages.&#xA;We can achieve this easily by downloading all R packages available from CRAN one at a time and collect the file extensions inside:</description>
     </item>
     <item>
       <title>Rebranding R Packages with Hexagon Stickers: A Minimalist Approach</title>
       <link>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</link>
       <pubDate>Mon, 08 Feb 2021 01:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/rebranding-r-packages-with-hexagon-stickers/</guid>
-      <description>A new hex sticker wall of my R packages.&#xA;I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
+      <description>A new hex sticker wall of my R packages. I have built a few R packages over the years. I have always been adding some forms of an ad hoc logo to them, trying to make a visual impression. As the portfolio size grows larger, I realized that I would need a principled way to create the logos and refresh my packages’ look. Hexagon stickers seem to be an acceptable form of logos that are heavily used by the R community.</description>
     </item>
     <item>
       <title>Bayesian Lasso with greta</title>

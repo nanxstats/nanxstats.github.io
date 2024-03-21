@@ -2,7 +2,7 @@
 
 // some helper functions: using a global object DTWidget so that it can be used
 // in JS() code, e.g. datatable(options = list(foo = JS('code'))); unlike R's
-// dynamic scoping, when 'code' is eval()'ed, JavaScript does not know objects
+// dynamic scoping, when 'code' is eval'ed, JavaScript does not know objects
 // from the "parent frame", e.g. JS('DTWidget') will not work unless it was made
 // a global object
 var DTWidget = {};
@@ -71,12 +71,20 @@ DTWidget.formatDate = function(data, method, params) {
 
 window.DTWidget = DTWidget;
 
-// A helper function to update the lims of the existing filters
-var set_filter_lims = function(td, new_vals) {
+// A helper function to update the properties of existing filters
+var setFilterProps = function(td, props) {
+  // Update enabled/disabled state
+  var $input = $(td).find('input').first();
+  var searchable = $input.data('searchable');
+  $input.prop('disabled', !searchable || props.disabled);
+
   // Based on the filter type, set its new values
-  if (['factor', 'logical'].includes(td.getAttribute('data-type'))) {
+  var type = td.getAttribute('data-type');
+  if (['factor', 'logical'].includes(type)) {
     // Reformat the new dropdown options for use with selectize
-    new_vals = new_vals.map(function(item) {return {text: item, value: item}});
+    var new_vals = props.params.options.map(function(item) {
+      return { text: item, value: item };
+    });
 
     // Find the selectize object
     var dropdown = $(td).find('.selectized').eq(0)[0].selectize;
@@ -93,12 +101,16 @@ var set_filter_lims = function(td, new_vals) {
     // Preserve the existing values
     dropdown.setValue(old_vals);
 
-  } else if (['number', 'integer', 'date', 'time'].includes(td.getAttribute('data-type'))) {
+  } else if (['number', 'integer', 'date', 'time'].includes(type)) {
+    // Apply internal scaling to new limits. Updating scale not yet implemented.
+    var slider = $(td).find('.noUi-target').eq(0);
+    var scale = Math.pow(10, Math.max(0, +slider.data('scale') || 0));
+    var new_vals = [props.params.min * scale, props.params.max * scale];
+
     // Note what the new limits will be just for this filter
-    var new_lims = [...new_vals];
+    var new_lims = new_vals.slice();
 
     // Determine the current values and limits
-    var slider = $(td).find('.noUi-target').eq(0);
     var old_vals = slider.val().map(Number);
     var old_lims = slider.noUiSlider('options').range;
     old_lims = [old_lims.min, old_lims.max];
@@ -151,6 +163,13 @@ HTMLWidgets.widget({
   type: "output",
   renderOnNullValue: true,
   initialize: function(el, width, height) {
+    // in order that the type=number inputs return a number
+    $.valHooks.number = {
+      get: function(el) {
+        var value = parseFloat(el.value);
+        return isNaN(value) ? "" : value;
+      }
+    };
     $(el).html('&nbsp;');
     return {
       data: null,
@@ -329,6 +348,15 @@ HTMLWidgets.widget({
     var table = $table.DataTable(options);
     $el.data('datatable', table);
 
+    if ('rowGroup' in options) {
+      // Maintain RowGroup dataSrc when columns are reordered (#1109)
+      table.on('column-reorder', function(e, settings, details) {
+        var oldDataSrc = table.rowGroup().dataSrc();
+        var newDataSrc = details.mapping[oldDataSrc];
+        table.rowGroup().dataSrc(newDataSrc);
+      });
+    }
+
     // Unregister previous Crosstalk event subscriptions, if they exist
     if (instance.ctfilterSubscription) {
       instance.ctfilterHandle.off("change", instance.ctfilterSubscription);
@@ -406,13 +434,6 @@ HTMLWidgets.widget({
       return $.inArray(val, $.makeArray(array)) > -1;
     };
 
-    // encode + to %2B when searching in the table on server side, because
-    // shiny::parseQueryString() treats + as spaces, and DataTables does not
-    // encode + to %2B (or % to %25) when sending the request
-    var encode_plus = function(x) {
-      return server ? x.replace(/%/g, '%25').replace(/\+/g, '%2B') : x;
-    };
-
     // search the i-th column
     var searchColumn = function(i, value) {
       var regex = false, ci = true;
@@ -420,16 +441,22 @@ HTMLWidgets.widget({
         regex = options.search.regex,
         ci = options.search.caseInsensitive !== false;
       }
-      return table.column(i).search(encode_plus(value), regex, !regex, ci);
+      // need to transpose the column index when colReorder is enabled
+      if (table.colReorder) i = table.colReorder.transpose(i);
+      return table.column(i).search(value, regex, !regex, ci);
     };
 
     if (data.filter !== 'none') {
+      if (!data.hasOwnProperty('filterSettings')) data.filterSettings = {};
 
       filterRow.each(function(i, td) {
 
         var $td = $(td), type = $td.data('type'), filter;
         var $input = $td.children('div').first().children('input');
-        $input.prop('disabled', !table.settings()[0].aoColumns[i].bSearchable || type === 'disabled');
+        var disabled = $input.prop('disabled');
+        var searchable = table.settings()[0].aoColumns[i].bSearchable;
+        $input.prop('disabled', !searchable || disabled);
+        $input.data('searchable', searchable); // for updating later
         $input.on('input blur', function() {
           $input.next('span').toggle(Boolean($input.val()));
         });
@@ -478,11 +505,13 @@ HTMLWidgets.widget({
               $input.parent().hide(); $x.show().trigger('show'); filter[0].selectize.focus();
             },
             input: function() {
-              if ($input.val() === '') filter[0].selectize.setValue([]);
+              var v1 = JSON.stringify(filter[0].selectize.getValue()), v2 = $input.val();
+              if (v1 === '[]') v1 = '';
+              if (v1 !== v2) filter[0].selectize.setValue(v2 === '' ? [] : JSON.parse(v2));
             }
           });
           var $input2 = $x.children('select');
-          filter = $input2.selectize({
+          filter = $input2.selectize($.extend({
             options: $input2.data('options').map(function(v, i) {
               return ({text: v, value: v});
             }),
@@ -494,15 +523,14 @@ HTMLWidgets.widget({
               if (value.length) $input.trigger('input');
               $input.attr('title', $input.val());
               if (server) {
-                table.column(i).search(value.length ? encode_plus(JSON.stringify(value)) : '').draw();
+                searchColumn(i, value.length ? JSON.stringify(value) : '').draw();
                 return;
               }
               // turn off filter if nothing selected
               $td.data('filter', value.length > 0);
               table.draw();  // redraw table, and filters will be applied
             }
-          });
-          if (searchCol) filter[0].selectize.setValue(JSON.parse(searchCol));
+          }, data.filterSettings.select));
           filter[0].selectize.on('blur', function() {
             $x.hide().trigger('hide'); $input.parent().show(); $input.trigger('blur');
           });
@@ -511,10 +539,12 @@ HTMLWidgets.widget({
           var fun = function() {
             searchColumn(i, $input.val()).draw();
           };
-          if (server) {
-            fun = $.fn.dataTable.util.throttle(fun, options.searchDelay);
-          }
-          $input.on('input', fun);
+          // throttle searching for server-side processing
+          var throttledFun = $.fn.dataTable.util.throttle(fun, options.searchDelay);
+          $input.on('input', function(e, immediate) {
+            // always bypass throttling when immediate = true (via the updateSearch method)
+            (immediate || !server) ? fun() : throttledFun();
+          });
         } else if (inArray(type, ['number', 'integer', 'date', 'time'])) {
           var $x0 = $x;
           $x = $x0.children('div').first();
@@ -600,13 +630,11 @@ HTMLWidgets.widget({
               filter.val(v);
             }
           });
-          var formatDate = function(d, isoFmt) {
+          var formatDate = function(d) {
             d = scaleBack(d, scale);
             if (type === 'number') return d;
             if (type === 'integer') return parseInt(d);
             var x = new Date(+d);
-            var fmt = ('filterDateFmt' in data) ? data.filterDateFmt[i] : undefined;
-            if (fmt !== undefined && isoFmt === false) return x[fmt.method].apply(x, fmt.params);
             if (type === 'date') {
               var pad0 = function(x) {
                 return ('0' + x).substr(-2, 2);
@@ -627,7 +655,7 @@ HTMLWidgets.widget({
             start: [r1, r2],
             range: {min: r1, max: r2},
             connect: true
-          }, opts));
+          }, opts, data.filterSettings.slider));
           if (scale > 1) (function() {
             var t1 = r1, t2 = r2;
             var val = filter.val();
@@ -642,13 +670,28 @@ HTMLWidgets.widget({
                 start: [t1, t2],
                 range: {min: t1, max: t2},
                 connect: true
-              }, opts), true);
+              }, opts, data.filterSettings.slider), true);
               val = filter.val();
             }
             r1  = t1; r2 = t2;
           })();
+          // format with active column renderer, if defined
+          var colDef = data.options.columnDefs.find(function(def) {
+            return (def.targets === i || inArray(i, def.targets)) && 'render' in def;
+          });
           var updateSliderText = function(v1, v2) {
-            $span1.text(formatDate(v1, false)); $span2.text(formatDate(v2, false));
+            // we only know how to use function renderers
+            if (colDef && typeof colDef.render === 'function') {
+              var restore = function(v) {
+                v = scaleBack(v, scale);
+                return inArray(type, ['date', 'time']) ? new Date(+v) : v;
+              }
+              $span1.text(colDef.render(restore(v1), 'display'));
+              $span2.text(colDef.render(restore(v2), 'display'));
+            } else {
+              $span1.text(formatDate(v1));
+              $span2.text(formatDate(v2));
+            }
           };
           updateSliderText(r1, r2);
           var updateSlider = function(e) {
@@ -665,7 +708,7 @@ HTMLWidgets.widget({
             updateSliderText(val[0], val[1]);
             if (e.type === 'slide') return;  // no searching when sliding only
             if (server) {
-              table.column(i).search($td.data('filter') ? ival : '').draw();
+              searchColumn(i, $td.data('filter') ? ival : '').draw();
               return;
             }
             table.draw();
@@ -681,7 +724,7 @@ HTMLWidgets.widget({
         // processing
         if (server) {
           // if a search string has been pre-set, search now
-          if (searchCol) searchColumn(i, searchCol).draw();
+          if (searchCol) $input.trigger('input').trigger('change');
           return;
         }
 
@@ -727,15 +770,7 @@ HTMLWidgets.widget({
         $.fn.dataTable.ext.search.push(customFilter);
 
         // search for the preset search strings if it is non-empty
-        if (searchCol) {
-          if (inArray(type, ['factor', 'logical'])) {
-            filter[0].selectize.setValue(JSON.parse(searchCol));
-          } else if (type === 'character') {
-            $input.trigger('input');
-          } else if (inArray(type, ['number', 'integer', 'date', 'time'])) {
-            $input.trigger('change');
-          }
-        }
+        if (searchCol) $input.trigger('input').trigger('change');
 
       });
 
@@ -808,6 +843,7 @@ HTMLWidgets.widget({
       var disableCols = data.editable.disable ? data.editable.disable.columns : null;
       var numericCols = data.editable.numeric;
       var areaCols = data.editable.area;
+      var dateCols = data.editable.date;
       for (var i = 0; i < target.length; i++) {
         (function(cell, current) {
           var $cell = $(cell), html = $cell.html();
@@ -817,6 +853,8 @@ HTMLWidgets.widget({
             $input = $('<input type="number">');
           } else if (inArray(index, areaCols)) {
             $input = $('<textarea></textarea>');
+          } else if (inArray(index, dateCols)) {
+            $input = $('<input type="date">');
           } else {
             $input = $('<input type="text">');
           }
@@ -834,7 +872,7 @@ HTMLWidgets.widget({
 
           if (immediate) $input.on('blur', function(e) {
             var valueNew = $input.val();
-            if (valueNew != value) {
+            if (valueNew !== value) {
               _cell.data(valueNew);
               if (HTMLWidgets.shinyMode) {
                 changeInput('cell_edit', [cellInfo(cell)], 'DT.cellInfo', null, {priority: 'event'});
@@ -1352,7 +1390,7 @@ HTMLWidgets.widget({
     changeInput('cell_clicked', {});
 
     // do not trigger table selection when clicking on links unless they have classes
-    table.on('click.dt', 'tbody td a', function(e) {
+    table.on('mousedown.dt', 'tbody td a', function(e) {
       if (this.className === '') e.stopPropagation();
     });
 
@@ -1380,8 +1418,9 @@ HTMLWidgets.widget({
           console.log('The search keyword for column ' + i + ' is undefined')
           return;
         }
-        $(td).find('input').first().val(v);
-        searchColumn(i, v);
+        // Update column search string and values on linked filter widgets.
+        // 'input' for factor and char filters, 'change' for numeric filters.
+        $(td).find('input').first().val(v).trigger('input', [true]).trigger('change');
       });
       table.draw();
     }
@@ -1416,16 +1455,19 @@ HTMLWidgets.widget({
     }
 
     // update table filters (set new limits of sliders)
-    methods.updateFilters = function(newLims) {
+    methods.updateFilters = function(newProps) {
       // loop through each filter in the filter row
       filterRow.each(function(i, td) {
         var k = i;
-        if (filterRow.length > newLims.length) {
+        if (filterRow.length > newProps.length) {
           if (i === 0) return;  // first column is row names
           k = i - 1;
         }
-        // Update the filters to reflect the updated data
-        set_filter_lims(td, newLims[k]);
+        // Update the filters to reflect the updated data.
+        // Allow "falsy" (e.g. NULL) to signify a no-op.
+        if (newProps[k]) {
+          setFilterProps(td, newProps[k]);
+        }
       });
     };
 
