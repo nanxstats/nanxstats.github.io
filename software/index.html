@@ -137,7 +137,7 @@
 <div class="text-center toc">
 <p><a href="#r-packages">R packages</a> |
 <a href="#web-applications">Web applications</a> |
-<a href="#machine-learning-workflows">ML workflows</a><br>
+<a href="#data-analysis-workflows">Analysis workflows</a><br>
 <a href="#open-source-contributions">Open source code contributions</a> |
 <a href="#awesome-lists-and-code-recipes">Awesome lists</a><br>
 <a href="#visual-studio-code-extensions">VS Code extensions</a> |
@@ -312,7 +312,7 @@ Unpack monolithic CWL workflows<br>
 Upgrade CWL apps from sbg:draft2 to v1.0<br>
 <a href="https://nanx.app/cwl-upgrader/">Mirror 1</a></li>
 </ul>
-<h2 id="machine-learning-workflows">Machine learning workflows</h2>
+<h2 id="data-analysis-workflows">Data analysis workflows</h2>
 <ul>
 <li><a href="https://github.com/nanxstats/exp2vec">exp2vec</a><br>
 Workflow for training tissue-specific gene embeddings on GTEx data</li>
@@ -455,16 +455,23 @@ A collection of shiny apps built by me<br>
   line-height: 1.875rem;
 }
 
-.markdown ul li a, .toc a {
+.toc a {
+  font-family: var(--tw-prose-font-sans-serif);
+  font-weight: 450;
+  font-size: 1.125rem;
+  font-feature-settings: "ss03", "ss05";
+}
+
+.markdown ul li a {
   font-family: var(--tw-prose-font-sans-serif);
   font-weight: 450;
   font-size: 1rem;
-  font-feature-settings: "ss03";
+  font-feature-settings: "ss03", "ss05";
 }
 
 .markdown ul li a:first-child {
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.0625rem;
 }
 
 .markdown ul li {
