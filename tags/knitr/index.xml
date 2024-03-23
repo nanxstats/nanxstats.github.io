@@ -9,7 +9,7 @@
     <lastBuildDate>Tue, 06 Jun 2023 20:30:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/knitr/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Fixing the &#39;non-numeric argument to binary operator&#39; Error in R Markdown and Quarto</title>
+      <title>Fix the &#39;non-numeric argument to binary operator&#39; Error in R Markdown and Quarto</title>
       <link>https://nanx.me/blog/post/knitr-chunk-option-error/</link>
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>

@@ -1,5 +1,5 @@
 ---
-title: "Fixing the 'non-numeric argument to binary operator' Error in R Markdown and Quarto"
+title: "Fix the 'non-numeric argument to binary operator' Error in R Markdown and Quarto"
 author: "Nan Xiao"
 date: "2023-06-06T20:30:00"
 slug: knitr-chunk-option-error
