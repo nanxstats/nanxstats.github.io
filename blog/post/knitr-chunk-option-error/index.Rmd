@@ -25,7 +25,7 @@ that R Markdown or Quarto document.
 
 The exact error message you encountered looks like this:
 
-```
+```text
 Error in `options[[sprintf("fig.%s", i)]] * options$dpi`:
 ! non-numeric argument to binary operator
 Backtrace:
