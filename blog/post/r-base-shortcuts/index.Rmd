@@ -1,5 +1,5 @@
 ---
-title: "Base R Shortcuts: A Collection of Lesser-Known Idioms and Coding Patterns for Writing Concise and Fast R Code"
+title: "Base R Shortcuts: A Repository of Efficient Base R Coding Patterns"
 author: "Nan Xiao"
 date: "2023-06-27T22:00:00"
 slug: r-base-shortcuts

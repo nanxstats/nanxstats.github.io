@@ -16,11 +16,11 @@
       <description>Seashore with Shipwreck by Moonlight by Caspar David Friedrich. I have been playing a lot of Elden Ring lately. After investing 200 (!) hours into it, I learned three valuable lessons:&#xA;Life is hard. Something that seems unachievable today doesn’t mean it will be tomorrow. Explore, learn, practice, and with efforts, and perhaps a little luck, suddenly, you’ve done it. Life is unfair. You can choose to play aggressively, play conservatively, or even move on—just don’t be greedy.</description>
     </item>
     <item>
-      <title>Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</title>
+      <title>Fixing the &#39;non-numeric argument to binary operator&#39; Error in R Markdown and Quarto</title>
       <link>https://nanx.me/blog/post/knitr-chunk-option-error/</link>
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
-      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.&#xA;For example, it is easy to make this mistake:&#xA;```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:&#xA;```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
+      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.&#xA;The exact error message you encountered looks like this:&#xA;Error in `options[[sprintf(&amp;quot;fig.%s&amp;quot;, i)]] * options$dpi`: ! non-numeric argument to binary operator Backtrace: 1. rmarkdown::render(&amp;quot;example.Rmd&amp;quot;, encoding = &amp;quot;UTF-8&amp;quot;) 2.</description>
     </item>
     <item>
       <title>Compressing PNG Output for R Packages with pngquant and ragg</title>

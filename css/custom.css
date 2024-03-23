@@ -509,7 +509,7 @@ dl {
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 450;
-    font-size: 1.0625rem;
+    font-size: 1rem;
     font-feature-settings: "ss03", "ss05";
     line-height: 2.5rem;
 }

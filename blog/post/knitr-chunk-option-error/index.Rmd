@@ -1,5 +1,5 @@
 ---
-title: "Error in options[[sprintf(\"fig.%s\", i)]] * options$dpi: ! non-numeric argument to binary operator"
+title: "Fixing the 'non-numeric argument to binary operator' Error in R Markdown and Quarto"
 author: "Nan Xiao"
 date: "2023-06-06T20:30:00"
 slug: knitr-chunk-option-error
@@ -23,7 +23,22 @@ to a knitr chunk option such as `fig.width` or `fig.height`
 that only accepts numeric values, and your are trying to render
 that R Markdown or Quarto document.
 
-For example, it is easy to make this mistake:
+The exact error message you encountered looks like this:
+
+```
+Error in `options[[sprintf("fig.%s", i)]] * options$dpi`:
+! non-numeric argument to binary operator
+Backtrace:
+  1. rmarkdown::render("example.Rmd", encoding = "UTF-8")
+  2. knitr::knit(knit_input, knit_output, envir = envir, quiet = quiet)
+  3. knitr:::process_file(text, output)
+  8. knitr:::process_group.block(group)
+  9. knitr:::call_block(x)
+ 10. knitr:::fix_options(params)
+ 11. options[[o <- sprintf("out.%s", i)]] %n% ...
+```
+
+This is because it is easy to make this mistake:
 
 ````{verbatim, lang="r"}
 ```{r, fig.width="100%"}

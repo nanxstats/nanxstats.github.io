@@ -30,7 +30,7 @@
       <description>Muir Woods trails. Photo by Caleb Jones. For someone who has worked in the industry for years, one thing I miss about school is the Socratic method of teaching used by some professors. It involves asking and answering questions to encourage critical thinking. By engaging in thoughtful Q&amp;amp;A sessions, I often find myself understanding the core elements of complex topics better compared to reading textbooks or papers alone.&#xA;To me, adaptive clinical trial design is one of these complex topics.</description>
     </item>
     <item>
-      <title>Base R Shortcuts: A Collection of Lesser-Known Idioms and Coding Patterns for Writing Concise and Fast R Code</title>
+      <title>Base R Shortcuts: A Repository of Efficient Base R Coding Patterns</title>
       <link>https://nanx.me/blog/post/r-base-shortcuts/</link>
       <pubDate>Tue, 27 Jun 2023 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-base-shortcuts/</guid>
@@ -58,11 +58,11 @@
       <description>The release checklist generation function described in this post is also available in this GitHub Gist.&#xA;Photo by David Marcu. Software release at scale An agile, automated, and reliable release process is a key component of continuous delivery for modern software engineering teams. In particular, releasing new versions of R packages often involves going through a sequence of manual and automated checks to ensure quality and compliance. To scale up such efforts within a development team, it is crucial to follow a consistent release checklist.</description>
     </item>
     <item>
-      <title>Error in options[[sprintf(&#34;fig.%s&#34;, i)]] * options$dpi: ! non-numeric argument to binary operator</title>
+      <title>Fixing the &#39;non-numeric argument to binary operator&#39; Error in R Markdown and Quarto</title>
       <link>https://nanx.me/blog/post/knitr-chunk-option-error/</link>
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/knitr-chunk-option-error/</guid>
-      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.&#xA;For example, it is easy to make this mistake:&#xA;```{r, fig.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` where you probably meant:&#xA;```{r, fig.width=6, out.width=&amp;quot;100%&amp;quot;} plot(1:10) ``` That’s all! I hope this helps.</description>
+      <description>Rubber duck debugging. Photo by Timothy Dykes. If Google leads you here, you probably assigned a character value to a knitr chunk option such as fig.width or fig.height that only accepts numeric values, and your are trying to render that R Markdown or Quarto document.&#xA;The exact error message you encountered looks like this:&#xA;Error in `options[[sprintf(&amp;quot;fig.%s&amp;quot;, i)]] * options$dpi`: ! non-numeric argument to binary operator Backtrace: 1. rmarkdown::render(&amp;quot;example.Rmd&amp;quot;, encoding = &amp;quot;UTF-8&amp;quot;) 2.</description>
     </item>
     <item>
       <title>Responsive Design for Statistical Graphics with Shiny and ggplot2</title>
