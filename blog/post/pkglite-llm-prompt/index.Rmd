@@ -77,7 +77,7 @@ For developers, you can send it via the LLM vendor's API. Example:
 library(gptstudio)
 
 # Configure API key first
-# <https://github.com/JamesHWade/gpttools/#configuring-openai-api-key>
+# <https://github.com/MichelNivard/gptstudio#configuring-openai-api-key>
 
 prompt <- paste0(
   "Act as a senior R software engineer. ",
