@@ -5,7 +5,7 @@ date: "2024-03-28T20:00:00"
 slug: pkglite-llm-prompt
 categories: []
 tags:
-  - Large Language Model
+  - large language model
   - prompt engineering
   - R
   - R packages
