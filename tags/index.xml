@@ -6,20 +6,55 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jan 2024 21:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2024 20:00:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Quarto</title>
-      <link>https://nanx.me/tags/quarto/</link>
-      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/quarto/</guid>
+      <title>gptstudio</title>
+      <link>https://nanx.me/tags/gptstudio/</link>
+      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/gptstudio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Large Language Model</title>
+      <link>https://nanx.me/tags/large-language-model/</link>
+      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/large-language-model/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pkglite</title>
+      <link>https://nanx.me/tags/pkglite/</link>
+      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pkglite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>prompt engineering</title>
+      <link>https://nanx.me/tags/prompt-engineering/</link>
+      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/prompt-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
-      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
+      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quarto</title>
+      <link>https://nanx.me/tags/quarto/</link>
+      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/quarto/</guid>
       <description></description>
     </item>
     <item>
@@ -55,13 +90,6 @@
       <link>https://nanx.me/tags/protein-sequence/</link>
       <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/protein-sequence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -419,13 +447,6 @@
       <link>https://nanx.me/tags/vs-code/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/vs-code/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>pkglite</title>
-      <link>https://nanx.me/tags/pkglite/</link>
-      <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/pkglite/</guid>
       <description></description>
     </item>
     <item>

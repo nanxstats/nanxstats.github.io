@@ -3,15 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2024-01-15T21:00:00+00:00</lastmod>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/gptstudio/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2024-01-15T21:00:00+00:00</lastmod>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/quarto/</loc>
-    <lastmod>2024-01-15T21:00:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/large-language-model/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pkglite/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/prompt-engineering/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/pkglite-llm-prompt/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/quarto/</loc>
     <lastmod>2024-01-15T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-markdown/</loc>
@@ -21,9 +42,6 @@
     <lastmod>2024-01-15T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/stix/</loc>
-    <lastmod>2024-01-15T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2024-01-15T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/stixfonts/</loc>
@@ -36,9 +54,6 @@
     <lastmod>2023-11-10T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/protr-1-7-0/</loc>
-    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
     <lastmod>2023-11-10T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/nine-questions-about-adaptive-design/</loc>
@@ -240,9 +255,6 @@
     <lastmod>2023-01-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/ectd-pkglite-paper/</loc>
-    <lastmod>2022-09-28T11:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/pkglite/</loc>
     <lastmod>2022-09-28T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/regulatory-submission/</loc>

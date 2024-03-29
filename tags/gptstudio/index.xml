@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>pkglite on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/pkglite/</link>
-    <description>Recent content in pkglite on Nan Xiao | 肖楠</description>
+    <title>gptstudio on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/gptstudio/</link>
+    <description>Recent content in gptstudio on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 28 Mar 2024 20:00:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/pkglite/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/gptstudio/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Prompt LLMs with R Package Source Code Using pkglite</title>
       <link>https://nanx.me/blog/post/pkglite-llm-prompt/</link>
       <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/pkglite-llm-prompt/</guid>
       <description>Illustration from Google DeepMind. Artist: Martina Stiftinger. Sometimes, large language models (LLMs) answer coding questions by making up software behaviors or APIs that don’t exist. A simple but effective strategy to minimize such hallucination problems is to feed the exact, complete source code as context in the prompt. For code organized in R packages, it is tedious to copy the file contents and construct them into prompts manually. Fortunately, you can use pkglite to automate this process.</description>
-    </item>
-    <item>
-      <title>New Paper Published: eCTD Submission with Analysis Using R</title>
-      <link>https://nanx.me/blog/post/ectd-pkglite-paper/</link>
-      <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/ectd-pkglite-paper/</guid>
-      <description>Photo by DeepMind.&#xA;I am thrilled to share that our paper, Electronic Common Technical Document Submission with Analysis Using R, is published online today in Clinical Trials. We have selected the open access (OA) option to ensure that everyone in the community can check out the full text freely.&#xA;A simple solution to a complex problem Our article presented a viable path to prepare proprietary R assets for submission, following the electronic common technical document (eCTD) specification.</description>
     </item>
   </channel>
 </rss>

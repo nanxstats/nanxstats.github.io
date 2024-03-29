@@ -6,8 +6,15 @@
     <description>Recent content in R on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jan 2024 21:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Mar 2024 20:00:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prompt LLMs with R Package Source Code Using pkglite</title>
+      <link>https://nanx.me/blog/post/pkglite-llm-prompt/</link>
+      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/pkglite-llm-prompt/</guid>
+      <description>Illustration from Google DeepMind. Artist: Martina Stiftinger. Sometimes, large language models (LLMs) answer coding questions by making up software behaviors or APIs that don’t exist. A simple but effective strategy to minimize such hallucination problems is to feed the exact, complete source code as context in the prompt. For code organized in R packages, it is tedious to copy the file contents and construct them into prompts manually. Fortunately, you can use pkglite to automate this process.</description>
+    </item>
     <item>
       <title>Use STIX Fonts in R Markdown and Quarto for Readability</title>
       <link>https://nanx.me/blog/post/stixfonts/</link>
