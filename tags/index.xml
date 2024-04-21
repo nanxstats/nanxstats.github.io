@@ -6,8 +6,64 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 28 Mar 2024 20:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 19:00:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>color scales</title>
+      <link>https://nanx.me/tags/color-scales/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/color-scales/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>feature engineering</title>
+      <link>https://nanx.me/tags/feature-engineering/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/feature-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ggplot2</title>
+      <link>https://nanx.me/tags/ggplot2/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>protein sequence</title>
+      <link>https://nanx.me/tags/protein-sequence/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/protein-sequence/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>sparse linear models</title>
+      <link>https://nanx.me/tags/sparse-linear-models/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/sparse-linear-models/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>variable selection</title>
+      <link>https://nanx.me/tags/variable-selection/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/variable-selection/</guid>
+      <description></description>
+    </item>
     <item>
       <title>gptstudio</title>
       <link>https://nanx.me/tags/gptstudio/</link>
@@ -37,20 +93,6 @@
       <description></description>
     </item>
     <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Quarto</title>
       <link>https://nanx.me/tags/quarto/</link>
       <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
@@ -76,20 +118,6 @@
       <link>https://nanx.me/tags/stix/</link>
       <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/stix/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>feature engineering</title>
-      <link>https://nanx.me/tags/feature-engineering/</link>
-      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/feature-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>protein sequence</title>
-      <link>https://nanx.me/tags/protein-sequence/</link>
-      <pubDate>Fri, 10 Nov 2023 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/protein-sequence/</guid>
       <description></description>
     </item>
     <item>
@@ -226,13 +254,6 @@
       <description></description>
     </item>
     <item>
-      <title>color scales</title>
-      <link>https://nanx.me/tags/color-scales/</link>
-      <pubDate>Mon, 19 Jun 2023 18:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/color-scales/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>continuous delivery</title>
       <link>https://nanx.me/tags/continuous-delivery/</link>
       <pubDate>Mon, 12 Jun 2023 20:30:00 +0000</pubDate>
@@ -258,13 +279,6 @@
       <link>https://nanx.me/tags/knitr/</link>
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/knitr/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ggplot2</title>
-      <link>https://nanx.me/tags/ggplot2/</link>
-      <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/ggplot2/</guid>
       <description></description>
     </item>
     <item>
@@ -296,24 +310,10 @@
       <description></description>
     </item>
     <item>
-      <title>sparse linear models</title>
-      <link>https://nanx.me/tags/sparse-linear-models/</link>
-      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/sparse-linear-models/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>sparse portfolio</title>
       <link>https://nanx.me/tags/sparse-portfolio/</link>
       <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/sparse-portfolio/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>variable selection</title>
-      <link>https://nanx.me/tags/variable-selection/</link>
-      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/variable-selection/</guid>
       <description></description>
     </item>
     <item>

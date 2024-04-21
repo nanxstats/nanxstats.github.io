@@ -1,0 +1,118 @@
+---
+title: "R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)"
+author: "Nan Xiao"
+date: "2024-04-21T19:00:00"
+slug: ggsci-protr-msaenet-release-notes-2024
+categories: []
+tags:
+  - R
+  - R packages
+  - ggplot2
+  - color scales
+  - protein sequence
+  - feature engineering
+  - sparse linear models
+  - variable selection
+meta_img: "image/mark-pecar-UDyvOrz3_3s-unsplash.jpg"
+description: >
+  Learn more about the behind the scene details of the updates to my
+  R packages - ggsci, protr, and msaenet.
+---
+
+![_Cute market in Rome, Italy._ Photo by [Mark Pecar](https://unsplash.com/photos/UDyvOrz3_3s).](/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg)
+
+Maintaining R packages can sometimes be a nontrivial time and effort commitment.
+You can see many aspects of the package author's
+responsibilities in the [Releasing to CRAN](https://r-pkgs.org/release.html)
+chapter of the _R Packages_ book.
+Henrik's [CRANhaven](https://www.cranhaven.org/) also helps me appreciate
+the efforts made by both CRAN maintainers and package maintainers to
+keep a consistent, high standard on software quality and integration in
+a single, authentic repository.
+
+As a regular old package maintainer, I currently maintain
+[10 personal packages on CRAN](https://cran.r-project.org/web/checks/check_results_me_at_nanx.me.html),
+mostly stemmed from previous research activities.
+This Spring, I took some time to clean up the issues in half of them.
+Most of the important improvements are documented in this post.
+
+## ggsci 3.0.3
+
+[ggsci](https://nanx.me/ggsci/) is a ggplot2 extension package
+offering various color scales.
+ggsci 3.0.2 and 3.0.3 resolved some compatibility issues with ggplot 3.5.0.
+Specifically, ggplot2 3.5.0 deprecated the `scale_name` argument
+in `discrete_scale()`. This will generate warning messages when users
+call any color scale functions that did not remove this argument
+when using ggplot2 >= 3.5.0:
+
+```text
+Warning message:
+The `scale_name` argument of `discrete_scale()` is deprecated as of
+ggplot2 3.5.0.
+```
+
+However, if we simply remove this argument in the color scale functions,
+R will complain under ggplot2 < 3.5.0 because this was a required argument:
+
+```text
+Error in `discrete_scale()`:
+! argument "scale_name" is missing, with no default
+Backtrace:
+ 1. ggsci::scale_color_*()
+ 2. ggplot2::discrete_scale(...)
+ 3. ggplot2::ggproto(...)
+ 4. rlang::list2(...)
+Execution halted
+```
+
+To maximize compatibility, instead of requiring a recent minimum ggplot2
+version, I opted for a more cautious approach by
+[detecting the installed ggplot2 version at runtime](https://github.com/nanxstats/ggsci/pull/30)
+and use different `discrete_scale()` calls under each condition.
+Along the way, I found the internal functions such as `is_installed()`
+borrowed from the R package shiny effective in solving this
+version detection problem.
+
+## protr 1.7-1
+
+[protr](https://nanx.me/protr/) is a package for protein sequence
+feature engineering.
+
+protr 1.7-1 brings `crossSetSim()` to feature parity
+with `parSeqSim()`. First, it extends `crossSetSim()`
+[added in protr 1.7-0](https://nanx.me/blog/post/protr-1-7-0/)
+to further support splitting similarity computation into batches
+and showing computation progress.
+It also implements a new function `crossSetSimDisk()` to offload the
+intermediate results from each batch to disk and merge them in the end,
+similar to the logic in `parSeqSimDisk()`.
+
+These enhancements might help scale your similarity computation between
+protein sequence sets when being bounded by available RAM size, due to
+the $\mathcal{O}(n^2)$ or $\mathcal{O}(mn)$ space complexity.
+However, specific situations could need further custom optimizations.
+Of course, there is no shame in using high-memory machines
+as a simple solution.
+
+## msaenet 3.1.1
+
+[msaenet](https://nanx.me/msaenet/) helps people explore
+the solution space of adaptive estimations when building sparse linear models,
+by supporting arbitrary numbers of adaptive estimation steps,
+initialization methods, and automatic parameter tuning. In a previous post,
+we showed how it can generate parsimonious solutions when modeling the
+[sparse index tracking](https://nanx.me/blog/post/sparse-index-tracking/)
+problem.
+
+msaenet 3.1.1 resolves some `R CMD check` notes and example warnings
+accumulated from R version updates and dependency updates.
+It improves code style and now uses proper three-number semantic versioning.
+
+## Where do we go from here?
+
+I believe that proper delegation and transition of maintainership
+is critical for the long-term health and sustainability of open source projects.
+I have tried a few times in the past years to find new maintainers for
+my packages---if you are interested in taking some responsibilities,
+please reach out.

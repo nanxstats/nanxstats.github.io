@@ -6,8 +6,15 @@
     <description>Recent content in color scales on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 19 Jun 2023 18:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 19:00:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/color-scales/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)</title>
+      <link>https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/</link>
+      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/</guid>
+      <description>Cute market in Rome, Italy. Photo by Mark Pecar. Maintaining R packages can sometimes be a nontrivial time and effort commitment. You can see many aspects of the package author’s responsibilities in the Releasing to CRAN chapter of the R Packages book. Henrik’s CRANhaven also helps me appreciate the efforts made by both CRAN maintainers and package maintainers to keep a consistent, high standard on software quality and integration in a single, authentic repository.</description>
+    </item>
     <item>
       <title>Rethinking the Word Cloud Generator</title>
       <link>https://nanx.me/blog/post/rethinking-word-cloud-generator/</link>

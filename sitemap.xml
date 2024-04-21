@@ -3,12 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/gptstudio/</loc>
-    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/color-scales/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/feature-engineering/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ggplot2/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/protein-sequence/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/sparse-linear-models/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/variable-selection/</loc>
+    <lastmod>2024-04-21T19:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/gptstudio/</loc>
     <lastmod>2024-03-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/large-language-model/</loc>
@@ -21,15 +51,6 @@
     <lastmod>2024-03-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/pkglite-llm-prompt/</loc>
-    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
-    <lastmod>2024-03-28T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2024-03-28T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/quarto/</loc>
@@ -46,12 +67,6 @@
   </url><url>
     <loc>https://nanx.me/blog/post/stixfonts/</loc>
     <lastmod>2024-01-15T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/feature-engineering/</loc>
-    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/protein-sequence/</loc>
-    <lastmod>2023-11-10T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/protr-1-7-0/</loc>
     <lastmod>2023-11-10T21:00:00+00:00</lastmod>
@@ -122,9 +137,6 @@
     <loc>https://nanx.me/tags/word-cloud/</loc>
     <lastmod>2023-06-23T21:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/color-scales/</loc>
-    <lastmod>2023-06-19T18:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/rethinking-word-cloud-generator/</loc>
     <lastmod>2023-06-19T18:00:00+00:00</lastmod>
   </url><url>
@@ -146,9 +158,6 @@
     <loc>https://nanx.me/tags/knitr/</loc>
     <lastmod>2023-06-06T20:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/ggplot2/</loc>
-    <lastmod>2023-06-05T01:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/responsive-design-for-statistical-graphics/</loc>
     <lastmod>2023-06-05T01:00:00+00:00</lastmod>
   </url><url>
@@ -167,13 +176,7 @@
     <loc>https://nanx.me/blog/post/sparse-index-tracking/</loc>
     <lastmod>2023-05-31T01:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/sparse-linear-models/</loc>
-    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/sparse-portfolio/</loc>
-    <lastmod>2023-05-31T01:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/variable-selection/</loc>
     <lastmod>2023-05-31T01:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/open-source-typography/</loc>

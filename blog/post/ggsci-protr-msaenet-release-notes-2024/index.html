@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> protein sequence - Nan Xiao | 肖楠 </title>
+    <title> R Package Release Notes: ggsci, protr, and msaenet (Spring 2024) - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="Learn more about the behind the scene details of the updates to my R packages - ggsci, protr, and msaenet.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/protein-sequence/" />
-    <meta property="og:title" content="protein sequence" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/" />
+    <meta property="og:title" content="R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)" />
+    <meta property="og:image" content="https://nanx.me/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg" />
+    <meta property="og:description" content="Learn more about the behind the scene details of the updates to my R packages - ggsci, protr, and msaenet.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="protein sequence" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)" />
+    <meta name="twitter:description" content="Learn more about the behind the scene details of the updates to my R packages - ggsci, protr, and msaenet.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/tags/protein-sequence/">
+    <link rel="canonical" href="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -41,8 +44,6 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
-    
-    <link href="https://nanx.me/tags/protein-sequence/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -70,7 +71,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog"
+                                <a class="nav-link text-blog active"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -129,61 +130,216 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <div class="markdown">
+                <h1 class="blog-post-title">R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Sun Apr 21 2024 19:00:00 UTC'>
+                        April 21, 2024
+                    </span>
+
+                    <span class="reading-time middot">
+                        3 min read
+                    </span>
+
+                    <div class="d-none d-md-block mt-2 tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/ggplot2">ggplot2</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/color-scales">color scales</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/protein-sequence">protein sequence</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/feature-engineering">feature engineering</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/sparse-linear-models">sparse linear models</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/variable-selection">variable selection</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg" alt="Cute market in Rome, Italy. Photo by Mark Pecar." />
+<div class="figcaption"><em>Cute market in Rome, Italy.</em> Photo by <a href="https://unsplash.com/photos/UDyvOrz3_3s">Mark Pecar</a>.</div>
+</div>
+<p>Maintaining R packages can sometimes be a nontrivial time and effort commitment.
+You can see many aspects of the package author’s
+responsibilities in the <a href="https://r-pkgs.org/release.html">Releasing to CRAN</a>
+chapter of the <em>R Packages</em> book.
+Henrik’s <a href="https://www.cranhaven.org/">CRANhaven</a> also helps me appreciate
+the efforts made by both CRAN maintainers and package maintainers to
+keep a consistent, high standard on software quality and integration in
+a single, authentic repository.</p>
+<p>As a regular old package maintainer, I currently maintain
+<a href="https://cran.r-project.org/web/checks/check_results_me_at_nanx.me.html">10 personal packages on CRAN</a>,
+mostly stemmed from previous research activities.
+This Spring, I took some time to clean up the issues in half of them.
+Most of the important improvements are documented in this post.</p>
+<div id="ggsci-3.0.3" class="section level2">
+<h2>ggsci 3.0.3</h2>
+<p><a href="https://nanx.me/ggsci/">ggsci</a> is a ggplot2 extension package
+offering various color scales.
+ggsci 3.0.2 and 3.0.3 resolved some compatibility issues with ggplot 3.5.0.
+Specifically, ggplot2 3.5.0 deprecated the <code>scale_name</code> argument
+in <code>discrete_scale()</code>. This will generate warning messages when users
+call any color scale functions that did not remove this argument
+when using ggplot2 &gt;= 3.5.0:</p>
+<pre class="text"><code>Warning message:
+The `scale_name` argument of `discrete_scale()` is deprecated as of
+ggplot2 3.5.0.</code></pre>
+<p>However, if we simply remove this argument in the color scale functions,
+R will complain under ggplot2 &lt; 3.5.0 because this was a required argument:</p>
+<pre class="text"><code>Error in `discrete_scale()`:
+! argument &quot;scale_name&quot; is missing, with no default
+Backtrace:
+ 1. ggsci::scale_color_*()
+ 2. ggplot2::discrete_scale(...)
+ 3. ggplot2::ggproto(...)
+ 4. rlang::list2(...)
+Execution halted</code></pre>
+<p>To maximize compatibility, instead of requiring a recent minimum ggplot2
+version, I opted for a more cautious approach by
+<a href="https://github.com/nanxstats/ggsci/pull/30">detecting the installed ggplot2 version at runtime</a>
+and use different <code>discrete_scale()</code> calls under each condition.
+Along the way, I found the internal functions such as <code>is_installed()</code>
+borrowed from the R package shiny effective in solving this
+version detection problem.</p>
+</div>
+<div id="protr-1.7-1" class="section level2">
+<h2>protr 1.7-1</h2>
+<p><a href="https://nanx.me/protr/">protr</a> is a package for protein sequence
+feature engineering.</p>
+<p>protr 1.7-1 brings <code>crossSetSim()</code> to feature parity
+with <code>parSeqSim()</code>. First, it extends <code>crossSetSim()</code>
+<a href="https://nanx.me/blog/post/protr-1-7-0/">added in protr 1.7-0</a>
+to further support splitting similarity computation into batches
+and showing computation progress.
+It also implements a new function <code>crossSetSimDisk()</code> to offload the
+intermediate results from each batch to disk and merge them in the end,
+similar to the logic in <code>parSeqSimDisk()</code>.</p>
+<p>These enhancements might help scale your similarity computation between
+protein sequence sets when being bounded by available RAM size, due to
+the <span class="math inline">\(\mathcal{O}(n^2)\)</span> or <span class="math inline">\(\mathcal{O}(mn)\)</span> space complexity.
+However, specific situations could need further custom optimizations.
+Of course, there is no shame in using high-memory machines
+as a simple solution.</p>
+</div>
+<div id="msaenet-3.1.1" class="section level2">
+<h2>msaenet 3.1.1</h2>
+<p><a href="https://nanx.me/msaenet/">msaenet</a> helps people explore
+the solution space of adaptive estimations when building sparse linear models,
+by supporting arbitrary numbers of adaptive estimation steps,
+initialization methods, and automatic parameter tuning. In a previous post,
+we showed how it can generate parsimonious solutions when modeling the
+<a href="https://nanx.me/blog/post/sparse-index-tracking/">sparse index tracking</a>
+problem.</p>
+<p>msaenet 3.1.1 resolves some <code>R CMD check</code> notes and example warnings
+accumulated from R version updates and dependency updates.
+It improves code style and now uses proper three-number semantic versioning.</p>
+</div>
+<div id="where-do-we-go-from-here" class="section level2">
+<h2>Where do we go from here?</h2>
+<p>I believe that proper delegation and transition of maintainership
+is critical for the long-term health and sustainability of open source projects.
+I have tried a few times in the past years to find new maintainers for
+my packages—if you are interested in taking some responsibilities,
+please reach out.</p>
+</div>
+
+
+
                 </div>
 
-                <div class="posts">
-                    <h1>Posts about protein sequence</h1>
-                    <hr>
-                    <ul class="list-unstyled">
-                        
-                        <li class="groupby">2024</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2024-04-21
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2023</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/protr-1-7-0/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    protr 1.7-0
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-11-10
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                    </ul>
-                </div>
+                
+                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
+                    <div class="row navigation-btns">
+                        <div class="col">
+                            
+                            <a href="https://nanx.me/blog/post/pkglite-llm-prompt/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Previous</div>
+                                    <div class="pagination-nav-label">« Prompt LLMs with R Package Source Code Using pkglite</div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="col">
+                            
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Next</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </nav>
+                
+
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -274,12 +430,6 @@
                         
 
                         
-                        <li><a href="https://nanx.me/tags/protein-sequence/index.xml" class="mr-0">
-                                <svg class="svg-icon mr-1">
-                                    <use xlink:href="#octicons-rss"></use>
-                                </svg>
-                                RSS</a></li>
-                        
 
                         
                     </ul>
@@ -309,6 +459,9 @@
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>
