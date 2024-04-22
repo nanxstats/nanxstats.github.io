@@ -21,20 +21,20 @@ description: >
 
 ![_Cute market in Rome, Italy._ Photo by [Mark Pecar](https://unsplash.com/photos/UDyvOrz3_3s).](/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg)
 
-Maintaining R packages can sometimes be a nontrivial time and effort commitment.
-You can see many aspects of the package author's
-responsibilities in the [Releasing to CRAN](https://r-pkgs.org/release.html)
-chapter of the _R Packages_ book.
+Maintaining R packages is a significant time and effort commitment.
+The [Releasing to CRAN](https://r-pkgs.org/release.html) chapter of the
+_R Packages_ book provides an excellent overview of the many responsibilities
+package authors face.
 Henrik's [CRANhaven](https://www.cranhaven.org/) also helps me appreciate
 the efforts made by both CRAN maintainers and package maintainers to
-keep a consistent, high standard on software quality and integration in
-a single, authentic repository.
+keep a consistent, high standard on software quality and integration within
+a single, trusted repository.
 
-As a regular old package maintainer, I currently maintain
+As a package maintainer myself, I currently oversee
 [10 personal packages on CRAN](https://cran.r-project.org/web/checks/check_results_me_at_nanx.me.html),
-mostly stemmed from previous research activities.
-This Spring, I took some time to clean up the issues in half of them.
-Most of the important improvements are documented in this post.
+most of which originated from previous research activities.
+This Spring, I took some time to clean up the issues in half of these packages.
+This post documents the most important improvements.
 
 ## ggsci 3.0.3
 
@@ -66,13 +66,13 @@ Backtrace:
 Execution halted
 ```
 
-To maximize compatibility, instead of requiring a recent minimum ggplot2
-version, I opted for a more cautious approach by
+To maximize compatibility without requiring a recent minimum ggplot2
+version, I implemented a more cautious approach by
 [detecting the installed ggplot2 version at runtime](https://github.com/nanxstats/ggsci/pull/30)
-and use different `discrete_scale()` calls under each condition.
-Along the way, I found the internal functions such as `is_installed()`
-borrowed from the R package shiny effective in solving this
-version detection problem.
+and use different `discrete_scale()` calls based on the detected version.
+The internal functions I borrowed from the shiny package,
+such as `is_installed()`, are effective in solving this version detection
+problem (although a bit complicated).
 
 ## protr 1.7-1
 
@@ -83,31 +83,31 @@ protr 1.7-1 brings `crossSetSim()` to feature parity
 with `parSeqSim()`. First, it extends `crossSetSim()`
 [added in protr 1.7-0](https://nanx.me/blog/post/protr-1-7-0/)
 to further support splitting similarity computation into batches
-and showing computation progress.
-It also implements a new function `crossSetSimDisk()` to offload the
-intermediate results from each batch to disk and merge them in the end,
+and displaying computation progress.
+It also introduces a new function `crossSetSimDisk()` to offload the
+intermediate results from each batch to disk and merge them at the end,
 similar to the logic in `parSeqSimDisk()`.
 
 These enhancements might help scale your similarity computation between
-protein sequence sets when being bounded by available RAM size, due to
+protein sequence sets when being bounded by available RAM, given
 the $\mathcal{O}(n^2)$ or $\mathcal{O}(mn)$ space complexity.
-However, specific situations could need further custom optimizations.
-Of course, there is no shame in using high-memory machines
-as a simple solution.
+However, specific situations may require further custom optimizations.
+Of course, using high-memory machines
+is a simple alternative solution.
 
 ## msaenet 3.1.1
 
-[msaenet](https://nanx.me/msaenet/) helps people explore
+[msaenet](https://nanx.me/msaenet/) helps users explore
 the solution space of adaptive estimations when building sparse linear models,
 by supporting arbitrary numbers of adaptive estimation steps,
-initialization methods, and automatic parameter tuning. In a previous post,
-we showed how it can generate parsimonious solutions when modeling the
+initialization methods, and automatic parameter tuning. A previous post
+demonstrated how it can generate parsimonious solutions when modeling the
 [sparse index tracking](https://nanx.me/blog/post/sparse-index-tracking/)
 problem.
 
-msaenet 3.1.1 resolves some `R CMD check` notes and example warnings
-accumulated from R version updates and dependency updates.
-It improves code style and now uses proper three-number semantic versioning.
+msaenet 3.1.1 resolves `R CMD check` notes and code example warnings
+accumulated from R version and dependency updates.
+It also improves code style and adopts proper three-number semantic versioning.
 
 ## Where do we go from here?
 
