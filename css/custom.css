@@ -214,7 +214,7 @@ hr {
 
 @supports (-webkit-text-decoration-skip: ink) {
     .header ul.nav li a.active {
-        text-underline-offset: 15px;
+        text-underline-offset: 14px;
     }
 }
 
