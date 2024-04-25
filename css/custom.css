@@ -162,7 +162,7 @@ hr {
 .header h1.name {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
-    font-size: 2.25rem;
+    font-size: 2.1875rem;
     font-feature-settings: normal;
     margin-left: 6px;
 }
@@ -181,7 +181,7 @@ hr {
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 1.3125rem;
+    font-size: 1.25rem;
     font-feature-settings: normal;
 }
 
