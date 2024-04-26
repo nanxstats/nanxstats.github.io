@@ -209,7 +209,7 @@ hr {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--tw-prose-headings);
-    text-underline-offset: 14.5px;
+    text-underline-offset: 14px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
@@ -220,7 +220,7 @@ hr {
 
 @supports (-moz-text-decoration-skip-ink: auto) {
     .header ul.nav li a.active {
-        text-underline-offset: 15px;
+        text-underline-offset: 14px;
     }
 }
 
