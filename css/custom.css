@@ -674,17 +674,17 @@ a:focus {
     min-width: 16em;
 }
 
-.site-social ul {
+.social-links ul {
     list-style-type: none;
     padding: 0;
     line-height: 2;
 }
 
-.site-social li {
+.social-links li {
     display: inline-block;
 }
 
-.site-social li:not(:last-child)::after {
+.social-links li:not(:last-child)::after {
     content: '';
     color: var(--tw-prose-captions);
     margin: 0 8px 0 8px;
