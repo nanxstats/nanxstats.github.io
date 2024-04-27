@@ -6,6 +6,7 @@ slug: pkglite-llm-prompt
 categories: []
 tags:
   - large language model
+  - retrieval-augmented generation
   - prompt engineering
   - R
   - R packages
