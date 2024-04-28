@@ -435,7 +435,7 @@ dl {
     font-family: var(--tw-prose-font-monospace);
     font-weight: 400;
     background-color: var(--tw-bg);
-    font-feature-settings: "ss01";
+    font-feature-settings: normal;
 }
 
 .content .markdown code {
