@@ -2,9 +2,12 @@
 
 @font-face {
     font-display: swap;
-    font-family: "BDO Grotesk";
-    src: url("fonts/BDOGrotesk-VF.woff2") format("woff2");
-    font-weight: 300 900;
+    font-family: "Mona Sans";
+    src:
+        url("fonts/MonaSans-VF.woff2") format("woff2 supports variations"),
+        url("fonts/MonaSans-VF.woff2") format("woff2-variations");
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
 }
 
 @font-face {
@@ -39,7 +42,7 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "BDO Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Castoro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Ligalex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
@@ -163,7 +166,7 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
     font-size: 2.1875rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     margin-left: 6px;
 }
 
@@ -180,9 +183,9 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.25rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
 }
 
 .header ul.nav li a {
@@ -209,18 +212,18 @@ hr {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--tw-prose-headings);
-    text-underline-offset: 14px;
+    text-underline-offset: 14.5px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
     .header ul.nav li a.active {
-        text-underline-offset: 14px;
+        text-underline-offset: 15px;
     }
 }
 
 @supports (-moz-text-decoration-skip-ink: auto) {
     .header ul.nav li a.active {
-        text-underline-offset: 14px;
+        text-underline-offset: 15px;
     }
 }
 
@@ -228,7 +231,7 @@ hr {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
         font-weight: 600;
-        font-feature-settings: normal;
+        font-feature-settings: "ss01";
         text-decoration: none;
     }
 }
@@ -290,7 +293,7 @@ h5,
 h6 {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
@@ -313,9 +316,9 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -365,8 +368,8 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
     font-size: 2rem;
-    font-feature-settings: normal;
-    line-height: 3.125rem;
+    font-feature-settings: "ss01";
+    line-height: 2.9rem;
 }
 
 .content .blog-post-content {
@@ -432,7 +435,7 @@ dl {
     font-family: var(--tw-prose-font-monospace);
     font-weight: 400;
     background-color: var(--tw-bg);
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
 }
 
 .content .markdown code {
@@ -489,7 +492,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
     font-size: 1.6rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -508,17 +511,17 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.875rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     line-height: 2.5rem;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 350;
+    font-weight: 450;
     font-size: 0.875rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -544,9 +547,9 @@ dl {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.875rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     line-height: calc(50 / 18);
 }
 
@@ -567,8 +570,8 @@ dl {
 /* Tags page */
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
-    font-feature-settings: normal;
+    font-weight: 500;
+    font-feature-settings: "ss01";
     margin-bottom: 1rem;
 }
 
@@ -604,7 +607,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
     font-size: 1rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     text-decoration: none;
     border: 1px solid var(--tw-prose-bullets);
     border-radius: 0.4rem;
@@ -625,15 +628,17 @@ dl {
 
 .pagination-nav .pagination-nav-sublabel {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.875rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     color: var(--tw-prose-captions);
 }
 
 .pagination-nav .pagination-nav-label {
     font-size: 1rem;
+    font-weight: 500;
     color: var(--tw-prose-links);
+    margin-top: 0.5rem;
 }
 
 /* Partial: Utterances comments */
@@ -646,9 +651,9 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
 }
 
 .footer a {
