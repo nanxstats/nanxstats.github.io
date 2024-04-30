@@ -27,9 +27,9 @@ description: >
 
 ![A group of sheep on Faroe Islands. Photo by [Dylan Shaw](https://unsplash.com/photos/AAVR8hB75ko).](/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg)
 
-I'm happy to announce that stackgbm, a minimalist R package for tree model
-stacking, is now on CRAN.
-Model stacking is a ensemble learning method that combines the predictions from
+I'm happy to announce that [stackgbm](https://nanx.me/stackgbm/),
+a minimalist R package for tree model stacking, is now on CRAN.
+Model stacking is an ensemble learning method that combines the predictions from
 multiple base learners to improve overall performance. stackgbm makes it easy
 to stack gradient boosting decision tree (GBDT) models, which are particularly
 effective for classification tasks.
@@ -65,7 +65,7 @@ These features are then fed into a logistic regression model in the second layer
 to produce the final classification probabilities.
 
 stackgbm offers convenient wrappers for the GBDT learners. This makes the
-entire flow become a few consistent, canonical function calls:
+entire flow a few consistent, canonical function calls:
 
 ```r
 library(stackgbm)
@@ -79,7 +79,7 @@ fit <- stackgbm(x, y, params = list(params_xgb, params_lgb, params_cat))
 fit |> predict(newx = x_test)
 ```
 
-stackgbm is well-suited for for experimentation and research---when you don't
+stackgbm is well-suited for experimentation and research---when you don't
 want to be restricted by machine learning frameworks that require pipeline
 construction in a certain way. Its design allows you to easily customize and
 integrate into your own workflows, where flexibility and control are critical.

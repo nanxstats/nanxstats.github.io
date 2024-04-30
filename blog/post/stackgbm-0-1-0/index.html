@@ -212,9 +212,9 @@
 <img src="https://nanx.me/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg" alt="A group of sheep on Faroe Islands. Photo by Dylan Shaw." />
 <div class="figcaption">A group of sheep on Faroe Islands. Photo by <a href="https://unsplash.com/photos/AAVR8hB75ko">Dylan Shaw</a>.</div>
 </div>
-<p>I’m happy to announce that stackgbm, a minimalist R package for tree model
-stacking, is now on CRAN.
-Model stacking is a ensemble learning method that combines the predictions from
+<p>I’m happy to announce that <a href="https://nanx.me/stackgbm/">stackgbm</a>,
+a minimalist R package for tree model stacking, is now on CRAN.
+Model stacking is an ensemble learning method that combines the predictions from
 multiple base learners to improve overall performance. stackgbm makes it easy
 to stack gradient boosting decision tree (GBDT) models, which are particularly
 effective for classification tasks.</p>
@@ -242,7 +242,7 @@ using three popular GBDT implementations: xgboost, lightgbm, and catboost.
 These features are then fed into a logistic regression model in the second layer
 to produce the final classification probabilities.</p>
 <p>stackgbm offers convenient wrappers for the GBDT learners. This makes the
-entire flow become a few consistent, canonical function calls:</p>
+entire flow a few consistent, canonical function calls:</p>
 <pre class="r"><code>library(stackgbm)
 
 params_xgb &lt;- cv_xgboost(x, y)
@@ -252,7 +252,7 @@ params_cat &lt;- cv_catboost(x, y)
 fit &lt;- stackgbm(x, y, params = list(params_xgb, params_lgb, params_cat))
 
 fit |&gt; predict(newx = x_test)</code></pre>
-<p>stackgbm is well-suited for for experimentation and research—when you don’t
+<p>stackgbm is well-suited for experimentation and research—when you don’t
 want to be restricted by machine learning frameworks that require pipeline
 construction in a certain way. Its design allows you to easily customize and
 integrate into your own workflows, where flexibility and control are critical.</p>
