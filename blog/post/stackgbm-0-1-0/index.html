@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> R Package Release Notes: ggsci, protr, and msaenet (Spring 2024) - Nan Xiao | 肖楠 </title>
+    <title> stackgbm is on CRAN - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Learn more about the behind the scene details of the updates to my R packages - ggsci, protr, and msaenet.
+    <meta name="description" content="stackgbm is a minimalist R package for stacking gradient boosting decision tree models. It simplifies the process of combining multiple GBDT implementations, such as xgboost, lightgbm, and catboost, to improve predictive performance on tabular data classification tasks. With a focus on simplicity and flexibility, stackgbm could be a useful tool for machine learning research and experimentation.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/" />
-    <meta property="og:title" content="R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)" />
-    <meta property="og:image" content="https://nanx.me/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg" />
-    <meta property="og:description" content="Learn more about the behind the scene details of the updates to my R packages - ggsci, protr, and msaenet.
+    <meta property="og:url" content="https://nanx.me/blog/post/stackgbm-0-1-0/" />
+    <meta property="og:title" content="stackgbm is on CRAN" />
+    <meta property="og:image" content="https://nanx.me/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg" />
+    <meta property="og:description" content="stackgbm is a minimalist R package for stacking gradient boosting decision tree models. It simplifies the process of combining multiple GBDT implementations, such as xgboost, lightgbm, and catboost, to improve predictive performance on tabular data classification tasks. With a focus on simplicity and flexibility, stackgbm could be a useful tool for machine learning research and experimentation.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)" />
-    <meta name="twitter:description" content="Learn more about the behind the scene details of the updates to my R packages - ggsci, protr, and msaenet.
+    <meta name="twitter:title" content="stackgbm is on CRAN" />
+    <meta name="twitter:description" content="stackgbm is a minimalist R package for stacking gradient boosting decision tree models. It simplifies the process of combining multiple GBDT implementations, such as xgboost, lightgbm, and catboost, to improve predictive performance on tabular data classification tasks. With a focus on simplicity and flexibility, stackgbm could be a useful tool for machine learning research and experimentation.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg" />
+    <meta name="twitter:image" content="https://nanx.me/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/">
+    <link rel="canonical" href="https://nanx.me/blog/post/stackgbm-0-1-0/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)</h1>
+                <h1 class="blog-post-title">stackgbm is on CRAN</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -141,12 +141,12 @@
                     
                     
 
-                    <span class="date middot" title='Sun Apr 21 2024 19:00:00 UTC'>
-                        April 21, 2024
+                    <span class="date middot" title='Tue Apr 30 2024 08:10:00 UTC'>
+                        April 30, 2024
                     </span>
 
                     <span class="reading-time middot">
-                        3 min read
+                        2 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
@@ -161,27 +161,35 @@
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/ggplot2">ggplot2</a>
+                                <a href="https://nanx.me/tags/ensemble-learning">ensemble learning</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/color-scales">color scales</a>
+                                <a href="https://nanx.me/tags/model-stacking">model stacking</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/protein-sequence">protein sequence</a>
+                                <a href="https://nanx.me/tags/gradient-boosting">gradient boosting</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/feature-engineering">feature engineering</a>
+                                <a href="https://nanx.me/tags/decision-tree">decision tree</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/sparse-linear-models">sparse linear models</a>
+                                <a href="https://nanx.me/tags/gbdt">GBDT</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/variable-selection">variable selection</a>
+                                <a href="https://nanx.me/tags/xgboost">xgboost</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/lightgbm">lightgbm</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/catboost">catboost</a>
                             </li>
                             
                         </ul>
@@ -201,91 +209,71 @@
 
 
 <div class="float">
-<img src="https://nanx.me/image/mark-pecar-UDyvOrz3_3s-unsplash.jpg" alt="Cute market in Rome, Italy. Photo by Mark Pecar." />
-<div class="figcaption"><em>Cute market in Rome, Italy.</em> Photo by <a href="https://unsplash.com/photos/UDyvOrz3_3s">Mark Pecar</a>.</div>
+<img src="https://nanx.me/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg" alt="A group of sheep on Faroe Islands. Photo by Dylan Shaw." />
+<div class="figcaption">A group of sheep on Faroe Islands. Photo by <a href="https://unsplash.com/photos/AAVR8hB75ko">Dylan Shaw</a>.</div>
 </div>
-<p>Maintaining R packages is a significant time and effort commitment.
-The <a href="https://r-pkgs.org/release.html">Releasing to CRAN</a> chapter of the
-<em>R Packages</em> book provides an excellent overview of the many responsibilities
-package authors face.
-Henrik’s <a href="https://www.cranhaven.org/">CRANhaven</a> also helps me appreciate
-the efforts made by both CRAN maintainers and package maintainers to
-keep a consistent, high standard on software quality and integration within
-a single, trusted repository.</p>
-<p>As a package maintainer myself, I currently oversee
-<a href="https://cran.r-project.org/web/checks/check_results_me_at_nanx.me.html">10 personal packages on CRAN</a>,
-most of which originated from previous research activities.
-This Spring, I took some time to clean up the issues in half of these packages.
-This post documents the most important improvements.</p>
-<div id="ggsci-3.0.3" class="section level2">
-<h2>ggsci 3.0.3</h2>
-<p><a href="https://nanx.me/ggsci/">ggsci</a> is a ggplot2 extension package
-offering various color scales.
-ggsci 3.0.2 and 3.0.3 resolved some compatibility issues with ggplot 3.5.0.
-Specifically, ggplot2 3.5.0 deprecated the <code>scale_name</code> argument
-in <code>discrete_scale()</code>. This will generate warning messages when users
-call any color scale functions that did not remove this argument
-when using ggplot2 &gt;= 3.5.0:</p>
-<pre class="text"><code>Warning message:
-The `scale_name` argument of `discrete_scale()` is deprecated as of
-ggplot2 3.5.0.</code></pre>
-<p>However, if we simply remove this argument in the color scale functions,
-R will complain under ggplot2 &lt; 3.5.0 because this was a required argument:</p>
-<pre class="text"><code>Error in `discrete_scale()`:
-! argument &quot;scale_name&quot; is missing, with no default
-Backtrace:
- 1. ggsci::scale_color_*()
- 2. ggplot2::discrete_scale(...)
- 3. ggplot2::ggproto(...)
- 4. rlang::list2(...)
-Execution halted</code></pre>
-<p>To maximize compatibility without requiring a recent minimum ggplot2
-version, I implemented a more cautious approach by
-<a href="https://github.com/nanxstats/ggsci/pull/30">detecting the installed ggplot2 version at runtime</a>
-and use different <code>discrete_scale()</code> calls based on the detected version.
-The internal functions I borrowed from the shiny package,
-such as <code>is_installed()</code>, are effective in solving this version detection
-problem (although a bit complicated).</p>
+<p>I’m happy to announce that stackgbm, a minimalist R package for tree model
+stacking, is now on CRAN.
+Model stacking is a ensemble learning method that combines the predictions from
+multiple base learners to improve overall performance. stackgbm makes it easy
+to stack gradient boosting decision tree (GBDT) models, which are particularly
+effective for classification tasks.</p>
+<p>You can install stackgbm with:</p>
+<pre class="r"><code>install.packages(&quot;stackgbm&quot;)</code></pre>
+<p>To install all potential dependencies to maximize stackgbm’s capabilities, see the
+<a href="https://github.com/nanxstats/stackgbm/wiki/Manage-dependencies">dependency management guide</a>.</p>
+<div id="why-tree-models-and-model-stacking" class="section level2">
+<h2>Why tree models and model stacking</h2>
+<p>Tree-based methods, especially GBDTs, are one of the most successful approaches
+for modeling tabular data, similar to the transformer architecture’s impact on
+sequence modeling. Naturally, ensemble tree models are a popular topic in
+<a href="https://huyenchip.com/ml-interviews-book/contents/8.1.2-questions.html">machine learning interviews</a>,
+where strategies for building tree ensembles are frequently discussed.</p>
+<p>Model stacking takes ensemble learning a step further by combining the
+strengths of multiple (possibly strong &amp; ensemble) base learners, such as GBDTs.
+This approach was effective in some machine learning competitions on
+Kaggle and others, making it a worthy strategy to experiment with.</p>
 </div>
-<div id="protr-1.7-1" class="section level2">
-<h2>protr 1.7-1</h2>
-<p><a href="https://nanx.me/protr/">protr</a> is a package for protein sequence
-feature engineering.</p>
-<p>protr 1.7-1 brings <code>crossSetSim()</code> to feature parity
-with <code>parSeqSim()</code>. First, it extends <code>crossSetSim()</code>
-<a href="https://nanx.me/blog/post/protr-1-7-0/">added in protr 1.7-0</a>
-to further support splitting similarity computation into batches
-and displaying computation progress.
-It also introduces a new function <code>crossSetSimDisk()</code> to offload the
-intermediate results from each batch to disk and merge them at the end,
-similar to the logic in <code>parSeqSimDisk()</code>.</p>
-<p>These enhancements might help scale your similarity computation between
-protein sequence sets when being bounded by available RAM, given
-the <span class="math inline">\(\mathcal{O}(n^2)\)</span> or <span class="math inline">\(\mathcal{O}(mn)\)</span> space complexity.
-However, specific situations may require further custom optimizations.
-Of course, using high-memory machines
-is a simple alternative solution.</p>
+<div id="stacking-gbdts-with-stackgbm" class="section level2">
+<h2>Stacking GBDTs with stackgbm</h2>
+<p>stackgbm is a weekend project that implements a classic two-layer stacking model.
+The first layer generates numerical “features” (classification probabilities)
+using three popular GBDT implementations: xgboost, lightgbm, and catboost.
+These features are then fed into a logistic regression model in the second layer
+to produce the final classification probabilities.</p>
+<p>stackgbm offers convenient wrappers for the GBDT learners. This makes the
+entire flow become a few consistent, canonical function calls:</p>
+<pre class="r"><code>library(stackgbm)
+
+params_xgb &lt;- cv_xgboost(x, y)
+params_lgb &lt;- cv_lightgbm(x, y)
+params_cat &lt;- cv_catboost(x, y)
+
+fit &lt;- stackgbm(x, y, params = list(params_xgb, params_lgb, params_cat))
+
+fit |&gt; predict(newx = x_test)</code></pre>
+<p>stackgbm is well-suited for for experimentation and research—when you don’t
+want to be restricted by machine learning frameworks that require pipeline
+construction in a certain way. Its design allows you to easily customize and
+integrate into your own workflows, where flexibility and control are critical.</p>
 </div>
-<div id="msaenet-3.1.1" class="section level2">
-<h2>msaenet 3.1.1</h2>
-<p><a href="https://nanx.me/msaenet/">msaenet</a> helps users explore
-the solution space of adaptive estimations when building sparse linear models,
-by supporting arbitrary numbers of adaptive estimation steps,
-initialization methods, and automatic parameter tuning. A previous post
-demonstrated how it can generate parsimonious solutions when modeling the
-<a href="https://nanx.me/blog/post/sparse-index-tracking/">sparse index tracking</a>
-problem.</p>
-<p>msaenet 3.1.1 resolves <code>R CMD check</code> notes and code example warnings
-accumulated from R version and dependency updates.
-It also improves code style and adopts proper three-number semantic versioning.</p>
-</div>
-<div id="where-do-we-go-from-here" class="section level2">
-<h2>Where do we go from here?</h2>
-<p>I believe that proper delegation and transition of maintainership
-is critical for the long-term health and sustainability of open source projects.
-I have tried a few times in the past years to find new maintainers for
-my packages—if you are interested in taking some responsibilities,
-please reach out.</p>
+<div id="simplicity-in-design" class="section level2">
+<h2>Simplicity in design</h2>
+<p>Model stacking is not a complicated idea, and I believe we can benefit from
+keeping the software implementations simple, too.
+Inspired by projects like <a href="https://github.com/karpathy/nanoGPT">nanoGPT</a>
+and <a href="https://github.com/tinygrad/tinygrad">tinygrad</a>, stackgbm focuses on three
+core abstractions:</p>
+<ul>
+<li><strong>Base learner wrappers</strong>: training and inference interfaces.</li>
+<li><strong>Hyperparameter tuning</strong>: cross-validation over a parameters grid.</li>
+<li><strong>Stacking algorithm</strong>: Fit a two-layer model.</li>
+</ul>
+<p>By striking a balance between transparency, flexibility, and performance,
+I hope stackgbm could provide a useful baseline for tree model stacking,
+with sensible defaults and minimal indirection.</p>
+<p>For suggestions, please <a href="https://github.com/nanxstats/stackgbm/issues">create an issue</a>
+or send a pull request.</p>
 </div>
 
 
@@ -297,10 +285,10 @@ please reach out.</p>
                     <div class="row navigation-btns">
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/pkglite-llm-prompt/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                            <a href="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« Prompt LLMs with R Package Source Code Using pkglite</div>
+                                    <div class="pagination-nav-label">« R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)</div>
                                 </div>
                             </a>
                             
@@ -308,12 +296,12 @@ please reach out.</p>
 
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/stackgbm-0-1-0/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">stackgbm is on CRAN »</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
                                 </div>
-                            </a>
+                            </div>
                             
                         </div>
                     </div>
@@ -459,9 +447,6 @@ please reach out.</p>
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>

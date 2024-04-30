@@ -1,0 +1,104 @@
+---
+title: "stackgbm is on CRAN"
+author: "Nan Xiao"
+date: "2024-04-30T8:10:00"
+slug: stackgbm-0-1-0
+categories: []
+tags:
+  - R
+  - R packages
+  - ensemble learning
+  - model stacking
+  - gradient boosting
+  - decision tree
+  - GBDT
+  - xgboost
+  - lightgbm
+  - catboost
+meta_img: "image/dylan-shaw-AAVR8hB75ko-unsplash.jpg"
+description: >
+  stackgbm is a minimalist R package for stacking gradient boosting decision
+  tree models. It simplifies the process of combining multiple GBDT
+  implementations, such as xgboost, lightgbm, and catboost,
+  to improve predictive performance on tabular data classification tasks.
+  With a focus on simplicity and flexibility, stackgbm could be a useful tool
+  for machine learning research and experimentation.
+---
+
+![A group of sheep on Faroe Islands. Photo by [Dylan Shaw](https://unsplash.com/photos/AAVR8hB75ko).](/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg)
+
+I'm happy to announce that stackgbm, a minimalist R package for tree model
+stacking, is now on CRAN.
+Model stacking is a ensemble learning method that combines the predictions from
+multiple base learners to improve overall performance. stackgbm makes it easy
+to stack gradient boosting decision tree (GBDT) models, which are particularly
+effective for classification tasks.
+
+You can install stackgbm with:
+
+```r
+install.packages("stackgbm")
+```
+
+To install all potential dependencies to maximize stackgbm's capabilities, see the
+[dependency management guide](https://github.com/nanxstats/stackgbm/wiki/Manage-dependencies).
+
+## Why tree models and model stacking
+
+Tree-based methods, especially GBDTs, are one of the most successful approaches
+for modeling tabular data, similar to the transformer architecture's impact on
+sequence modeling. Naturally, ensemble tree models are a popular topic in
+[machine learning interviews](https://huyenchip.com/ml-interviews-book/contents/8.1.2-questions.html),
+where strategies for building tree ensembles are frequently discussed.
+
+Model stacking takes ensemble learning a step further by combining the
+strengths of multiple (possibly strong & ensemble) base learners, such as GBDTs.
+This approach was effective in some machine learning competitions on
+Kaggle and others, making it a worthy strategy to experiment with.
+
+## Stacking GBDTs with stackgbm
+
+stackgbm is a weekend project that implements a classic two-layer stacking model.
+The first layer generates numerical "features" (classification probabilities)
+using three popular GBDT implementations: xgboost, lightgbm, and catboost.
+These features are then fed into a logistic regression model in the second layer
+to produce the final classification probabilities.
+
+stackgbm offers convenient wrappers for the GBDT learners. This makes the
+entire flow become a few consistent, canonical function calls:
+
+```r
+library(stackgbm)
+
+params_xgb <- cv_xgboost(x, y)
+params_lgb <- cv_lightgbm(x, y)
+params_cat <- cv_catboost(x, y)
+
+fit <- stackgbm(x, y, params = list(params_xgb, params_lgb, params_cat))
+
+fit |> predict(newx = x_test)
+```
+
+stackgbm is well-suited for for experimentation and research---when you don't
+want to be restricted by machine learning frameworks that require pipeline
+construction in a certain way. Its design allows you to easily customize and
+integrate into your own workflows, where flexibility and control are critical.
+
+## Simplicity in design
+
+Model stacking is not a complicated idea, and I believe we can benefit from
+keeping the software implementations simple, too.
+Inspired by projects like [nanoGPT](https://github.com/karpathy/nanoGPT)
+and [tinygrad](https://github.com/tinygrad/tinygrad), stackgbm focuses on three
+core abstractions:
+
+- **Base learner wrappers**: training and inference interfaces.
+- **Hyperparameter tuning**: cross-validation over a parameters grid.
+- **Stacking algorithm**: Fit a two-layer model.
+
+By striking a balance between transparency, flexibility, and performance,
+I hope stackgbm could provide a useful baseline for tree model stacking,
+with sensible defaults and minimal indirection.
+
+For suggestions, please [create an issue](https://github.com/nanxstats/stackgbm/issues)
+or send a pull request.

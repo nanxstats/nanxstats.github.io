@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gradient boosting on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/gradient-boosting/</link>
+    <description>Recent content in gradient boosting on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Apr 2024 08:10:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/gradient-boosting/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>stackgbm is on CRAN</title>
+      <link>https://nanx.me/blog/post/stackgbm-0-1-0/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/stackgbm-0-1-0/</guid>
+      <description>A group of sheep on Faroe Islands. Photo by Dylan Shaw. I’m happy to announce that stackgbm, a minimalist R package for tree model stacking, is now on CRAN. Model stacking is a ensemble learning method that combines the predictions from multiple base learners to improve overall performance. stackgbm makes it easy to stack gradient boosting decision tree (GBDT) models, which are particularly effective for classification tasks.&#xA;You can install stackgbm with:</description>
+    </item>
+  </channel>
+</rss>

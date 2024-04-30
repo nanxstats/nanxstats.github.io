@@ -6,8 +6,78 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Apr 2024 19:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2024 08:10:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>catboost</title>
+      <link>https://nanx.me/tags/catboost/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/catboost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>decision tree</title>
+      <link>https://nanx.me/tags/decision-tree/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/decision-tree/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ensemble learning</title>
+      <link>https://nanx.me/tags/ensemble-learning/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ensemble-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GBDT</title>
+      <link>https://nanx.me/tags/gbdt/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/gbdt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>gradient boosting</title>
+      <link>https://nanx.me/tags/gradient-boosting/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/gradient-boosting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>lightgbm</title>
+      <link>https://nanx.me/tags/lightgbm/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/lightgbm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>model stacking</title>
+      <link>https://nanx.me/tags/model-stacking/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/model-stacking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>xgboost</title>
+      <link>https://nanx.me/tags/xgboost/</link>
+      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/xgboost/</guid>
+      <description></description>
+    </item>
     <item>
       <title>color scales</title>
       <link>https://nanx.me/tags/color-scales/</link>
@@ -34,20 +104,6 @@
       <link>https://nanx.me/tags/protein-sequence/</link>
       <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/protein-sequence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
