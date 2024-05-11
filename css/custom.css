@@ -596,7 +596,10 @@ dl {
     justify-content: flex-start;
     /* Aligns text to the left by default */
     text-align: left;
-    padding: 1rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.75rem;
 }
 
 .pagination-nav .btn-next .btn-content {
