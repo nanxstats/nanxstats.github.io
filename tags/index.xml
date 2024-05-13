@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Apr 2024 08:10:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 12 May 2024 20:10:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>glmnet</title>
+      <link>https://nanx.me/tags/glmnet/</link>
+      <pubDate>Sun, 12 May 2024 20:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/glmnet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ncvreg</title>
+      <link>https://nanx.me/tags/ncvreg/</link>
+      <pubDate>Sun, 12 May 2024 20:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ncvreg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 12 May 2024 20:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Sun, 12 May 2024 20:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>regression</title>
+      <link>https://nanx.me/tags/regression/</link>
+      <pubDate>Sun, 12 May 2024 20:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/regression/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>sparse linear models</title>
+      <link>https://nanx.me/tags/sparse-linear-models/</link>
+      <pubDate>Sun, 12 May 2024 20:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/sparse-linear-models/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>variable selection</title>
+      <link>https://nanx.me/tags/variable-selection/</link>
+      <pubDate>Sun, 12 May 2024 20:10:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/variable-selection/</guid>
+      <description></description>
+    </item>
     <item>
       <title>catboost</title>
       <link>https://nanx.me/tags/catboost/</link>
@@ -58,20 +107,6 @@
       <description></description>
     </item>
     <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>xgboost</title>
       <link>https://nanx.me/tags/xgboost/</link>
       <pubDate>Tue, 30 Apr 2024 08:10:00 +0000</pubDate>
@@ -104,20 +139,6 @@
       <link>https://nanx.me/tags/protein-sequence/</link>
       <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/protein-sequence/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>sparse linear models</title>
-      <link>https://nanx.me/tags/sparse-linear-models/</link>
-      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/sparse-linear-models/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>variable selection</title>
-      <link>https://nanx.me/tags/variable-selection/</link>
-      <pubDate>Sun, 21 Apr 2024 19:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/variable-selection/</guid>
       <description></description>
     </item>
     <item>
@@ -356,13 +377,6 @@
       <link>https://nanx.me/tags/convex-optimization/</link>
       <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/convex-optimization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>regression</title>
-      <link>https://nanx.me/tags/regression/</link>
-      <pubDate>Wed, 31 May 2023 01:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/regression/</guid>
       <description></description>
     </item>
     <item>

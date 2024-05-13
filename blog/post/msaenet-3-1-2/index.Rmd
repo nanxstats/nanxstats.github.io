@@ -1,0 +1,397 @@
+---
+title: "msaenet 3.1.2 and a sparse survival modeling example"
+author: "Nan Xiao"
+date: "2024-05-12T20:10:00"
+slug: msaenet-3-1-2
+categories: []
+tags:
+  - R
+  - R packages
+  - regression
+  - sparse linear models
+  - variable selection
+  - glmnet
+  - ncvreg
+meta_img: "image/lucas-davies-aG6ByqGXiXg-unsplash.jpg"
+description: >
+  msaenet 3.1.2 is now available on CRAN. This update introduces a new default
+  color palette for plots. In this post, we showcase a high-dimensional
+  survival analysis example using msaenet. You will learn how to fit
+  parsimonious models and compare model performance by evaluating
+  variable selection and prediction metrics.
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  dpi = 150,
+  fig.retina = 2,
+  fig.width = 6,
+  fig.height = 6,
+  fig.align = "center",
+  out.width = "65%"
+)
+```
+
+![_Father-Son Tennis_. Photo by [Lucas Davies](https://unsplash.com/photos/aG6ByqGXiXg).](/image/lucas-davies-aG6ByqGXiXg-unsplash.jpg)
+
+I'm pleased to announce that [msaenet](https://nanx.me/msaenet/) 3.1.2 is now
+available on CRAN.
+
+You can install msaenet with:
+
+```r
+install.packages("msaenet")
+```
+
+If you frequently build sparse linear models, msaenet can help you generate
+more parsimonious solutions with adaptive estimations.
+It supports any number of adaptive estimation steps,
+flexible initialization methods, multiple model selection criteria,
+and automatic parallel parameter tuning.
+
+## New color palette
+
+
+
+
+This is a more focused update compared to the
+[3.1.1 update in March 2024](https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/#msaenet-3.1.1).
+The main user-visible change is the new default color palette (new Tableau 10)
+now used for the coefficient profile plot.
+
+```{r}
+#| fig-color-palettes,
+#| fig.cap="Default color palettes: old (top) vs. new (bottom).",
+#| echo=FALSE,
+#| dpi=300,
+#| fig.width = 6,
+#| fig.height = 3.2,
+#| out.width = "100%"
+color_palette1 <- c(
+  "#1F77B4", "#FF7F0E", "#2CA02C", "#D62728", "#9467BD",
+  "#8C564B", "#E377C2", "#7F7F7F", "#BCBD22", "#17BECF"
+)
+
+color_palette2 <- c(
+  "#4E79A7", "#F28E2C", "#E15759", "#76B7B2", "#59A14F",
+  "#EDC949", "#AF7AA1", "#FF9DA7", "#9C755F", "#BAB0AB"
+)
+
+plot(
+  NULL,
+  xlim = c(0, 10), ylim = c(0, 3),
+  xlab = "", ylab = "",
+  xaxt = "n", yaxt = "n",
+  bty = "n"
+)
+
+for (i in 1:10) {
+  rect(i - 1, 2, i, 3, col = color_palette1[i], border = NA)
+}
+
+for (i in 1:10) {
+  rect(i - 1, 0, i, 1, col = color_palette2[i], border = NA)
+}
+
+text(1:10 - 0.12, rep(1.8, 10), labels = color_palette1, srt = 0, adj = 1, xpd = TRUE, cex = 0.5)
+text(1:10 - 0.12, rep(-0.2, 10), labels = color_palette2, srt = 0, adj = 1, xpd = TRUE, cex = 0.5)
+```
+
+The new palette has a softer tone, potentially improving accessibility
+for users with color vision deficiencies. This color palette is also
+applied to all plot types, as seen in the example below.
+
+## High-dimensional survival analysis example
+
+Here, we use a simulated dataset with high-dimensional covariates and
+survival outcomes to show how msaenet works and compare it with
+classic models.
+
+```{r}
+#| attach-packages
+library("msaenet")
+```
+
+First, we create a function to generate simulated data.
+The idea is borrowed directly from
+[glmnet::Cindex()](https://glmnet.stanford.edu/reference/Cindex.html).
+It is straightforward and does not consider factors such as correlation structure
+or signal strength/noise level.
+
+```{r}
+#| sim-cox
+sim_cox <- function(n, p, p_nzv, p_train) {
+  x <- matrix(rnorm(n * p), nrow = n, ncol = p)
+
+  nzc <- p * p_nzv
+  beta <- rnorm(nzc)
+  fx <- x[, seq(nzc)] %*% beta / 3
+  hx <- exp(fx)
+  ty <- rexp(n, hx)
+  tcens <- rbinom(n, prob = 0.3, size = 1)
+  y <- survival::Surv(ty, event = 1 - tcens)
+
+  idx_tr <- sample(seq(n), size = round(n * p_train))
+  idx_te <- setdiff(seq(n), idx_tr)
+  x_tr <- x[idx_tr, , drop = FALSE]
+  y_tr <- y[idx_tr, , drop = FALSE]
+  x_te <- x[idx_te, , drop = FALSE]
+  y_te <- y[idx_te, , drop = FALSE]
+
+  list("x_train" = x_tr, "y_train" = y_tr, "x_test" = x_te, "y_test" = y_te)
+}
+```
+
+Next, we use the function to generate a training set with 1,000 observations
+and an independent test set with 1,000 observations. The number of variables
+is 2,000, among which only 2.5% (50) are "true" variables with
+non-zero coefficients. This makes it a sparse regression problem.
+
+```{r}
+#| sim-data
+set.seed(42)
+sim_data <- sim_cox(n = 2000, p = 2000, p_nzv = 0.025, p_train = 0.5)
+```
+
+Then we fit an msaenet model with basic setups:
+
+- Initialization: ridge regression.
+- $\alpha$ tuning grid: 0.05 to 0.95, with step size 0.05.
+- Parameter tuning for each estimation step: 5-fold cross-validation.
+- Maximum number of adaptive estimation steps: 10.
+- Optimal step number selection: Bayesian information criterion.
+
+```{r}
+#| fit-msaenet,
+#| message=FALSE
+doParallel::registerDoParallel(parallelly::availableCores())
+
+fit_msaenet <- msaenet(
+  sim_data$x_train,
+  sim_data$y_train,
+  family = "cox",
+  init = "ridge",
+  alphas = seq(0.5, 0.95, 0.05),
+  tune = "cv",
+  nfolds = 5L,
+  rule = "lambda.1se",
+  nsteps = 10L,
+  tune.nsteps = "bic",
+  seed = 42,
+  parallel = TRUE,
+  verbose = FALSE
+)
+```
+
+We generate a coefficient profile plot where the x-axis shows the estimation
+step, and y-axis shows how each coefficient changes across all steps.
+The optimal step is highlighted with a vertical red dashed line by default.
+
+```{r}
+#| fig-coef-path,
+#| fig.cap="Coefficient profile plot showing coefficient changes through adaptive estimation steps."
+plot(fit_msaenet)
+```
+
+Switching to `type = "criterion"` creates a scree plot that shows how the
+model selection criterion (BIC here) changes in each step.
+
+```{r}
+#| fig-criterion,
+#| fig.cap="Scree plot showing BIC changes through adaptive estimation steps."
+plot(fit_msaenet, type = "criterion")
+```
+
+Using `type = "dotplot"` produces a dot plot showing the "optimal" model
+coefficients with various
+[variable labeling options](https://nanx.me/msaenet/reference/plot.msaenet.html)
+available.
+
+```{r}
+#| fig-dotplot,
+#| fig.cap="Dot plot showing the non-zero coefficients from the optimal model."
+plot(fit_msaenet, type = "dotplot", label = TRUE)
+```
+
+We evaluate the number of true positive, false positive, and false negative
+selections. We also calculate the concordance index (C-index) on the
+training set and the independent test set.
+
+```{r}
+#| metrics-msaenet
+idx_nzv <- 1L:(2000 * 0.025)
+
+msaenet.tp(fit_msaenet, true.idx = idx_nzv)
+msaenet.fp(fit_msaenet, true.idx = idx_nzv)
+msaenet.fn(fit_msaenet, true.idx = idx_nzv)
+
+glmnet::Cindex(
+  as.vector(predict(fit_msaenet, newx = sim_data$x_train)),
+  y = sim_data$y_train
+)
+glmnet::Cindex(
+  as.vector(predict(fit_msaenet, newx = sim_data$x_test)),
+  y = sim_data$y_test
+)
+```
+
+For comparison, we fit a lasso and a "canonical" elastic-net model
+($\alpha = 0.5$) with glmnet. An adaptive elastic-net model is available
+from the fitted msaenet model.
+
+```{r}
+#| fit-comparison-models,
+#| message=FALSE,
+#| warning=FALSE
+doParallel::registerDoParallel(parallelly::availableCores())
+
+cv_lasso <- glmnet::cv.glmnet(
+  sim_data$x_train,
+  sim_data$y_train,
+  nfolds = 5,
+  family = "cox",
+  alpha = 1,
+  parallel = TRUE
+)
+
+fit_lasso <- glmnet::glmnet(
+  sim_data$x_train,
+  sim_data$y_train,
+  family = "cox",
+  alpha = 1,
+  lambda = cv_lasso$lambda.1se
+)
+
+cv_enet <- glmnet::cv.glmnet(
+  sim_data$x_train,
+  sim_data$y_train,
+  nfolds = 5,
+  family = "cox",
+  alpha = 0.5,
+  parallel = TRUE
+)
+
+fit_enet <- glmnet::glmnet(
+  sim_data$x_train,
+  sim_data$y_train,
+  family = "cox",
+  alpha = 0.5,
+  lambda = cv_enet$lambda.1se
+)
+
+fit_aenet <- fit_msaenet$model.list[[2]]
+```
+
+We create a few utility functions for computing the same evaluation metrics
+used above: TP, FP, FN for variable selection, C-index for predictive performance.
+
+```{r}
+#| metric-functions
+glmnet.nzv <- function(object) {
+  which(abs(as.vector(object$beta)) > .Machine$double.eps)
+}
+
+glmnet.tp <- function(object, true.idx) {
+  length(intersect(glmnet.nzv(object), true.idx))
+}
+
+glmnet.fp <- function(object, true.idx) {
+  length(setdiff(glmnet.nzv(object), true.idx))
+}
+
+glmnet.fn <- function(object, true.idx) {
+  length(setdiff(true.idx, glmnet.nzv(object)))
+}
+
+metrics <- function(object, true.idx, data) {
+  if (inherits(object, "msaenet")) {
+    tp <- msaenet.tp(object, true.idx = true.idx)
+    fp <- msaenet.fp(object, true.idx = true.idx)
+    fn <- msaenet.fn(object, true.idx = true.idx)
+  }
+  if (inherits(object, "glmnet")) {
+    tp <- glmnet.tp(object, true.idx = true.idx)
+    fp <- glmnet.fp(object, true.idx = true.idx)
+    fn <- glmnet.fn(object, true.idx = true.idx)
+  }
+  cindex_train <- glmnet::Cindex(
+    as.vector(predict(object, newx = data$x_train)),
+    y = data$y_train
+  )
+  cindex_test <- glmnet::Cindex(
+    as.vector(predict(object, newx = data$x_test)),
+    y = data$y_test
+  )
+  c(
+    "TP" = tp,
+    "FP" = fp,
+    "FN" = fn,
+    "C-index train" = format(round(cindex_train, 4), nsmall = 4),
+    "C-index test" = format(round(cindex_test, 4), nsmall = 4)
+  )
+}
+```
+
+Summarizing all model metrics in a table:
+
+```{css, echo=FALSE}
+table.table {
+  font-family: var(--tw-prose-font-monospace);
+  font-size: 1.125rem;
+}
+```
+
+```{r}
+#| metrics-table
+df <- rbind(
+  "lasso"   = metrics(fit_lasso,   idx_nzv, sim_data),
+  "enet"    = metrics(fit_enet,    idx_nzv, sim_data),
+  "aenet"   = metrics(fit_aenet,   idx_nzv, sim_data),
+  "msaenet" = metrics(fit_msaenet, idx_nzv, sim_data)
+)
+
+knitr::kable(
+  df,
+  align = rep("r", 5),
+  format = "html",
+  table.attr = "class=\"table table-hover\""
+)
+```
+
+We were able to reduce the number of false positive selections from 89
+down to 0, with a trade-off of selecting 9 fewer true variables.
+For this particular simulated dataset, with fewer variables selected, the
+C-index was not affected and even slightly improved on the independent test set.
+
+From the initial experimental results, we see that msaenet likely prioritizes
+precision (minimizing false positive selections) over recall
+(maximizing true positive selections). While this may not be ideal,
+it could be useful, especially in scenarios where the costs of
+false positive selections outweigh the costs of false negative selections,
+and precision is the priority.
+
+## How to cite msaenet
+
+If you find msaenet useful, you can cite it as follows:
+
+> Nan Xiao and Qing-Song Xu. (2015). Multi-step adaptive elastic-net:
+> reducing false positives in high-dimensional variable selection.
+> _Journal of Statistical Computation and Simulation_ 85(18), 3755--3765.
+
+A BibTeX entry for LaTeX users is:
+
+```text
+@article{xiao2015multi,
+  title   = {Multi-step adaptive elastic-net:
+             reducing false positives in high-dimensional variable selection},
+  author  = {Nan Xiao and Qing-Song Xu},
+  journal = {Journal of Statistical Computation and Simulation},
+  volume  = {85},
+  number  = {18},
+  pages   = {3755--3765},
+  year    = {2015},
+  doi     = {10.1080/00949655.2015.1016944}
+}
+```

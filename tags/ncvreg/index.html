@@ -4,32 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> stackgbm is on CRAN - Nan Xiao | 肖楠 </title>
+    <title> ncvreg - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="stackgbm is a minimalist R package for stacking gradient boosting decision tree models. It simplifies the process of combining multiple GBDT implementations, such as xgboost, lightgbm, and catboost, to improve predictive performance on tabular data classification tasks. With a focus on simplicity and flexibility, stackgbm could be a useful tool for machine learning research and experimentation.
-" />
+    <meta name="description" content="" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/stackgbm-0-1-0/" />
-    <meta property="og:title" content="stackgbm is on CRAN" />
-    <meta property="og:image" content="https://nanx.me/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg" />
-    <meta property="og:description" content="stackgbm is a minimalist R package for stacking gradient boosting decision tree models. It simplifies the process of combining multiple GBDT implementations, such as xgboost, lightgbm, and catboost, to improve predictive performance on tabular data classification tasks. With a focus on simplicity and flexibility, stackgbm could be a useful tool for machine learning research and experimentation.
-" />
+    <meta property="og:url" content="https://nanx.me/tags/ncvreg/" />
+    <meta property="og:title" content="ncvreg" />
+    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="stackgbm is on CRAN" />
-    <meta name="twitter:description" content="stackgbm is a minimalist R package for stacking gradient boosting decision tree models. It simplifies the process of combining multiple GBDT implementations, such as xgboost, lightgbm, and catboost, to improve predictive performance on tabular data classification tasks. With a focus on simplicity and flexibility, stackgbm could be a useful tool for machine learning research and experimentation.
-" />
-    <meta name="twitter:image" content="https://nanx.me/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg" />
+    <meta name="twitter:title" content="ncvreg" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/stackgbm-0-1-0/">
+    <link rel="canonical" href="https://nanx.me/tags/ncvreg/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -44,6 +41,8 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
+    
+    <link href="https://nanx.me/tags/ncvreg/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -71,7 +70,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog active"
+                                <a class="nav-link text-blog"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -130,204 +129,43 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">stackgbm is on CRAN</h1>
-
-                <div class="mb-md-4 meta">
-                    
-                    
-                    <span class="author" title="Nan Xiao">
-                        Nan Xiao
-                    </span>
-                    
-                    
-
-                    <span class="date middot" title='Tue Apr 30 2024 08:10:00 UTC'>
-                        April 30, 2024
-                    </span>
-
-                    <span class="reading-time middot">
-                        2 min read
-                    </span>
-
-                    <div class="d-none d-md-block mt-2 tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/r">R</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/r-packages">R packages</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/ensemble-learning">ensemble learning</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/model-stacking">model stacking</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/gradient-boosting">gradient boosting</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/decision-tree">decision tree</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/gbdt">GBDT</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/xgboost">xgboost</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/lightgbm">lightgbm</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/catboost">catboost</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="d-none d-md-inline tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="markdown blog-post-content">
+                <div class="markdown">
                     
     
 
 
-<div class="float">
-<img src="https://nanx.me/image/dylan-shaw-AAVR8hB75ko-unsplash.jpg" alt="A group of sheep on Faroe Islands. Photo by Dylan Shaw." />
-<div class="figcaption">A group of sheep on Faroe Islands. Photo by <a href="https://unsplash.com/photos/AAVR8hB75ko">Dylan Shaw</a>.</div>
-</div>
-<p>I’m happy to announce that <a href="https://nanx.me/stackgbm/">stackgbm</a>,
-a minimalist R package for tree model stacking, is now on CRAN.
-Model stacking is an ensemble learning method that combines the predictions from
-multiple base learners to improve overall performance. stackgbm makes it easy
-to stack gradient boosting decision tree (GBDT) models, which are particularly
-effective for classification tasks.</p>
-<p>You can install stackgbm with:</p>
-<pre class="r"><code>install.packages(&quot;stackgbm&quot;)</code></pre>
-<p>To install all potential dependencies to maximize stackgbm’s capabilities, see the
-<a href="https://github.com/nanxstats/stackgbm/wiki/Manage-dependencies">dependency management guide</a>.</p>
-<div id="why-tree-models-and-model-stacking" class="section level2">
-<h2>Why tree models and model stacking</h2>
-<p>Tree-based methods, especially GBDTs, are one of the most successful approaches
-for modeling tabular data, similar to the transformer architecture’s impact on
-sequence modeling. Naturally, ensemble tree models are a popular topic in
-<a href="https://huyenchip.com/ml-interviews-book/contents/8.1.2-questions.html">machine learning interviews</a>,
-where strategies for building tree ensembles are frequently discussed.</p>
-<p>Model stacking takes ensemble learning a step further by combining the
-strengths of multiple (possibly strong &amp; ensemble) base learners, such as GBDTs.
-This approach was effective in some machine learning competitions on
-Kaggle and others, making it a worthy strategy to experiment with.</p>
-</div>
-<div id="stacking-gbdts-with-stackgbm" class="section level2">
-<h2>Stacking GBDTs with stackgbm</h2>
-<p>stackgbm is a weekend project that implements a classic two-layer stacking model.
-The first layer generates numerical “features” (classification probabilities)
-using three popular GBDT implementations: xgboost, lightgbm, and catboost.
-These features are then fed into a logistic regression model in the second layer
-to produce the final classification probabilities.</p>
-<p>stackgbm offers convenient wrappers for the GBDT learners. This makes the
-entire flow a few consistent, canonical function calls:</p>
-<pre class="r"><code>library(stackgbm)
-
-params_xgb &lt;- cv_xgboost(x, y)
-params_lgb &lt;- cv_lightgbm(x, y)
-params_cat &lt;- cv_catboost(x, y)
-
-fit &lt;- stackgbm(x, y, params = list(params_xgb, params_lgb, params_cat))
-
-fit |&gt; predict(newx = x_test)</code></pre>
-<p>stackgbm is well-suited for experimentation and research—when you don’t
-want to be restricted by machine learning frameworks that require pipeline
-construction in a certain way. Its design allows you to easily customize and
-integrate into your own workflows, where flexibility and control are critical.</p>
-</div>
-<div id="simplicity-in-design" class="section level2">
-<h2>Simplicity in design</h2>
-<p>Model stacking is not a complicated idea, and I believe we can benefit from
-keeping the software implementations simple, too.
-Inspired by projects like <a href="https://github.com/karpathy/nanoGPT">nanoGPT</a>
-and <a href="https://github.com/tinygrad/tinygrad">tinygrad</a>, stackgbm focuses on three
-core abstractions:</p>
-<ul>
-<li><strong>Base learner wrappers</strong>: training and inference interfaces.</li>
-<li><strong>Hyperparameter tuning</strong>: cross-validation over a parameters grid.</li>
-<li><strong>Stacking algorithm</strong>: Fit a two-layer model.</li>
-</ul>
-<p>By striking a balance between transparency, flexibility, and performance,
-I hope stackgbm could provide a useful baseline for tree model stacking,
-with sensible defaults and minimal indirection.</p>
-<p>For suggestions, please <a href="https://github.com/nanxstats/stackgbm/issues">create an issue</a>
-or send a pull request.</p>
-</div>
-
-
-
                 </div>
 
-                
-                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
-                    <div class="row navigation-btns">
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/msaenet-3-1-2/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">msaenet 3.1.2 and a sparse survival modeling example »</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-                    </div>
-                </nav>
-                
-
+                <div class="posts">
+                    <h1>Posts about ncvreg</h1>
+                    <hr>
+                    <ul class="list-unstyled">
+                        
+                        <li class="groupby">2024</li>
+                        
+                        <li class="post-item">
+    <a href="https://nanx.me/blog/post/msaenet-3-1-2/">
+        <div class="inner-post-item">
+            <div class="row">
+                <div class="col-md-10 meta-title">
+                    msaenet 3.1.2 and a sparse survival modeling example
+                </div>
+                <div class="col-md-2 meta-date text-md-end">
+                    2024-05-12
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<section id="comments">
-    <div class="py-3 content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="mx-auto w-700">
-                    <div class="comments">
-                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
-                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
-                            </script>
-                    </div>
+    </a>
+</li>
+                        
+                        
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 <div class="footer mt-5">
     <div class="container">
 
@@ -417,6 +255,12 @@ or send a pull request.</p>
                                 Colophon</a></li>
                         
 
+                        
+                        <li><a href="https://nanx.me/tags/ncvreg/index.xml" class="mr-0">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#octicons-rss"></use>
+                                </svg>
+                                RSS</a></li>
                         
 
                         
