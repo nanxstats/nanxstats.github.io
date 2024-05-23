@@ -6,8 +6,15 @@
     <description>Recent content in color scales on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 21 Apr 2024 19:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 May 2024 00:30:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/color-scales/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ggsci 3.1.0, ggsurvfit example, and reverse dependency check</title>
+      <link>https://nanx.me/blog/post/ggsci-3-1-0/</link>
+      <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/ggsci-3-1-0/</guid>
+      <description>Photo by Elena Mozhvilo. I am excited to announce the release of ggsci 3.1.0. ggsci is an R package that provides a collection of color palettes inspired by colors used in scientific journals, data visualization libraries, science fiction movies, and TV shows.&#xA;To install ggsci from CRAN, run:&#xA;install.packages(&amp;quot;ggsci&amp;quot;) This release introduces a new color scale and brings documentation improvements. This post demonstrates how to create a Kaplan-Meier plot using ggsurvfit, cowplot, and ggsci.</description>
+    </item>
     <item>
       <title>R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)</title>
       <link>https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/</link>
