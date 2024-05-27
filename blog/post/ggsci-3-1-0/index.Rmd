@@ -8,6 +8,8 @@ tags:
   - R
   - R packages
   - ggplot2
+  - ggsurvfit
+  - revdepcheck
   - color scales
   - data visualization
 meta_img: "image/elena-mozhvilo-7IvpEWgtmxw-unsplash.jpg"
