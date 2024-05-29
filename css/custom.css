@@ -39,8 +39,8 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Hasklig";
-    src: url("fonts/Hasklig-Regular.woff2") format("woff2");
+    font-family: "Monaspace Argon";
+    src: url("fonts/MonaspaceArgon-Regular.woff2") format("woff2");
     font-weight: 400;
 }
 
@@ -49,7 +49,7 @@
 :root {
     --tw-prose-font-sans-serif: "Radio Canada Big", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Castoro", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Hasklig", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "Monaspace Argon", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -439,8 +439,8 @@ dl {
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
     font-weight: 400;
+    font-feature-settings: "ss01", "ss02", "ss03", "ss05", "ss07";
     background-color: var(--tw-bg);
-    font-feature-settings: normal;
 }
 
 .content .markdown code {
