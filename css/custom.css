@@ -439,7 +439,7 @@ dl {
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
     font-weight: 400;
-    font-feature-settings: "ss01", "ss02", "ss03", "ss05", "ss07";
+    font-feature-settings: "calt", "liga", "ss01", "ss02", "ss03", "ss05", "ss07";
     background-color: var(--tw-bg);
 }
 
