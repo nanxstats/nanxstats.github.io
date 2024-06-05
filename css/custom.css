@@ -17,6 +17,13 @@
 
 @font-face {
     font-display: swap;
+    font-family: "Nunito Sans";
+    src: url("fonts/NunitoSans-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-display: swap;
     font-family: "Monaspace Argon";
     src: url("fonts/MonaspaceArgon-Regular.woff2") format("woff2");
     font-weight: 400;
@@ -501,9 +508,9 @@ dl {
 }
 
 .content .post-item .meta-date {
-    font-family: var(--tw-prose-font-monospace);
-    font-weight: 400;
-    font-size: 0.875rem;
+    font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    font-size: 0.9375rem;
     font-feature-settings: normal;
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
