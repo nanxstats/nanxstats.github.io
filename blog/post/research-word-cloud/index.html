@@ -244,18 +244,15 @@ scanned photocopies, and the text should be selectable in PDF viewers.</p>
 </div>
 <div id="get-text-processing-script-and-install-dependency" class="section level4">
 <h4>2.2 Get text processing script and install dependency</h4>
-<p>Clone this <a href="https://github.com/nanxstats/pdf-word-extraction">GitHub repo</a>
-to your workspace. It contains a Python script I wrote for extracting
-meaningful words, as defined by a statistical model, from the PDF files:</p>
-<pre class="bash"><code>git clone https://github.com/nanxstats/pdf-word-extraction.git</code></pre>
-<p>Enter the directory (everything below assumes you are in the directory):</p>
-<pre class="bash"><code>cd pdf-word-extraction</code></pre>
-<p>Install the Python package dependencies of the script described in the
-<a href="https://github.com/nanxstats/pdf-word-extraction#setup">setup section of the repo</a>.
-The simple way is to use <code>pip</code> and <code>requirements.txt</code>:</p>
-<pre class="bash"><code>pip install -r requirements.txt</code></pre>
-<p>This will install the essential toolchain in Python, including pypdf for PDF
-parsing, ftfy for text cleaning, and spaCy for natural language processing.</p>
+<p>Clone this GitHub repo: <a href="https://github.com/nanxstats/pdf-word-extraction">nanxstats/pdf-word-extraction</a>.
+It contains a Python script I wrote for extracting meaningful words,
+as defined by a statistical model, from the PDF files.</p>
+<p>Follow the workflow section in the repo readme to create a virtual environment
+in the cloned repository, activate it, and install the required Python packages
+into the virtual environment. This includes pypdf for PDF parsing,
+ftfy for text cleaning, and spaCy for natural language processing.</p>
+<p>Everything below assumes you are in the directory with the
+virtual environment activated.</p>
 </div>
 <div id="run-the-script" class="section level4">
 <h4>2.3 Run the script</h4>

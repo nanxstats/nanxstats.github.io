@@ -67,30 +67,17 @@ This will install the latest maintained release of Python 3 provided by Homebrew
 
 #### 2.2 Get text processing script and install dependency
 
-Clone this [GitHub repo](https://github.com/nanxstats/pdf-word-extraction)
-to your workspace. It contains a Python script I wrote for extracting
-meaningful words, as defined by a statistical model, from the PDF files:
+Clone this GitHub repo: [nanxstats/pdf-word-extraction](https://github.com/nanxstats/pdf-word-extraction).
+It contains a Python script I wrote for extracting meaningful words,
+as defined by a statistical model, from the PDF files.
 
-```bash
-git clone https://github.com/nanxstats/pdf-word-extraction.git
-```
+Follow the workflow section in the repo readme to create a virtual environment
+in the cloned repository, activate it, and install the required Python packages
+into the virtual environment. This includes pypdf for PDF parsing,
+ftfy for text cleaning, and spaCy for natural language processing.
 
-Enter the directory (everything below assumes you are in the directory):
-
-```bash
-cd pdf-word-extraction
-```
-
-Install the Python package dependencies of the script described in the
-[setup section of the repo](https://github.com/nanxstats/pdf-word-extraction#setup).
-The simple way is to use `pip` and `requirements.txt`:
-
-```bash
-pip install -r requirements.txt
-```
-
-This will install the essential toolchain in Python, including pypdf for PDF
-parsing, ftfy for text cleaning, and spaCy for natural language processing.
+Everything below assumes you are in the directory with the
+virtual environment activated.
 
 #### 2.3 Run the script
 
