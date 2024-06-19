@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> ggsci 3.1.0, ggsurvfit example, and reverse dependency check - Nan Xiao | 肖楠 </title>
+    <title> You should (maybe) enable font ligatures when building with GPT models - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Announcing ggsci 3.1.0: new BMJ color palette, documentation improvements, Kaplan-Meier plot example using ggsurvfit, and a technical note on running reverse dependency checks.
+    <meta name="description" content="Explore the prevalence of the special token in GPT models and how programming ligatures in coding fonts may improve code readability using this convention. Discover popular monospace typefaces with ligature support that could improve developer experience when working with special tokens in large language models via the OpenAI API, LangChain, and text-generation-webui.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/ggsci-3-1-0/" />
-    <meta property="og:title" content="ggsci 3.1.0, ggsurvfit example, and reverse dependency check" />
-    <meta property="og:image" content="https://nanx.me/image/elena-mozhvilo-7IvpEWgtmxw-unsplash.jpg" />
-    <meta property="og:description" content="Announcing ggsci 3.1.0: new BMJ color palette, documentation improvements, Kaplan-Meier plot example using ggsurvfit, and a technical note on running reverse dependency checks.
+    <meta property="og:url" content="https://nanx.me/blog/post/gpt-models-font-ligatures/" />
+    <meta property="og:title" content="You should (maybe) enable font ligatures when building with GPT models" />
+    <meta property="og:image" content="https://nanx.me/image/florian-klauer--K6JMRMj4x4-unsplash.jpg" />
+    <meta property="og:description" content="Explore the prevalence of the special token in GPT models and how programming ligatures in coding fonts may improve code readability using this convention. Discover popular monospace typefaces with ligature support that could improve developer experience when working with special tokens in large language models via the OpenAI API, LangChain, and text-generation-webui.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="ggsci 3.1.0, ggsurvfit example, and reverse dependency check" />
-    <meta name="twitter:description" content="Announcing ggsci 3.1.0: new BMJ color palette, documentation improvements, Kaplan-Meier plot example using ggsurvfit, and a technical note on running reverse dependency checks.
+    <meta name="twitter:title" content="You should (maybe) enable font ligatures when building with GPT models" />
+    <meta name="twitter:description" content="Explore the prevalence of the special token in GPT models and how programming ligatures in coding fonts may improve code readability using this convention. Discover popular monospace typefaces with ligature support that could improve developer experience when working with special tokens in large language models via the OpenAI API, LangChain, and text-generation-webui.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/elena-mozhvilo-7IvpEWgtmxw-unsplash.jpg" />
+    <meta name="twitter:image" content="https://nanx.me/image/florian-klauer--K6JMRMj4x4-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/ggsci-3-1-0/">
+    <link rel="canonical" href="https://nanx.me/blog/post/gpt-models-font-ligatures/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">ggsci 3.1.0, ggsurvfit example, and reverse dependency check</h1>
+                <h1 class="blog-post-title">You should (maybe) enable font ligatures when building with GPT models</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -141,43 +141,47 @@
                     
                     
 
-                    <span class="date middot" title='Thu May 23 2024 00:30:00 UTC'>
-                        May 23, 2024
+                    <span class="date middot" title='Wed Jun 19 2024 03:30:00 UTC'>
+                        June 19, 2024
                     </span>
 
                     <span class="reading-time middot">
-                        4 min read
+                        2 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/r">R</a>
+                                <a href="https://nanx.me/tags/gpt-models">GPT models</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                                <a href="https://nanx.me/tags/openai">OpenAI</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/ggplot2">ggplot2</a>
+                                <a href="https://nanx.me/tags/large-language-model">large language model</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/ggsurvfit">ggsurvfit</a>
+                                <a href="https://nanx.me/tags/tokenization">tokenization</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/revdepcheck">revdepcheck</a>
+                                <a href="https://nanx.me/tags/special-tokens">special tokens</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/color-scales">color scales</a>
+                                <a href="https://nanx.me/tags/readability">readability</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/data-visualization">data visualization</a>
+                                <a href="https://nanx.me/tags/coding-fonts">coding fonts</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/programming-ligatures">programming ligatures</a>
                             </li>
                             
                         </ul>
@@ -197,173 +201,159 @@
 
 
 <div class="float">
-<img src="https://nanx.me/image/elena-mozhvilo-7IvpEWgtmxw-unsplash.jpg" alt="Photo by Elena Mozhvilo." />
-<div class="figcaption">Photo by <a href="https://unsplash.com/photos/7IvpEWgtmxw">Elena Mozhvilo</a>.</div>
+<img src="https://nanx.me/image/florian-klauer--K6JMRMj4x4-unsplash.jpg" alt="Parts of a typewriter. Photo by Florian Klauer." />
+<div class="figcaption">Parts of a typewriter. Photo by <a href="https://unsplash.com/photos/-K6JMRMj4x4">Florian Klauer</a>.</div>
 </div>
-<p>I am excited to announce the release of <a href="https://nanx.me/ggsci/">ggsci</a> 3.1.0.
-ggsci is an R package that provides a collection of color palettes inspired
-by colors used in scientific journals, data visualization libraries,
-science fiction movies, and TV shows.</p>
-<p>To install ggsci from CRAN, run:</p>
-<pre class="r"><code>install.packages(&quot;ggsci&quot;)</code></pre>
-<p>This release introduces a new color scale and brings documentation improvements.
-This post demonstrates how to create a Kaplan-Meier plot using ggsurvfit,
-cowplot, and ggsci. We will also share a technical note on conducting
-reverse dependency checks.</p>
-<div id="new-color-palette-and-documentation-improvements" class="section level2">
-<h2>New color palette and documentation improvements</h2>
-<p>ggsci 3.1.0 introduces a new color scale derived from the <a href="https://technology.bmj.com/living-style-guide/colour.html">BMJ living style
-guide</a>,
-contributed by <a href="https://github.com/huichen99">Hui Chen</a>.
-The colors are ordered according to their real-world usage in published articles.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ggsci-bmj-color-palette"></span>
-<img src="https://nanx.me/blog/post/ggsci-3-1-0/index_files/figure-html/fig-ggsci-bmj-color-palette-1.png" alt="Color palette added in ggsci 3.1.0." width="100%" />
+<p>The token <strong>&lt;|endoftext|&gt;</strong> is a special token used as a document separator
+for OpenAI GPT models. It has become quite prevalent if you look closely:</p>
+<ul>
+<li>It has been used since <a href="https://huggingface.co/docs/transformers/model_doc/gpt2">GPT-2</a>
+and remains present in the OpenAI API for their latest models.
+Their tokenizer package, tiktoken, includes logic to process text with these
+<a href="https://github.com/openai/tiktoken/blob/c0ba74c238d18b4824c25f3c27fc8698055b9a76/tiktoken_ext/openai_public.py#L3-L7">special tokens</a>.</li>
+<li>The markup <strong>&lt;|</strong> and <strong>|&gt;</strong> is widely used in the code bases of LangChain
+and text-generation-webui. It usually serves as a lightweight templating
+syntax to mark particular text sections for replacement.</li>
+<li>Improper handling of this special token has led to <a href="https://www.lesswrong.com/posts/HvmhZR6EJEi7bEqBh/less-than-or-endoftext-or-greater-than-is-a-vanishing-text">interesting
+results</a>
+in chatbot interfaces.</li>
+</ul>
+<p>The use of <strong>&lt;|</strong> and <strong>|&gt;</strong> might seem random. My theory is that people who
+introduced this convention use a coding font with programming ligatures.
+As shown in the figures below, it makes more visual sense with
+the ligatures enabled, as the cognitive load is greatly reduced when
+distinguishing them. I find my brain finally starting to understand what
+the code is trying to say.</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
+<img src="images/special-token-no-ligature.png" alt="Code snippet from text-generation-webui, ligatures off." width="100%" />
 <p class="caption">
-Figure 1: Color palette added in ggsci 3.1.0.
+Figure 1: Code snippet from text-generation-webui, ligatures off.
 </p>
 </div>
-<p>Here is how the new color scale looks when applied to ggplot2 plots:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ggsci-bmj-color-scale"></span>
-<img src="https://nanx.me/blog/post/ggsci-3-1-0/index_files/figure-html/fig-ggsci-bmj-color-scale-1.png" alt="Color scales applied to ggplot2 plots." width="100%" />
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="images/special-token-ligature.png" alt="Code snippet from text-generation-webui, ligatures on." width="100%" />
 <p class="caption">
-Figure 2: Color scales applied to ggplot2 plots.
+Figure 2: Code snippet from text-generation-webui, ligatures on.
 </p>
 </div>
-<p>As the number of color scales in ggsci grows, extending and maintaining the
-documentation becomes challenging, mainly due to the tedious Rd syntax
-(first written in 2016). To address this issue, I have converted the Rd syntax
-to Markdown using <a href="https://roxygen2md.r-lib.org/">roxygen2md</a> with minor manual
-fixes. This change simplifies the documentation scaffolding and formatting,
-making it easier for potential contributors to extend the list of color scales.</p>
-</div>
-<div id="kaplan-meier-plot-example" class="section level2">
-<h2>Kaplan-Meier plot example</h2>
-<p>Having a standard ggplot2 implementation of Kaplan-Meier plots with
-sufficient customization options and <a href="https://nanx.me/blog/post/sensible-defaults/">sensible
-defaults</a> has been a long-standing
-dream for many researchers. As of 2024,
-I feel <a href="https://www.danieldsjoberg.com/ggsurvfit/">ggsurvfit</a> has emerged as a
-powerful tool to fulfill this need.</p>
-<p>Here is an example that demonstrates how to produce a publication-quality
-Kaplan-Meier plot using ggsurvfit, cowplot, and ggsci with approximately
-30 lines of R code, balancing function and aesthetics.
-The dataset and analysis example are taken from the
-<a href="https://r4csr.org/tlf-efficacy-km.html">efficacy figure</a> chapter of the
-<a href="https://r4csr.org/">r4csr book</a>.</p>
-<pre class="r"><code>adtte &lt;- haven::read_sas(
-  paste0(
-    &quot;https://github.com/elong0527/r4csr&quot;,
-    &quot;/raw/main/data-adam/adtte.sas7bdat&quot;
-  )
-)
+<p>Now, here are five popular typefaces with original ligature designs
+that I often use as my main coding font, displayed in regular weight (400).
+You can find many more alternatives in the
+<a href="https://github.com/ToxicFrog/Ligaturizer">ToxicFrog/Ligaturizer</a>
+repository, where regular monospaced fonts are patched with Fira Code ligatures.</p>
+<style type="text/css">
+@font-face {
+    font-display: swap;
+    font-family: "Cascadia Code Regular";
+    src: url("fonts/CascadiaCode-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
 
-adtte_ttde &lt;- adtte |&gt;
-  dplyr::filter(PARAMCD == &quot;TTDE&quot;) |&gt;
-  dplyr::select(TRTP, TRTAN, AVAL, CNSR) |&gt;
-  dplyr::mutate(
-    TRTP = forcats::fct_reorder(TRTP, TRTAN),
-    AVAL_m = AVAL / 30.4367
-  )
+@font-face {
+    font-display: swap;
+    font-family: "Fira Code Regular";
+    src: url("fonts/FiraCode-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
 
-fit &lt;- survival::survfit(
-  survival::Surv(AVAL_m, 1 - CNSR) ~ TRTP,
-  data = adtte_ttde
-)</code></pre>
-<p>With the fitted model, we can build the Kaplan-Meier plot,
-add confidence intervals, risk tables, censor markings, quantiles,
-and customize theming and color scales:</p>
-<pre class="r"><code>p &lt;- fit |&gt;
-  ggsurvfit::ggsurvfit(linewidth = 1) +
-  ggsurvfit::add_confidence_interval() +
-  ggsurvfit::add_censor_mark(size = 2, alpha = 1) +
-  ggsurvfit::add_quantile(
-    y_value = 0.6,
-    linewidth = 0.75,
-    color = ggsci::pal_bmj(alpha = 1)(9)[9]
-  ) +
-  ggsurvfit::add_risktable(
-    size = 5,
-    theme = list(
-      ggsurvfit::theme_risktable_default(
-        axis.text.y.size = 14,
-        plot.title.size = 14
-      ),
-      ggplot2::theme(plot.title = ggplot2::element_text(face = &quot;bold&quot;))
-    )
-  ) +
-  ggsurvfit::add_risktable_strata_symbol(symbol = &quot;\U25CF&quot;, size = 18) +
-  ggsurvfit::scale_ggsurvfit() +
-  ggplot2::labs(
-    title = paste(
-      &quot;Kaplan-Meier Plot for&quot;,
-      &quot;Time to First Dermatologic Event by Treatment Group&quot;
-    ),
-    subtitle = &quot;All Participants&quot;
-  ) +
-  cowplot::theme_cowplot(rel_large = 15 / 14, rel_small = 14 / 14) +
-  ggplot2::theme(legend.position = &quot;bottom&quot;) +
-  ggsci::scale_color_bmj() +
-  ggsci::scale_fill_bmj()
+@font-face {
+    font-display: swap;
+    font-family: "Hasklig Regular";
+    src: url("fonts/Hasklig-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
 
-p</code></pre>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ggsci-ggsurvfit"></span>
-<img src="https://nanx.me/blog/post/ggsci-3-1-0/index_files/figure-html/fig-ggsci-ggsurvfit-1.png" alt="Kaplan-Meier plot produced by ggsurvfit, cowplot, and ggsci. _Look ma, no hands!_" width="100%" />
-<p class="caption">
-Figure 3: Kaplan-Meier plot produced by ggsurvfit, cowplot, and ggsci. <em>Look ma, no hands!</em>
-</p>
+@font-face {
+    font-display: swap;
+    font-family: "JetBrains Mono Regular";
+    src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Monaspace Argon Regular";
+    src: url("fonts/MonaspaceArgon-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+.font-cascadia-code pre code {
+    font-family: "Cascadia Code Regular" !important;
+    font-feature-settings: normal !important;
+}
+.font-fira-code pre code {
+    font-family: "Fira Code Regular" !important;
+    font-feature-settings: normal !important;
+}
+.font-hasklig pre code {
+    font-family: "Hasklig Regular" !important;
+    font-feature-settings: normal !important;
+}
+.font-jetbrains-mono pre code {
+    font-family: "JetBrains Mono Regular" !important;
+    font-feature-settings: normal !important;
+}
+.font-monaspace-argon pre code {
+    font-family: "Monaspace Argon Regular" !important;
+    font-feature-settings: "ss01", "ss02", "ss03", "ss05", "ss07", "ss09" !important;
+}
+</style>
+<div id="cascadia-code" class="section level2">
+<h2>Cascadia Code</h2>
+<div class="font-cascadia-code">
+<pre class="python"><code>ENDOFTEXT = &quot;&lt;|endoftext|&gt;&quot;
+FIM_PREFIX = &quot;&lt;|fim_prefix|&gt;&quot;
+FIM_MIDDLE = &quot;&lt;|fim_middle|&gt;&quot;
+FIM_SUFFIX = &quot;&lt;|fim_suffix|&gt;&quot;
+ENDOFPROMPT = &quot;&lt;|endofprompt|&gt;&quot;
+## :: := =&gt; &lt;- -&gt; == != &lt;= &gt;= ++ || &amp;&amp;</code></pre>
 </div>
-<p>While there is not a one-size-fits-all color solution for all visualization needs,
-the flexibility of the ggplot2 scale system allows you to easily switch to any
-other discrete <a href="https://nanx.me/ggsci/reference/">color scales in ggsci</a>
-to suit your specific preferences.</p>
 </div>
-<div id="reverse-dependency-checks" class="section level2">
-<h2>Reverse dependency checks</h2>
-<p>As the number of reverse dependencies of ggsci grows, it is increasingly
-important to run proper reverse dependency checks before making new releases.
-The <em>R Packages</em> book has <a href="https://r-pkgs.org/release.html#sec-release-revdep-checks">a dedicated section</a> covering this topic.</p>
-<p>Reverse dependency checking is a computationally intensive and naturally parallel task.
-High CPU core count machines, such as certain extra large instance types
-from public cloud platforms, can significantly reduce the run time.
-For smaller-scale reverse dependency checking needs like mine,
-a mainstream local desktop setup may be sufficient.
-Here is an example of running revdepcheck for ggsci using my gaming rig.
-Documenting my workflow can be helpful, as there might be some minor
-rough edges when setting up the running environment, even though the
-revdepcheck package has solved the main problem.</p>
-<p>First, install revdepcheck:</p>
-<pre class="r"><code>remotes::install_github(&quot;r-lib/revdepcheck&quot;)</code></pre>
-<p>Launch R from the terminal for stability and avoid using GUIs in such cases.</p>
-<pre class="r"><code>git clone https://github.com/nanxstats/ggsci.git
-cd ggsci
-R -q</code></pre>
-<p>Optionally, set the CRAN and Bioconductor mirror explicitly.
-These settings may not be necessary but are listed as a
-preemptive measure in case the default values inherited don’t work.</p>
-<pre class="r"><code>options(repos = &quot;https://cloud.r-project.org/&quot;)
-utils::chooseBioCmirror()</code></pre>
-<p>If you customized <code>R_LIBS_USER</code> in <code>.Renviron</code> to set a special personal library
-path, and it is not loaded in this context, leading to “package not found” errors,
-temporarily prepend the path to <code>.libPath()</code> for this R session.</p>
-<pre><code>.libPaths(c(&quot;/CUSTOM/LIBRARY/PATH&quot;, .libPaths()))</code></pre>
-<p>Now, run revdepcheck:</p>
-<pre class="r"><code>revdepcheck::revdep_check(num_workers = 32)</code></pre>
-<p>If your CPU is maxed out at 100% utilization, you’ve done it right.
-Under Linux, you can monitor this with the command line tool <code>htop</code>.
-Here is a Windows Task Manager screenshot:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
-<img src="images/revdepcheck-cpu.png" alt="Running revdepcheck with 32 parallel workers on Ryzen 7950X3D (16 cores, 32 threads)." width="100%" />
-<p class="caption">
-Figure 4: Running revdepcheck with 32 parallel workers on Ryzen 7950X3D (16 cores, 32 threads).
-</p>
+<div id="fira-code" class="section level2">
+<h2>Fira Code</h2>
+<div class="font-fira-code">
+<pre class="python"><code>ENDOFTEXT = &quot;&lt;|endoftext|&gt;&quot;
+FIM_PREFIX = &quot;&lt;|fim_prefix|&gt;&quot;
+FIM_MIDDLE = &quot;&lt;|fim_middle|&gt;&quot;
+FIM_SUFFIX = &quot;&lt;|fim_suffix|&gt;&quot;
+ENDOFPROMPT = &quot;&lt;|endofprompt|&gt;&quot;
+## :: := =&gt; &lt;- -&gt; == != &lt;= &gt;= ++ || &amp;&amp;</code></pre>
 </div>
-<p>Checking all 36 reverse dependencies finished in 16 minutes.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
-<img src="images/revdepcheck-cli.png" alt="Reverse dependency check progress and summary. Font: Iosevka Term." width="100%" />
-<p class="caption">
-Figure 5: Reverse dependency check progress and summary. Font: Iosevka Term.
-</p>
 </div>
+<div id="hasklig" class="section level2">
+<h2>Hasklig</h2>
+<div class="font-hasklig">
+<pre class="python"><code>ENDOFTEXT = &quot;&lt;|endoftext|&gt;&quot;
+FIM_PREFIX = &quot;&lt;|fim_prefix|&gt;&quot;
+FIM_MIDDLE = &quot;&lt;|fim_middle|&gt;&quot;
+FIM_SUFFIX = &quot;&lt;|fim_suffix|&gt;&quot;
+ENDOFPROMPT = &quot;&lt;|endofprompt|&gt;&quot;
+## :: := =&gt; &lt;- -&gt; == != &lt;= &gt;= ++ || &amp;&amp;</code></pre>
+</div>
+</div>
+<div id="jetbrains-mono" class="section level2">
+<h2>JetBrains Mono</h2>
+<div class="font-jetbrains-mono">
+<pre class="python"><code>ENDOFTEXT = &quot;&lt;|endoftext|&gt;&quot;
+FIM_PREFIX = &quot;&lt;|fim_prefix|&gt;&quot;
+FIM_MIDDLE = &quot;&lt;|fim_middle|&gt;&quot;
+FIM_SUFFIX = &quot;&lt;|fim_suffix|&gt;&quot;
+ENDOFPROMPT = &quot;&lt;|endofprompt|&gt;&quot;
+## :: := =&gt; &lt;- -&gt; == != &lt;= &gt;= ++ || &amp;&amp;</code></pre>
+</div>
+</div>
+<div id="monaspace-argon" class="section level2">
+<h2>Monaspace Argon</h2>
+<div class="font-monaspace-argon">
+<pre class="python"><code>ENDOFTEXT = &quot;&lt;|endoftext|&gt;&quot;
+FIM_PREFIX = &quot;&lt;|fim_prefix|&gt;&quot;
+FIM_MIDDLE = &quot;&lt;|fim_middle|&gt;&quot;
+FIM_SUFFIX = &quot;&lt;|fim_suffix|&gt;&quot;
+ENDOFPROMPT = &quot;&lt;|endofprompt|&gt;&quot;
+## :: := =&gt; &lt;- -&gt; == != &lt;= &gt;= ++ || &amp;&amp;</code></pre>
+</div>
+<p>Of course, this post should end with a proper…</p>
+<p><code>&lt;|endoftext|&gt;</code></p>
 </div>
 
 
@@ -375,10 +365,10 @@ Figure 5: Reverse dependency check progress and summary. Font: Iosevka Term.
                     <div class="row navigation-btns">
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/msaenet-3-1-2/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                            <a href="https://nanx.me/blog/post/ggsci-3-1-0/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« msaenet 3.1.2 and a sparse survival modeling example</div>
+                                    <div class="pagination-nav-label">« ggsci 3.1.0, ggsurvfit example, and reverse dependency check</div>
                                 </div>
                             </a>
                             
@@ -386,12 +376,12 @@ Figure 5: Reverse dependency check progress and summary. Font: Iosevka Term.
 
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/gpt-models-font-ligatures/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">You should (maybe) enable font ligatures when building with GPT models »</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
                                 </div>
-                            </a>
+                            </div>
                             
                         </div>
                     </div>
@@ -537,9 +527,6 @@ Figure 5: Reverse dependency check progress and summary. Font: Iosevka Term.
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>

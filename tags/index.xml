@@ -6,8 +6,64 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 May 2024 00:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Jun 2024 03:30:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>coding fonts</title>
+      <link>https://nanx.me/tags/coding-fonts/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/coding-fonts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPT models</title>
+      <link>https://nanx.me/tags/gpt-models/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/gpt-models/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>large language model</title>
+      <link>https://nanx.me/tags/large-language-model/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/large-language-model/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>OpenAI</title>
+      <link>https://nanx.me/tags/openai/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/openai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>programming ligatures</title>
+      <link>https://nanx.me/tags/programming-ligatures/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/programming-ligatures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Readability</title>
+      <link>https://nanx.me/tags/readability/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/readability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>special tokens</title>
+      <link>https://nanx.me/tags/special-tokens/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/special-tokens/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>tokenization</title>
+      <link>https://nanx.me/tags/tokenization/</link>
+      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/tokenization/</guid>
+      <description></description>
+    </item>
     <item>
       <title>color scales</title>
       <link>https://nanx.me/tags/color-scales/</link>
@@ -170,13 +226,6 @@
       <description></description>
     </item>
     <item>
-      <title>large language model</title>
-      <link>https://nanx.me/tags/large-language-model/</link>
-      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/large-language-model/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>pkglite</title>
       <link>https://nanx.me/tags/pkglite/</link>
       <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
@@ -209,13 +258,6 @@
       <link>https://nanx.me/tags/r-markdown/</link>
       <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/r-markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Readability</title>
-      <link>https://nanx.me/tags/readability/</link>
-      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/readability/</guid>
       <description></description>
     </item>
     <item>
