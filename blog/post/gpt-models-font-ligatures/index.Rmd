@@ -8,6 +8,7 @@ tags:
   - GPT models
   - OpenAI
   - large language model
+  - endoftext
   - tokenization
   - special tokens
   - readability
