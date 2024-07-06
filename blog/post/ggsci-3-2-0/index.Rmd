@@ -1,0 +1,200 @@
+---
+title: "ggsci 3.2.0: new color palettes from Observable, Bootstrap, and Tailwind CSS"
+author: "Nan Xiao"
+date: "2024-07-06T00:20:00"
+slug: ggsci-3-2-0
+categories: []
+tags:
+  - R
+  - R packages
+  - ggplot2
+  - ggsci
+  - color scales
+  - data visualization
+  - Observable
+  - Bootstrap
+  - Tailwind CSS
+meta_img: "image/europeana--HoDFUBpLrA-unsplash.jpg"
+description: >
+  ggsci 3.2.0 brings the Observable 10, Bootstrap, and Tailwind CSS color
+  palettes to R. Create more effective and visually appealing ggplot2
+  visualizations using these modern, accessible color scales.
+---
+
+```{r, include=FALSE}
+knitr::knit_hooks$set(pngquant = knitr::hook_pngquant)
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  dpi = 96,
+  fig.retina = 2,
+  fig.width = 10.6667,
+  fig.height = 3.3334,
+  fig.align = "center",
+  out.width = "100%",
+  pngquant = "--speed=1 --quality=90"
+)
+```
+
+![Villa in Zurich, perspective view. From *"Moderne Architektur"* (Modern Architecture), edited by Lambert & Stahl, Stuttgart, 1891. Scan from [Europeana](https://unsplash.com/photos/-HoDFUBpLrA).](/image/europeana--HoDFUBpLrA-unsplash.jpg)
+
+I am delighted to announce the release of [ggsci](https://nanx.me/ggsci/) 3.2.0.
+The R package ggsci was first released in 2016.
+It offers a range of ggplot2 color scales drawn from various sources,
+including scientific publications, data visualization tools,
+sci-fi movies, and television series.
+
+To install ggsci from CRAN, use:
+
+```r
+install.packages("ggsci")
+```
+
+As a follow-up to the [ggsci 3.1.0 release](https://nanx.me/blog/post/ggsci-3-1-0/),
+ggsci 3.2.0 introduces three new color scales and continues to improve the
+package engineering details.
+
+## Observable 10
+
+The Observable 10 palette was
+[officially announced](https://observablehq.com/blog/crafting-data-colors)
+in April 2024. It was designed as the new default categorical color scheme for
+Observable Plot, the JavaScript library for tabular data visualization.
+To me, this new color palette offers a fresh and clean aesthetic while
+maintaining accessibility and robustness for data visualization purposes.
+
+```{r}
+#| fig-ggsci-observable-color-palette,
+#| fig.cap="The Observable 10 palette added in ggsci 3.2.0.",
+#| echo=FALSE,
+#| dpi=300,
+#| fig.width=6,
+#| fig.height=3.2,
+#| out.width="100%"
+color_palette <- ggsci::pal_observable()(10)
+
+plot(
+  NULL,
+  xlim = c(0, 10), ylim = c(0, 3),
+  xlab = "", ylab = "",
+  xaxt = "n", yaxt = "n",
+  bty = "n"
+)
+
+for (i in 1:10) {
+  rect(i - 1, 2, i, 3, col = color_palette[i], border = NA)
+}
+
+text(1:10 - 0.19, rep(1.8, 10), labels = color_palette, srt = 0, adj = 1, xpd = TRUE, cex = 0.3)
+```
+
+In ggsci, this palette is made available via the new color scale functions
+[`scale_color_observable()` and `scale_fill_observable()`](https://nanx.me/ggsci/reference/scale_observable.html).
+Here is a ggplot2 example that uses this color palette to visualize five categories.
+
+```{r}
+p1 <- ggplot2::ggplot(
+  subset(ggplot2::diamonds, carat >= 2.2),
+  ggplot2::aes(x = table, y = price, colour = cut)
+) +
+  ggplot2::geom_point(alpha = 0.7) +
+  ggplot2::geom_smooth(method = "loess", alpha = 0.05, linewidth = 1, span = 1) +
+  ggplot2::theme_bw()
+p2 <- ggplot2::ggplot(
+  subset(ggplot2::diamonds, carat > 2.2 & depth > 55 & depth < 70),
+  ggplot2::aes(x = depth, fill = cut)
+) +
+  ggplot2::geom_histogram(colour = "black", binwidth = 1, position = "dodge") +
+  ggplot2::theme_bw()
+```
+
+```{r}
+#| fig-ggsci-observable-color-scale,
+#| fig.cap="ggplot2 example using the Observable 10 color scales.",
+p1 <- p1 + ggsci::scale_color_observable()
+p2 <- p2 + ggsci::scale_fill_observable()
+gridExtra::grid.arrange(p1, p2, ncol = 2)
+```
+
+## Bootstrap and Tailwind CSS palettes
+
+It has been quite a while since we expanded continuous color scales in ggsci.
+For a new start, I have chosen to implement the default color systems from
+Bootstrap 5 and Tailwind CSS 3, the two most popular front-end frameworks.
+These palettes have been refined over years of development, making them
+possible choices for data visualization.
+
+Using ColorBrewer's terminology, these color systems contain multiple
+single-hue sequential color schemes.
+They are suitable for representing values in ordered or numeric data,
+such as heatmap visualizations.
+
+In ggsci, these are made available via
+[`scale_color_bs5()`/`scale_fill_bs5()`](https://nanx.me/ggsci/reference/scale_bs5.html)
+and [`scale_color_tw3()`/`scale_fill_tw3()`](https://nanx.me/ggsci/reference/scale_tw3.html).
+We can easily visualize them using
+[`colorspace::swatchplot()`](https://colorspace.r-forge.r-project.org/reference/swatchplot.html).
+
+```{r}
+#| fig-ggsci-bootstrap-color-palette,
+#| fig.cap="The 11 Bootstrap 5 continuous palettes added in ggsci 3.2.0.",
+#| echo=FALSE,
+#| dpi=300,
+#| fig.width=6,
+#| fig.height=4,
+#| out.width="100%"
+colorspace::swatchplot(
+  ggsci:::ggsci_db$bs5,
+  nrow = 11,
+  line = 2.5,
+  cex = 0.8,
+  border = "transparent",
+  sborder = "transparent"
+)
+```
+
+```{r}
+#| fig-ggsci-tailwind-color-palette,
+#| fig.cap="The 22 Tailwind CSS continuous palettes added in ggsci 3.2.0.",
+#| echo=FALSE,
+#| dpi=300,
+#| fig.width=6,
+#| fig.height=6,
+#| out.width="100%"
+colorspace::swatchplot(
+  ggsci:::ggsci_db$tw3,
+  nrow = 22,
+  line = 2.5,
+  cex = 0.8,
+  border = "transparent",
+  sborder = "transparent"
+)
+```
+
+## Other improvements
+
+As the package grows, it is even more important to keep things light
+so that we have enough space to expand to even more color scales comfortably.
+
+I first
+[moved the internal color palette data](https://github.com/nanxstats/ggsci/pull/43)
+out of the binary file `R/sysdata.rda` and moved it into `R/palettes.R` instead.
+This change makes everything plain text
+(which is [unreasonably effective](https://www.youtube.com/watch?v=WgV6M1LyfNY)).
+I hope this simplifies third-party contributions by eliminating the
+tedious `.rda` file generation step with the previous R script in `data-raw/`.
+
+The other set of optimizations was applied to the continuous color scale
+code examples. Besides removing the soft dependency reshape2 from the code,
+I fine-tuned the layout with a more compact grid to reduce the output
+image size in [#46](https://github.com/nanxstats/ggsci/pull/46), reducing the
+package size concerns described in the
+[previous post](https://nanx.me/blog/post/rpkgs-pngquant-ragg/).
+
+## What's next?
+
+I'm open to new ideas on the next color palettes to add.
+If you have a suggestion, please submit them by
+[creating an issue](https://github.com/nanxstats/ggsci/issues).

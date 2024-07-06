@@ -6,8 +6,15 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Jun 2024 03:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2024 00:20:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ggsci 3.2.0: new color palettes from Observable, Bootstrap, and Tailwind CSS</title>
+      <link>https://nanx.me/blog/post/ggsci-3-2-0/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/ggsci-3-2-0/</guid>
+      <description>Villa in Zurich, perspective view. From “Moderne Architektur” (Modern Architecture), edited by Lambert &amp;amp; Stahl, Stuttgart, 1891. Scan from Europeana. I am delighted to announce the release of ggsci 3.2.0. The R package ggsci was first released in 2016. It offers a range of ggplot2 color scales drawn from various sources, including scientific publications, data visualization tools, sci-fi movies, and television series.&#xA;To install ggsci from CRAN, use:&#xA;install.packages(&amp;quot;ggsci&amp;quot;) As a follow-up to the ggsci 3.</description>
+    </item>
     <item>
       <title>You should (maybe) enable font ligatures when building with GPT models</title>
       <link>https://nanx.me/blog/post/gpt-models-font-ligatures/</link>

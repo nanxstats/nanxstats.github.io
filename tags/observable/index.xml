@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Observable on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/observable/</link>
+    <description>Recent content in Observable on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 06 Jul 2024 00:20:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/observable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ggsci 3.2.0: new color palettes from Observable, Bootstrap, and Tailwind CSS</title>
+      <link>https://nanx.me/blog/post/ggsci-3-2-0/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/ggsci-3-2-0/</guid>
+      <description>Villa in Zurich, perspective view. From “Moderne Architektur” (Modern Architecture), edited by Lambert &amp;amp; Stahl, Stuttgart, 1891. Scan from Europeana. I am delighted to announce the release of ggsci 3.2.0. The R package ggsci was first released in 2016. It offers a range of ggplot2 color scales drawn from various sources, including scientific publications, data visualization tools, sci-fi movies, and television series.&#xA;To install ggsci from CRAN, use:&#xA;install.packages(&amp;quot;ggsci&amp;quot;) As a follow-up to the ggsci 3.</description>
+    </item>
+  </channel>
+</rss>

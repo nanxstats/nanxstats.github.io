@@ -6,8 +6,71 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Jun 2024 03:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2024 00:20:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bootstrap</title>
+      <link>https://nanx.me/tags/bootstrap/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/bootstrap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>color scales</title>
+      <link>https://nanx.me/tags/color-scales/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/color-scales/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>data visualization</title>
+      <link>https://nanx.me/tags/data-visualization/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ggplot2</title>
+      <link>https://nanx.me/tags/ggplot2/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ggsci</title>
+      <link>https://nanx.me/tags/ggsci/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ggsci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Observable</title>
+      <link>https://nanx.me/tags/observable/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/observable/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tailwind CSS</title>
+      <link>https://nanx.me/tags/tailwind-css/</link>
+      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/tailwind-css/</guid>
+      <description></description>
+    </item>
     <item>
       <title>coding fonts</title>
       <link>https://nanx.me/tags/coding-fonts/</link>
@@ -72,45 +135,10 @@
       <description></description>
     </item>
     <item>
-      <title>color scales</title>
-      <link>https://nanx.me/tags/color-scales/</link>
-      <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/color-scales/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>data visualization</title>
-      <link>https://nanx.me/tags/data-visualization/</link>
-      <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/data-visualization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ggplot2</title>
-      <link>https://nanx.me/tags/ggplot2/</link>
-      <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/ggplot2/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>ggsurvfit</title>
       <link>https://nanx.me/tags/ggsurvfit/</link>
       <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ggsurvfit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
