@@ -1,0 +1,160 @@
+---
+title: "ssw is on CRAN"
+author: "Nan Xiao"
+date: "2024-09-08T19:07:00"
+slug: ssw-0-2-0
+categories: []
+tags:
+  - R
+  - R packages
+  - bioinformatics
+  - sequence alignment
+  - Smith-Waterman algorithm
+  - SIMD
+bibliography: "ssw.bib"
+meta_img: "image/nicholas-bartos-YwSxLoiXZFU-unsplash.jpg"
+description: >
+  ssw-r provides an R interface to the SSW C library and ssw-py for
+  efficient sequence alignment using the Smith-Waterman algorithm.
+---
+
+![Cape Cod sand dunes on a cloudy day.
+Photo by [Nicholas Bartos](https://unsplash.com/photos/YwSxLoiXZFU).
+](/image/nicholas-bartos-YwSxLoiXZFU-unsplash.jpg)
+
+I'm excited to share that my R package [ssw](https://nanx.me/ssw-r/)
+is now available on CRAN. This package began as a weekend project in 2020.
+ssw offers an R interface for
+[SSW](https://github.com/mengyao/Complete-Striped-Smith-Waterman-Library)
+[@zhao2013ssw], a high-performance C/C++ implementation of the Smith-Waterman
+algorithm for sequence alignment using SIMD.
+
+You can install ssw from CRAN with:
+
+```r
+install.packages("ssw")
+```
+
+For clarity, I will refer the R package as **ssw-r** from now on.
+ssw-r currently wraps [ssw-py](https://pypi.org/project/ssw-py/) via reticulate.
+Assuming you have a recent version of Python installed,
+you can set up ssw-py using the following helper function:
+
+```r
+ssw::install_ssw_py()
+```
+
+This will install ssw-py into a virtual environment named `r-ssw-py`
+by default, making it easily discoverable and importable by the R package.
+
+## Why SSW?
+
+I first learned the Smith-Waterman algorithm during a biomathematics
+summer school course taught by Professor Michael Waterman in 2014.
+Later, I realized how fundamental this algorithm is across bioinformatics.
+However, its computational intensity can be a bottleneck in large-scale
+genomic analyses. This is where the SSW C library comes into play.
+
+The SSW C library accelerates Smith-Waterman alignment by leveraging
+SIMD (Single Instruction, Multiple Data) instructions,
+which allow for efficient vectorization on modern CPUs.
+Besides the speedup, SSW provides detailed alignment information,
+including suboptimal alignment scores, which makes it useful for tasks
+ranging from short-read alignment to protein database search.
+Importantly, it is a C library---one can easily integrate it into their
+bioinformatics workflows without introducing unnecessary dependencies.
+
+With ssw-r, we bridge the gap between high-performance SSW C library
+and the rich ecosystem of R's bioinformatics tools (for example,
+Bioconductor). This potentially enables faster sequence analyses
+in many tasks.
+
+## Examples
+
+Let's look at the two main functions of ssw-r: `align()` and `force_align()`.
+For more examples, check out the [vignette](https://nanx.me/ssw-r/articles/ssw.html).
+
+```r
+library("ssw")
+```
+
+First, align a short query sequence to a longer reference:
+
+```r
+(x <- "GATTACA" |> align(reference = "CGGCTCTTGATTACAGGGTCT"))
+```
+
+```text
+CIGAR start index 8: 7M
+optimal_score: 14
+sub-optimal_score: 0
+target_begin: 8	target_end: 14
+query_begin: 0
+query_end: 6
+
+Target:        8    GATTACA    14
+                    |||||||
+Query:         0    GATTACA    6
+```
+
+```r
+x$alignment$optimal_score
+#> [1] 14
+x$alignment$sub_optimal_score
+#> [1] 0
+```
+
+This example aligns a 7-base query to a 21-base reference.
+The match is identified with the alignment details,
+including the CIGAR string and the optimal alignment score.
+
+In cases where we want to enforce strict alignment conditions,
+such as avoiding gaps, we can use the `force_align()` function.
+
+```r
+(y <- "ACTG" |> force_align(reference = "TTTTCTGCCCCCACG"))
+```
+
+```text
+CIGAR start index 4: 3M
+optimal_score: 6
+sub-optimal_score: 0
+target_begin: 4	target_end: 6
+query_begin: 1
+query_end: 3
+
+Target:        4    CTG    6
+                    |||
+Query:         1    CTG    3
+```
+
+To view the full alignment results without truncation, use `formatter()`:
+
+```r
+(y |> formatter())
+#> [[1]]
+#> [1] "TTTTCTGCCCCCACG"
+#>
+#> [[2]]
+#> [1] "   ACTG"
+```
+
+You can also pretty-print the formatted results directly:
+
+```r
+y |> formatter(print = TRUE)
+#> TTTTCTGCCCCCACG
+#>    ACTG
+```
+
+## Acknowledgments
+
+I would like to thank Mengyao Zhao for creating the original SSW library
+and Nick Conway for maintaining the Python interface, ssw-py.
+If you use ssw-r in your work, please consider citing these foundational projects.
+
+## References
+
+```{css, echo=FALSE}
+.references { font-size: 1.125rem; }
+```
