@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>environment variable on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/environment-variable/</link>
+    <description>Recent content in environment variable on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Sep 2024 19:28:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/environment-variable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R command-line tool paths on Windows</title>
+      <link>https://nanx.me/blog/post/r-windows-paths/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/r-windows-paths/</guid>
+      <description>Mirror House. Photo by Karsten Winegeart. I’m glad to share a new repository that documents the essential R command-line tool paths on Windows: https://github.com/nanxstats/r-windows-paths.&#xA;Motivation As an R developer, I frequently set up new development and testing environments for my R packages on Windows. This process often involves installing several command-line tools alongside R, including but not limited to:&#xA;Rtools: Compiles C/C++/Fortran code. TinyTeX: Compiles reference manual and PDF vignettes.</description>
+    </item>
+  </channel>
+</rss>

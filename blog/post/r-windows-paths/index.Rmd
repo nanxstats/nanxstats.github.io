@@ -1,0 +1,71 @@
+---
+title: "R command-line tool paths on Windows"
+author: "Nan Xiao"
+date: "2024-09-15T19:28:00"
+slug: r-windows-paths
+categories: []
+tags:
+  - R
+  - R packages
+  - Windows
+  - command line
+  - environment variable
+  - Rtools
+  - TinyTeX
+  - Pandoc
+  - Quarto
+meta_img: "image/karsten-winegeart-Xbzi-RL_iZY-unsplash.jpg"
+description: >
+  A GitHub repository that lists essential R command-line tool paths for Windows.
+  Includes common installation locations for R, Rtools, TinyTeX, Pandoc, and
+  Quarto, with tips for setting up the PATH environment variable.
+---
+
+![Mirror House. Photo by
+[Karsten Winegeart](https://unsplash.com/photos/Xbzi-RL_iZY).
+](/image/karsten-winegeart-Xbzi-RL_iZY-unsplash.jpg)
+
+I'm glad to share a new repository that documents the essential R command-line
+tool paths on Windows: <https://github.com/nanxstats/r-windows-paths>.
+
+## Motivation
+
+As an R developer, I frequently set up new development and testing environments
+for my R packages on Windows. This process often involves installing several
+command-line tools alongside R, including but not limited to:
+
+- **Rtools**: Compiles C/C++/Fortran code.
+- **TinyTeX**: Compiles reference manual and PDF vignettes.
+- **Pandoc**: Renders R Markdown (v2) vignettes.
+- **Quarto**: Renders Quarto vignettes.
+
+With the growing list of command-line tools, locating their installed
+directories and making them accessible via the command line has become
+increasingly time-consuming. I feel something can be done to make it better.
+
+## Documenting the paths
+
+The first step in making the environment setup process more productive and
+standardized is to document the canonical installation paths.
+This information needs to be more centrally and formally documented online.
+To address this, I created a GitHub repository listing the important paths:
+<https://github.com/nanxstats/r-windows-paths>.
+
+Additionally, modifying the `PATH` environment variable on Windows via
+the GUI is less straightforward than editing plaintext configuration
+files on Linux or macOS. Therefore, I wrote a brief guide for configuring
+the `PATH` environment variable with screenshots in `path.md`.
+
+## Automatic version updates
+
+Some software paths depend on software versions, such as R, Rtools,
+and RStudio IDE. I implemented a simple scraping mechanism to fetch the
+latest release versions from reliable sources, even though they don't
+provide official APIs. This automation allows the repository to stay updated
+easily without manual checks. See the R code chunk in `README.Rmd` for
+the implementation.
+
+## Am I missing something?
+
+If you know of any important Windows command-line tools that integrate with R
+and are not included, please submit a pull request to help expand the list.

@@ -2,19 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/tags/bioinformatics/</loc>
-    <lastmod>2024-09-08T19:07:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2024-09-08T19:07:00+00:00</lastmod>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/command-line/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/environment-variable/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2024-09-08T19:07:00+00:00</lastmod>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pandoc/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/quarto/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2024-09-08T19:07:00+00:00</lastmod>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/r-windows-paths/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rtools/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/tinytex/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/windows/</loc>
+    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/bioinformatics/</loc>
     <lastmod>2024-09-08T19:07:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/sequence-alignment/</loc>
@@ -27,9 +54,6 @@
     <lastmod>2024-09-08T19:07:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/ssw-0-2-0/</loc>
-    <lastmod>2024-09-08T19:07:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2024-09-08T19:07:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/bootstrap/</loc>
@@ -163,9 +187,6 @@
   </url><url>
     <loc>https://nanx.me/tags/retrieval-augmented-generation/</loc>
     <lastmod>2024-03-28T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/quarto/</loc>
-    <lastmod>2024-01-15T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-markdown/</loc>
     <lastmod>2024-01-15T21:00:00+00:00</lastmod>

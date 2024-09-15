@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Quarto - Nan Xiao | 肖楠 </title>
+    <title> R command-line tool paths on Windows - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="A GitHub repository that lists essential R command-line tool paths for Windows. Includes common installation locations for R, Rtools, TinyTeX, Pandoc, and Quarto, with tips for setting up the PATH environment variable.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/quarto/" />
-    <meta property="og:title" content="Quarto" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/r-windows-paths/" />
+    <meta property="og:title" content="R command-line tool paths on Windows" />
+    <meta property="og:image" content="https://nanx.me/image/karsten-winegeart-Xbzi-RL_iZY-unsplash.jpg" />
+    <meta property="og:description" content="A GitHub repository that lists essential R command-line tool paths for Windows. Includes common installation locations for R, Rtools, TinyTeX, Pandoc, and Quarto, with tips for setting up the PATH environment variable.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Quarto" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="R command-line tool paths on Windows" />
+    <meta name="twitter:description" content="A GitHub repository that lists essential R command-line tool paths for Windows. Includes common installation locations for R, Rtools, TinyTeX, Pandoc, and Quarto, with tips for setting up the PATH environment variable.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/karsten-winegeart-Xbzi-RL_iZY-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/tags/quarto/">
+    <link rel="canonical" href="https://nanx.me/blog/post/r-windows-paths/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -41,8 +44,6 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
-    
-    <link href="https://nanx.me/tags/quarto/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -70,7 +71,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog"
+                                <a class="nav-link text-blog active"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -129,121 +130,181 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <div class="markdown">
+                <h1 class="blog-post-title">R command-line tool paths on Windows</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Sun Sep 15 2024 19:28:00 UTC'>
+                        September 15, 2024
+                    </span>
+
+                    <span class="reading-time middot">
+                        2 min read
+                    </span>
+
+                    <div class="d-none d-md-block mt-2 tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/windows">Windows</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/command-line">command line</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/environment-variable">environment variable</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/rtools">Rtools</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/tinytex">TinyTeX</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/pandoc">Pandoc</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/quarto">Quarto</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/karsten-winegeart-Xbzi-RL_iZY-unsplash.jpg" alt="Mirror House. Photo by Karsten Winegeart." />
+<div class="figcaption">Mirror House. Photo by
+<a href="https://unsplash.com/photos/Xbzi-RL_iZY">Karsten Winegeart</a>.</div>
+</div>
+<p>I’m glad to share a new repository that documents the essential R command-line
+tool paths on Windows: <a href="https://github.com/nanxstats/r-windows-paths" class="uri">https://github.com/nanxstats/r-windows-paths</a>.</p>
+<div id="motivation" class="section level2">
+<h2>Motivation</h2>
+<p>As an R developer, I frequently set up new development and testing environments
+for my R packages on Windows. This process often involves installing several
+command-line tools alongside R, including but not limited to:</p>
+<ul>
+<li><strong>Rtools</strong>: Compiles C/C++/Fortran code.</li>
+<li><strong>TinyTeX</strong>: Compiles reference manual and PDF vignettes.</li>
+<li><strong>Pandoc</strong>: Renders R Markdown (v2) vignettes.</li>
+<li><strong>Quarto</strong>: Renders Quarto vignettes.</li>
+</ul>
+<p>With the growing list of command-line tools, locating their installed
+directories and making them accessible via the command line has become
+increasingly time-consuming. I feel something can be done to make it better.</p>
+</div>
+<div id="documenting-the-paths" class="section level2">
+<h2>Documenting the paths</h2>
+<p>The first step in making the environment setup process more productive and
+standardized is to document the canonical installation paths.
+This information needs to be more centrally and formally documented online.
+To address this, I created a GitHub repository listing the important paths:
+<a href="https://github.com/nanxstats/r-windows-paths" class="uri">https://github.com/nanxstats/r-windows-paths</a>.</p>
+<p>Additionally, modifying the <code>PATH</code> environment variable on Windows via
+the GUI is less straightforward than editing plaintext configuration
+files on Linux or macOS. Therefore, I wrote a brief guide for configuring
+the <code>PATH</code> environment variable with screenshots in <code>path.md</code>.</p>
+</div>
+<div id="automatic-version-updates" class="section level2">
+<h2>Automatic version updates</h2>
+<p>Some software paths depend on software versions, such as R, Rtools,
+and RStudio IDE. I implemented a simple scraping mechanism to fetch the
+latest release versions from reliable sources, even though they don’t
+provide official APIs. This automation allows the repository to stay updated
+easily without manual checks. See the R code chunk in <code>README.Rmd</code> for
+the implementation.</p>
+</div>
+<div id="am-i-missing-something" class="section level2">
+<h2>Am I missing something?</h2>
+<p>If you know of any important Windows command-line tools that integrate with R
+and are not included, please submit a pull request to help expand the list.</p>
+</div>
+
+
+
                 </div>
 
-                <div class="posts">
-                    <h1>Posts about Quarto</h1>
-                    <hr>
-                    <ul class="list-unstyled">
-                        
-                        <li class="groupby">2024</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/r-windows-paths/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    R command-line tool paths on Windows
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2024-09-15
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/stixfonts/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Use STIX Fonts in R Markdown and Quarto for Readability
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2024-01-15
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2023</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/knitr-chunk-option-error/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Fix the &#39;non-numeric argument to binary operator&#39; Error in R Markdown and Quarto
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-06-06
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/open-source-typography/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Find Your Perfect Open Source Font: Introducing the Interactive Typeface Lookbook
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-05-10
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/mlmodern/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Bolden Your Typography in R Markdown and Quarto with MLModern
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-03-20
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    A General-Purpose Link Checker for R Markdown and Quarto Projects
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-01-16
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                    </ul>
-                </div>
+                
+                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
+                    <div class="row navigation-btns">
+                        <div class="col">
+                            
+                            <a href="https://nanx.me/blog/post/ssw-0-2-0/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Previous</div>
+                                    <div class="pagination-nav-label">« ssw is on CRAN</div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="col">
+                            
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Next</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </nav>
+                
+
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -333,12 +394,6 @@
                                 Colophon</a></li>
                         
 
-                        
-                        <li><a href="https://nanx.me/tags/quarto/index.xml" class="mr-0">
-                                <svg class="svg-icon mr-1">
-                                    <use xlink:href="#octicons-rss"></use>
-                                </svg>
-                                RSS</a></li>
                         
 
                         

@@ -6,8 +6,15 @@
     <description>Recent content in Quarto on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Jan 2024 21:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 19:28:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/quarto/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>R command-line tool paths on Windows</title>
+      <link>https://nanx.me/blog/post/r-windows-paths/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/r-windows-paths/</guid>
+      <description>Mirror House. Photo by Karsten Winegeart. I’m glad to share a new repository that documents the essential R command-line tool paths on Windows: https://github.com/nanxstats/r-windows-paths.&#xA;Motivation As an R developer, I frequently set up new development and testing environments for my R packages on Windows. This process often involves installing several command-line tools alongside R, including but not limited to:&#xA;Rtools: Compiles C/C++/Fortran code. TinyTeX: Compiles reference manual and PDF vignettes.</description>
+    </item>
     <item>
       <title>Use STIX Fonts in R Markdown and Quarto for Readability</title>
       <link>https://nanx.me/blog/post/stixfonts/</link>

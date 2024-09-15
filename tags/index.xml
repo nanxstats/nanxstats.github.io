@@ -6,27 +6,76 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 08 Sep 2024 19:07:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Sep 2024 19:28:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>bioinformatics</title>
-      <link>https://nanx.me/tags/bioinformatics/</link>
-      <pubDate>Sun, 08 Sep 2024 19:07:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/bioinformatics/</guid>
+      <title>command line</title>
+      <link>https://nanx.me/tags/command-line/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/command-line/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>environment variable</title>
+      <link>https://nanx.me/tags/environment-variable/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/environment-variable/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pandoc</title>
+      <link>https://nanx.me/tags/pandoc/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pandoc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quarto</title>
+      <link>https://nanx.me/tags/quarto/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/quarto/</guid>
       <description></description>
     </item>
     <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 08 Sep 2024 19:07:00 +0000</pubDate>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
       <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     <item>
       <title>R packages</title>
       <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Sun, 08 Sep 2024 19:07:00 +0000</pubDate>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
       <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rtools</title>
+      <link>https://nanx.me/tags/rtools/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rtools/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TinyTeX</title>
+      <link>https://nanx.me/tags/tinytex/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/tinytex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://nanx.me/tags/windows/</link>
+      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>bioinformatics</title>
+      <link>https://nanx.me/tags/bioinformatics/</link>
+      <pubDate>Sun, 08 Sep 2024 19:07:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/bioinformatics/</guid>
       <description></description>
     </item>
     <item>
@@ -307,13 +356,6 @@
       <link>https://nanx.me/tags/retrieval-augmented-generation/</link>
       <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/retrieval-augmented-generation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Quarto</title>
-      <link>https://nanx.me/tags/quarto/</link>
-      <pubDate>Mon, 15 Jan 2024 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/quarto/</guid>
       <description></description>
     </item>
     <item>
