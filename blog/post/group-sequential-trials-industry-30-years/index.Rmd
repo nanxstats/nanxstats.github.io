@@ -1,0 +1,156 @@
+---
+title: "Group sequential trials in industry: a 30-year perspective"
+author: "Nan Xiao"
+date: "2024-09-28T03:42:00"
+slug: group-sequential-trials-industry-30-years
+categories: []
+tags:
+  - group sequential design
+  - clinical trials
+  - futility
+  - multiplicity
+  - non-proportional hazards
+  - adaptive designs
+  - reproducible research
+  - gsDesign
+  - gsDesign2
+  - gMCPLite
+meta_img: "image/estee-janssens-zni0zgb3bkQ-unsplash.jpg"
+description: >
+    We share highlights from our paper on group sequential trials in industry
+    over 30 years, covering key design considerations and real-world examples.
+    Learn about open source R packages for group sequential design and how we
+    used R Markdown to write the research paper.
+---
+
+![Photo by
+[Estée Janssens](https://unsplash.com/photos/zni0zgb3bkQ).
+](/image/estee-janssens-zni0zgb3bkQ-unsplash.jpg)
+
+I'm delighted to share that our paper, [_Some Group Sequential Trials From
+Industry Over the Last 30 Years_](https://doi.org/10.1080/19466315.2024.2334354),
+has been published in _Statistics in Biopharmaceutical Research_.
+
+You can download the [accepted manuscript
+(PDF, 457 KB) here](https://keaven.github.io/publications/group-sequential-trials-industry-30-years.pdf).
+
+## Key takeaways
+
+The paper began as a [conference talk](https://keaven.github.io/talks/)
+presented by [Keaven](https://keaven.github.io/), our lead author, in 2022.
+Recognizing the value of these stories, we decided to develop them into
+a full-length paper. The peer review process significantly improved the
+quality of our work, and we are grateful for the reviewers'
+constructive feedback.
+
+Our paper discussed how group sequential design has been applied in
+industry trials over the past three decades. Besides a concise review of theory,
+it offers an informed perspective into the flexibility of group sequential
+design in solving challenges compared to more complex adaptive designs.
+We emphasized important considerations such as timing of interim analyses,
+boundary setting for interim and final analyses, and handling multiple
+hypotheses created by dose groups, populations, and endpoints.
+
+## Highlights
+
+What sets this paper apart is its use of real-world examples to
+illustrate the intellectual challenges and practical solutions in trial design.
+Keaven carefully selected several representative trials that showcase the
+advantages of group sequential design. These include but are not limited to
+practical benefits like early futility analysis and facilitating fast
+decision-making in trials with significant efficacy or safety outcomes.
+
+Naturally, the paper discusses the use of open source
+R packages, such as [gsDesign](https://keaven.github.io/gsDesign/),
+[gsDesign2](https://merck.github.io/gsDesign2/), and
+[gMCPLite](https://merck.github.io/gMCPLite/), for creating group sequential designs.
+These tools provide the flexibility needed to design and analyze group
+sequential trials, including features for flexible timing and spending,
+non-proportional hazards, and stratified populations. They were also used
+to generate the designs presented in the paper's tables and figures.
+
+## Behind the scenes: write publication-quality papers using R Markdown
+
+For those interested in the technical aspects, we used a plain text workflow
+to write the paper:
+
+- **gsDesign**, **gsDesign2**, and **gMCPLite** for producing the
+  designs, tabular summaries, and visualizations.
+- **R Markdown** for technical writing and publishing.
+- **Git** for version control and team collaboration.
+
+In particular, we leveraged the following tools to produce high-quality PDF
+outputs. They helped us meet the style and formatting standards
+while keeping the Markdown simple so that we could focus on the content.
+
+### Template
+
+We used the [ASA article template](https://pkgs.rstudio.com/rticles/articles/examples.html#asa---asa-journal-article)
+from the [rticles](https://pkgs.rstudio.com/rticles/) package.
+This template helped us meet the journal formatting requirements.
+It also provided a convenient `blinded` option for producing
+double-anonymized review PDFs.
+
+### Table
+
+Most design summary tables were generated with R and piped into
+[gt](https://gt.rstudio.com/) to produce nicely formatted LaTeX tables.
+For simpler, manually crafted Markdown tables,
+[pipe tables](https://pandoc.org/chunkedhtml-demo/8.9-tables.html#extension-pipe_tables)
+offered precise column alignment control.
+
+### Figure look and feel
+
+Key elements of our figure design include:
+
+- Using [`cowplot::theme_cowplot()`](https://wilkelab.org/cowplot/articles/themes.html)
+  for its sensible default appearance.
+- Using [`cowplot::plot_grid()`](https://wilkelab.org/cowplot/articles/plot_grid.html)
+  for arranging multi-panel figures.
+- Using [ggrepel](https://ggrepel.slowkow.com/) for physics-based text label
+  placement to avoid overlap.
+- Using [`gMCPLite::hGraph()`](https://merck.github.io/gMCPLite/reference/hGraph.html)
+  to create elliptical multiplicity graphs.
+
+### Figure production
+
+We used the Cairo PDF device by setting `dev = "cairo_pdf"` in knitr chunk
+options to correctly render Unicode characters (such as Greek letters) in plots.
+
+### LaTeX fine-tuning
+
+We [customized the knit button behavior](https://bookdown.org/yihui/rmarkdown-cookbook/custom-knit.html)
+using the `knit` option in the YAML header. This trick allowed us to
+programmatically parse and process the intermediate LaTeX output before
+rendering it into PDF. It can help address issues in the original LaTeX
+output, for example, making the gt table captions numbered and resetting
+the table font sizes.
+
+## Looking ahead
+
+I hope this paper serves as a valuable reference for statisticians and
+clinical researchers interested in implementing group sequential designs
+in their trials. It aims to contribute to ongoing discussions and
+statistical methodology research on efficient, effective clinical trial design.
+
+If you find our paper useful, please cite it as follows (APA style):
+
+> Anderson, K. M., Zhao, Y., Xiao, N., Ge, J., & Weisman, H. F. (2024).
+> Some group sequential trials from industry over the last 30 years.
+> _Statistics in Biopharmaceutical Research_, 16(3), 281–293.
+> [doi:10.1080/19466315.2024.2334354](https://doi.org/10.1080/19466315.2024.2334354)
+
+For LaTeX users, the BibTeX entry is:
+
+```text
+@article{anderson2024some,
+  title   = {Some group sequential trials from industry over the last 30 years},
+  author  = {Anderson, Keaven M and Zhao, Yujie and Xiao, Nan and Ge, Joy and Weisman, Harlan F},
+  journal = {Statistics in Biopharmaceutical Research},
+  volume  = {16},
+  number  = {3},
+  pages   = {281--293},
+  year    = {2024},
+  doi     = {10.1080/19466315.2024.2334354}
+}
+```
