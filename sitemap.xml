@@ -2,10 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/tags/adaptive-designs/</loc>
-    <lastmod>2024-09-28T03:42:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/adapters/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/diffusers/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/flux/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/flux-lora/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/hugging-face/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/image-generation/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/lora/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/text-to-image/</loc>
+    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/adaptive-designs/</loc>
     <lastmod>2024-09-28T03:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/clinical-trials/</loc>
@@ -29,9 +59,6 @@
     <loc>https://nanx.me/tags/gsdesign2/</loc>
     <lastmod>2024-09-28T03:42:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2024-09-28T03:42:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/multiplicity/</loc>
     <lastmod>2024-09-28T03:42:00+00:00</lastmod>
   </url><url>
@@ -39,9 +66,6 @@
     <lastmod>2024-09-28T03:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/reproducible-research/</loc>
-    <lastmod>2024-09-28T03:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2024-09-28T03:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/command-line/</loc>
