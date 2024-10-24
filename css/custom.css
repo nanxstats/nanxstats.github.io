@@ -24,8 +24,8 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Monaspace Argon";
-    src: url("fonts/MonaspaceArgon-Regular.woff2") format("woff2");
+    font-family: "JetBrains Mono";
+    src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
     font-weight: 400;
 }
 
@@ -34,7 +34,7 @@
 :root {
     --tw-prose-font-sans-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Monaspace Argon", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -424,7 +424,7 @@ dl {
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
     font-weight: 400;
-    font-feature-settings: "calt", "liga", "ss01", "ss02", "ss03", "ss05", "ss07";
+    font-feature-settings: "calt", "liga";
     background-color: var(--tw-bg);
 }
 
