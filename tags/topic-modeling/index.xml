@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>GPU on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/gpu/</link>
-    <description>Recent content in GPU on Nan Xiao | 肖楠</description>
+    <title>topic modeling on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/topic-modeling/</link>
+    <description>Recent content in topic modeling on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 26 Oct 2024 20:42:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/gpu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/topic-modeling/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF</title>
       <link>https://nanx.me/blog/post/tinytopics/</link>
       <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/tinytopics/</guid>
       <description>Downhill mountain biking. Photo by Tim Foster. I’m excited to share that my first Python package, tinytopics, is now available on PyPI. You can install it using&#xA;pip3 install tinytopics tinytopics is a minimalist solution designed to scale up topic modeling tasks on CPUs and GPUs using PyTorch.&#xA;Motivation Fitting topic models at scale using classical algorithms on CPUs can be slow. Carbonetto et al. (2022) demonstrated the equivalence between Poisson non-negative matrix factorization (NMF) and multinomial topic model likelihoods.</description>
-    </item>
-    <item>
-      <title>Deep Learning GPU Selector</title>
-      <link>https://nanx.me/blog/post/gpu-selector/</link>
-      <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/gpu-selector/</guid>
-      <description>I built a GPU selector for deep learning workflows at nanx.me/gpu/, based on the recommendations from the blog post written by Tim Dettmers.&#xA;You can use this tool to decide the GPU you need for general training or inference needs by answering a few yes/no questions. It was a simple, pure client-side JavaScript implementation (GitHub repo).&#xA;AI and sustainability. Artwork from DeepMind. Artist: Nidia Dias. I first saw Tim’s post when the Ampere series was released in 2020.</description>
     </item>
   </channel>
 </rss>

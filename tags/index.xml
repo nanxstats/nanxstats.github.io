@@ -6,8 +6,71 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Sep 2024 23:47:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 26 Oct 2024 20:42:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>deep learning</title>
+      <link>https://nanx.me/tags/deep-learning/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPU</title>
+      <link>https://nanx.me/tags/gpu/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/gpu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>matrix factorization</title>
+      <link>https://nanx.me/tags/matrix-factorization/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/matrix-factorization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>natural language processing</title>
+      <link>https://nanx.me/tags/natural-language-processing/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/natural-language-processing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>neural network</title>
+      <link>https://nanx.me/tags/neural-network/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/neural-network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python packages</title>
+      <link>https://nanx.me/tags/python-packages/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PyTorch</title>
+      <link>https://nanx.me/tags/pytorch/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pytorch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>topic modeling</title>
+      <link>https://nanx.me/tags/topic-modeling/</link>
+      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/topic-modeling/</guid>
+      <description></description>
+    </item>
     <item>
       <title>adapters</title>
       <link>https://nanx.me/tags/adapters/</link>
@@ -569,24 +632,10 @@
       <description></description>
     </item>
     <item>
-      <title>natural language processing</title>
-      <link>https://nanx.me/tags/natural-language-processing/</link>
-      <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/natural-language-processing/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>pypdf</title>
       <link>https://nanx.me/tags/pypdf/</link>
       <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/pypdf/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
       <description></description>
     </item>
     <item>
@@ -713,20 +762,6 @@
       <link>https://nanx.me/tags/buildapc/</link>
       <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/buildapc/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>deep learning</title>
-      <link>https://nanx.me/tags/deep-learning/</link>
-      <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GPU</title>
-      <link>https://nanx.me/tags/gpu/</link>
-      <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/gpu/</guid>
       <description></description>
     </item>
     <item>
@@ -1203,13 +1238,6 @@
       <link>https://nanx.me/tags/triplet-loss/</link>
       <pubDate>Wed, 29 Aug 2018 19:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/triplet-loss/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>neural network</title>
-      <link>https://nanx.me/tags/neural-network/</link>
-      <pubDate>Wed, 22 Aug 2018 17:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/neural-network/</guid>
       <description></description>
     </item>
     <item>

@@ -2,10 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/tags/adapters/</loc>
-    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/deep-learning/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/gpu/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/matrix-factorization/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/natural-language-processing/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/neural-network/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python-packages/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pytorch/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/tinytopics/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/topic-modeling/</loc>
+    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/adapters/</loc>
     <lastmod>2024-09-30T23:47:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/diffusers/</loc>
@@ -17,9 +53,6 @@
     <loc>https://nanx.me/blog/post/flux-lora/</loc>
     <lastmod>2024-09-30T23:47:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/hugging-face/</loc>
     <lastmod>2024-09-30T23:47:00+00:00</lastmod>
   </url><url>
@@ -27,9 +60,6 @@
     <lastmod>2024-09-30T23:47:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/lora/</loc>
-    <lastmod>2024-09-30T23:47:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2024-09-30T23:47:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/text-to-image/</loc>
@@ -299,13 +329,7 @@
     <loc>https://nanx.me/tags/ftfy/</loc>
     <lastmod>2023-06-23T21:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/natural-language-processing/</loc>
-    <lastmod>2023-06-23T21:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/pypdf/</loc>
-    <lastmod>2023-06-23T21:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python/</loc>
     <lastmod>2023-06-23T21:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/spacy/</loc>
@@ -389,13 +413,7 @@
     <loc>https://nanx.me/tags/buildapc/</loc>
     <lastmod>2023-01-29T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/deep-learning/</loc>
-    <lastmod>2023-01-29T22:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/gpu-selector/</loc>
-    <lastmod>2023-01-29T22:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/gpu/</loc>
     <lastmod>2023-01-29T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/rmarkdown-quarto-link-checker/</loc>
@@ -727,9 +745,6 @@
   </url><url>
     <loc>https://nanx.me/blog/post/how-a-financial-crisis-started/</loc>
     <lastmod>2018-08-29T14:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/neural-network/</loc>
-    <lastmod>2018-08-22T17:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/recsys-binary-implicit-feedback-r-keras/</loc>
     <lastmod>2018-08-22T17:30:00+00:00</lastmod>

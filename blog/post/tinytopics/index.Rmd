@@ -1,0 +1,115 @@
+---
+title: "tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF"
+author: "Nan Xiao"
+date: "2024-10-26T20:42:00"
+slug: tinytopics
+categories: []
+tags:
+  - Python
+  - Python packages
+  - PyTorch
+  - topic modeling
+  - matrix factorization
+  - natural language processing
+  - GPU
+  - deep learning
+  - neural network
+bibliography: "tinytopics.bib"
+meta_img: "image/tim-foster-jhovC0t8f-8-unsplash.jpg"
+description: >
+  Introducing tinytopics, a lightweight Python package for GPU-accelerated
+  topic modeling using constrained neural Poisson NMF.
+  Built on PyTorch, tinytopics offers scalable topic modeling for large datasets.
+  This post shares the motivation, features, and examples to help you get
+  started with tinytopics.
+---
+
+![Downhill mountain biking.
+Photo by [Tim Foster](https://unsplash.com/photos/jhovC0t8f-8).
+](/image/tim-foster-jhovC0t8f-8-unsplash.jpg)
+
+I'm excited to share that my first Python package,
+[tinytopics](https://nanx.me/tinytopics/),
+is now available on PyPI. You can install it using
+
+```bash
+pip3 install tinytopics
+```
+
+tinytopics is a minimalist solution designed to scale up topic modeling
+tasks on CPUs and GPUs using PyTorch.
+
+## Motivation
+
+Fitting topic models at scale using classical algorithms on CPUs can be slow.
+@carbonetto2022nmf demonstrated the equivalence between Poisson non-negative matrix factorization (NMF) and multinomial topic model likelihoods.
+They proposed a novel optimization strategy: fit a Poisson NMF via
+coordinate descent, then recover the corresponding topic model through
+a simple transformation. This method was implemented in their R package,
+[fastTopics](https://cran.r-project.org/package=fastTopics).
+
+Building on this theoretical insight, tinytopics takes a different
+approach by directly optimizing a sum-to-one constrained neural Poisson NMF
+problem with stochastic gradient methods.
+
+## When to use tinytopics
+
+For standard topic modeling tasks, I think fastTopics is already an excellent
+solution because it is fast and can generate high-quality models with default
+settings ([sensible defaults](https://nanx.me/blog/post/sensible-defaults/)).
+Plus, I can't praise its ergonomic API design enough, which can be
+summarized as "topic modeling for humans".
+
+You might find tinytopics a viable alternative option if you care more about:
+
+- **Scale and speed**. For extra-large datasets, tinytopics can leverage GPUs to
+  accelerate computations. You can also use [PyTorch distributed
+  training](https://pytorch.org/tutorials/distributed/home.html) to scale
+  across multiple GPUs or machines if single card VRAM is insufficient.
+- **Model customization**. The constrained neural Poisson NMF in tinytopics
+  is a flexible, differentiable model. You can adapt it by adding new layers,
+  incorporating regularization, or even integrating other data modalities,
+  such as images or videos, for joint modeling.
+
+## When not to use tinytopics
+
+tinytopics might not be the best option if you need:
+
+- **Theoretical guarantees**. Since tinytopics solves an approximate version
+  of the exact Poisson NMF problem using stochastic gradient methods, it may
+  lack the convergence, consistency, and identifiability guarantees often
+  found in classical algorithms.
+- **Minimal parameter tuning**. While tinytopics uses modern stochastic gradient
+  optimizers and schedulers, you might still need to adjust hyperparameters to
+  get optimal results, depending on your dataset. This can require some
+  empirical fine-tuning and can be tricky to get right.
+
+## Examples
+
+I created three vignettes to demonstrate tinytopics' functionality,
+result accuracy, and performance on GPU:
+
+- [Getting started guide with synthetic count data](https://nanx.me/tinytopics/articles/get-started/).
+- [CPU vs. GPU training speed benchmark](https://nanx.me/tinytopics/articles/benchmark/).
+- [Text data topic modeling example](https://nanx.me/tinytopics/articles/text/).
+
+## Python toolchain that simplified development
+
+I wanted to thank the creators of the following software for improving the
+Python package development experience:
+
+- [PyTorch](https://pytorch.org/).
+  It just works. If you are going to build for GPU, choose PyTorch.
+- [mkdocs-material](https://squidfunk.github.io/mkdocs-material/).
+  A Markdown-first documentation website framework that, with mkdocs and mkdocstrings,
+  makes package documentation generation efficient and enjoyable.
+- [Rye](https://rye.astral.sh/).
+  The package and project environment manager I wish I had known earlier!
+  I'm grateful that my friend [Simo](https://github.com/svm-zhang) suggested
+  Rye and Neovim so that I can focus on writing code and be more productive.
+
+## References
+
+```{css, echo=FALSE}
+.references { font-size: 1.125rem; }
+```

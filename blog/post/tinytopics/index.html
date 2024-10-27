@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> FLUX.1 &#43; LoRA for styled image generation - Nan Xiao | 肖楠 </title>
+    <title> tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="A simple guide to set up and use FLUX.1 with LoRA adapters for AI image generation on a local Windows PC. This post covers downloading necessary models and software, model file placement, and configuring ComfyUI to run the foundation model and add LoRA nodes to the workflow.
+    <meta name="description" content="Introducing tinytopics, a lightweight Python package for GPU-accelerated topic modeling using constrained neural Poisson NMF. Built on PyTorch, tinytopics offers scalable topic modeling for large datasets. This post shares the motivation, features, and examples to help you get started with tinytopics.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/flux-lora/" />
-    <meta property="og:title" content="FLUX.1 &#43; LoRA for styled image generation" />
-    <meta property="og:image" content="https://nanx.me/image/flux-lora-tech-line-drawing.png" />
-    <meta property="og:description" content="A simple guide to set up and use FLUX.1 with LoRA adapters for AI image generation on a local Windows PC. This post covers downloading necessary models and software, model file placement, and configuring ComfyUI to run the foundation model and add LoRA nodes to the workflow.
+    <meta property="og:url" content="https://nanx.me/blog/post/tinytopics/" />
+    <meta property="og:title" content="tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF" />
+    <meta property="og:image" content="https://nanx.me/image/tim-foster-jhovC0t8f-8-unsplash.jpg" />
+    <meta property="og:description" content="Introducing tinytopics, a lightweight Python package for GPU-accelerated topic modeling using constrained neural Poisson NMF. Built on PyTorch, tinytopics offers scalable topic modeling for large datasets. This post shares the motivation, features, and examples to help you get started with tinytopics.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="FLUX.1 &#43; LoRA for styled image generation" />
-    <meta name="twitter:description" content="A simple guide to set up and use FLUX.1 with LoRA adapters for AI image generation on a local Windows PC. This post covers downloading necessary models and software, model file placement, and configuring ComfyUI to run the foundation model and add LoRA nodes to the workflow.
+    <meta name="twitter:title" content="tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF" />
+    <meta name="twitter:description" content="Introducing tinytopics, a lightweight Python package for GPU-accelerated topic modeling using constrained neural Poisson NMF. Built on PyTorch, tinytopics offers scalable topic modeling for large datasets. This post shares the motivation, features, and examples to help you get started with tinytopics.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/flux-lora-tech-line-drawing.png" />
+    <meta name="twitter:image" content="https://nanx.me/image/tim-foster-jhovC0t8f-8-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/flux-lora/">
+    <link rel="canonical" href="https://nanx.me/blog/post/tinytopics/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">FLUX.1 &#43; LoRA for styled image generation</h1>
+                <h1 class="blog-post-title">tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -141,43 +141,51 @@
                     
                     
 
-                    <span class="date middot" title='Mon Sep 30 2024 23:47:00 UTC'>
-                        September 30, 2024
+                    <span class="date middot" title='Sat Oct 26 2024 20:42:00 UTC'>
+                        October 26, 2024
                     </span>
 
                     <span class="reading-time middot">
-                        4 min read
+                        3 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/text-to-image">text to image</a>
+                                <a href="https://nanx.me/tags/python">Python</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/image-generation">image generation</a>
+                                <a href="https://nanx.me/tags/python-packages">Python packages</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/flux">FLUX</a>
+                                <a href="https://nanx.me/tags/pytorch">PyTorch</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/diffusers">Diffusers</a>
+                                <a href="https://nanx.me/tags/topic-modeling">topic modeling</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/lora">LoRA</a>
+                                <a href="https://nanx.me/tags/matrix-factorization">matrix factorization</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/adapters">adapters</a>
+                                <a href="https://nanx.me/tags/natural-language-processing">natural language processing</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/hugging-face">Hugging Face</a>
+                                <a href="https://nanx.me/tags/gpu">GPU</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/deep-learning">deep learning</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/neural-network">neural network</a>
                             </li>
                             
                         </ul>
@@ -197,110 +205,96 @@
 
 
 <div class="float">
-<img src="https://nanx.me/image/flux-lora-tech-line-drawing.png" alt="Technical line drawing generated by Flux1.dev + LoRA adapter.  Prompt: techlinedrawing, a drawing of a glass-heavy, modern architecture that Californian venture capital firms like, with fine details and mountains in the back, white background." />
-<div class="figcaption">Technical line drawing generated by Flux1.dev + LoRA adapter.<br>
-Prompt: techlinedrawing, a drawing of a glass-heavy, modern architecture that
-Californian venture capital firms like, with fine details and mountains
-in the back, white background.</div>
+<img src="https://nanx.me/image/tim-foster-jhovC0t8f-8-unsplash.jpg" alt="Downhill mountain biking. Photo by Tim Foster." />
+<div class="figcaption">Downhill mountain biking.
+Photo by <a href="https://unsplash.com/photos/jhovC0t8f-8">Tim Foster</a>.</div>
 </div>
-<p>Besides playing the Elden Ring: Shadow of the Erdtree DLC and Black Myth: Wukong
-on my gaming rig, I’ve also been playing with open weights generative AI models
-lately. As always, I’m more than <a href="https://nanx.me/blog/post/pkglite-llm-prompt/">impressed</a>
-by the speed of innovation in this space.</p>
-<p>For text generation models, at the moment (September 2024), I still feel the
-output quality has a bit of a bottleneck on the type of foundation models
-we can use and run with limited VRAM at an acceptable speed.
-This may change any day in the future, though, so I’m turning my
-attention to the latest image generation models.
-Of course, I need to try Flux.1 from Black Forest Labs.</p>
-<p>Theoretically, you only need to write a simple Python script to call
-the Diffusers package to run the model. I still chose to use a web
-GUI here because it’s nice to have an automated, no-code solution
-with a frontend for workflow construction and submitting prompts.</p>
-<p>The results feel decent for the <strong>minimal</strong> number of things I tried.
-You likely need to experiment with different random number seeds and different
-prompts to get there, so it’s important to have a good GPU or good patience.</p>
-<div id="technical-setup-guide" class="section level2">
-<h2>Technical setup guide</h2>
-<p>At the time of writing, the setup process to get things running is
-not exactly apparent, so I will document it here.
-This has been tested on a Windows PC with an RTX 4090 (24GB VRAM).</p>
-<div id="download-web-gui-software" class="section level3">
-<h3>Download web GUI software</h3>
-<p>There are many options, but I will use a simple one (ComfyUI) as an example.
-It has a built-in Python with essential dependencies like PyTorch and Diffusers.
-It might not be <strong>security best practice</strong> to blindly trust code and binaries
-on the internet, but hey… make sure to do your own audit.
-The workflow editor frontend is built with their fork of litegraph.js.</p>
+<p>I’m excited to share that my first Python package,
+<a href="https://nanx.me/tinytopics/">tinytopics</a>,
+is now available on PyPI. You can install it using</p>
+<pre class="bash"><code>pip3 install tinytopics</code></pre>
+<p>tinytopics is a minimalist solution designed to scale up topic modeling
+tasks on CPUs and GPUs using PyTorch.</p>
+<div id="motivation" class="section level2">
+<h2>Motivation</h2>
+<p>Fitting topic models at scale using classical algorithms on CPUs can be slow.
+<span class="citation">Carbonetto et al. (<a href="#ref-carbonetto2022nmf">2022</a>)</span> demonstrated the equivalence between Poisson non-negative matrix factorization (NMF) and multinomial topic model likelihoods.
+They proposed a novel optimization strategy: fit a Poisson NMF via
+coordinate descent, then recover the corresponding topic model through
+a simple transformation. This method was implemented in their R package,
+<a href="https://cran.r-project.org/package=fastTopics">fastTopics</a>.</p>
+<p>Building on this theoretical insight, tinytopics takes a different
+approach by directly optimizing a sum-to-one constrained neural Poisson NMF
+problem with stochastic gradient methods.</p>
 </div>
-<div id="download-models" class="section level3">
-<h3>Download models</h3>
-<ol style="list-style-type: decimal">
-<li>Download <code>flux1-dev.safetensors</code> and <code>ae.safetensors</code> from
-<a href="https://huggingface.co/black-forest-labs/FLUX.1-dev">black-forest-labs/FLUX.1-dev</a>
-on Hugging Face. There is also a commercial-friendly model
-<a href="https://huggingface.co/black-forest-labs/FLUX.1-schnell">FLUX.1-schnell</a>.</li>
-<li>Download <code>t5xxl_fp8_e4m3fn.safetensors</code> and <code>clip_l.safetensors</code> from
-<a href="https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main">comfyanonymous/flux_text_encoders</a>.</li>
-<li>(Optional) Download your preferred LoRA model (<code>.safetensors</code>) from
-<a href="https://huggingface.co/models?other=base_model:adapter:black-forest-labs/FLUX.1-dev">FLUX.1-dev adapters</a> for particular styles (there are 4,000+ of them).
-I used <a href="https://huggingface.co/jeremytai/techlinedrawing">jeremytai/techlinedrawing</a>
-for the example image at the start of the post.</li>
-</ol>
-</div>
-<div id="place-models-in-the-correct-directory" class="section level3">
-<h3>Place models in the correct directory</h3>
-<ol style="list-style-type: decimal">
-<li><code>ComfyUI/models/unet/</code>: place <code>flux1-dev.safetensors</code></li>
-<li><code>ComfyUI/models/vae/</code>: place <code>ae.safetensors</code></li>
-<li><code>ComfyUI/models/clip/</code>: place <code>t5xxl_fp8_e4m3fn.safetensors</code> and <code>clip_l.safetensors</code></li>
-<li><code>ComfyUI/models/loras/</code>: place your LoRA model’s <code>.safetensors</code> file</li>
-</ol>
-</div>
-<div id="run-the-foundation-model" class="section level3">
-<h3>Run the foundation model</h3>
-<ol style="list-style-type: decimal">
-<li>Run <code>run_nvidia_gpu.bat</code></li>
-<li>Drag the image on the <a href="https://comfyanonymous.github.io/ComfyUI_examples/flux/">ComfyUI Flux examples</a> page into the ComfyUI page to import the Flux workflow.</li>
-<li>Select the correct files in the interface:
+<div id="when-to-use-tinytopics" class="section level2">
+<h2>When to use tinytopics</h2>
+<p>For standard topic modeling tasks, I think fastTopics is already an excellent
+solution because it is fast and can generate high-quality models with default
+settings (<a href="https://nanx.me/blog/post/sensible-defaults/">sensible defaults</a>).
+Plus, I can’t praise its ergonomic API design enough, which can be
+summarized as “topic modeling for humans”.</p>
+<p>You might find tinytopics a viable alternative option if you care more about:</p>
 <ul>
-<li>Load Diffusion Model - unet_name: <code>flux1-dev.safetensors</code></li>
-<li>DualCLIPLoader - clip_name1: <code>t5xxl_fp8_e4m3fn.safetensors</code>, clip_name2: <code>clip_l.safetensors</code></li>
-<li>Load VAE - vae_name: <code>ae.safetensors</code></li>
-</ul></li>
-</ol>
-<p>Now, the workflow is ready to run. Click “Queue Prompt” to generate the example
-image with the default prompt and seed. It took about 10 seconds on my machine.</p>
+<li><strong>Scale and speed</strong>. For extra-large datasets, tinytopics can leverage GPUs to
+accelerate computations. You can also use <a href="https://pytorch.org/tutorials/distributed/home.html">PyTorch distributed
+training</a> to scale
+across multiple GPUs or machines if single card VRAM is insufficient.</li>
+<li><strong>Model customization</strong>. The constrained neural Poisson NMF in tinytopics
+is a flexible, differentiable model. You can adapt it by adding new layers,
+incorporating regularization, or even integrating other data modalities,
+such as images or videos, for joint modeling.</li>
+</ul>
 </div>
-<div id="add-lora-node-to-the-workflow" class="section level3">
-<h3>Add LoRA node to the workflow</h3>
-<ol style="list-style-type: decimal">
-<li>Right-click on canvas, and select Add Node &gt; loaders &gt; Load LoRA.</li>
-<li>In the new node, select lora_name as the LoRA model file name (<code>.safetensors</code>).</li>
-<li>Insert the “Load LoRA” node between the “Load Diffusion Model” node and
-the “BasicGuider” node, to do this:
+<div id="when-not-to-use-tinytopics" class="section level2">
+<h2>When not to use tinytopics</h2>
+<p>tinytopics might not be the best option if you need:</p>
 <ul>
-<li>Connect the Load diffusion model node’s <code>MODEL</code> output to the
-Load LoRA node’s <code>model</code> input.</li>
-<li>Connect the DualCLIPLoader node’s <code>CLIP</code> output to the
-Load LoRA node’s <code>clip</code> input.</li>
-<li>Connect the Load LoRA node’s <code>MODEL</code> output to the
-BasicGuider node’s <code>model</code> input.</li>
-<li>Connect the Load LoRA node’s <code>CLIP</code> output to the
-CLIP Text Encode (Positive Prompt) node’s <code>clip</code> input.</li>
-</ul></li>
-</ol>
-<p>Write the prompt with the LoRA adapter’s “trigger words”. The words are often
-listed in the <code>README.md</code> files of the LoRA repos.</p>
-<p>Click “Queue Prompt” to generate images. If you click it many times, they
-will be queued and generated sequentially. Besides displaying on the interface
-once, all generated images will be stored in <code>ComfyUI/output</code>.</p>
-<div class="float">
-<img src="images/flux-lora-comfyui.png" alt="Running a Flux1.dev + LoRA workflow in ComfyUI." />
-<div class="figcaption">Running a Flux1.dev + LoRA workflow in ComfyUI.</div>
+<li><strong>Theoretical guarantees</strong>. Since tinytopics solves an approximate version
+of the exact Poisson NMF problem using stochastic gradient methods, it may
+lack the convergence, consistency, and identifiability guarantees often
+found in classical algorithms.</li>
+<li><strong>Minimal parameter tuning</strong>. While tinytopics uses modern stochastic gradient
+optimizers and schedulers, you might still need to adjust hyperparameters to
+get optimal results, depending on your dataset. This can require some
+empirical fine-tuning and can be tricky to get right.</li>
+</ul>
 </div>
-<p>To exit, press Ctrl + C in the terminal and then press Y.</p>
-<p>Now I’ve done it — writing my first “open source AI” blog post! 🤗</p>
+<div id="examples" class="section level2">
+<h2>Examples</h2>
+<p>I created three vignettes to demonstrate tinytopics’ functionality,
+result accuracy, and performance on GPU:</p>
+<ul>
+<li><a href="https://nanx.me/tinytopics/articles/get-started/">Getting started guide with synthetic count data</a>.</li>
+<li><a href="https://nanx.me/tinytopics/articles/benchmark/">CPU vs. GPU training speed benchmark</a>.</li>
+<li><a href="https://nanx.me/tinytopics/articles/text/">Text data topic modeling example</a>.</li>
+</ul>
+</div>
+<div id="python-toolchain-that-simplified-development" class="section level2">
+<h2>Python toolchain that simplified development</h2>
+<p>I wanted to thank the creators of the following software for improving the
+Python package development experience:</p>
+<ul>
+<li><a href="https://pytorch.org/">PyTorch</a>.
+It just works. If you are going to build for GPU, choose PyTorch.</li>
+<li><a href="https://squidfunk.github.io/mkdocs-material/">mkdocs-material</a>.
+A Markdown-first documentation website framework that, with mkdocs and mkdocstrings,
+makes package documentation generation efficient and enjoyable.</li>
+<li><a href="https://rye.astral.sh/">Rye</a>.
+The package and project environment manager I wish I had known earlier!
+I’m grateful that my friend <a href="https://github.com/svm-zhang">Simo</a> suggested
+Rye and Neovim so that I can focus on writing code and be more productive.</li>
+</ul>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<style type="text/css">
+.references { font-size: 1.125rem; }
+</style>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-carbonetto2022nmf" class="csl-entry">
+Carbonetto, Peter, Abhishek Sarkar, Zihao Wang, and Matthew Stephens. 2022. <span>“Non-Negative Matrix Factorization Algorithms Greatly Improve Topic Model Fits.”</span> <em>arXiv Preprint arXiv:2105.13440</em>. <a href="https://arxiv.org/abs/2105.13440">https://arxiv.org/abs/2105.13440</a>.
+</div>
 </div>
 </div>
 
@@ -313,10 +307,10 @@ once, all generated images will be stored in <code>ComfyUI/output</code>.</p>
                     <div class="row navigation-btns">
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/group-sequential-trials-industry-30-years/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                            <a href="https://nanx.me/blog/post/flux-lora/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« Group sequential trials in industry: a 30-year perspective</div>
+                                    <div class="pagination-nav-label">« FLUX.1 &#43; LoRA for styled image generation</div>
                                 </div>
                             </a>
                             
@@ -324,12 +318,12 @@ once, all generated images will be stored in <code>ComfyUI/output</code>.</p>
 
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/tinytopics/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF »</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
                                 </div>
-                            </a>
+                            </div>
                             
                         </div>
                     </div>
