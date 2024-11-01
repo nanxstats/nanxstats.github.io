@@ -643,7 +643,7 @@
       <link>https://nanx.me/software/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/software/</guid>
-      <description>R packages | Python packages Web applications | Machine learning workflows Open source code contributions | Awesome lists VS Code extensions | Hugo/blogdown themes R packages Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm Minimalist implementation of model stacking for gradient boosted tree models built by xgboost, lightgbm, and catboost</description>
+      <description>Python packages | R packages Web applications | Machine learning workflows Open source code contributions | Awesome lists VS Code extensions | Hugo/blogdown themes Python packages tinytopics GPU-accelerated topic modeling via sum-to-one constrained neural Poisson NMF. PyPI | GitHub R packages Infrastructure and automation pkglite Compact package representations CRAN | GitHub | Paper Statistical machine learning msaenet Multi-step adaptive estimation for sparse regressions CRAN | GitHub | Paper stackgbm Minimalist</description>
     </item>
     <item>
       <title>Talks</title>
