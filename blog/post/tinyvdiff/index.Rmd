@@ -1,0 +1,112 @@
+---
+title: "tinyvdiff: Minimalist visual regression testing plugin for pytest"
+author: "Nan Xiao"
+date: "2024-12-04T21:53:00"
+slug: tinyvdiff
+categories: []
+tags:
+  - Python
+  - Python packages
+  - pytest
+  - visual regression testing
+  - software engineering
+meta_img: "image/zdenek-machacek-RiM-wOomC6w-unsplash.jpg"
+description: >
+  Introducing tinyvdiff, a minimalist pytest plugin for visual regression
+  testing in Python. Designed for reproducible workflows, tinyvdiff converts
+  PDFs into SVG snapshots for comparing appearance changes in graphics and
+  documents. This post explores its motivation, methodology, and use cases.
+---
+
+![Hummingbirds.
+Photo by [Zdeněk Macháček](https://unsplash.com/photos/RiM-wOomC6w).
+](/image/zdenek-machacek-RiM-wOomC6w-unsplash.jpg)
+
+I'm delighted to announce my second Python package,
+[tinyvdiff](https://nanx.me/tinyvdiff/), now available on PyPI.
+It offers a lightweight pytest plugin for detecting appearance changes
+in visual content, such as figures or documents. You can install it with:
+
+```bash
+pip install tinyvdiff
+```
+
+## Setup and usage
+
+Here is an example test for matplotlib graphics,
+from the [tinyvdiff demo project](https://github.com/nanxstats/tinyvdiff-demo):
+
+```python
+import pytest
+
+from tinyvdiff_demo.matplotlib import generate_plot
+
+
+@pytest.fixture
+def temp_pdf(tmp_path):
+    """Fixture to create a temporary PDF file path"""
+    return tmp_path / "test.pdf"
+
+
+def test_matplotlib_visual(tinyvdiff, temp_pdf):
+    """Test visual regression with PDF generated with matplotlib"""
+    pdf_path = generate_plot(temp_pdf)
+    tinyvdiff.assert_pdf_snapshot(pdf_path, "snapshot_matplotlib.svg")
+```
+
+See the [setup guide](https://nanx.me/tinyvdiff/articles/setup/) to learn
+how to integrate tinyvdiff into your Python project and use it
+in CI/CD systems like GitHub Actions.
+
+## Motivation
+
+While transitioning parts of my toolchain to Python, I encountered a need
+for a unified approach to test the visual appearance of rendered outputs,
+such as graphics and documents.
+In R, tools like [testthat snapshot
+tests](https://testthat.r-lib.org/articles/snapshotting.html) and
+[vdiffr](https://vdiffr.r-lib.org/) address similar needs effectively.
+However, with all the flexibility, I saw an opportunity to explore this
+space a bit more in Python.
+
+## The trilemma
+
+The design considerations for tinyvdiff are detailed in its
+[design document](https://nanx.me/tinyvdiff/articles/design/).
+In brief, I identified three key requirements that define a trilemma
+for visual regression testing:
+
+1. **Support for diverse input formats**:
+   Handle graphics and documents produced by different backends.
+2. **Bitwise reproducibility of snapshots**:
+   Store snapshots in plain text for easy version control and comparison.
+3. **Environment consistency**:
+   Generate consistent snapshots across operating systems.
+
+## My solution
+
+Given the constraints of this trilemma:
+
+- Dropping constraints 2 and 3 leads to testthat "whole file snapshotting".
+- Dropping constraint 1 while keeping 2 and 3 leads to vdiffr.
+- Dropping constraint 3 while keeping 1 and 2 gives tinyvdiff.
+
+tinyvdiff operates on the assumption that visual regression tests will be
+running on a single platform. Developers are also trusted to prepare
+reproducible PDF inputs in their preferred way.
+The package then uses `pdf2svg` (built on Poppler and Cairo) to
+convert PDF files into SVG snapshots for comparison.
+
+## Use cases
+
+tinyvdiff may be a good fit for projects where:
+
+- Visual tests can be sufficiently done on a single platform.
+- Multiple types of visual content require appearance testing.
+- PDF inputs are reproducible and contain mostly vector elements.
+- Snapshots remain manageable in size and complexity.
+
+If any of these conditions are not met, other more focused approaches
+might better suit your needs. For example, matplotlib has built-in
+[testing helpers for image comparison](https://matplotlib.org/stable/api/testing_api.html),
+which works great for testing the appearance of its outputs.

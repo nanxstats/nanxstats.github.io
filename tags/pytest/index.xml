@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Python packages on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/python-packages/</link>
-    <description>Recent content in Python packages on Nan Xiao | 肖楠</description>
+    <title>pytest on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/pytest/</link>
+    <description>Recent content in pytest on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 04 Dec 2024 21:53:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/python-packages/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/pytest/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tinyvdiff: Minimalist visual regression testing plugin for pytest</title>
       <link>https://nanx.me/blog/post/tinyvdiff/</link>
       <pubDate>Wed, 04 Dec 2024 21:53:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/tinyvdiff/</guid>
       <description>Hummingbirds. Photo by Zdeněk Macháček. I’m delighted to announce my second Python package, tinyvdiff, now available on PyPI. It offers a lightweight pytest plugin for detecting appearance changes in visual content, such as figures or documents. You can install it with:&#xA;pip install tinyvdiff Setup and usage Here is an example test for matplotlib graphics, from the tinyvdiff demo project:&#xA;import pytest from tinyvdiff_demo.matplotlib import generate_plot @pytest.fixture def temp_pdf(tmp_path): &amp;quot;&amp;quot;&amp;quot;Fixture to create a temporary PDF file path&amp;quot;&amp;quot;&amp;quot; return tmp_path / &amp;quot;test.</description>
-    </item>
-    <item>
-      <title>tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF</title>
-      <link>https://nanx.me/blog/post/tinytopics/</link>
-      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/tinytopics/</guid>
-      <description>Downhill mountain biking. Photo by Tim Foster. I’m excited to share that my first Python package, tinytopics, is now available on PyPI. You can install it using&#xA;pip3 install tinytopics tinytopics is a minimalist solution designed to scale up topic modeling tasks on CPUs and GPUs using PyTorch.&#xA;Motivation Fitting topic models at scale using classical algorithms on CPUs can be slow. Carbonetto et al. (2022) demonstrated the equivalence between Poisson non-negative matrix factorization (NMF) and multinomial topic model likelihoods.</description>
     </item>
   </channel>
 </rss>
