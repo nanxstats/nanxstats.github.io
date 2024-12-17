@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Dec 2024 21:53:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2024 00:42:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>awk</title>
+      <link>https://nanx.me/tags/awk/</link>
+      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/awk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PowerShell</title>
+      <link>https://nanx.me/tags/powershell/</link>
+      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RStudio IDE</title>
+      <link>https://nanx.me/tags/rstudio-ide/</link>
+      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rstudio-ide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>splash screen</title>
+      <link>https://nanx.me/tags/splash-screen/</link>
+      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/splash-screen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>user experience</title>
+      <link>https://nanx.me/tags/user-experience/</link>
+      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/user-experience/</guid>
+      <description></description>
+    </item>
     <item>
       <title>pytest</title>
       <link>https://nanx.me/tags/pytest/</link>
@@ -237,13 +286,6 @@
       <link>https://nanx.me/tags/quarto/</link>
       <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
       <guid>https://nanx.me/tags/quarto/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     <item>
@@ -625,13 +667,6 @@
       <description></description>
     </item>
     <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>D3.js</title>
       <link>https://nanx.me/tags/d3.js/</link>
       <pubDate>Fri, 23 Jun 2023 21:00:00 +0000</pubDate>
@@ -811,13 +846,6 @@
       <link>https://nanx.me/tags/ace/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ace/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>RStudio IDE</title>
-      <link>https://nanx.me/tags/rstudio-ide/</link>
-      <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rstudio-ide/</guid>
       <description></description>
     </item>
     <item>

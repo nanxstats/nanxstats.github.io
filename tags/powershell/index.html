@@ -4,32 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> tinyvdiff: Minimalist visual regression testing plugin for pytest - Nan Xiao | 肖楠 </title>
+    <title> PowerShell - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Introducing tinyvdiff, a minimalist pytest plugin for visual regression testing in Python. Designed for reproducible workflows, tinyvdiff converts PDFs into SVG snapshots for comparing appearance changes in graphics and documents. This post explores its motivation, methodology, and use cases.
-" />
+    <meta name="description" content="" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/tinyvdiff/" />
-    <meta property="og:title" content="tinyvdiff: Minimalist visual regression testing plugin for pytest" />
-    <meta property="og:image" content="https://nanx.me/image/zdenek-machacek-RiM-wOomC6w-unsplash.jpg" />
-    <meta property="og:description" content="Introducing tinyvdiff, a minimalist pytest plugin for visual regression testing in Python. Designed for reproducible workflows, tinyvdiff converts PDFs into SVG snapshots for comparing appearance changes in graphics and documents. This post explores its motivation, methodology, and use cases.
-" />
+    <meta property="og:url" content="https://nanx.me/tags/powershell/" />
+    <meta property="og:title" content="PowerShell" />
+    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="tinyvdiff: Minimalist visual regression testing plugin for pytest" />
-    <meta name="twitter:description" content="Introducing tinyvdiff, a minimalist pytest plugin for visual regression testing in Python. Designed for reproducible workflows, tinyvdiff converts PDFs into SVG snapshots for comparing appearance changes in graphics and documents. This post explores its motivation, methodology, and use cases.
-" />
-    <meta name="twitter:image" content="https://nanx.me/image/zdenek-machacek-RiM-wOomC6w-unsplash.jpg" />
+    <meta name="twitter:title" content="PowerShell" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/tinyvdiff/">
+    <link rel="canonical" href="https://nanx.me/tags/powershell/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -44,6 +41,8 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
+    
+    <link href="https://nanx.me/tags/powershell/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -71,7 +70,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog active"
+                                <a class="nav-link text-blog"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -130,204 +129,43 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">tinyvdiff: Minimalist visual regression testing plugin for pytest</h1>
-
-                <div class="mb-md-4 meta">
-                    
-                    
-                    <span class="author" title="Nan Xiao">
-                        Nan Xiao
-                    </span>
-                    
-                    
-
-                    <span class="date middot" title='Wed Dec 4 2024 21:53:00 UTC'>
-                        December 4, 2024
-                    </span>
-
-                    <span class="reading-time middot">
-                        2 min read
-                    </span>
-
-                    <div class="d-none d-md-block mt-2 tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/python">Python</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/python-packages">Python packages</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/pytest">pytest</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/visual-regression-testing">visual regression testing</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/software-engineering">software engineering</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="d-none d-md-inline tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="markdown blog-post-content">
+                <div class="markdown">
                     
     
 
 
-<div class="float">
-<img src="https://nanx.me/image/zdenek-machacek-RiM-wOomC6w-unsplash.jpg" alt="Hummingbirds. Photo by Zdeněk Macháček." />
-<div class="figcaption">Hummingbirds.
-Photo by <a href="https://unsplash.com/photos/RiM-wOomC6w">Zdeněk Macháček</a>.</div>
-</div>
-<p>I’m delighted to announce my second Python package,
-<a href="https://nanx.me/tinyvdiff/">tinyvdiff</a>, now available on PyPI.
-It offers a lightweight pytest plugin for detecting appearance changes
-in visual content, such as figures or documents. You can install it with:</p>
-<pre class="bash"><code>pip install tinyvdiff</code></pre>
-<div id="setup-and-usage" class="section level2">
-<h2>Setup and usage</h2>
-<p>Here is an example test for matplotlib graphics,
-from the <a href="https://github.com/nanxstats/tinyvdiff-demo">tinyvdiff demo project</a>:</p>
-<pre class="python"><code>import pytest
-
-from tinyvdiff_demo.matplotlib import generate_plot
-
-
-@pytest.fixture
-def temp_pdf(tmp_path):
-    &quot;&quot;&quot;Fixture to create a temporary PDF file path&quot;&quot;&quot;
-    return tmp_path / &quot;test.pdf&quot;
-
-
-def test_matplotlib_visual(tinyvdiff, temp_pdf):
-    &quot;&quot;&quot;Test visual regression with PDF generated with matplotlib&quot;&quot;&quot;
-    pdf_path = generate_plot(temp_pdf)
-    tinyvdiff.assert_pdf_snapshot(pdf_path, &quot;snapshot_matplotlib.svg&quot;)</code></pre>
-<p>See the <a href="https://nanx.me/tinyvdiff/articles/setup/">setup guide</a> to learn
-how to integrate tinyvdiff into your Python project and use it
-in CI/CD systems like GitHub Actions.</p>
-</div>
-<div id="motivation" class="section level2">
-<h2>Motivation</h2>
-<p>While transitioning parts of my toolchain to Python, I encountered a need
-for a unified approach to test the visual appearance of rendered outputs,
-such as graphics and documents.
-In R, tools like <a href="https://testthat.r-lib.org/articles/snapshotting.html">testthat snapshot
-tests</a> and
-<a href="https://vdiffr.r-lib.org/">vdiffr</a> address similar needs effectively.
-However, with all the flexibility, I saw an opportunity to explore this
-space a bit more in Python.</p>
-</div>
-<div id="the-trilemma" class="section level2">
-<h2>The trilemma</h2>
-<p>The design considerations for tinyvdiff are detailed in its
-<a href="https://nanx.me/tinyvdiff/articles/design/">design document</a>.
-In brief, I identified three key requirements that define a trilemma
-for visual regression testing:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Support for diverse input formats</strong>:
-Handle graphics and documents produced by different backends.</li>
-<li><strong>Bitwise reproducibility of snapshots</strong>:
-Store snapshots in plain text for easy version control and comparison.</li>
-<li><strong>Environment consistency</strong>:
-Generate consistent snapshots across operating systems.</li>
-</ol>
-</div>
-<div id="my-solution" class="section level2">
-<h2>My solution</h2>
-<p>Given the constraints of this trilemma:</p>
-<ul>
-<li>Dropping constraints 2 and 3 leads to testthat “whole file snapshotting”.</li>
-<li>Dropping constraint 1 while keeping 2 and 3 leads to vdiffr.</li>
-<li>Dropping constraint 3 while keeping 1 and 2 gives tinyvdiff.</li>
-</ul>
-<p>tinyvdiff operates on the assumption that visual regression tests will be
-running on a single platform. Developers are also trusted to prepare
-reproducible PDF inputs in their preferred way.
-The package then uses <code>pdf2svg</code> (built on Poppler and Cairo) to
-convert PDF files into SVG snapshots for comparison.</p>
-</div>
-<div id="use-cases" class="section level2">
-<h2>Use cases</h2>
-<p>tinyvdiff may be a good fit for projects where:</p>
-<ul>
-<li>Visual tests can be sufficiently done on a single platform.</li>
-<li>Multiple types of visual content require appearance testing.</li>
-<li>PDF inputs are reproducible and contain mostly vector elements.</li>
-<li>Snapshots remain manageable in size and complexity.</li>
-</ul>
-<p>If any of these conditions are not met, other more focused approaches
-might better suit your needs. For example, matplotlib has built-in
-<a href="https://matplotlib.org/stable/api/testing_api.html">testing helpers for image comparison</a>,
-which works great for testing the appearance of its outputs.</p>
-</div>
-
-
-
                 </div>
 
-                
-                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
-                    <div class="row navigation-btns">
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/tinytopics/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« tinytopics: GPU-accelerated topic modeling via constrained neural Poisson NMF</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/rstudio-splash-screen/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">Skip RStudio splash screen »</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-                    </div>
-                </nav>
-                
-
+                <div class="posts">
+                    <h1>Posts about PowerShell</h1>
+                    <hr>
+                    <ul class="list-unstyled">
+                        
+                        <li class="groupby">2024</li>
+                        
+                        <li class="post-item">
+    <a href="https://nanx.me/blog/post/rstudio-splash-screen/">
+        <div class="inner-post-item">
+            <div class="row">
+                <div class="col-md-10 meta-title">
+                    Skip RStudio splash screen
+                </div>
+                <div class="col-md-2 meta-date text-md-end">
+                    2024-12-17
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<section id="comments">
-    <div class="py-3 content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="mx-auto w-700">
-                    <div class="comments">
-                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
-                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
-                            </script>
-                    </div>
+    </a>
+</li>
+                        
+                        
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 <div class="footer mt-5">
     <div class="container">
 
@@ -429,6 +267,12 @@ which works great for testing the appearance of its outputs.</p>
                                 Colophon</a></li>
                         
 
+                        
+                        <li><a href="https://nanx.me/tags/powershell/index.xml" class="mr-0">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#octicons-rss"></use>
+                                </svg>
+                                RSS</a></li>
                         
 
                         

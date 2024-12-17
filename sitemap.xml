@@ -2,11 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/tags/automation/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/awk/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2024-12-04T21:53:00+00:00</lastmod>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2024-12-04T21:53:00+00:00</lastmod>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/powershell/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rstudio-ide/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/rstudio-splash-screen/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/splash-screen/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/user-experience/</loc>
+    <lastmod>2024-12-17T00:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/pytest/</loc>
     <lastmod>2024-12-04T21:53:00+00:00</lastmod>
@@ -18,9 +45,6 @@
     <lastmod>2024-12-04T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-engineering/</loc>
-    <lastmod>2024-12-04T21:53:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2024-12-04T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/tinyvdiff/</loc>
@@ -120,9 +144,6 @@
     <lastmod>2024-09-15T19:28:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/quarto/</loc>
-    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2024-09-15T19:28:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/r-windows-paths/</loc>
@@ -326,9 +347,6 @@
     <loc>https://nanx.me/tags/software-architecture/</loc>
     <lastmod>2023-06-27T22:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2023-06-23T21:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/research-word-cloud/</loc>
     <lastmod>2023-06-23T21:00:00+00:00</lastmod>
   </url><url>
@@ -444,9 +462,6 @@
     <lastmod>2023-01-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/vscode-textmate-rstheme/</loc>
-    <lastmod>2023-01-02T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rstudio-ide/</loc>
     <lastmod>2023-01-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/textmate/</loc>
