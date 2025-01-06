@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>snapshot testing on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/snapshot-testing/</link>
+    <description>Recent content in snapshot testing on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Jan 2025 22:58:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/snapshot-testing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customize testthat snapshot directory with monkey patching</title>
+      <link>https://nanx.me/blog/post/testthat-snapshot-monkey-patch/</link>
+      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/testthat-snapshot-monkey-patch/</guid>
+      <description>Memories instant photo. Photo by Kelly Sikkema. Problem Snapshot testing has been supported in testthat since testthat 3.0.0. By default, snapshot files are saved to a hardcoded directory:&#xA;tests/testthat/_snaps/ Unfortunately, testthat does not provide a public API to customize this directory. This question has been raised in issues like r-lib/testthat#1623, suggesting that customizing the snapshot directory is a valid use case.&#xA;Solution Without a public API, the most practical solution is to modify testthat’s internal behavior at runtime through monkey patching.</description>
+    </item>
+  </channel>
+</rss>

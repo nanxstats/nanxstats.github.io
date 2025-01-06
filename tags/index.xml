@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Dec 2024 00:42:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2025 22:58:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>monkey patching</title>
+      <link>https://nanx.me/tags/monkey-patching/</link>
+      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/monkey-patching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>snapshot testing</title>
+      <link>https://nanx.me/tags/snapshot-testing/</link>
+      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/snapshot-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>testthat</title>
+      <link>https://nanx.me/tags/testthat/</link>
+      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/testthat/</guid>
+      <description></description>
+    </item>
     <item>
       <title>automation</title>
       <link>https://nanx.me/tags/automation/</link>
@@ -27,13 +55,6 @@
       <link>https://nanx.me/tags/powershell/</link>
       <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
       <guid>https://nanx.me/tags/powershell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     <item>

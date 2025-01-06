@@ -4,32 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Skip RStudio splash screen - Nan Xiao | 肖楠 </title>
+    <title> testthat - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Learn how to skip the RStudio IDE splash screen using simple automation scripts for macOS, Linux, and Windows.
-" />
+    <meta name="description" content="" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/rstudio-splash-screen/" />
-    <meta property="og:title" content="Skip RStudio splash screen" />
-    <meta property="og:image" content="https://nanx.me/image/josh-hild-igLQW_yY9oo-unsplash.jpg" />
-    <meta property="og:description" content="Learn how to skip the RStudio IDE splash screen using simple automation scripts for macOS, Linux, and Windows.
-" />
+    <meta property="og:url" content="https://nanx.me/tags/testthat/" />
+    <meta property="og:title" content="testthat" />
+    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Skip RStudio splash screen" />
-    <meta name="twitter:description" content="Learn how to skip the RStudio IDE splash screen using simple automation scripts for macOS, Linux, and Windows.
-" />
-    <meta name="twitter:image" content="https://nanx.me/image/josh-hild-igLQW_yY9oo-unsplash.jpg" />
+    <meta name="twitter:title" content="testthat" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/rstudio-splash-screen/">
+    <link rel="canonical" href="https://nanx.me/tags/testthat/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -44,6 +41,8 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
+    
+    <link href="https://nanx.me/tags/testthat/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -71,7 +70,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog active"
+                                <a class="nav-link text-blog"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -130,192 +129,43 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Skip RStudio splash screen</h1>
-
-                <div class="mb-md-4 meta">
-                    
-                    
-                    <span class="author" title="Nan Xiao">
-                        Nan Xiao
-                    </span>
-                    
-                    
-
-                    <span class="date middot" title='Tue Dec 17 2024 00:42:00 UTC'>
-                        December 17, 2024
-                    </span>
-
-                    <span class="reading-time middot">
-                        2 min read
-                    </span>
-
-                    <div class="d-none d-md-block mt-2 tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/r">R</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/rstudio-ide">RStudio IDE</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/splash-screen">splash screen</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/user-experience">user experience</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/automation">automation</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/awk">awk</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/powershell">PowerShell</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="d-none d-md-inline tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="markdown blog-post-content">
+                <div class="markdown">
                     
     
 
 
-<div class="float">
-<img src="https://nanx.me/image/josh-hild-igLQW_yY9oo-unsplash.jpg" alt="Skating at Venice Beach, Los Angeles. Photo by Josh Hild." />
-<div class="figcaption">Skating at Venice Beach, Los Angeles.
-Photo by <a href="https://unsplash.com/photos/igLQW_yY9oo">Josh Hild</a>.</div>
-</div>
-<p>Starting with RStudio IDE version 2024.12.0+467, a redesigned splash screen
-replaces the previous app logo.
-This change was introduced in
-<a href="https://github.com/rstudio/rstudio/pull/15347">rstudio/rstudio#15347</a>
-and it looks like this:</p>
-<div class="float">
-<img src="rstudio-splash-screen.png" alt="New splash screen design in RStudio IDE 2024.12+." />
-<div class="figcaption">New splash screen design in RStudio IDE 2024.12+.</div>
-</div>
-<p>While visually polished, the new splash screen feels slightly too shiny
-(no pun intended) and adds a delay to the
-<a href="https://web.dev/articles/user-centric-performance-metrics">perceived time</a>
-before I can first interact with the UI.
-For research purporses, I was curious to see if skipping it was possible
-and I found a simple solution. The relevant file is located at:</p>
-<pre class="text"><code>resources/app/.webpack/renderer/splash/index.html</code></pre>
-<p>By replacing the first <code>&lt;style&gt;</code> block with the following line,
-you can make the splash screen invisible:</p>
-<pre class="html"><code>&lt;style&gt; body { display: none; } &lt;/style&gt;</code></pre>
-<p>To apply this tweak, you can use the automation scripts below.</p>
-<div id="macos" class="section level2">
-<h2>macOS</h2>
-<p>Run the following two-liner in your terminal:</p>
-<pre class="bash"><code>file=&quot;/Applications/RStudio.app/Contents/Resources/app/.webpack/renderer/splash/index.html&quot;; \
-awk &#39;BEGIN{RS=&quot;&lt;/style&gt;&quot;; ORS=&quot;&quot;} NR==1 {sub(/&lt;style&gt;[^&lt;]*$/, &quot;&lt;style&gt; body { display: none; }&quot;)}; {print $0 RS}&#39; &quot;$file&quot; &gt; &quot;$file.tmp&quot; &amp;&amp; mv &quot;$file.tmp&quot; &quot;$file&quot;</code></pre>
-</div>
-<div id="linux" class="section level2">
-<h2>Linux</h2>
-<p>On Linux, use the same <code>awk</code> command and adjust the file path.</p>
-<p>For example, on Ubuntu, save this script as <code>patch_rstudio_splash.sh</code>:</p>
-<pre class="bash"><code>file=&quot;/usr/lib/rstudio/resources/app/.webpack/renderer/splash/index.html&quot;; \
-awk &#39;BEGIN{RS=&quot;&lt;/style&gt;&quot;; ORS=&quot;&quot;} NR==1 {sub(/&lt;style&gt;[^&lt;]*$/, &quot;&lt;style&gt; body { display: none; }&quot;)}; {print $0 RS}&#39; &quot;$file&quot; &gt; &quot;$file.tmp&quot; &amp;&amp; mv &quot;$file.tmp&quot; &quot;$file&quot;</code></pre>
-<p>Make it executable and run it with <code>sudo</code>:</p>
-<pre class="bash"><code>chmod +x patch_rstudio_splash.sh
-sudo ./patch_rstudio_splash.sh</code></pre>
-</div>
-<div id="windows" class="section level2">
-<h2>Windows</h2>
-<p>Save the following as <code>patch_rstudio_splash.ps1</code>:</p>
-<pre class="powershell"><code>$file = &quot;C:\Program Files\RStudio\resources\app\.webpack\renderer\splash\index.html&quot;
-
-if (-Not (Test-Path -Path $file)) {
-    Write-Error &quot;File not found: $file&quot;
-    exit
-}
-
-$content = Get-Content -Raw -Path $file
-
-$content = [regex]::Replace($content, &quot;&lt;style&gt;.*?&lt;/style&gt;&quot;, &quot;&lt;style&gt; body { display: none; } &lt;/style&gt;&quot;, &#39;Singleline&#39;)
-
-Set-Content -Path $file -Value $content
-
-Write-Output &quot;Patch applied successfully: Splash screen is now invisible.&quot;</code></pre>
-<p>Open PowerShell as administrator:</p>
-<ul>
-<li>Open start menu, search for “PowerShell”.</li>
-<li>Right-click “Windows PowerShell” and select “Run as administrator”.</li>
-<li>Click “Yes” when prompted by User Access Control.</li>
-</ul>
-<p>Run the script in the privileged window:</p>
-<pre class="batch"><code>.\patch_rstudio_splash.ps1</code></pre>
-</div>
-
-
-
                 </div>
 
-                
-                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
-                    <div class="row navigation-btns">
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/tinyvdiff/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« tinyvdiff: Minimalist visual regression testing plugin for pytest</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/testthat-snapshot-monkey-patch/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">Customize testthat snapshot directory with monkey patching »</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-                    </div>
-                </nav>
-                
-
+                <div class="posts">
+                    <h1>Posts about testthat</h1>
+                    <hr>
+                    <ul class="list-unstyled">
+                        
+                        <li class="groupby">2025</li>
+                        
+                        <li class="post-item">
+    <a href="https://nanx.me/blog/post/testthat-snapshot-monkey-patch/">
+        <div class="inner-post-item">
+            <div class="row">
+                <div class="col-md-10 meta-title">
+                    Customize testthat snapshot directory with monkey patching
+                </div>
+                <div class="col-md-2 meta-date text-md-end">
+                    2025-01-05
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<section id="comments">
-    <div class="py-3 content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="mx-auto w-700">
-                    <div class="comments">
-                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
-                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
-                            </script>
-                    </div>
+    </a>
+</li>
+                        
+                        
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 <div class="footer mt-5">
     <div class="container">
 
@@ -418,6 +268,12 @@ Write-Output &quot;Patch applied successfully: Splash screen is now invisible.&q
                         
 
                         
+                        <li><a href="https://nanx.me/tags/testthat/index.xml" class="mr-0">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#octicons-rss"></use>
+                                </svg>
+                                RSS</a></li>
+                        
 
                         
                     </ul>
@@ -447,9 +303,6 @@ Write-Output &quot;Patch applied successfully: Splash screen is now invisible.&q
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>

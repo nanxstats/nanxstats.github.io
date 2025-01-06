@@ -1,0 +1,108 @@
+---
+title: "Customize testthat snapshot directory with monkey patching"
+author: "Nan Xiao"
+date: "2025-01-05T22:58:00"
+slug: testthat-snapshot-monkey-patch
+categories: []
+tags:
+  - R
+  - testthat
+  - snapshot testing
+  - monkey patching
+meta_img: "image/kelly-sikkema-jIrsEPB4_iU-unsplash.jpg"
+description: >
+  Learn how to customize the default snapshot directory in testthat using
+  monkey patching in R. This post provides a practical solution for modifying
+  testthat internals to meet your project's needs, with clear examples and
+  caveats to maximize compatibility and portability.
+---
+
+![Memories instant photo.
+Photo by [Kelly Sikkema](https://unsplash.com/photos/jIrsEPB4_iU).
+](/image/kelly-sikkema-jIrsEPB4_iU-unsplash.jpg)
+
+## Problem
+
+Snapshot testing has been supported in testthat since
+[testthat 3.0.0](https://www.tidyverse.org/blog/2020/10/testthat-3-0-0/#snapshot-testing).
+By default, snapshot files are saved to a hardcoded directory:
+
+```text
+tests/testthat/_snaps/
+```
+
+Unfortunately, testthat does not provide a public API to customize this directory.
+This question has been raised in issues like
+[r-lib/testthat#1623](https://github.com/r-lib/testthat/issues/1623),
+suggesting that customizing the snapshot directory is a valid use case.
+
+## Solution
+
+Without a public API, the most practical solution is to modify testthat's
+internal behavior **at runtime** through
+[monkey patching](https://en.wikipedia.org/wiki/Monkey_patch).
+This approach avoids creating a custom version of testthat while allowing
+the flexibility we need.
+
+In R, monkey patching can be easily implemented using namespace utility functions.
+For example, David Lukes
+[described this approach](https://dlukes.github.io/monkey-patching-in-r.html)
+for customizing the range filter behavior in the DT package.
+
+The following code demonstrates how to change the testthat snapshot directory
+by patching relevant internal functions. Add it to `tests/testthat/helper.R`
+or another [testthat helper file](https://r-pkgs.org/testing-design.html#testthat-helper-files):
+
+```r
+#' Modify a testthat function to use a different snapshot directory at runtime
+#'
+#' @param f Function name to modify.
+#' @param new New snapshot directory path.
+#' @param old Old snapshot directory path. Defaults to `"_snaps"`.
+set_snapshot_dir <- function(f, new, old = "_snaps") {
+  func <- getFromNamespace(f, ns = "testthat")
+  code <- deparse(body(func))
+  code <- gsub(sprintf('"%s"', old), sprintf('"%s"', new), code, fixed = TRUE)
+  body(func) <- parse(text = paste(code, collapse = "\n"))
+  assignInNamespace(f, func, ns = "testthat")
+}
+
+set_snapshot_dir("test_files_reporter", "_snapshots")
+set_snapshot_dir("snapshot_meta", "_snapshots")
+```
+
+With this code, snapshots will be saved to `tests/testthat/_snapshots/`
+instead of `tests/testthat/_snaps/`.
+This approach has been tested with testthat 3.2.2
+(the latest release at the time of writing) and retains the original
+snapshot testing behavior:
+
+- You can use `expect_snapshot()` and `expect_snapshot_file()` as usual.
+- The tests run successfully with `devtools::test()` and `R CMD check`
+  without additional notes, warnings, or errors.
+- Repeated test runs do not cause issues, even with the patched functions.
+
+Relative paths are also supported for custom paths. For example, to save
+snapshots in a directory parallel to your package/project directory:
+
+```r
+set_snapshot_dir("test_files_reporter", "../../../testdata/_snapshots")
+set_snapshot_dir("snapshot_meta", "../../../testdata/_snapshots")
+```
+
+## Caveats
+
+### Dependency on testthat version
+
+Monkey patching relies on the internal structure of testthat, which may change
+in future versions. To avoid compatibility issues, consider using a dependency
+management tool like renv or
+[shared baselines](https://solutions.posit.co/envs-pkgs/environments/shared/)
+to lock down specific package versions in your project.
+
+### Avoid absolute paths
+
+Avoid using absolute paths for custom snapshot directories. They will reduce
+the portability of your tests across different environments and platforms.
+Relative paths are more robust, as they depend only on the structure of your
+project(s) rather than the file system setup.
