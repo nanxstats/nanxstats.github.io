@@ -82,7 +82,7 @@ This goal led to several key design updates in pkglite for Python:
 
 - **Command-line interface**.
   Alongside the Python API, pkglite for Python includes a CLI built with
-  [typer](https://github.com/fastapi/typer). This enables seamless integration
+  [Typer](https://github.com/fastapi/typer). This enables seamless integration
   into shell scripts and standard engineering workflows.
 
 - **Optimized tooling**.
