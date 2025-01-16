@@ -1,0 +1,131 @@
+---
+title: "Introducing pkglite for Python"
+author: "Nan Xiao"
+date: "2025-01-16T02:11:00"
+slug: pkglite-python
+categories: []
+tags:
+  - Python
+  - Python packages
+  - pkglite
+  - clinical trials
+  - regulatory submission
+  - reproducible research
+  - retrieval-augmented generation
+bibliography: "pkglite.bib"
+meta_img: "image/yann-allegre-yGprtDYbyoE-unsplash.jpg"
+description: >
+  pkglite for Python is a simple framework to pack source packages
+  written in any language into a text file and restore them,
+  supporting reproducible research and standard engineering workflows
+  across different environments.
+---
+
+![Les Menuires, France. Photo by [Yann Allegre](https://unsplash.com/photos/yGprtDYbyoE).
+](/image/yann-allegre-yGprtDYbyoE-unsplash.jpg)
+
+I am pleased to introduce
+[pkglite for Python](https://pharmaverse.github.io/py-pkglite/),
+now available on PyPI.
+pkglite for Python provides a minimalist framework for packing source packages
+written in any programming language into a text file and restoring them to
+their original directory structure. You can install it with:
+
+```bash
+pip install pkglite
+```
+
+For installation as a global command-line tool,
+[use pipx](https://packaging.python.org/en/latest/guides/installing-stand-alone-command-line-tools/):
+
+```bash
+pipx install pkglite
+```
+
+## Context
+
+Four years ago, we released the R package pkglite,
+designed for bidirectional conversion of R packages.
+The motivation behind pkglite for R, including its role in supporting eCTD
+submissions, was summarized in our
+[_Clinical Trials_ paper](https://nanx.me/blog/post/ectd-pkglite-paper/) [@zhao2023electronic].
+We also explored its application in
+[retrieval-augmented generation](https://nanx.me/blog/post/pkglite-llm-prompt/)
+to provide code context to large language models.
+
+pkglite for R has since been adopted in multiple real-world applications,
+including the first two R Consortium open-source R submissions
+([pilot 1](https://rconsortium.github.io/submissions-wg/pilot1.html),
+[pilot 2](https://rconsortium.github.io/submissions-wg/pilot2.html)),
+and sponsor-led submissions
+([webinar 1](https://youtu.be/t33dS17QHuA?t=2776),
+[webinar 2](https://youtu.be/BlJNILSoZlM?t=2468)).
+It is also featured in the [pharmaverse end-to-end clinical reporting
+packages](https://pharmaverse.org/e2eclinical/esub/).
+
+The overwhelmingly positive feedback on the R package motivated me
+to consider: what's next?
+
+## Creating pkglite for Python
+
+To address this, I asked myself a broader question: what do people need?
+Many colleagues and collaborators of mine use Python and other languages daily.
+Extending the capability to pack and exchange source packages written in their
+language of choice into plain text felt like a natural progression.
+
+This goal led to several key design updates in pkglite for Python:
+
+- **Language-agnostic design**.
+  To support any programming language, I replaced R-specific packing scope
+  specifications with a `.pkgliteignore` configuration file,
+  compliant with the gitignore format standard.
+
+- **Command-line interface**.
+  Alongside the Python API, pkglite for Python includes a CLI built with
+  [typer](https://github.com/fastapi/typer). This enables seamless integration
+  into shell scripts and standard engineering workflows.
+
+- **Optimized tooling**.
+  File type recognition now relies on a content-based
+  [zlib algorithm](https://nanx.me/blog/post/txtvsbin/),
+  replacing file-extension-based methods.
+  The packed file parser has been rewritten using finite state machines
+  for improved maintainability.
+  Additionally, UTF-8 encoding is enforced for all text files across platforms.
+
+## Performance testing
+
+pkglite for Python is developed with performance in mind. Using this
+[`bench.sh`](bench.sh) script, I tested packing and unpacking an entire
+Python project with the virtual environment, which offers a realistic mix
+of text and binary files.
+
+On an M2 MacBook Air (2022), packing the project generated a 1.1 GB text file
+in 16 seconds:
+
+```text
+Packing...
+Packing complete.
+Output file size: 1.18 GB
+Packing time: 16 seconds
+Packing write speed: 76.04 MB/s
+```
+
+Unpacking from the file took only 8 seconds:
+
+```text
+Unpacking...
+Unpacking complete.
+Unpacking time: 8 seconds
+Unpacking read speed: 152.09 MB/s
+```
+
+## Acknowledgements
+
+I am deeply grateful to my original pkglite R package coauthors,
+Keaven Anderson and Yilong Zhang, for their encouragement to explore new ideas.
+My thanks also go to Ross Farrugia and the pharmaverse council for including
+the package and providing GitHub hosting, plus everyone who kindly contributed
+valuable time for code reviews and validations.
+
+## References

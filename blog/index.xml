@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Jan 2025 22:58:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2025 02:11:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing pkglite for Python</title>
+      <link>https://nanx.me/blog/post/pkglite-python/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/pkglite-python/</guid>
+      <description>Les Menuires, France. Photo by Yann Allegre. I am pleased to introduce pkglite for Python, now available on PyPI. pkglite for Python provides a minimalist framework for packing source packages written in any programming language into a text file and restoring them to their original directory structure. You can install it with:&#xA;pip install pkglite For installation as a global command-line tool, use pipx:&#xA;pipx install pkglite Context Four years ago, we released the R package pkglite, designed for bidirectional conversion of R packages.</description>
+    </item>
     <item>
       <title>Customize testthat snapshot directory with monkey patching</title>
       <link>https://nanx.me/blog/post/testthat-snapshot-monkey-patch/</link>

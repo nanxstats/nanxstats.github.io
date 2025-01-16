@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Customize testthat snapshot directory with monkey patching - Nan Xiao | 肖楠 </title>
+    <title> Introducing pkglite for Python - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Learn how to customize the default snapshot directory in testthat using monkey patching in R. This post provides a practical solution for modifying testthat internals to meet your project&#39;s needs, with clear examples and caveats to maximize compatibility and portability.
+    <meta name="description" content="pkglite for Python is a simple framework to pack source packages written in any language into a text file and restore them, supporting reproducible research and standard engineering workflows across different environments.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/testthat-snapshot-monkey-patch/" />
-    <meta property="og:title" content="Customize testthat snapshot directory with monkey patching" />
-    <meta property="og:image" content="https://nanx.me/image/kelly-sikkema-jIrsEPB4_iU-unsplash.jpg" />
-    <meta property="og:description" content="Learn how to customize the default snapshot directory in testthat using monkey patching in R. This post provides a practical solution for modifying testthat internals to meet your project&#39;s needs, with clear examples and caveats to maximize compatibility and portability.
+    <meta property="og:url" content="https://nanx.me/blog/post/pkglite-python/" />
+    <meta property="og:title" content="Introducing pkglite for Python" />
+    <meta property="og:image" content="https://nanx.me/image/yann-allegre-yGprtDYbyoE-unsplash.jpg" />
+    <meta property="og:description" content="pkglite for Python is a simple framework to pack source packages written in any language into a text file and restore them, supporting reproducible research and standard engineering workflows across different environments.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Customize testthat snapshot directory with monkey patching" />
-    <meta name="twitter:description" content="Learn how to customize the default snapshot directory in testthat using monkey patching in R. This post provides a practical solution for modifying testthat internals to meet your project&#39;s needs, with clear examples and caveats to maximize compatibility and portability.
+    <meta name="twitter:title" content="Introducing pkglite for Python" />
+    <meta name="twitter:description" content="pkglite for Python is a simple framework to pack source packages written in any language into a text file and restore them, supporting reproducible research and standard engineering workflows across different environments.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/kelly-sikkema-jIrsEPB4_iU-unsplash.jpg" />
+    <meta name="twitter:image" content="https://nanx.me/image/yann-allegre-yGprtDYbyoE-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/testthat-snapshot-monkey-patch/">
+    <link rel="canonical" href="https://nanx.me/blog/post/pkglite-python/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Customize testthat snapshot directory with monkey patching</h1>
+                <h1 class="blog-post-title">Introducing pkglite for Python</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -141,31 +141,43 @@
                     
                     
 
-                    <span class="date middot" title='Sun Jan 5 2025 22:58:00 UTC'>
-                        January 5, 2025
+                    <span class="date middot" title='Thu Jan 16 2025 02:11:00 UTC'>
+                        January 16, 2025
                     </span>
 
                     <span class="reading-time middot">
-                        2 min read
+                        3 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/r">R</a>
+                                <a href="https://nanx.me/tags/python">Python</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/testthat">testthat</a>
+                                <a href="https://nanx.me/tags/python-packages">Python packages</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/snapshot-testing">snapshot testing</a>
+                                <a href="https://nanx.me/tags/pkglite">pkglite</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/monkey-patching">monkey patching</a>
+                                <a href="https://nanx.me/tags/clinical-trials">clinical trials</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/regulatory-submission">regulatory submission</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/reproducible-research">reproducible research</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/retrieval-augmented-generation">retrieval-augmented generation</a>
                             </li>
                             
                         </ul>
@@ -185,82 +197,99 @@
 
 
 <div class="float">
-<img src="https://nanx.me/image/kelly-sikkema-jIrsEPB4_iU-unsplash.jpg" alt="Memories instant photo. Photo by Kelly Sikkema." />
-<div class="figcaption">Memories instant photo.
-Photo by <a href="https://unsplash.com/photos/jIrsEPB4_iU">Kelly Sikkema</a>.</div>
+<img src="https://nanx.me/image/yann-allegre-yGprtDYbyoE-unsplash.jpg" alt="Les Menuires, France. Photo by Yann Allegre." />
+<div class="figcaption">Les Menuires, France. Photo by <a href="https://unsplash.com/photos/yGprtDYbyoE">Yann Allegre</a>.</div>
 </div>
-<div id="problem" class="section level2">
-<h2>Problem</h2>
-<p>Snapshot testing has been supported in testthat since
-<a href="https://www.tidyverse.org/blog/2020/10/testthat-3-0-0/#snapshot-testing">testthat 3.0.0</a>.
-By default, snapshot files are saved to a hardcoded directory:</p>
-<pre class="text"><code>tests/testthat/_snaps/</code></pre>
-<p>Unfortunately, testthat does not provide a public API to customize this directory.
-This question has been raised in issues like
-<a href="https://github.com/r-lib/testthat/issues/1623">r-lib/testthat#1623</a>,
-suggesting that customizing the snapshot directory is a valid use case.</p>
+<p>I am pleased to introduce
+<a href="https://pharmaverse.github.io/py-pkglite/">pkglite for Python</a>,
+now available on PyPI.
+pkglite for Python provides a minimalist framework for packing source packages
+written in any programming language into a text file and restoring them to
+their original directory structure. You can install it with:</p>
+<pre class="bash"><code>pip install pkglite</code></pre>
+<p>For installation as a global command-line tool,
+<a href="https://packaging.python.org/en/latest/guides/installing-stand-alone-command-line-tools/">use pipx</a>:</p>
+<pre class="bash"><code>pipx install pkglite</code></pre>
+<div id="context" class="section level2">
+<h2>Context</h2>
+<p>Four years ago, we released the R package pkglite,
+designed for bidirectional conversion of R packages.
+The motivation behind pkglite for R, including its role in supporting eCTD
+submissions, was summarized in our
+<a href="https://nanx.me/blog/post/ectd-pkglite-paper/"><em>Clinical Trials</em> paper</a> <span class="citation">(<a href="#ref-zhao2023electronic">Zhao et al. 2023</a>)</span>.
+We also explored its application in
+<a href="https://nanx.me/blog/post/pkglite-llm-prompt/">retrieval-augmented generation</a>
+to provide code context to large language models.</p>
+<p>pkglite for R has since been adopted in multiple real-world applications,
+including the first two R Consortium open-source R submissions
+(<a href="https://rconsortium.github.io/submissions-wg/pilot1.html">pilot 1</a>,
+<a href="https://rconsortium.github.io/submissions-wg/pilot2.html">pilot 2</a>),
+and sponsor-led submissions
+(<a href="https://youtu.be/t33dS17QHuA?t=2776">webinar 1</a>,
+<a href="https://youtu.be/BlJNILSoZlM?t=2468">webinar 2</a>).
+It is also featured in the <a href="https://pharmaverse.org/e2eclinical/esub/">pharmaverse end-to-end clinical reporting
+packages</a>.</p>
+<p>The overwhelmingly positive feedback on the R package motivated me
+to consider: what’s next?</p>
 </div>
-<div id="solution" class="section level2">
-<h2>Solution</h2>
-<p>Without a public API, the most practical solution is to modify testthat’s
-internal behavior <strong>at runtime</strong> through
-<a href="https://en.wikipedia.org/wiki/Monkey_patch">monkey patching</a>.
-This approach avoids creating a custom version of testthat while allowing
-the flexibility we need.</p>
-<p>In R, monkey patching can be easily implemented using namespace utility functions.
-For example, David Lukes
-<a href="https://dlukes.github.io/monkey-patching-in-r.html">described this approach</a>
-for customizing the range filter behavior in the DT package.</p>
-<p>The following code demonstrates how to change the testthat snapshot directory
-by patching relevant internal functions. Add it to <code>tests/testthat/helper.R</code>
-or another <a href="https://r-pkgs.org/testing-design.html#testthat-helper-files">testthat helper file</a>:</p>
-<pre class="r"><code>#&#39; Modify a testthat function to use a different snapshot directory at runtime
-#&#39;
-#&#39; @param f Function name to modify.
-#&#39; @param new New snapshot directory path.
-#&#39; @param old Old snapshot directory path. Defaults to `&quot;_snaps&quot;`.
-set_snapshot_dir &lt;- function(f, new, old = &quot;_snaps&quot;) {
-  func &lt;- getFromNamespace(f, ns = &quot;testthat&quot;)
-  code &lt;- deparse(body(func))
-  code &lt;- gsub(sprintf(&#39;&quot;%s&quot;&#39;, old), sprintf(&#39;&quot;%s&quot;&#39;, new), code, fixed = TRUE)
-  body(func) &lt;- parse(text = paste(code, collapse = &quot;\n&quot;))
-  assignInNamespace(f, func, ns = &quot;testthat&quot;)
-}
-
-set_snapshot_dir(&quot;test_files_reporter&quot;, &quot;_snapshots&quot;)
-set_snapshot_dir(&quot;snapshot_meta&quot;, &quot;_snapshots&quot;)</code></pre>
-<p>With this code, snapshots will be saved to <code>tests/testthat/_snapshots/</code>
-instead of <code>tests/testthat/_snaps/</code>.
-This approach has been tested with testthat 3.2.2
-(the latest release at the time of writing) and retains the original
-snapshot testing behavior:</p>
+<div id="creating-pkglite-for-python" class="section level2">
+<h2>Creating pkglite for Python</h2>
+<p>To address this, I asked myself a broader question: what do people need?
+Many colleagues and collaborators of mine use Python and other languages daily.
+Extending the capability to pack and exchange source packages written in their
+language of choice into plain text felt like a natural progression.</p>
+<p>This goal led to several key design updates in pkglite for Python:</p>
 <ul>
-<li>You can use <code>expect_snapshot()</code> and <code>expect_snapshot_file()</code> as usual.</li>
-<li>The tests run successfully with <code>devtools::test()</code> and <code>R CMD check</code>
-without additional notes, warnings, or errors.</li>
-<li>Repeated test runs do not cause issues, even with the patched functions.</li>
+<li><p><strong>Language-agnostic design</strong>.
+To support any programming language, I replaced R-specific packing scope
+specifications with a <code>.pkgliteignore</code> configuration file,
+compliant with the gitignore format standard.</p></li>
+<li><p><strong>Command-line interface</strong>.
+Alongside the Python API, pkglite for Python includes a CLI built with
+<a href="https://github.com/fastapi/typer">typer</a>. This enables seamless integration
+into shell scripts and standard engineering workflows.</p></li>
+<li><p><strong>Optimized tooling</strong>.
+File type recognition now relies on a content-based
+<a href="https://nanx.me/blog/post/txtvsbin/">zlib algorithm</a>,
+replacing file-extension-based methods.
+The packed file parser has been rewritten using finite state machines
+for improved maintainability.
+Additionally, UTF-8 encoding is enforced for all text files across platforms.</p></li>
 </ul>
-<p>Relative paths are also supported for custom paths. For example, to save
-snapshots in a directory parallel to your package/project directory:</p>
-<pre class="r"><code>set_snapshot_dir(&quot;test_files_reporter&quot;, &quot;../../../testdata/_snapshots&quot;)
-set_snapshot_dir(&quot;snapshot_meta&quot;, &quot;../../../testdata/_snapshots&quot;)</code></pre>
 </div>
-<div id="caveats" class="section level2">
-<h2>Caveats</h2>
-<div id="dependency-on-testthat-version" class="section level3">
-<h3>Dependency on testthat version</h3>
-<p>Monkey patching relies on the internal structure of testthat, which may change
-in future versions. To avoid compatibility issues, consider using a dependency
-management tool like renv or
-<a href="https://solutions.posit.co/envs-pkgs/environments/shared/">shared baselines</a>
-to lock down specific package versions in your project.</p>
+<div id="performance-testing" class="section level2">
+<h2>Performance testing</h2>
+<p>pkglite for Python is developed with performance in mind. Using this
+<a href="bench.sh"><code>bench.sh</code></a> script, I tested packing and unpacking an entire
+Python project with the virtual environment, which offers a realistic mix
+of text and binary files.</p>
+<p>On an M2 MacBook Air (2022), packing the project generated a 1.1 GB text file
+in 16 seconds:</p>
+<pre class="text"><code>Packing...
+Packing complete.
+Output file size: 1.18 GB
+Packing time: 16 seconds
+Packing write speed: 76.04 MB/s</code></pre>
+<p>Unpacking from the file took only 8 seconds:</p>
+<pre class="text"><code>Unpacking...
+Unpacking complete.
+Unpacking time: 8 seconds
+Unpacking read speed: 152.09 MB/s</code></pre>
 </div>
-<div id="avoid-absolute-paths" class="section level3">
-<h3>Avoid absolute paths</h3>
-<p>Avoid using absolute paths for custom snapshot directories. They will reduce
-the portability of your tests across different environments and platforms.
-Relative paths are more robust, as they depend only on the structure of your
-project(s) rather than the file system setup.</p>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>I am deeply grateful to my original pkglite R package coauthors,
+Keaven Anderson and Yilong Zhang, for their encouragement to explore new ideas.
+My thanks also go to Ross Farrugia and the pharmaverse council for including
+the package and providing GitHub hosting, plus everyone who kindly contributed
+valuable time for code reviews and validations.</p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references csl-bib-body hanging-indent" entry-spacing="0">
+<div id="ref-zhao2023electronic" class="csl-entry">
+Zhao, Yujie, Nan Xiao, Keaven Anderson, and Yilong Zhang. 2023. <span>“Electronic Common Technical Document Submission with Analysis Using <span>R</span>.”</span> <em>Clinical Trials</em> 20 (1): 89–92. <a href="https://doi.org/10.1177/17407745221123244">https://doi.org/10.1177/17407745221123244</a>.
+</div>
 </div>
 </div>
 
@@ -273,10 +302,10 @@ project(s) rather than the file system setup.</p>
                     <div class="row navigation-btns">
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/rstudio-splash-screen/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                            <a href="https://nanx.me/blog/post/testthat-snapshot-monkey-patch/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« Skip RStudio splash screen</div>
+                                    <div class="pagination-nav-label">« Customize testthat snapshot directory with monkey patching</div>
                                 </div>
                             </a>
                             
@@ -284,12 +313,12 @@ project(s) rather than the file system setup.</p>
 
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/pkglite-python/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">Introducing pkglite for Python »</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
                                 </div>
-                            </a>
+                            </div>
                             
                         </div>
                     </div>
@@ -447,9 +476,6 @@ project(s) rather than the file system setup.</p>
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>

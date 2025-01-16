@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Jan 2025 22:58:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 16 Jan 2025 02:11:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>clinical trials</title>
+      <link>https://nanx.me/tags/clinical-trials/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/clinical-trials/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pkglite</title>
+      <link>https://nanx.me/tags/pkglite/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pkglite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python packages</title>
+      <link>https://nanx.me/tags/python-packages/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>regulatory submission</title>
+      <link>https://nanx.me/tags/regulatory-submission/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/regulatory-submission/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>reproducible research</title>
+      <link>https://nanx.me/tags/reproducible-research/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/reproducible-research/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>retrieval-augmented generation</title>
+      <link>https://nanx.me/tags/retrieval-augmented-generation/</link>
+      <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/retrieval-augmented-generation/</guid>
+      <description></description>
+    </item>
     <item>
       <title>monkey patching</title>
       <link>https://nanx.me/tags/monkey-patching/</link>
@@ -83,20 +132,6 @@
       <link>https://nanx.me/tags/pytest/</link>
       <pubDate>Wed, 04 Dec 2024 21:53:00 +0000</pubDate>
       <guid>https://nanx.me/tags/pytest/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Wed, 04 Dec 2024 21:53:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python packages</title>
-      <link>https://nanx.me/tags/python-packages/</link>
-      <pubDate>Wed, 04 Dec 2024 21:53:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -219,13 +254,6 @@
       <description></description>
     </item>
     <item>
-      <title>clinical trials</title>
-      <link>https://nanx.me/tags/clinical-trials/</link>
-      <pubDate>Sat, 28 Sep 2024 03:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/clinical-trials/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>futility</title>
       <link>https://nanx.me/tags/futility/</link>
       <pubDate>Sat, 28 Sep 2024 03:42:00 +0000</pubDate>
@@ -272,13 +300,6 @@
       <link>https://nanx.me/tags/non-proportional-hazards/</link>
       <pubDate>Sat, 28 Sep 2024 03:42:00 +0000</pubDate>
       <guid>https://nanx.me/tags/non-proportional-hazards/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>reproducible research</title>
-      <link>https://nanx.me/tags/reproducible-research/</link>
-      <pubDate>Sat, 28 Sep 2024 03:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/reproducible-research/</guid>
       <description></description>
     </item>
     <item>
@@ -604,24 +625,10 @@
       <description></description>
     </item>
     <item>
-      <title>pkglite</title>
-      <link>https://nanx.me/tags/pkglite/</link>
-      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/pkglite/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>prompt engineering</title>
       <link>https://nanx.me/tags/prompt-engineering/</link>
       <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/prompt-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>retrieval-augmented generation</title>
-      <link>https://nanx.me/tags/retrieval-augmented-generation/</link>
-      <pubDate>Thu, 28 Mar 2024 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/retrieval-augmented-generation/</guid>
       <description></description>
     </item>
     <item>
@@ -888,13 +895,6 @@
       <link>https://nanx.me/tags/vs-code/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/vs-code/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>regulatory submission</title>
-      <link>https://nanx.me/tags/regulatory-submission/</link>
-      <pubDate>Wed, 28 Sep 2022 11:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/regulatory-submission/</guid>
       <description></description>
     </item>
     <item>
