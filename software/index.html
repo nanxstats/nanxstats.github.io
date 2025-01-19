@@ -131,18 +131,57 @@
                 <div class="markdown">
                     
     <hr>
-<div class="float">
-<img src="https://nanx.me/image/hex-stickers-nanxiao.png" alt="Hex sticker wall for some of my R packages.">
-</div>
-<div class="text-center toc">
-<p><a href="#python-packages">Python packages</a> |
-<a href="#r-packages">R packages</a><br>
-<a href="#web-applications">Web applications</a> |
-<a href="#machine-learning-workflows">Machine learning workflows</a><br>
-<a href="#open-source-contributions">Open source code contributions</a> |
-<a href="#awesome-lists-and-code-recipes">Awesome lists</a><br>
-<a href="#visual-studio-code-extensions">VS Code extensions</a> |
-<a href="#hugoblogdown-themes">Hugo/blogdown themes</a></p>
+<div class="software-toc">
+  <div class="row g-0">
+    <div class="col-md-6">
+      <a href="#python-packages" class="btn btn-outline-nav w-100">
+        <i class="fab fa-python"></i>
+        <span>Python Packages</span>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#r-packages" class="btn btn-outline-nav w-100">
+        <i class="fab fa-r-project"></i>
+        <span>R Packages</span>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#web-applications" class="btn btn-outline-nav w-100">
+        <i class="fas fa-globe"></i>
+        <span>Web Applications</span>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#machine-learning-workflows" class="btn btn-outline-nav w-100">
+        <i class="fas fa-share-nodes"></i>
+        <span>Machine Learning Workflows</span>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#open-source-contributions" class="btn btn-outline-nav w-100">
+        <i class="fas fa-code-merge"></i>
+        <span>Open Source Contributions</span>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#awesome-lists-and-code-recipes" class="btn btn-outline-nav w-100">
+        <i class="fas fa-list-ul"></i>
+        <span>Awesome Lists</span>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#visual-studio-code-extensions" class="btn btn-outline-nav w-100">
+        <i class="fas fa-puzzle-piece"></i>
+        <span>VS Code Extensions</span>
+      </a>
+    </div>
+    <div class="col-md-6">
+      <a href="#hugoblogdown-themes" class="btn btn-outline-nav w-100">
+        <i class="fas fa-wand-magic-sparkles"></i>
+        <span>Hugo Themes</span>
+      </a>
+    </div>
+  </div>
 </div>
 <div class="mt-5"></div>
 <h2 id="python-packages">Python packages</h2>
@@ -515,6 +554,89 @@ A collection of shiny apps built by me<br>
   padding: 0.5rem 0;
 }
 </style>
+<style>
+/* Software TOC buttons */
+.software-toc {
+    border: 1px solid var(--tw-prose-bullets);
+    border-radius: 0.4rem;
+    padding: 1rem;
+    background-color: var(--tw-bg);
+}
+
+.software-toc .row {
+    margin: -0.5rem;
+    /* Compensate for inner padding */
+}
+
+.software-toc .col-md-6 {
+    padding: 0.5rem;
+}
+
+.software-toc .btn-outline-nav {
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 450;
+    font-size: 1rem;
+    font-feature-settings: normal;
+    text-decoration: none;
+    border: 1px solid var(--tw-prose-bullets);
+    border-radius: 0.4rem;
+    padding: 1rem 1.25rem;
+    height: 100%;
+    transition: border-color 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+    text-align: left;
+    background-color: var(--tw-bg);
+    display: flex;
+    align-items: center;
+    color: var(--tw-prose-body);
+}
+
+.software-toc .btn-outline-nav:hover {
+    border-color: var(--tw-prose-counters);
+    text-decoration: none;
+}
+
+.software-toc .btn-outline-nav:active {
+    background-color: var(--tw-prose-hr);
+}
+
+.software-toc .btn-outline-nav i {
+    font-size: 1.1rem;
+    width: 1.5rem;
+    text-align: center;
+    color: var(--tw-prose-captions);
+    margin-right: 0.75rem;
+    transition: color 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+
+.software-toc .btn-outline-nav span {
+    color: var(--tw-prose-links);
+    transition: color 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+}
+
+.software-toc .btn-outline-nav:hover span {
+    color: var(--tw-prose-links-hover);
+}
+
+.software-toc .btn-outline-nav:hover i {
+    color: var(--tw-prose-links-hover);
+}
+
+/* Adjust spacing on mobile */
+@media (max-width: 767.98px) {
+    .software-toc {
+        padding: 0.75rem;
+    }
+
+    .software-toc .row {
+        margin: -0.375rem;
+    }
+
+    .software-toc .col-md-6 {
+        padding: 0.375rem;
+    }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 
