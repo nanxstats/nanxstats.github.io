@@ -2,24 +2,32 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Libre Franklin";
-    src: url("fonts/LibreFranklin-VF.woff2") format("woff2");
-    font-weight: 100 900;
+    font-family: "Wittgenstein";
+    src: url("fonts/Wittgenstein.woff2") format("woff2");
+    font-weight: 400 900;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Libre Franklin";
-    src: url("fonts/LibreFranklin-Italic-VF.woff2") format("woff2");
-    font-weight: 100 900;
+    font-family: "Wittgenstein";
+    src: url("fonts/Wittgenstein-Italic.woff2") format("woff2");
+    font-weight: 400 900;
     font-style: italic;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Nunito Sans";
-    src: url("fonts/NunitoSans-Medium.woff2") format("woff2");
-    font-weight: 500;
+    font-family: "Lato";
+    src: url("fonts/Lato-VF.woff2") format("woff2");
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Lato";
+    src: url("fonts/Lato-Italic-VF.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: italic;
 }
 
 @font-face {
@@ -32,8 +40,8 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Libre Franklin", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "Wittgenstein", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -153,11 +161,11 @@ hr {
 }
 
 .header h1.name {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 2.5rem;
     font-feature-settings: normal;
-    margin-left: 6px;
+    margin-left: 8px;
 }
 
 .header a {
@@ -174,7 +182,7 @@ hr {
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 1.375rem;
+    font-size: 1.5rem;
     font-feature-settings: normal;
 }
 
@@ -202,7 +210,7 @@ hr {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--tw-prose-headings);
-    text-underline-offset: 15.5px;
+    text-underline-offset: 16px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
@@ -220,7 +228,7 @@ hr {
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
-        font-weight: 700;
+        font-weight: 800;
         font-feature-settings: normal;
         text-decoration: none;
     }
@@ -281,7 +289,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-feature-settings: normal;
     color: var(--tw-prose-headings);
@@ -307,7 +315,7 @@ h6 {
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 1.25rem;
+    font-size: 1.3125rem;
     font-feature-settings: normal;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
@@ -330,8 +338,8 @@ h6 {
 }
 
 .content .markdown {
-    font-family: var(--tw-prose-font-serif);
-    font-weight: 450;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 400;
     font-size: 1.125rem;
     line-height: calc(30 / 18);
     color: var(--tw-prose-body);
@@ -355,7 +363,7 @@ dl {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 2.125rem;
     font-feature-settings: normal;
@@ -363,9 +371,9 @@ dl {
 }
 
 .content .blog-post-content {
-    font-family: var(--tw-prose-font-serif);
-    font-weight: 450;
-    font-size: 1.1875rem;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 400;
+    font-size: 1.25rem;
     line-height: calc(30 / 18);
 }
 
@@ -374,8 +382,8 @@ dl {
 }
 
 .content .blog-post-content ol li p {
-    font-family: var(--tw-prose-font-serif);
-    font-weight: 450;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-weight: 400;
 }
 
 /* Blog post images: centered, boxed */
@@ -389,7 +397,7 @@ dl {
 }
 
 .content .caption {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 0.625rem;
@@ -404,7 +412,7 @@ dl {
 }
 
 .content .figcaption {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
@@ -479,7 +487,7 @@ dl {
 }
 
 .content .groupby {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 1.6rem;
     font-feature-settings: normal;
@@ -501,16 +509,16 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 0.9375rem;
+    font-weight: 500;
+    font-size: 1rem;
     font-feature-settings: normal;
     line-height: 2.5rem;
 }
 
 .content .post-item .meta-date {
-    font-family: "Nunito Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-feature-settings: normal;
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
@@ -538,7 +546,7 @@ dl {
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-feature-settings: normal;
     line-height: calc(50 / 18);
 }
@@ -560,8 +568,8 @@ dl {
 /* Tags page */
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 1.125rem;
+    font-weight: 400;
+    font-size: 1.25rem;
     font-feature-settings: normal;
     margin-bottom: 1.125rem;
 }
@@ -599,7 +607,7 @@ dl {
 
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
+    font-weight: 400;
     font-size: 1rem;
     font-feature-settings: normal;
     text-decoration: none;
@@ -630,7 +638,7 @@ dl {
 
 .pagination-nav .pagination-nav-label {
     font-size: 1rem;
-    font-weight: 450;
+    font-weight: 400;
     color: var(--tw-prose-links);
     margin-top: 0.5rem;
 }
@@ -645,8 +653,8 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 1.125rem;
+    font-weight: 400;
+    font-size: 1.1875rem;
     font-feature-settings: normal;
 }
 
