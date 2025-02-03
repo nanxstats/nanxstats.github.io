@@ -43,9 +43,9 @@
     --tw-prose-font-sans-serif: "InterVariable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Wittgenstein", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    --tw-prose-body: #334155;
-    --tw-prose-links: #334155;
-    --tw-prose-links-hover: #0f172a;
+    --tw-prose-body: #0f172a;
+    --tw-prose-links: #0f172a;
+    --tw-prose-links-hover: #020618;
     --tw-prose-headings: #0f172a;
     --tw-prose-lead: #475569;
     --tw-prose-captions: #64748b;
@@ -83,9 +83,9 @@ html {
 a {
     color: var(--tw-prose-links);
     text-decoration: underline;
-    text-decoration-thickness: 1.5px;
+    text-decoration-thickness: 2px;
     text-decoration-color: var(--tw-prose-bullets);
-    text-underline-offset: 6px;
+    text-underline-offset: 5px;
     background-color: transparent;
     transition: all .2s ease-in-out;
 }
@@ -99,8 +99,8 @@ a:hover,
 a:focus {
     color: var(--tw-prose-links-hover);
     text-decoration: underline;
-    text-decoration-thickness: 1.5px;
-    text-decoration-color: var(--tw-prose-counters);
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--tw-prose-links-hover);
 }
 
 /* Button */
