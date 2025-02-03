@@ -340,6 +340,7 @@ h6 {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
     font-size: 1rem;
+    font-feature-settings: "cv01", "cv10";
     line-height: calc(30 / 18);
     color: var(--tw-prose-body);
 }
@@ -373,6 +374,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
     font-size: 1.1875rem;
+    font-feature-settings: "cv01", "cv10";
     line-height: calc(30 / 18);
 }
 
@@ -383,6 +385,7 @@ dl {
 .content .blog-post-content ol li p {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
+    font-feature-settings: "cv01", "cv10";
 }
 
 /* Blog post images: centered, boxed */
