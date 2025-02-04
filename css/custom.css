@@ -17,15 +17,15 @@
 
 @font-face {
     font-display: swap;
-    font-family: "InterVariable";
-    src: url("fonts/InterVariable.woff2") format("woff2");
+    font-family: "Lato";
+    src: url("fonts/Lato-VF.woff2") format("woff2");
     font-weight: 100 900;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "InterVariable";
-    src: url("fonts/InterVariable-Italic.woff2") format("woff2");
+    font-family: "Lato";
+    src: url("fonts/Lato-Italic-VF.woff2") format("woff2");
     font-weight: 100 900;
     font-style: italic;
 }
@@ -40,12 +40,12 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "InterVariable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Wittgenstein", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    --tw-prose-body: #0f172a;
-    --tw-prose-links: #0f172a;
-    --tw-prose-links-hover: #020618;
+    --tw-prose-body: #334155;
+    --tw-prose-links: #334155;
+    --tw-prose-links-hover: #0f172a;
     --tw-prose-headings: #0f172a;
     --tw-prose-lead: #475569;
     --tw-prose-captions: #64748b;
@@ -63,6 +63,7 @@
 
 body {
     font-family: var(--tw-prose-font-sans-serif);
+    font-variant-ligatures: contextual common-ligatures;
     background-color: var(--tw-bg);
 }
 
@@ -83,9 +84,9 @@ html {
 a {
     color: var(--tw-prose-links);
     text-decoration: underline;
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: 1.5px;
     text-decoration-color: var(--tw-prose-bullets);
-    text-underline-offset: 5px;
+    text-underline-offset: 6px;
     background-color: transparent;
     transition: all .2s ease-in-out;
 }
@@ -99,8 +100,8 @@ a:hover,
 a:focus {
     color: var(--tw-prose-links-hover);
     text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--tw-prose-links-hover);
+    text-decoration-thickness: 1.5px;
+    text-decoration-color: var(--tw-prose-counters);
 }
 
 /* Button */
@@ -163,7 +164,7 @@ hr {
     font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 2.5rem;
-    font-feature-settings: "cv01", "cv10";
+    font-feature-settings: normal;
     margin-left: 8px;
 }
 
@@ -181,8 +182,8 @@ hr {
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 1.4375rem;
-    font-feature-settings: "cv01", "cv10";
+    font-size: 1.5rem;
+    font-feature-settings: normal;
 }
 
 .header ul.nav li a {
@@ -227,8 +228,8 @@ hr {
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
-        font-weight: 750;
-        font-feature-settings: "cv01", "cv10";
+        font-weight: 800;
+        font-feature-settings: normal;
         text-decoration: none;
     }
 }
@@ -290,7 +291,7 @@ h5,
 h6 {
     font-family: var(--tw-prose-font-serif);
     font-weight: 600;
-    font-feature-settings: "cv01", "cv10";
+    font-feature-settings: normal;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
@@ -313,9 +314,9 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 1.25rem;
-    font-feature-settings: "cv01", "cv10";
+    font-weight: 500;
+    font-size: 1.3125rem;
+    font-feature-settings: normal;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -339,8 +340,7 @@ h6 {
 .content .markdown {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 1rem;
-    font-feature-settings: "cv01", "cv10";
+    font-size: 1.125rem;
     line-height: calc(30 / 18);
     color: var(--tw-prose-body);
 }
@@ -366,15 +366,14 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 2.125rem;
-    font-feature-settings: "cv01", "cv10";
+    font-feature-settings: normal;
     line-height: 2.9rem;
 }
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 1.1875rem;
-    font-feature-settings: "cv01", "cv10";
+    font-size: 1.25rem;
     line-height: calc(30 / 18);
 }
 
@@ -385,7 +384,6 @@ dl {
 .content .blog-post-content ol li p {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-feature-settings: "cv01", "cv10";
 }
 
 /* Blog post images: centered, boxed */
@@ -399,7 +397,7 @@ dl {
 }
 
 .content .caption {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 0.625rem;
@@ -414,7 +412,7 @@ dl {
 }
 
 .content .figcaption {
-    font-size: 1rem;
+    font-size: 1.0625rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
@@ -492,7 +490,7 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-weight: 600;
     font-size: 1.6rem;
-    font-feature-settings: "cv01", "cv10";
+    font-feature-settings: normal;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -511,17 +509,17 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 0.9375rem;
-    font-feature-settings: "cv01", "cv10";
+    font-weight: 500;
+    font-size: 1rem;
+    font-feature-settings: normal;
     line-height: 2.5rem;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 0.875rem;
-    font-feature-settings: "cv01", "cv10";
+    font-weight: 500;
+    font-size: 1rem;
+    font-feature-settings: normal;
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -547,16 +545,16 @@ dl {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 450;
-    font-size: 0.875rem;
-    font-feature-settings: "cv01", "cv10";
+    font-weight: 500;
+    font-size: 0.9375rem;
+    font-feature-settings: normal;
     line-height: calc(50 / 18);
 }
 
 .content .tags li a {
     border-radius: 9999px;
     padding-top: 0.375rem;
-    padding-bottom: 0.375rem;
+    padding-bottom: 0.5rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     background-color: #f1f5f9;
@@ -571,8 +569,8 @@ dl {
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 1.1875rem;
-    font-feature-settings: "cv01", "cv10";
+    font-size: 1.25rem;
+    font-feature-settings: normal;
     margin-bottom: 1.125rem;
 }
 
@@ -610,8 +608,8 @@ dl {
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 0.9375rem;
-    font-feature-settings: "cv01", "cv10";
+    font-size: 1rem;
+    font-feature-settings: normal;
     text-decoration: none;
     border: 1px solid var(--tw-prose-bullets);
     border-radius: 0.4rem;
@@ -633,13 +631,13 @@ dl {
 .pagination-nav .pagination-nav-sublabel {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
-    font-size: 0.9375rem;
-    font-feature-settings: "cv01", "cv10";
+    font-size: 1rem;
+    font-feature-settings: normal;
     color: var(--tw-prose-captions);
 }
 
 .pagination-nav .pagination-nav-label {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: 400;
     color: var(--tw-prose-links);
     margin-top: 0.5rem;
@@ -656,8 +654,8 @@ dl {
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 400;
-    font-size: 1.125rem;
-    font-feature-settings: "cv01", "cv10";
+    font-size: 1.1875rem;
+    font-feature-settings: normal;
 }
 
 .footer a {
