@@ -86,7 +86,7 @@ a {
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
     text-decoration-color: var(--tw-prose-bullets);
-    text-underline-offset: 6px;
+    text-underline-offset: 4px;
     background-color: transparent;
     transition: all .2s ease-in-out;
 }
