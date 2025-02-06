@@ -17,17 +17,9 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Lato";
-    src: url("fonts/Lato-VF.woff2") format("woff2");
-    font-weight: 100 900;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Lato";
-    src: url("fonts/Lato-Italic-VF.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: italic;
+    font-family: "Mona Sans";
+    src: url("fonts/MonaSansVF-Regular.woff2") format("woff2");
+    font-weight: 200 900;
 }
 
 @font-face {
@@ -40,7 +32,7 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Mona Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Wittgenstein", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
@@ -182,8 +174,8 @@ hr {
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 1.5rem;
-    font-feature-settings: normal;
+    font-size: 1.375rem;
+    font-feature-settings: "ss01";
 }
 
 .header ul.nav li a {
@@ -210,26 +202,26 @@ hr {
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-decoration-color: var(--tw-prose-headings);
-    text-underline-offset: 16px;
+    text-underline-offset: 15px;
 }
 
 @supports (-webkit-text-decoration-skip: ink) {
     .header ul.nav li a.active {
-        text-underline-offset: 16px;
+        text-underline-offset: 15px;
     }
 }
 
 @supports (-moz-text-decoration-skip-ink: auto) {
     .header ul.nav li a.active {
-        text-underline-offset: 16px;
+        text-underline-offset: 15px;
     }
 }
 
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
-        font-weight: 800;
-        font-feature-settings: normal;
+        font-weight: 700;
+        font-feature-settings: "ss01";
         text-decoration: none;
     }
 }
@@ -315,8 +307,8 @@ h6 {
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 1.3125rem;
-    font-feature-settings: normal;
+    font-size: 1.25rem;
+    font-feature-settings: "ss01";
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -339,7 +331,7 @@ h6 {
 
 .content .markdown {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1.125rem;
     line-height: calc(30 / 18);
     color: var(--tw-prose-body);
@@ -372,8 +364,9 @@ dl {
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
-    font-size: 1.25rem;
+    font-weight: 450;
+    font-size: 1.1875rem;
+    font-feature-settings: "ss01";
     line-height: calc(30 / 18);
 }
 
@@ -383,7 +376,8 @@ dl {
 
 .content .blog-post-content ol li p {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
+    font-feature-settings: "ss01";
 }
 
 /* Blog post images: centered, boxed */
@@ -397,7 +391,7 @@ dl {
 }
 
 .content .caption {
-    font-size: 1.0625rem;
+    font-size: 1rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 0.625rem;
@@ -412,7 +406,7 @@ dl {
 }
 
 .content .figcaption {
-    font-size: 1.0625rem;
+    font-size: 1rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
@@ -510,16 +504,16 @@ dl {
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 1rem;
-    font-feature-settings: normal;
+    font-size: 0.9375rem;
+    font-feature-settings: "ss01";
     line-height: 2.5rem;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 1rem;
-    font-feature-settings: normal;
+    font-size: 0.9375rem;
+    font-feature-settings: "ss01";
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -546,15 +540,15 @@ dl {
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 500;
-    font-size: 0.9375rem;
-    font-feature-settings: normal;
+    font-size: 0.875rem;
+    font-feature-settings: "ss01";
     line-height: calc(50 / 18);
 }
 
 .content .tags li a {
     border-radius: 9999px;
     padding-top: 0.375rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.375rem;
     padding-left: 0.75rem;
     padding-right: 0.75rem;
     background-color: #f1f5f9;
@@ -568,9 +562,9 @@ dl {
 /* Tags page */
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1.25rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     margin-bottom: 1.125rem;
 }
 
@@ -607,9 +601,9 @@ dl {
 
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     text-decoration: none;
     border: 1px solid var(--tw-prose-bullets);
     border-radius: 0.4rem;
@@ -632,13 +626,13 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-weight: 600;
     font-size: 1rem;
-    font-feature-settings: normal;
+    font-feature-settings: "ss01";
     color: var(--tw-prose-captions);
 }
 
 .pagination-nav .pagination-nav-label {
-    font-size: 1rem;
-    font-weight: 400;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: var(--tw-prose-links);
     margin-top: 0.5rem;
 }
@@ -653,9 +647,9 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
-    font-weight: 400;
-    font-size: 1.1875rem;
-    font-feature-settings: normal;
+    font-weight: 450;
+    font-size: 1.125rem;
+    font-feature-settings: "ss01";
 }
 
 .footer a {
