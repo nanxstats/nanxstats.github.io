@@ -55,6 +55,7 @@
 
 body {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-variant-ligatures: contextual common-ligatures;
     background-color: var(--tw-bg);
 }
@@ -154,9 +155,9 @@ hr {
 
 .header h1.name {
     font-family: var(--tw-prose-font-serif);
+    font-feature-settings: normal;
     font-weight: 600;
     font-size: 2.5rem;
-    font-feature-settings: normal;
     margin-left: 8px;
 }
 
@@ -173,9 +174,9 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 500;
     font-size: 1.375rem;
-    font-feature-settings: "ss01";
 }
 
 .header ul.nav li a {
@@ -220,8 +221,8 @@ hr {
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
+        font-feature-settings: "ss01", "ss05";
         font-weight: 700;
-        font-feature-settings: "ss01";
         text-decoration: none;
     }
 }
@@ -282,8 +283,8 @@ h4,
 h5,
 h6 {
     font-family: var(--tw-prose-font-serif);
-    font-weight: 600;
     font-feature-settings: normal;
+    font-weight: 600;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
@@ -306,9 +307,9 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 500;
     font-size: 1.25rem;
-    font-feature-settings: "ss01";
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -331,6 +332,7 @@ h6 {
 
 .content .markdown {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 450;
     font-size: 1.125rem;
     line-height: calc(30 / 18);
@@ -356,17 +358,17 @@ dl {
 
 .content .blog-post-title {
     font-family: var(--tw-prose-font-serif);
+    font-feature-settings: normal;
     font-weight: 600;
     font-size: 2.125rem;
-    font-feature-settings: normal;
     line-height: 2.9rem;
 }
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 450;
     font-size: 1.1875rem;
-    font-feature-settings: "ss01";
     line-height: calc(30 / 18);
 }
 
@@ -376,8 +378,8 @@ dl {
 
 .content .blog-post-content ol li p {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 450;
-    font-feature-settings: "ss01";
 }
 
 /* Blog post images: centered, boxed */
@@ -482,9 +484,9 @@ dl {
 
 .content .groupby {
     font-family: var(--tw-prose-font-serif);
+    font-feature-settings: normal;
     font-weight: 600;
     font-size: 1.6rem;
-    font-feature-settings: normal;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -503,17 +505,17 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 500;
     font-size: 0.9375rem;
-    font-feature-settings: "ss01";
     line-height: 2.5rem;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 500;
     font-size: 0.9375rem;
-    font-feature-settings: "ss01";
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -539,9 +541,9 @@ dl {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 500;
     font-size: 0.875rem;
-    font-feature-settings: "ss01";
     line-height: calc(50 / 18);
 }
 
@@ -562,9 +564,9 @@ dl {
 /* Tags page */
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 450;
     font-size: 1.25rem;
-    font-feature-settings: "ss01";
     margin-bottom: 1.125rem;
 }
 
@@ -601,9 +603,9 @@ dl {
 
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 450;
     font-size: 1rem;
-    font-feature-settings: "ss01";
     text-decoration: none;
     border: 1px solid var(--tw-prose-bullets);
     border-radius: 0.4rem;
@@ -624,9 +626,9 @@ dl {
 
 .pagination-nav .pagination-nav-sublabel {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 600;
     font-size: 1rem;
-    font-feature-settings: "ss01";
     color: var(--tw-prose-captions);
 }
 
@@ -647,9 +649,9 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
+    font-feature-settings: "ss01", "ss05";
     font-weight: 450;
     font-size: 1.125rem;
-    font-feature-settings: "ss01";
 }
 
 .footer a {
