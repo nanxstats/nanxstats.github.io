@@ -12,7 +12,7 @@ tags:
   - xfun
   - automation
   - developer experience
-meta_img: "rstudio-projectid-git-diff.png"
+meta_img: "image/rstudio-projectid-git-diff.png"
 description: >
   RStudio 2024.12.0 unconditionally adds a ProjectID field to .Rproj files,
   causing unwanted Git diffs and potential editing conflicts.
@@ -22,7 +22,7 @@ description: >
 
 ![Git diff showing the ProjectID field added by RStudio 2024.12.0.\
 Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term.
-](rstudio-projectid-git-diff.png)
+](/image/rstudio-projectid-git-diff.png)
 
 ## TL;DR: The fix
 
