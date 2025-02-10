@@ -73,7 +73,7 @@ In RStudio 2024.12.0, opening an R package or project automatically adds a
 This feature was introduced in
 [rstudio/rstudio#15140](https://github.com/rstudio/rstudio/pull/15140).
 It was designed to accurately map projects with their `.Rproj.user/`
-directories, which can now be stored externally - outside of the project.
+directories, which can now be stored externally---outside of the project.
 
 While this feature serves a clear purpose, the current implementation
 introduces some unintended side effects. For example, it may create
