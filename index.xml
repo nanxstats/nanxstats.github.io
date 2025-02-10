@@ -6,8 +6,15 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Jan 2025 02:11:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 20:42:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files</title>
+      <link>https://nanx.me/blog/post/rstudio-projectid/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/rstudio-projectid/</guid>
+      <description>Git diff showing the ProjectID field added by RStudio 2024.12.0.&#xA;Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term. TL;DR: The fix The following script detects newly added ProjectID lines in .Rproj files using git diff. If detected, it removes the line and saves the modified .Rproj file.&#xA;# Remove ProjectID from .Rproj files if freshly added local({ xfun &amp;lt;- requireNamespace(&amp;quot;xfun&amp;quot;, quietly = TRUE) rproj_files &amp;lt;- list.files(pattern = &amp;quot;\\.Rproj$&amp;quot;, full.names = TRUE) if (!</description>
+    </item>
     <item>
       <title>Introducing pkglite for Python</title>
       <link>https://nanx.me/blog/post/pkglite-python/</link>

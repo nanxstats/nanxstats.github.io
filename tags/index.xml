@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 16 Jan 2025 02:11:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Feb 2025 20:42:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>developer experience</title>
+      <link>https://nanx.me/tags/developer-experience/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/developer-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://nanx.me/tags/git/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R startup</title>
+      <link>https://nanx.me/tags/r-startup/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-startup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RStudio IDE</title>
+      <link>https://nanx.me/tags/rstudio-ide/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rstudio-ide/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>xfun</title>
+      <link>https://nanx.me/tags/xfun/</link>
+      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/xfun/</guid>
+      <description></description>
+    </item>
     <item>
       <title>clinical trials</title>
       <link>https://nanx.me/tags/clinical-trials/</link>
@@ -65,13 +114,6 @@
       <description></description>
     </item>
     <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>snapshot testing</title>
       <link>https://nanx.me/tags/snapshot-testing/</link>
       <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
@@ -86,13 +128,6 @@
       <description></description>
     </item>
     <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>awk</title>
       <link>https://nanx.me/tags/awk/</link>
       <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
@@ -104,13 +139,6 @@
       <link>https://nanx.me/tags/powershell/</link>
       <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
       <guid>https://nanx.me/tags/powershell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>RStudio IDE</title>
-      <link>https://nanx.me/tags/rstudio-ide/</link>
-      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rstudio-ide/</guid>
       <description></description>
     </item>
     <item>

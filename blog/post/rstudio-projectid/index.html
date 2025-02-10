@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> automation - Nan Xiao | 肖楠 </title>
+    <title> Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="RStudio 2024.12.0 unconditionally adds a ProjectID field to .Rproj files, causing unwanted Git diffs and potential editing conflicts. This post explains the issue and provides an R script to automatically remove the field at R startup, keeping repositories clean.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/automation/" />
-    <meta property="og:title" content="automation" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/rstudio-projectid/" />
+    <meta property="og:title" content="Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files" />
+    <meta property="og:image" content="https://nanx.me/rstudio-projectid-git-diff.png" />
+    <meta property="og:description" content="RStudio 2024.12.0 unconditionally adds a ProjectID field to .Rproj files, causing unwanted Git diffs and potential editing conflicts. This post explains the issue and provides an R script to automatically remove the field at R startup, keeping repositories clean.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="automation" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files" />
+    <meta name="twitter:description" content="RStudio 2024.12.0 unconditionally adds a ProjectID field to .Rproj files, causing unwanted Git diffs and potential editing conflicts. This post explains the issue and provides an R script to automatically remove the field at R startup, keeping repositories clean.
+" />
+    <meta name="twitter:image" content="https://nanx.me/rstudio-projectid-git-diff.png" />
 
-    <link rel="canonical" href="https://nanx.me/tags/automation/">
+    <link rel="canonical" href="https://nanx.me/blog/post/rstudio-projectid/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -41,8 +44,6 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
-    
-    <link href="https://nanx.me/tags/automation/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -70,7 +71,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog"
+                                <a class="nav-link text-blog active"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -129,157 +130,199 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <div class="markdown">
+                <h1 class="blog-post-title">Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Sun Feb 9 2025 20:42:00 UTC'>
+                        February 9, 2025
+                    </span>
+
+                    <span class="reading-time middot">
+                        2 min read
+                    </span>
+
+                    <div class="d-none d-md-block mt-2 tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/rstudio-ide">RStudio IDE</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r-startup">R startup</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/git">Git</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/xfun">xfun</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/automation">automation</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/developer-experience">developer experience</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
     
 
 
+<div class="float">
+<img src="rstudio-projectid-git-diff.png" alt="Git diff showing the ProjectID field added by RStudio 2024.12.0. Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term." />
+<div class="figcaption">Git diff showing the ProjectID field added by RStudio 2024.12.0.<br />
+Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term.</div>
+</div>
+<div id="tldr-the-fix" class="section level2">
+<h2>TL;DR: The fix</h2>
+<p>The following script detects newly added <code>ProjectID</code> lines in <code>.Rproj</code> files
+using <code>git diff</code>. If detected, it removes the line and saves the modified
+<code>.Rproj</code> file.</p>
+<pre class="r"><code># Remove ProjectID from .Rproj files if freshly added
+local({
+  xfun &lt;- requireNamespace(&quot;xfun&quot;, quietly = TRUE)
+  rproj_files &lt;- list.files(pattern = &quot;\\.Rproj$&quot;, full.names = TRUE)
+  if (!xfun || length(rproj_files) == 0L) return(invisible(NULL))
+
+  lapply(rproj_files, function(f) {
+    diff_cmd &lt;- system(paste(&quot;git diff --&quot;, shQuote(f)), intern = TRUE)
+    diff_out &lt;- tryCatch(diff_cmd, error = function(e) character(0))
+
+    if (any(grepl(&quot;^\\+ProjectId: &quot;, diff_out))) {
+      dcf_old &lt;- xfun::read_utf8(f)
+      dcf_new &lt;- dcf_old[!grepl(&quot;^ProjectId: &quot;, dcf_old)]
+      xfun::write_utf8(dcf_new, f)
+    }
+  })
+
+  invisible(NULL)
+})</code></pre>
+<p>To apply this fix, add the script to your project-specific <code>.Rprofile</code> or the
+user-specific <code>~/.Rprofile</code>. It will execute on every
+<a href="https://docs.posit.co/ide/user/ide/guide/environments/r/managing-r.html">R startup</a>.
+The script has been tested with RStudio IDE 2024.12.0 on Windows, macOS, and Linux.</p>
+<p>Requirements of the script:</p>
+<ul>
+<li>The project must use Git for version control.</li>
+<li><code>git</code> must be accessible from the command-line
+(<a href="https://github.com/nanxstats/r-windows-paths">Windows how-to</a>).</li>
+<li>The <a href="https://cran.r-project.org/package=xfun">xfun</a> package is installed
+for handling UTF-8 encoded files.</li>
+</ul>
+</div>
+<div id="the-issue" class="section level2">
+<h2>The issue</h2>
+<p>In RStudio 2024.12.0, opening an R package or project automatically adds a
+<code>ProjectID</code> field to the <code>.Rproj</code> file, as shown in the screenshot above.</p>
+<p>This feature was introduced in
+<a href="https://github.com/rstudio/rstudio/pull/15140">rstudio/rstudio#15140</a>.
+It was designed to accurately map projects with their <code>.Rproj.user/</code>
+directories, which can now be stored externally - outside of the project.</p>
+<p>While this feature serves a clear purpose, the current implementation
+introduces some unintended side effects. For example, it may create
+<a href="https://forum.posit.co/t/196345">unnecessary diffs</a> in version control,
+with no clear lifecycle for the <code>ProjectID</code>.
+Team members collolaborating with different RStudio versions might also
+get <a href="https://github.com/rstudio/rstudio/issues/15524">conflicting edits</a>,
+leading to additional version control noise.</p>
+</div>
+<div id="long-term-and-short-term-solutions" class="section level2">
+<h2>Long-term and short-term solutions</h2>
+<p>This behavior has been improved in
+<a href="https://github.com/rstudio/rstudio/pull/15654">rstudio/rstudio#15654</a>,
+where <code>ProjectID</code> is only added when external storage for <code>.Rproj.user/</code>
+is required. However, until a fixed version is released, or if users are
+stuck with RStudio 2024.12.0, a temporary user-space solution could be useful.</p>
+</div>
+<div id="why-this-fix-works" class="section level2">
+<h2>Why this fix works</h2>
+<p>The modification to <code>.Rproj</code> files occurs in RStudio IDE logic before the
+R process starts, meaning we cannot prevent the addition of <code>ProjectID</code>.
+However, we can reliably detect the change via <code>git diff</code> and revert it
+when R starts. The script provided at the beginning of this post
+automates this process.</p>
+</div>
+
+
+
                 </div>
 
-                <div class="posts">
-                    <h1>Posts about automation</h1>
-                    <hr>
-                    <ul class="list-unstyled">
-                        
-                        <li class="groupby">2025</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/rstudio-projectid/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2025-02-09
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2024</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/rstudio-splash-screen/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Skip RStudio splash screen
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2024-12-17
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2023</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/research-word-cloud/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Create Engaging Word Cloud Visualizations from Your Research
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-06-23
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/r-package-release-checklist/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Context-Free R Package Release Checklist Generation with usethis
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-06-12
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/rmarkdown-quarto-link-checker/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    A General-Purpose Link Checker for R Markdown and Quarto Projects
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2023-01-16
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2022</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/gui-automation-robotjs/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    GUI Automation with RobotJS
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2022-09-05
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/chromote-pdf-automation/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Automate HTML to PDF Printing with {promises} and {chromote}
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2022-08-20
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/link-checker/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    A Simple Link Checker for Hugo and Blogdown Websites
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    2022-02-22
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                    </ul>
-                </div>
+                
+                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
+                    <div class="row navigation-btns">
+                        <div class="col">
+                            
+                            <a href="https://nanx.me/blog/post/pkglite-python/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Previous</div>
+                                    <div class="pagination-nav-label">« Introducing pkglite for Python</div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="col">
+                            
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Next</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </nav>
+                
+
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -382,12 +425,6 @@
                         
 
                         
-                        <li><a href="https://nanx.me/tags/automation/index.xml" class="mr-0">
-                                <svg class="svg-icon mr-1">
-                                    <use xlink:href="#octicons-rss"></use>
-                                </svg>
-                                RSS</a></li>
-                        
 
                         
                     </ul>
@@ -417,6 +454,9 @@
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>
