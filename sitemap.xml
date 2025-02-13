@@ -2,19 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2025-02-09T20:42:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/clinical-trials/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/rtflite-python/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python-packages/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/regulatory-submission/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rtflite/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/tlfs/</loc>
+    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/automation/</loc>
     <lastmod>2025-02-09T20:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/developer-experience/</loc>
     <lastmod>2025-02-09T20:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/git/</loc>
-    <lastmod>2025-02-09T20:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2025-02-09T20:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/rstudio-projectid/</loc>
@@ -29,28 +53,13 @@
     <loc>https://nanx.me/tags/rstudio-ide/</loc>
     <lastmod>2025-02-09T20:42:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2025-02-09T20:42:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/xfun/</loc>
     <lastmod>2025-02-09T20:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/clinical-trials/</loc>
-    <lastmod>2025-01-16T02:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/pkglite-python/</loc>
     <lastmod>2025-01-16T02:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/pkglite/</loc>
-    <lastmod>2025-01-16T02:11:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python/</loc>
-    <lastmod>2025-01-16T02:11:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python-packages/</loc>
-    <lastmod>2025-01-16T02:11:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/regulatory-submission/</loc>
     <lastmod>2025-01-16T02:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/reproducible-research/</loc>

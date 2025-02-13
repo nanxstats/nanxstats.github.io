@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TLFs on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/tlfs/</link>
+    <description>Recent content in TLFs on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Feb 2025 00:06:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/tlfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing rtflite for Python</title>
+      <link>https://nanx.me/blog/post/rtflite-python/</link>
+      <pubDate>Thu, 13 Feb 2025 00:06:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/rtflite-python/</guid>
+      <description>Touring in the clouds. Photo by Clement Delhaye. This is a guest post generously contributed by Yilong Zhang, a biostatistician at Meta.&#xA;It is my pleasure to introduce rtflite, a new Python package for generating RTF documents. A preview version is now available on PyPI. You can install it with:&#xA;pip install rtflite The ultimate goal of rtflite is to provide a lightweight solution for generating production-ready tables, listings, and figures (TLFs) in RTF format.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,197 @@
+---
+title: "Introducing rtflite for Python"
+author: "Yilong Zhang"
+date: "2025-02-13T00:06:00"
+slug: rtflite-python
+categories: []
+tags:
+  - Python
+  - Python packages
+  - clinical trials
+  - TLFs
+  - regulatory submission
+  - rtflite
+meta_img: "image/clement-delhaye-cnluLIyhpBA-unsplash.jpg"
+description: >
+  rtflite is a lightweight Python package for generating production-ready
+  tables, listings, and figures (TLFs) in RTF format, designed for
+  clinical study reporting and regulatory submissions while integrating
+  seamlessly into existing engineering workflows.
+---
+
+![Touring in the clouds. Photo by [Clement Delhaye](https://unsplash.com/photos/cnluLIyhpBA).
+](/image/clement-delhaye-cnluLIyhpBA-unsplash.jpg)
+
+::: {.callout}
+This is a guest post generously contributed by
+[Yilong Zhang](https://www.linkedin.com/in/yilongzhang/),
+a biostatistician at Meta.
+:::
+
+```{css, echo=FALSE}
+.callout p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-left: 5px solid #64748b;
+  border-right: 1px solid #cbd5e1;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+```
+
+It is my pleasure to introduce [rtflite](https://pharmaverse.github.io/rtflite/),
+a new Python package for generating RTF documents.
+A preview version is now available on [PyPI](https://pypi.org/project/rtflite/).
+You can install it with:
+
+```bash
+pip install rtflite
+```
+
+The ultimate goal of rtflite is to provide a lightweight solution for
+generating production-ready tables, listings, and figures (TLFs) in RTF format.
+Its interface is designed to be similar to the R package r2rtf,
+with more rigorous data validations driven by
+[Pydantic](https://docs.pydantic.dev/) and type annotations.
+
+## Background
+
+Early in my career in the pharmaceutical industry, I quickly realized the
+substantial workload involved in late-stage clinical trials, particularly
+for global regulatory submissions spanning multiple studies.
+Efficient tools and workflows are essential for timely eCTD submissions
+after database lock.
+
+Many trial statisticians use R for clinical study report (CSR) verification,
+often developing reusable functions and packages to improve efficiency.
+A key turning point for me was when [Keaven](https://keaven.github.io/) asked
+me a simple yet insightful question: What is missing to make R viable for
+clinical study reports and regulatory submission?
+That same year, the [R/Pharma conference](https://rinpharma.com/event/rinpharma2018/)
+was launched to explore open-source solutions.
+
+[Nan](https://nanx.me/) and I believed any sustainable solution must
+integrate seamlessly into existing, well-established workflows.
+With that principle in mind, we developed two essential R packages:
+r2rtf for reporting and pkglite for eCTD submission.
+We documented our approach in the
+[_R for Clinical Study Report and Submission_](https://r4csr.org) (R4CSR)
+book and contributed to the R Consortium R Submission Working Group's
+[first R submission pilot](https://rconsortium.github.io/submissions-wg/pilot1.html)
+to the US FDA.
+
+After joining Meta, I was encouraged by my colleagues to learn Python.
+With Nan's parallel work on
+[pkglite for Python](https://nanx.me/blog/post/pkglite-python/),
+it was a natural step for me to explore Python-based solutions for clinical
+study reporting and submission---continuing our open-source efforts
+in a new ecosystem.
+
+## Example
+
+Below is an [example](https://pharmaverse.github.io/rtflite/articles/example-baseline/)
+demonstrating how rtflite can be used to generate a baseline characteristics
+table in RTF format, similar to r2rtf:
+
+```{css, echo=FALSE}
+.content .markdown pre.python code {
+  font-size: 0.78125rem;
+}
+```
+
+```python
+from importlib.resources import files
+
+import pandas as pd
+
+import rtflite as rtf
+
+data_path = files("rtflite.data").joinpath("baseline.csv")
+df = pd.read_csv(data_path, na_filter=False)
+
+header1 = pd.DataFrame([["", "Placebo", "Drug Low Dose", "Drug High Dose", "Total"]])
+header2 = pd.DataFrame([["", "n", "(%)", "n", "(%)", "n", "(%)", "n", "(%)"]])
+
+doc = rtf.RTFDocument(
+    df=df,
+    rtf_title=rtf.RTFTitle(
+        text=["Demographic and Anthropometric Characteristics", "ITT Subjects"]
+    ),
+    rtf_column_header=[
+        rtf.RTFColumnHeader(df=header1, col_rel_width=[3] + [2] * 4),
+        rtf.RTFColumnHeader(
+            df=header2,
+            col_rel_width=[3] + [1.2, 0.8] * 4,
+            border_top=[""] + ["single"] * 8,
+            border_left=["single"] + ["single", ""] * 4,
+        ),
+    ],
+    rtf_body=rtf.RTFBody(
+        page_by=["var_label"],
+        col_rel_width=[3] + [1.2, 0.8] * 4 + [3],
+        text_justification=["l"] + ["c"] * 8 + ["l"],
+        text_format=[""] * 9 + ["b"],
+        border_left=["single"] + ["single", ""] * 4 + ["single"],
+        border_top=[""] * 9 + ["single"],
+        border_bottom=[""] * 9 + ["single"],
+    ),
+)
+
+doc.write_rtf("output.rtf")
+
+converter = rtf.LibreOfficeConverter()
+converter.convert(
+    input_files="output.rtf", output_dir=".", format="pdf", overwrite=True
+)
+```
+
+<embed src="output.pdf" style="width:100%; height:400px" type="application/pdf">
+
+<p></p>
+
+## Roadmap
+
+Development of rtflite is structured into three phases:
+
+- **Phase 1**: Support for single-page TLF generation (80% completed in v0.1.0).
+- **Phase 2**: Implementation of pagination algorithms and features.
+- **Phase 3**: Reproduction of all examples from the [R4CSR book](https://r4csr.org).
+
+Beyond phase 3, we plan to showcase rtflite alongside pkglite for eCTD
+submissions in Python, replicating the success of the R submission pilots.
+We hope this work will contribute to the growing adoption of open-source
+solutions for regulatory-compliant analysis, reporting, and submission
+in drug and medical device development.
+
+## Acknowledgements
+
+We extend our gratitude to Ross Farrugia, the pharmaverse council,
+and the pharmaverse community for their support in GitHub hosting and
+incorporating rtflite into the pharmaverse ecosystem.
+
+```{js, echo=FALSE}
+// Check and reset scroll position if page has been auto-scrolled to embed
+document.addEventListener("DOMContentLoaded", function () {
+  let checkCount = 0;
+  const maxChecks = 100;
+
+  const checkScrollPosition = function () {
+    if (window.scrollY > 0) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    checkCount++;
+    if (checkCount < maxChecks) {
+      setTimeout(checkScrollPosition, 10);
+    }
+  };
+
+  setTimeout(checkScrollPosition, 10);
+});
+```

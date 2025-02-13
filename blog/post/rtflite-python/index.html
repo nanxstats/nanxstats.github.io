@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files - Nan Xiao | 肖楠 </title>
+    <title> Introducing rtflite for Python - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="RStudio 2024.12.0 unconditionally adds a ProjectID field to .Rproj files, causing unwanted Git diffs and potential editing conflicts. This post explains the issue and provides an R script to automatically remove the field at R startup, keeping repositories clean.
+    <meta name="description" content="rtflite is a lightweight Python package for generating production-ready tables, listings, and figures (TLFs) in RTF format, designed for clinical study reporting and regulatory submissions while integrating seamlessly into existing engineering workflows.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/rstudio-projectid/" />
-    <meta property="og:title" content="Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files" />
-    <meta property="og:image" content="https://nanx.me/image/rstudio-projectid-git-diff.png" />
-    <meta property="og:description" content="RStudio 2024.12.0 unconditionally adds a ProjectID field to .Rproj files, causing unwanted Git diffs and potential editing conflicts. This post explains the issue and provides an R script to automatically remove the field at R startup, keeping repositories clean.
+    <meta property="og:url" content="https://nanx.me/blog/post/rtflite-python/" />
+    <meta property="og:title" content="Introducing rtflite for Python" />
+    <meta property="og:image" content="https://nanx.me/image/clement-delhaye-cnluLIyhpBA-unsplash.jpg" />
+    <meta property="og:description" content="rtflite is a lightweight Python package for generating production-ready tables, listings, and figures (TLFs) in RTF format, designed for clinical study reporting and regulatory submissions while integrating seamlessly into existing engineering workflows.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files" />
-    <meta name="twitter:description" content="RStudio 2024.12.0 unconditionally adds a ProjectID field to .Rproj files, causing unwanted Git diffs and potential editing conflicts. This post explains the issue and provides an R script to automatically remove the field at R startup, keeping repositories clean.
+    <meta name="twitter:title" content="Introducing rtflite for Python" />
+    <meta name="twitter:description" content="rtflite is a lightweight Python package for generating production-ready tables, listings, and figures (TLFs) in RTF format, designed for clinical study reporting and regulatory submissions while integrating seamlessly into existing engineering workflows.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/rstudio-projectid-git-diff.png" />
+    <meta name="twitter:image" content="https://nanx.me/image/clement-delhaye-cnluLIyhpBA-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/rstudio-projectid/">
+    <link rel="canonical" href="https://nanx.me/blog/post/rtflite-python/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -130,54 +130,50 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files</h1>
+                <h1 class="blog-post-title">Introducing rtflite for Python</h1>
 
                 <div class="mb-md-4 meta">
                     
                     
-                    <span class="author" title="Nan Xiao">
-                        Nan Xiao
+                    <span class="author" title="Yilong Zhang">
+                        Yilong Zhang
                     </span>
                     
                     
 
-                    <span class="date middot" title='Sun Feb 9 2025 20:42:00 UTC'>
-                        February 9, 2025
+                    <span class="date middot" title='Thu Feb 13 2025 00:06:00 UTC'>
+                        February 13, 2025
                     </span>
 
                     <span class="reading-time middot">
-                        2 min read
+                        3 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/r">R</a>
+                                <a href="https://nanx.me/tags/python">Python</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/rstudio-ide">RStudio IDE</a>
+                                <a href="https://nanx.me/tags/python-packages">Python packages</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/r-startup">R startup</a>
+                                <a href="https://nanx.me/tags/clinical-trials">clinical trials</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/git">Git</a>
+                                <a href="https://nanx.me/tags/tlfs">TLFs</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/xfun">xfun</a>
+                                <a href="https://nanx.me/tags/regulatory-submission">regulatory submission</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/automation">automation</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/developer-experience">developer experience</a>
+                                <a href="https://nanx.me/tags/rtflite">rtflite</a>
                             </li>
                             
                         </ul>
@@ -197,78 +193,166 @@
 
 
 <div class="float">
-<img src="https://nanx.me/image/rstudio-projectid-git-diff.png" alt="Git diff showing the ProjectID field added by RStudio 2024.12.0. Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term." />
-<div class="figcaption">Git diff showing the ProjectID field added by RStudio 2024.12.0.<br />
-Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term.</div>
+<img src="https://nanx.me/image/clement-delhaye-cnluLIyhpBA-unsplash.jpg" alt="Touring in the clouds. Photo by Clement Delhaye." />
+<div class="figcaption">Touring in the clouds. Photo by <a href="https://unsplash.com/photos/cnluLIyhpBA">Clement Delhaye</a>.</div>
 </div>
-<div id="tldr-the-fix" class="section level2">
-<h2>TL;DR: The fix</h2>
-<p>The following script detects newly added <code>ProjectID</code> lines in <code>.Rproj</code> files
-using <code>git diff</code>. If detected, it removes the line and saves the modified
-<code>.Rproj</code> file.</p>
-<pre class="r"><code># Remove ProjectID from .Rproj files if freshly added
-local({
-  xfun &lt;- requireNamespace(&quot;xfun&quot;, quietly = TRUE)
-  rproj_files &lt;- list.files(pattern = &quot;\\.Rproj$&quot;, full.names = TRUE)
-  if (!xfun || length(rproj_files) == 0L) return(invisible(NULL))
+<div class="callout">
+<p>This is a guest post generously contributed by
+<a href="https://www.linkedin.com/in/yilongzhang/">Yilong Zhang</a>,
+a biostatistician at Meta.</p>
+</div>
+<style type="text/css">
+.callout p {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-left: 5px solid #64748b;
+  border-right: 1px solid #cbd5e1;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+</style>
+<p>It is my pleasure to introduce <a href="https://pharmaverse.github.io/rtflite/">rtflite</a>,
+a new Python package for generating RTF documents.
+A preview version is now available on <a href="https://pypi.org/project/rtflite/">PyPI</a>.
+You can install it with:</p>
+<pre class="bash"><code>pip install rtflite</code></pre>
+<p>The ultimate goal of rtflite is to provide a lightweight solution for
+generating production-ready tables, listings, and figures (TLFs) in RTF format.
+Its interface is designed to be similar to the R package r2rtf,
+with more rigorous data validations driven by
+<a href="https://docs.pydantic.dev/">Pydantic</a> and type annotations.</p>
+<div id="background" class="section level2">
+<h2>Background</h2>
+<p>Early in my career in the pharmaceutical industry, I quickly realized the
+substantial workload involved in late-stage clinical trials, particularly
+for global regulatory submissions spanning multiple studies.
+Efficient tools and workflows are essential for timely eCTD submissions
+after database lock.</p>
+<p>Many trial statisticians use R for clinical study report (CSR) verification,
+often developing reusable functions and packages to improve efficiency.
+A key turning point for me was when <a href="https://keaven.github.io/">Keaven</a> asked
+me a simple yet insightful question: What is missing to make R viable for
+clinical study reports and regulatory submission?
+That same year, the <a href="https://rinpharma.com/event/rinpharma2018/">R/Pharma conference</a>
+was launched to explore open-source solutions.</p>
+<p><a href="https://nanx.me/">Nan</a> and I believed any sustainable solution must
+integrate seamlessly into existing, well-established workflows.
+With that principle in mind, we developed two essential R packages:
+r2rtf for reporting and pkglite for eCTD submission.
+We documented our approach in the
+<a href="https://r4csr.org"><em>R for Clinical Study Report and Submission</em></a> (R4CSR)
+book and contributed to the R Consortium R Submission Working Group’s
+<a href="https://rconsortium.github.io/submissions-wg/pilot1.html">first R submission pilot</a>
+to the US FDA.</p>
+<p>After joining Meta, I was encouraged by my colleagues to learn Python.
+With Nan’s parallel work on
+<a href="https://nanx.me/blog/post/pkglite-python/">pkglite for Python</a>,
+it was a natural step for me to explore Python-based solutions for clinical
+study reporting and submission—continuing our open-source efforts
+in a new ecosystem.</p>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<p>Below is an <a href="https://pharmaverse.github.io/rtflite/articles/example-baseline/">example</a>
+demonstrating how rtflite can be used to generate a baseline characteristics
+table in RTF format, similar to r2rtf:</p>
+<style type="text/css">
+.content .markdown pre.python code {
+  font-size: 0.78125rem;
+}
+</style>
+<pre class="python"><code>from importlib.resources import files
 
-  lapply(rproj_files, function(f) {
-    diff_cmd &lt;- system(paste(&quot;git diff --&quot;, shQuote(f)), intern = TRUE)
-    diff_out &lt;- tryCatch(diff_cmd, error = function(e) character(0))
+import pandas as pd
 
-    if (any(grepl(&quot;^\\+ProjectId: &quot;, diff_out))) {
-      dcf_old &lt;- xfun::read_utf8(f)
-      dcf_new &lt;- dcf_old[!grepl(&quot;^ProjectId: &quot;, dcf_old)]
-      xfun::write_utf8(dcf_new, f)
-    }
-  })
+import rtflite as rtf
 
-  invisible(NULL)
-})</code></pre>
-<p>To apply this fix, add the script to your project-specific <code>.Rprofile</code> or the
-user-specific <code>~/.Rprofile</code>. It will execute on every
-<a href="https://docs.posit.co/ide/user/ide/guide/environments/r/managing-r.html">R startup</a>.
-The script has been tested with RStudio IDE 2024.12.0 on Windows, macOS, and Linux.</p>
-<p>Requirements of the script:</p>
+data_path = files(&quot;rtflite.data&quot;).joinpath(&quot;baseline.csv&quot;)
+df = pd.read_csv(data_path, na_filter=False)
+
+header1 = pd.DataFrame([[&quot;&quot;, &quot;Placebo&quot;, &quot;Drug Low Dose&quot;, &quot;Drug High Dose&quot;, &quot;Total&quot;]])
+header2 = pd.DataFrame([[&quot;&quot;, &quot;n&quot;, &quot;(%)&quot;, &quot;n&quot;, &quot;(%)&quot;, &quot;n&quot;, &quot;(%)&quot;, &quot;n&quot;, &quot;(%)&quot;]])
+
+doc = rtf.RTFDocument(
+    df=df,
+    rtf_title=rtf.RTFTitle(
+        text=[&quot;Demographic and Anthropometric Characteristics&quot;, &quot;ITT Subjects&quot;]
+    ),
+    rtf_column_header=[
+        rtf.RTFColumnHeader(df=header1, col_rel_width=[3] + [2] * 4),
+        rtf.RTFColumnHeader(
+            df=header2,
+            col_rel_width=[3] + [1.2, 0.8] * 4,
+            border_top=[&quot;&quot;] + [&quot;single&quot;] * 8,
+            border_left=[&quot;single&quot;] + [&quot;single&quot;, &quot;&quot;] * 4,
+        ),
+    ],
+    rtf_body=rtf.RTFBody(
+        page_by=[&quot;var_label&quot;],
+        col_rel_width=[3] + [1.2, 0.8] * 4 + [3],
+        text_justification=[&quot;l&quot;] + [&quot;c&quot;] * 8 + [&quot;l&quot;],
+        text_format=[&quot;&quot;] * 9 + [&quot;b&quot;],
+        border_left=[&quot;single&quot;] + [&quot;single&quot;, &quot;&quot;] * 4 + [&quot;single&quot;],
+        border_top=[&quot;&quot;] * 9 + [&quot;single&quot;],
+        border_bottom=[&quot;&quot;] * 9 + [&quot;single&quot;],
+    ),
+)
+
+doc.write_rtf(&quot;output.rtf&quot;)
+
+converter = rtf.LibreOfficeConverter()
+converter.convert(
+    input_files=&quot;output.rtf&quot;, output_dir=&quot;.&quot;, format=&quot;pdf&quot;, overwrite=True
+)</code></pre>
+<embed src="output.pdf" style="width:100%; height:400px" type="application/pdf">
+<p>
+</p>
+</div>
+<div id="roadmap" class="section level2">
+<h2>Roadmap</h2>
+<p>Development of rtflite is structured into three phases:</p>
 <ul>
-<li>The project must use Git for version control.</li>
-<li><code>git</code> must be accessible from the command-line
-(<a href="https://github.com/nanxstats/r-windows-paths">Windows how-to</a>).</li>
-<li>The <a href="https://cran.r-project.org/package=xfun">xfun</a> package is installed
-for handling UTF-8 encoded files.</li>
+<li><strong>Phase 1</strong>: Support for single-page TLF generation (80% completed in v0.1.0).</li>
+<li><strong>Phase 2</strong>: Implementation of pagination algorithms and features.</li>
+<li><strong>Phase 3</strong>: Reproduction of all examples from the <a href="https://r4csr.org">R4CSR book</a>.</li>
 </ul>
+<p>Beyond phase 3, we plan to showcase rtflite alongside pkglite for eCTD
+submissions in Python, replicating the success of the R submission pilots.
+We hope this work will contribute to the growing adoption of open-source
+solutions for regulatory-compliant analysis, reporting, and submission
+in drug and medical device development.</p>
 </div>
-<div id="the-issue" class="section level2">
-<h2>The issue</h2>
-<p>In RStudio 2024.12.0, opening an R package or project automatically adds a
-<code>ProjectID</code> field to the <code>.Rproj</code> file, as shown in the screenshot above.</p>
-<p>This feature was introduced in
-<a href="https://github.com/rstudio/rstudio/pull/15140">rstudio/rstudio#15140</a>.
-It was designed to accurately map projects with their <code>.Rproj.user/</code>
-directories, which can now be stored externally—outside of the project.</p>
-<p>While this feature serves a clear purpose, the current implementation
-introduces some unintended side effects. For example, it may create
-<a href="https://forum.posit.co/t/196345">unnecessary diffs</a> in version control,
-with no clear lifecycle for the <code>ProjectID</code>.
-Team members collolaborating with different RStudio versions might also
-get <a href="https://github.com/rstudio/rstudio/issues/15524">conflicting edits</a>,
-leading to additional version control noise.</p>
-</div>
-<div id="long-term-and-short-term-solutions" class="section level2">
-<h2>Long-term and short-term solutions</h2>
-<p>This behavior has been improved in
-<a href="https://github.com/rstudio/rstudio/pull/15654">rstudio/rstudio#15654</a>,
-where <code>ProjectID</code> is only added when external storage for <code>.Rproj.user/</code>
-is required. However, until a fixed version is released, or if users are
-stuck with RStudio 2024.12.0, a temporary user-space solution could be useful.</p>
-</div>
-<div id="why-this-fix-works" class="section level2">
-<h2>Why this fix works</h2>
-<p>The modification to <code>.Rproj</code> files occurs in RStudio IDE logic before the
-R process starts, meaning we cannot prevent the addition of <code>ProjectID</code>.
-However, we can reliably detect the change via <code>git diff</code> and revert it
-when R starts. The script provided at the beginning of this post
-automates this process.</p>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>We extend our gratitude to Ross Farrugia, the pharmaverse council,
+and the pharmaverse community for their support in GitHub hosting and
+incorporating rtflite into the pharmaverse ecosystem.</p>
+<script>
+// Check and reset scroll position if page has been auto-scrolled to embed
+document.addEventListener("DOMContentLoaded", function () {
+  let checkCount = 0;
+  const maxChecks = 100;
+
+  const checkScrollPosition = function () {
+    if (window.scrollY > 0) {
+      window.scrollTo(0, 0);
+      return;
+    }
+
+    checkCount++;
+    if (checkCount < maxChecks) {
+      setTimeout(checkScrollPosition, 10);
+    }
+  };
+
+  setTimeout(checkScrollPosition, 10);
+});
+</script>
 </div>
 
 
@@ -280,10 +364,10 @@ automates this process.</p>
                     <div class="row navigation-btns">
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/pkglite-python/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                            <a href="https://nanx.me/blog/post/rstudio-projectid/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« Introducing pkglite for Python</div>
+                                    <div class="pagination-nav-label">« Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files</div>
                                 </div>
                             </a>
                             
@@ -291,12 +375,12 @@ automates this process.</p>
 
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/rtflite-python/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">Introducing rtflite for Python »</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
                                 </div>
-                            </a>
+                            </div>
                             
                         </div>
                     </div>
@@ -454,9 +538,6 @@ automates this process.</p>
     
     
         
-<script src="https://nanx.me/js/math-code.js"></script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 
     
 </body>
