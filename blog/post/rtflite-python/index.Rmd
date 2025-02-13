@@ -80,7 +80,7 @@ integrate seamlessly into existing, well-established workflows.
 With that principle in mind, we developed two essential R packages:
 r2rtf for reporting and pkglite for eCTD submission.
 We documented our approach in the
-[_R for Clinical Study Report and Submission_](https://r4csr.org) (R4CSR)
+[_R for Clinical Study Reports and Submission_](https://r4csr.org) (R4CSR)
 book and contributed to the R Consortium R Submission Working Group's
 [first R submission pilot](https://rconsortium.github.io/submissions-wg/pilot1.html)
 to the US FDA.
