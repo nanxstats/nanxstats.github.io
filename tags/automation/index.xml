@@ -13,7 +13,7 @@
       <link>https://nanx.me/blog/post/rstudio-projectid/</link>
       <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/rstudio-projectid/</guid>
-      <description>Git diff showing the ProjectID field added by RStudio 2024.12.0.&#xA;Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term. TL;DR: The fix The following script detects newly added ProjectID lines in .Rproj files using git diff. If detected, it removes the line and saves the modified .Rproj file.&#xA;# Remove ProjectID from .Rproj files if freshly added local({ xfun &amp;lt;- requireNamespace(&amp;quot;xfun&amp;quot;, quietly = TRUE) rproj_files &amp;lt;- list.files(pattern = &amp;quot;\\.Rproj$&amp;quot;, full.names = TRUE) if (!</description>
+      <description>Git diff showing the ProjectID field added by RStudio 2024.12.0.&#xA;Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term. Update (2025-02-13): The issue still exists in RStudio 2024.12.1. The fix still applies.&#xA;TL;DR: The fix The following script detects newly added ProjectID lines in .Rproj files using git diff. If detected, it removes the line and saves the modified .Rproj file.&#xA;# Remove ProjectID from .Rproj files if freshly added local({ xfun &amp;lt;- requireNamespace(&amp;quot;xfun&amp;quot;, quietly = TRUE) rproj_files &amp;lt;- list.</description>
     </item>
     <item>
       <title>Skip RStudio splash screen</title>
