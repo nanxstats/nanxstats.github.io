@@ -63,7 +63,7 @@
 
 body {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-variation-settings: "wdth" 97.5;
     font-variant-ligatures: contextual common-ligatures;
     background-color: var(--tw-bg);
@@ -183,7 +183,7 @@ hr {
 
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 500;
     font-size: 1.375rem;
 }
@@ -230,7 +230,7 @@ hr {
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
-        font-feature-settings: normal;
+        font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
         font-weight: 700;
         text-decoration: none;
     }
@@ -316,7 +316,7 @@ h6 {
 
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 500;
     font-size: 1.25rem;
     color: var(--tw-prose-lead);
@@ -341,7 +341,7 @@ h6 {
 
 .content .markdown {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 450;
     font-size: 1.125rem;
     line-height: calc(30 / 18);
@@ -375,7 +375,7 @@ dl {
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 450;
     font-size: 1.1875rem;
     line-height: calc(30 / 18);
@@ -387,7 +387,7 @@ dl {
 
 .content .blog-post-content ol li p {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 450;
 }
 
@@ -514,7 +514,7 @@ dl {
 
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 500;
     font-size: 0.9375rem;
     line-height: 2.5rem;
@@ -522,7 +522,7 @@ dl {
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 450;
     font-size: 0.9375rem;
     line-height: 2.5rem;
@@ -550,7 +550,7 @@ dl {
 
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 500;
     font-size: 0.875rem;
     line-height: calc(50 / 18);
@@ -573,7 +573,7 @@ dl {
 /* Tags page */
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 450;
     font-size: 1.25rem;
     margin-bottom: 1.125rem;
@@ -612,7 +612,7 @@ dl {
 
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 450;
     font-size: 1rem;
     text-decoration: none;
@@ -635,7 +635,7 @@ dl {
 
 .pagination-nav .pagination-nav-sublabel {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 600;
     font-size: 1rem;
     color: var(--tw-prose-captions);
@@ -658,7 +658,7 @@ dl {
 
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
-    font-feature-settings: normal;
+    font-feature-settings: "ss04", "ss07", "ss08", "ss09", "ss12";
     font-weight: 450;
     font-size: 1.125rem;
 }
