@@ -60,7 +60,7 @@ Python has maturin and pyo3, while R benefits from
 scaffolding and interfacing with Rust.
 All of these came from [outstanding community
 contributions](https://archive.r-consortium.org/blog/2023/07/06/r-consortium-funded-project-extendr-provides-rust-extensions-for-r)
-that makes writing Rust-powered R packages much easier.
+that make writing Rust-powered R packages much easier.
 For an introduction, I recommend checking out
 [Josiah Parry's video tutorial](https://www.youtube.com/watch?v=tRm-Qq2_Ap0),
 which perfectly explains the R + Rust development workflow.
