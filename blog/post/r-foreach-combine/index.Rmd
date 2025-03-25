@@ -63,7 +63,7 @@ code could also take a [potential performance hit](https://rpubs.com/jimhester/r
 as the list size gets large.
 The convinient argument `.combine` in `foreach()` could have
 similar performance traps. This means by using `.combine = "rbind"`,
-the parallel `foreach()` call can have significantly degrade performance
+the parallel `foreach()` call can have significantly degraded performance
 as the number of iterations increases.
 
 ## Benchmarking setup
