@@ -4,32 +4,29 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> R packages using Rust - Nan Xiao | 肖楠 </title>
+    <title> rbind - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="r-rust-pkgs is a curated GitHub repository that collects R packages on CRAN that use Rust. It provides a centralized resource for finding high-performance R packages built with Rust, leveraging Rust&#39;s strong ecosystem and memory safety features.
-" />
+    <meta name="description" content="" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/r-rust-pkgs/" />
-    <meta property="og:title" content="R packages using Rust" />
-    <meta property="og:image" content="https://nanx.me/image/powering-offroad-hAwbvhgj0wA-unsplash.jpg" />
-    <meta property="og:description" content="r-rust-pkgs is a curated GitHub repository that collects R packages on CRAN that use Rust. It provides a centralized resource for finding high-performance R packages built with Rust, leveraging Rust&#39;s strong ecosystem and memory safety features.
-" />
+    <meta property="og:url" content="https://nanx.me/tags/rbind/" />
+    <meta property="og:title" content="rbind" />
+    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:description" content="" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="R packages using Rust" />
-    <meta name="twitter:description" content="r-rust-pkgs is a curated GitHub repository that collects R packages on CRAN that use Rust. It provides a centralized resource for finding high-performance R packages built with Rust, leveraging Rust&#39;s strong ecosystem and memory safety features.
-" />
-    <meta name="twitter:image" content="https://nanx.me/image/powering-offroad-hAwbvhgj0wA-unsplash.jpg" />
+    <meta name="twitter:title" content="rbind" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/r-rust-pkgs/">
+    <link rel="canonical" href="https://nanx.me/tags/rbind/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -44,6 +41,8 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
+    
+    <link href="https://nanx.me/tags/rbind/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -71,7 +70,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog active"
+                                <a class="nav-link text-blog"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -130,182 +129,43 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">R packages using Rust</h1>
-
-                <div class="mb-md-4 meta">
-                    
-                    
-                    <span class="author" title="Nan Xiao">
-                        Nan Xiao
-                    </span>
-                    
-                    
-
-                    <span class="date middot" title='Fri Feb 28 2025 16:37:00 UTC'>
-                        February 28, 2025
-                    </span>
-
-                    <span class="reading-time middot">
-                        2 min read
-                    </span>
-
-                    <div class="d-none d-md-block mt-2 tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/rust">Rust</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/cargo">Cargo</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/r">R</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/r-packages">R packages</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/extendr">extendr</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/rextendr">rextendr</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/language-interoperability">language interoperability</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-
-                    <div class="d-none d-md-inline tags">
-                        <ul class="list-unstyled d-inline">
-                            
-                            
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="markdown blog-post-content">
+                <div class="markdown">
                     
     
 
 
-<div class="callout">
-<p>TL;DR: I’m curating a list of CRAN R packages that use Rust:
-<a href="https://github.com/nanxstats/r-rust-pkgs" class="uri">https://github.com/nanxstats/r-rust-pkgs</a>.</p>
-</div>
-<style type="text/css">
-.callout p {
-  font-size: 0.875rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.25rem;
-  border-left: 5px solid #64748b;
-  border-right: 1px solid #cbd5e1;
-  border-top: 1px solid #cbd5e1;
-  border-bottom: 1px solid #cbd5e1;
-}
-</style>
-<div class="float">
-<img src="https://nanx.me/image/powering-offroad-hAwbvhgj0wA-unsplash.jpg" alt="Dirt bike. Photo by POWERING OFFROAD." />
-<div class="figcaption">Dirt bike. Photo by <a href="https://unsplash.com/photos/hAwbvhgj0wA">POWERING OFFROAD</a>.</div>
-</div>
-<div id="rust-in-r-packages" class="section level2">
-<h2>Rust in R packages</h2>
-<p>Rust has been the <a href="https://github.blog/developer-skills/programming-languages-and-frameworks/why-rust-is-the-most-admired-language-among-developers/">most admired programming
-language</a>
-for nearly a decade.
-CRAN, the largest public repository for R packages,
-has also <a href="https://cran.r-project.org/web/packages/using_rust.html">supported integrating Rust in R packages</a> for several years. What’s the magic behind the language?</p>
-<p>To me, Rust is a great choice for writing high-performance extensions for
-both R and Python, offering memory safety and a strong ecosystem.
-Python has maturin and pyo3, while R benefits from
-<a href="https://extendr.github.io/rextendr/">rextendr</a>, an R package that simplifies
-scaffolding and interfacing with Rust.
-All of these came from <a href="https://archive.r-consortium.org/blog/2023/07/06/r-consortium-funded-project-extendr-provides-rust-extensions-for-r">outstanding community
-contributions</a>
-that make writing Rust-powered R packages much easier.
-For an introduction, I recommend checking out
-<a href="https://www.youtube.com/watch?v=tRm-Qq2_Ap0">Josiah Parry’s video tutorial</a>,
-which perfectly explains the R + Rust development workflow.</p>
-</div>
-<div id="why-this-list" class="section level2">
-<h2>Why this list?</h2>
-<p>When learning a new programming language, I often study real-world package
-examples to understand language-specific engineering best practices.
-However, to my knowledge, there has not been a centralized way to find
-R packages that use Rust. To address this, I created
-<a href="https://github.com/nanxstats/r-rust-pkgs"><strong>nanxstats/r-rust-pkgs</strong></a>,
-a GitHub repository listing CRAN packages that contain Rust code
-in alphabetical order.</p>
-<p>The list is automatically generated by scanning CRAN package <code>DESCRIPTION</code>
-files where <code>SystemRequirements</code> contains <code>Cargo</code> (the Rust package manager).
-Currently, it includes 27 packages. To update the list, simply fork the repo,
-render the <code>README.Rmd</code> file, and submit a pull request.</p>
-</div>
-
-
-
                 </div>
 
-                
-                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
-                    <div class="row navigation-btns">
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/rtflite-python/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« Introducing rtflite for Python</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-
-                        <div class="col">
-                            
-                            <a href="https://nanx.me/blog/post/r-foreach-combine/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
-                                <div class="btn-content">
-                                    <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">Optimize R foreach loops for parallelism: avoid the .combine argument »</div>
-                                </div>
-                            </a>
-                            
-                        </div>
-                    </div>
-                </nav>
-                
-
+                <div class="posts">
+                    <h1>Posts about rbind</h1>
+                    <hr>
+                    <ul class="list-unstyled">
+                        
+                        <li class="groupby">2025</li>
+                        
+                        <li class="post-item">
+    <a href="https://nanx.me/blog/post/r-foreach-combine/">
+        <div class="inner-post-item">
+            <div class="row">
+                <div class="col-md-10 meta-title">
+                    Optimize R foreach loops for parallelism: avoid the .combine argument
+                </div>
+                <div class="col-md-2 meta-date text-md-end">
+                    2025-03-24
+                </div>
             </div>
         </div>
-    </div>
-</div>
-
-<section id="comments">
-    <div class="py-3 content">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="mx-auto w-700">
-                    <div class="comments">
-                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
-                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
-                            </script>
-                    </div>
+    </a>
+</li>
+                        
+                        
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</div>
+
 <div class="footer mt-5">
     <div class="container">
 
@@ -407,6 +267,12 @@ render the <code>README.Rmd</code> file, and submit a pull request.</p>
                                 Colophon</a></li>
                         
 
+                        
+                        <li><a href="https://nanx.me/tags/rbind/index.xml" class="mr-0">
+                                <svg class="svg-icon mr-1">
+                                    <use xlink:href="#octicons-rss"></use>
+                                </svg>
+                                RSS</a></li>
                         
 
                         

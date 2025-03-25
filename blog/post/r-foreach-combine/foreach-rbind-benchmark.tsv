@@ -1,0 +1,9 @@
+nsim	Method	Time (seconds)
+1000	`foreach(.combine="rbind")`	8.52
+1000	`rbindlist`	8.70
+10000	`foreach(.combine="rbind")`	54.56
+10000	`rbindlist`	47.77
+50000	`foreach(.combine="rbind")`	353.61
+50000	`rbindlist`	225.17
+100000	`foreach(.combine="rbind")`	927.05
+100000	`rbindlist`	450.90

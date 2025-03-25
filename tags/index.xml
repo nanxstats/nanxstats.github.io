@@ -6,8 +6,85 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 28 Feb 2025 16:37:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Mar 2025 20:05:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>anti-pattern</title>
+      <link>https://nanx.me/tags/anti-pattern/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/anti-pattern/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>benchmark</title>
+      <link>https://nanx.me/tags/benchmark/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/benchmark/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>data.table</title>
+      <link>https://nanx.me/tags/data.table/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/data.table/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>foreach</title>
+      <link>https://nanx.me/tags/foreach/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/foreach/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>parallel computing</title>
+      <link>https://nanx.me/tags/parallel-computing/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/parallel-computing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>performance optimization</title>
+      <link>https://nanx.me/tags/performance-optimization/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/performance-optimization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>rbind</title>
+      <link>https://nanx.me/tags/rbind/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rbind/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>rbindlist</title>
+      <link>https://nanx.me/tags/rbindlist/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rbindlist/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vibe coding</title>
+      <link>https://nanx.me/tags/vibe-coding/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vibe-coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vibe debugging</title>
+      <link>https://nanx.me/tags/vibe-debugging/</link>
+      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vibe-debugging/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Cargo</title>
       <link>https://nanx.me/tags/cargo/</link>
@@ -27,13 +104,6 @@
       <link>https://nanx.me/tags/language-interoperability/</link>
       <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
       <guid>https://nanx.me/tags/language-interoperability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     <item>

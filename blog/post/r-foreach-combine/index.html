@@ -4,19 +4,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> R packages using Rust - Nan Xiao | 肖楠 </title>
+    <title> Optimize R foreach loops for parallelism: avoid the .combine argument - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="r-rust-pkgs is a curated GitHub repository that collects R packages on CRAN that use Rust. It provides a centralized resource for finding high-performance R packages built with Rust, leveraging Rust&#39;s strong ecosystem and memory safety features.
+    <meta name="description" content="Learn why using .combine in R parallel foreach loops can harm performance. Benchmark comparisons show that manual aggregation methods like data.table::rbindlist() significantly accelerate execution.
 " />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/blog/post/r-rust-pkgs/" />
-    <meta property="og:title" content="R packages using Rust" />
-    <meta property="og:image" content="https://nanx.me/image/powering-offroad-hAwbvhgj0wA-unsplash.jpg" />
-    <meta property="og:description" content="r-rust-pkgs is a curated GitHub repository that collects R packages on CRAN that use Rust. It provides a centralized resource for finding high-performance R packages built with Rust, leveraging Rust&#39;s strong ecosystem and memory safety features.
+    <meta property="og:url" content="https://nanx.me/blog/post/r-foreach-combine/" />
+    <meta property="og:title" content="Optimize R foreach loops for parallelism: avoid the .combine argument" />
+    <meta property="og:image" content="https://nanx.me/image/cute-boat-in-a-glass-bottle.png" />
+    <meta property="og:description" content="Learn why using .combine in R parallel foreach loops can harm performance. Benchmark comparisons show that manual aggregation methods like data.table::rbindlist() significantly accelerate execution.
 " />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,12 +24,12 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="R packages using Rust" />
-    <meta name="twitter:description" content="r-rust-pkgs is a curated GitHub repository that collects R packages on CRAN that use Rust. It provides a centralized resource for finding high-performance R packages built with Rust, leveraging Rust&#39;s strong ecosystem and memory safety features.
+    <meta name="twitter:title" content="Optimize R foreach loops for parallelism: avoid the .combine argument" />
+    <meta name="twitter:description" content="Learn why using .combine in R parallel foreach loops can harm performance. Benchmark comparisons show that manual aggregation methods like data.table::rbindlist() significantly accelerate execution.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/powering-offroad-hAwbvhgj0wA-unsplash.jpg" />
+    <meta name="twitter:image" content="https://nanx.me/image/cute-boat-in-a-glass-bottle.png" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/r-rust-pkgs/">
+    <link rel="canonical" href="https://nanx.me/blog/post/r-foreach-combine/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -130,7 +130,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">R packages using Rust</h1>
+                <h1 class="blog-post-title">Optimize R foreach loops for parallelism: avoid the .combine argument</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -141,43 +141,59 @@
                     
                     
 
-                    <span class="date middot" title='Fri Feb 28 2025 16:37:00 UTC'>
-                        February 28, 2025
+                    <span class="date middot" title='Mon Mar 24 2025 20:05:00 UTC'>
+                        March 24, 2025
                     </span>
 
                     <span class="reading-time middot">
-                        2 min read
+                        3 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/rust">Rust</a>
-                            </li>
-                            
-                            <li class="d-inline">
-                                <a href="https://nanx.me/tags/cargo">Cargo</a>
-                            </li>
-                            
-                            <li class="d-inline">
                                 <a href="https://nanx.me/tags/r">R</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                                <a href="https://nanx.me/tags/foreach">foreach</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/extendr">extendr</a>
+                                <a href="https://nanx.me/tags/parallel-computing">parallel computing</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/rextendr">rextendr</a>
+                                <a href="https://nanx.me/tags/performance-optimization">performance optimization</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/language-interoperability">language interoperability</a>
+                                <a href="https://nanx.me/tags/benchmark">benchmark</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/anti-pattern">anti-pattern</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/rbind">rbind</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/data.table">data.table</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/rbindlist">rbindlist</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/vibe-coding">vibe coding</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/vibe-debugging">vibe debugging</a>
                             </li>
                             
                         </ul>
@@ -196,13 +212,19 @@
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/cute-boat-in-a-glass-bottle.png" alt="Cute boat in a glass bottle. Art generated by Flux1.dev + cozy-book-800 LoRA adapter." />
+<div class="figcaption">Cute boat in a glass bottle.
+Art generated by Flux1.dev +
+<a href="https://huggingface.co/fffiloni/cozy-book-800">cozy-book-800 LoRA adapter</a>.</div>
+</div>
 <div class="callout">
-<p>TL;DR: I’m curating a list of CRAN R packages that use Rust:
-<a href="https://github.com/nanxstats/r-rust-pkgs" class="uri">https://github.com/nanxstats/r-rust-pkgs</a>.</p>
+<p>The benchmarking script used in this post is available as a
+<a href="https://gist.github.com/nanxstats/07442aba90a5bc2f4b7d821338f9eede">GitHub gist</a>.</p>
 </div>
 <style type="text/css">
 .callout p {
-  font-size: 0.875rem;
+  font-size: 1rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   padding-top: 1.25rem;
@@ -216,42 +238,253 @@
   border-bottom: 1px solid #cbd5e1;
 }
 </style>
+<p>This post recommends avoiding the use of <code>foreach(.combine = "rbind")</code>
+in parallel loops in R. Instead, manually combine the results after the
+<code>foreach()</code> call using functions like
+<code>data.table::rbindlist()</code> or <code>dplyr::bind_rows()</code>.</p>
+<div id="performance-issues-with-rbind" class="section level2">
+<h2>Performance issues with rbind()</h2>
+<p>The <code>do.call(rbind, list)</code> pattern in R is an expressive and functional way
+to bind data frames from a list into a single data frame. Meanwhile, your
+code could also take a <a href="https://rpubs.com/jimhester/rbind">potential performance hit</a>
+as the list size gets large.
+The convinient argument <code>.combine</code> in <code>foreach()</code> could have
+similar performance traps. This means by using <code>.combine = "rbind"</code>,
+the parallel <code>foreach()</code> call can have significantly degrade performance
+as the number of iterations increases.</p>
+</div>
+<div id="benchmarking-setup" class="section level2">
+<h2>Benchmarking setup</h2>
+<p>To quantify this issue, I created a simple benchmark comparing two approaches:</p>
+<ul>
+<li><strong>Method 1:</strong> <code>foreach(.combine = "rbind")</code></li>
+<li><strong>Method 2:</strong> <code>foreach()</code> without <code>.combine</code>, followed by <code>data.table::rbindlist()</code></li>
+</ul>
+<p>First, I created a CPU-intensive function that performs singular value decomposition
+(SVD) on 300 randomly generated 10x10 positive semidefinite matrices.
+The function returns a 300x7 data frame summarizing the results:</p>
+<pre class="r"><code>anysvd &lt;- function(id, dim = 10, nrep = 300) {
+  results &lt;- vector(&quot;list&quot;, nrep)
+
+  for (j in 1:nrep) {
+    X &lt;- matrix(rnorm(dim^2), dim, dim)
+    A &lt;- crossprod(X)
+
+    s &lt;- svd(A)
+
+    results[[j]] &lt;- data.frame(
+      id = id,
+      sub_id = j,
+      sv1 = s$d[1],
+      sv2 = s$d[2],
+      sv3 = s$d[3],
+      matrix_norm = norm(A, type = &quot;F&quot;),
+      matrix_trace = sum(diag(A))
+    )
+  }
+
+  as.data.frame(data.table::rbindlist(results))
+}</code></pre>
+<p>I ran the benchmarks across different numbers of iterations (1000, 10000, 50000, 100000)
+using the <code>%dofuture%</code> operator on a 32-worker setup (7950X3D):</p>
+<pre class="r"><code>library(doFuture)
+
+plan(multisession, workers = 32)
+
+nsim_grid &lt;- c(1000, 10000, 50000, 100000)
+
+df_bench &lt;- data.frame(
+  nsim = integer(),
+  method = character(),
+  time = numeric()
+)
+
+for (nsim in nsim_grid) {
+  message(&quot;Running benchmark with nsim=&quot;, nsim)
+
+  # Method 1: foreach(.combine = &quot;rbind&quot;)
+  set.seed(42)
+  tictoc::tic.clearlog()
+  tictoc::tic(paste0(&quot;method1_nsim&quot;, nsim))
+  df_rbind &lt;- foreach(
+    i = 1:nsim,
+    .combine = &quot;rbind&quot;,
+    .options.future = list(seed = TRUE)
+  ) %dofuture% {
+    anysvd(i)
+  }
+  tictoc::toc(log = TRUE, quiet = TRUE)
+
+  # Method 2: foreach then rbindlist
+  set.seed(42)
+  tictoc::tic(paste0(&quot;method2_nsim&quot;, nsim))
+  lst_rbindlist &lt;- foreach(
+    i = 1:nsim,
+    .options.future = list(seed = TRUE)
+  ) %dofuture% {
+    anysvd(i)
+  }
+  df_rbindlist &lt;- as.data.frame(data.table::rbindlist(lst_rbindlist))
+  tictoc::toc(log = TRUE, quiet = TRUE)
+
+  if (!identical(df_rbind, df_rbindlist)) warning(&quot;Discrepant results for nsim=&quot;, nsim)
+
+  lst_log &lt;- tictoc::tic.log(format = FALSE)
+  df_bench &lt;- rbind(
+    df_bench,
+    data.frame(
+      nsim = nsim,
+      method = &quot;foreach(.combine=\&quot;rbind\&quot;)&quot;,
+      time = lst_log[[1]]$toc - lst_log[[1]]$tic
+    ),
+    data.frame(
+      nsim = nsim,
+      method = &quot;rbindlist&quot;,
+      time = lst_log[[2]]$toc - lst_log[[2]]$tic
+    ),
+    make.row.names = FALSE
+  )
+
+  tictoc::tic.clearlog()
+}</code></pre>
+</div>
+<div id="benchmark-results" class="section level2">
+<h2>Benchmark results</h2>
+<p>The results in the figure demonstrate that while both methods perform similarly
+at smaller scales (1000 iterations). The <code>.combine = "rbind"</code> method quickly
+becomes inefficient as the number of iterations increase, while the
+manual combine method sees linear time growth.</p>
 <div class="float">
-<img src="https://nanx.me/image/powering-offroad-hAwbvhgj0wA-unsplash.jpg" alt="Dirt bike. Photo by POWERING OFFROAD." />
-<div class="figcaption">Dirt bike. Photo by <a href="https://unsplash.com/photos/hAwbvhgj0wA">POWERING OFFROAD</a>.</div>
+<img src="foreach-rbind-benchmark.png" alt="Comparison of combine methods performance." />
+<div class="figcaption">Comparison of combine methods performance.</div>
 </div>
-<div id="rust-in-r-packages" class="section level2">
-<h2>Rust in R packages</h2>
-<p>Rust has been the <a href="https://github.blog/developer-skills/programming-languages-and-frameworks/why-rust-is-the-most-admired-language-among-developers/">most admired programming
-language</a>
-for nearly a decade.
-CRAN, the largest public repository for R packages,
-has also <a href="https://cran.r-project.org/web/packages/using_rust.html">supported integrating Rust in R packages</a> for several years. What’s the magic behind the language?</p>
-<p>To me, Rust is a great choice for writing high-performance extensions for
-both R and Python, offering memory safety and a strong ecosystem.
-Python has maturin and pyo3, while R benefits from
-<a href="https://extendr.github.io/rextendr/">rextendr</a>, an R package that simplifies
-scaffolding and interfacing with Rust.
-All of these came from <a href="https://archive.r-consortium.org/blog/2023/07/06/r-consortium-funded-project-extendr-provides-rust-extensions-for-r">outstanding community
-contributions</a>
-that make writing Rust-powered R packages much easier.
-For an introduction, I recommend checking out
-<a href="https://www.youtube.com/watch?v=tRm-Qq2_Ap0">Josiah Parry’s video tutorial</a>,
-which perfectly explains the R + Rust development workflow.</p>
+<p>The table below shows the original timing numbers.
+At least for this particular benchmark, we see that at higher iteration counts
+(10000+), combining results with <code>.combine</code> dramatically increases execution time.
+Specifically, at 100000 iterations, using <code>.combine = "rbind"</code> approximately
+doubles the total execution time compared to manually combining with <code>rbindlist()</code>
+— from CPU monitoring, half of the time was spent on burning one CPU core.</p>
+<style type="text/css">
+.table {
+  font-variant-numeric: tabular-nums;
+  font-size: 1rem;
+}
+</style>
+<table class="table table-hover table-sm">
+<thead>
+<tr>
+<th style="text-align:left;">
+nsim
+</th>
+<th style="text-align:left;">
+Method
+</th>
+<th style="text-align:left;">
+Time (seconds)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1000
+</td>
+<td style="text-align:left;">
+<code>foreach(.combine="rbind")</code>
+</td>
+<td style="text-align:left;">
+8.52
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1000
+</td>
+<td style="text-align:left;">
+<code>rbindlist</code>
+</td>
+<td style="text-align:left;">
+8.70
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10000
+</td>
+<td style="text-align:left;">
+<code>foreach(.combine="rbind")</code>
+</td>
+<td style="text-align:left;">
+54.56
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+10000
+</td>
+<td style="text-align:left;">
+<code>rbindlist</code>
+</td>
+<td style="text-align:left;">
+47.77
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+50000
+</td>
+<td style="text-align:left;">
+<code>foreach(.combine="rbind")</code>
+</td>
+<td style="text-align:left;">
+353.61
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+50000
+</td>
+<td style="text-align:left;">
+<code>rbindlist</code>
+</td>
+<td style="text-align:left;">
+225.17
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+100000
+</td>
+<td style="text-align:left;">
+<code>foreach(.combine="rbind")</code>
+</td>
+<td style="text-align:left;">
+927.05
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+100000
+</td>
+<td style="text-align:left;">
+<code>rbindlist</code>
+</td>
+<td style="text-align:left;">
+450.90
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+</p>
 </div>
-<div id="why-this-list" class="section level2">
-<h2>Why this list?</h2>
-<p>When learning a new programming language, I often study real-world package
-examples to understand language-specific engineering best practices.
-However, to my knowledge, there has not been a centralized way to find
-R packages that use Rust. To address this, I created
-<a href="https://github.com/nanxstats/r-rust-pkgs"><strong>nanxstats/r-rust-pkgs</strong></a>,
-a GitHub repository listing CRAN packages that contain Rust code
-in alphabetical order.</p>
-<p>The list is automatically generated by scanning CRAN package <code>DESCRIPTION</code>
-files where <code>SystemRequirements</code> contains <code>Cargo</code> (the Rust package manager).
-Currently, it includes 27 packages. To update the list, simply fork the repo,
-render the <code>README.Rmd</code> file, and submit a pull request.</p>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Based on this benchmark, you should consider avoiding <code>.combine = "rbind"</code>
+in parallel <code>foreach()</code> loops. Instead, aggregate the results after parallel
+execution using more efficient alternatives such as <code>data.table::rbindlist()</code> or
+<code>dplyr::bind_rows()</code>. Further investigation into the other methods supported by
+<code>.combine</code> is recommended to fully understand their performance implications.</p>
 </div>
 
 
@@ -263,10 +496,10 @@ render the <code>README.Rmd</code> file, and submit a pull request.</p>
                     <div class="row navigation-btns">
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/rtflite-python/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                            <a href="https://nanx.me/blog/post/r-rust-pkgs/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« Introducing rtflite for Python</div>
+                                    <div class="pagination-nav-label">« R packages using Rust</div>
                                 </div>
                             </a>
                             
@@ -274,12 +507,12 @@ render the <code>README.Rmd</code> file, and submit a pull request.</p>
 
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/r-foreach-combine/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">Optimize R foreach loops for parallelism: avoid the .combine argument »</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
                                 </div>
-                            </a>
+                            </div>
                             
                         </div>
                     </div>
@@ -437,6 +670,9 @@ render the <code>README.Rmd</code> file, and submit a pull request.</p>
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>
