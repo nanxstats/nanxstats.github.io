@@ -410,6 +410,7 @@ dl {
 
 .content .caption {
     font-size: 1rem;
+    font-variation-settings: "opsz" 23.4;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 0.625rem;
@@ -425,6 +426,7 @@ dl {
 
 .content .figcaption {
     font-size: 1rem;
+    font-variation-settings: "opsz" 23.4;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
@@ -657,6 +659,7 @@ dl {
 
 .pagination-nav .pagination-nav-label {
     font-size: 0.875rem;
+    font-variation-settings: "opsz" 19.7;
     font-weight: 500;
     color: var(--tw-prose-links);
     margin-top: 0.5rem;
