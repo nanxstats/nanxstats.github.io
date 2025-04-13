@@ -374,8 +374,9 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 600;
-    font-size: 2.125rem;
-    line-height: 2.9rem;
+    font-size: 2.375rem;
+    letter-spacing: -0.6px;
+    line-height: 3.2rem;
 }
 
 .content .blog-post-content {
