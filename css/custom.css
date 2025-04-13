@@ -32,8 +32,8 @@
 
 @font-face {
     font-display: swap;
-    font-family: "JetBrains Mono";
-    src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+    font-family: "Ligalex Mono";
+    src: url("fonts/LigalexMono-Text.woff2") format("woff2");
     font-weight: 400;
 }
 
@@ -42,7 +42,7 @@
 :root {
     --tw-prose-font-sans-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Wittgenstein", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "Ligalex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
     --tw-prose-links-hover: #0f172a;
@@ -447,16 +447,16 @@ dl {
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
     font-weight: 400;
-    font-feature-settings: "calt", "liga";
+    font-feature-settings: "calt", "liga", "ss02", "ss03";
     background-color: var(--tw-bg);
 }
 
 .content .markdown code {
     /* Enclosed by single backtick (`) */
     color: var(--tw-prose-code);
-    padding: .2em .4em;
+    padding: 2px 5px 3px 5px;
     margin: 0;
-    font-size: 1rem;
+    font-size: 0.9375rem;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
