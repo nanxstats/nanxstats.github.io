@@ -540,7 +540,7 @@ dl {
     letter-spacing: -0.19px;
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
-    color: var(--tw-prose-counters);
+    color: color-mix(in srgb, var(--tw-prose-counters), white 35%);
 }
 
 /* Hover effect for post items */
