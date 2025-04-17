@@ -30,6 +30,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" href="https://nanx.me/css/inter-optical-sizing.min.css" />
     <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
 
     
@@ -242,7 +243,8 @@ The source code for this site itself is available at
 
 .content .markdown p {
   font-size: 1.125rem;
-  font-variation-settings: "opsz" 26;
+  font-variation-settings: "opsz" var(--inter-opsz-18-450);
+  letter-spacing: var(--inter-ls-18-450);
 }
 
 .table {
@@ -250,7 +252,8 @@ The source code for this site itself is available at
   font-feature-settings: normal;
   font-weight: 450;
   font-size: 1rem;
-  font-variation-settings: "opsz" 23.4;
+  font-variation-settings: "opsz" var(--inter-opsz-16-450);
+  letter-spacing: var(--inter-ls-16-450);
 }
 
 .table tr {
