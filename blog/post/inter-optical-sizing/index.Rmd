@@ -1,0 +1,92 @@
+---
+title: "Customizing Inter with alternative optical sizing presets"
+author: "Nan Xiao"
+date: "2025-04-21T22:35:00"
+slug: inter-optical-sizing
+categories: []
+tags:
+  - Inter
+  - variable fonts
+  - optical sizing
+  - letter spacing
+  - neo-grotesque
+  - web typography
+  - readability
+  - CSS
+  - Sass
+  - JavaScript
+meta_img: "image/daniels-joffe--SmCKTIcH5E-unsplash.jpg"
+description: >
+  Fine-tune the popular Inter typeface using optical sizing (opsz) and
+  letter spacing. This post introduces a set of CSS presets to easily
+  adjust its appearance for optimal readability in your web projects.
+---
+
+![A cylinder casting a circular and rectangular shadow on two perpendicular
+planes, showing how perspective shapes interpretation of a single form.
+3D render by [Daniels Joffe](https://unsplash.com/photos/-SmCKTIcH5E).
+](/image/daniels-joffe--SmCKTIcH5E-unsplash.jpg)
+
+Since its open source release in 2017, [Inter](https://rsms.me/inter/) has
+become a widely adopted sans-serif font, especially popular for web content
+and user interfaces that benefit from a clean, neo-grotesque style.
+Thoughtful glyph redesigns in versions 4.0 and 4.1 (released since 2023)
+have further enhanced its technical maturity and visual appeal.
+
+## Fine-tuning Inter's appearance
+
+While Inter is well-designed out of the box, its default letter spacing can
+sometimes feel a bit loose to me, depending on the context.
+Fortunately, Inter is a versatile **variable font** with a rich set of
+OpenType features. These features provide control over its appearance
+directly within CSS.
+
+## Optical sizing and letter spacing
+
+One particularly useful feature for adjusting the Inter's open spacing
+presentation is the optical size (`opsz`) axis. In variable fonts, this axis
+often adjusts details like stroke weight and letter shapes to optimize
+readability at specific font sizes. When combined with the standard
+`letter-spacing` CSS property, the `opsz` axis allows for precise control over
+the perceived spacing and texture of the text.
+
+The inclusion of an optical size axis also highlights the quality and effort invested
+in Inter's development. Currently, only a small number of typefaces (around 26) on
+Google Fonts [offer the opsz feature](https://fonts.google.com/variablefonts?vfaxis=opsz).
+
+## Opinionated Inter optical sizing presets
+
+To make it easier to achieve a specific typographic feel with Inter,
+I have created a set of reusable optical sizing presets in this
+GitHub repo: [nanxstats/inter-optical-sizing](https://github.com/nanxstats/inter-optical-sizing).
+
+The goal was to find `opsz` and `letter-spacing` values that allow Inter to
+closely match the visual spacing characteristics of the San Francisco typeface
+when rendered at identical font weights and sizes.
+I have manually curated values for common font weights (400, 450, 500, 600, 700)
+and a typical range of font sizes (12px to 24px for regular text,
+28px to 80px for display text).
+
+The repository provides Sass (`.scss`) files that compile into CSS.
+Here is a simple example of how to apply these presets in CSS:
+
+```css
+@import url("https://rsms.me/inter/inter.css");
+@import url("inter-optical-sizing.min.css");
+
+.content .markdown {
+  font-size: 1.25rem; /* Corresponds to 20px if base is 16px */
+  font-weight: 450;
+  font-variation-settings: "opsz" var(--inter-opsz-20-450);
+  letter-spacing: var(--inter-ls-20-450);
+}
+```
+
+## How the presets were made
+
+To determine these specific `opsz` and `letter-spacing` values, I developed
+a small JavaScript tool [font overlay](https://nanx.me/font-overlay/)
+([repo](https://github.com/nanxstats/font-overlay)).
+This tool helps find suitable parameters by visually comparing and overlaying
+the two fonts directly in the browser. While developed for this project,
+this visual comparison approach could be adapted for other font pairings.

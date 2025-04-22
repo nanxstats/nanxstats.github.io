@@ -6,8 +6,15 @@
     <description>Recent content in JavaScript on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 05 Sep 2022 20:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Apr 2025 22:35:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customizing Inter with alternative optical sizing presets</title>
+      <link>https://nanx.me/blog/post/inter-optical-sizing/</link>
+      <pubDate>Mon, 21 Apr 2025 22:35:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/inter-optical-sizing/</guid>
+      <description>A cylinder casting a circular and rectangular shadow on two perpendicular planes, showing how perspective shapes interpretation of a single form. 3D render by Daniels Joffe. Since its open source release in 2017, Inter has become a widely adopted sans-serif font, especially popular for web content and user interfaces that benefit from a clean, neo-grotesque style. Thoughtful glyph redesigns in versions 4.0 and 4.1 (released since 2023) have further enhanced its technical maturity and visual appeal.</description>
+    </item>
     <item>
       <title>GUI Automation with RobotJS</title>
       <link>https://nanx.me/blog/post/gui-automation-robotjs/</link>

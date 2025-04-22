@@ -2,22 +2,58 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/css/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/inter-optical-sizing/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/inter/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/javascript/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/letter-spacing/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/neo-grotesque/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/optical-sizing/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/readability/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/sass/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/variable-fonts/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/web-typography/</loc>
+    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/tags/anti-pattern/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/benchmark/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-03-24T20:05:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/data.table/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/foreach/</loc>
-    <lastmod>2025-03-24T20:05:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/r-foreach-combine/</loc>
@@ -36,9 +72,6 @@
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/rbindlist/</loc>
-    <lastmod>2025-03-24T20:05:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/vibe-coding/</loc>
@@ -317,9 +350,6 @@
     <loc>https://nanx.me/tags/programming-ligatures/</loc>
     <lastmod>2024-06-19T03:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/readability/</loc>
-    <lastmod>2024-06-19T03:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/special-tokens/</loc>
     <lastmod>2024-06-19T03:30:00+00:00</lastmod>
   </url><url>
@@ -503,9 +533,6 @@
     <loc>https://nanx.me/tags/font-discovery/</loc>
     <lastmod>2023-05-10T17:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/web-typography/</loc>
-    <lastmod>2023-05-10T17:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/rpkgs-pngquant-ragg/</loc>
     <lastmod>2023-04-09T00:30:00+00:00</lastmod>
   </url><url>
@@ -570,9 +597,6 @@
     <lastmod>2022-09-28T11:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/gui-automation-robotjs/</loc>
-    <lastmod>2022-09-05T20:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/javascript/</loc>
     <lastmod>2022-09-05T20:30:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/robotjs/</loc>
@@ -688,9 +712,6 @@
   </url><url>
     <loc>https://nanx.me/tags/hugo/</loc>
     <lastmod>2022-02-22T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/css/</loc>
-    <lastmod>2022-01-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/font-variant-numeric/</loc>
     <lastmod>2022-01-19T00:00:00+00:00</lastmod>

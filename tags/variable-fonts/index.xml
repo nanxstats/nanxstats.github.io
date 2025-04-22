@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>variable fonts on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/variable-fonts/</link>
+    <description>Recent content in variable fonts on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 21 Apr 2025 22:35:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/variable-fonts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Customizing Inter with alternative optical sizing presets</title>
+      <link>https://nanx.me/blog/post/inter-optical-sizing/</link>
+      <pubDate>Mon, 21 Apr 2025 22:35:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/inter-optical-sizing/</guid>
+      <description>A cylinder casting a circular and rectangular shadow on two perpendicular planes, showing how perspective shapes interpretation of a single form. 3D render by Daniels Joffe. Since its open source release in 2017, Inter has become a widely adopted sans-serif font, especially popular for web content and user interfaces that benefit from a clean, neo-grotesque style. Thoughtful glyph redesigns in versions 4.0 and 4.1 (released since 2023) have further enhanced its technical maturity and visual appeal.</description>
+    </item>
+  </channel>
+</rss>
