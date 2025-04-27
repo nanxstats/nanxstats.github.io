@@ -2,21 +2,6 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Wittgenstein";
-    src: url("fonts/Wittgenstein.woff2") format("woff2");
-    font-weight: 400 900;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Wittgenstein";
-    src: url("fonts/Wittgenstein-Italic.woff2") format("woff2");
-    font-weight: 400 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-display: swap;
     font-family: "Inter Variable";
     src: url("fonts/InterVariable.woff2") format("woff2");
     font-weight: 100 900;
@@ -41,7 +26,7 @@
 
 :root {
     --tw-prose-font-sans-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Wittgenstein", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Ligalex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #334155;
     --tw-prose-links: #334155;
@@ -166,6 +151,8 @@ hr {
     font-feature-settings: normal;
     font-weight: 600;
     font-size: 2.5rem;
+    font-variation-settings: "opsz" var(--inter-opsz-40-600);
+    letter-spacing: var(--inter-ls-40-600);
     margin-left: 8px;
 }
 
@@ -303,18 +290,26 @@ h6 {
 
 .content h1 {
     font-size: 2rem;
+    font-variation-settings: "opsz" var(--inter-opsz-32-600);
+    letter-spacing: var(--inter-ls-32-600);
 }
 
 .content h2 {
     font-size: 1.75rem;
+    font-variation-settings: "opsz" var(--inter-opsz-28-600);
+    letter-spacing: var(--inter-ls-28-600);
 }
 
 .content h3 {
     font-size: 1.5rem;
+    font-variation-settings: "opsz" var(--inter-opsz-24-600);
+    letter-spacing: var(--inter-ls-24-600);
 }
 
 .content h4 {
     font-size: 1.25rem;
+    font-variation-settings: "opsz" var(--inter-opsz-20-600);
+    letter-spacing: var(--inter-ls-20-600);
 }
 
 .content .meta {
@@ -377,7 +372,8 @@ dl {
     font-feature-settings: normal;
     font-weight: 600;
     font-size: 2.375rem;
-    letter-spacing: -0.6px;
+    font-variation-settings: "opsz" var(--inter-opsz-38-600);
+    letter-spacing: var(--inter-ls-38-600);
     line-height: 3.2rem;
 }
 
@@ -511,7 +507,9 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 600;
-    font-size: 1.6rem;
+    font-size: 1.625rem;
+    font-variation-settings: "opsz" var(--inter-opsz-26-600);
+    letter-spacing: var(--inter-ls-26-600);
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
