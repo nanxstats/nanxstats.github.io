@@ -687,10 +687,10 @@ dl {
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 400;
-    font-size: 1.25rem;
-    font-variation-settings: "opsz" var(--inter-opsz-20-400);
-    letter-spacing: var(--inter-ls-20-400);
+    font-weight: 450;
+    font-size: 1rem;
+    font-variation-settings: "opsz" var(--inter-opsz-16-450);
+    letter-spacing: var(--inter-ls-16-450);
 }
 
 .footer a {
