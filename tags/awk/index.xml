@@ -13,7 +13,7 @@
       <link>https://nanx.me/blog/post/rstudio-splash-screen/</link>
       <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/rstudio-splash-screen/</guid>
-      <description>Skating at Venice Beach, Los Angeles. Photo by Josh Hild. Starting with RStudio IDE version 2024.12.0+467, a redesigned splash screen replaces the previous app logo. This change was introduced in rstudio/rstudio#15347 and it looks like this:&#xA;New splash screen design in RStudio IDE 2024.12+. While visually polished, the new splash screen feels slightly too shiny (no pun intended) and adds a delay to the perceived time before I can first interact with the UI.</description>
+      <description>Skating at Venice Beach, Los Angeles. Photo by Josh Hild. Update (2025-05-05): RStudio release planned for August 2025 will include a global option to turn off the splash screen and support click-to-close behavior.&#xA;Starting with RStudio IDE version 2024.12.0+467, a redesigned splash screen replaces the previous app logo. This change was introduced in rstudio/rstudio#15347 and it looks like this:&#xA;New splash screen design in RStudio IDE 2024.12+. While visually polished, the new splash screen feels slightly too shiny (no pun intended) and adds a delay to the perceived time before I can first interact with the UI.</description>
     </item>
   </channel>
 </rss>

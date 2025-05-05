@@ -32,6 +32,8 @@ Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term.
 ```{css, echo=FALSE}
 .callout p {
   font-size: 1rem;
+  font-variation-settings: "opsz" var(--inter-opsz-16-400);
+  letter-spacing: var(--inter-ls-16-400);
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   padding-top: 1.25rem;

@@ -28,6 +28,8 @@ TL;DR: I'm curating a list of CRAN R packages that use Rust:
 ```{css, echo=FALSE}
 .callout p {
   font-size: 0.875rem;
+  font-variation-settings: "opsz" var(--inter-opsz-14-400);
+  letter-spacing: var(--inter-ls-14-400);
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   padding-top: 1.25rem;
