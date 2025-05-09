@@ -196,25 +196,6 @@ hr {
     color: var(--tw-prose-captions);
 }
 
-.header ul.nav li a.active {
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-color: var(--tw-prose-headings);
-    text-underline-offset: 16.5px;
-}
-
-@supports (-webkit-text-decoration-skip: ink) {
-    .header ul.nav li a.active {
-        text-underline-offset: 17px;
-    }
-}
-
-@supports (-moz-text-decoration-skip-ink: auto) {
-    .header ul.nav li a.active {
-        text-underline-offset: 16px;
-    }
-}
-
 @media (max-width: 767.98px) {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
@@ -263,7 +244,9 @@ hr {
 }
 
 .header ul.nav li a.active::after {
-    display: none;
+    transform: scaleY(1);
+    opacity: 1;
+    background-color: var(--tw-prose-headings);
 }
 
 /* Navigation on < medium screens */
