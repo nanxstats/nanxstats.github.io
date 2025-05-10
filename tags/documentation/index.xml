@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>monkey patching on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/monkey-patching/</link>
-    <description>Recent content in monkey patching on Nan Xiao | 肖楠</description>
+    <title>documentation on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/documentation/</link>
+    <description>Recent content in documentation on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sat, 10 May 2025 01:02:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/monkey-patching/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/documentation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>pkgdown.offline: Build pkgdown websites without an internet connection</title>
       <link>https://nanx.me/blog/post/pkgdown-offline/</link>
       <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/pkgdown-offline/</guid>
       <description>On the grid but off the line. Logo font: Founders Grotesk Condensed Semibold. I’m pleased to announce that the R package pkgdown.offline is now available on CRAN. You can install it with:&#xA;install.packages(&amp;quot;pkgdown.offline&amp;quot;) pkgdown.offline enables you to build pkgdown websites in environments without internet access, such as private, restricted development workflows or CI/CD pipelines. It achieves this by bundling the essential frontend assets (CSS, JavaScript) that pkgdown typically fetches online and by providing alternative implementations for key pkgdown functions like init_site() and build_site().</description>
-    </item>
-    <item>
-      <title>Customize testthat snapshot directory with monkey patching</title>
-      <link>https://nanx.me/blog/post/testthat-snapshot-monkey-patch/</link>
-      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/testthat-snapshot-monkey-patch/</guid>
-      <description>Memories instant photo. Photo by Kelly Sikkema. Problem Snapshot testing has been supported in testthat since testthat 3.0.0. By default, snapshot files are saved to a hardcoded directory:&#xA;tests/testthat/_snaps/ Unfortunately, testthat does not provide a public API to customize this directory. This question has been raised in issues like r-lib/testthat#1623, suggesting that customizing the snapshot directory is a valid use case.&#xA;Solution Without a public API, the most practical solution is to modify testthat’s internal behavior at runtime through monkey patching.</description>
     </item>
   </channel>
 </rss>

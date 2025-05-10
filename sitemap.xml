@@ -3,15 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/cicd/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/documentation/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/monkey-patching/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/offline-build/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pkgdown/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/pkgdown-offline/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/css/</loc>
     <lastmod>2025-04-21T22:35:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/inter-optical-sizing/</loc>
-    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2025-04-21T22:35:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/inter/</loc>
@@ -33,9 +60,6 @@
     <lastmod>2025-04-21T22:35:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/sass/</loc>
-    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2025-04-21T22:35:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/variable-fonts/</loc>
@@ -65,9 +89,6 @@
     <loc>https://nanx.me/tags/performance-optimization/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2025-03-24T20:05:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/rbind/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
@@ -87,9 +108,6 @@
     <lastmod>2025-02-28T16:37:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/language-interoperability/</loc>
-    <lastmod>2025-02-28T16:37:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
     <lastmod>2025-02-28T16:37:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/r-rust-pkgs/</loc>
@@ -156,9 +174,6 @@
     <lastmod>2025-01-16T02:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/testthat-snapshot-monkey-patch/</loc>
-    <lastmod>2025-01-05T22:58:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/monkey-patching/</loc>
     <lastmod>2025-01-05T22:58:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/snapshot-testing/</loc>

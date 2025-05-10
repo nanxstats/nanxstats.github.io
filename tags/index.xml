@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 21 Apr 2025 22:35:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 May 2025 01:02:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CICD</title>
+      <link>https://nanx.me/tags/cicd/</link>
+      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/cicd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>documentation</title>
+      <link>https://nanx.me/tags/documentation/</link>
+      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/documentation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>monkey patching</title>
+      <link>https://nanx.me/tags/monkey-patching/</link>
+      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/monkey-patching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>offline build</title>
+      <link>https://nanx.me/tags/offline-build/</link>
+      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/offline-build/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pkgdown</title>
+      <link>https://nanx.me/tags/pkgdown/</link>
+      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pkgdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
     <item>
       <title>css</title>
       <link>https://nanx.me/tags/css/</link>
@@ -121,13 +170,6 @@
       <description></description>
     </item>
     <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>rbind</title>
       <link>https://nanx.me/tags/rbind/</link>
       <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
@@ -174,13 +216,6 @@
       <link>https://nanx.me/tags/language-interoperability/</link>
       <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
       <guid>https://nanx.me/tags/language-interoperability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -300,13 +335,6 @@
       <link>https://nanx.me/tags/retrieval-augmented-generation/</link>
       <pubDate>Thu, 16 Jan 2025 02:11:00 +0000</pubDate>
       <guid>https://nanx.me/tags/retrieval-augmented-generation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>monkey patching</title>
-      <link>https://nanx.me/tags/monkey-patching/</link>
-      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/monkey-patching/</guid>
       <description></description>
     </item>
     <item>

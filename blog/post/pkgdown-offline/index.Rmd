@@ -1,0 +1,95 @@
+---
+title: "pkgdown.offline: Build pkgdown websites without an internet connection"
+author: "Nan Xiao"
+date: "2025-05-10T01:02:00"
+slug: pkgdown-offline
+categories: []
+tags:
+  - R
+  - R packages
+  - pkgdown
+  - documentation
+  - CICD
+  - offline build
+  - monkey patching
+meta_img: "image/pkgdown-offline-banner.png"
+description: >
+  Introducing pkgdown.offline, an R package for building pkgdown websites
+  entirely offline. Learn how it addresses recent pkgdown internet requirements,
+  essential for CI/CD pipelines and air-gapped environments.
+---
+
+![On the grid but off the line. Logo font: Founders Grotesk Condensed Semibold.
+](/image/pkgdown-offline-banner.png)
+
+I'm pleased to announce that the R package
+[pkgdown.offline](https://nanx.me/pkgdown.offline/) is now available on CRAN.
+You can install it with:
+
+```r
+install.packages("pkgdown.offline")
+```
+
+pkgdown.offline enables you to build [pkgdown](https://pkgdown.r-lib.org/)
+websites in environments without internet access, such as private, restricted
+development workflows or CI/CD pipelines. It achieves this by bundling the
+essential frontend assets (CSS, JavaScript) that pkgdown typically fetches
+online and by providing alternative implementations for key pkgdown functions
+like `init_site()` and `build_site()`.
+
+## The need for an offline solution
+
+Previously, setting `options(pkgdown.internet = FALSE)` was sufficient for
+offline pkgdown builds (since pkgdown 1.2.0, November 2018). However, this
+functionality stopped to work effectively with pkgdown 2.1.0 (July 2024)
+and was formally deprecated in pkgdown 2.1.2 (released April 2025).
+
+This change presents a challenge for users in air-gapped computing environments,
+as attempting to build pkgdown sites will fail directly without any built-in
+options to bypass the internet requirement.
+After observing this recurring issue and initially suggesting workarounds
+like using older pkgdown versions, I developed pkgdown.offline to provide
+a more robust and forward-looking solution.
+
+## How pkgdown.offline works
+
+pkgdown.offline uses a few key strategies to achieve reliable offline builds
+while optimizing package size.
+
+**1. Minified local asset cache**
+
+A primary reason for pkgdown deprecating its offline build feature was the
+challenge of bundling and maintaining frontend assets. pkgdown.offline
+solves this by including these assets. To keep the package size minimal
+(well under CRAN's 5MB limit) and support multiple pkgdown versions,
+a maintenance script deduplicates cached assets using file checksums.
+The initial release of pkgdown.offline is only about 600 KB.
+At runtime, the package uses a map generated during the minification step
+to restore the necessary files to their expected locations.
+
+**2. Monkey patching core functions**
+
+With the `pkgdown.internet` option removed, some internal pkgdown functions
+now assume internet connectivity. pkgdown.offline provides wrappers for
+critical functions like `pkgdown::init_site()` and `pkgdown::build_site()`.
+These wrappers dynamically modify (or "monkey patch") relevant internal pkgdown
+functions at runtime to prevent them from attempting to connect to the internet.
+This approach is similar to the [testthat snapshot location
+customization method](https://nanx.me/blog/post/testthat-snapshot-monkey-patch/)
+I have described previously.
+
+**3. Lifecycle management**
+
+pkgdown.offline is designed to support pkgdown versions 2.1.0 and newer.
+With each new release of pkgdown on CRAN, pkgdown.offline will be verified and,
+if necessary, updated to ensure continued compatibility.
+Based on pkgdown's historical release pattern, this maintenance is expected
+to be manageable. Details on the update procedure are documented in the
+[update pkgdown.offline vignette](https://nanx.me/pkgdown.offline/articles/update.html).
+
+## Get started and contribute
+
+pkgdown.offline is released under the MIT license. If this package addresses
+a need for you, please consider giving it a star on
+[GitHub](https://github.com/nanxstats/pkgdown.offline).
+As always, community feedback and contributions are welcome.
