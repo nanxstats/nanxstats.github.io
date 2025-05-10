@@ -28,9 +28,9 @@
     --tw-prose-font-sans-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Ligalex Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
-    --tw-prose-body: #334155;
-    --tw-prose-links: #334155;
-    --tw-prose-links-hover: #0f172a;
+    --tw-prose-body: #0f172a;
+    --tw-prose-links: #0f172a;
+    --tw-prose-links-hover: #64748b;
     --tw-prose-headings: #0f172a;
     --tw-prose-lead: #475569;
     --tw-prose-captions: #64748b;
@@ -55,7 +55,7 @@ body {
 
 /* Horizontally centering fixed-width block used together with .mx-auto */
 .w-700 {
-    width: 724px;
+    width: 784px;
 }
 
 /* Fix jumping scrollbar when switching to long pages */
@@ -87,7 +87,7 @@ a:focus {
     color: var(--tw-prose-links-hover);
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
-    text-decoration-color: var(--tw-prose-counters);
+    text-decoration-color: var(--tw-prose-links-hover);
 }
 
 /* Button */
@@ -150,9 +150,9 @@ hr {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 600;
-    font-size: 2.5rem;
-    font-variation-settings: "opsz" var(--inter-opsz-40-600);
-    letter-spacing: var(--inter-ls-40-600);
+    font-size: 3rem;
+    font-variation-settings: "opsz" var(--inter-opsz-48-600);
+    letter-spacing: var(--inter-ls-48-600);
     margin-left: 8px;
 }
 
@@ -171,9 +171,9 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 1.5rem;
-    font-variation-settings: "opsz" var(--inter-opsz-24-500);
-    letter-spacing: var(--inter-ls-24-500);
+    font-size: 1.75rem;
+    font-variation-settings: "opsz" var(--inter-opsz-28-500);
+    letter-spacing: var(--inter-ls-28-500);
 }
 
 .header ul.nav li a {
@@ -354,19 +354,19 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 600;
-    font-size: 2.375rem;
-    font-variation-settings: "opsz" var(--inter-opsz-38-600);
-    letter-spacing: var(--inter-ls-38-600);
+    font-size: 2.5rem;
+    font-variation-settings: "opsz" var(--inter-opsz-40-600);
+    letter-spacing: var(--inter-ls-40-600);
     line-height: 3.2rem;
 }
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 400;
-    font-size: 1.125rem;
-    font-variation-settings: "opsz" var(--inter-opsz-18-400);
-    letter-spacing: var(--inter-ls-18-400);
+    font-weight: 410;
+    font-size: 1.25rem;
+    font-variation-settings: "opsz" var(--inter-opsz-20-400);
+    letter-spacing: var(--inter-ls-20-400);
     line-height: calc(30 / 18);
 }
 
@@ -393,9 +393,10 @@ dl {
 }
 
 .content .caption {
+    font-weight: 450;
     font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-400);
-    letter-spacing: var(--inter-ls-16-400);
+    font-variation-settings: "opsz" var(--inter-opsz-16-450);
+    letter-spacing: var(--inter-ls-16-450);
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 0.625rem;
@@ -410,9 +411,10 @@ dl {
 }
 
 .content .figcaption {
+    font-weight: 450;
     font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-400);
-    letter-spacing: var(--inter-ls-16-400);
+    font-variation-settings: "opsz" var(--inter-opsz-16-450);
+    letter-spacing: var(--inter-ls-16-450);
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
@@ -441,7 +443,7 @@ dl {
     color: var(--tw-prose-code);
     padding: 2px 5px 3px 5px;
     margin: 0;
-    font-size: 0.9375rem;
+    font-size: 1.0625rem;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
@@ -513,26 +515,27 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 0.9375rem;
-    font-variation-settings: "opsz" var(--inter-opsz-15-500);
-    letter-spacing: var(--inter-ls-15-500);
+    font-size: 1rem;
+    font-variation-settings: "opsz" var(--inter-opsz-16-500);
+    letter-spacing: var(--inter-ls-16-500);
     line-height: 2.5rem;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 400;
-    font-size: 0.875rem;
-    font-variation-settings: "opsz" var(--inter-opsz-14-400);
-    letter-spacing: var(--inter-ls-14-400);
+    font-weight: 450;
+    font-size: 0.9375rem;
+    font-variation-settings: "opsz" var(--inter-opsz-15-450);
+    letter-spacing: var(--inter-ls-15-450);
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
-    color: color-mix(in srgb, var(--tw-prose-counters), white 35%);
+    color: var(--tw-prose-counters);
 }
 
 /* Hover effect for post items */
 .content .inner-post-item {
+    color: var(--tw-prose-body);
     padding: 1rem 1rem;
     margin: -1px -1rem;
     border-radius: 10px;
@@ -553,9 +556,9 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 0.875rem;
-    font-variation-settings: "opsz" var(--inter-opsz-14-500);
-    letter-spacing: var(--inter-ls-14-500);
+    font-size: 0.9375rem;
+    font-variation-settings: "opsz" var(--inter-opsz-15-500);
+    letter-spacing: var(--inter-ls-15-500);
     line-height: calc(50 / 18);
 }
 
@@ -671,9 +674,9 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 450;
-    font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-450);
-    letter-spacing: var(--inter-ls-16-450);
+    font-size: 1.125rem;
+    font-variation-settings: "opsz" var(--inter-opsz-18-450);
+    letter-spacing: var(--inter-ls-18-450);
 }
 
 .footer a {
