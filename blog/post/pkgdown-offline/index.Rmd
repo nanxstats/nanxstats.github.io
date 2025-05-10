@@ -64,7 +64,7 @@ solves this by including these assets. To keep the package size minimal
 (well under CRAN's 5MB limit) and support multiple pkgdown versions,
 a maintenance script deduplicates cached assets using file checksums.
 The initial release of pkgdown.offline is only about 600 KB.
-At runtime, the package uses a map generated during the minification step
+At runtime, the package uses a map generated during the deduplication step
 to restore the necessary files to their expected locations.
 
 **2. Monkey patching core functions**
