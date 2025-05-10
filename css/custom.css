@@ -686,7 +686,7 @@ dl {
 
 .footer a:hover,
 a:focus {
-    color: var(--tw-prose-links-hover);
+    color: var(--tw-prose-body);
 }
 
 .footer a:first-child {
@@ -728,7 +728,7 @@ a:focus {
 
 .footer a:hover .svg-icon,
 .footer a:focus .svg-icon {
-    fill: var(--tw-prose-links-hover);
+    fill: var(--tw-prose-body);
 }
 
 /* Screens < medium */
