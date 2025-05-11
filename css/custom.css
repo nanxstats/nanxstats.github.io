@@ -365,8 +365,8 @@ dl {
     font-feature-settings: normal;
     font-weight: 410;
     font-size: 1.25rem;
-    font-variation-settings: "opsz" var(--inter-opsz-20-400);
-    letter-spacing: var(--inter-ls-20-400);
+    font-variation-settings: "opsz" var(--inter-opsz-20-450);
+    letter-spacing: var(--inter-ls-20-450);
     line-height: calc(30 / 18);
 }
 
