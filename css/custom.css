@@ -71,8 +71,7 @@ a {
     color: var(--tw-prose-links);
     text-decoration: underline;
     text-decoration-thickness: 1.5px;
-    text-decoration-color: var(--tw-prose-bullets);
-    text-underline-offset: 5px;
+    text-decoration-color: var(--tw-prose-body);
     background-color: transparent;
     transition: all .2s ease-in-out;
 }
