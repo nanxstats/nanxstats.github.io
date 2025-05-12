@@ -30,7 +30,6 @@ description: >
 I'm delighted to share that our paper, [_Some Group Sequential Trials From
 Industry Over the Last 30 Years_](https://doi.org/10.1080/19466315.2024.2334354),
 has been published in _Statistics in Biopharmaceutical Research_.
-
 You can download the [accepted manuscript
 (PDF, 457 KB) here](https://keaven.github.io/publications/group-sequential-trials-industry-30-years.pdf).
 
@@ -96,7 +95,7 @@ double-anonymized review PDFs.
 Most design summary tables were generated with R and piped into
 [gt](https://gt.rstudio.com/) to produce nicely formatted LaTeX tables.
 For simpler, manually crafted Markdown tables,
-[pipe tables](https://pandoc.org/chunkedhtml-demo/8.9-tables.html#extension-pipe_tables)
+[pipe tables](https://pandoc.org/demo/example33/8.9-tables.html#extension-pipe_tables)
 offered precise column alignment control.
 
 ### Figure look and feel
