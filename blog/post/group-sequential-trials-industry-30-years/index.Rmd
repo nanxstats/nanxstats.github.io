@@ -27,6 +27,34 @@ description: >
 [Estée Janssens](https://unsplash.com/photos/zni0zgb3bkQ).
 ](/image/estee-janssens-zni0zgb3bkQ-unsplash.jpg)
 
+::: {.callout}
+**Update** (May 11, 2025): The paper discussed in this post has been selected
+as one of the recipients of the [2025 Best Paper
+Award](https://doi.org/10.1080/19466315.2025.2503684) from
+*Statistics in Biopharmaceutical Research (SBR)*!
+It is a wonderful honor to see our work recognized by the journal.
+:::
+
+```{css, echo=FALSE}
+.callout p {
+  font-weight: 410;
+  font-size: 1.125rem;
+  font-variation-settings: "opsz" var(--inter-opsz-18-450);
+  letter-spacing: var(--inter-ls-18-450);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.25rem;
+  border-left: 5px solid #64748b;
+  border-right: 1px solid #cbd5e1;
+  border-top: 1px solid #cbd5e1;
+  border-bottom: 1px solid #cbd5e1;
+}
+```
+
 I'm delighted to share that our paper, [_Some Group Sequential Trials From
 Industry Over the Last 30 Years_](https://doi.org/10.1080/19466315.2024.2334354),
 has been published in _Statistics in Biopharmaceutical Research_.
