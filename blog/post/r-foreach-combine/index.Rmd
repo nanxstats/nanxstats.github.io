@@ -35,10 +35,9 @@ The benchmarking script used in this post is available as a
 
 ```{css, echo=FALSE}
 .callout p {
-  font-weight: 410;
+  font-weight: 400;
   font-size: 1rem;
-  font-variation-settings: "opsz" var(--inter-opsz-16-450);
-  letter-spacing: var(--inter-ls-16-450);
+  letter-spacing: var(--bdo-ls-tiny);
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   padding-top: 1.25rem;

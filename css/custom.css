@@ -2,17 +2,9 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Inter Variable";
-    src: url("fonts/InterVariable.woff2") format("woff2");
-    font-weight: 100 900;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Inter Variable";
-    src: url("fonts/InterVariable-Italic.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: italic;
+    font-family: "BDO Grotesk Variable";
+    src: url("fonts/BDOGrotesk-VF.woff2") format("woff2");
+    font-weight: 300 900;
 }
 
 @font-face {
@@ -25,8 +17,8 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Inter Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "BDO Grotesk Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "BDO Grotesk Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Lilex", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #0f172a;
     --tw-prose-links: #0f172a;
@@ -44,6 +36,11 @@
     --tw-prose-th-borders: #cbd5e1;
     --tw-prose-td-borders: #e2e8f0;
     --tw-bg: #fff;
+    /* BDO Grotesk */
+    --bdo-ls-tiny: -0.4px;
+    --bdo-ls-small: -0.5px;
+    --bdo-ls-medium: -0.8px;
+    --bdo-ls-large: -1.2px;
 }
 
 body {
@@ -51,6 +48,9 @@ body {
     font-feature-settings: normal;
     font-variant-ligatures: contextual common-ligatures;
     background-color: var(--tw-bg);
+    /* BDO Grotesk */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Horizontally centering fixed-width block used together with .mx-auto */
@@ -149,9 +149,8 @@ hr {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 600;
-    font-size: 3rem;
-    font-variation-settings: "opsz" var(--inter-opsz-48-600);
-    letter-spacing: var(--inter-ls-48-600);
+    font-size: 2.8125rem;
+    letter-spacing: var(--bdo-ls-large);
     margin-left: 8px;
 }
 
@@ -170,9 +169,8 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 1.75rem;
-    font-variation-settings: "opsz" var(--inter-opsz-28-500);
-    letter-spacing: var(--inter-ls-28-500);
+    font-size: 1.625rem;
+    letter-spacing: var(--bdo-ls-medium);
 }
 
 .header ul.nav li a {
@@ -200,8 +198,7 @@ hr {
         font-family: var(--tw-prose-font-sans-serif);
         font-feature-settings: normal;
         font-weight: 700;
-        font-variation-settings: "opsz" var(--inter-opsz-24-700);
-        letter-spacing: var(--inter-ls-24-700);
+        letter-spacing: var(--bdo-ls-medium);
         text-decoration: none;
     }
 }
@@ -272,26 +269,22 @@ h6 {
 
 .content h1 {
     font-size: 2rem;
-    font-variation-settings: "opsz" var(--inter-opsz-32-600);
-    letter-spacing: var(--inter-ls-32-600);
+    letter-spacing: var(--bdo-ls-large);
 }
 
 .content h2 {
     font-size: 1.75rem;
-    font-variation-settings: "opsz" var(--inter-opsz-28-600);
-    letter-spacing: var(--inter-ls-28-600);
+    letter-spacing: var(--bdo-ls-large);
 }
 
 .content h3 {
     font-size: 1.5rem;
-    font-variation-settings: "opsz" var(--inter-opsz-24-600);
-    letter-spacing: var(--inter-ls-24-600);
+    letter-spacing: var(--bdo-ls-large);
 }
 
 .content h4 {
     font-size: 1.25rem;
-    font-variation-settings: "opsz" var(--inter-opsz-20-600);
-    letter-spacing: var(--inter-ls-20-600);
+    letter-spacing: var(--bdo-ls-medium);
 }
 
 .content .meta {
@@ -299,8 +292,7 @@ h6 {
     font-feature-settings: normal;
     font-weight: 500;
     font-size: 1.25rem;
-    font-variation-settings: "opsz" var(--inter-opsz-20-500);
-    letter-spacing: var(--inter-ls-20-500);
+    letter-spacing: var(--bdo-ls-small);
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -326,8 +318,7 @@ h6 {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    font-variation-settings: "opsz" var(--inter-opsz-18-400);
-    letter-spacing: var(--inter-ls-18-400);
+    letter-spacing: var(--bdo-ls-small);
     line-height: calc(30 / 18);
     color: var(--tw-prose-body);
 }
@@ -353,19 +344,17 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 600;
-    font-size: 2.5rem;
-    font-variation-settings: "opsz" var(--inter-opsz-40-600);
-    letter-spacing: var(--inter-ls-40-600);
+    font-size: 2.375rem;
+    letter-spacing: var(--bdo-ls-large);
     line-height: 3.2rem;
 }
 
 .content .blog-post-content {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 410;
-    font-size: 1.25rem;
-    font-variation-settings: "opsz" var(--inter-opsz-20-450);
-    letter-spacing: var(--inter-ls-20-450);
+    font-weight: 400;
+    font-size: 1.1875rem;
+    letter-spacing: var(--bdo-ls-small);
     line-height: calc(30 / 18);
 }
 
@@ -377,8 +366,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-variation-settings: "opsz" var(--inter-opsz-18-400);
-    letter-spacing: var(--inter-ls-18-400);
+    letter-spacing: var(--bdo-ls-small);
 }
 
 /* Blog post images: centered, boxed */
@@ -392,10 +380,9 @@ dl {
 }
 
 .content .caption {
-    font-weight: 450;
+    font-weight: 500;
     font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-450);
-    letter-spacing: var(--inter-ls-16-450);
+    letter-spacing: var(--bdo-ls-tiny);
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 0.625rem;
@@ -410,10 +397,9 @@ dl {
 }
 
 .content .figcaption {
-    font-weight: 450;
+    font-weight: 500;
     font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-450);
-    letter-spacing: var(--inter-ls-16-450);
+    letter-spacing: var(--bdo-ls-tiny);
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
@@ -435,6 +421,10 @@ dl {
     font-weight: 450;
     font-feature-settings: "calt", "liga", "cv02", "cv11", "zero";
     background-color: var(--tw-bg);
+    /* Reset for BDO Grotesk */
+    letter-spacing: 0;
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
 }
 
 .content .markdown code {
@@ -492,8 +482,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 600;
     font-size: 1.625rem;
-    font-variation-settings: "opsz" var(--inter-opsz-26-600);
-    letter-spacing: var(--inter-ls-26-600);
+    letter-spacing: var(--bdo-ls-medium);
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -515,8 +504,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 500;
     font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-500);
-    letter-spacing: var(--inter-ls-16-500);
+    letter-spacing: var(--bdo-ls-tiny);
     line-height: 2.5rem;
 }
 
@@ -525,8 +513,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 450;
     font-size: 0.9375rem;
-    font-variation-settings: "opsz" var(--inter-opsz-15-450);
-    letter-spacing: var(--inter-ls-15-450);
+    letter-spacing: var(--bdo-ls-tiny);
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -556,8 +543,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 500;
     font-size: 0.9375rem;
-    font-variation-settings: "opsz" var(--inter-opsz-15-500);
-    letter-spacing: var(--inter-ls-15-500);
+    letter-spacing: var(--bdo-ls-tiny);
     line-height: calc(50 / 18);
 }
 
@@ -581,8 +567,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.25rem;
-    font-variation-settings: "opsz" var(--inter-opsz-20-400);
-    letter-spacing: var(--inter-ls-20-400);
+    letter-spacing: var(--bdo-ls-small);
     margin-bottom: 1.125rem;
 }
 
@@ -622,8 +607,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-400);
-    letter-spacing: var(--inter-ls-16-400);
+    letter-spacing: var(--bdo-ls-tiny);
     text-decoration: none;
     border: 1px solid var(--tw-prose-bullets);
     border-radius: 0.4rem;
@@ -647,16 +631,14 @@ dl {
     font-feature-settings: normal;
     font-weight: 600;
     font-size: 1rem;
-    font-variation-settings: "opsz" var(--inter-opsz-16-600);
-    letter-spacing: var(--inter-ls-16-600);
+    letter-spacing: var(--bdo-ls-tiny);
     color: var(--tw-prose-captions);
 }
 
 .pagination-nav .pagination-nav-label {
     font-size: 0.875rem;
     font-weight: 500;
-    font-variation-settings: "opsz" var(--inter-opsz-14-500);
-    letter-spacing: var(--inter-ls-14-500);
+    letter-spacing: var(--bdo-ls-tiny);
     color: var(--tw-prose-links);
     margin-top: 0.5rem;
 }
@@ -674,8 +656,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 450;
     font-size: 1.125rem;
-    font-variation-settings: "opsz" var(--inter-opsz-18-450);
-    letter-spacing: var(--inter-ls-18-450);
+    letter-spacing: var(--bdo-ls-small);
 }
 
 .footer a {
