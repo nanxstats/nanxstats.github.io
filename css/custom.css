@@ -9,9 +9,9 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Lilex";
-    src: url("fonts/Lilex.woff2") format("woff2");
-    font-weight: 100 700;
+    font-family: "Fragment Mono";
+    src: url("fonts/FragmentMono-Regular.woff2") format("woff2");
+    font-weight: 400;
 }
 
 /* Colors derived from @tailwindcss/typography prose-slate */
@@ -19,7 +19,7 @@
 :root {
     --tw-prose-font-sans-serif: "BDO Grotesk Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "BDO Grotesk Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Lilex", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "Fragment Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #0f172a;
     --tw-prose-links: #0f172a;
     --tw-prose-links-hover: #64748b;
@@ -48,9 +48,8 @@ body {
     font-feature-settings: normal;
     font-variant-ligatures: contextual common-ligatures;
     background-color: var(--tw-bg);
-    /* BDO Grotesk */
+    /* Lighter text rendering for BDO Grotesk */
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Horizontally centering fixed-width block used together with .mx-auto */
@@ -418,13 +417,12 @@ dl {
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
-    font-weight: 450;
-    font-feature-settings: "calt", "liga", "cv02", "cv11", "zero";
+    font-weight: 400;
+    font-feature-settings: "calt", "liga", "ss02";
     background-color: var(--tw-bg);
-    /* Reset for BDO Grotesk */
-    letter-spacing: 0;
+    /* Reset because we set them globally for BDO Grotesk */
     -webkit-font-smoothing: auto;
-    -moz-osx-font-smoothing: auto;
+    letter-spacing: 0;
 }
 
 .content .markdown code {
