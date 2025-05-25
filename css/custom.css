@@ -273,17 +273,17 @@ h6 {
 
 .content h2 {
     font-size: 1.75rem;
-    letter-spacing: var(--bdo-ls-large);
+    letter-spacing: var(--bdo-ls-medium);
 }
 
 .content h3 {
     font-size: 1.5rem;
-    letter-spacing: var(--bdo-ls-large);
+    letter-spacing: var(--bdo-ls-medium);
 }
 
 .content h4 {
     font-size: 1.25rem;
-    letter-spacing: var(--bdo-ls-medium);
+    letter-spacing: var(--bdo-ls-small);
 }
 
 .content .meta {
