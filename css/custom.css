@@ -37,9 +37,9 @@
     --tw-prose-td-borders: #e2e8f0;
     --tw-bg: #fff;
     /* BDO Grotesk */
-    --bdo-ls-tiny: -0.4px;
-    --bdo-ls-small: -0.5px;
-    --bdo-ls-medium: -0.8px;
+    --bdo-ls-tiny: -0.2px;
+    --bdo-ls-small: -0.3px;
+    --bdo-ls-medium: -0.6px;
     --bdo-ls-large: -1.2px;
 }
 
