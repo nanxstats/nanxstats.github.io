@@ -294,7 +294,7 @@ Jian-Bing Wang, Dong-Sheng Cao, Min-Feng Zhu, Yong-Huan Yun, Nan Xiao, Yi-Zeng L
 <style>
 /* Papers TOC container */
 .papers-toc {
-    border: 1px solid var(--tw-prose-bullets);
+    border: 1px solid #e2e8f0;
     border-radius: 0.4rem;
     padding: 1rem;
     background-color: var(--tw-bg);
@@ -318,25 +318,35 @@ Jian-Bing Wang, Dong-Sheng Cao, Min-Feng Zhu, Yong-Huan Yun, Nan Xiao, Yi-Zeng L
     font-size: 1rem;
     letter-spacing: var(--bdo-ls-tiny);
     text-decoration: none;
-    border: 1px solid var(--tw-prose-bullets);
+    border: 1px solid #e2e8f0;
+    /* slate-200 */
     border-radius: 0.4rem;
     padding: 1rem 1.25rem;
     height: 100%;
-    transition: all 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
     text-align: left;
-    background-color: var(--tw-bg);
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
-    color: var(--tw-prose-body);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 1px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 .papers-toc .btn-outline-nav:hover {
-    border-color: var(--tw-prose-counters);
+    background-color: #F9FAFB;
+    /* Slightly off-white */
+    border-color: #cbd5e1;
+    /* Darker border, slate-300 */
     text-decoration: none;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
 }
 
 .papers-toc .btn-outline-nav:active {
-    background-color: var(--tw-prose-hr);
+    background-color: #F3F4F6;
+    border-color: #94a3b8;
+    /* slate-400 */
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
 }
 
 /* Icon styles */
@@ -344,24 +354,28 @@ Jian-Bing Wang, Dong-Sheng Cao, Min-Feng Zhu, Yong-Huan Yun, Nan Xiao, Yi-Zeng L
     font-size: 1.1rem;
     width: 1.5rem;
     text-align: center;
-    color: var(--tw-prose-captions);
+    color: #475569;
+    /* Primary-like color (slate-600) */
     margin-right: 0.75rem;
-    transition: color 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+    transition: color 0.15s ease-in-out;
 }
 
 /* Text styles */
 .papers-toc .btn-outline-nav span {
-    color: var(--tw-prose-captions);
-    transition: color 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+    color: #475569;
+    /* Readable dark gray (slate-600) */
+    transition: color 0.15s ease-in-out;
 }
 
 /* Hover states */
 .papers-toc .btn-outline-nav:hover span {
-    color: var(--tw-prose-body);
+    color: #1f2937;
+    /* Darker text on hover (slate-800) */
 }
 
 .papers-toc .btn-outline-nav:hover i {
-    color: var(--tw-prose-body);
+    color: #1f2937;
+    /* Darker primary on hover (slate-800) */
 }
 
 /* Responsive adjustments */
