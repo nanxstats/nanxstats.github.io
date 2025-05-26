@@ -431,6 +431,7 @@ dl {
     padding: 2px 5px 3px 5px;
     margin: 0;
     font-size: 1.0625rem;
+    letter-spacing: var(--bdo-ls-small);
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
