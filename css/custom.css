@@ -584,10 +584,7 @@ dl {
     justify-content: flex-start;
     /* Aligns text to the left by default */
     text-align: left;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 1.25rem;
-    padding-bottom: 1.75rem;
+    padding: 1.25rem 1.25rem 1.75rem 1.25rem;
 }
 
 .pagination-nav .btn-next .btn-content {
@@ -603,25 +600,29 @@ dl {
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1rem;
     letter-spacing: var(--bdo-ls-tiny);
     text-decoration: none;
-    border: 1px solid var(--tw-prose-bullets);
+    border: 1px solid #e2e8f0;
     border-radius: 0.4rem;
-    transition: border-color 200ms cubic-bezier(0.08, 0.52, 0.52, 1);
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04), 0 1px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 .pagination-nav .btn-outline-nav:hover {
-    border-color: var(--tw-prose-counters);
+    background-color: #F9FAFB;
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
 }
 
 .pagination-nav .btn-outline-nav:active {
-    background-color: var(--tw-prose-hr);
-}
-
-.pagination-nav .btn-outline-nav:active .pagination-nav-label {
-    color: var(--tw-prose-links-hover);
+    background-color: #F3F4F6;
+    border-color: #94a3b8;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
 }
 
 .pagination-nav .pagination-nav-sublabel {
@@ -630,15 +631,22 @@ dl {
     font-weight: 600;
     font-size: 1rem;
     letter-spacing: var(--bdo-ls-tiny);
-    color: var(--tw-prose-captions);
+    color: #475569;
+    transition: color 0.15s ease-in-out;
 }
 
 .pagination-nav .pagination-nav-label {
     font-size: 0.875rem;
     font-weight: 500;
     letter-spacing: var(--bdo-ls-tiny);
-    color: var(--tw-prose-links);
+    color: #475569;
     margin-top: 0.5rem;
+    transition: color 0.15s ease-in-out;
+}
+
+.pagination-nav .btn-outline-nav:hover .pagination-nav-sublabel,
+.pagination-nav .btn-outline-nav:hover .pagination-nav-label {
+    color: #1f2937;
 }
 
 /* Partial: Utterances comments */
