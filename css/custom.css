@@ -200,6 +200,10 @@ hr {
         letter-spacing: var(--bdo-ls-medium);
         text-decoration: none;
     }
+
+    .header ul.nav li a.active::after {
+        display: none !important;
+    }
 }
 
 .header ul.nav li a.active:hover {
