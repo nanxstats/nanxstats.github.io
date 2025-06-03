@@ -15,7 +15,8 @@ tags:
   - Pydantic
 meta_img: "image/adam-custer-r2lSB3AEcSs-unsplash.jpg"
 description: >
-  TBA
+  I attended my first PyCon in Pittsburgh. Here is what caught my attention
+  as a statistician by learning from the Python community.
 ---
 
 ![A flamingo peeking through the plants. National Aviary, Pittsburgh, PA.
