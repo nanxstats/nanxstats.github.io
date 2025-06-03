@@ -3,15 +3,45 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/free-threading/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/gpu/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/my-first-pycon-experience/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/nogil/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pittsburgh/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pycon/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pydantic/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/cicd/</loc>
     <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/documentation/</loc>
-    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/monkey-patching/</loc>
@@ -30,9 +60,6 @@
     <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-packages/</loc>
-    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/css/</loc>
@@ -116,16 +143,10 @@
     <loc>https://nanx.me/tags/rextendr/</loc>
     <lastmod>2025-02-28T16:37:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/rust/</loc>
-    <lastmod>2025-02-28T16:37:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/clinical-trials/</loc>
     <lastmod>2025-02-13T00:06:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/rtflite-python/</loc>
-    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python/</loc>
     <lastmod>2025-02-13T00:06:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/python-packages/</loc>
@@ -210,9 +231,6 @@
     <lastmod>2024-12-04T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/deep-learning/</loc>
-    <lastmod>2024-10-26T20:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/gpu/</loc>
     <lastmod>2024-10-26T20:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/matrix-factorization/</loc>

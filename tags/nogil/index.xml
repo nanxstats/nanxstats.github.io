@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NoGIL on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/nogil/</link>
+    <description>Recent content in NoGIL on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 03 Jun 2025 00:15:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/nogil/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My First PyCon Experience</title>
+      <link>https://nanx.me/blog/post/my-first-pycon-experience/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/my-first-pycon-experience/</guid>
+      <description>A flamingo peeking through the plants. National Aviary, Pittsburgh, PA. Photo by Adam Custer. I attended PyCon US 2025 in Pittsburgh, Pennsylvania from May 16–18, 2025. As my first Python conference, I wanted to document the most interesting things I learned.&#xA;Why a statistician goes to PyCon? It might seem odd for a statistician to focus on any particular programming language. But I’m not your typical statistician. As Dijkstra said:</description>
+    </item>
+  </channel>
+</rss>

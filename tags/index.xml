@@ -6,8 +6,64 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 10 May 2025 01:02:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Jun 2025 00:15:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>free-threading</title>
+      <link>https://nanx.me/tags/free-threading/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/free-threading/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GPU</title>
+      <link>https://nanx.me/tags/gpu/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/gpu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NoGIL</title>
+      <link>https://nanx.me/tags/nogil/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/nogil/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pittsburgh</title>
+      <link>https://nanx.me/tags/pittsburgh/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pittsburgh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PyCon</title>
+      <link>https://nanx.me/tags/pycon/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pycon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pydantic</title>
+      <link>https://nanx.me/tags/pydantic/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pydantic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://nanx.me/tags/rust/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust/</guid>
+      <description></description>
+    </item>
     <item>
       <title>CICD</title>
       <link>https://nanx.me/tags/cicd/</link>
@@ -226,24 +282,10 @@
       <description></description>
     </item>
     <item>
-      <title>Rust</title>
-      <link>https://nanx.me/tags/rust/</link>
-      <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>clinical trials</title>
       <link>https://nanx.me/tags/clinical-trials/</link>
       <pubDate>Thu, 13 Feb 2025 00:06:00 +0000</pubDate>
       <guid>https://nanx.me/tags/clinical-trials/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Thu, 13 Feb 2025 00:06:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
       <description></description>
     </item>
     <item>
@@ -405,13 +447,6 @@
       <link>https://nanx.me/tags/deep-learning/</link>
       <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
       <guid>https://nanx.me/tags/deep-learning/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>GPU</title>
-      <link>https://nanx.me/tags/gpu/</link>
-      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/gpu/</guid>
       <description></description>
     </item>
     <item>

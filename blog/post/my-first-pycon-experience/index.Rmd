@@ -1,0 +1,141 @@
+---
+title: "My First PyCon Experience"
+author: "Nan Xiao"
+date: "2025-06-03T00:15:00"
+slug: my-first-pycon-experience
+categories: []
+tags:
+  - Python
+  - PyCon
+  - Pittsburgh
+  - GPU
+  - free-threading
+  - NoGIL
+  - Rust
+  - Pydantic
+meta_img: "image/adam-custer-r2lSB3AEcSs-unsplash.jpg"
+description: >
+  TBA
+---
+
+![A flamingo peeking through the plants. National Aviary, Pittsburgh, PA.
+Photo by [Adam Custer](https://unsplash.com/photos/r2lSB3AEcSs).
+](/image/adam-custer-r2lSB3AEcSs-unsplash.jpg)
+
+I attended [PyCon US 2025](https://us.pycon.org/2025/) in Pittsburgh,
+Pennsylvania from May 16--18, 2025. As my first Python conference,
+I wanted to document the most interesting things I learned.
+
+## Why a statistician goes to PyCon?
+
+It might seem odd for a statistician to focus on any particular programming
+language. But I'm not your typical statistician.
+As [Dijkstra said](https://www.cs.utexas.edu/~EWD/transcriptions/OtherDocs/Haskell.html):
+
+> It is not only the violin that shapes the violinist, we are all shaped by
+> the tools we train ourselves to use, and in this respect programming languages
+> have a devious influence: they shape our thinking habits.
+
+If we want to understand how different technical communities think,
+we need to engage with their latest progress through experiences like this.
+In particular, Python has become the primary language for generative AI---a
+field driven by efficiently processing huge amounts of unlabeled data
+rather than theoretical advances. This approach has shown some different wisdom
+from traditional statistical thinking, so I was curious to see how the
+language enables better technical and business outcomes in future AI
+(and AGI!) applications.
+
+## There were so many interesting talks
+
+I focused on talks about speed, safety, and code quality.
+Here are the most informative ones for me.
+
+### 1. Free-threaded CPython
+
+With Python 3.13t, free-threading (NoGIL) moved from concept to reality.
+The [Python free-threading guide](https://py-free-threading.github.io/) serves
+as a helpful community resource. Importantly, free-threading helps with
+I/O-intensive tasks, not CPU-intensive ones. Notable talks:
+
+- **Building a NoGIL load balancer in 30 minutes**\
+  Alvaro Duran,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/113/)
+- **Using Rust in free-threaded vs regular Python 3.13**\
+  David Hewitt,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/110/)
+- **Unraveling community support For free-threaded Python**\
+  Lysandros Nikolaou and Nathan Goldbaum,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/42/)
+
+### 2. GPU computing
+
+Five years ago, I was skeptical about GPU-accelerated computing despite
+the promises of deep learning. Now I see it as the only practical path to scale.
+Shaping your problem-solving around high-throughput floating-point computation
+is a shortcut to success.
+
+These talks introduced me to the [roofline
+model](https://en.wikipedia.org/wiki/Roofline_model) for visualizing GPU kernel
+performance. The second talk was particularly exciting. It covered Python-level
+innovations that could reduce the need for CUDA C++ through
+[cuda.cooperative](https://nvidia.github.io/cccl/python.html).
+
+- **When GPUs make Python slower: patterns and pitfalls**\
+  Kaashif Hymabaccus,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/138/),
+  [Recording](https://www.youtube.com/watch?v=WfXfj29KhLo)
+- **GPU programming in pure Python**\
+  Bryce Adelstein Lelbach,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/111/),
+  [Recording](https://www.youtube.com/watch?v=8utSRblGEB0)
+
+### 3. Metaprogramming and JIT compilation
+
+These topics can enable syntax sugars that help developers write correct,
+concise, and fast Python code. While I'm not a programming language
+expert and missed some details, it's always valuable to know what's out there.
+
+- **Supercharge your Python library using AST parsing**\
+  Adam Glustein,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/129/)
+- **What they don't tell you about building a JIT compiler for CPython**\
+  Brandt Bucher,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/5/),
+  [Recording](https://www.youtube.com/watch?v=NE-Oq8I3X_w)
+
+### 4. Design and testing best practices
+
+These were some of my favorite talks. While not cutting-edge technology,
+they offered valuable perspectives on engineering practices and
+avoiding common pitfalls.
+
+- **Design pressure: The invisible hand that shapes your code**\
+  Hynek Schlawack,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/81/),
+  [Recording](https://www.youtube.com/watch?v=IhNSINolcSM)
+- **Notes, Groups and Stars: exceptional new features of Python 3.11!**\
+  Zac Hatfield-Dodds,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/96/),
+  [Recording](https://www.youtube.com/watch?v=x5WdMYfsxnQ)
+- **Who tests the testers? Making and testing pipelines**\
+  Evan Kohilas,
+  [Abstract](https://us.pycon.org/2025/schedule/presentation/28/),
+  [Recording](https://www.youtube.com/watch?v=DhognqFaRow)
+
+## Reconnecting with friends
+
+The highlight of my Pittsburgh trip was meeting my friend
+[Simo](https://www.linkedin.com/in/svzbioshock/) in person for the first time
+in seven years. I was excited to learn he has completed the
+[UCSD CSE 234](https://hao-ai-lab.github.io/cse234-w25/) and
+[MIT 6.5940](https://hanlab.mit.edu/courses/2024-fall-65940) courses
+I recommended for understanding the computational innovations behind LLMs.
+He also recommended [Stanford CS149](https://gfxcourses.stanford.edu/cs149/fall24)
+to me for learning GPU parallel computing fundamentals.
+Simo has been building his own neural network framework
+[nn-from-scratch](https://github.com/svm-zhang/nn_from_scratch) and
+Transformers library.
+
+We covered way too many topics---Neovim, uv, Rust, matmul, cuTile,
+tinygrad, PagedAttention... and PyCon provided the perfect break from
+our busy daily routines.
