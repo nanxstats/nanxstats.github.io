@@ -6,20 +6,83 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 03 Jun 2025 00:15:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jun 2025 01:03:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>free-threading</title>
-      <link>https://nanx.me/tags/free-threading/</link>
-      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/free-threading/</guid>
+      <title>Agentic AI</title>
+      <link>https://nanx.me/tags/agentic-ai/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/agentic-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>buildapc</title>
+      <link>https://nanx.me/tags/buildapc/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/buildapc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Claude Code</title>
+      <link>https://nanx.me/tags/claude-code/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/claude-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>deep learning</title>
+      <link>https://nanx.me/tags/deep-learning/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/deep-learning/</guid>
       <description></description>
     </item>
     <item>
       <title>GPU</title>
       <link>https://nanx.me/tags/gpu/</link>
-      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
       <guid>https://nanx.me/tags/gpu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>https://nanx.me/tags/javascript/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/javascript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>large language model</title>
+      <link>https://nanx.me/tags/large-language-model/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/large-language-model/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tailwind CSS</title>
+      <link>https://nanx.me/tags/tailwind-css/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/tailwind-css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vibe coding</title>
+      <link>https://nanx.me/tags/vibe-coding/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vibe-coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vibe refactoring</title>
+      <link>https://nanx.me/tags/vibe-refactoring/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vibe-refactoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>free-threading</title>
+      <link>https://nanx.me/tags/free-threading/</link>
+      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/free-threading/</guid>
       <description></description>
     </item>
     <item>
@@ -128,13 +191,6 @@
       <description></description>
     </item>
     <item>
-      <title>JavaScript</title>
-      <link>https://nanx.me/tags/javascript/</link>
-      <pubDate>Mon, 21 Apr 2025 22:35:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/javascript/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>letter spacing</title>
       <link>https://nanx.me/tags/letter-spacing/</link>
       <pubDate>Mon, 21 Apr 2025 22:35:00 +0000</pubDate>
@@ -237,13 +293,6 @@
       <link>https://nanx.me/tags/rbindlist/</link>
       <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
       <guid>https://nanx.me/tags/rbindlist/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>vibe coding</title>
-      <link>https://nanx.me/tags/vibe-coding/</link>
-      <pubDate>Mon, 24 Mar 2025 20:05:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/vibe-coding/</guid>
       <description></description>
     </item>
     <item>
@@ -440,13 +489,6 @@
       <link>https://nanx.me/tags/visual-regression-testing/</link>
       <pubDate>Wed, 04 Dec 2024 21:53:00 +0000</pubDate>
       <guid>https://nanx.me/tags/visual-regression-testing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>deep learning</title>
-      <link>https://nanx.me/tags/deep-learning/</link>
-      <pubDate>Sat, 26 Oct 2024 20:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/deep-learning/</guid>
       <description></description>
     </item>
     <item>
@@ -709,13 +751,6 @@
       <description></description>
     </item>
     <item>
-      <title>Tailwind CSS</title>
-      <link>https://nanx.me/tags/tailwind-css/</link>
-      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/tailwind-css/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>coding fonts</title>
       <link>https://nanx.me/tags/coding-fonts/</link>
       <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
@@ -734,13 +769,6 @@
       <link>https://nanx.me/tags/gpt-models/</link>
       <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/gpt-models/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>large language model</title>
-      <link>https://nanx.me/tags/large-language-model/</link>
-      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/large-language-model/</guid>
       <description></description>
     </item>
     <item>
@@ -1098,13 +1126,6 @@
       <link>https://nanx.me/tags/mlmodern/</link>
       <pubDate>Mon, 20 Mar 2023 16:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/mlmodern/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>buildapc</title>
-      <link>https://nanx.me/tags/buildapc/</link>
-      <pubDate>Sun, 29 Jan 2023 22:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/buildapc/</guid>
       <description></description>
     </item>
     <item>

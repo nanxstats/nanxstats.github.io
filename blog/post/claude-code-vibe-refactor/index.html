@@ -4,29 +4,32 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> large language model - Nan Xiao | 肖楠 </title>
+    <title> Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="I rebuilt my deep learning GPU selector app using Claude Code, and here is what I learned from this small vibe coding experiment.
+" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://nanx.me/tags/large-language-model/" />
-    <meta property="og:title" content="large language model" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://nanx.me/blog/post/claude-code-vibe-refactor/" />
+    <meta property="og:title" content="Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment" />
+    <meta property="og:image" content="https://nanx.me/image/amari-james-bzdfrbaGztY-unsplash.jpg" />
+    <meta property="og:description" content="I rebuilt my deep learning GPU selector app using Claude Code, and here is what I learned from this small vibe coding experiment.
+" />
 
     <meta name="twitter:card" content="summary_large_image" />
     
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="large language model" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta name="twitter:title" content="Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment" />
+    <meta name="twitter:description" content="I rebuilt my deep learning GPU selector app using Claude Code, and here is what I learned from this small vibe coding experiment.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/amari-james-bzdfrbaGztY-unsplash.jpg" />
 
-    <link rel="canonical" href="https://nanx.me/tags/large-language-model/">
+    <link rel="canonical" href="https://nanx.me/blog/post/claude-code-vibe-refactor/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -41,8 +44,6 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
-    
-    <link href="https://nanx.me/tags/large-language-model/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -70,7 +71,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog"
+                                <a class="nav-link text-blog active"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -129,76 +130,250 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <div class="markdown">
+                <h1 class="blog-post-title">Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Fri Jun 13 2025 01:03:00 UTC'>
+                        June 13, 2025
+                    </span>
+
+                    <span class="reading-time middot">
+                        3 min read
+                    </span>
+
+                    <div class="d-none d-md-block mt-2 tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/claude-code">Claude Code</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/agentic-ai">Agentic AI</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/vibe-coding">vibe coding</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/vibe-refactoring">vibe refactoring</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/tailwind-css">Tailwind CSS</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/javascript">JavaScript</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/large-language-model">large language model</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/deep-learning">deep learning</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/gpu">GPU</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/buildapc">buildapc</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/amari-james-bzdfrbaGztY-unsplash.jpg" alt="Desk setup with plants. Photo by Amari James." />
+<div class="figcaption">Desk setup with plants. Photo by
+<a href="https://unsplash.com/photos/bzdfrbaGztY">Amari James</a>.</div>
+</div>
+<p>In January 2023, I <a href="https://nanx.me/blog/post/gpu-selector/">built</a> a basic,
+interactive <a href="https://nanx.me/gpu/">deep learning GPU selector app</a> inspired
+by Tim Dettmers’ popular guide. The original project was a pure HTML + JavaScript + CSS
+“vibe coding” experiment, driven by chat with GPT-3.5, which was the SOTA
+at the time. While the core logic worked, I did not focus much on its UI or UX.</p>
+<p>Now, two and a half years later, I wanted to see how far agentic coding
+assistants have come, by refactoring the app with modern tools and design
+sensibilities.</p>
+<div id="before-and-after" class="section level2">
+<h2>Before and after</h2>
+<p>Following the wisdom of always using the most expensive but effective tool
+for the job… I decided to give the app a fresh look and feel using
+Claude Code with Max plan.
+Claude Code is a coding assistant with a cool terminal user interface:</p>
+<div class="float">
+<img src="claude-code.png" alt="Claude Code. Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term." />
+<div class="figcaption">Claude Code. Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term.</div>
+</div>
+<p>Here is the original GPU selector app:</p>
+<div class="float">
+<img src="gpu-selector-app-before.png" alt="App before refactor" />
+<div class="figcaption">App before refactor</div>
+</div>
+<p>And here is the refactored version:</p>
+<div class="float">
+<img src="gpu-selector-app-after.png" alt="App after refactor" />
+<div class="figcaption">App after refactor</div>
+</div>
+<p>(Please don’t tell me you like the original version better 😅)</p>
+</div>
+<div id="the-refactoring-process" class="section level2">
+<h2>The refactoring process</h2>
+<p>Here is a high-level summary of my interaction with Claude Code:</p>
+<ul>
+<li>I used Claude Opus 4 until the token limit was reached; after that,
+it switched to Claude Sonnet 4.</li>
+<li>The entire refactor took 13 user instructions.
+The main goals were achieved within the first 7.</li>
+<li>Before starting, I watched the official presentation,
+<a href="https://www.youtube.com/watch?v=6eBSHbLKuN0">Mastering Claude Code in 30 minutes</a>, and reviewed
+<a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices">Claude 4 prompt engineering best practices</a>.</li>
+</ul>
+<p>Below is a condensed version of my unfiltered conversation with Claude Code.</p>
+<blockquote>
+<p><strong>Instruction 1</strong>:
+Refactor the app for a modern look and feel using Tailwind CSS,
+with an emphasis on UI/UX aligned with top tech company standards.
+Use Google Fonts as needed. <strong>Don’t hold back, give it your all.</strong></p>
+</blockquote>
+<p>Result: Claude Code added an (impressive) progress bar and made initial
+design improvements. However, there seems to be some backend logic issues.</p>
+<blockquote>
+<p><strong>Instruction 2</strong>:
+The question flow broke, and the progress bar stopped working. Please fix.</p>
+</blockquote>
+<p>Result: Logic fixed.</p>
+<blockquote>
+<p><strong>Instruction 3</strong>:
+Make the result box the same width as the progress bar.</p>
+</blockquote>
+<p>Result: Layout improved.</p>
+<blockquote>
+<p><strong>Instruction 4</strong>:
+The current design feels cheesy. Refactor the UI to match the minimalist
+aesthetic of sites like <code>internet.dev</code> and <code>txt.dev</code>. Capture that “vibe”.</p>
+</blockquote>
+<p>Result: Minimalist look achieved!</p>
+<blockquote>
+<p><strong>Instruction 5</strong>:
+Add subtle full-screen grid lines, as seen on INTDEV sites, to guide
+visual focus. Redesign the Yes/No/Restart buttons for usability and
+consistency with the minimalist style.</p>
+</blockquote>
+<p>Result: Grid lines and buttons updated, but with too many grid lines.</p>
+<blockquote>
+<p><strong>Instruction 6</strong>:
+Reduce the number of grid lines; use them only above/below key elements.</p>
+</blockquote>
+<p>Result: Cleaner look achieved.</p>
+<blockquote>
+<p><strong>Instruction 7</strong>:
+Adjust grid lines: add a horizontal line above the GPU selector,
+remove the one below the footer, and add vertical lines to the left and
+right of the main content. Use balanced spacing.</p>
+</blockquote>
+<p>Result: The app was nearly finished visually.</p>
+<p>At this point, most of the major changes were complete.
+The remaining instructions focused on fine-tuning spacing and alignment.
+This is tricky for LLMs without visual feedback. In hindsight,
+these tweaks could have been made more efficiently by hand.</p>
+<blockquote>
+<p><strong>Instructions 8–13:</strong>
+Refine vertical spacing and button alignment so elements don’t shift
+unexpectedly when questions or answers span multiple lines.
+Reduce unnecessary whitespace and make sure grid lines don’t interfere
+with content, especially on small screens.</p>
+</blockquote>
+<p>Result: Final visual details polished.</p>
+</div>
+<div id="afterthoughts" class="section level2">
+<h2>Afterthoughts</h2>
+<p>AI coding assistants have been evolving rapidly, but the human element
+remains critical for truly “vibey” projects. Whether it is the overall vision
+or the subtle details, success comes from having a super clear idea of what
+you want—with the technical sense and know-how to steer revisions in the
+right direction.</p>
+<p>In reality though, this might be easier said than done.</p>
+</div>
+
+
+
                 </div>
 
-                <div class="posts">
-                    <h1>Posts about large language model</h1>
-                    <hr>
-                    <ul class="list-unstyled">
-                        
-                        <li class="groupby">2025</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/claude-code-vibe-refactor/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Jun 13, 2025
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2024</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/gpt-models-font-ligatures/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    You should (maybe) enable font ligatures when building with GPT models
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Jun 19, 2024
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/pkglite-llm-prompt/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Prompt LLMs with R Package Source Code Using pkglite
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Mar 28, 2024
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                    </ul>
-                </div>
+                
+                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
+                    <div class="row navigation-btns">
+                        <div class="col">
+                            
+                            <a href="https://nanx.me/blog/post/my-first-pycon-experience/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Previous</div>
+                                    <div class="pagination-nav-label">« My First PyCon Experience</div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="col">
+                            
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Next</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </nav>
+                
+
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -300,12 +475,6 @@
                                 Colophon</a></li>
                         
 
-                        
-                        <li><a href="https://nanx.me/tags/large-language-model/index.xml" class="mr-0">
-                                <svg class="svg-icon mr-1">
-                                    <use xlink:href="#octicons-rss"></use>
-                                </svg>
-                                RSS</a></li>
                         
 
                         

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tailwind CSS on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/tailwind-css/</link>
-    <description>Recent content in Tailwind CSS on Nan Xiao | 肖楠</description>
+    <title>Agentic AI on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/agentic-ai/</link>
+    <description>Recent content in Agentic AI on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 13 Jun 2025 01:03:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/tailwind-css/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment</title>
       <link>https://nanx.me/blog/post/claude-code-vibe-refactor/</link>
       <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/claude-code-vibe-refactor/</guid>
       <description>Desk setup with plants. Photo by Amari James. In January 2023, I built a basic, interactive deep learning GPU selector app inspired by Tim Dettmers’ popular guide. The original project was a pure HTML + JavaScript + CSS “vibe coding” experiment, driven by chat with GPT-3.5, which was the SOTA at the time. While the core logic worked, I did not focus much on its UI or UX.&#xA;Now, two and a half years later, I wanted to see how far agentic coding assistants have come, by refactoring the app with modern tools and design sensibilities.</description>
-    </item>
-    <item>
-      <title>ggsci 3.2.0: new color palettes from Observable, Bootstrap, and Tailwind CSS</title>
-      <link>https://nanx.me/blog/post/ggsci-3-2-0/</link>
-      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/ggsci-3-2-0/</guid>
-      <description>Villa in Zurich, perspective view. From “Moderne Architektur” (Modern Architecture), edited by Lambert &amp;amp; Stahl, Stuttgart, 1891. Scan from Europeana. I am delighted to announce the release of ggsci 3.2.0. The R package ggsci was first released in 2016. It offers a range of ggplot2 color scales drawn from various sources, including scientific publications, data visualization tools, sci-fi movies, and television series.&#xA;To install ggsci from CRAN, use:&#xA;install.packages(&amp;quot;ggsci&amp;quot;) As a follow-up to the ggsci 3.</description>
     </item>
   </channel>
 </rss>

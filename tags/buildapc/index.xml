@@ -6,8 +6,15 @@
     <description>Recent content in buildapc on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 29 Jan 2023 22:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Jun 2025 01:03:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/buildapc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment</title>
+      <link>https://nanx.me/blog/post/claude-code-vibe-refactor/</link>
+      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/claude-code-vibe-refactor/</guid>
+      <description>Desk setup with plants. Photo by Amari James. In January 2023, I built a basic, interactive deep learning GPU selector app inspired by Tim Dettmers’ popular guide. The original project was a pure HTML + JavaScript + CSS “vibe coding” experiment, driven by chat with GPT-3.5, which was the SOTA at the time. While the core logic worked, I did not focus much on its UI or UX.&#xA;Now, two and a half years later, I wanted to see how far agentic coding assistants have come, by refactoring the app with modern tools and design sensibilities.</description>
+    </item>
     <item>
       <title>Deep Learning GPU Selector</title>
       <link>https://nanx.me/blog/post/gpu-selector/</link>
