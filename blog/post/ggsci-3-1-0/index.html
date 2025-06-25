@@ -146,7 +146,7 @@
                     </span>
 
                     <span class="reading-time middot">
-                        4 min read
+                        5 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
@@ -342,6 +342,10 @@ These settings may not be necessary but are listed as a
 preemptive measure in case the default values inherited don’t work.</p>
 <pre class="r"><code>options(repos = &quot;https://cloud.r-project.org/&quot;)
 utils::chooseBioCmirror()</code></pre>
+<p>In case you got an error about “unable to access index for repository”,
+set the environment variable <code>R_BIOC_VERSION</code> to the current Bioconductor version,
+suggested by <a href="https://github.com/r-lib/revdepcheck/issues/376">r-lib/revdepcheck#376</a>:</p>
+<pre class="r"><code>Sys.setenv(&quot;R_BIOC_VERSION&quot; = as.character(BiocManager::version()))</code></pre>
 <p>If you customized <code>R_LIBS_USER</code> in <code>.Renviron</code> to set a special personal library
 path, and it is not loaded in this context, leading to “package not found” errors,
 temporarily prepend the path to <code>.libPath()</code> for this R session.</p>
@@ -351,14 +355,14 @@ temporarily prepend the path to <code>.libPath()</code> for this R session.</p>
 <p>If your CPU is maxed out at 100% utilization, you’ve done it right.
 Under Linux, you can monitor this with the command line tool <code>htop</code>.
 Here is a Windows Task Manager screenshot:</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
 <img src="images/revdepcheck-cpu.png" alt="Running revdepcheck with 32 parallel workers on Ryzen 7950X3D (16 cores, 32 threads)." width="100%" />
 <p class="caption">
 Figure 4: Running revdepcheck with 32 parallel workers on Ryzen 7950X3D (16 cores, 32 threads).
 </p>
 </div>
 <p>Checking all 36 reverse dependencies finished in 16 minutes.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-8"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
 <img src="images/revdepcheck-cli.png" alt="Reverse dependency check progress and summary. Font: Iosevka Term." width="100%" />
 <p class="caption">
 Figure 5: Reverse dependency check progress and summary. Font: Iosevka Term.

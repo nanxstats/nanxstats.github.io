@@ -247,6 +247,14 @@ options(repos = "https://cloud.r-project.org/")
 utils::chooseBioCmirror()
 ```
 
+In case you got an error about "unable to access index for repository",
+set the environment variable `R_BIOC_VERSION` to the current Bioconductor version,
+suggested by [r-lib/revdepcheck#376](https://github.com/r-lib/revdepcheck/issues/376):
+
+```r
+Sys.setenv("R_BIOC_VERSION" = as.character(BiocManager::version()))
+```
+
 If you customized `R_LIBS_USER` in `.Renviron` to set a special personal library
 path, and it is not loaded in this context, leading to "package not found" errors,
 temporarily prepend the path to `.libPath()` for this R session.
