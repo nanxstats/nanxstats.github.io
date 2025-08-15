@@ -79,7 +79,7 @@ You can enable it via Code > Settings... > Settings, then search
 always highlights non-basic ASCII characters in both untrusted workspaces and
 trusted workspaces. By default, they are only highlighted in untrusted workspaces.
 
-Alternatively, open the Command Palette and choose "Open Settings (JSON)",
+Alternatively, open the Command Palette and choose "Preferences: Open User Settings (JSON)",
 then add this key-value pair to `settings.json`:
 
 ```json
