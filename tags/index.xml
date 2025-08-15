@@ -6,8 +6,78 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jun 2025 01:03:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Aug 2025 01:32:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Claude Code</title>
+      <link>https://nanx.me/tags/claude-code/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/claude-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>formatter</title>
+      <link>https://nanx.me/tags/formatter/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/formatter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>large language model</title>
+      <link>https://nanx.me/tags/large-language-model/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/large-language-model/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://nanx.me/tags/markdown/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>plaintext workflow</title>
+      <link>https://nanx.me/tags/plaintext-workflow/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/plaintext-workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SmartyPants</title>
+      <link>https://nanx.me/tags/smartypants/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/smartypants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TypeScript</title>
+      <link>https://nanx.me/tags/typescript/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/typescript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vibe coding</title>
+      <link>https://nanx.me/tags/vibe-coding/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vibe-coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VS Code</title>
+      <link>https://nanx.me/tags/vs-code/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vs-code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VS Code extension</title>
+      <link>https://nanx.me/tags/vs-code-extension/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vs-code-extension/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Agentic AI</title>
       <link>https://nanx.me/tags/agentic-ai/</link>
@@ -20,13 +90,6 @@
       <link>https://nanx.me/tags/buildapc/</link>
       <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
       <guid>https://nanx.me/tags/buildapc/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Claude Code</title>
-      <link>https://nanx.me/tags/claude-code/</link>
-      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/claude-code/</guid>
       <description></description>
     </item>
     <item>
@@ -51,24 +114,10 @@
       <description></description>
     </item>
     <item>
-      <title>large language model</title>
-      <link>https://nanx.me/tags/large-language-model/</link>
-      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/large-language-model/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Tailwind CSS</title>
       <link>https://nanx.me/tags/tailwind-css/</link>
       <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
       <guid>https://nanx.me/tags/tailwind-css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>vibe coding</title>
-      <link>https://nanx.me/tags/vibe-coding/</link>
-      <pubDate>Fri, 13 Jun 2025 01:03:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/vibe-coding/</guid>
       <description></description>
     </item>
     <item>
@@ -1175,13 +1224,6 @@
       <link>https://nanx.me/tags/theme/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/tags/theme/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>VS Code</title>
-      <link>https://nanx.me/tags/vs-code/</link>
-      <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/vs-code/</guid>
       <description></description>
     </item>
     <item>

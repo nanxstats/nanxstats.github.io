@@ -2,16 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/claude-code/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/formatter/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/large-language-model/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/markdown/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/vscode-markdown-stupefy/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/plaintext-workflow/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/smartypants/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/typescript/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/vibe-coding/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/vs-code/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/vs-code-extension/</loc>
+    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/tags/agentic-ai/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/buildapc/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/claude-code/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/deep-learning/</loc>
@@ -20,25 +56,13 @@
     <loc>https://nanx.me/tags/gpu/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/javascript/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/large-language-model/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/claude-code-vibe-refactor/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/tailwind-css/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/vibe-coding/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/vibe-refactoring/</loc>
@@ -633,9 +657,6 @@
     <lastmod>2023-01-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/theme/</loc>
-    <lastmod>2023-01-02T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/vs-code/</loc>
     <lastmod>2023-01-02T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/ectd-pkglite-paper/</loc>

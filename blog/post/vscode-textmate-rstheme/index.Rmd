@@ -6,6 +6,7 @@ slug: vscode-textmate-rstheme
 categories: []
 tags:
   - VS Code
+  - VS Code extension
   - Theme
   - RStudio IDE
   - Ace

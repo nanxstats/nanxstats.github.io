@@ -6,8 +6,15 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 13 Jun 2025 01:03:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Aug 2025 01:32:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Stupefy: Tidy AI Text in VS Code</title>
+      <link>https://nanx.me/blog/post/vscode-markdown-stupefy/</link>
+      <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/vscode-markdown-stupefy/</guid>
+      <description>The extension name was inspired by the “stupefy mode” described in the SmartyPants project written by John Gruber, the creator of Markdown. If you copy AI responses into Markdown, you will often get curly quotes, em dashes, emoji, and other smart punctuation. They look fine, but they are Unicode characters that can trip linters and clutter diffs. So I built a tiny tool to fix that.&#xA;Automate tidying AI text Markdown Stupefy is a VS Code extension that normalizes smart punctuation to plain ASCII, removes emoji, and cleans up trailing whitespace.</description>
+    </item>
     <item>
       <title>Refactoring the GPU Selector App with Claude Code: A Vibe Coding Experiment</title>
       <link>https://nanx.me/blog/post/claude-code-vibe-refactor/</link>
@@ -293,7 +300,7 @@
       <link>https://nanx.me/blog/post/vscode-textmate-rstheme/</link>
       <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/vscode-textmate-rstheme/</guid>
-      <description>TL;DR: I published my first VS Code extension/theme on Visual Studio Marketplace, with the source hosted on GitHub. Try it out today.&#xA;A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px.&#xA;It was not until late in my life that I realized my eyes were sensitive to the visual aesthetics of things. To make things worse, I care about them very much, at least in the name of productivity and inspiration.</description>
+      <description>TL;DR: I published my first VS Code extension/theme on Visual Studio Marketplace, with the source hosted on GitHub. Try it out today.&#xA;A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px. It was not until late in my life that I realized my eyes were sensitive to the visual aesthetics of things. To make things worse, I care about them very much, at least in the name of productivity and inspiration.</description>
     </item>
     <item>
       <title>New Paper Published: eCTD Submission with Analysis Using R</title>

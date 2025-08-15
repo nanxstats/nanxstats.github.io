@@ -1,0 +1,97 @@
+---
+title: "Markdown Stupefy: Tidy AI Text in VS Code"
+author: "Nan Xiao"
+date: "2025-08-15T01:32:00"
+slug: vscode-markdown-stupefy
+categories: []
+tags:
+  - VS Code
+  - VS Code extension
+  - Markdown
+  - SmartyPants
+  - formatter
+  - plaintext workflow
+  - large language model
+  - TypeScript
+  - Claude Code
+  - vibe coding
+meta_img: "image/vscode-markdown-stupefy-banner.png"
+description: >
+  Markdown Stupefy is a VS Code extension that converts smart punctuation to
+  ASCII, removes emoji, and tidies trailing whitespace so AI-generated text
+  is easy to edit and diff.
+---
+
+![The extension name was inspired by the "stupefy mode" described in the
+[SmartyPants](https://daringfireball.net/projects/smartypants/) project written
+by John Gruber, the creator of Markdown.
+](/image/vscode-markdown-stupefy-banner.png)
+
+```{css, echo=FALSE}
+img[src="demo.gif"] {
+  border: 1px solid gray;
+  border-radius: 8px;
+}
+```
+
+If you copy AI responses into Markdown, you will often get curly quotes,
+em dashes, emoji, and other smart punctuation. They look fine, but they are
+Unicode characters that can trip linters and clutter diffs.
+So I built a tiny tool to fix that.
+
+## Automate tidying AI text
+
+[Markdown Stupefy](https://marketplace.visualstudio.com/items?itemName=nanxstats.markdown-stupefy)
+is a VS Code extension that normalizes smart punctuation to plain ASCII,
+removes emoji, and cleans up trailing whitespace. Here is a GIF demo:
+
+![A demo showing the extension cleaning up AI-generated text.
+Typeface: TheSansMono by Lucas de Groot. Recorded with VS Code Chronicler.
+GIF produced with ffmpeg and gifski.](demo.gif)
+
+The extension currently includes three commands:
+
+1. Convert smart punctuation to ASCII.
+2. Remove all emoji characters. `🙄🙅⛔`
+3. Trim trailing whitespace and ensure a single final newline.
+
+## Get the extension
+
+You can install the extension from the VS Code Extensions view (search "stupefy")
+or click "Install" on the [Marketplace
+page](https://marketplace.visualstudio.com/items?itemName=nanxstats.markdown-stupefy).
+After installation, open the Command Palette (`Ctrl`+`Shift`+`P` or
+`Command`+`Shift`+`P` on Mac), type "stupefy", and run a command.
+
+The extension is written in TypeScript (with help from Claude Code) and
+hosted on [GitHub](https://github.com/nanxstats/vscode-markdown-stupefy).
+Feedback and contributions are welcome.
+
+## The single most important setting in VS Code
+
+For plaintext workflows, what you see should be what is actually there.
+Visual disguises from typographic Unicode can hide problems.
+For that reason, I recommend enabling Unicode highlighting in VS Code
+so non-ASCII stands out, especially if AI is in your workflow.
+
+You can enable it via Code > Settings... > Settings, then search
+"Unicode Highlight". I set the "Non Basic ASCII" option to `true` so VS Code
+always highlights non-basic ASCII characters in both untrusted workspaces and
+trusted workspaces. By default, they are only highlighted in untrusted workspaces.
+
+Alternatively, open the Command Palette and choose "Open Settings (JSON)",
+then add this key-value pair to `settings.json`:
+
+```json
+"editor.unicodeHighlight.nonBasicASCII": true
+```
+
+Release notes for VS Code
+[v1.63](https://code.visualstudio.com/updates/v1_63#_unicode-highlighting) (November 2021) and
+[v1.64](https://code.visualstudio.com/updates/v1_64#_unicode-highlighting-improvements) (January 2022)
+covered the evolution of this feature.
+
+Beyond the native setting, extensions like [Gremlins tracker for Visual Studio
+Code](https://marketplace.visualstudio.com/items?itemName=nhoizey.gremlins)
+can also help visualize tricky invisible characters such as
+non-breaking spaces and zero-width spaces.

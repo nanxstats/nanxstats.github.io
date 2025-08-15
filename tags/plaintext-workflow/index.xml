@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>VS Code on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/vs-code/</link>
-    <description>Recent content in VS Code on Nan Xiao | 肖楠</description>
+    <title>plaintext workflow on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/plaintext-workflow/</link>
+    <description>Recent content in plaintext workflow on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Fri, 15 Aug 2025 01:32:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/vs-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/plaintext-workflow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Stupefy: Tidy AI Text in VS Code</title>
       <link>https://nanx.me/blog/post/vscode-markdown-stupefy/</link>
       <pubDate>Fri, 15 Aug 2025 01:32:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/vscode-markdown-stupefy/</guid>
       <description>The extension name was inspired by the “stupefy mode” described in the SmartyPants project written by John Gruber, the creator of Markdown. If you copy AI responses into Markdown, you will often get curly quotes, em dashes, emoji, and other smart punctuation. They look fine, but they are Unicode characters that can trip linters and clutter diffs. So I built a tiny tool to fix that.&#xA;Automate tidying AI text Markdown Stupefy is a VS Code extension that normalizes smart punctuation to plain ASCII, removes emoji, and cleans up trailing whitespace.</description>
-    </item>
-    <item>
-      <title>Announcing My First VS Code Extension: textmate.rstheme</title>
-      <link>https://nanx.me/blog/post/vscode-textmate-rstheme/</link>
-      <pubDate>Mon, 02 Jan 2023 20:00:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/vscode-textmate-rstheme/</guid>
-      <description>TL;DR: I published my first VS Code extension/theme on Visual Studio Marketplace, with the source hosted on GitHub. Try it out today.&#xA;A screenshot for editing R Markdown documents with the theme. Syntax highlighting provided by vscode-R. Captured with IBM Plex Mono at 18px. It was not until late in my life that I realized my eyes were sensitive to the visual aesthetics of things. To make things worse, I care about them very much, at least in the name of productivity and inspiration.</description>
     </item>
   </channel>
 </rss>
