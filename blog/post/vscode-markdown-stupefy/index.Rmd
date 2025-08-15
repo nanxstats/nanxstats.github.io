@@ -18,7 +18,7 @@ tags:
 meta_img: "image/vscode-markdown-stupefy-banner.png"
 description: >
   Markdown Stupefy is a VS Code extension that converts smart punctuation to
-  ASCII, removes emoji, and tidies trailing whitespace so AI-generated text
+  ASCII, removes emojis, and tidies trailing whitespace so AI-generated text
   is easy to edit and diff.
 ---
 
@@ -35,7 +35,7 @@ img[src="demo.gif"] {
 ```
 
 If you copy AI responses into Markdown, you will often get curly quotes,
-em dashes, emoji, and other smart punctuation. They look fine, but they are
+em dashes, emojis, and other smart punctuation. They look fine, but they are
 Unicode characters that can trip linters and clutter diffs.
 So I built a tiny tool to fix that.
 
@@ -43,7 +43,7 @@ So I built a tiny tool to fix that.
 
 [Markdown Stupefy](https://marketplace.visualstudio.com/items?itemName=nanxstats.markdown-stupefy)
 is a VS Code extension that normalizes smart punctuation to plain ASCII,
-removes emoji, and cleans up trailing whitespace. Here is a GIF demo:
+removes emojis, and cleans up trailing whitespace. Here is a GIF demo:
 
 ![A demo showing the extension cleaning up AI-generated text.
 Typeface: TheSansMono by Lucas de Groot. Recorded with VS Code Chronicler.
