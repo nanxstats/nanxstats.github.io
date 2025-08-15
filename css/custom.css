@@ -9,9 +9,9 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Iosevka Extended";
-    src: url("fonts/Iosevka-Extended.woff2") format("woff2");
-    font-weight: 400;
+    font-family: "JetBrains Mono Variable";
+    src: url("fonts/JetBrainsMono-VF.woff2") format("woff2");
+    font-weight: 100 800;
 }
 
 /* Colors derived from @tailwindcss/typography prose-slate */
@@ -19,7 +19,7 @@
 :root {
     --tw-prose-font-sans-serif: "BDO Grotesk Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "BDO Grotesk Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "Iosevka Extended", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #0f172a;
     --tw-prose-links: #0f172a;
     --tw-prose-links-hover: #64748b;
@@ -421,12 +421,12 @@ dl {
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
-    font-weight: 400;
+    font-weight: 425;
     font-feature-settings: "calt", "liga";
     background-color: var(--tw-bg);
     /* Reset because we set them globally for BDO Grotesk */
     -webkit-font-smoothing: auto;
-    letter-spacing: 0;
+    letter-spacing: normal;
 }
 
 .content .markdown code {
@@ -434,8 +434,8 @@ dl {
     color: var(--tw-prose-code);
     padding: 2px 5px 3px 5px;
     margin: 0;
-    font-size: 1.0625rem;
-    letter-spacing: var(--bdo-ls-small);
+    font-size: 1rem;
+    letter-spacing: normal;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
