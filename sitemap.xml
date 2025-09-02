@@ -3,18 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/claude/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/humor/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/large-language-model/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/recursion/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/recycling/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/trash-can/</loc>
+    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/claude-code/</loc>
     <lastmod>2025-08-15T01:32:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/formatter/</loc>
-    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/large-language-model/</loc>
     <lastmod>2025-08-15T01:32:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/markdown/</loc>
@@ -27,9 +45,6 @@
     <lastmod>2025-08-15T01:32:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/smartypants/</loc>
-    <lastmod>2025-08-15T01:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2025-08-15T01:32:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/typescript/</loc>
