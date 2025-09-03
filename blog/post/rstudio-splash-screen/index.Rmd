@@ -31,8 +31,7 @@ to turn off the splash screen and support click-to-close behavior.
 ```{css, echo=FALSE}
 .callout p {
   font-weight: 400;
-  font-size: 1rem;
-  letter-spacing: var(--bdo-ls-tiny);
+  font-size: 1.125rem;
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   padding-top: 1.25rem;

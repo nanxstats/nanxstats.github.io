@@ -39,7 +39,6 @@ It is a wonderful honor to see our work recognized by the journal.
 .callout p {
   font-weight: 400;
   font-size: 1.125rem;
-  letter-spacing: var(--bdo-ls-small);
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   padding-top: 1.25rem;
