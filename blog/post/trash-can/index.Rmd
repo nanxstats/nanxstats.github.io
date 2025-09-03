@@ -47,15 +47,15 @@ Claude responded:
 ```{css, echo=FALSE}
 @font-face {
     font-display: swap;
-    font-family: "Linden Hill";
-    src: url("LindenHill-Regular.woff2") format("woff2");
+    font-family: "PT Serif";
+    src: url("PTSerif-Regular.woff2") format("woff2");
     font-weight: 400;
 }
 
 blockquote {
-  font-family: "Linden Hill", serif;
-  font-size: 21px;
-  letter-spacing: -0.25px;
+  font-family: "PT Serif", serif;
+  font-size: 17px;
+  letter-spacing: -0.1px;
   background-color: #f8fafc;
   border-left: 1px solid #90a1b9 !important;
   padding-top: 1rem !important;
