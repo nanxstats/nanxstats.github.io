@@ -649,13 +649,13 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 1.125rem;
     color: #475569;
     transition: color 0.15s ease-in-out;
 }
 
 .pagination-nav .pagination-nav-label {
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 400;
     color: #475569;
     margin-top: 0.5rem;
