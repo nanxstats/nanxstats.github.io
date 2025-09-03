@@ -306,19 +306,19 @@ h6 {
 }
 
 .content h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 
 .content h2 {
-    font-size: 1.75rem;
+    font-size: 1.875rem;
 }
 
 .content h3 {
-    font-size: 1.5rem;
+    font-size: 1.5625rem;
 }
 
 .content h4 {
-    font-size: 1.25rem;
+    font-size: 1.3125rem;
 }
 
 .content .meta {
@@ -505,7 +505,7 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 1.625rem;
+    font-size: 2.25rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
