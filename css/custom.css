@@ -54,9 +54,9 @@
 
 @font-face {
     font-display: swap;
-    font-family: "JetBrains Mono Variable";
-    src: url("fonts/JetBrainsMono-VF.woff2") format("woff2");
-    font-weight: 100 800;
+    font-family: "Twilio Sans Mono";
+    src: url("fonts/TwilioSansMono-Retina.woff2") format("woff2");
+    font-weight: 400;
 }
 
 /* Colors derived from @tailwindcss/typography prose-slate */
@@ -64,7 +64,7 @@
 :root {
     --tw-prose-font-sans-serif: "Lyon Text", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Lyon Text", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-monospace: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    --tw-prose-font-monospace: "Twilio Sans Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #0f172a;
     --tw-prose-links: #0f172a;
     --tw-prose-links-hover: #64748b;
