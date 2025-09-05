@@ -45,16 +45,9 @@ A light bulb went off in my head. I followed up:
 Claude responded:
 
 ```{css, echo=FALSE}
-@font-face {
-    font-display: swap;
-    font-family: "Rubik";
-    src: url("Rubik-Regular.woff2") format("woff2");
-    font-weight: 400;
-}
-
 blockquote {
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
+  font-family: var(--tw-prose-font-sans-serif);
+  font-size: 1.1875rem;
   background-color: #f8fafc;
   border-left: 1px solid #90a1b9 !important;
   padding-top: 1rem !important;
