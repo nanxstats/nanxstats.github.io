@@ -47,15 +47,14 @@ Claude responded:
 ```{css, echo=FALSE}
 @font-face {
     font-display: swap;
-    font-family: "PT Serif";
-    src: url("PTSerif-Regular.woff2") format("woff2");
+    font-family: "Rubik";
+    src: url("Rubik-Regular.woff2") format("woff2");
     font-weight: 400;
 }
 
 blockquote {
-  font-family: "PT Serif", serif;
-  font-size: 17px;
-  letter-spacing: -0.1px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
   background-color: #f8fafc;
   border-left: 1px solid #90a1b9 !important;
   padding-top: 1rem !important;
