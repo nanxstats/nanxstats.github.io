@@ -2,52 +2,112 @@
 
 /* ==========================================================================
    LICENSE
-   The font binaries of "Lyon Text" and "Lyon Display" referenced here
-   are proprietary and licensed to the owner of nanx.me.
+   The font binaries of "Founders Grotesk" and "Martina Plantijn"
+   referenced here are proprietary and licensed to the owner of nanx.me.
    They may NOT be copied or redistributed.
    ========================================================================== */
 
 @font-face {
     font-display: swap;
-    font-family: "Lyon Text";
-    src: url("https://nanx.me/fonts/LyonText/LyonText-Regular.woff2") format("woff2");
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-regular.woff2") format("woff2");
     font-weight: 400;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Lyon Text";
-    src: url("https://nanx.me/fonts/LyonText/LyonText-RegularItalic.woff2") format("woff2");
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-regular-italic.woff2") format("woff2");
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Lyon Text";
-    src: url("https://nanx.me/fonts/LyonDisplay/LyonDisplay-Medium.woff2") format("woff2");
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-medium.woff2") format("woff2");
     font-weight: 500;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Lyon Text";
-    src: url("https://nanx.me/fonts/LyonDisplay/LyonDisplay-MediumItalic.woff2") format("woff2");
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-medium-italic.woff2") format("woff2");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Lyon Text";
-    src: url("https://nanx.me/fonts/LyonText/LyonText-Bold.woff2") format("woff2");
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-semibold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-semibold-italic.woff2") format("woff2");
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-bold.woff2") format("woff2");
     font-weight: 700;
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Lyon Text";
-    src: url("https://nanx.me/fonts/LyonText/LyonText-BoldItalic.woff2") format("woff2");
+    font-family: "Founders Grotesk";
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-bold-italic.woff2") format("woff2");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Martina Plantijn";
+    src: url("https://nanx.me/fonts/martina-plantijn/martina-plantijn-regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Martina Plantijn";
+    src: url("https://nanx.me/fonts/martina-plantijn/martina-plantijn-italic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Martina Plantijn";
+    src: url("https://nanx.me/fonts/martina-plantijn/martina-plantijn-medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Martina Plantijn";
+    src: url("https://nanx.me/fonts/martina-plantijn/martina-plantijn-medium-italic.woff2") format("woff2");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Martina Plantijn";
+    src: url("https://nanx.me/fonts/martina-plantijn/martina-plantijn-bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Martina Plantijn";
+    src: url("https://nanx.me/fonts/martina-plantijn/martina-plantijn-bold-italic.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
 }
@@ -62,8 +122,8 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Lyon Text", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Lyon Text", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "Founders Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "Martina Plantijn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Twilio Sans Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #0f172a;
     --tw-prose-links: #0f172a;
@@ -84,7 +144,7 @@
 }
 
 body {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-variant-ligatures: contextual common-ligatures;
     background-color: var(--tw-bg);
@@ -183,10 +243,10 @@ hr {
 }
 
 .header h1.name {
-    font-family: var(--tw-prose-font-serif);
+    font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 2.8125rem;
+    font-size: 3rem;
     margin-left: 6px;
 }
 
@@ -205,7 +265,7 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.75rem;
+    font-size: 1.875rem;
 }
 
 .header ul.nav li a {
@@ -298,7 +358,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--tw-prose-font-serif);
+    font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
     color: var(--tw-prose-headings);
@@ -325,8 +385,7 @@ h6 {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.375rem;
-    letter-spacing: -0.2px;
+    font-size: 1.5rem;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -348,7 +407,7 @@ h6 {
 }
 
 .content .markdown {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.125rem;
@@ -374,18 +433,18 @@ dl {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-family: var(--tw-prose-font-serif);
+    font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2.625rem;
     line-height: 3.2rem;
 }
 
 .content .blog-post-content {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.3125rem;
     line-height: calc(30 / 18);
 }
 
@@ -394,7 +453,7 @@ dl {
 }
 
 .content .blog-post-content ol li p {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 400;
 }
@@ -502,10 +561,10 @@ dl {
 }
 
 .content .groupby {
-    font-family: var(--tw-prose-font-serif);
+    font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 2.25rem;
+    font-size: 1.875rem;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -526,7 +585,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     line-height: 2.5rem;
 }
 
@@ -563,13 +622,13 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     line-height: calc(50 / 18);
 }
 
 .content .tags li a {
     border-radius: 9999px;
-    padding-top: 8px;
+    padding-top: 3px;
     padding-bottom: 6px;
     padding-left: 12px;
     padding-right: 12px;
@@ -679,7 +738,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.375rem;
 }
 
 .footer a {
