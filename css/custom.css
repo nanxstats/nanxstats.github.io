@@ -148,6 +148,7 @@ body {
     font-feature-settings: normal;
     font-variant-ligatures: contextual common-ligatures;
     background-color: var(--tw-bg);
+    -webkit-font-smoothing: antialiased;
 }
 
 /* Horizontally centering fixed-width block used together with .mx-auto */
