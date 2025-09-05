@@ -713,7 +713,7 @@
       <link>https://nanx.me/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/about/</guid>
-      <description>I am a statistician at Merck &amp;amp; Co., Inc., Rahway, NJ, USA. I am part of the Methodology Research group led by Keaven M. Anderson within Biostatistics and Research Decision Sciences (BARDS). I contribute to cross-industry initiatives such as the R Consortium Infrastructure Steering Committee, R Submissions Working Group, and pharmaverse.&#xA;In my daily work, I solve challenges at the intersection of statistical methodology research and software architecture innovation. My research interests include sparse linear models, representation learning, and computational reproducibility.</description>
+      <description>I am a statistician at Merck &amp;amp; Co., Inc., Rahway, NJ, USA in Biostatistics and Research Decision Sciences (BARDS), Methodology Research, led by Keaven M. Anderson. I also contribute to cross-industry initiatives including the R Consortium Infrastructure Steering Committee, R Submissions Working Group, and pharmaverse.&#xA;My work sits at the intersection of statistical methodology and research software engineering. Interests include sparse linear models, representation learning, and computational reproducibility. I build software in R, Python, TypeScript, and Rust; selected projects include tinytopics, msaenet, ggsci, pkglite, and py-pkglite.</description>
     </item>
     <item>
       <title>Books</title>
