@@ -505,7 +505,7 @@ dl {
 .content .markdown code,
 .content .markdown pre {
     font-family: var(--tw-prose-font-monospace);
-    font-weight: 425;
+    font-weight: 400;
     font-feature-settings: "calt", "liga";
     background-color: var(--tw-bg);
 }
@@ -515,7 +515,7 @@ dl {
     color: var(--tw-prose-code);
     padding: 2px 5px 3px 5px;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.0625rem;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
