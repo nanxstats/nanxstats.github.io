@@ -586,7 +586,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.1875rem;
     line-height: 2.5rem;
 }
 
@@ -594,7 +594,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.0625rem;
     line-height: 2.5rem;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -646,7 +646,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.375rem;
     margin-bottom: 1.125rem;
 }
 
