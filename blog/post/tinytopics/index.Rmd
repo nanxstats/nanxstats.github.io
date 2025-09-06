@@ -33,7 +33,7 @@ I'm excited to share that my first Python package,
 is now available on PyPI. You can install it using
 
 ```bash
-pip3 install tinytopics
+pip install tinytopics
 ```
 
 tinytopics is a minimalist solution designed to scale up topic modeling
