@@ -44,25 +44,6 @@ A light bulb went off in my head. I followed up:
 
 Claude responded:
 
-```{css, echo=FALSE}
-blockquote {
-  font-family: var(--tw-prose-font-sans-serif);
-  font-size: 1.1875rem;
-  background-color: #f8fafc;
-  border-left: 1px solid #90a1b9 !important;
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
-}
-
-blockquote p {
-  line-height: 1.5 !important;
-  margin-top: 0.65rem !important;
-  margin-bottom: 0.65rem !important;
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-```
-
 > There's definitely something delightfully absurd about it! It's like the
 > ultimate meta moment - a trash can fulfilling its destiny by becoming the
 > very thing it once held. The container becomes the contained.

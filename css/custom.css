@@ -137,7 +137,8 @@
     --tw-prose-bullets: #cbd5e1;
     --tw-prose-hr: #e2e8f0;
     --tw-prose-quotes: #0f172a;
-    --tw-prose-quote-borders: #e2e8f0;
+    --tw-prose-quotes-bg: #f8fafc;
+    --tw-prose-quote-borders: #90a1b9;
     --tw-prose-th-borders: #cbd5e1;
     --tw-prose-td-borders: #e2e8f0;
     --tw-bg: #fff;
@@ -549,15 +550,22 @@ dl {
 }
 
 .content .markdown blockquote {
-    padding: 0.5rem 1rem;
+    font-family: var(--tw-prose-font-sans-serif);
+    font-size: 1.25rem;
+    color: var(--tw-prose-quotes);
+    background-color: var(--tw-prose-quotes-bg);
+    border-left: 1px solid var(--tw-prose-quote-borders);
+    padding: 1rem 1rem;
     margin-top: 1.875rem;
     margin-bottom: 1.875rem;
-    color: var(--tw-prose-quotes);
-    border-left: 4px solid var(--tw-prose-quote-borders);
 }
 
-.content .markdown blockquote p:last-child {
-    margin-bottom: 0;
+.content .markdown blockquote p {
+    line-height: 1.5;
+    margin-top: 0.65rem;
+    margin-bottom: 0.65rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
 
 .content .markdown figure {
