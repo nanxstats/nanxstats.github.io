@@ -247,7 +247,9 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 3.25rem;
+    letter-spacing: -1px;
+    line-height: 0.875;
     margin-left: 6px;
 }
 
