@@ -439,7 +439,8 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 2.625rem;
+    font-size: 2.75rem;
+    letter-spacing: -0.8px;
     line-height: 3.2rem;
 }
 
