@@ -188,11 +188,6 @@ a:focus {
 
 /* Landing content */
 
-.landing {
-    font-size: 1rem;
-    line-height: calc(30 / 18);
-}
-
 .landing>p:last-child {
     margin-bottom: 0;
 }
@@ -400,14 +395,14 @@ h6 {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    line-height: calc(30 / 18);
+    line-height: 1.4;
     color: var(--tw-prose-body);
 }
 
 .content .markdown ul,
 ol,
 dl {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.3125rem;
 }
 
 .content .markdown li {
@@ -435,11 +430,11 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.3125rem;
-    line-height: calc(30 / 18);
+    line-height: 1.4;
 }
 
 .content .blog-post-content p {
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.3125rem;
 }
 
 .content .blog-post-content ol li p {
@@ -480,7 +475,7 @@ dl {
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 1.875rem;
+    margin-bottom: 1.3125rem;
 }
 
 /* Tables */
@@ -541,12 +536,12 @@ dl {
     background-color: var(--tw-prose-quotes-bg);
     border-left: 1px solid var(--tw-prose-quote-borders);
     padding: 1rem 1rem;
-    margin-top: 1.875rem;
-    margin-bottom: 1.875rem;
+    margin-top: 1.3125rem;
+    margin-bottom: 1.3125rem;
 }
 
 .content .markdown blockquote p {
-    line-height: 1.5;
+    line-height: 1.4;
     margin-top: 0.65rem;
     margin-bottom: 0.65rem;
     padding-left: 0.5rem;
@@ -583,7 +578,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.1875rem;
-    line-height: 2.5rem;
+    line-height: 40px;
 }
 
 .content .post-item .meta-date {
@@ -591,7 +586,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.0625rem;
-    line-height: 2.5rem;
+    line-height: 40px;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
 }
@@ -620,7 +615,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    line-height: calc(35 / 18);
+    line-height: 2;
 }
 
 .content .tags li a {

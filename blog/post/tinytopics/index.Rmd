@@ -109,7 +109,3 @@ Python package development experience:
   Rye and Neovim so that I can focus on writing code and be more productive.
 
 ## References
-
-```{css, echo=FALSE}
-.references { font-size: 1.125rem; }
-```
