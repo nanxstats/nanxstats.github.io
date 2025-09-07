@@ -41,28 +41,13 @@
     font-display: swap;
     font-family: "Founders Grotesk";
     src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-semibold.woff2") format("woff2");
-    font-weight: 600;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Founders Grotesk";
-    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-semibold-italic.woff2") format("woff2");
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Founders Grotesk";
-    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-bold.woff2") format("woff2");
     font-weight: 700;
 }
 
 @font-face {
     font-display: swap;
     font-family: "Founders Grotesk";
-    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-bold-italic.woff2") format("woff2");
+    src: url("https://nanx.me/fonts/founders-grotesk/founders-grotesk-semibold-italic.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
 }
