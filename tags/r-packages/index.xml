@@ -20,7 +20,7 @@
       <link>https://nanx.me/blog/post/r-rust-pkgs/</link>
       <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/r-rust-pkgs/</guid>
-      <description>TL;DR: I’m curating a list of CRAN R packages that use Rust: https://github.com/nanxstats/r-rust-pkgs.&#xA;Dirt bike. Photo by POWERING OFFROAD. Rust in R packages Rust has been the most admired programming language for nearly a decade. CRAN, the largest public repository for R packages, has also supported integrating Rust in R packages for several years. What’s the magic behind the language?&#xA;To me, Rust is a great choice for writing high-performance extensions for both R and Python, offering memory safety and a strong ecosystem.</description>
+      <description>TL;DR: I’m curating a list of CRAN R packages that use Rust: nanxstats/r-rust-pkgs.&#xA;Dirt bike. Photo by POWERING OFFROAD. Rust in R packages Rust has been the most admired programming language for nearly a decade. CRAN, the largest public repository for R packages, has also supported integrating Rust in R packages for several years. What’s the magic behind the language?&#xA;To me, Rust is a great choice for writing high-performance extensions for both R and Python, offering memory safety and a strong ecosystem.</description>
     </item>
     <item>
       <title>R command-line tool paths on Windows</title>

@@ -24,28 +24,8 @@ description: >
 Terminal: Ghostty. Theme: Dracula+. Font family: Iosevka Term.
 ](/image/rstudio-projectid-git-diff.png)
 
-::: {.callout}
-**Update** (2025-02-13): The issue still exists in RStudio 2024.12.1. The fix still applies.\
-**Update** (2025-03-05): The issue [has been fixed](https://github.com/rstudio/rstudio/issues/15524#issuecomment-2701777606) in RStudio >= 2025.04.0+323.
-:::
-
-```{css, echo=FALSE}
-.callout p {
-  font-weight: 400;
-  font-size: 1.125rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.25rem;
-  border-left: 5px solid #64748b;
-  border-right: 1px solid #cbd5e1;
-  border-top: 1px solid #cbd5e1;
-  border-bottom: 1px solid #cbd5e1;
-}
-```
+> **Update** (2025-02-13): The issue still exists in RStudio 2024.12.1. The fix still applies.\
+> **Update** (2025-03-05): The issue [has been fixed](https://github.com/rstudio/rstudio/issues/15524#issuecomment-2701777606) in RStudio >= 2025.04.0+323.
 
 ## TL;DR: The fix
 

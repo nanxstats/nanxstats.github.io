@@ -20,28 +20,8 @@ description: >
   ecosystem and memory safety features.
 ---
 
-::: {.callout}
-TL;DR: I'm curating a list of CRAN R packages that use Rust:
-<https://github.com/nanxstats/r-rust-pkgs>.
-:::
-
-```{css, echo=FALSE}
-.callout p {
-  font-weight: 400;
-  font-size: 1rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.25rem;
-  border-left: 5px solid #64748b;
-  border-right: 1px solid #cbd5e1;
-  border-top: 1px solid #cbd5e1;
-  border-bottom: 1px solid #cbd5e1;
-}
-```
+> TL;DR: I'm curating a list of CRAN R packages that use Rust:
+> [nanxstats/r-rust-pkgs](https://github.com/nanxstats/r-rust-pkgs).
 
 ![Dirt bike. Photo by [POWERING OFFROAD](https://unsplash.com/photos/hAwbvhgj0wA).
 ](/image/powering-offroad-hAwbvhgj0wA-unsplash.jpg)

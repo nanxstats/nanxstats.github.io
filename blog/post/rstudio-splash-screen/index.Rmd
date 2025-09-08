@@ -22,29 +22,9 @@ description: >
 Photo by [Josh Hild](https://unsplash.com/photos/igLQW_yY9oo).
 ](/image/josh-hild-igLQW_yY9oo-unsplash.jpg)
 
-::: {.callout}
-**Update** (2025-05-05): RStudio release planned for August 2025 will
-[include a global option](https://github.com/rstudio/rstudio/pull/15946)
-to turn off the splash screen and support click-to-close behavior.
-:::
-
-```{css, echo=FALSE}
-.callout p {
-  font-weight: 400;
-  font-size: 1.125rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.25rem;
-  border-left: 5px solid #64748b;
-  border-right: 1px solid #cbd5e1;
-  border-top: 1px solid #cbd5e1;
-  border-bottom: 1px solid #cbd5e1;
-}
-```
+> **Update** (2025-05-05): RStudio release planned for August 2025 will
+> [include a global option](https://github.com/rstudio/rstudio/pull/15946)
+> to turn off the splash screen and support click-to-close behavior.
 
 Starting with RStudio IDE version 2024.12.0+467, a redesigned splash screen
 replaces the previous app logo.

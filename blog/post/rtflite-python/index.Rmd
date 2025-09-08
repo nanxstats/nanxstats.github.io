@@ -22,29 +22,9 @@ description: >
 ![Touring in the clouds. Photo by [Clement Delhaye](https://unsplash.com/photos/cnluLIyhpBA).
 ](/image/clement-delhaye-cnluLIyhpBA-unsplash.jpg)
 
-::: {.callout}
-This is a guest post generously contributed by
-[Yilong Zhang](https://www.linkedin.com/in/yilongzhang/),
-a biostatistician at Meta.
-:::
-
-```{css, echo=FALSE}
-.callout p {
-  font-weight: 400;
-  font-size: 1.125rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.25rem;
-  border-left: 5px solid #64748b;
-  border-right: 1px solid #cbd5e1;
-  border-top: 1px solid #cbd5e1;
-  border-bottom: 1px solid #cbd5e1;
-}
-```
+> This is a guest post generously contributed by
+> [Yilong Zhang](https://www.linkedin.com/in/yilongzhang/),
+> a biostatistician at Meta.
 
 It is my pleasure to introduce [rtflite](https://pharmaverse.github.io/rtflite/),
 a new Python package for generating RTF documents.
