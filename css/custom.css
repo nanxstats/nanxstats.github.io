@@ -541,7 +541,7 @@ dl {
 }
 
 .content .markdown blockquote p {
-    line-height: 1.5;
+    line-height: 1.35;
     margin-top: 0.65rem;
     margin-bottom: 0.65rem;
     padding-left: 0.5rem;
