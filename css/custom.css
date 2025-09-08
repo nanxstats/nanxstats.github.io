@@ -108,7 +108,7 @@
 
 :root {
     --tw-prose-font-sans-serif: "Founders Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --tw-prose-font-serif: "Martina Plantijn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-serif: "Martina Plantijn", "Georgia", "Cambria", "Times New Roman", "Times", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Twilio Sans Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #0f172a;
     --tw-prose-links: #0f172a;
