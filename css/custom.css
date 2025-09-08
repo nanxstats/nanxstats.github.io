@@ -395,7 +395,7 @@ h6 {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.125rem;
-    line-height: 1.4;
+    line-height: 1.5;
     color: var(--tw-prose-body);
 }
 
@@ -430,7 +430,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.3125rem;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .content .blog-post-content p {
@@ -541,7 +541,7 @@ dl {
 }
 
 .content .markdown blockquote p {
-    line-height: 1.4;
+    line-height: 1.5;
     margin-top: 0.65rem;
     margin-bottom: 0.65rem;
     padding-left: 0.5rem;
