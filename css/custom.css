@@ -139,7 +139,7 @@ body {
 
 /* Horizontally centering fixed-width block used together with .mx-auto */
 .w-700 {
-    width: 784px;
+    width: 724px;
 }
 
 /* Fix jumping scrollbar when switching to long pages */
@@ -228,7 +228,7 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 3.25rem;
+    font-size: 3rem;
     letter-spacing: -1px;
     line-height: 0.875;
     margin-left: 6px;
@@ -249,7 +249,7 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.875rem;
+    font-size: 1.6875rem;
 }
 
 .header ul.nav li a {
@@ -402,7 +402,7 @@ h6 {
 .content .markdown ul,
 ol,
 dl {
-    margin-bottom: 1.3125rem;
+    margin-bottom: 1.21875rem;
 }
 
 .content .markdown li {
@@ -420,8 +420,8 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 2.75rem;
-    letter-spacing: -0.8px;
+    font-size: 2.5rem;
+    letter-spacing: -0.5px;
     line-height: 1.1;
 }
 
@@ -429,12 +429,12 @@ dl {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.3125rem;
+    font-size: 1.21875rem;
     line-height: 1.5;
 }
 
 .content .blog-post-content p {
-    margin-bottom: 1.3125rem;
+    margin-bottom: 1.21875rem;
 }
 
 .content .blog-post-content ol li p {
@@ -455,7 +455,7 @@ dl {
 
 .content .caption {
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 0.625rem;
@@ -471,11 +471,11 @@ dl {
 
 .content .figcaption {
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     color: var(--tw-prose-captions);
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 1.3125rem;
+    margin-bottom: 1.21875rem;
 }
 
 /* Tables */
@@ -500,7 +500,7 @@ dl {
     color: var(--tw-prose-code);
     padding: 2px 5px 3px 5px;
     margin: 0;
-    font-size: 1.0625rem;
+    font-size: 1rem;
     background-color: var(--tw-prose-pre-bg);
     border-radius: 6px;
 }
@@ -531,13 +531,13 @@ dl {
 
 .content .markdown blockquote {
     font-family: var(--tw-prose-font-sans-serif);
-    font-size: 1.25rem;
+    font-size: 1.1875rem;
     color: var(--tw-prose-quotes);
     background-color: var(--tw-prose-quotes-bg);
     border-left: 1px solid var(--tw-prose-quote-borders);
     padding: 1rem 1rem;
-    margin-top: 1.3125rem;
-    margin-bottom: 1.3125rem;
+    margin-top: 1.21875rem;
+    margin-bottom: 1.21875rem;
 }
 
 .content .markdown blockquote p {
@@ -577,7 +577,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.1875rem;
+    font-size: 1.125rem;
     line-height: 40px;
 }
 
@@ -585,7 +585,7 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.0625rem;
+    font-size: 1rem;
     line-height: 40px;
     font-variant-numeric: tabular-nums;
     color: var(--tw-prose-counters);
@@ -614,16 +614,16 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 1.0625rem;
     line-height: 2;
 }
 
 .content .tags li a {
     border-radius: 9999px;
-    padding-top: 3px;
-    padding-bottom: 6px;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    padding-left: 11px;
+    padding-right: 11px;
     background-color: #f1f5f9;
 }
 
