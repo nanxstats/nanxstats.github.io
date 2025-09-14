@@ -479,6 +479,10 @@ dl {
 }
 
 /* Tables */
+.content .markdown .table {
+    font-family: var(--tw-prose-font-sans-serif);
+}
+
 .content .markdown .table>:not(caption)>*>* {
     color: var(--tw-prose-body);
 }
@@ -509,7 +513,7 @@ dl {
     /* Hugo specific: consider using the 'highlight' shortcode */
     display: block;
     margin-top: 1rem;
-    margin-bottom: 2.25rem;
+    margin-bottom: 1.21875rem;
     padding: 1.25rem;
     line-height: 24px;
     white-space: pre;
