@@ -3,12 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/claude/</loc>
-    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/color-palettes/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/color-scales/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/data-visualization/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ggplot2/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ggsci/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/ggsci-python/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/matplotlib/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/mizani/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/plotnine/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python-packages/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/toolchain/</loc>
+    <lastmod>2025-09-15T02:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/claude/</loc>
     <lastmod>2025-09-01T23:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/humor/</loc>
@@ -21,9 +60,6 @@
     <lastmod>2025-09-01T23:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/recycling/</loc>
-    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2025-09-01T23:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/trash-can/</loc>
@@ -99,9 +135,6 @@
     <lastmod>2025-06-03T00:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/pydantic/</loc>
-    <lastmod>2025-06-03T00:15:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python/</loc>
     <lastmod>2025-06-03T00:15:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/rust/</loc>
@@ -210,9 +243,6 @@
     <lastmod>2025-02-13T00:06:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/rtflite-python/</loc>
-    <lastmod>2025-02-13T00:06:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python-packages/</loc>
     <lastmod>2025-02-13T00:06:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/regulatory-submission/</loc>
@@ -402,18 +432,6 @@
     <lastmod>2024-09-08T19:07:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/bootstrap/</loc>
-    <lastmod>2024-07-06T00:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/color-scales/</loc>
-    <lastmod>2024-07-06T00:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/data-visualization/</loc>
-    <lastmod>2024-07-06T00:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/ggplot2/</loc>
-    <lastmod>2024-07-06T00:20:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/ggsci/</loc>
     <lastmod>2024-07-06T00:20:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/ggsci-3-2-0/</loc>

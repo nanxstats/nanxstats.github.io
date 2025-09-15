@@ -4,21 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> ggplot2 - Nan Xiao | 肖楠 </title>
+    <title> Introducing py-ggsci: ggsci color palettes for plotnine in Python - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="Bring publication-ready color palettes to your Python plots with py-ggsci. This new package ports the popular ggsci palettes from R to plotnine and makes it easy to create beautiful, professional visualizations without the color-tweaking headache.
+" />
 
     
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
-    <meta property="og:url" content="https://nanx.me/tags/ggplot2/" />
-    <meta property="og:title" content="ggplot2" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:image:secure_url" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:url" content="https://nanx.me/blog/post/ggsci-python/" />
+    <meta property="og:title" content="Introducing py-ggsci: ggsci color palettes for plotnine in Python" />
+    <meta property="og:description" content="Bring publication-ready color palettes to your Python plots with py-ggsci. This new package ports the popular ggsci palettes from R to plotnine and makes it easy to create beautiful, professional visualizations without the color-tweaking headache.
+" />
+    <meta property="og:image" content="https://nanx.me/image/art-institute-of-chicago-fja2UYOT6jg-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/art-institute-of-chicago-fja2UYOT6jg-unsplash.jpg" />
+    <meta property="article:published_time" content="2025-09-15T02:05:00Z" />
+    <meta property="article:modified_time" content="2025-09-15T02:05:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
 
     
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,15 +31,16 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="ggplot2" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta name="twitter:image:alt" content="ggplot2" />
+    <meta name="twitter:title" content="Introducing py-ggsci: ggsci color palettes for plotnine in Python" />
+    <meta name="twitter:description" content="Bring publication-ready color palettes to your Python plots with py-ggsci. This new package ports the popular ggsci palettes from R to plotnine and makes it easy to create beautiful, professional visualizations without the color-tweaking headache.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/art-institute-of-chicago-fja2UYOT6jg-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="Introducing py-ggsci: ggsci color palettes for plotnine in Python" />
 
     
     <meta property="og:linkedin:actor" content="nanxstats" />
 
-    <link rel="canonical" href="https://nanx.me/tags/ggplot2/">
+    <link rel="canonical" href="https://nanx.me/blog/post/ggsci-python/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -49,8 +55,6 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
-    
-    <link href="https://nanx.me/tags/ggplot2/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -78,7 +82,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog"
+                                <a class="nav-link text-blog active"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -137,142 +141,231 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <div class="markdown">
+                <h1 class="blog-post-title">Introducing py-ggsci: ggsci color palettes for plotnine in Python</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Mon Sep 15 2025 02:05:00 UTC'>
+                        September 15, 2025
+                    </span>
+
+                    <span class="reading-time middot">
+                        3 min read
+                    </span>
+
+                    <div class="d-none d-md-block mt-2 tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/python">Python</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/python-packages">Python packages</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/plotnine">plotnine</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/mizani">mizani</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/matplotlib">matplotlib</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/ggplot2">ggplot2</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/ggsci">ggsci</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/color-palettes">color palettes</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/color-scales">color scales</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/data-visualization">data visualization</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/toolchain">toolchain</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/art-institute-of-chicago-fja2UYOT6jg-unsplash.jpg" alt="Cliff Walk at Pourville (1882) by Claude Monet: two women on a grassy cliff above the sea under a bright sky. Public domain. Source: Art Institute of Chicago." />
+<div class="figcaption"><em>Cliff Walk at Pourville</em> (1882) by Claude Monet: two women on a grassy
+cliff above the sea under a bright sky. Public domain. Source:
+<a href="https://unsplash.com/photos/fja2UYOT6jg">Art Institute of Chicago</a>.</div>
+</div>
+<p>I’m thrilled to announce the release of <a href="https://nanx.me/py-ggsci/">py-ggsci</a>,
+a Python package that brings the popular ggsci color palettes
+from R’s ggplot2 ecosystem to Python’s plotnine library.</p>
+<p>You can install py-ggsci from PyPI:</p>
+<pre class="bash"><code>pip install ggsci</code></pre>
+<p>Here is a quick example using the Observable 10 palette introduced
+in <a href="https://nanx.me/blog/post/ggsci-3-2-0/">ggsci 3.2.0</a>:</p>
+<pre class="python"><code>from plotnine import *
+from plotnine.data import diamonds
+
+from ggsci import *
+
+p1 = (
+    ggplot(diamonds.query(&quot;carat &gt;= 2.2&quot;), aes(&quot;table&quot;, &quot;price&quot;, color=&quot;cut&quot;))
+    + geom_point(alpha=0.7)
+    + geom_smooth(method=&quot;lm&quot;, alpha=0.05, size=1)
+    + theme_bw()
+)
+
+p2 = (
+    ggplot(diamonds, aes(&quot;color&quot;, fill=&quot;cut&quot;))
+    + geom_bar(position=position_dodge())
+    + theme_bw()
+)
+
+(p1 + scale_color_observable()) | (p2 + scale_fill_observable())</code></pre>
+<p><img src="images/py-ggsci-example.png" width="100%" style="display: block; margin: auto;" /></p>
+<p>For clarity, we will refer to the R package as r-ggsci and the Python package
+as py-ggsci throughout this post.</p>
+<div id="the-story-behind-r-ggsci" class="section level2">
+<h2>The story behind r-ggsci</h2>
+<p>It all started in the Spring of 2016. I was a PhD student drowning in
+homework and exams in a quarter system. Although R Markdown + knitr
+already saved me tremendous amount of time in writing reports by avoiding
+the tedious LaTeX syntax and allowing embedding code execution results,
+I still found myself spending too much time tweaking colors in my ggplot2
+plots to make them look presentable.</p>
+<p>I wanted a fast way (Breimanesque terminology: off-the-shelf) to apply
+color palettes that were already well-designed under different plotting contexts.
+That was when I decided to create an R package that provides such color palettes
+for ggplot2, which later became <a href="https://nanx.me/ggsci/">r-ggsci</a>.
+The response greatly exceeded my expectations.</p>
+<p>Ten years later, r-ggsci has been widely used in the R community for
+creating publication-quality data visualizations with millions of downloads
+per year and ranks in the top 1% by installations of all packages on CRAN.</p>
+</div>
+<div id="why-py-ggsci" class="section level2">
+<h2>Why py-ggsci?</h2>
+<p>Recently, two friends of mine <a href="https://github.com/svm-zhang"><span class="citation">@svm-zhang</span></a> and
+<a href="https://github.com/elong0527"><span class="citation">@elong0527</span></a> both asked about using plotnine
+in Python or if they could use ggsci palettes with plotnine.
+To me, this was a sign to act. Thanks to the clean, consistent APIs of
+plotnine and mizani, py-ggsci went from concept to this release announcement
+in only 72 hours.</p>
+</div>
+<div id="porting-palettes-from-r-to-python" class="section level2">
+<h2>Porting palettes from R to Python</h2>
+<p>While the API was straightforward to port, the main challenge was automating
+the conversion of
+<a href="https://github.com/nanxstats/ggsci/blob/master/R/palettes.R">palette data</a>
+from R to Python. I wanted a solution that would avoid manual copy-pasting
+and simplify future updates.
+The trick was to evaluate the R code to get the palette data object,
+then export it as JSON. Leveraging the remarkable similarity between
+the JSON syntax and Python dictionary syntax, the JSON tokens work directly as
+Python code without modification.
+This approach converted the palette data from r-ggsci in <a href="https://github.com/nanxstats/py-ggsci/blob/main/scripts/update_palettes_data.R">just a few lines of R code</a>.</p>
+<p>Since there is not a standard vignette system in Python like R (and my
+reluctance to involve heavyweight frameworks like Jupyter or Quarto), most of my time was
+spent on recreating the <a href="https://nanx.me/py-ggsci/articles/get-started/">main vignette</a>
+using <a href="https://github.com/nanxstats/py-ggsci/pull/11">markdown-exec</a>.
+Eventually, it all worked out.</p>
+</div>
+<div id="future-plans" class="section level2">
+<h2>Future plans</h2>
+<p>Maintaining parallel implementations in two programming languages does
+create some overhead, but I’m committed to supporting both r-ggsci and
+py-ggsci in the long term.
+New color scales will continue to be added, with r-ggsci receiving version
+updates first, followed by synchronized updates to py-ggsci.</p>
+<p>Whether working natively in R or Python, you now have access to the same
+color palettes that have made countless visualizations publication-ready.
+Happy plotting!</p>
+</div>
+
+
+
                 </div>
 
-                <div class="posts">
-                    <h1>Posts about ggplot2</h1>
-                    <hr>
-                    <ul class="list-unstyled">
-                        
-                        <li class="groupby">2025</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ggsci-python/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Introducing py-ggsci: ggsci color palettes for plotnine in Python
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Sep 15, 2025
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2024</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ggsci-3-2-0/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    ggsci 3.2.0: new color palettes from Observable, Bootstrap, and Tailwind CSS
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Jul 06, 2024
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ggsci-3-1-0/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    ggsci 3.1.0, ggsurvfit example, and reverse dependency check
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    May 23, 2024
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ggsci-protr-msaenet-release-notes-2024/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    R Package Release Notes: ggsci, protr, and msaenet (Spring 2024)
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Apr 21, 2024
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2023</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/responsive-design-for-statistical-graphics/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Responsive Design for Statistical Graphics with Shiny and ggplot2
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Jun 05, 2023
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ggsci-3-0-0/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    ggsci 3.0.0
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Mar 08, 2023
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2022</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/ggplot2-color-interpolation/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    Adaptive ggplot2 Color Scales with Color Interpolation
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Apr 06, 2022
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                    </ul>
-                </div>
+                
+                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
+                    <div class="row navigation-btns">
+                        <div class="col">
+                            
+                            <a href="https://nanx.me/blog/post/trash-can/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Previous</div>
+                                    <div class="pagination-nav-label">« The trash can has become the trashed can</div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="col">
+                            
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Next</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </nav>
+                
+
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -374,12 +467,6 @@
                                 Colophon</a></li>
                         
 
-                        
-                        <li><a href="https://nanx.me/tags/ggplot2/index.xml" class="mr-0">
-                                <svg class="svg-icon mr-1">
-                                    <use xlink:href="#octicons-rss"></use>
-                                </svg>
-                                RSS</a></li>
                         
 
                         

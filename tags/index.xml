@@ -6,8 +6,85 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Sep 2025 23:01:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 02:05:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>color palettes</title>
+      <link>https://nanx.me/tags/color-palettes/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/color-palettes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>color scales</title>
+      <link>https://nanx.me/tags/color-scales/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/color-scales/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>data visualization</title>
+      <link>https://nanx.me/tags/data-visualization/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ggplot2</title>
+      <link>https://nanx.me/tags/ggplot2/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ggplot2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ggsci</title>
+      <link>https://nanx.me/tags/ggsci/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ggsci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>matplotlib</title>
+      <link>https://nanx.me/tags/matplotlib/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/matplotlib/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>mizani</title>
+      <link>https://nanx.me/tags/mizani/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/mizani/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>plotnine</title>
+      <link>https://nanx.me/tags/plotnine/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/plotnine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python packages</title>
+      <link>https://nanx.me/tags/python-packages/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>toolchain</title>
+      <link>https://nanx.me/tags/toolchain/</link>
+      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/toolchain/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Claude</title>
       <link>https://nanx.me/tags/claude/</link>
@@ -188,13 +265,6 @@
       <link>https://nanx.me/tags/pydantic/</link>
       <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
       <guid>https://nanx.me/tags/pydantic/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
       <description></description>
     </item>
     <item>
@@ -412,13 +482,6 @@
       <link>https://nanx.me/tags/clinical-trials/</link>
       <pubDate>Thu, 13 Feb 2025 00:06:00 +0000</pubDate>
       <guid>https://nanx.me/tags/clinical-trials/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python packages</title>
-      <link>https://nanx.me/tags/python-packages/</link>
-      <pubDate>Thu, 13 Feb 2025 00:06:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -790,34 +853,6 @@
       <link>https://nanx.me/tags/bootstrap/</link>
       <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
       <guid>https://nanx.me/tags/bootstrap/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>color scales</title>
-      <link>https://nanx.me/tags/color-scales/</link>
-      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/color-scales/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>data visualization</title>
-      <link>https://nanx.me/tags/data-visualization/</link>
-      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/data-visualization/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ggplot2</title>
-      <link>https://nanx.me/tags/ggplot2/</link>
-      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/ggplot2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ggsci</title>
-      <link>https://nanx.me/tags/ggsci/</link>
-      <pubDate>Sat, 06 Jul 2024 00:20:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/ggsci/</guid>
       <description></description>
     </item>
     <item>
