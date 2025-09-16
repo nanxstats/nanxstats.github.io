@@ -580,18 +580,20 @@ dl {
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.125rem;
-    line-height: 40px;
+    line-height: 1.5;
+    letter-spacing: -0.2px;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 40px;
+    font-weight: 500;
+    font-size: 1.0625rem;
+    line-height: 1.5;
     font-variant-numeric: tabular-nums;
+    letter-spacing: -0.5px;
     color: var(--tw-prose-counters);
 }
 
