@@ -580,7 +580,7 @@ dl {
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.125rem;
     line-height: 2;
     letter-spacing: -0.2px;
@@ -589,7 +589,7 @@ dl {
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.0625rem;
     line-height: 2;
     font-variant-numeric: tabular-nums;
