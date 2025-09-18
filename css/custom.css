@@ -250,6 +250,7 @@ hr {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.6875rem;
+    letter-spacing: -0.2px;
 }
 
 .header ul.nav li a {
@@ -345,6 +346,7 @@ h6 {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
+    letter-spacing: -0.2px;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
@@ -370,6 +372,7 @@ h6 {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.5rem;
+    letter-spacing: -0.2px;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -481,6 +484,7 @@ dl {
 /* Tables */
 .content .markdown .table {
     font-family: var(--tw-prose-font-sans-serif);
+    letter-spacing: -0.1px;
 }
 
 .content .markdown .table>:not(caption)>*>* {
@@ -536,6 +540,7 @@ dl {
 .content .markdown blockquote {
     font-family: var(--tw-prose-font-sans-serif);
     font-size: 1.1875rem;
+    letter-spacing: -0.1px;
     color: var(--tw-prose-quotes);
     background-color: var(--tw-prose-quotes-bg);
     border-left: 1px solid var(--tw-prose-quote-borders);
@@ -561,6 +566,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 500;
     font-size: 1.875rem;
+    letter-spacing: -0.2px;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -583,7 +589,7 @@ dl {
     font-weight: 400;
     font-size: 1.125rem;
     line-height: 2;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
 }
 
 .content .post-item .meta-date {
@@ -621,6 +627,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.0625rem;
+    letter-spacing: -0.1px;
     line-height: 2;
 }
 
@@ -644,6 +651,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.375rem;
+    letter-spacing: -0.1px;
     margin-bottom: 1.125rem;
 }
 
@@ -680,6 +688,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1rem;
+    letter-spacing: -0.1px;
     text-decoration: none;
     border: 1px solid #e2e8f0;
     border-radius: 0.4rem;
@@ -707,6 +716,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 500;
     font-size: 1.125rem;
+    letter-spacing: -0.1px;
     color: #475569;
     transition: color 0.15s ease-in-out;
 }
@@ -737,6 +747,7 @@ dl {
     font-feature-settings: normal;
     font-weight: 400;
     font-size: 1.375rem;
+    letter-spacing: -0.3px;
 }
 
 .footer a {
