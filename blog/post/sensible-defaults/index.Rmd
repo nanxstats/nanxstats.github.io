@@ -87,7 +87,7 @@ to most users, just like
 and [`drop = TRUE`](https://win-vector.com/2018/02/27/r-tip-use-drop-false-with-data-frames/).
 These defaults should be changed from the user's side so that R works in the
 best way possible, but there might be
-[good reasons](https://community.rstudio.com/t/defaults-of-saving-and-restoring-workspace/939/2)
+[good reasons](https://forum.posit.co/t/defaults-of-saving-and-restoring-workspace/939/2)
 not to change them from the software developer's side---because one might
 face a [difficult choice](https://yihui.org/en/2018/11/biggest-regret-knitr/)
 between doing the right thing and not breaking user's code that worked.

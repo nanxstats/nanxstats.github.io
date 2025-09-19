@@ -76,7 +76,7 @@
       <link>https://nanx.me/blog/post/shiny-async/</link>
       <pubDate>Mon, 21 May 2018 14:15:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/shiny-async/</guid>
-      <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.&#xA;You Want It When? (Zootopia)&#xA;In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
+      <description>Shiny is my favorite web application framework. It is simply awesome. Shiny 1.1.0 was released to CRAN last week. This update brings probably the most significant feature/improvement in recent years: async execution support. With the help of future, promises (computer science people surely knew how to name abstract things…), and this shiny update, you can now write scalable web applications using Shiny.&#xA;You Want It When? (Zootopia) In brief, if you have some long-running computations (such as querying a remote database, live fitting a statistical model) in your Shiny app, that computation would block additional users to use the app simultaneously, until that computation is finished.</description>
     </item>
   </channel>
 </rss>

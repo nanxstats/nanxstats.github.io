@@ -178,12 +178,11 @@
                 <div class="markdown blog-post-content">
                     
     
-<script src="https://nanx.me/blog/post/10-things-matter-in-deep-learning-1/index_files/header-attrs/header-attrs.js"></script>
 
 
-<div class="figure">
-<img src="https://nanx.me/image/heart-of-the-matter-otis-kaye.png" alt="" />
-<p class="caption"><em>Heart of the Matter</em> by Otis Kaye, 1963. The Art Institute of Chicago.</p>
+<div class="float">
+<img src="https://nanx.me/image/heart-of-the-matter-otis-kaye.png" alt="Heart of the Matter by Otis Kaye, 1963. The Art Institute of Chicago." />
+<div class="figcaption"><em>Heart of the Matter</em> by Otis Kaye, 1963. The Art Institute of Chicago.</div>
 </div>
 <p>Admit it or not, neural networks (or more broadly, connectionism) are being revived to readdress almost all problems in the machine learning world. Before deep learning, there were a few much smaller hypes like matrix factorization, sparse learning, and kernel methods, but none of them is comparable to this one. Never before has a learning method been so blessed by capital, yet so cursed by it.</p>
 <p>This also means, despite the hype, deep learning did something right. Some particular components of this system are worth investigating. So, I decided to summarize some of the exciting parts of deep learning here and free these ideas from my mind.</p>
@@ -203,11 +202,11 @@
 <p>Does the unified modeling framework idea sound familiar to you? Yes, everything described above is highly similar to what people can do in Bayesian modeling. We would first define a data model (prior + likelihood), then use MCMC/variational inference to optimize it (get the posterior). Several programming frameworks were also available.</p>
 <p>Not surprisingly, the similarity inspired people to explore renovating traditional Bayesian models with the help of deep neural networks, or vice versa, integrating uncertainty and probabilistic inference into deep neural network structures for better interpretability. Such efforts can be categorized under the name “Bayesian deep learning.”</p>
 <p>Bayesian deep learning can be useful in many scenarios requiring probabilistic inference. However, for some cases, especially in NLP applications, I doubt the models will have decent (predictive) performance gains by incorporating a DNN component, since many problems in text modeling are not as difficult as the problems in image recognition or speech recognition. As an example, there are some possibilities for doing “deep topic modeling,” but if I want to be more statistically rigorous, I would still prefer methods that do <a href="https://dl.acm.org/doi/10.1145/2736277.2741115">exact inference using MCMC</a>. In the end, we would mostly expect such crossovers help improve the scalability or interpretability of the existing models.</p>
-<div class="figure">
-<img src="lda-movie-poster-color-topics.png" alt="" />
-<p class="caption">Figure: <a href="https://nanx.me/posters/chromaclust-poster-hg48600.pdf">Latent color topics</a> in movie poster design, learned by vanilla LDA.</p>
+<div class="float">
+<img src="lda-movie-poster-color-topics.png" alt="Figure: Latent color topics in movie poster design, learned by vanilla LDA." />
+<div class="figcaption">Figure: <a href="https://nanx.me/posters/chromaclust-poster-hg48600.pdf">Latent color topics</a> in movie poster design, learned by vanilla LDA.</div>
 </div>
-<p>Several probabilistic programming frameworks are being built for Bayesian deep learning (or just Bayesian modeling), including <a href="http://edwardlib.org/">Edward</a>, <a href="https://github.com/thu-ml/zhusuan">ZhuSuan</a>, and <a href="https://greta-stats.org/">greta</a>. To some degree, they are very similar to <a href="https://mc-stan.org">Stan</a>, whereas they took alternative approaches for optimization.</p>
+<p>Several probabilistic programming frameworks are being built for Bayesian deep learning (or just Bayesian modeling), including <a href="https://edwardlib.org/">Edward</a>, <a href="https://github.com/thu-ml/zhusuan">ZhuSuan</a>, and <a href="https://greta-stats.org/">greta</a>. To some degree, they are very similar to <a href="https://mc-stan.org">Stan</a>, whereas they took alternative approaches for optimization.</p>
 <p>Next time, we will talk about feature learning and regularization.</p>
 </div>
 

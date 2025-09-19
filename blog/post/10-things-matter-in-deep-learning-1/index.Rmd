@@ -44,6 +44,6 @@ Bayesian deep learning can be useful in many scenarios requiring probabilistic i
 
 ![Figure: [Latent color topics](https://nanx.me/posters/chromaclust-poster-hg48600.pdf) in movie poster design, learned by vanilla LDA.](lda-movie-poster-color-topics.png)
 
-Several probabilistic programming frameworks are being built for Bayesian deep learning (or just Bayesian modeling), including [Edward](http://edwardlib.org/), [ZhuSuan](https://github.com/thu-ml/zhusuan), and [greta](https://greta-stats.org/). To some degree, they are very similar to [Stan](https://mc-stan.org), whereas they took alternative approaches for optimization.
+Several probabilistic programming frameworks are being built for Bayesian deep learning (or just Bayesian modeling), including [Edward](https://edwardlib.org/), [ZhuSuan](https://github.com/thu-ml/zhusuan), and [greta](https://greta-stats.org/). To some degree, they are very similar to [Stan](https://mc-stan.org), whereas they took alternative approaches for optimization.
 
 Next time, we will talk about feature learning and regularization.

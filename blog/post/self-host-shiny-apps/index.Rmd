@@ -42,7 +42,7 @@ In brief, it looks like this:
 
 Cloudflare handles the SSL, CDN, traffic scrubbing tasks, which simplifies things a lot. I used Linode for the cloud hosting part, but you can use any other vendors. I find these tutorials most useful during the process:
 
-- [How to secure your server](https://www.linode.com/docs/products/compute/compute-instances/guides/set-up-and-secure/)
+- [How to secure your server](https://techdocs.akamai.com/cloud-computing/docs/set-up-and-secure-a-compute-instance)
 - [How to set up Cloudflare with Linode](https://www.linode.com/docs/guides/how-to-set-up-cloudflare-with-linode/)
 - [Running Shiny Server with a proxy](https://support.posit.co/hc/en-us/articles/213733868-Running-Shiny-Server-with-a-Proxy)
 

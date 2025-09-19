@@ -64,7 +64,7 @@ You might find tinytopics a viable alternative option if you care more about:
 
 - **Scale and speed**. For extra-large datasets, tinytopics can leverage GPUs to
   accelerate computations. You can also use [PyTorch distributed
-  training](https://pytorch.org/tutorials/distributed/home.html) to scale
+  training](https://docs.pytorch.org/tutorials/distributed.html) to scale
   across multiple GPUs or machines if single card VRAM is insufficient.
 - **Model customization**. The constrained neural Poisson NMF in tinytopics
   is a flexible, differentiable model. You can adapt it by adding new layers,

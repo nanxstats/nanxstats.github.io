@@ -67,7 +67,7 @@ Here is a high-level summary of my interaction with Claude Code:
   [Mastering Claude Code in 30 minutes
   ](https://www.youtube.com/watch?v=6eBSHbLKuN0), and reviewed
   [Claude 4 prompt engineering best practices
-  ](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices).
+  ](https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/claude-4-best-practices).
 
 Below is a condensed version of my unfiltered conversation with Claude Code.
 

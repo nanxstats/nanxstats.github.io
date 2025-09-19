@@ -27,13 +27,13 @@ This paper attracted a lot of discussions on social media. The hypothesis is str
 
 For people who work in statistics, this probably means your regression model will not be necessarily sparse, and that could be a technical challenge for modeling high-dimensional data. At least, more subtlety or "levels" in your regularization is probably desired: beyond a few core true variables with large effect sizes, many more true variables can be highly-correlated, can be somehow clustered, or can be from networks of variables.
 
-Properties like grouping effect in [elastic-net](https://web.stanford.edu/~hastie/Papers/B67.2%20(2005)%20301-320%20Zou%20&%20Hastie.pdf) can be handy. Empirical Bayes shrinkage estimation methods, such as Matthew's [adaptive shrinkage](https://doi.org/10.1093/biostatistics/kxw041) could be more effective in capturing such subtle signals in the data. Ideas like [homogeneity pursuit](http://zke.fas.harvard.edu/papers/Homogeneity.pdf) for selecting clusters of variables, and our [ordered homogeneity pursuit lasso](https://ohpl.io/) approach for selecting intervals of spatially correlated variables in spectroscopic data, are also worth looking.
+Properties like grouping effect in [elastic-net](https://hastie.su.domains/Papers/B67.2%20(2005)%20301-320%20Zou%20&%20Hastie.pdf) can be handy. Empirical Bayes shrinkage estimation methods, such as Matthew's [adaptive shrinkage](https://doi.org/10.1093/biostatistics/kxw041) could be more effective in capturing such subtle signals in the data. Ideas like [homogeneity pursuit](https://doi.org/10.1080/01621459.2014.892882) for selecting clusters of variables, and our [ordered homogeneity pursuit lasso](https://ohpl.io/) approach for selecting intervals of spatially correlated variables in spectroscopic data, are also worth looking.
 
 Anyway, please remember that 2017 is Year One for the omnigenic model.
 
 ## 2. Same stats, different graphs
 
-Matejka, Justin, and George Fitzmaurice. [Same stats, different graphs: Generating datasets with varied appearance and identical statistics through simulated annealing](https://www.autodesk.com/research/publications/same-stats-different-graphs). _Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems_. ACM, 2017.
+Matejka, Justin, and George Fitzmaurice. [Same stats, different graphs: Generating datasets with varied appearance and identical statistics through simulated annealing](https://www.research.autodesk.com/publications/same-stats-different-graphs/). _Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems_. ACM, 2017.
 
 This is a fascinating work done by people from Autodesk Research. In fact, it is a generalization of [Anscombe's quartet](https://en.wikipedia.org/wiki/Anscombe%27s_quartet) that are known to statisticians. As is indicated in its title, this paper successfully formulated the problem of generating visually dissimilar datasets with identical summary statistics as an optimization problem.
 
@@ -41,6 +41,6 @@ To me, this sounds like a cool reverse engineering of human visual perception un
 
 ![Figure: All scatterplots (including each frame) have the same summary statistics.](https://i.imgur.com/WEYL9En.gif)
 
-Similar to Omar Wagih's [Guess the Correlation](https://guessthecorrelation.com/) game, this paper showed the importance of visualizing your data. It also demonstrated that a visualization alone or some summary statistics alone might not be enough for fully understanding your data --- it is better to combine the analytical and visual approaches.
+Similar to Omar Wagih's [Guess the Correlation](https://www.guessthecorrelation.com/) game, this paper showed the importance of visualizing your data. It also demonstrated that a visualization alone or some summary statistics alone might not be enough for fully understanding your data --- it is better to combine the analytical and visual approaches.
 
 OK, so much for this year. Happy 2018!

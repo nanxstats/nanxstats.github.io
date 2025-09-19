@@ -15,7 +15,7 @@ meta_img: image/the-fall-of-phaeton-peter-rubens.jpg
 
 ## The Good News
 
-One of the good news from the past weeks is that [GitHub Pages finally supports HTTPS for custom domains](https://github.blog/2018-05-01-github-pages-custom-domains-https/). The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of "backlog" and "roadmap" and implement them [can be a lengthy process](https://github.com/isaacs/github/issues/156).
+One of the good news from the past weeks is that [GitHub Pages finally supports HTTPS for custom domains](https://github.blog/news-insights/product-news/github-pages-custom-domains-https/). The feature that people waited forever eventually arrived. Although this is not too late, we have to admit, moving items out of "backlog" and "roadmap" and implement them [can be a lengthy process](https://github.com/isaacs/github/issues/156).
 
 Before this, regular people like me probably need to add an extra layer which supports HTTPS for your custom domain, such as Cloudflare or Netlify, to host their static content on GitHub/GitHub Pages. Cloudflare is professional at security while Netlify is mastering build and deploy especially if you use the [JAMstack](https://jamstack.org/).
 

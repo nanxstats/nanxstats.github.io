@@ -79,7 +79,7 @@ These talks introduced me to the [roofline
 model](https://en.wikipedia.org/wiki/Roofline_model) for visualizing GPU kernel
 performance. The second talk was particularly exciting. It covered Python-level
 innovations that could reduce the need for CUDA C++ through
-[cuda.cooperative](https://nvidia.github.io/cccl/python.html).
+[cuda.cooperative](https://nvidia.github.io/cccl/python/cooperative_api.html).
 
 - **When GPUs make Python slower: patterns and pitfalls**\
   Kaashif Hymabaccus,

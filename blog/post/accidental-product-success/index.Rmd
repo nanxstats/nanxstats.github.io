@@ -14,7 +14,7 @@ Technology companies are sometimes quirky but always quite interesting.
 
 Often, we can witness accidental epic wins in products that don't belong to a company's main offerings. A few examples from the (almost) trillion dollar club:
 
-Microsoft is a software company, but they have made some excellent hardware products, especially accessories. Recently, they even [remastered the legendary IntelliMouse](https://news.microsoft.com/en-gb/2018/06/29/iconic-mouse-that-changed-how-we-use-the-internet-is-relaunched-by-microsoft/), an ergonomic mouse designed for office use but highly acclaimed in the gaming community.
+Microsoft is a software company, but they have made some excellent hardware products, especially accessories. Recently, they even [remastered the legendary IntelliMouse](https://ukstories.microsoft.com/features/iconic-mouse-that-changed-how-we-use-the-internet-is-relaunched-by-microsoft/), an ergonomic mouse designed for office use but highly acclaimed in the gaming community.
 
 On the other side of the spectrum, Apple is a hardware company, while their operating system is beautifully done (though the quality is declining) with superb GUI software innovations. People even want to run it on PC, a.k.a., the "Hackintosh".
 

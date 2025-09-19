@@ -37,7 +37,7 @@ has also [supported integrating Rust in R packages](https://cran.r-project.org/w
 To me, Rust is a great choice for writing high-performance extensions for
 both R and Python, offering memory safety and a strong ecosystem.
 Python has maturin and pyo3, while R benefits from
-[rextendr](https://extendr.github.io/rextendr/), an R package that simplifies
+[rextendr](https://extendr.rs/rextendr/), an R package that simplifies
 scaffolding and interfacing with Rust.
 All of these came from [outstanding community
 contributions](https://archive.r-consortium.org/blog/2023/07/06/r-consortium-funded-project-extendr-provides-rust-extensions-for-r)

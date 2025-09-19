@@ -40,7 +40,7 @@ to be intrusive and break my reading flow. To me, that is counterproductive.
 I find the "Annoyances" filters under the uBlock Origin filters list adequate
 to block cookie notices. However, for paywalls, we need something more
 specifically built. One possibility is the
-[bypass-paywalls-chrome-clean](https://gitlab.com/magnolia1234/bypass-paywalls-chrome-clean)
+bypass-paywalls-chrome-clean
 extension. For reasons explained in its repo, such extensions are not allowed
 on the Chrome web store, so it needs to be installed and updated manually
 under developer mode on the extensions page.

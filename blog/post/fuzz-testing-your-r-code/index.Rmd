@@ -18,7 +18,7 @@ options(width = 70)
 
 Good software requires even better testing. Particularly, [unit testing](https://r-pkgs.org/testing-basics.html) has been widely used by many R packages as a tool for reducing the number of bugs and improving code structure. A unit test is often written when a single unit of functionality is created in the program. Is there a good way to test a large program or system after it is created? The answer is yes, and one of the approaches people developed is *fuzz testing*.
 
-![Log book with computer bug. Source: National Museum of American History, accession number [1994.0191](https://americanhistory.si.edu/collections/search/object/nmah_334663).](/image/log-book-with-computer-bug.jpg)
+![Log book with computer bug. Source: National Museum of American History, accession number [1994.0191](https://americanhistory.si.edu/collections/object/nmah_334663).](/image/log-book-with-computer-bug.jpg)
 
 As the name indicates, fuzz testing focuses on revealing hidden exceptions through the automated generation of a large number of randomized inputs and feeding them to the program (law of large numbers helps). This is especially useful for validating large programs' robustness where the computational components have complex interactions, and the edge cases are tricky to realize. I agree that this description fits the characteristics of some statistical estimation or inference procedures due to their numerical or probabilistic nature.
 

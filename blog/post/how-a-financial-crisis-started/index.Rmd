@@ -8,7 +8,7 @@ tags: []
 meta_img: image/bakery-ablimit-ablet.jpg
 ---
 
-![Photo by [Ablimit Ablet](https://unsplash.com/photos/R1ql7fk3I1Y) on [Unsplash](https://unsplash.com)](/image/bakery-ablimit-ablet.jpg)
+![Photo by Ablimit Ablet on Unsplash](/image/bakery-ablimit-ablet.jpg)
 
 I once read a joke with some dry humor a long time ago. It's almost a parable about how the system amplifies fragility. I'm not entirely sure where it originated, but here you go:
 
@@ -30,4 +30,4 @@ I once read a joke with some dry humor a long time ago. It's almost a parable ab
 > 
 > The bunny: "That's perfect! I'll take two."
 
-Bill Gates may [think](https://www.gatesnotes.com/Books/Capitalism-Without-Capital) that the supply and demand model doesn't apply to software. I neither agree or disagree. Historically, the burst of the dot-com bubble left us some infrastructure of the high-speed Internet. The subprime mortgage crisis left some cheap houses. I cannot say for sure what will be left when a crisis happens to the "blockchain" or "AI" industries. Although there could be a lot of Mac computers, Dell monitors, and Python code.
+Bill Gates may [think](https://www.gatesnotes.com/capitalism-without-capital) that the supply and demand model doesn't apply to software. I neither agree or disagree. Historically, the burst of the dot-com bubble left us some infrastructure of the high-speed Internet. The subprime mortgage crisis left some cheap houses. I cannot say for sure what will be left when a crisis happens to the "blockchain" or "AI" industries. Although there could be a lot of Mac computers, Dell monitors, and Python code.

@@ -25,7 +25,7 @@ Although I am not an expert in Bayesian statistics, I always have an idealized v
 - Handles the low-level computations such as MCMC automatically.
 - Works on both CPU and GPU seamlessly would be perfect for 2020.
 
-All these features would help me focus on the task instead of the tool better. Among others, [Stan](https://mc-stan.org/) and [Edward](http://edwardlib.org/) were pretty close to achieving these goals.
+All these features would help me focus on the task instead of the tool better. Among others, [Stan](https://mc-stan.org/) and [Edward](https://edwardlib.org/) were pretty close to achieving these goals.
 
 Created by Professor Nick Golding, [greta](https://greta-stats.org/) is now my all-time favorite. It has all the traits described above. You can see this from its [example models](https://greta-stats.org/articles/example_models.html). To know it better, I experimented with it a bit for fitting Bayesian sparse regression models. I soon realized the simplicity provided by greta could truly enable fast exploration of modeling strategies for a range of problems.
 

@@ -21,7 +21,7 @@ After using it (or being used) for about ten years, today I consciously removed 
 
 ## Why I did it
 
-I think the blog posts by the pioneers who [realized](https://www.jessesquires.com/blog/2018/04/22/removing-google-analytics-too/) this [before](https://tristandenyer.com/why-i-removed-google-analytics-from-my-website/) explained the economic reasons pretty well. If we look at the bigger picture, we see more than the "free product" that meets the eye: Google Analytics is not helping the content creators, while it poaches the content viewer's private experience for its own purpose and greed of data. Maybe we cannot stop the fast-evolving [surveillance capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism), but I decided to slow it down, starting from myself, today.
+I think the blog posts by the pioneers who [realized](https://www.jessesquires.com/blog/2018/04/22/removing-google-analytics-too/) this before explained the economic reasons pretty well. If we look at the bigger picture, we see more than the "free product" that meets the eye: Google Analytics is not helping the content creators, while it poaches the content viewer's private experience for its own purpose and greed of data. Maybe we cannot stop the fast-evolving [surveillance capitalism](https://en.wikipedia.org/wiki/Surveillance_capitalism), but I decided to slow it down, starting from myself, today.
 
 ## What it really means
 

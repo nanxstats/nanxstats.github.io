@@ -47,7 +47,7 @@ to add specific language support where syntax highlighting is provided.
 For example, extensions like
 [vscode-R](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r),
 [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto),
-[Shiny for Python](https://marketplace.visualstudio.com/items?itemName=rstudio.pyshiny),
+[Shiny](https://marketplace.visualstudio.com/items?itemName=Posit.shiny),
 [stan-vscode](https://marketplace.visualstudio.com/items?itemName=ivan-bocharov.stan-vscode), and
 [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 are all excellent options for daily data science development workflows.

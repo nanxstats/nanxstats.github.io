@@ -27,7 +27,7 @@ This will be a machine pretty much built around the GPU, which costs about half 
 - **CPU**. Doesn't need to be a fancy one like i7-8700. Shouldn't be too low-end either so it won't be an accidental bottleneck. Plus sometimes we do train models on CPU.
 - **RAM.** As much as we could get. Can leave some upgrade potential there.
 - **GPU.** Buy brand new GPUs from reliable sellers. We don't know what really happened to the used video cards these days... Sometimes they were used to mine cryptocurrencies intensively, and their lifespan could be severely affected.
-- **Number of GPUs.** One is ok for a starter. If you know for sure that you need to scale to 2 or 4 cards in the future, choose a motherboard that supports 4-way SLI, a larger chassis, and of course, a 1600W power supply. Parallelization across multiple cards can be non-trivial though for specific things, such as [cross-card synchronized batch normalization](https://discuss.gluon.ai/t/topic/1156).
+- **Number of GPUs.** One is ok for a starter. If you know for sure that you need to scale to 2 or 4 cards in the future, choose a motherboard that supports 4-way SLI, a larger chassis, and of course, a 1600W power supply. Parallelization across multiple cards can be non-trivial though for specific things, such as [cross-card synchronized batch normalization](https://hangzhang.org/mxnet-zh-blog/syncbn).
 
 ## Let's Build It Up
 
