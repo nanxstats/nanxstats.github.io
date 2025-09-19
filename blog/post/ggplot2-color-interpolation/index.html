@@ -208,27 +208,12 @@ significant number of categories in the data?</p>
 the color values to generate more colors based on the number of categories.
 Here, I will demonstrate how to construct such an “adaptive” color palette
 generator and the ggplot2 color scales for all ggsci color palettes.</p>
-<style type="text/css">
-.callout {
-    font-size: 1.125rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-    padding-top: 1.875rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    border-radius: 0.25rem;
-    border-left: 5px solid #64748b;
-    border-right: 1px solid #dee2e6;
-    border-top: 1px solid #dee2e6;
-    border-bottom: 1px solid #dee2e6;
-}
-</style>
-<div class="callout">
+<blockquote>
 <p>⚠️ It might be better not to encode too many categories in different colors.
 Please see the recommendations from the
 <a href="https://clauswilke.com/dataviz/color-pitfalls.html">common pitfalls of color use</a>
 chapter in the <em>Fundamentals of Data Visualization</em> book by Claus O. Wilke.</p>
-</div>
+</blockquote>
 <p>We start with the color interpolation logic as a
 <a href="https://adv-r.hadley.nz/function-factories.html">function factory</a>
 and leverage <code>grDevices::colorRampPalette()</code>.</p>
@@ -283,11 +268,11 @@ pal_adaptive &lt;- function(name, palette, alpha = 1) {
 #&#39; @inheritParams pal_adaptive
 #&#39; @param ... additional parameters for [ggplot2::discrete_scale()].
 scale_color_adaptive &lt;- function(name, palette, alpha = 1, ...) {
-  ggplot2::discrete_scale(&quot;colour&quot;, name, pal_adaptive(name, palette, alpha), ...)
+  ggplot2::discrete_scale(&quot;colour&quot;, palette = pal_adaptive(name, palette, alpha), ...)
 }
 
 scale_fill_adaptive &lt;- function(name, palette, alpha = 1, ...) {
-  ggplot2::discrete_scale(&quot;fill&quot;, name, pal_adaptive(name, palette, alpha), ...)
+  ggplot2::discrete_scale(&quot;fill&quot;, palette = pal_adaptive(name, palette, alpha), ...)
 }</code></pre>
 <p>Feels easy enough? Let’s test it in the wild with some
 high-cardinality data.</p>
@@ -310,7 +295,7 @@ only has 8 colors, but it will work fine here:</p>
   ggplot2::geom_point(ggplot2::aes(colour = cluster), alpha = 0.5, size = 1) +
   cowplot::theme_minimal_grid() +
   scale_color_adaptive(name = &quot;nejm&quot;, palette = &quot;default&quot;)</code></pre>
-<p><img src="https://nanx.me/blog/post/ggplot2-color-interpolation/index_files/figure-html/unnamed-chunk-8-1.png" width="100%" /></p>
+<p><img src="https://nanx.me/blog/post/ggplot2-color-interpolation/index_files/figure-html/unnamed-chunk-7-1.png" width="100%" /></p>
 <p>That’s all, folks.</p>
 
 
