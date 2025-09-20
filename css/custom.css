@@ -423,9 +423,9 @@ dl {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
     font-weight: 500;
-    font-size: 2.5rem;
-    letter-spacing: -0.5px;
-    line-height: 1.1;
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+    line-height: 1;
 }
 
 .content .blog-post-content {
