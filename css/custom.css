@@ -420,12 +420,13 @@ dl {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-family: var(--tw-prose-font-sans-serif);
+    font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
-    font-weight: 500;
-    font-size: 3.5rem;
+    font-variant-ligatures: none;
+    font-weight: 700;
+    font-size: 3.75rem;
     letter-spacing: -1px;
-    line-height: 1;
+    line-height: 1.15;
 }
 
 .content .blog-post-content {
