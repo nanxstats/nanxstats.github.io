@@ -209,7 +209,7 @@ the color values to generate more colors based on the number of categories.
 Here, I will demonstrate how to construct such an “adaptive” color palette
 generator and the ggplot2 color scales for all ggsci color palettes.</p>
 <blockquote>
-<p>⚠️ It might be better not to encode too many categories in different colors.
+<p>CAUTION: It might be better not to encode too many categories in different colors.
 Please see the recommendations from the
 <a href="https://clauswilke.com/dataviz/color-pitfalls.html">common pitfalls of color use</a>
 chapter in the <em>Fundamentals of Data Visualization</em> book by Claus O. Wilke.</p>
@@ -262,6 +262,18 @@ pal_adaptive &lt;- function(name, palette, alpha = 1) {
 
   pal_ramp(unname(alpha_cols))
 }</code></pre>
+<style type="text/css">
+blockquote code { font-size: 15px !important; }
+</style>
+<blockquote>
+<p>NOTE: For technical reasons, the raw color data for the iTerm color palettes
+and color scales (<code>pal_iterm()</code>, <code>scale_*_iterm()</code>) introduced in
+ggsci 4.0.0 are stored in a separate object <code>ggsci:::ggsci_db_iterm</code>
+rather than <code>ggsci:::ggsci_db</code>.</p>
+<p>You can access the two variants (“normal” and “bright”) of these
+palettes via, for example, <code>ggsci:::ggsci_db_iterm[["Palette Name"]][["normal"]]</code>
+and <code>ggsci:::ggsci_db_iterm[["Palette Name"]][["bright"]]</code>.</p>
+</blockquote>
 <p>Finishing up by creating the ggplot2 color scales as usual.</p>
 <pre class="r"><code>#&#39; Adaptive color scales
 #&#39;
@@ -295,7 +307,7 @@ only has 8 colors, but it will work fine here:</p>
   ggplot2::geom_point(ggplot2::aes(colour = cluster), alpha = 0.5, size = 1) +
   cowplot::theme_minimal_grid() +
   scale_color_adaptive(name = &quot;nejm&quot;, palette = &quot;default&quot;)</code></pre>
-<p><img src="https://nanx.me/blog/post/ggplot2-color-interpolation/index_files/figure-html/unnamed-chunk-7-1.png" width="100%" /></p>
+<p><img src="https://nanx.me/blog/post/ggplot2-color-interpolation/index_files/figure-html/unnamed-chunk-8-1.png" width="100%" /></p>
 <p>That’s all, folks.</p>
 
 
