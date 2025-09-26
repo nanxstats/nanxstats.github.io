@@ -22,6 +22,10 @@ description: >
   is easy to edit and diff.
 ---
 
+```{css, echo=FALSE}
+.content .blog-post-title { letter-spacing: -0.5px; }
+```
+
 ![The extension name was inspired by the "stupefy mode" described in the
 [SmartyPants](https://daringfireball.net/projects/smartypants/) project written
 by John Gruber, the creator of Markdown.

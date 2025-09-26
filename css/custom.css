@@ -385,10 +385,10 @@ dl {
 .content .blog-post-title {
     font-family: var(--tw-prose-font-serif);
     font-feature-settings: normal;
-    font-variant-ligatures: none;
     font-weight: 700;
     font-size: 2.25rem;
     line-height: 1.25;
+    letter-spacing: normal;
 }
 
 .content .blog-post-content {
