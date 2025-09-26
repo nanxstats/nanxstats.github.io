@@ -15,6 +15,10 @@ description: >
   Reflection on disposing of a broken trash can.
 ---
 
+```{css, echo=FALSE}
+.content .blog-post-title { letter-spacing: -1.3px; }
+```
+
 ![_A Vanitas Still Life with a Flag, Candlestick, Musical Instruments,
 Books, Writing Paraphernalia, Globes, and Hourglass_, 1662.
 Edwaert Collier (Dutch, 1642--1708).\

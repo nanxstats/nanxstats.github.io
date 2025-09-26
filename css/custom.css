@@ -383,12 +383,12 @@ dl {
 /* Blog post typography */
 
 .content .blog-post-title {
-    font-family: var(--tw-prose-font-serif);
+    font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-weight: 700;
-    font-size: 2.25rem;
+    font-weight: 600;
+    font-size: 2.375rem;
     line-height: 1.25;
-    letter-spacing: normal;
+    letter-spacing: -1px;
 }
 
 .content .blog-post-content {
