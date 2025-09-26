@@ -1,0 +1,133 @@
+---
+title: "ggsci 4.0.0: 400+ new color palettes"
+author: "Nan Xiao"
+date: "2025-09-25T23:36:00"
+slug: ggsci-4-0-0
+categories: []
+tags:
+  - R
+  - Python
+  - ggplot2
+  - plotnine
+  - ggsci
+  - color palettes
+  - color scales
+  - data visualization
+  - iterm2-color-schemes
+  - R packages
+  - Python packages
+meta_img: "image/alisa-anton-JhxGkGgd3Sw-unsplash.jpg"
+description: >
+  ggsci 4.0.0 is here, with over 400 new color palettes from Primer,
+  Atlassian, and iTerm2-Color-Schemes to bring more options to your
+  ggplot2 data visualizations.
+---
+
+```{r, include=FALSE}
+knitr::knit_hooks$set(pngquant = knitr::hook_pngquant)
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  dpi = 96,
+  fig.retina = 2,
+  fig.width = 10.6667,
+  fig.height = 3.3334,
+  fig.align = "center",
+  out.width = "100%",
+  pngquant = "--speed=1 --quality=90"
+)
+```
+
+![Cozy autumn vibes: a warm drink, a good book, and colorful leaves.
+Photo by [Alisa Anton](https://unsplash.com/photos/JhxGkGgd3Sw).
+](/image/alisa-anton-JhxGkGgd3Sw-unsplash.jpg)
+
+After the [last update](https://nanx.me/blog/post/ggsci-3-2-0/) in June 2024,
+I am excited to announce the release of [ggsci](https://nanx.me/ggsci/) 4.0.0
+and [ggsci for Python](https://nanx.me/py-ggsci/) 1.0.0.
+You can install the R package ggsci from CRAN:
+
+```r
+install.packages("ggsci")
+```
+
+And install the Python package from PyPI:
+
+```bash
+pip install ggsci
+```
+
+This update brings over 400 new discrete color palettes for ggplot2 and
+plotnine visualizations. With this many new options, I _almost surely_ will not
+have to worry about running out of palettes for producing my plots again.
+
+## New color scales
+
+This release introduces three new discrete color scales, with the underlying
+palettes sourced from popular design systems and terminal color schemes.
+
+### Primer
+
+Primer is GitHub's design system. This color scale includes the 17 mark colors
+from Primer's [data visualization guide
+](https://primer.style/product/ui-patterns/data-visualization/).
+
+```{r, echo=TRUE}
+#| fig-ggsci-primer-color-scale,
+#| fig.cap="ggplot2 examples using the Primer color scale.",
+p1 <- ggsci::example_scatterplot() + ggsci::scale_color_primer()
+p2 <- ggsci::example_barplot() + ggsci::scale_fill_primer()
+gridExtra::grid.arrange(p1, p2, ncol = 2)
+```
+
+### Atlassian Design System
+
+The Atlassian Design System color scale is based on their [chart colors for data
+visualization](https://atlassian.design/foundations/color-new/data-visualization-color).
+It offers a specific sequence of 8 colors for categorical data.
+
+```{r, echo=TRUE}
+#| fig-ggsci-atlassian-color-scale,
+#| fig.cap="ggplot2 examples using the Atlassian Design System color scale.",
+p1 <- ggsci::example_scatterplot() + ggsci::scale_color_atlassian()
+p2 <- ggsci::example_barplot() + ggsci::scale_fill_atlassian()
+gridExtra::grid.arrange(p1, p2, ncol = 2)
+```
+
+### iTerm
+
+The iTerm color scale includes all current **435 color schemes** from the
+[iterm2-color-schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) project.
+Each palette provides 6 colors with two possible variants: normal and bright.
+To help you explore all the options, I created a Quarto microsite where you
+can preview every palette: <https://nanx.me/ggsci-iterm/>.
+The page is quite long, so be sure to use the independently scrollable table of
+contents on the sidebar.
+
+```{r, echo=TRUE}
+#| fig-ggsci-iterm-color-scale,
+#| fig.cap="ggplot2 examples using the iTerm color scale with the Rosé Pine palette---a favorite Neovim color scheme used by @ThePrimeagen.",
+p1 <- ggsci::example_scatterplot() + ggsci::scale_color_iterm("Rose Pine")
+p2 <- ggsci::example_barplot() + ggsci::scale_fill_iterm("Rose Pine")
+gridExtra::grid.arrange(p1, p2, ncol = 2)
+```
+
+So, why add terminal color schemes?
+
+For months, I have been using the [Ghostty](https://ghostty.org/) terminal
+emulator, which features built-in themes from the iterm2-color-schemes project.
+I thought it would be cool to use these beautiful themes in data visualizations.
+While not all are suitable for plotting, many are designed with decent contrast
+and vibes. This inspired me to bring them to ggsci, so you can easily apply
+them to your ggplot2 and plotnine pipelines.
+
+## Customizing color scales
+
+As a reminder, the R package includes a
+[FAQ vignette](https://nanx.me/ggsci/articles/ggsci-faq.html)
+that addresses the most common questions from real ggsci users, such as
+"how to handle more data categories than available colors" or "how to customize
+the color order in a palette". There, you will find practical recipes to
+get your work done quickly.

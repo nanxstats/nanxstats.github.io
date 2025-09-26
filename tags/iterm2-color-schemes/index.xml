@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iterm2-color-schemes on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/iterm2-color-schemes/</link>
+    <description>Recent content in iterm2-color-schemes on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Sep 2025 23:36:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/iterm2-color-schemes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ggsci 4.0.0: 400&#43; new color palettes</title>
+      <link>https://nanx.me/blog/post/ggsci-4-0-0/</link>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/ggsci-4-0-0/</guid>
+      <description>Cozy autumn vibes: a warm drink, a good book, and colorful leaves. Photo by Alisa Anton. After the last update in June 2024, I am excited to announce the release of ggsci 4.0.0 and ggsci for Python 1.0.0. You can install the R package ggsci from CRAN:&#xA;install.packages(&amp;quot;ggsci&amp;quot;) And install the Python package from PyPI:&#xA;pip install ggsci This update brings over 400 new discrete color palettes for ggplot2 and plotnine visualizations.</description>
+    </item>
+  </channel>
+</rss>

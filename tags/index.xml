@@ -6,41 +6,83 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 15 Sep 2025 02:05:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 25 Sep 2025 23:36:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>color palettes</title>
       <link>https://nanx.me/tags/color-palettes/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
       <guid>https://nanx.me/tags/color-palettes/</guid>
       <description></description>
     </item>
     <item>
       <title>color scales</title>
       <link>https://nanx.me/tags/color-scales/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
       <guid>https://nanx.me/tags/color-scales/</guid>
       <description></description>
     </item>
     <item>
       <title>data visualization</title>
       <link>https://nanx.me/tags/data-visualization/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
       <guid>https://nanx.me/tags/data-visualization/</guid>
       <description></description>
     </item>
     <item>
       <title>ggplot2</title>
       <link>https://nanx.me/tags/ggplot2/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ggplot2/</guid>
       <description></description>
     </item>
     <item>
       <title>ggsci</title>
       <link>https://nanx.me/tags/ggsci/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ggsci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>iterm2-color-schemes</title>
+      <link>https://nanx.me/tags/iterm2-color-schemes/</link>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/iterm2-color-schemes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>plotnine</title>
+      <link>https://nanx.me/tags/plotnine/</link>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/plotnine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python packages</title>
+      <link>https://nanx.me/tags/python-packages/</link>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -55,27 +97,6 @@
       <link>https://nanx.me/tags/mizani/</link>
       <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
       <guid>https://nanx.me/tags/mizani/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>plotnine</title>
-      <link>https://nanx.me/tags/plotnine/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/plotnine/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python packages</title>
-      <link>https://nanx.me/tags/python-packages/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -307,20 +328,6 @@
       <link>https://nanx.me/tags/pkgdown/</link>
       <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
       <guid>https://nanx.me/tags/pkgdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
