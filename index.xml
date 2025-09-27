@@ -741,7 +741,7 @@
       <link>https://nanx.me/colophon/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/colophon/</guid>
-      <description>I launched this website in 2009, initially as a personal blog, before later expanding it to include a professional portfolio. Throughout the years, I have explored different publishing platforms: from WordPress and OpenScholar to hand-written HTML. My journey led me to adopt the static website generator: blogdown, driven by Hugo.&#xA;This page lists the tools I use to build the site today. The entire stack is free and open source, and can be found on GitHub.</description>
+      <description>I launched this website in 2009, initially as a personal blog, before later expanding it to include a professional portfolio. Throughout the years, I have explored different publishing platforms: from WordPress and OpenScholar to hand-written HTML. My journey led me to adopt the static website generator: blogdown, driven by Hugo.&#xA;This page lists the tools I use to build the site today. Besides the proprietary fonts, the entire stack is free and open source, and can be found on GitHub.</description>
     </item>
     <item>
       <title>Papers</title>
