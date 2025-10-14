@@ -23,7 +23,7 @@ description: >
 ---
 
 ```{css, echo=FALSE}
-.content .blog-post-title { letter-spacing: -1.6px; }
+.content .blog-post-title { letter-spacing: -0.9px; }
 ```
 
 ![The extension name was inspired by the "stupefy mode" described in the
