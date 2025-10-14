@@ -587,13 +587,13 @@ dl {
     font-feature-settings: normal;
     font-weight: 500;
     font-size: 1.0625rem;
-    line-height: 2.375;
+    line-height: 2;
 }
 
 .content .tags li a {
     border-radius: 9999px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 4px;
+    padding-bottom: 6px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: #f1f5f9;
