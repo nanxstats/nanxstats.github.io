@@ -25,7 +25,7 @@ description: >
 ---
 
 ```{css, echo=FALSE}
-.content .blog-post-title { letter-spacing: -1.1px; }
+.content .blog-post-title { letter-spacing: -0.4px; }
 ```
 
 ![Downhill mountain biking.
