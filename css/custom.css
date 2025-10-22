@@ -9,18 +9,10 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Epunda Sans";
-    src: url("fonts/EpundaSans-VF.woff2") format("woff2");
+    font-family: "BDO Grotesk";
+    src: url("fonts/BDOGrotesk-VF.woff2") format("woff2");
     font-weight: 300 900;
     font-style: normal;
-}
-
-@font-face {
-    font-display: swap;
-    font-family: "Epunda Sans";
-    src: url("fonts/EpundaSans-Italic-VF.woff2") format("woff2");
-    font-weight: 300 900;
-    font-style: italic;
 }
 
 @font-face {
@@ -78,7 +70,7 @@
 /* Colors derived from @tailwindcss/typography prose-slate */
 
 :root {
-    --tw-prose-font-sans-serif: "Epunda Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --tw-prose-font-sans-serif: "BDO Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-serif: "Martina Plantijn", "Georgia", "Cambria", "Times New Roman", "Times", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --tw-prose-font-monospace: "Twilio Sans Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     --tw-prose-body: #0f172a;
@@ -198,10 +190,9 @@ hr {
 .header h1.name {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 700;
-    font-size: 2.625rem;
-    letter-spacing: normal;
+    font-weight: 600;
+    font-size: 2.25rem;
+    letter-spacing: -1px;
     line-height: 1;
     margin-left: 6px;
 }
@@ -220,10 +211,9 @@ hr {
 .header ul.nav li {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
     font-weight: 500;
-    font-size: 1.625rem;
-    letter-spacing: normal;
+    font-size: 1.375rem;
+    letter-spacing: -0.4px;
 }
 
 .header ul.nav li a {
@@ -250,7 +240,6 @@ hr {
     .header ul.nav li a.active {
         font-family: var(--tw-prose-font-sans-serif);
         font-feature-settings: normal;
-        font-variant-numeric: lining-nums;
         font-weight: 700;
         text-decoration: none;
     }
@@ -319,9 +308,8 @@ h5,
 h6 {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 700;
-    letter-spacing: normal;
+    font-weight: 600;
+    letter-spacing: -1px;
     color: var(--tw-prose-headings);
     margin-bottom: 1rem;
 }
@@ -345,10 +333,9 @@ h6 {
 .content .meta {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 500;
-    font-size: 1.5rem;
-    letter-spacing: normal;
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: -0.2px;
     color: var(--tw-prose-lead);
     margin-bottom: 1rem;
 }
@@ -398,10 +385,9 @@ dl {
 .content .blog-post-title {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 700;
-    font-size: 2.5rem;
-    letter-spacing: normal;
+    font-weight: 600;
+    font-size: 2.25rem;
+    letter-spacing: -1px;
     line-height: 1.25;
 }
 
@@ -462,8 +448,7 @@ dl {
 .content .markdown .table {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    letter-spacing: normal;
+    letter-spacing: -0.2px;
 }
 
 .content .markdown .table>:not(caption)>*>* {
@@ -519,9 +504,9 @@ dl {
 .content .markdown blockquote {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 450;
-    font-size: 1.0625rem;
+    font-weight: 400;
+    font-size: 0.9375rem;
+    letter-spacing: -0.2px;
     color: var(--tw-prose-quotes);
     background-color: var(--tw-prose-quotes-bg);
     border-left: 1px solid var(--tw-prose-quote-borders);
@@ -545,10 +530,9 @@ dl {
 .content .groupby {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.875rem;
-    letter-spacing: normal;
+    letter-spacing: -1px;
     margin-top: 2rem;
     margin-bottom: 0.75rem;
     color: var(--tw-prose-headings);
@@ -568,19 +552,19 @@ dl {
 .content .post-item .meta-title {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
     font-weight: 500;
-    font-size: 1.0625rem;
+    font-size: 0.9375rem;
+    letter-spacing: -0.2px;
     line-height: 2;
 }
 
 .content .post-item .meta-date {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 500;
-    font-size: 0.9375rem;
-    letter-spacing: normal;
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: -0.2px;
     line-height: 2;
     color: var(--tw-prose-counters);
 }
@@ -607,16 +591,16 @@ dl {
 .content .tags li a {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
     font-weight: 500;
-    font-size: 1rem;
-    line-height: 2;
+    font-size: 0.875rem;
+    letter-spacing: normal;
+    line-height: 2.25;
 }
 
 .content .tags li a {
     border-radius: 9999px;
-    padding-top: 2px;
-    padding-bottom: 3px;
+    padding-top: 7px;
+    padding-bottom: 6px;
     padding-left: 10px;
     padding-right: 10px;
     background-color: #f1f5f9;
@@ -631,9 +615,8 @@ dl {
 .content .taxonomy-term {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
     font-weight: 500;
-    font-size: 1.375rem;
+    font-size: 1.125rem;
     letter-spacing: normal;
     margin-bottom: 1.125rem;
 }
@@ -669,8 +652,7 @@ dl {
 .pagination-nav .btn-outline-nav {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 450;
+    font-weight: 400;
     font-size: 1rem;
     letter-spacing: normal;
     text-decoration: none;
@@ -698,17 +680,17 @@ dl {
 .pagination-nav .pagination-nav-sublabel {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: 1rem;
     letter-spacing: normal;
     color: #475569;
     transition: color 0.15s ease-in-out;
 }
 
 .pagination-nav .pagination-nav-label {
-    font-size: 1rem;
-    font-weight: 450;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: normal;
     color: #475569;
     margin-top: 0.5rem;
     transition: color 0.15s ease-in-out;
@@ -730,10 +712,9 @@ dl {
 .footer {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: normal;
-    font-variant-numeric: lining-nums;
-    font-weight: 500;
-    font-size: 1.3125rem;
-    letter-spacing: normal;
+    font-weight: 450;
+    font-size: 1.125rem;
+    letter-spacing: -0.3px;
 }
 
 .footer a {
