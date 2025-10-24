@@ -220,8 +220,8 @@ hr {
     font-family: var(--tw-prose-font-sans-serif);
     font-feature-settings: "ss01", "ss04", "ss07", "ss09";
     font-weight: 500;
-    font-size: 1.4375rem;
-    letter-spacing: -0.4px;
+    font-size: 1.5rem;
+    letter-spacing: -0.7px;
 }
 
 .header ul.nav li a {
