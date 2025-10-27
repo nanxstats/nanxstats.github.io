@@ -106,7 +106,7 @@ configuration automatically, so you can focus on reviewing the actual results.
 ## Why Rust?
 
 You might be wondering why this is a Rust CLI tool rather than an R package,
-a Python package or a simple shell script. The answer comes down to the
+a Python package, or a simple shell script. The answer comes down to the
 constraints of the problem: when you're paying for cloud compute by the minute,
 you want everything to work smoothly on the first try, with minimal dependencies.
 
