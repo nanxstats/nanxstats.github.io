@@ -6,8 +6,85 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Sep 2025 23:36:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 17:42:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cargo</title>
+      <link>https://nanx.me/tags/cargo/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/cargo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>developer experience</title>
+      <link>https://nanx.me/tags/developer-experience/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/developer-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>integration testing</title>
+      <link>https://nanx.me/tags/integration-testing/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/integration-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>revdepcheck</title>
+      <link>https://nanx.me/tags/revdepcheck/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/revdepcheck/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>reverse dependency</title>
+      <link>https://nanx.me/tags/reverse-dependency/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/reverse-dependency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://nanx.me/tags/rust/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust packages</title>
+      <link>https://nanx.me/tags/rust-packages/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>toolchain</title>
+      <link>https://nanx.me/tags/toolchain/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/toolchain/</guid>
+      <description></description>
+    </item>
     <item>
       <title>color palettes</title>
       <link>https://nanx.me/tags/color-palettes/</link>
@@ -72,20 +149,6 @@
       <description></description>
     </item>
     <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>matplotlib</title>
       <link>https://nanx.me/tags/matplotlib/</link>
       <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
@@ -97,13 +160,6 @@
       <link>https://nanx.me/tags/mizani/</link>
       <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
       <guid>https://nanx.me/tags/mizani/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>toolchain</title>
-      <link>https://nanx.me/tags/toolchain/</link>
-      <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/toolchain/</guid>
       <description></description>
     </item>
     <item>
@@ -289,13 +345,6 @@
       <description></description>
     </item>
     <item>
-      <title>Rust</title>
-      <link>https://nanx.me/tags/rust/</link>
-      <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>CICD</title>
       <link>https://nanx.me/tags/cicd/</link>
       <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
@@ -457,13 +506,6 @@
       <description></description>
     </item>
     <item>
-      <title>Cargo</title>
-      <link>https://nanx.me/tags/cargo/</link>
-      <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/cargo/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>extendr</title>
       <link>https://nanx.me/tags/extendr/</link>
       <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
@@ -510,20 +552,6 @@
       <link>https://nanx.me/tags/tlfs/</link>
       <pubDate>Thu, 13 Feb 2025 00:06:00 +0000</pubDate>
       <guid>https://nanx.me/tags/tlfs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>developer experience</title>
-      <link>https://nanx.me/tags/developer-experience/</link>
-      <pubDate>Sun, 09 Feb 2025 20:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/developer-experience/</guid>
       <description></description>
     </item>
     <item>
@@ -923,13 +951,6 @@
       <link>https://nanx.me/tags/ggsurvfit/</link>
       <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ggsurvfit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>revdepcheck</title>
-      <link>https://nanx.me/tags/revdepcheck/</link>
-      <pubDate>Thu, 23 May 2024 00:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/revdepcheck/</guid>
       <description></description>
     </item>
     <item>

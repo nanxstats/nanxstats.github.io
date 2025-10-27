@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cargo on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/cargo/</link>
-    <description>Recent content in Cargo on Nan Xiao | 肖楠</description>
+    <title>reverse dependency on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/reverse-dependency/</link>
+    <description>Recent content in reverse dependency on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Mon, 27 Oct 2025 17:42:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/cargo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/reverse-dependency/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>revdeprun: Rust CLI for R package reverse dependency check automation</title>
       <link>https://nanx.me/blog/post/revdeprun/</link>
       <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/revdeprun/</guid>
       <description>Smoke and speed: a race car mid-drift on the track. Photo by Jack Stapleton. I’m glad to announce the release of revdeprun, a Rust CLI tool that makes it easy to run reverse dependency checks on cloud instances1.&#xA;If you maintain an R package with many reverse dependencies, you’ll know that revdep checking can be time-consuming and requires significant computational resources. revdeprun aims to make this process as painless as possible by automating the entire workflow in a single command.</description>
-    </item>
-    <item>
-      <title>R packages using Rust</title>
-      <link>https://nanx.me/blog/post/r-rust-pkgs/</link>
-      <pubDate>Fri, 28 Feb 2025 16:37:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/r-rust-pkgs/</guid>
-      <description>TL;DR: I’m curating a list of CRAN R packages that use Rust: nanxstats/r-rust-pkgs.&#xA;Dirt bike. Photo by POWERING OFFROAD. Rust in R packages Rust has been the most admired programming language for nearly a decade. CRAN, the largest public repository for R packages, has also supported integrating Rust in R packages for several years. What’s the magic behind the language?&#xA;To me, Rust is a great choice for writing high-performance extensions for both R and Python, offering memory safety and a strong ecosystem.</description>
     </item>
   </channel>
 </rss>

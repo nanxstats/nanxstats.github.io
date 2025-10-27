@@ -6,8 +6,15 @@
     <description>Recent content in automation on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Feb 2025 20:42:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Oct 2025 17:42:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>revdeprun: Rust CLI for R package reverse dependency check automation</title>
+      <link>https://nanx.me/blog/post/revdeprun/</link>
+      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/revdeprun/</guid>
+      <description>Smoke and speed: a race car mid-drift on the track. Photo by Jack Stapleton. I’m glad to announce the release of revdeprun, a Rust CLI tool that makes it easy to run reverse dependency checks on cloud instances1.&#xA;If you maintain an R package with many reverse dependencies, you’ll know that revdep checking can be time-consuming and requires significant computational resources. revdeprun aims to make this process as painless as possible by automating the entire workflow in a single command.</description>
+    </item>
     <item>
       <title>Prevent RStudio 2024.12.0 from adding ProjectID to .Rproj files</title>
       <link>https://nanx.me/blog/post/rstudio-projectid/</link>

@@ -1,0 +1,134 @@
+---
+title: "revdeprun: Rust CLI for R package reverse dependency check automation"
+author: "Nan Xiao"
+date: "2025-10-27T17:42:00"
+slug: revdeprun
+categories: []
+tags:
+  - R
+  - Rust
+  - Cargo
+  - Rust packages
+  - R packages
+  - automation
+  - developer experience
+  - integration testing
+  - reverse dependency
+  - revdepcheck
+  - toolchain
+meta_img: "image/jack-stapleton-J9y7LWpRTWo-unsplash.jpg"
+description: >
+  revdeprun is a Rust CLI tool that makes running reverse dependency
+  checks on cloud instances as easy as a single command. Learn why this matters
+  for R package maintainers and how it can save you hours of manual setup.
+---
+
+![Smoke and speed: a race car mid-drift on the track.
+Photo by [Jack Stapleton](https://unsplash.com/photos/J9y7LWpRTWo).
+](/image/jack-stapleton-J9y7LWpRTWo-unsplash.jpg)
+
+I'm glad to announce the release of
+[revdeprun](https://crates.io/crates/revdeprun), a Rust CLI tool that makes
+it easy to run reverse dependency checks on cloud instances[^1].
+
+[^1]: "There is no cloud, it's just someone else's computer."
+
+If you maintain an R package with many reverse dependencies, you'll know that
+revdep checking can be time-consuming and requires significant computational
+resources. revdeprun aims to make this process as painless as possible by
+automating the entire workflow in a single command.
+
+You can install revdeprun from crates.io using Cargo:
+
+```bash
+cargo install revdeprun
+```
+
+Then, running a full reverse dependency check is as simple as:
+
+```bash
+revdeprun https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+```
+
+This will automatically set up R, configure your environment, clone your package,
+and run `revdepcheck::revdep_check()` with all the sensible defaults.
+The [README](https://github.com/nanxstats/revdeprun) provides more details about
+installation and usage.
+
+## Why reverse dependency checking matters
+
+If you've been lucky enough to have other R package authors depend on your work,
+you'll eventually need to think about reverse dependency checking.
+The idea is simple but important: before you release a new version of your package,
+you want to make sure that your changes don't break any of the packages that
+depend on you. It's like integration testing, but at the CRAN ecosystem level.
+
+The [R Packages book](https://r-pkgs.org/release.html#sec-release-revdep-checks)
+has a nice explanation of the overall workflow, and there are several excellent
+tools in R for running these checks locally:
+
+- [`revdepcheck`](https://github.com/r-lib/revdepcheck) from r-lib
+- [`crandalf`](https://github.com/yihui/crandalf) and `xfun::rev_check()` from Yihui Xie
+- [`revdepcheck.extras`](https://github.com/HenrikBengtsson/revdepcheck.extras) from Henrik Bengtsson
+
+These tools work great when you have a handful of reverse dependencies,
+but things get trickier as that number grows.
+
+## The challenge of scale
+
+The trouble starts when you have many reverse dependencies.
+Reverse dependency checking is an embarrassingly parallel, CPU-bound task:
+each package can be checked independently, and more CPU cores mean faster results.
+
+If you're maintaining a popular package with 100+ reverse dependencies,
+even a maxed out desktop setup with 32 threads[^3] won't be fast enough.
+You really need to move to the cloud, where you can spin up instances
+with 128+ vCPUs on demand.
+
+[^3]: As of today, an example is AMD Ryzen 9 9950X.
+
+But there is another reason to use cloud instances: security.
+Running reverse dependency checks means executing third-party code
+that you probably shouldn't fully trust. Using disposable cloud instances
+gives you a clean environment that you can throw away when you're done.
+
+The catch is that setting up these throwaway instances is tedious.
+You need to install R, configure package repositories, set up the right
+environment variables, and handle a bunch of other running context details[^2].
+
+[^2]: We touched on some of these details in a
+[previous post](https://nanx.me/blog/post/ggsci-3-1-0/).
+
+This manual setup gets old fast when you're spinning up instances regularly.
+That's the gap that revdeprun fills: it handles all the provisioning and
+configuration automatically, so you can focus on reviewing the actual results.
+
+## Why Rust?
+
+You might be wondering why this is a Rust CLI tool rather than an R package,
+a Python package or a simple shell script. The answer comes down to the
+constraints of the problem: when you're paying for cloud compute by the minute,
+you want everything to work smoothly on the first try, with minimal dependencies.
+
+Rust fits this niche well:
+
+- **Better than a shell script**: Rust gives you proper error handling,
+  better testing, and easier distribution. It also has better cross-platform
+  potential if we want to support Windows or macOS in the future.
+
+- **Easier than R or Python**: To use R or Python to set up R itself
+  feels circular. We'd need to set up the language runtime first,
+  which is exactly what we're trying to automate. With Rust, you can distribute
+  a single static executable that just works.
+
+That said, the core revdep checking recipe is still written in R:
+see it in [`revdep.rs`
+](https://github.com/nanxstats/revdeprun/blob/main/src/revdep.rs).
+The Rust tool is really just a wrapper that orchestrates
+the setup and execution.
+
+## Contributing
+
+If you run into any issues or have ideas for improvements, please
+[open an issue](https://github.com/nanxstats/revdeprun/issues).
+The codebase is relatively straightforward so contributions are very welcome.
