@@ -13,7 +13,7 @@
       <link>https://nanx.me/blog/post/revdeprun/</link>
       <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/revdeprun/</guid>
-      <description>Smoke and speed: a race car mid-drift on the track. Photo by Jack Stapleton. Update (2025-10-31): revdeprun 1.0.0 switched to using a custom workflow to pre-install binary dependencies for checking reverse dependencies, and run parallel checks using xfun::rev_check(). This improvement significantly improves performance and reliability. Read the release notes here. This post has been updated to reflect these changes.&#xA;I’m glad to announce the release of revdeprun, a Rust CLI tool that makes it easy to run reverse dependency checks on cloud instances1.</description>
+      <description>Smoke and speed: a race car mid-drift on the track. Photo by Jack Stapleton. Update (2025-10-31): revdeprun 1.0.0 switched to using a custom workflow to pre-install binary dependencies for checking reverse dependencies, and run parallel checks using xfun::rev_check(). This significantly improves performance and reliability. Read the release notes here. This post has been updated to reflect these changes.&#xA;I’m glad to announce the release of revdeprun, a Rust CLI tool that makes it easy to run reverse dependency checks on cloud instances1.</description>
     </item>
     <item>
       <title>My First PyCon Experience</title>
