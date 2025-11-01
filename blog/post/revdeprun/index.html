@@ -196,6 +196,10 @@
                             </li>
                             
                             <li class="d-inline">
+                                <a href="https://nanx.me/tags/xfun">xfun</a>
+                            </li>
+                            
+                            <li class="d-inline">
                                 <a href="https://nanx.me/tags/reverse-dependency">reverse dependency</a>
                             </li>
                             
@@ -228,6 +232,14 @@
 <div class="figcaption">Smoke and speed: a race car mid-drift on the track.
 Photo by <a href="https://unsplash.com/photos/J9y7LWpRTWo">Jack Stapleton</a>.</div>
 </div>
+<blockquote>
+<p><strong>Update (2025-10-31)</strong>: revdeprun 1.0.0 switched to using a custom workflow
+to pre-install binary dependencies for checking reverse dependencies,
+and run parallel checks using xfun::rev_check(). This improvement
+significantly improves performance and reliability. Read the release notes
+<a href="https://github.com/nanxstats/revdeprun/releases/tag/v1.0.0">here</a>.
+This post has been updated to reflect these changes.</p>
+</blockquote>
 <p>I’m glad to announce the release of
 <a href="https://crates.io/crates/revdeprun">revdeprun</a>, a Rust CLI tool that makes
 it easy to run reverse dependency checks on cloud instances<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
@@ -240,7 +252,7 @@ automating the entire workflow in a single command.</p>
 <p>Then, running a full reverse dependency check is as simple as:</p>
 <pre class="bash"><code>revdeprun https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git</code></pre>
 <p>This will automatically set up R, configure your environment, clone your package,
-and run <code>revdepcheck::revdep_check()</code> with all the sensible defaults.
+and run <code>xfun::rev_check()</code> with all the sensible defaults.
 The <a href="https://github.com/nanxstats/revdeprun">README</a> provides more details about
 installation and usage.</p>
 <div id="why-reverse-dependency-checking-matters" class="section level2">
