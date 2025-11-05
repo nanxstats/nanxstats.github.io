@@ -24,7 +24,7 @@ description: >
   future of reverse dependency checking at scale.
 ---
 
-![Monument Valley Navajo Tribal Park, Saint Michaels, United States.
+![Monument Valley Navajo Tribal Park.
 Photo by [Elvis Liang](https://unsplash.com/photos/dKI9xpL8l-k).
 ](/image/elvis-liang-dKI9xpL8l-k-unsplash.jpg)
 
