@@ -71,10 +71,10 @@ these can be rounding errors[^2].
 
 ## Case study: data.table
 
-For my test, I chose data.table, an R package for blazing fast and
-memory-efficient tabular data manipulation. It is one of the
-[most depended upon packages](https://r-pkg.org/depended) on CRAN
-(ranking 15th at the time of writing), and has helped countless package
+For my test, I chose [data.table](https://r-datatable.com/),
+an R package for blazing fast and memory-efficient tabular data manipulation.
+It is one of the [most depended upon packages](https://r-pkg.org/depended)
+on CRAN (ranking 15th at the time of writing), and has helped countless package
 authors and data frame workflows achieve optimal performance,
 including [speeding up clinical trial simulations for time-to-event endpoints
 in simtrial](https://keaven.github.io/blog/simtrial-0-3-2/).
