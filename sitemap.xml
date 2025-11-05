@@ -3,45 +3,54 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/cargo/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/data.table/</loc>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/developer-experience/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/integration-testing/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/r-packages/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/reverse-dependency/</loc>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/revdep-speedrun/</loc>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust/</loc>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust-packages/</loc>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/speedrun/</loc>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/revdepcheck/</loc>
     <lastmod>2025-10-27T17:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/revdeprun/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/reverse-dependency/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rust/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rust-packages/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2025-10-27T17:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/toolchain/</loc>
@@ -231,9 +240,6 @@
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/benchmark/</loc>
-    <lastmod>2025-03-24T20:05:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/data.table/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/foreach/</loc>
