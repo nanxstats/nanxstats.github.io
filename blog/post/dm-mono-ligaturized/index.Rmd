@@ -159,6 +159,6 @@ font-family = Liga DM Mono
 ## When to use it
 
 I find this ligaturized DM Mono works particularly well for terminal use.
-For editors, I'm currently switching between TheSansMono (for long-form writing)
+For code editors, I'm currently switching between TheSansMono (for long-form writing)
 and JetBrains Mono/Twilio Sans Mono (for code). But your mileage may vary.
 The only way to know is to try everything and see what works for you.
