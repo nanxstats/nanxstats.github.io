@@ -6,8 +6,15 @@
     <description>Recent content in Home on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Nov 2025 08:51:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Dec 2025 23:57:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DM Mono with Fira Code ligatures</title>
+      <link>https://nanx.me/blog/post/dm-mono-ligaturized/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/dm-mono-ligaturized/</guid>
+      <description>I’ve created a ligaturized version of DM Mono by adding Fira Code ligatures. You can download it from GitHub: https://github.com/nanxstats/dm-mono-ligaturized.&#xA;Ligaturized DM Mono in action: Running Homebrew in Ghostty. Theme: Dracula+. Why ligatures? I’ll confess: I can’t start real work until I’ve found a coding font that fits the vibe of the day. My dotfiles are fairly basic, but they include an extensive list of free and commercial monospaced fonts that I rotate through regularly.</description>
+    </item>
     <item>
       <title>Reverse dependency check speedrun: a data.table case study</title>
       <link>https://nanx.me/blog/post/revdep-speedrun/</link>

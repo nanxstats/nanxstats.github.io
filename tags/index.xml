@@ -6,13 +6,69 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 05 Nov 2025 08:51:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 06 Dec 2025 23:57:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>automation</title>
       <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
       <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>awk</title>
+      <link>https://nanx.me/tags/awk/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/awk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>coding fonts</title>
+      <link>https://nanx.me/tags/coding-fonts/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/coding-fonts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>developer experience</title>
+      <link>https://nanx.me/tags/developer-experience/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/developer-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ligaturizer</title>
+      <link>https://nanx.me/tags/ligaturizer/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ligaturizer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Makefile</title>
+      <link>https://nanx.me/tags/makefile/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/makefile/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>monospaced font</title>
+      <link>https://nanx.me/tags/monospaced-font/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/monospaced-font/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>programming ligatures</title>
+      <link>https://nanx.me/tags/programming-ligatures/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/programming-ligatures/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Readability</title>
+      <link>https://nanx.me/tags/readability/</link>
+      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/readability/</guid>
       <description></description>
     </item>
     <item>
@@ -27,13 +83,6 @@
       <link>https://nanx.me/tags/data.table/</link>
       <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
       <guid>https://nanx.me/tags/data.table/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>developer experience</title>
-      <link>https://nanx.me/tags/developer-experience/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/developer-experience/</guid>
       <description></description>
     </item>
     <item>
@@ -436,13 +485,6 @@
       <description></description>
     </item>
     <item>
-      <title>Readability</title>
-      <link>https://nanx.me/tags/readability/</link>
-      <pubDate>Mon, 21 Apr 2025 22:35:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/readability/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Sass</title>
       <link>https://nanx.me/tags/sass/</link>
       <pubDate>Mon, 21 Apr 2025 22:35:00 +0000</pubDate>
@@ -622,13 +664,6 @@
       <link>https://nanx.me/tags/testthat/</link>
       <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
       <guid>https://nanx.me/tags/testthat/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>awk</title>
-      <link>https://nanx.me/tags/awk/</link>
-      <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/awk/</guid>
       <description></description>
     </item>
     <item>
@@ -905,13 +940,6 @@
       <description></description>
     </item>
     <item>
-      <title>coding fonts</title>
-      <link>https://nanx.me/tags/coding-fonts/</link>
-      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/coding-fonts/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>endoftext</title>
       <link>https://nanx.me/tags/endoftext/</link>
       <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
@@ -930,13 +958,6 @@
       <link>https://nanx.me/tags/openai/</link>
       <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/openai/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>programming ligatures</title>
-      <link>https://nanx.me/tags/programming-ligatures/</link>
-      <pubDate>Wed, 19 Jun 2024 03:30:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/programming-ligatures/</guid>
       <description></description>
     </item>
     <item>
