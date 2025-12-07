@@ -122,13 +122,14 @@ For comparison, here's vanilla DM Mono without ligatures:
 ## Opinionated defaults
 
 Not all Fira Code ligatures fit DM Mono's aesthetic.
-These sequences have quirky ligatures in Fira Code that feel a bit out of place,
-so I've disabled them. They render as individual DM Mono characters instead:
+These sequences either have quirky ligatures in Fira Code that feel out of place,
+or can be easily triggered under the wrong context, so I've disabled them.
+They render as individual DM Mono characters instead, as shown below:
 
 <div class="font-liga-dm-mono">
 
 ```text
-&& .? ?: ?= ?. ?? ;;
+&& ~@ \/ .? ?: ?= ?. ?? ;; /\
 ```
 
 </div>

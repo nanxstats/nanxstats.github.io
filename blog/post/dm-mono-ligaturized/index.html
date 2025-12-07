@@ -295,10 +295,11 @@ frequently used in Python, R, Rust, TypeScript, and the command line:</p>
 <div id="opinionated-defaults" class="section level2">
 <h2>Opinionated defaults</h2>
 <p>Not all Fira Code ligatures fit DM Mono’s aesthetic.
-These sequences have quirky ligatures in Fira Code that feel a bit out of place,
-so I’ve disabled them. They render as individual DM Mono characters instead:</p>
+These sequences either have quirky ligatures in Fira Code that feel out of place,
+or can be easily triggered under the wrong context, so I’ve disabled them.
+They render as individual DM Mono characters instead, as shown below:</p>
 <div class="font-liga-dm-mono">
-<pre class="text"><code>&amp;&amp; .? ?: ?= ?. ?? ;;</code></pre>
+<pre class="text"><code>&amp;&amp; ~@ \/ .? ?: ?= ?. ?? ;; /\</code></pre>
 </div>
 <p>If you disagree with these choices, the Makefile makes it easy to adjust.
 The ligature configuration is filtered using awk, so adding back or
@@ -506,6 +507,9 @@ The only way to know is to try everything and see what works for you.</p>
     
     
         
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
 
     
 </body>
