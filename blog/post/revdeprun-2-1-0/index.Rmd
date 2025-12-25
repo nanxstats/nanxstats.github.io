@@ -21,7 +21,7 @@ description: >
   revdeprun 2.1.0 tackles three bottlenecks in the reverse dependency checking
   workflow: pak's install scheduler, tarball downloads, and package builds.
   The result? A new speedrun record: 2 hours 44 minutes to check all 1,732
-  data.table reverse dependencies on a 256-core Zen 5 instance.
+  data.table reverse dependencies on a 256-core Zen 5c instance.
 ---
 
 ![A race car pit crew in action during a pit stop.

@@ -1,6 +1,6 @@
 Metric,Previous run,This run
 CPU cores,48,256
-Architecture,Zen 3,Zen 5
+Architecture,Zen 3 (Milan),Zen 5c (Turin)
 Total time,8h 55min,2h 44min
 Setup time,2h 12min,56min
 Checking time,6h 43min,1h 48min
