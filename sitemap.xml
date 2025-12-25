@@ -3,24 +3,57 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/awk/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/developer-experience/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/integration-testing/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/monkey-patching/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pkgdepends/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/revdeprun-2-1-0/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/reverse-dependency/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/speedrun/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/xfun/</loc>
+    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/awk/</loc>
     <lastmod>2025-12-06T23:57:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/coding-fonts/</loc>
     <lastmod>2025-12-06T23:57:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/developer-experience/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/dm-mono-ligaturized/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2025-12-06T23:57:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/ligaturizer/</loc>
@@ -38,37 +71,16 @@
     <loc>https://nanx.me/tags/readability/</loc>
     <lastmod>2025-12-06T23:57:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/cargo/</loc>
     <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/data.table/</loc>
     <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/integration-testing/</loc>
-    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
-    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/reverse-dependency/</loc>
-    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/revdep-speedrun/</loc>
     <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/rust/</loc>
-    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/rust-packages/</loc>
-    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/speedrun/</loc>
     <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/revdepcheck/</loc>
@@ -78,9 +90,6 @@
     <lastmod>2025-10-27T17:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/toolchain/</loc>
-    <lastmod>2025-10-27T17:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/xfun/</loc>
     <lastmod>2025-10-27T17:42:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/color-palettes/</loc>
@@ -216,9 +225,6 @@
     <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/documentation/</loc>
-    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/monkey-patching/</loc>
     <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/offline-build/</loc>

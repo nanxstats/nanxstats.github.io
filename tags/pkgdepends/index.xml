@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>speedrun on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/speedrun/</link>
-    <description>Recent content in speedrun on Nan Xiao | 肖楠</description>
+    <title>pkgdepends on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/pkgdepends/</link>
+    <description>Recent content in pkgdepends on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 24 Dec 2025 19:01:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/speedrun/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/pkgdepends/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>revdeprun 2.1.0: hunting bottlenecks and a new speedrun record</title>
       <link>https://nanx.me/blog/post/revdeprun-2-1-0/</link>
       <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/revdeprun-2-1-0/</guid>
       <description>A race car pit crew in action during a pit stop. Photo by Paul Krüger. I’m excited to announce revdeprun 2.1.0, a major update to my Rust CLI tool for automating R package reverse dependency checks. This release is really two updates in one: version 2.0.0 accelerated dependency installation, while 2.1.0 addressed two more bottlenecks I discovered during testing. The combined result is a much faster workflow from start to finish.</description>
-    </item>
-    <item>
-      <title>Reverse dependency check speedrun: a data.table case study</title>
-      <link>https://nanx.me/blog/post/revdep-speedrun/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/revdep-speedrun/</guid>
-      <description>Monument Valley Navajo Tribal Park. Photo by Elvis Liang. A week ago, I announced revdeprun, a Rust CLI tool for automating R package reverse dependency checks. Since then, I have been iterating rapidly: 16 crates.io releases in a week! These updates focused on both correctness and speed. The tool has evolved from its initial v0.1.0 to v1.4.2, and the workflow now leverages pak for dependency resolution and xfun for the checking1.</description>
     </item>
   </channel>
 </rss>

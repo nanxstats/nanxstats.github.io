@@ -4,25 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> DM Mono with Fira Code ligatures - Nan Xiao | 肖楠 </title>
+    <title> revdeprun 2.1.0: hunting bottlenecks and a new speedrun record - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="Add a sprinkle of Fira Code ligatures to DM Mono for a unique terminal experience.
+    <meta name="description" content="revdeprun 2.1.0 tackles three bottlenecks in the reverse dependency checking workflow: pak&#39;s install scheduler, tarball downloads, and package builds. The result? A new speedrun record: 2 hours 44 minutes to check all 1,732 data.table reverse dependencies on a 256-core Zen 5 instance.
 " />
 
     
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
-    <meta property="og:url" content="https://nanx.me/blog/post/dm-mono-ligaturized/" />
-    <meta property="og:title" content="DM Mono with Fira Code ligatures" />
-    <meta property="og:description" content="Add a sprinkle of Fira Code ligatures to DM Mono for a unique terminal experience.
+    <meta property="og:url" content="https://nanx.me/blog/post/revdeprun-2-1-0/" />
+    <meta property="og:title" content="revdeprun 2.1.0: hunting bottlenecks and a new speedrun record" />
+    <meta property="og:description" content="revdeprun 2.1.0 tackles three bottlenecks in the reverse dependency checking workflow: pak&#39;s install scheduler, tarball downloads, and package builds. The result? A new speedrun record: 2 hours 44 minutes to check all 1,732 data.table reverse dependencies on a 256-core Zen 5 instance.
 " />
-    <meta property="og:image" content="https://nanx.me/image/dm-mono-ligaturized-ghostty.png" />
-    <meta property="og:image:secure_url" content="https://nanx.me/image/dm-mono-ligaturized-ghostty.png" />
-    <meta property="article:published_time" content="2025-12-06T23:57:00Z" />
-    <meta property="article:modified_time" content="2025-12-06T23:57:00Z" />
+    <meta property="og:image" content="https://nanx.me/image/paul-kruger-gg0ZAFpRHHU-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/paul-kruger-gg0ZAFpRHHU-unsplash.jpg" />
+    <meta property="article:published_time" content="2025-12-24T19:01:00Z" />
+    <meta property="article:modified_time" content="2025-12-24T19:01:00Z" />
     <meta property="article:author" content="Nan Xiao" />
 
     
@@ -31,16 +31,16 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="DM Mono with Fira Code ligatures" />
-    <meta name="twitter:description" content="Add a sprinkle of Fira Code ligatures to DM Mono for a unique terminal experience.
+    <meta name="twitter:title" content="revdeprun 2.1.0: hunting bottlenecks and a new speedrun record" />
+    <meta name="twitter:description" content="revdeprun 2.1.0 tackles three bottlenecks in the reverse dependency checking workflow: pak&#39;s install scheduler, tarball downloads, and package builds. The result? A new speedrun record: 2 hours 44 minutes to check all 1,732 data.table reverse dependencies on a 256-core Zen 5 instance.
 " />
-    <meta name="twitter:image" content="https://nanx.me/image/dm-mono-ligaturized-ghostty.png" />
-    <meta name="twitter:image:alt" content="DM Mono with Fira Code ligatures" />
+    <meta name="twitter:image" content="https://nanx.me/image/paul-kruger-gg0ZAFpRHHU-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="revdeprun 2.1.0: hunting bottlenecks and a new speedrun record" />
 
     
     <meta property="og:linkedin:actor" content="nanxstats" />
 
-    <link rel="canonical" href="https://nanx.me/blog/post/dm-mono-ligaturized/">
+    <link rel="canonical" href="https://nanx.me/blog/post/revdeprun-2-1-0/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -141,7 +141,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <h1 class="blog-post-title">DM Mono with Fira Code ligatures</h1>
+                <h1 class="blog-post-title">revdeprun 2.1.0: hunting bottlenecks and a new speedrun record</h1>
 
                 <div class="mb-md-4 meta">
                     
@@ -152,19 +152,27 @@
                     
                     
 
-                    <span class="date middot" title='Sat Dec 6 2025 23:57:00 UTC'>
-                        December 6, 2025
+                    <span class="date middot" title='Wed Dec 24 2025 19:01:00 UTC'>
+                        December 24, 2025
                     </span>
 
                     <span class="reading-time middot">
-                        3 min read
+                        6 min read
                     </span>
 
                     <div class="d-none d-md-block mt-2 tags">
                         <ul class="list-unstyled d-inline">
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/developer-experience">developer experience</a>
+                                <a href="https://nanx.me/tags/r">R</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/r-packages">R packages</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/rust">Rust</a>
                             </li>
                             
                             <li class="d-inline">
@@ -172,31 +180,31 @@
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/readability">readability</a>
+                                <a href="https://nanx.me/tags/reverse-dependency">reverse dependency</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/monospaced-font">monospaced font</a>
+                                <a href="https://nanx.me/tags/developer-experience">developer experience</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/coding-fonts">coding fonts</a>
+                                <a href="https://nanx.me/tags/integration-testing">integration testing</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/programming-ligatures">programming ligatures</a>
+                                <a href="https://nanx.me/tags/monkey-patching">monkey patching</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/ligaturizer">Ligaturizer</a>
+                                <a href="https://nanx.me/tags/speedrun">speedrun</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/makefile">Makefile</a>
+                                <a href="https://nanx.me/tags/xfun">xfun</a>
                             </li>
                             
                             <li class="d-inline">
-                                <a href="https://nanx.me/tags/awk">awk</a>
+                                <a href="https://nanx.me/tags/pkgdepends">pkgdepends</a>
                             </li>
                             
                         </ul>
@@ -215,113 +223,265 @@
     
 
 
-<p>I’ve created a ligaturized version of <a href="https://fonts.google.com/specimen/DM+Mono">DM Mono</a>
-by adding <a href="https://github.com/tonsky/FiraCode">Fira Code</a> ligatures.
-You can download it from GitHub: <a href="https://github.com/nanxstats/dm-mono-ligaturized" class="uri">https://github.com/nanxstats/dm-mono-ligaturized</a>.</p>
 <div class="float">
-<img src="https://nanx.me/image/dm-mono-ligaturized-ghostty.png" alt="Ligaturized DM Mono in action: Running Homebrew in Ghostty. Theme: Dracula+." />
-<div class="figcaption">Ligaturized DM Mono in action: Running Homebrew in Ghostty. Theme: Dracula+.</div>
+<img src="https://nanx.me/image/paul-kruger-gg0ZAFpRHHU-unsplash.jpg" alt="A race car pit crew in action during a pit stop. Photo by Paul Krüger." />
+<div class="figcaption">A race car pit crew in action during a pit stop.
+Photo by <a href="https://unsplash.com/photos/gg0ZAFpRHHU">Paul Krüger</a>.</div>
 </div>
+<p>I’m excited to announce <a href="https://github.com/nanxstats/revdeprun">revdeprun</a> 2.1.0,
+a major update to my Rust CLI tool for automating R package reverse dependency checks.
+This release is really two updates in one: version 2.0.0 accelerated dependency
+installation, while 2.1.0 addressed two more bottlenecks I discovered during testing.
+The combined result is a much faster workflow from start to finish.</p>
+<p>You can install revdeprun from <a href="https://crates.io/crates/revdeprun">crates.io</a>:</p>
+<pre class="bash"><code>cargo install revdeprun</code></pre>
+<p>If you’re new to revdeprun, you might want to read the
+<a href="https://nanx.me/blog/post/revdeprun/">original announcement</a> first.
+For full details of what changed, see
+<a href="https://github.com/nanxstats/revdeprun/pull/121">PR #121</a> (2.0.0),
+<a href="https://github.com/nanxstats/revdeprun/pull/125">PR #125</a>, and
+<a href="https://github.com/nanxstats/revdeprun/pull/127">PR #127</a> (2.1.0).</p>
+<div id="optimizing-the-install-scheduler-in-pak" class="section level2">
+<h2>Optimizing the install scheduler in pak</h2>
+<p>When installing thousands of packages for a reverse dependency check<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>,
+we want to fully use every CPU core we have. <code>pak::pkg_install()</code> is excellent
+at this. It resolves dependencies from both CRAN and Bioconductor intelligently
+and installs packages in parallel when possible.
+But I noticed something odd: even on a 48-core or 256-core machine,
+installing thousands of packages from binary and source does not feel
+“butter smooth”. The installed and built packages are not refreshing the
+console fast enough, but almost one by one in small bursts.</p>
+<p>The culprit turned out to be in pkgdepends, which pak embeds internally.
+For a large set of packages, the install scheduler has two potential bottlenecks:</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Worker pool refill</strong>: The event loop only starts exactly one
+new install task per poll iteration (every 100ms).
+When many small binary packages finish installing between polls,
+the worker pool might empty out faster than it refills.</p></li>
+<li><p><strong>Dependency bookkeeping</strong>: After every install, the scheduler updates
+dependency tracking for all remaining packages, even those that don’t
+need it<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>.</p></li>
+</ol>
+<p>The fix is straightforward: refill the worker pool up to <code>num_workers</code> after
+each poll, and only update dependency tracking for packages that are not
+packaged or built yet. I’ve shipped these more “aggressive” install scheduling
+details as a monkey patch that revdeprun applies automatically before
+running <code>pak::pkg_install()</code>, so your high core count instances can be fully
+utilized without upstream changes.</p>
+</div>
+<div id="squashing-two-more-bottlenecks" class="section level2">
+<h2>Squashing two more bottlenecks</h2>
+<p>After releasing 2.0.0, I ran the data.table speedrun and was pleased
+with the installation improvements. But I noticed the overall time wasn’t
+as fast as I expected. So I had to dig deeper and found two more obvious issues.</p>
+<div id="the-mysterious-hour-long-preparation-phase" class="section level3">
+<h3>The mysterious hour-long preparation phase</h3>
+<p>During the <code>xfun::rev_check()</code> preparation phase, I was seeing an hour of
+single-core work. What was going on?
+It turned out that revdeprun installs all dependencies into a <code>revdep/</code>
+subdirectory within the package directory. When <code>rev_check()</code> builds
+a source tarball of the package, it was packing this <strong>entire library</strong>
+into the archive… Not only did this slow things down dramatically,
+it was also the source of a cryptic warning message I’ve been ignoring:</p>
+<blockquote>
+<p>Warning in utils::tar(filepath, pkgname, compression = compression, compression_level = 9L, :
+storing paths of more than 100 bytes is not portable:</p>
+</blockquote>
+<p>The fix is simple: revdeprun now automatically adds <code>^revdep$</code> to the
+<code>.Rbuildignore</code> file. That hour-long phase now only takes minutes.</p>
+</div>
+<div id="serial-tarball-downloads" class="section level3">
+<h3>Serial tarball downloads</h3>
+<p>The second bottleneck was in downloading reverse dependency source packages.
+<code>xfun:::download_tarball()</code> fetches packages one at a time, which meant
+downloading 1,700+ tarballs was slower than it needed to be.</p>
+<p>I’ve added a monkey patch in revdeprun that parallelizes this using
+<code>parallel::mcmapply()</code> with 5 workers. I’ve also submitted
+<a href="https://github.com/yihui/xfun/pull/112">PR #112</a> to xfun
+to make this improvement available to everyone.</p>
+</div>
+</div>
+<div id="a-new-speedrun-record" class="section level2">
+<h2>A new speedrun record</h2>
+<p>To verify if all these improvements are effective and correct, I reran the
+data.table speedrun from
+<a href="https://nanx.me/blog/post/revdep-speedrun/">my original speedrun post</a>.
+To push the limits, I used a large cloud instance with the latest
+generation of hardware. It costs $8.64 per hour:</p>
+<ul>
+<li>256 CPU cores (AMD EPYC 9845, launched Q4 2024)</li>
+<li>512 GB DDR5 RAM</li>
+<li>5 TB storage</li>
+<li>Ubuntu 24.04 LTS</li>
+</ul>
+<p>After booting up the instance, the setup is only five commands<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>:</p>
+<pre class="bash"><code>curl --proto &#39;=https&#39; --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt-get update &amp;&amp; sudo apt-get install -y build-essential
+cargo install revdeprun
+ulimit -n 10240
+revdeprun https://github.com/Rdatatable/data.table.git</code></pre>
+<div id="the-timeline" class="section level3">
+<h3>The timeline</h3>
+<p>Here’s how the run progressed:</p>
+<p><strong>00:00:00</strong> - Started. Setting up R and installing system dependencies.</p>
+<p><strong>00:14:00</strong> - Started downloading 4,430 packages required for checking.</p>
+<p><strong>00:23:00</strong> - Started installing packages. The 2.0.0 scheduler patch works here.</p>
+<p><strong>00:49:00</strong> - <code>xfun::rev_check()</code> started preparation. Thanks to the fix in
+2.1.0, this phase now takes just minutes instead of an hour.</p>
+<p><strong>00:53:00</strong> - Started downloading all 1,732 reverse dependencies from source.
+With parallel downloads, this takes about 3 minutes instead of 17 minutes.</p>
+<p><strong>00:56:00</strong> - Downloads finished. The real work begins:
+run <code>R CMD check</code> on all 1,732 packages, twice<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>.</p>
+<p><strong>01:28:00</strong> - 866 packages remaining. Halfway there.</p>
+<p><strong>02:44:00</strong> - Finished! 35 packages reported check diffs.</p>
+<p>Screenshot from the run:</p>
+<div class="figure"><span style="display:block;" id="fig:btop"></span>
+<img src="images/btop.png" alt="`btop` showing all 256 cores at 100% utilization during the checking phase." width="100%" />
+<p class="caption">
+Figure 1: <code>btop</code> showing all 256 cores at 100% utilization during the checking phase.
+</p>
+</div>
+</div>
+<div id="comparison-with-the-previous-run" class="section level3">
+<h3>Comparison with the previous run</h3>
 <style type="text/css">
-@font-face {
-    font-display: swap;
-    font-family: "Liga DM Mono Regular";
-    src: url("fonts/LigaDMMono-Regular.woff2") format("woff2");
-    font-weight: 400;
-}
-
-.font-liga-dm-mono pre code {
-    font-family: "Liga DM Mono Regular" !important;
-    font-feature-settings: normal !important;
-    font-size: 2rem !important;
-    line-height: 1.5 !important;
-}
-
-.font-liga-dm-mono-nolig pre code {
-    font-family: "Liga DM Mono Regular" !important;
-    font-feature-settings: normal !important;
-    font-size: 2rem !important;
-    line-height: 1.5 !important;
-    font-variant-ligatures: none !important;
+table.table tr {
+  font-family: var(--tw-prose-font-serif);
 }
 </style>
-<div id="why-ligatures" class="section level2">
-<h2>Why ligatures?</h2>
-<p>I’ll confess: I can’t start real work until I’ve found a coding font
-that fits the vibe of the day.
-My <a href="https://github.com/nanxstats/dotfiles">dotfiles</a> are fairly basic,
-but they include an extensive list of free and commercial monospaced fonts
-that I rotate through regularly.</p>
-<p>After years of font-hopping, things started to feel stale.
-So I decided to create something new by modifying a less commonly modified
-monospaced font: DM Mono, designed by Colophon Foundry for DeepMind
-(now Google DeepMind).</p>
-<p>If you’re wondering whether ligatures are worth the trouble,
-I wrote about this in a <a href="https://nanx.me/blog/post/gpt-models-font-ligatures/">previous post</a>
-exploring how ligatures can improve readability when working with
-special tokens in GPT models.
-The short version: ligatures reduce cognitive load by rendering
-multi-character sequences as single, visually distinct glyphs.</p>
+<table class="table table-hover">
+<thead>
+<tr>
+<th style="text-align:left;">
+Metric
+</th>
+<th style="text-align:left;">
+Previous run
+</th>
+<th style="text-align:left;">
+This run
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CPU cores
+</td>
+<td style="text-align:left;">
+48
+</td>
+<td style="text-align:left;">
+256
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Architecture
+</td>
+<td style="text-align:left;">
+Zen 3
+</td>
+<td style="text-align:left;">
+Zen 5
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total time
+</td>
+<td style="text-align:left;">
+8h 55min
+</td>
+<td style="text-align:left;">
+2h 44min
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Setup time
+</td>
+<td style="text-align:left;">
+2h 12min
+</td>
+<td style="text-align:left;">
+56min
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Checking time
+</td>
+<td style="text-align:left;">
+6h 43min
+</td>
+<td style="text-align:left;">
+1h 48min
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Total cost
+</td>
+<td style="text-align:left;">
+~$14
+</td>
+<td style="text-align:left;">
+~$24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Packages checked
+</td>
+<td style="text-align:left;">
+1,723
+</td>
+<td style="text-align:left;">
+1,732
+</td>
+</tr>
+</tbody>
+</table>
+<p>The headline number is <strong>2 hours 44 minutes</strong> from a cold start to
+a complete reverse dependency check for one of CRAN’s most depended packages.
+A ~70% reduction from the original 8 hour 55 minute run.</p>
+<p>The setup time dropped from over 2 hours to under an hour, thanks to
+the combined effect of the scheduler patch, the <code>.Rbuildignore</code> fix, and
+parallel downloads. The checking phase also scaled nicely with 256 cores,
+though we’ll often hit diminishing returns when we’re bound by the
+slowest individual package checks.</p>
+<p>The ~$24 cost is quite reasonable considering the time saved.
+For packages with fewer reverse dependencies, a smaller instance
+would bring the cost down further.</p>
 </div>
-<div id="how-it-works" class="section level2">
-<h2>How it works</h2>
-<p>Thanks to <a href="https://github.com/ToxicFrog/Ligaturizer">ToxicFrog/Ligaturizer</a>,
-a collection of FontForge scripts written in Python, patching fonts with
-Fira Code ligatures is surprisingly straightforward.</p>
-<p>The build process is wrapped in a <a href="https://github.com/nanxstats/dm-mono-ligaturized/blob/main/Makefile">Makefile</a>.
-The result is six font files covering light, regular, and medium weights,
-each with an italic variant.
-As usual, it’s licensed under the SIL Open Font License.</p>
 </div>
-<div id="what-makes-dm-mono-special" class="section level2">
-<h2>What makes DM Mono special</h2>
-<p>DM Mono has some distinctive design choices that I wanted to highlight.
-In my opinion, these glyphs are what give DM Mono its character:</p>
-<div class="font-liga-dm-mono">
-<pre class="text"><code>0 ? @ [ ] f i j k l r t y</code></pre>
+<div id="acknowledgments" class="section level2">
+<h2>Acknowledgments</h2>
+<p>Thanks to Devin Pastoor for reminding me that <a href="https://github.com/A2-ai/rv">rv</a>,
+a uv-inspired R package manager written in Rust, exists.
+Although I didn’t end up using it directly for
+<a href="https://github.com/A2-ai/rv/issues/351">technical reasons</a>,
+it confirmed that substantial speed improvements in the R package
+installation toolchain are entirely possible.</p>
 </div>
-<p>After patching, you get these common ligatures from Fira Code,
-frequently used in Python, R, Rust, TypeScript, and the command line:</p>
-<div class="font-liga-dm-mono">
-<pre class="text"><code>&lt;- -&gt; =&gt; ==&gt; |&gt; :: :::
-== != &gt;= &lt;= === || //</code></pre>
-</div>
-<p>For comparison, here’s vanilla DM Mono without ligatures:</p>
-<div class="font-liga-dm-mono-nolig">
-<pre class="text"><code>&lt;- -&gt; =&gt; ==&gt; |&gt; :: :::
-== != &gt;= &lt;= === || //</code></pre>
-</div>
-</div>
-<div id="opinionated-defaults" class="section level2">
-<h2>Opinionated defaults</h2>
-<p>Not all Fira Code ligatures fit DM Mono’s aesthetic.
-These sequences either have quirky ligatures in Fira Code that feel out of place,
-or can be easily triggered under the wrong context, so I’ve disabled them.
-They render as individual DM Mono characters instead, as shown below:</p>
-<div class="font-liga-dm-mono">
-<pre class="text"><code>&amp;&amp; ~@ \/ .? ?: ?= ?. ?? ;; /\</code></pre>
-</div>
-<p>If you disagree with these choices, the Makefile makes it easy to adjust.
-The ligature configuration is filtered using awk, so adding back or
-removing more ligatures is just a matter of editing a few lines.</p>
-</div>
-<div id="setting-it-up" class="section level2">
-<h2>Setting it up</h2>
-<p>Install the fonts from the <code>fonts/</code> directory using your OS font manager.
-For VS Code and its forks, add this to your <code>settings.json</code>:</p>
-<pre class="json"><code>&quot;editor.fontFamily&quot;: &quot;&#39;Liga DM Mono&#39;, monospace&quot;,
-&quot;editor.fontLigatures&quot;: &quot;&#39;calt&#39;, &#39;liga&#39;&quot;,
-&quot;terminal.integrated.fontFamily&quot;: &quot;&#39;Liga DM Mono&#39;, monospace&quot;,
-&quot;terminal.integrated.fontLigatures.enabled&quot;: true,</code></pre>
-<p>For Ghostty, set the font family in your config:</p>
-<pre class="text"><code>font-family = Liga DM Mono</code></pre>
-</div>
-<div id="when-to-use-it" class="section level2">
-<h2>When to use it</h2>
-<p>I find this ligaturized DM Mono works particularly well for terminal use.
-For code editors, I’m currently switching between TheSansMono (for long-form writing)
-and JetBrains Mono/Twilio Sans Mono (for code). But your mileage may vary.
-The only way to know is to try everything and see what works for you.</p>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>To run <code>R CMD check</code> on any reverse dependency, the minimal set of
+packages needed is: their hard dependencies recursively, plus their
+first-order soft dependencies, plus the hard dependencies of those
+first-order soft dependencies recursively.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>The <a href="https://github.com/r-lib/pkgdepends/blob/7938930cb073c610cb867a7a81b37bc5cc6a9f5a/R/install-plan.R"><code>deps_left</code></a>
+field tracks which dependencies still need to be installed.
+For packages that are already building from source, this bookkeeping
+could bring unnecessary overhead, considering this is an <span class="math inline">\(O(n^2)\)</span> operation.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>With 256 cores, I hit the default file descriptor limit during
+parallel installations. The <code>ulimit</code> command raises this to a safe level.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+<li id="fn4"><p>Each package is checked twice: once against the released CRAN version
+and once against the development version. This lets you identify which
+check failures are new.<a href="#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
 
 
@@ -333,10 +493,10 @@ The only way to know is to try everything and see what works for you.</p>
                     <div class="row navigation-btns">
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/revdep-speedrun/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                            <a href="https://nanx.me/blog/post/dm-mono-ligaturized/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Previous</div>
-                                    <div class="pagination-nav-label">« Reverse dependency check speedrun: a data.table case study</div>
+                                    <div class="pagination-nav-label">« DM Mono with Fira Code ligatures</div>
                                 </div>
                             </a>
                             
@@ -344,12 +504,12 @@ The only way to know is to try everything and see what works for you.</p>
 
                         <div class="col">
                             
-                            <a href="https://nanx.me/blog/post/revdeprun-2-1-0/" class="btn btn-outline-nav btn-equal-height btn-next w-100">
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
                                 <div class="btn-content">
                                     <div class="pagination-nav-sublabel">Next</div>
-                                    <div class="pagination-nav-label">revdeprun 2.1.0: hunting bottlenecks and a new speedrun record »</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
                                 </div>
-                            </a>
+                            </div>
                             
                         </div>
                     </div>

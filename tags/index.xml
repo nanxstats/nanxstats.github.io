@@ -6,13 +6,83 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Dec 2025 23:57:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Dec 2025 19:01:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>automation</title>
       <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
       <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>developer experience</title>
+      <link>https://nanx.me/tags/developer-experience/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/developer-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>integration testing</title>
+      <link>https://nanx.me/tags/integration-testing/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/integration-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>monkey patching</title>
+      <link>https://nanx.me/tags/monkey-patching/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/monkey-patching/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pkgdepends</title>
+      <link>https://nanx.me/tags/pkgdepends/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pkgdepends/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>reverse dependency</title>
+      <link>https://nanx.me/tags/reverse-dependency/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/reverse-dependency/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://nanx.me/tags/rust/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>speedrun</title>
+      <link>https://nanx.me/tags/speedrun/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/speedrun/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>xfun</title>
+      <link>https://nanx.me/tags/xfun/</link>
+      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/xfun/</guid>
       <description></description>
     </item>
     <item>
@@ -27,13 +97,6 @@
       <link>https://nanx.me/tags/coding-fonts/</link>
       <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
       <guid>https://nanx.me/tags/coding-fonts/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>developer experience</title>
-      <link>https://nanx.me/tags/developer-experience/</link>
-      <pubDate>Sat, 06 Dec 2025 23:57:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/developer-experience/</guid>
       <description></description>
     </item>
     <item>
@@ -86,52 +149,10 @@
       <description></description>
     </item>
     <item>
-      <title>integration testing</title>
-      <link>https://nanx.me/tags/integration-testing/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/integration-testing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>reverse dependency</title>
-      <link>https://nanx.me/tags/reverse-dependency/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/reverse-dependency/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust</title>
-      <link>https://nanx.me/tags/rust/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Rust packages</title>
       <link>https://nanx.me/tags/rust-packages/</link>
       <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
       <guid>https://nanx.me/tags/rust-packages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>speedrun</title>
-      <link>https://nanx.me/tags/speedrun/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/speedrun/</guid>
       <description></description>
     </item>
     <item>
@@ -146,13 +167,6 @@
       <link>https://nanx.me/tags/toolchain/</link>
       <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
       <guid>https://nanx.me/tags/toolchain/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>xfun</title>
-      <link>https://nanx.me/tags/xfun/</link>
-      <pubDate>Mon, 27 Oct 2025 17:42:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/xfun/</guid>
       <description></description>
     </item>
     <item>
@@ -426,13 +440,6 @@
       <link>https://nanx.me/tags/documentation/</link>
       <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
       <guid>https://nanx.me/tags/documentation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>monkey patching</title>
-      <link>https://nanx.me/tags/monkey-patching/</link>
-      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/monkey-patching/</guid>
       <description></description>
     </item>
     <item>
