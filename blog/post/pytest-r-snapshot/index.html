@@ -4,21 +4,26 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title> CICD - Nan Xiao | 肖楠 </title>
+    <title> pytest-r-snapshot: Verifying Python code against R outputs at scale - Nan Xiao | 肖楠 </title>
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="referrer" content="no-referrer">
-    <meta name="description" content="" />
+    <meta name="description" content="pytest-r-snapshot is a pytest plugin for snapshot testing Python code against reference outputs from R. It enables a portable workflow where you record snapshots locally with R, then replay them everywhere without R.
+" />
 
     
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:site_name" content="Nan Xiao | 肖楠" />
-    <meta property="og:url" content="https://nanx.me/tags/cicd/" />
-    <meta property="og:title" content="CICD" />
-    <meta property="og:description" content="" />
-    <meta property="og:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta property="og:image:secure_url" content="https://nanx.me/image/nanxiao.jpg" />
+    <meta property="og:url" content="https://nanx.me/blog/post/pytest-r-snapshot/" />
+    <meta property="og:title" content="pytest-r-snapshot: Verifying Python code against R outputs at scale" />
+    <meta property="og:description" content="pytest-r-snapshot is a pytest plugin for snapshot testing Python code against reference outputs from R. It enables a portable workflow where you record snapshots locally with R, then replay them everywhere without R.
+" />
+    <meta property="og:image" content="https://nanx.me/image/toa-heftiba-fI9exC1Z2bY-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/toa-heftiba-fI9exC1Z2bY-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-01-02T03:32:00Z" />
+    <meta property="article:modified_time" content="2026-01-02T03:32:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
 
     
     <meta name="twitter:card" content="summary_large_image" />
@@ -26,15 +31,16 @@
     <meta name="twitter:site" content="@nanxstats">
     <meta name="twitter:creator" content="@nanxstats">
     
-    <meta name="twitter:title" content="CICD" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="https://nanx.me/image/nanxiao.jpg" />
-    <meta name="twitter:image:alt" content="CICD" />
+    <meta name="twitter:title" content="pytest-r-snapshot: Verifying Python code against R outputs at scale" />
+    <meta name="twitter:description" content="pytest-r-snapshot is a pytest plugin for snapshot testing Python code against reference outputs from R. It enables a portable workflow where you record snapshots locally with R, then replay them everywhere without R.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/toa-heftiba-fI9exC1Z2bY-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="pytest-r-snapshot: Verifying Python code against R outputs at scale" />
 
     
     <meta property="og:linkedin:actor" content="nanxstats" />
 
-    <link rel="canonical" href="https://nanx.me/tags/cicd/">
+    <link rel="canonical" href="https://nanx.me/blog/post/pytest-r-snapshot/">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -49,8 +55,6 @@
     <link rel="shortcut icon"
         href="https://nanx.me/image/favicon.png">
 
-    
-    <link href="https://nanx.me/tags/cicd/index.xml" rel="alternate" type="application/rss+xml" title="Nan Xiao | 肖楠" />
     
 </head>
 
@@ -78,7 +82,7 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-blog"
+                                <a class="nav-link text-blog active"
                                     href="https://nanx.me/blog/">
                                     
                                     Blog
@@ -137,61 +141,230 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="mx-auto w-700">
-                <div class="markdown">
+                <h1 class="blog-post-title">pytest-r-snapshot: Verifying Python code against R outputs at scale</h1>
+
+                <div class="mb-md-4 meta">
+                    
+                    
+                    <span class="author" title="Nan Xiao">
+                        Nan Xiao
+                    </span>
+                    
+                    
+
+                    <span class="date middot" title='Fri Jan 2 2026 03:32:00 UTC'>
+                        January 2, 2026
+                    </span>
+
+                    <span class="reading-time middot">
+                        4 min read
+                    </span>
+
+                    <div class="d-none d-md-block mt-2 tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/python">Python</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/python-packages">Python packages</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/pytest">pytest</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/snapshot-testing">snapshot testing</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/test-driven-development">test-driven development</a>
+                            </li>
+                            
+                            <li class="d-inline">
+                                <a href="https://nanx.me/tags/cicd">CICD</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-md-inline tags">
+                        <ul class="list-unstyled d-inline">
+                            
+                            
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="markdown blog-post-content">
                     
     
 
 
+<div class="float">
+<img src="https://nanx.me/image/toa-heftiba-fI9exC1Z2bY-unsplash.jpg" alt="An earthy, minimalist display blending textured art with dried and fresh botanicals. Photo by Toa Heftiba." />
+<div class="figcaption">An earthy, minimalist display blending textured art with dried and fresh
+botanicals.<br />
+Photo by <a href="https://unsplash.com/photos/fI9exC1Z2bY">Toa Heftiba</a>.</div>
+</div>
+<p>First package in the new year: I’m glad to announce <a href="https://nanx.me/pytest-r-snapshot/">pytest-r-snapshot</a>,
+a pytest plugin for snapshot testing Python code against reference outputs
+generated by R.</p>
+<p>You can install it from <a href="https://pypi.org/project/pytest-r-snapshot/">PyPI</a>:</p>
+<pre class="bash"><code>pip install pytest-r-snapshot</code></pre>
+<p>If your project uses <a href="https://docs.astral.sh/uv/">uv</a>, add it as a development dependency:</p>
+<pre class="bash"><code>uv add --dev pytest-r-snapshot</code></pre>
+<div id="why-snapshot-testing-against-r" class="section level2">
+<h2>Why snapshot testing against R?</h2>
+<p>When you’re writing Python code that needs to produce identical results
+to existing R code, testing becomes tricky.
+You <em>could</em> manually generate expected outputs from R and save them as fixtures
+with your tests, but that’s tedious and error-prone.
+You <em>could</em> require R and R packages in CI, but that adds infrastructure
+complexity and slows things down. What you really want is a way to record
+the ground truth once or regularly, commit it, and replay it everywhere.</p>
+<p>That’s exactly what pytest-r-snapshot does.</p>
+</div>
+<div id="workflow-ergonomics" class="section level2">
+<h2>Workflow ergonomics</h2>
+<p>The pytest plugin is designed for a portable workflow:</p>
+<ul>
+<li><strong>Record locally</strong> (requires R): run labeled R code chunks embedded in your
+Python tests and write snapshot files.</li>
+<li><strong>Replay everywhere</strong> (default; no R required): read committed snapshot
+files and compare them to Python outputs.</li>
+</ul>
+<p>The R code chunks live right next to your test assertions. This makes it easy
+to see and update what you’re testing against. The snapshots are stored as
+plain text files that get committed to version control, so CI runs fast
+without needing R.</p>
+<p>The best part? The R code blocks follow exactly the same syntax as labeled
+R Markdown code chunks, so you can easily copy-paste them from and to
+R Markdown or Quarto documents for prototyping and exploration.</p>
+</div>
+<div id="the-story-behind" class="section level2">
+<h2>The story behind</h2>
+<p>This plugin grew directly out of our work on
+<a href="https://pharmaverse.github.io/rtflite/">rtflite</a>, a Python package for
+generating RTF documents for clinical study reports. rtflite aims to
+match the output of the R package <a href="https://merck.github.io/r2rtf/">r2rtf</a>,
+which meant we needed a reliable way to verify that our Python implementation
+produced bitwise identical RTF files after normalization.</p>
+<p>We started with an ad hoc approach a year ago: manually running R scripts to
+generate reference outputs, saving them to fixture files, and writing custom
+code to compare against them. This setup worked, but the mechanism was fragile.
+The R code wasn’t version-controlled alongside the tests, updates were manual
+and easy to forget, and the whole setup was hard to understand for new contributors.</p>
+<p>pytest-r-snapshot formalizes this pattern. You embed the R code directly in
+your Python test file (as comments or in multiline docstrings), the plugin
+extracts and runs it when recording, and the snapshot files become the source
+of truth. When someone reads the test, they can see both the R code that
+produced the expected output and the Python code being tested.</p>
+<p>Since v2.5.1, the rtflite project has formally
+<a href="https://github.com/pharmaverse/rtflite/pull/181">migrated</a> to use
+pytest-r-snapshot, which simplified the test infrastructure considerably.</p>
+</div>
+<div id="how-it-works" class="section level2">
+<h2>How it works</h2>
+<p>The basic workflow is straightforward. In your test file, embed a labeled
+R code chunk as a comment or inside multiline docstrings:</p>
+<pre class="python"><code>def test_summary_matches_r(r_snapshot):
+    # ```{r, summary}
+    # x &lt;- c(1, 2, 3)
+    # summary(x)
+    # ```
+
+    actual = my_python_summary(...)
+    r_snapshot.assert_match_text(actual, name=&quot;summary&quot;)</code></pre>
+<p>When you run <code>pytest --r-snapshot=record</code>, the plugin extracts the R code,
+runs it, and saves the output to a snapshot file. After that, regular
+<code>pytest</code> runs compare your Python output against the recorded snapshot,
+without needing R at all.</p>
+<p>The plugin supports three modes:</p>
+<ul>
+<li><code>replay</code> (default): never runs R; fails if the snapshot is missing.</li>
+<li><code>record</code>: always runs R and overwrites snapshots.</li>
+<li><code>auto</code>: runs R only when a snapshot is missing.</li>
+</ul>
+<p>You can configure the R execution environment (which <code>Rscript</code> to use,
+working directory, environment variables, timeout) either through
+command-line options, or pytest configuration in <code>pyproject.toml</code> or
+<code>conftest.py</code>.</p>
+</div>
+<div id="when-to-use-pytest-r-snapshot" class="section level2">
+<h2>When to use pytest-r-snapshot</h2>
+<p>This pytest plugin is particularly useful when you’re:
+porting R packages to Python and need to verify equivalence;
+maintaining parallel implementations in both languages;
+or building Python tools that need to interoperate with R-based systems.</p>
+<p>It’s probably overkill if you just need to test a few simple functions.
+But when you’re systematically porting a substantial R codebase, having
+automated, version-controlled snapshot tests against the R reference
+implementation makes the whole process much more tractable in the long run.</p>
+</div>
+<div id="learn-more" class="section level2">
+<h2>Learn more</h2>
+<p>The <a href="https://nanx.me/pytest-r-snapshot/">documentation site</a>
+(now built with Zensical!) covers installation, configuration,
+and usage patterns in detail.
+If you run into issues or have suggestions, please
+<a href="https://github.com/nanxstats/pytest-r-snapshot/issues">open an issue</a> on GitHub.</p>
+</div>
+
+
+
                 </div>
 
-                <div class="posts">
-                    <h1>Posts about CICD</h1>
-                    <hr>
-                    <ul class="list-unstyled">
-                        
-                        <li class="groupby">2026</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/pytest-r-snapshot/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    pytest-r-snapshot: Verifying Python code against R outputs at scale
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    Jan 02, 2026
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                        <li class="groupby">2025</li>
-                        
-                        <li class="post-item">
-    <a href="https://nanx.me/blog/post/pkgdown-offline/">
-        <div class="inner-post-item">
-            <div class="row">
-                <div class="col-md-10 meta-title">
-                    pkgdown.offline: Build pkgdown websites without an internet connection
-                </div>
-                <div class="col-md-2 meta-date text-md-end">
-                    May 10, 2025
-                </div>
-            </div>
-        </div>
-    </a>
-</li>
-                        
-                        
-                    </ul>
-                </div>
+                
+                <nav class="pagination-nav mt-4 mb-3" aria-label="Blog post navigation">
+                    <div class="row navigation-btns">
+                        <div class="col">
+                            
+                            <a href="https://nanx.me/blog/post/revdeprun-2-1-0/" class="btn btn-outline-nav btn-equal-height btn-prev w-100">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Previous</div>
+                                    <div class="pagination-nav-label">« revdeprun 2.1.0: hunting bottlenecks and a new speedrun record</div>
+                                </div>
+                            </a>
+                            
+                        </div>
+
+                        <div class="col">
+                            
+                            <div class="btn btn-equal-height btn-next w-100 invisible">
+                                <div class="btn-content">
+                                    <div class="pagination-nav-sublabel">Next</div>
+                                    <div class="pagination-nav-label">Placeholder</div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </nav>
+                
+
             </div>
         </div>
     </div>
 </div>
 
+<section id="comments">
+    <div class="py-3 content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="mx-auto w-700">
+                    <div class="comments">
+                        <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments"
+                            issue-term="pathname" label="comment" theme="github-light" crossorigin="anonymous" async>
+                            </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="footer mt-5">
     <div class="container">
 
@@ -293,12 +466,6 @@
                                 Colophon</a></li>
                         
 
-                        
-                        <li><a href="https://nanx.me/tags/cicd/index.xml" class="mr-0">
-                                <svg class="svg-icon mr-1">
-                                    <use xlink:href="#octicons-rss"></use>
-                                </svg>
-                                RSS</a></li>
                         
 
                         

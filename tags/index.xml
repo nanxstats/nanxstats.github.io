@@ -6,8 +6,50 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Dec 2025 19:01:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Jan 2026 03:32:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CICD</title>
+      <link>https://nanx.me/tags/cicd/</link>
+      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/cicd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>pytest</title>
+      <link>https://nanx.me/tags/pytest/</link>
+      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/pytest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python packages</title>
+      <link>https://nanx.me/tags/python-packages/</link>
+      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>snapshot testing</title>
+      <link>https://nanx.me/tags/snapshot-testing/</link>
+      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/snapshot-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>test-driven development</title>
+      <link>https://nanx.me/tags/test-driven-development/</link>
+      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/test-driven-development/</guid>
+      <description></description>
+    </item>
     <item>
       <title>automation</title>
       <link>https://nanx.me/tags/automation/</link>
@@ -219,20 +261,6 @@
       <description></description>
     </item>
     <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python packages</title>
-      <link>https://nanx.me/tags/python-packages/</link>
-      <pubDate>Thu, 25 Sep 2025 23:36:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python-packages/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>matplotlib</title>
       <link>https://nanx.me/tags/matplotlib/</link>
       <pubDate>Mon, 15 Sep 2025 02:05:00 +0000</pubDate>
@@ -426,13 +454,6 @@
       <link>https://nanx.me/tags/pydantic/</link>
       <pubDate>Tue, 03 Jun 2025 00:15:00 +0000</pubDate>
       <guid>https://nanx.me/tags/pydantic/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CICD</title>
-      <link>https://nanx.me/tags/cicd/</link>
-      <pubDate>Sat, 10 May 2025 01:02:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/cicd/</guid>
       <description></description>
     </item>
     <item>
@@ -660,13 +681,6 @@
       <description></description>
     </item>
     <item>
-      <title>snapshot testing</title>
-      <link>https://nanx.me/tags/snapshot-testing/</link>
-      <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/snapshot-testing/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>testthat</title>
       <link>https://nanx.me/tags/testthat/</link>
       <pubDate>Sun, 05 Jan 2025 22:58:00 +0000</pubDate>
@@ -692,13 +706,6 @@
       <link>https://nanx.me/tags/user-experience/</link>
       <pubDate>Tue, 17 Dec 2024 00:42:00 +0000</pubDate>
       <guid>https://nanx.me/tags/user-experience/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>pytest</title>
-      <link>https://nanx.me/tags/pytest/</link>
-      <pubDate>Wed, 04 Dec 2024 21:53:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/pytest/</guid>
       <description></description>
     </item>
     <item>

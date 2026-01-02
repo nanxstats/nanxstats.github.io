@@ -2,16 +2,40 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/cicd/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/pytest/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/pytest-r-snapshot/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python-packages/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/snapshot-testing/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/test-driven-development/</loc>
+    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/tags/automation/</loc>
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/developer-experience/</loc>
-    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/integration-testing/</loc>
@@ -39,9 +63,6 @@
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/speedrun/</loc>
-    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/xfun/</loc>
@@ -114,12 +135,6 @@
     <lastmod>2025-09-25T23:36:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/plotnine/</loc>
-    <lastmod>2025-09-25T23:36:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python/</loc>
-    <lastmod>2025-09-25T23:36:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python-packages/</loc>
     <lastmod>2025-09-25T23:36:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/ggsci-python/</loc>
@@ -220,9 +235,6 @@
   </url><url>
     <loc>https://nanx.me/tags/pydantic/</loc>
     <lastmod>2025-06-03T00:15:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/cicd/</loc>
-    <lastmod>2025-05-10T01:02:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/documentation/</loc>
     <lastmod>2025-05-10T01:02:00+00:00</lastmod>
@@ -344,9 +356,6 @@
     <loc>https://nanx.me/blog/post/testthat-snapshot-monkey-patch/</loc>
     <lastmod>2025-01-05T22:58:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/snapshot-testing/</loc>
-    <lastmod>2025-01-05T22:58:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/testthat/</loc>
     <lastmod>2025-01-05T22:58:00+00:00</lastmod>
   </url><url>
@@ -361,9 +370,6 @@
   </url><url>
     <loc>https://nanx.me/tags/user-experience/</loc>
     <lastmod>2024-12-17T00:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/pytest/</loc>
-    <lastmod>2024-12-04T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-engineering/</loc>
     <lastmod>2024-12-04T21:53:00+00:00</lastmod>
