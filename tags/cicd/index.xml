@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 02 Jan 2026 03:32:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/cicd/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>pytest-r-snapshot: Verifying Python code against R outputs at scale</title>
+      <title>Introducing pytest-r-snapshot: Verifying Python code against R outputs at scale</title>
       <link>https://nanx.me/blog/post/pytest-r-snapshot/</link>
       <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/pytest-r-snapshot/</guid>

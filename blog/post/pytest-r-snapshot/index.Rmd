@@ -1,5 +1,5 @@
 ---
-title: "pytest-r-snapshot: Verifying Python code against R outputs at scale"
+title: "Introducing pytest-r-snapshot: Verifying Python code against R outputs at scale"
 author: "Nan Xiao"
 date: "2026-01-02T03:32:00"
 slug: pytest-r-snapshot
