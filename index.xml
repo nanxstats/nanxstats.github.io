@@ -762,7 +762,7 @@
       <link>https://nanx.me/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://nanx.me/about/</guid>
-      <description>I am a statistician at Merck &amp;amp; Co., Inc., Rahway, NJ, USA in Biostatistics and Research Decision Sciences (BARDS), Methodology Research, led by Keaven M. Anderson. I also contribute to cross-industry initiatives including the R Consortium Infrastructure Steering Committee, R Submissions Working Group, and pharmaverse.&#xA;My work sits at the intersection of statistical methodology and research software engineering. Interests include sparse linear models, representation learning, and developer tooling. I build software in R, Python, TypeScript, and Rust.</description>
+      <description>I&amp;rsquo;m a statistician in Methodology Research, led by Keaven M. Anderson, at Merck &amp;amp; Co., Inc., Rahway, NJ, USA. I work on problems at the intersection of statistical methodology and research software engineering. My focus is on building software infrastructure that makes late-stage clinical development efficient and reliable.&#xA;I serve on the R Consortium Infrastructure Steering Committee and contribute to the R Submissions Working Group, which pioneered the first successful open source R submission pilot to the FDA.</description>
     </item>
     <item>
       <title>Books</title>
