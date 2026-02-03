@@ -3,12 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/cicd/</loc>
-    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/coding-fonts/</loc>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ligaturizer/</loc>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/monospaced-font/</loc>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/noto-sans-mono-ligaturized/</loc>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/programming-ligatures/</loc>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/cicd/</loc>
     <lastmod>2026-01-02T03:32:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/pytest-r-snapshot/</loc>
@@ -24,9 +42,6 @@
     <lastmod>2026-01-02T03:32:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/snapshot-testing/</loc>
-    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-01-02T03:32:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/test-driven-development/</loc>
@@ -71,22 +86,10 @@
     <loc>https://nanx.me/tags/awk/</loc>
     <lastmod>2025-12-06T23:57:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/coding-fonts/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/dm-mono-ligaturized/</loc>
     <lastmod>2025-12-06T23:57:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/ligaturizer/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/makefile/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/monospaced-font/</loc>
-    <lastmod>2025-12-06T23:57:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/programming-ligatures/</loc>
     <lastmod>2025-12-06T23:57:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/readability/</loc>

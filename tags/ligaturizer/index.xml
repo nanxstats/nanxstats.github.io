@@ -6,8 +6,15 @@
     <description>Recent content in Ligaturizer on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 06 Dec 2025 23:57:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Feb 2026 20:11:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/ligaturizer/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Noto Sans Mono with Fira Code ligatures</title>
+      <link>https://nanx.me/blog/post/noto-sans-mono-ligaturized/</link>
+      <pubDate>Mon, 02 Feb 2026 20:11:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/noto-sans-mono-ligaturized/</guid>
+      <description>Following my ligaturized DM Mono project, I’ve applied the same idea to Noto Sans Mono. You can download it from GitHub: nanxstats/noto-sans-mono-ligaturized.&#xA;Liga Noto Sans Mono in action: Running brew info in Ghostty. Theme: Dracula+. Why Noto Sans Mono? Noto Sans Mono is designed by Steve Matteson and is the monospaced member of the Noto type family. Its design is closely related to Open Sans, one of the most popular humanist sans-serif typefaces on the web.</description>
+    </item>
     <item>
       <title>DM Mono with Fira Code ligatures</title>
       <link>https://nanx.me/blog/post/dm-mono-ligaturized/</link>

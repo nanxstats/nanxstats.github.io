@@ -1,0 +1,128 @@
+---
+title: "Noto Sans Mono with Fira Code ligatures"
+author: "Nan Xiao"
+date: "2026-02-02T20:11:00"
+slug: noto-sans-mono-ligaturized
+categories: []
+tags:
+  - monospaced font
+  - coding fonts
+  - programming ligatures
+  - Ligaturizer
+meta_img: "image/noto-sans-mono-ligaturized-ghostty.png"
+description: >
+  Add Fira Code ligatures to Noto Sans Mono for a familiar but enhanced coding experience.
+---
+
+Following my [ligaturized DM Mono](/blog/post/dm-mono-ligaturized/) project,
+I've applied the same idea to
+[Noto Sans Mono](https://fonts.google.com/noto/specimen/Noto+Sans+Mono).
+You can download it from GitHub:
+[nanxstats/noto-sans-mono-ligaturized](https://github.com/nanxstats/noto-sans-mono-ligaturized).
+
+![Liga Noto Sans Mono in action: Running `brew info` in Ghostty. Theme: Dracula+.
+](/image/noto-sans-mono-ligaturized-ghostty.png)
+
+```{css, echo=FALSE}
+@font-face {
+    font-display: swap;
+    font-family: "Liga Noto Sans Mono Medium";
+    src: url("fonts/LigaNotoSansMono-Medium.woff2") format("woff2");
+    font-weight: 400;
+}
+
+.font-liga-noto-sans-mono pre code {
+    font-family: "Liga Noto Sans Mono Medium" !important;
+    font-feature-settings: normal !important;
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+}
+
+.font-liga-noto-sans-mono-nolig pre code {
+    font-family: "Liga Noto Sans Mono Medium" !important;
+    font-feature-settings: normal !important;
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+    font-variant-ligatures: none !important;
+}
+```
+
+## Why Noto Sans Mono?
+
+Noto Sans Mono is designed by Steve Matteson and is the monospaced member of the
+Noto type family. Its design is closely related to
+[Open Sans](https://fonts.google.com/specimen/Open+Sans),
+one of the most popular humanist sans-serif typefaces on the web.
+
+This heritage gives Noto Sans Mono a clean, neutral, and familiar feel.
+While DM Mono might have distinctive design characteristics in glyphs like
+`0 @ [ ] f j k`, Noto Sans Mono takes the opposite approach: it stays
+out of your way. There is not a single glyph that demands attention
+(which is, apparently, all you need).
+
+<div class="font-liga-noto-sans-mono">
+
+```text
+a b c d e f g h i j k l m n
+o p q r s t u v w x y z
+A B C D E F G H I J K L M N
+O P Q R S T U V W X Y Z
+0 1 2 3 4 5 6 7 8 9
+[ ] { } ( ) < > + - * / ^ =
+! ? @ % & # $ ~ ` ; : , .
+```
+
+</div>
+
+## Adding ligatures
+
+The build uses [ToxicFrog/Ligaturizer](https://github.com/ToxicFrog/Ligaturizer)
+with the same, one
+[Makefile](https://github.com/nanxstats/noto-sans-mono-ligaturized/blob/main/Makefile)
+approach as the DM Mono ligaturized project.
+Since Noto Sans Mono has no italic variants, the output is four font files:
+light, regular, medium, and bold weights.
+
+Here are some sample ligatures after patching:
+
+<div class="font-liga-noto-sans-mono">
+
+```text
+<- -> => ==> |> :: :::
+== != >= <= === || //
+```
+
+</div>
+
+And without ligatures for comparison:
+
+<div class="font-liga-noto-sans-mono-nolig">
+
+```text
+<- -> => ==> |> :: :::
+== != >= <= === || //
+```
+
+</div>
+
+The same [opinionated ligature exclusions](/blog/post/dm-mono-ligaturized/#opinionated-defaults)
+apply here: sequences like `&&`, `??`, and `;;` render as separate characters
+to avoid visual noise.
+
+## Setup
+
+For VS Code:
+
+```json
+"editor.fontFamily": "'Liga Noto Sans Mono', monospace",
+"editor.fontLigatures": "'calt', 'liga'",
+```
+
+For Ghostty:
+
+```text
+font-family = Liga Noto Sans Mono
+```
+
+If once a while you need a ligaturized coding font that naturally blends in
+rather than stands out, give this a try.
