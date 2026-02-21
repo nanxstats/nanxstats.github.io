@@ -13,6 +13,7 @@
     src: url("fonts/InstrumentSans-VF.woff2") format("woff2");
     font-weight: 400 700;
     font-style: normal;
+    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
 }
 
 @font-face {
@@ -21,6 +22,7 @@
     src: url("fonts/InstrumentSans-Italic-VF.woff2") format("woff2");
     font-weight: 400 700;
     font-style: italic;
+    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
 }
 
 @font-face {
@@ -131,7 +133,6 @@ hr {
 
 .content .caption {
     font-family: "Instrument Sans", sans-serif;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
     font-weight: 400;
     font-size: 0.9375rem;
     color: #71717a;
@@ -149,7 +150,6 @@ hr {
 
 .content .figcaption {
     font-family: "Instrument Sans", sans-serif;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
     font-weight: 400;
     font-size: 0.9375rem;
     color: #71717a;
@@ -166,7 +166,6 @@ hr {
 
 .content .taxonomy-term {
     font-family: "Instrument Sans", sans-serif;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
     font-weight: 500;
     font-size: 1.25rem;
     letter-spacing: normal;
@@ -190,7 +189,6 @@ hr {
     text-decoration: none;
     padding: 1.25rem;
     font-family: "Instrument Sans", sans-serif;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
     font-weight: 400;
     font-size: 1rem;
     letter-spacing: normal;
@@ -246,7 +244,6 @@ hr {
 
 .footer {
     font-family: "Instrument Sans", sans-serif;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
     font-weight: 500;
     font-size: 1.0625rem;
     letter-spacing: -0.3px;
