@@ -1,0 +1,97 @@
+---
+title: "Intellectual Minimalism"
+author: "Nan Xiao"
+date: "2026-02-22T22:05:00"
+slug: intellectual-minimalism
+categories: []
+tags:
+  - Hugo
+  - theme
+  - web design
+  - web typography
+  - Tufte CSS
+  - Tailwind CSS
+  - vibe refactoring
+  - Agentic AI
+  - Antigravity
+  - Gemini
+meta_img: "image/olivie-strauss-x9VOwqhGdyI-unsplash.jpg"
+description: >
+  A redesign of this site's Hugo theme, migrating from Bootstrap to Tailwind CSS.
+  The real work was figuring out what the site wanted to feel like.
+---
+
+Over the weekend, I gave this site a new look.
+The [Hugo theme](https://github.com/nanxstats/hugo-nanx2026) has been
+migrated from Bootstrap to Tailwind CSS, but honestly,
+the framework change was the least interesting part.
+The interesting part was the excuse it gave me to rethink what
+a personal site should feel like in the age of intelligence abundance.
+
+![A wall with dried flowers and a straw hat.
+Photo by [Olivie Strauss](https://unsplash.com/photos/x9VOwqhGdyI).
+](/image/olivie-strauss-x9VOwqhGdyI-unsplash.jpg)
+
+## What do I want the site to feel like?
+
+The concept of "look and feel" sounds simple but can be too subtle to describe
+accurately. You know good design when you see it, but describing _why_
+it works is difficult.
+When I asked Gemini to characterize the aesthetic I was searching for,
+it offered the phrase **Intellectual Minimalism**, and I thought:
+yes, that's exactly it.
+
+The previous version of this site was minimal, but in an accidental way.
+It was minimal the way a blank wall is minimal and information was
+arranged on the page through a path of least resistance.
+What I wanted instead was the kind of minimalism you find in a
+[Tufte CSS](https://edwardtufte.github.io/tufte-css/) layout or the
+research blog of a frontier AI lab: every element present for a reason,
+nothing competing for your attention (all you need), and a quiet sense of care
+in the negative space.
+
+## Typography, same but better
+
+The single biggest design decision was the typography.
+I chose to inherit the same typefaces from before, but with better
+layout and more deliberate use of size, weight, and color to establish
+information hierarchy.
+
+The body text is set in a classical serif
+([Martina Plantijn](https://klim.co.nz/fonts/martina-plantijn/)) that gives the
+prose a warm, editorial quality for reading. Headings and navigation use a
+neo-grotesque sans-serif with tight letter spacing, which creates just enough
+contrast with the body text to establish hierarchy without shouting.
+Code gets its own custom monospace typeface with coding ligatures.
+
+## Whitespace as active design
+
+The color palette is deliberately constrained: off-white paper,
+near-black ink, a scale of zinc grays for secondary elements, and
+crimson for links and interactive touches.
+
+One famous opinion from Tufte is that white space is not the absence of design.
+It is the design. The center content column is now capped at 65 characters,
+which is the typographic sweet spot for comfortable reading with generous
+margins on both sides.
+The vertical spacing is similarly deliberate.
+Sections now have enough space between them that your eye can rest,
+but not so much that the page feels empty.
+
+## Evolving agentic AI coding tools
+
+Since this was a visual refactoring task, I used Google Antigravity and
+Gemini to make it happen. The browser extension lets the model see what is
+rendered in the browser and verify changes autonomously, which closes the
+loop that [we had to close manually](/blog/post/claude-code-vibe-refactor/)
+just last summer.
+The tools have gotten remarkably good at the _how_.
+The _what_ and the _why_ are still on us (for now).
+
+## Beige forever
+
+I started this redesign thinking it would take a few hours.
+It took a weekend. It was because I kept fiddling with the
+shade of off-white.
+
+I guess we will never run out of beige!

@@ -2,13 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/agentic-ai/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/coding-fonts/</loc>
-    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/antigravity/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/gemini/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/hugo/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/intellectual-minimalism/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/tailwind-css/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/theme/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/tufte-css/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/vibe-refactoring/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/web-design/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/web-typography/</loc>
+    <lastmod>2026-02-22T22:05:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/coding-fonts/</loc>
     <lastmod>2026-02-02T20:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/ligaturizer/</loc>
@@ -21,9 +57,6 @@
     <lastmod>2026-02-02T20:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/programming-ligatures/</loc>
-    <lastmod>2026-02-02T20:11:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-02-02T20:11:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/cicd/</loc>
@@ -197,9 +230,6 @@
     <loc>https://nanx.me/tags/vs-code-extension/</loc>
     <lastmod>2025-08-15T01:32:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/agentic-ai/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/buildapc/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
@@ -213,12 +243,6 @@
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/claude-code-vibe-refactor/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/tailwind-css/</loc>
-    <lastmod>2025-06-13T01:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/vibe-refactoring/</loc>
     <lastmod>2025-06-13T01:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/free-threading/</loc>
@@ -273,9 +297,6 @@
     <lastmod>2025-04-21T22:35:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/variable-fonts/</loc>
-    <lastmod>2025-04-21T22:35:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/web-typography/</loc>
     <lastmod>2025-04-21T22:35:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/anti-pattern/</loc>
@@ -740,9 +761,6 @@
     <loc>https://nanx.me/tags/textmate/</loc>
     <lastmod>2023-01-02T20:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/theme/</loc>
-    <lastmod>2023-01-02T20:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/ectd-pkglite-paper/</loc>
     <lastmod>2022-09-28T11:30:00+00:00</lastmod>
   </url><url>
@@ -858,9 +876,6 @@
     <lastmod>2022-03-30T22:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/link-checker/</loc>
-    <lastmod>2022-02-22T20:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/hugo/</loc>
     <lastmod>2022-02-22T20:00:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/font-variant-numeric/</loc>
