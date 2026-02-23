@@ -24,10 +24,6 @@ description: >
   started with tinytopics.
 ---
 
-```{css, echo=FALSE}
-.content .blog-post-title { font-size: 2.25rem; letter-spacing: -1px; }
-```
-
 ![Downhill mountain biking.
 Photo by [Tim Foster](https://unsplash.com/photos/jhovC0t8f-8).
 ](/image/tim-foster-jhovC0t8f-8-unsplash.jpg)

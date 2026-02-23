@@ -19,8 +19,6 @@ description: >
   simpler and more parsimonious models.
 ---
 
-<style>.content .blog-post-title { letter-spacing: -1.3px; }</style>
-
 > The code to reproduce the results in this post is also available
 > [here](https://gist.github.com/nanxstats/43ef32acbff6e946637fdda24a052710).
 
