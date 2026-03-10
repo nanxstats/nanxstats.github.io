@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Becoming a Vibe Maintainer - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="I started using AI agents to maintain the awesome-shiny-extensions list: a case study in taste, harness engineering, and the surprising elegance of letting go.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/vibe-maintainer/" />
+    <meta property="og:title" content="Becoming a Vibe Maintainer" />
+    <meta property="og:description" content="I started using AI agents to maintain the awesome-shiny-extensions list: a case study in taste, harness engineering, and the surprising elegance of letting go.
+" />
+    <meta property="og:image" content="https://nanx.me/image/lambert-huang-xGTUGeCQDhU-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/lambert-huang-xGTUGeCQDhU-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-03-10T03:45:00Z" />
+    <meta property="article:modified_time" content="2026-03-10T03:45:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Becoming a Vibe Maintainer" />
+    <meta name="twitter:description" content="I started using AI agents to maintain the awesome-shiny-extensions list: a case study in taste, harness engineering, and the surprising elegance of letting go.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/lambert-huang-xGTUGeCQDhU-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="Becoming a Vibe Maintainer" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/vibe-maintainer/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased selection:bg-zinc-200">
+    
+<header class="py-8 lg:py-12 text-sm font-sans tracking-wide max-w-[71ch] mx-auto w-full px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0">
+        <a href="https://nanx.me/" class="font-medium text-ink hover:text-accent transition-colors">
+            Nan Xiao
+        </a>
+        <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+            
+            
+            <a class="text-ink font-medium"
+                href="https://nanx.me/blog/">
+                Blog
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/software/">
+                Software
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/papers/">
+                Papers
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/talks/">
+                Talks
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/books/">
+                Books
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/about/">
+                About
+            </a>
+            
+        </nav>
+    </div>
+</header>
+
+<main class="content my-10 max-w-[69ch] mx-auto w-full px-4 sm:px-6">
+    <article>
+        <header class="mb-14">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-medium mb-4">Becoming a Vibe Maintainer</h1>
+
+            <div class="text-zinc-500 font-sans text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Tue Mar 10 2026 03:45:00 UTC'>
+                    March 10, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    5 min read
+                </span>
+
+                <div class="mt-8 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/shiny"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-medium tracking-wide">
+                        shiny
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/r"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-medium tracking-wide">
+                        R
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/python"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-medium tracking-wide">
+                        Python
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/agentic-ai"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-medium tracking-wide">
+                        Agentic AI
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/harness-engineering"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-medium tracking-wide">
+                        harness engineering
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/ralph-wiggum-loop"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-medium tracking-wide">
+                        Ralph Wiggum loop
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<p>Back in 2018, I started <a href="https://github.com/nanxstats/awesome-shiny-extensions">awesome-shiny-extensions</a>,
+a curated list of Shiny extension packages in R (and now +Python).
+What began as a small collection of around 130 packages has grown into
+something much bigger than I expected: nearly 500 packages and 1.6k GitHub stars.
+But I will be honest: for the last couple of years, I have been what you might
+call “vibe maintaining” this list. I update it when I feel like it,
+which means not very often.</p>
+<div class="float">
+<img src="https://nanx.me/image/lambert-huang-xGTUGeCQDhU-unsplash.jpg" alt="Toucan! Photo by Lambert Huang." />
+<div class="figcaption">Toucan!
+Photo by <a href="https://unsplash.com/photos/xGTUGeCQDhU">Lambert Huang</a>.</div>
+</div>
+<p>The fact is, maintaining an awesome list is not glamorous work.
+It is the kind of task that sits in the middle ground between too important
+to abandon and too tedious to prioritize.
+You need to understand what you are looking at, write concise but useful
+descriptions, make judgment calls about categorization, but none of it is
+intellectually demanding enough to be satisfying.</p>
+<p>So I did what reasonable engineers would do in 2026: asking AI agent
+to do it for me.</p>
+<div id="setting-the-table" class="section level2">
+<h2>Setting the table</h2>
+<p>To do the work well, it is quite obvious that the hardest part is to give the
+right context to the agent. In the repo, I set up an <code>updater/</code> directory
+with three things: a script to pull the latest reverse imports of the shiny
+package from CRAN, the resulting data, and a prompt.</p>
+<pre class="text"><code>├── awesome-shiny-extensions.Rproj
+├── LICENSE
+├── logo.png
+├── README.md
+└── updater
+    ├── get-shiny-revdep.R
+    ├── shiny-revdep.tsv
+    └── prompts.md</code></pre>
+<p>The prompt gives the agent just enough structure to get started: here is
+the existing list, here is the universe of candidate packages, and here are
+a few heuristics for differentiating Shiny extensions from Shiny
+applications distributed as R packages <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>.</p>
+<p>Then I pipe it into Claude Code:</p>
+<pre class="bash"><code>cat updater/prompts.md | claude</code></pre>
+<p>That’s it.</p>
+<p>What happened next was more interesting than I expected.
+The agent explored the repo with some bash commands, realized there were
+hundreds of candidates to evaluate, and launched several subagents to
+parallelize the work.
+Each subagent took a slice of the package list, checked <code>DESCRIPTION</code> and
+<code>NAMESPACE</code> files on CRAN, and reported back.
+The main agent then sequentially edited <code>README.md</code> section by section,
+verified the results, and wrapped up.
+8.5 minutes later, 70+ new packages were added to the list.</p>
+<p>I want to reflect on a few things this experience told me,
+because I think they point toward something larger about how we will work
+with AI going forward.</p>
+</div>
+<div id="taste-as-a-default" class="section level2">
+<h2>Taste as a default</h2>
+<p>The basic requirement here on correctly deciding which packages qualify as Shiny
+extensions is straightforward. What surprised me was the agent’s behavior
+in the gray areas where I had not given explicit instructions.</p>
+<p>For example, link selection. For each package, the agent needed to choose
+which URL to use: the GitHub repo, the pkgdown site, or the CRAN page.
+Without being told, it consistently preferred GitHub URLs, fell back to
+documentation sites, and used CRAN pages only as a last resort.
+This is exactly what I would have done.
+It is a small detail, but it reflects the kind of good default judgment
+that makes the difference between output you want to use and output you have to fix.</p>
+<p>A final round of fact-checking and manual corrections by me (the human) was
+still needed, but the gap between “raw output” and “publishable result”
+was really small.
+This is where things get exciting: not because AI has perfect taste,
+but because it has <strong>good enough taste</strong> on mundane problems,
+which frees you up to apply your own taste where it actually matters.</p>
+</div>
+<div id="harness-engineering" class="section level2">
+<h2>Harness engineering</h2>
+<p>There is a new concept from the
+<a href="https://openai.com/index/harness-engineering/">OpenAI blog post</a> called
+“harness engineering” that I think captures a good mental model for this
+kind of work. The idea is simple: instead of micromanaging the agent,
+we should invest our human efforts in two places.
+First, set up the right starting context by giving the agent a map.
+Second, make verification easy by giving the agent good environments.
+Everything in between, let the agent figure out!</p>
+<p>In our case, almost all the human effort went into that first part:
+writing a clean script to pull reverse dependencies from CRAN, and
+writing a prompt that communicated the goal of the task, not just the mechanics.
+The verification part could be automated further. The repo already has
+the “awesome linter” and “awesome bot” GitHub Actions workflows, but for now,
+I prefer to keep the final sign-off controlled by human.
+Because passing CI is only one form of verification, while the ultimate
+verification here is more about maintaining the editorial voice that makes
+an awesome list worth following.</p>
+</div>
+<div id="the-ralph-wiggum-loop" class="section level2">
+<h2>The Ralph Wiggum loop</h2>
+<p>Here is where it gets philosophically interesting:</p>
+<p>This whole setup is naturally a loop.<br />
+Run the script to refresh the data.<br />
+Pipe the prompt into the agent.<br />
+Review and merge the result.<br />
+Repeat on whatever vibe feels right.</p>
+<p>This is what Geoffrey Huntley calls a <a href="https://ghuntley.com/loop/">Ralph Wiggum loop</a>.
+The memory is persisted in the artifact itself (<code>README.md</code>).
+Each iteration picks up where the last one left off, because the agent reads
+the current list before deciding what to add.</p>
+<p>As what I often say about architecture: if you want to do something big,
+you have to go simple.
+At the end of the day, even the most sophisticated agent workflow reduces to
+a <code>while</code> loop with a good prompt and a reliable source of truth.</p>
+<p>Maybe that is the real lesson here.
+The best use of AI is simple: finding the tedious but important tasks you have
+been neglecting, set up just enough structure for an agent to handle them well,
+and then get back to the work that actually needs you.</p>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Shiny extension packages tend to export <code>render*()</code> and <code>*Output()</code>
+functions, which can be easily checked by accessing its <code>NAMESPACE</code> file on CRAN.
+For example, <a href="https://cran.r-project.org/web/packages/ggsci/NAMESPACE">ggsci</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/intellectual-minimalism/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Intellectual Minimalism</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="mx-auto max-w-[69ch] w-full px-4 sm:px-6">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="mt-20 mb-10 text-center font-sans text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+
+    
+</body>
+
+</html>

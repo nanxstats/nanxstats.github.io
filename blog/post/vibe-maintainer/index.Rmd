@@ -1,0 +1,157 @@
+---
+title: "Becoming a Vibe Maintainer"
+author: "Nan Xiao"
+date: "2026-03-10T03:45:00"
+slug: vibe-maintainer
+categories: []
+tags:
+  - shiny
+  - R
+  - Python
+  - Agentic AI
+  - harness engineering
+  - Ralph Wiggum loop
+meta_img: "image/lambert-huang-xGTUGeCQDhU-unsplash.jpg"
+description: >
+  I started using AI agents to maintain the awesome-shiny-extensions list:
+  a case study in taste, harness engineering, and the surprising
+  elegance of letting go.
+---
+
+Back in 2018, I started [awesome-shiny-extensions](https://github.com/nanxstats/awesome-shiny-extensions),
+a curated list of Shiny extension packages in R (and now +Python).
+What began as a small collection of around 130 packages has grown into
+something much bigger than I expected: nearly 500 packages and 1.6k GitHub stars.
+But I will be honest: for the last couple of years, I have been what you might
+call "vibe maintaining" this list. I update it when I feel like it,
+which means not very often.
+
+![Toucan!
+Photo by [Lambert Huang](https://unsplash.com/photos/xGTUGeCQDhU).
+](/image/lambert-huang-xGTUGeCQDhU-unsplash.jpg)
+
+The fact is, maintaining an awesome list is not glamorous work.
+It is the kind of task that sits in the middle ground between too important
+to abandon and too tedious to prioritize.
+You need to understand what you are looking at, write concise but useful
+descriptions, make judgment calls about categorization, but none of it is
+intellectually demanding enough to be satisfying.
+
+So I did what reasonable engineers would do in 2026: asking AI agent
+to do it for me.
+
+## Setting the table
+
+To do the work well, it is quite obvious that the hardest part is to give the
+right context to the agent. In the repo, I set up an `updater/` directory
+with three things: a script to pull the latest reverse imports of the shiny
+package from CRAN, the resulting data, and a prompt.
+
+```text
+├── awesome-shiny-extensions.Rproj
+├── LICENSE
+├── logo.png
+├── README.md
+└── updater
+    ├── get-shiny-revdep.R
+    ├── shiny-revdep.tsv
+    └── prompts.md
+```
+
+The prompt gives the agent just enough structure to get started: here is
+the existing list, here is the universe of candidate packages, and here are
+a few heuristics for differentiating Shiny extensions from Shiny
+applications distributed as R packages [^1].
+
+[^1]: Shiny extension packages tend to export `render*()` and `*Output()`
+functions, which can be easily checked by accessing its `NAMESPACE` file on CRAN.
+For example, [ggsci](https://cran.r-project.org/web/packages/ggsci/NAMESPACE).
+
+Then I pipe it into Claude Code:
+
+```bash
+cat updater/prompts.md | claude
+```
+
+That's it.
+
+What happened next was more interesting than I expected.
+The agent explored the repo with some bash commands, realized there were
+hundreds of candidates to evaluate, and launched several subagents to
+parallelize the work.
+Each subagent took a slice of the package list, checked `DESCRIPTION` and
+`NAMESPACE` files on CRAN, and reported back.
+The main agent then sequentially edited `README.md` section by section,
+verified the results, and wrapped up.
+8.5 minutes later, 70+ new packages were added to the list.
+
+I want to reflect on a few things this experience told me,
+because I think they point toward something larger about how we will work
+with AI going forward.
+
+## Taste as a default
+
+The basic requirement here on correctly deciding which packages qualify as Shiny
+extensions is straightforward. What surprised me was the agent's behavior
+in the gray areas where I had not given explicit instructions.
+
+For example, link selection. For each package, the agent needed to choose
+which URL to use: the GitHub repo, the pkgdown site, or the CRAN page.
+Without being told, it consistently preferred GitHub URLs, fell back to
+documentation sites, and used CRAN pages only as a last resort.
+This is exactly what I would have done.
+It is a small detail, but it reflects the kind of good default judgment
+that makes the difference between output you want to use and output you have to fix.
+
+A final round of fact-checking and manual corrections by me (the human) was
+still needed, but the gap between "raw output" and "publishable result"
+was really small.
+This is where things get exciting: not because AI has perfect taste,
+but because it has **good enough taste** on mundane problems,
+which frees you up to apply your own taste where it actually matters.
+
+## Harness engineering
+
+There is a new concept from the
+[OpenAI blog post](https://openai.com/index/harness-engineering/) called
+"harness engineering" that I think captures a good mental model for this
+kind of work. The idea is simple: instead of micromanaging the agent,
+we should invest our human efforts in two places.
+First, set up the right starting context by giving the agent a map.
+Second, make verification easy by giving the agent good environments.
+Everything in between, let the agent figure out!
+
+In our case, almost all the human effort went into that first part:
+writing a clean script to pull reverse dependencies from CRAN, and
+writing a prompt that communicated the goal of the task, not just the mechanics.
+The verification part could be automated further. The repo already has
+the "awesome linter" and "awesome bot" GitHub Actions workflows, but for now,
+I prefer to keep the final sign-off controlled by human.
+Because passing CI is only one form of verification, while the ultimate
+verification here is more about maintaining the editorial voice that makes
+an awesome list worth following.
+
+## The Ralph Wiggum loop
+
+Here is where it gets philosophically interesting:
+
+This whole setup is naturally a loop.\
+Run the script to refresh the data.\
+Pipe the prompt into the agent.\
+Review and merge the result.\
+Repeat on whatever vibe feels right.
+
+This is what Geoffrey Huntley calls a [Ralph Wiggum loop](https://ghuntley.com/loop/).
+The memory is persisted in the artifact itself (`README.md`).
+Each iteration picks up where the last one left off, because the agent reads
+the current list before deciding what to add.
+
+As what I often say about architecture: if you want to do something big,
+you have to go simple.
+At the end of the day, even the most sophisticated agent workflow reduces to
+a `while` loop with a good prompt and a reliable source of truth.
+
+Maybe that is the real lesson here.
+The best use of AI is simple: finding the tedious but important tasks you have
+been neglecting, set up just enough structure for an agent to handle them well,
+and then get back to the work that actually needs you.

@@ -6,13 +6,48 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 22 Feb 2026 22:05:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Mar 2026 03:45:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Agentic AI</title>
       <link>https://nanx.me/tags/agentic-ai/</link>
-      <pubDate>Sun, 22 Feb 2026 22:05:00 +0000</pubDate>
+      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
       <guid>https://nanx.me/tags/agentic-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>harness engineering</title>
+      <link>https://nanx.me/tags/harness-engineering/</link>
+      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/harness-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ralph Wiggum loop</title>
+      <link>https://nanx.me/tags/ralph-wiggum-loop/</link>
+      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ralph-wiggum-loop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>shiny</title>
+      <link>https://nanx.me/tags/shiny/</link>
+      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/shiny/</guid>
       <description></description>
     </item>
     <item>
@@ -121,13 +156,6 @@
       <description></description>
     </item>
     <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Python packages</title>
       <link>https://nanx.me/tags/python-packages/</link>
       <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
@@ -181,13 +209,6 @@
       <link>https://nanx.me/tags/pkgdepends/</link>
       <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
       <guid>https://nanx.me/tags/pkgdepends/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
       <description></description>
     </item>
     <item>
@@ -1280,13 +1301,6 @@
       <link>https://nanx.me/tags/knitr/</link>
       <pubDate>Tue, 06 Jun 2023 20:30:00 +0000</pubDate>
       <guid>https://nanx.me/tags/knitr/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>shiny</title>
-      <link>https://nanx.me/tags/shiny/</link>
-      <pubDate>Mon, 05 Jun 2023 01:00:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/shiny/</guid>
       <description></description>
     </item>
     <item>
