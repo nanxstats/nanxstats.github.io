@@ -96,11 +96,15 @@ html {
 
 .content .caption {
     font-family: "Instrument Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 450;
     font-size: 0.9375rem;
     color: #71717a;
     text-align: center;
     margin-top: 0.75rem;
+}
+
+.content .caption a {
+    font-weight: 450;
 }
 
 /* pandoc >= 3.0 */
@@ -113,12 +117,16 @@ html {
 
 .content .figcaption {
     font-family: "Instrument Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 450;
     font-size: 0.9375rem;
     color: #71717a;
     text-align: center;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
+}
+
+.content .figcaption a {
+    font-weight: 450;
 }
 
 .content .prose figure {
@@ -142,7 +150,7 @@ html {
     text-decoration: none;
     padding: 1.25rem;
     font-family: "Instrument Sans", sans-serif;
-    font-weight: 400;
+    font-weight: 450;
     font-size: 1rem;
     letter-spacing: normal;
     border: 1px solid #e4e4e7;
