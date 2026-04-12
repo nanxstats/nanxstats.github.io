@@ -1,0 +1,115 @@
+---
+title: "Why AI Feels Useless at Work"
+author: "Nan Xiao"
+date: "2026-04-11T20:39:00"
+slug: why-ai-feels-useless-at-work
+categories: []
+tags:
+  - AI adoption
+  - Agentic AI
+  - plaintext workflow
+  - software engineering
+  - vibe coding
+meta_img: "image/trey-hollins-dmyJ-G8aQ78-unsplash.jpg"
+description: >
+  AI feels useless at work for the same reason computers felt useless
+  in the 1990s: the workflows haven't caught up with the technology.
+---
+
+My father worked at a local branch of a railway company in his entire
+professional career. For a bureaucratic institution, it adopted new technology
+surprisingly fast. Or, more precisely, it was fast at buying the machines.
+
+I remember those unofficial "take your child to work" days in the 1990s.
+Windows 3.1 was already out, so I could open Paintbrush, draw the nine
+(now eight) planets of our solar system, and print them on a dot-matrix printer.
+That was my first memory of using a computer. Later, once I could read and write,
+I typed out classical poetry in Microsoft Word and printed that too.
+
+![Coastal Redwoods in Muir Woods National Monument.
+Photo by [Trey Hollins](https://unsplash.com/photos/dmyJ-G8aQ78).
+](/image/trey-hollins-dmyJ-G8aQ78-unsplash.jpg)
+
+To the employees, though, computers were peripheral. The typists
+used them seriously. Everyone else typed up the occasional document.
+A general-purpose computing platform, and the killer use case
+was "slightly better typewriter".
+
+Was this because computers were useless? Obviously not.
+**It was because the daily workflows had not been redesigned around computers.**
+Work still moved through paper forms, rubber stamps, and inter-office envelopes.
+The computers sat on office desks like expensive furniture with keyboards.
+
+## New tools, old habits
+
+This pattern is similar to many technology transitions in the past 15 years.
+Adopting a new tool is the easy part. Getting people to stop using it
+exactly like the old one is the real work. Teams get version control and
+use it as a backup system. People move to a new programming language and
+write code that looks exactly like the old one with different syntax.
+The technology works fine. The workflow doesn't change.
+
+The same thing is happening with AI now. I notice it most clearly in my own behavior.
+
+I have been using agentic AI tools for coding (both open source and proprietary)
+for about 18 months. For this use case, it has been genuinely transformative.
+The gap between intent and working code has narrowed in ways I would not
+have believed three years ago.
+
+But for everything else? My AI use amounts to: drafting emails,
+polishing documents, sanity checking ideas. Useful, certainly.
+But useful in the way that typing classical poetry in Microsoft Word
+was useful: a real improvement in execution, while the work itself
+goes unquestioned.
+
+I don't think I'm unusual. Ask people at most organizations how they use
+AI at work and you will hear the same short list: summarizing meetings,
+drafting messages, generating first drafts that need heavy editing anyway.
+The tools are capable, and people are trying. Yet the prevailing feeling
+feels more like convenience than transformation.
+
+## Not the tool's fault
+
+The instinct is to blame the technology. AI hallucinates, doesn't understand
+our domain, can't be trusted with anything important. These are real
+limitations. But I don't think they explain the gap between what AI can do
+and what it actually does for most of us. AI is already capable enough to
+write working software, pass professional licensing exams, and reason through
+problems that would challenge a specialist. The capability is there.
+We lack the same thing my father's colleagues lacked when they used
+their PCs as typewriters: **workflows designed around what the technology makes
+possible, rather than what the previous technology required.**
+
+Think about what happened when workflows were eventually redesigned around
+computers. We didn't just type faster. Spreadsheets didn't speed up
+accountants but they let one person do what previously required a team.
+Databases didn't make filing faster but they made filing obsolete.
+The structure of work changed, not just one step in the existing process.
+
+For AI, most workplaces are still waiting for that structural change.
+AI-assisted email is still email. AI-summarized meetings are still meetings.
+The workflow is untouched; one step got slightly faster.
+
+## The hard questions
+
+Having been through technology transitions before, I know what makes
+the next phase hard: our willingness to question the workflow itself.
+In my own field, when the industry shifted to open source technology
+foundations, the real argument was never about programming languages.
+It was about whether a statistical analysis should be a static document
+or a reproducible computation. That was a workflow question disguised as a tooling
+question, and it took years to settle.
+
+I suspect the equivalent questions for AI are harder, because we don't
+know what the redesigned workflows look like. With previous transitions,
+we at least knew the destination, such as reproducible research and
+version-controlled collaboration, had been articulated as goals
+years before the infrastructure caught up. With AI, the destination is unclear.
+We know the current workflows are underusing the technology.
+We just don't know what the better ones are, yet.
+
+That uncertainty is uncomfortable. But if the history of technology
+adoption teaches anything, it is that the organizations that eventually
+benefit most rarely turn out to be the fastest adopters. They tend to be the ones
+willing to let the tools reshape how they work, even when that means
+admitting the old way was more habit than necessity.
