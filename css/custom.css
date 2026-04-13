@@ -72,8 +72,8 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Liga Noto Sans Mono";
-    src: url("fonts/LigaNotoSansMono-Medium.woff2") format("woff2");
+    font-family: "Liga Paper Mono";
+    src: url("fonts/LigaPaperMono-Medium.woff2") format("woff2");
     font-weight: 500;
 }
 
