@@ -1,0 +1,135 @@
+---
+title: "Paper Mono with Fira Code ligatures"
+author: "Nan Xiao"
+date: "2026-04-13T17:50:00"
+slug: paper-mono-ligaturized
+categories: []
+tags:
+  - monospaced font
+  - coding fonts
+  - programming ligatures
+  - Ligaturizer
+meta_img: "image/paper-mono-ligaturized-ghostty.png"
+description: >
+  Add Fira Code ligatures and a default slashed zero to Paper Mono.
+---
+
+TL;DR: This is the third entry in the ligaturized font series, after
+[DM Mono](/blog/post/dm-mono-ligaturized/) and
+[Noto Sans Mono](/blog/post/noto-sans-mono-ligaturized/).
+This time it's [Paper Mono](https://github.com/paper-design/paper-mono),
+patched with ligatures and a slashed zero promoted to default.
+Download from GitHub:
+[nanxstats/paper-mono-ligaturized](https://github.com/nanxstats/paper-mono-ligaturized).
+
+![Liga Paper Mono in Ghostty, configured with `adjust-cell-height = 8`.
+](/image/paper-mono-ligaturized-ghostty.png)
+
+```{css, echo=FALSE}
+@font-face {
+    font-display: swap;
+    font-family: "Liga Paper Mono Regular";
+    src: url("fonts/LigaPaperMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+.font-liga-paper-mono pre code {
+    font-family: "Liga Paper Mono Regular" !important;
+    font-feature-settings: normal !important;
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+}
+
+.font-liga-paper-mono-nolig pre code {
+    font-family: "Liga Paper Mono Regular" !important;
+    font-feature-settings: normal !important;
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+    font-variant-ligatures: none !important;
+}
+```
+
+## Why Paper Mono
+
+Paper Mono is built by [Paper](https://paper.design/) and released under
+the SIL Open Font License.
+While DM Mono leans into quirky, opinionated glyph shapes and Noto Sans Mono
+stays deliberately invisible, Paper Mono occupies a different space:
+clean and polished, closer in spirit to SF Mono,
+but with enough warmth to not feel clinical.
+
+<div class="font-liga-paper-mono">
+
+```text
+a b c d e f g h i j k l m n
+o p q r s t u v w x y z
+A B C D E F G H I J K L M N
+O P Q R S T U V W X Y Z
+0 1 2 3 4 5 6 7 8 9
+[ ] { } ( ) < > + - * / ^ =
+! ? @ % & # $ ~ ` ; : , .
+```
+
+</div>
+
+## Ligatures
+
+The build uses the same
+[Ligaturizer](https://github.com/ToxicFrog/Ligaturizer) +
+[Makefile](https://github.com/nanxstats/paper-mono-ligaturized/blob/main/Makefile)
+approach as the previous two projects.
+Currently, Paper Mono ships eight upright weights and no italics,
+so the output is eight font files: thin through extra bold.
+
+Sample ligatures after patching:
+
+<div class="font-liga-paper-mono">
+
+```text
+<- -> => ==> |> :: :::
+== != >= <= === || //
+```
+
+</div>
+
+Without ligatures for comparison:
+
+<div class="font-liga-paper-mono-nolig">
+
+```text
+<- -> => ==> |> :: :::
+== != >= <= === || //
+```
+
+</div>
+
+The same [ligature exclusions](/blog/post/dm-mono-ligaturized/#opinionated-defaults)
+apply and render as separate characters.
+
+## Slashed zero by default
+
+Paper Mono includes a slashed zero as an OpenType alternate (`zero.zero`),
+but accessing it requires the editor to support stylistic alternates.
+Since many IDEs don't support setting that, I made a decision to make the
+slashed zero the default `zero` glyph.
+The Makefile achieves this by running a [FontForge Python script
+](https://github.com/nanxstats/paper-mono-ligaturized/blob/main/scripts/set_slashed_zero.py)
+that copies the slashed zero glyph onto the default `zero` position.
+
+## Setup
+
+For VS Code:
+
+```json
+"editor.fontFamily": "'Liga Paper Mono', monospace",
+"editor.fontLigatures": "'calt', 'liga'",
+"terminal.integrated.fontFamily": "'Liga Paper Mono', monospace",
+"terminal.integrated.fontLigatures.enabled": true,
+```
+
+For Ghostty:
+
+```text
+font-family = Liga Paper Mono
+adjust-cell-height = 8
+```
