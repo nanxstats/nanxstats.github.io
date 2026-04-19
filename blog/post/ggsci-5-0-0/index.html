@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> ggsci 5.0.0 and py-ggsci 2.0.0: Generative Color Scales from Gephi - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="ggsci 5.0.0 introduces generative color palettes from Gephi. Instead of a fixed list of colors, you get a recipe: define the mood, ask for as many colors as you need, and the palette grows with your data.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/ggsci-5-0-0/" />
+    <meta property="og:title" content="ggsci 5.0.0 and py-ggsci 2.0.0: Generative Color Scales from Gephi" />
+    <meta property="og:description" content="ggsci 5.0.0 introduces generative color palettes from Gephi. Instead of a fixed list of colors, you get a recipe: define the mood, ask for as many colors as you need, and the palette grows with your data.
+" />
+    <meta property="og:image" content="https://nanx.me/image/pine-watt-3_Xwxya43hE-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/pine-watt-3_Xwxya43hE-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-04-19T01:33:00Z" />
+    <meta property="article:modified_time" content="2026-04-19T01:33:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="ggsci 5.0.0 and py-ggsci 2.0.0: Generative Color Scales from Gephi" />
+    <meta name="twitter:description" content="ggsci 5.0.0 introduces generative color palettes from Gephi. Instead of a fixed list of colors, you get a recipe: define the mood, ask for as many colors as you need, and the palette grows with your data.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/pine-watt-3_Xwxya43hE-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="ggsci 5.0.0 and py-ggsci 2.0.0: Generative Color Scales from Gephi" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/ggsci-5-0-0/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased selection:bg-zinc-200">
+    
+<header class="py-8 lg:py-12 text-sm font-sans font-[450] tracking-wide max-w-[71ch] mx-auto w-full px-4 sm:px-6">
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0">
+        <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+            Nan Xiao
+        </a>
+        <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+            
+            
+            <a class="text-ink font-[550]"
+                href="https://nanx.me/blog/">
+                Blog
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/software/">
+                Software
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/papers/">
+                Papers
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/talks/">
+                Talks
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/books/">
+                Books
+            </a>
+            
+            <a class="hover:text-accent transition-colors"
+                href="https://nanx.me/about/">
+                About
+            </a>
+            
+        </nav>
+    </div>
+</header>
+
+<main class="content my-10 max-w-[69ch] mx-auto w-full px-4 sm:px-6">
+    <article>
+        <header class="mb-14">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-4">ggsci 5.0.0 and py-ggsci 2.0.0: Generative Color Scales from Gephi</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Sun Apr 19 2026 01:33:00 UTC'>
+                    April 19, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    5 min read
+                </span>
+
+                <div class="mt-8 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/r"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/python"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Python
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/ggplot2"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        ggplot2
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/plotnine"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        plotnine
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/ggsci"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        ggsci
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/color-palettes"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        color palettes
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/color-scales"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        color scales
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/data-visualization"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        data visualization
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/r-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/python-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Python packages
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/pine-watt-3_Xwxya43hE-unsplash.jpg" alt="San Francisco 1.4. Photo by Pine Watt." />
+<div class="figcaption">San Francisco 1.4. Photo by <a href="https://unsplash.com/photos/3_Xwxya43hE">Pine Watt</a>.</div>
+</div>
+<p>After the <a href="https://nanx.me/blog/post/ggsci-4-0-0/">last major version update</a> in September 2025,
+I am happy to announce the release of <a href="https://nanx.me/ggsci/">ggsci</a> 5.0.0
+and <a href="https://nanx.me/py-ggsci/">ggsci for Python</a> 2.0.0.</p>
+<p>You can install the R package ggsci from CRAN:</p>
+<pre class="r"><code>install.packages(&quot;ggsci&quot;)</code></pre>
+<p>And install the Python package from PyPI:</p>
+<pre class="bash"><code>pip install ggsci</code></pre>
+<div id="whats-new" class="section level2">
+<h2>What’s new</h2>
+<p>Every color palette in ggsci until now has been a fixed list:
+someone chose those exact colors, arranged them in a particular order,
+and you used them as-is. That works beautifully when you have five or eight
+categories. But real data does not always cooperate. You might have 15 clusters,
+20 cell types, or a network with dozens of communities,
+and at that point, a curated palette simply runs out.</p>
+<p>Generating purely random colors is no solution either.
+Random colors look random. They clash and merge, and your
+plot becomes harder to read.</p>
+<p>So the real question is: <em>how do you encode taste into a generator?</em>
+That is what this release is about.
+ggsci 5.0.0 and py-ggsci 2.0.0 introduce <strong>generative color palettes</strong> ported from
+<a href="https://gephi.org/">Gephi</a>, the open source network visualization platform.
+The Gephi palettes give you recipes instead of fixed lists.
+You choose a preset that defines the mood, request as many colors as
+you need, and the palette grows with your data.</p>
+<p>The original idea came from a conversation with my friend Simo
+about having a “YOLO” color scale
+(<a href="https://github.com/nanxstats/ggsci/issues/71">nanxstats/ggsci#71</a>),
+something like the “I’m feeling lucky” button where you trust the system
+to make a good decision on your behalf. That idea stuck with me.
+Gephi’s palette generator turned out to be the right answer to a question
+I hadn’t quite known how to ask.</p>
+<p>Here are the 17 Gephi presets, each generating 10 colors:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ggsci-gephi-color-palettes"></span>
+<img src="https://nanx.me/blog/post/ggsci-5-0-0/index_files/figure-html/fig-ggsci-gephi-color-palettes-1.png" alt="The 17 Gephi generative palettes added in ggsci 5.0.0 and py-ggsci 2.0.0." width="100%" />
+<p class="caption">
+Figure 1: The 17 Gephi generative palettes added in ggsci 5.0.0 and py-ggsci 2.0.0.
+</p>
+</div>
+<p>Each preset has a distinct character.
+“Intense” is saturated and punchy, while “pastel” leans soft and recessive.
+“Dark” favors deep tones.
+The number of colors, though, is entirely up to you.
+Ask for 6 or 60, and the generator will find colors that are
+visually distinct within the mood you chose.</p>
+</div>
+<div id="a-real-world-example" class="section level2">
+<h2>A real-world example</h2>
+<p>The payoff becomes clear when you have more categories than most
+fixed palettes can handle. Here is the t-SNE plot from the
+<a href="https://nanx.me/blog/post/exp2vec/">tissue-specific gene embeddings</a> post,
+with 15 clusters rendered using the Gephi “intense” preset.</p>
+<pre class="r"><code>word_vectors &lt;- readRDS(url(&quot;https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_embedding.rds&quot;))
+tsne_out &lt;- readRDS(url(&quot;https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_tsne.rds&quot;))
+
+set.seed(42)
+cl &lt;- kmeans(word_vectors, centers = 15, iter.max = 20)
+df &lt;- cbind(as.data.frame(tsne_out$Y), as.factor(cl$cluster))
+names(df) &lt;- c(&quot;x&quot;, &quot;y&quot;, &quot;cluster&quot;)
+
+ggplot2::ggplot(df, ggplot2::aes(x = x, y = y)) +
+  ggplot2::geom_point(ggplot2::aes(colour = cluster), alpha = 0.3, size = 1) +
+  ggplot2::guides(colour = ggplot2::guide_legend(override.aes = list(alpha = 1, size = 3))) +
+  cowplot::theme_minimal_grid() +
+  ggsci::scale_color_gephi(palette = &quot;intense&quot;)</code></pre>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:fig-ggsci-gephi-t-sne"></span>
+<img src="https://nanx.me/blog/post/ggsci-5-0-0/index_files/figure-html/fig-ggsci-gephi-t-sne-1.png" alt="A t-SNE plot of tissue-specific gene embeddings rendered with the Gephi intense palette. Each point is a gene, the color indicates its cluster assignment." width="100%" />
+<p class="caption">
+Figure 2: A t-SNE plot of tissue-specific gene embeddings rendered with the Gephi intense palette. Each point is a gene, the color indicates its cluster assignment.
+</p>
+</div>
+<p>OK! Now, everything below is mostly technical details about the implementation.
+Feel free to skip the next sections if you only want to know what’s new.</p>
+</div>
+<div id="why-gephi" class="section level2">
+<h2>Why Gephi</h2>
+<p>I first knew Gephi at a visualization summer school in 2010,
+and it has been my favorite tool for network visualization ever since.
+What keeps me coming back is its design and product sensibility as a whole:</p>
+<ol style="list-style-type: decimal">
+<li>Bringing your own data is easy. The import feature just works.</li>
+<li>The defaults look good without major tuning efforts: sensible color palettes and
+<a href="https://github.com/beyondbeneath/bezier-curved-edges-networkx">Bézier curve edges</a>
+that feel polished off-the-shelf.</li>
+<li>A plugin system that lets people extend it without cluttering the core.</li>
+</ol>
+<p>Designing a new color palette generator from scratch is a
+daunting task. The better move is to recognize that someone has already
+solved the problem well and bring their solution to a new context.
+Gephi’s palette generator has been serving the network visualization
+community reliably for over a decade. That track record is worth more
+than novelty.</p>
+</div>
+<div id="the-algorithm" class="section level2">
+<h2>The algorithm</h2>
+<p>The core idea behind Gephi’s generator is deceptively simple.
+Each preset defines a region of the
+<a href="https://en.wikipedia.org/wiki/CIELAB_color_space">CIE Lab color space</a>
+by specifying allowable ranges of hue, chroma, and luminance.
+These ranges together describe a visual mood.
+The “intense” preset permits high chroma and wide hue range.
+The “pastel” preset restricts chroma and lifts luminance.
+The presets are where the taste lives.</p>
+<p>Within those constraints, the generator can produce an arbitrary number
+of category colors that look relatively distinct, even though the exact
+result depends on the random seed.
+The underlying mechanism is, as you might guess,
+a constrained <em>k</em>-means clustering algorithm operating in the color space.</p>
+<p>The algorithm keeps only colors that satisfy the preset’s limits and
+also convert safely to RGB.
+It starts with random candidate colors in a normalized Lab-like space,
+then repeatedly assigns a large grid of valid sample colors to their
+nearest candidate and moves each candidate toward the average of its
+assigned samples.
+If an average falls outside the allowed region,
+the algorithm snaps that candidate to the nearest valid sample instead.
+After several refinement rounds, the final colors are reordered so
+that consecutive colors are as different from the already chosen ones
+as possible.</p>
+<p>This division of labor feels right to me.
+The presets capture a human judgment about what the palette
+should <em>feel</em> like.
+The algorithm handles the combinatorics of making <em>k</em> colors
+distinguishable within that feeling.
+The result is that you get the coherence of a curated palette
+with the flexibility to scale to any number of categories.</p>
+</div>
+<div id="whats-next" class="section level2">
+<h2>What’s next</h2>
+<p>I’m always looking for color palettes worth bringing to ggsci,
+whether they come from design systems, visualization research,
+or tools that have earned their defaults through years of use.
+If you have a favorite that you think deserves a wider audience,
+please let me know by
+<a href="https://github.com/nanxstats/ggsci/issues">opening an issue</a>.</p>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/paper-mono-ligaturized/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Paper Mono with Fira Code ligatures</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="mx-auto max-w-[69ch] w-full px-4 sm:px-6">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>

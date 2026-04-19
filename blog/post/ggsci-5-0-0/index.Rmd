@@ -1,0 +1,222 @@
+---
+title: "ggsci 5.0.0 and py-ggsci 2.0.0: Generative Color Scales from Gephi"
+author: "Nan Xiao"
+date: "2026-04-19T01:33:00"
+slug: ggsci-5-0-0
+categories: []
+tags:
+  - R
+  - Python
+  - ggplot2
+  - plotnine
+  - ggsci
+  - color palettes
+  - color scales
+  - data visualization
+  - R packages
+  - Python packages
+meta_img: "image/pine-watt-3_Xwxya43hE-unsplash.jpg"
+description: >
+  ggsci 5.0.0 introduces generative color palettes from Gephi.
+  Instead of a fixed list of colors, you get a recipe: define the mood,
+  ask for as many colors as you need, and the palette grows with your data.
+---
+
+```{r, include=FALSE}
+knitr::knit_hooks$set(pngquant = knitr::hook_pngquant)
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  dpi = 96,
+  fig.retina = 2,
+  fig.width = 10.6667,
+  fig.height = 3.3334,
+  fig.align = "center",
+  out.width = "100%",
+  pngquant = "--speed=1 --quality=90"
+)
+```
+
+![San Francisco 1.4. Photo by [Pine Watt](https://unsplash.com/photos/3_Xwxya43hE).
+](/image/pine-watt-3_Xwxya43hE-unsplash.jpg)
+
+After the [last major version update](/blog/post/ggsci-4-0-0/) in September 2025,
+I am happy to announce the release of [ggsci](https://nanx.me/ggsci/) 5.0.0
+and [ggsci for Python](https://nanx.me/py-ggsci/) 2.0.0.
+
+You can install the R package ggsci from CRAN:
+
+```r
+install.packages("ggsci")
+```
+
+And install the Python package from PyPI:
+
+```bash
+pip install ggsci
+```
+
+## What's new
+
+Every color palette in ggsci until now has been a fixed list:
+someone chose those exact colors, arranged them in a particular order,
+and you used them as-is. That works beautifully when you have five or eight
+categories. But real data does not always cooperate. You might have 15 clusters,
+20 cell types, or a network with dozens of communities,
+and at that point, a curated palette simply runs out.
+
+Generating purely random colors is no solution either.
+Random colors look random. They clash and merge, and your
+plot becomes harder to read.
+
+So the real question is: _how do you encode taste into a generator?_
+That is what this release is about.
+ggsci 5.0.0 and py-ggsci 2.0.0 introduce **generative color palettes** ported from
+[Gephi](https://gephi.org/), the open source network visualization platform.
+The Gephi palettes give you recipes instead of fixed lists.
+You choose a preset that defines the mood, request as many colors as
+you need, and the palette grows with your data.
+
+The original idea came from a conversation with my friend Simo
+about having a "YOLO" color scale
+([nanxstats/ggsci#71](https://github.com/nanxstats/ggsci/issues/71)),
+something like the "I'm feeling lucky" button where you trust the system
+to make a good decision on your behalf. That idea stuck with me.
+Gephi's palette generator turned out to be the right answer to a question
+I hadn't quite known how to ask.
+
+Here are the 17 Gephi presets, each generating 10 colors:
+
+```{r}
+#| fig-ggsci-gephi-color-palettes,
+#| fig.cap="The 17 Gephi generative palettes added in ggsci 5.0.0 and py-ggsci 2.0.0.",
+#| echo=FALSE,
+#| dpi=300,
+#| fig.width=6,
+#| fig.height=4,
+#| out.width="100%"
+set.seed(42)
+gephi_pal_names <- ggsci::gephi_palettes()
+gephi_pal <- vector("list", length(gephi_pal_names))
+for (i in seq_along(gephi_pal_names)) {
+  gephi_pal[[i]] <- ggsci::pal_gephi(palette = gephi_pal_names[i])(10)
+}
+names(gephi_pal) <- gephi_pal_names
+
+colorspace::swatchplot(
+  gephi_pal,
+  nrow = 17,
+  line = 2.5,
+  cex = 0.65,
+  border = "transparent",
+  sborder = "transparent"
+)
+```
+
+Each preset has a distinct character.
+"Intense" is saturated and punchy, while "pastel" leans soft and recessive.
+"Dark" favors deep tones.
+The number of colors, though, is entirely up to you.
+Ask for 6 or 60, and the generator will find colors that are
+visually distinct within the mood you chose.
+
+## A real-world example
+
+The payoff becomes clear when you have more categories than most
+fixed palettes can handle. Here is the t-SNE plot from the
+[tissue-specific gene embeddings](/blog/post/exp2vec/) post,
+with 15 clusters rendered using the Gephi "intense" preset.
+
+```{r}
+#| fig-ggsci-gephi-t-sne,
+#| fig.cap="A t-SNE plot of tissue-specific gene embeddings rendered with the Gephi intense palette. Each point is a gene, the color indicates its cluster assignment.",
+#| echo=TRUE,
+#| dev="ragg_png",
+#| fig.width=14,
+#| fig.height=14*0.618,
+#| fig.retina=3,
+#| out.width="100%"
+word_vectors <- readRDS(url("https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_embedding.rds"))
+tsne_out <- readRDS(url("https://raw.githubusercontent.com/nanxstats/exp2vec/main/output/Pancreas_tsne.rds"))
+
+set.seed(42)
+cl <- kmeans(word_vectors, centers = 15, iter.max = 20)
+df <- cbind(as.data.frame(tsne_out$Y), as.factor(cl$cluster))
+names(df) <- c("x", "y", "cluster")
+
+ggplot2::ggplot(df, ggplot2::aes(x = x, y = y)) +
+  ggplot2::geom_point(ggplot2::aes(colour = cluster), alpha = 0.3, size = 1) +
+  ggplot2::guides(colour = ggplot2::guide_legend(override.aes = list(alpha = 1, size = 3))) +
+  cowplot::theme_minimal_grid() +
+  ggsci::scale_color_gephi(palette = "intense")
+```
+
+OK! Now, everything below is mostly technical details about the implementation.
+Feel free to skip the next sections if you only want to know what's new.
+
+## Why Gephi
+
+I first knew Gephi at a visualization summer school in 2010,
+and it has been my favorite tool for network visualization ever since.
+What keeps me coming back is its design and product sensibility as a whole:
+
+1. Bringing your own data is easy. The import feature just works.
+2. The defaults look good without major tuning efforts: sensible color palettes and
+   [Bézier curve edges](https://github.com/beyondbeneath/bezier-curved-edges-networkx)
+   that feel polished off-the-shelf.
+3. A plugin system that lets people extend it without cluttering the core.
+
+Designing a new color palette generator from scratch is a
+daunting task. The better move is to recognize that someone has already
+solved the problem well and bring their solution to a new context.
+Gephi's palette generator has been serving the network visualization
+community reliably for over a decade. That track record is worth more
+than novelty.
+
+## The algorithm
+
+The core idea behind Gephi's generator is deceptively simple.
+Each preset defines a region of the
+[CIE Lab color space](https://en.wikipedia.org/wiki/CIELAB_color_space)
+by specifying allowable ranges of hue, chroma, and luminance.
+These ranges together describe a visual mood.
+The "intense" preset permits high chroma and wide hue range.
+The "pastel" preset restricts chroma and lifts luminance.
+The presets are where the taste lives.
+
+Within those constraints, the generator can produce an arbitrary number
+of category colors that look relatively distinct, even though the exact
+result depends on the random seed.
+The underlying mechanism is, as you might guess,
+a constrained _k_-means clustering algorithm operating in the color space.
+
+The algorithm keeps only colors that satisfy the preset's limits and
+also convert safely to RGB.
+It starts with random candidate colors in a normalized Lab-like space,
+then repeatedly assigns a large grid of valid sample colors to their
+nearest candidate and moves each candidate toward the average of its
+assigned samples.
+If an average falls outside the allowed region,
+the algorithm snaps that candidate to the nearest valid sample instead.
+After several refinement rounds, the final colors are reordered so
+that consecutive colors are as different from the already chosen ones
+as possible.
+
+This division of labor feels right to me.
+The presets capture a human judgment about what the palette
+should _feel_ like.
+The algorithm handles the combinatorics of making _k_ colors
+distinguishable within that feeling.
+The result is that you get the coherence of a curated palette
+with the flexibility to scale to any number of categories.
+
+## What's next
+
+I'm always looking for color palettes worth bringing to ggsci,
+whether they come from design systems, visualization research,
+or tools that have earned their defaults through years of use.
+If you have a favorite that you think deserves a wider audience,
+please let me know by
+[opening an issue](https://github.com/nanxstats/ggsci/issues).
