@@ -2,8 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/tags/anthropic-mono/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/anthrosevka-mono/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/coding-fonts/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/iosevka/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/iosevka-customizer/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/monospaced-font/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/programming-ligatures/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/color-palettes/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
@@ -23,9 +50,6 @@
     <loc>https://nanx.me/blog/post/ggsci-5-0-0/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/plotnine/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
@@ -41,22 +65,10 @@
     <loc>https://nanx.me/tags/r-packages/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/coding-fonts/</loc>
-    <lastmod>2026-04-13T17:50:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/ligaturizer/</loc>
     <lastmod>2026-04-13T17:50:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/monospaced-font/</loc>
-    <lastmod>2026-04-13T17:50:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/paper-mono-ligaturized/</loc>
-    <lastmod>2026-04-13T17:50:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/programming-ligatures/</loc>
     <lastmod>2026-04-13T17:50:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/agentic-ai/</loc>

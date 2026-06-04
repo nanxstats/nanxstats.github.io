@@ -1,0 +1,170 @@
+---
+title: "Anthrosevka Mono: Custom Iosevka build inspired by Anthropic Mono"
+author: "Nan Xiao"
+date: "2026-06-03T21:03:00"
+slug: anthrosevka-mono
+categories: []
+tags:
+  - monospaced font
+  - coding fonts
+  - programming ligatures
+  - Iosevka
+  - Iosevka Customizer
+  - Anthropic Mono
+meta_img: "image/anthrosevka-mono-btop.png"
+description: >
+  A custom Iosevka build inspired by the look and feel of Anthropic Mono.
+---
+
+I'm happy to share [Anthrosevka Mono](https://github.com/nanxstats/anthrosevka),
+a custom build of [Iosevka](https://github.com/be5invis/Iosevka)
+inspired by the look and feel of Anthropic Mono.
+Prebuilt TTFs are available from the
+[GitHub releases](https://github.com/nanxstats/anthrosevka/releases),
+and there is a [microsite](https://nanx.me/anthrosevka/) with specimen
+and code samples if you'd like to see it first.
+
+This is the 4th entry in my coding font series, after
+[DM Mono](/blog/post/dm-mono-ligaturized/),
+[Noto Sans Mono](/blog/post/noto-sans-mono-ligaturized/),
+and [Paper Mono](/blog/post/paper-mono-ligaturized/).
+The first three were all Fira Code ligatures patched onto an existing font.
+Anthrosevka Mono works differently, because Iosevka itself works differently.
+
+![Running btop with Anthrosevka Mono in Ghostty.](/image/anthrosevka-mono-btop.png)
+
+```{css, echo=FALSE}
+@font-face {
+    font-display: swap;
+    font-family: "Anthrosevka Mono Regular";
+    src: url("fonts/AnthrosevkaMono-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+.font-anthrosevka-mono pre code {
+    font-family: "Anthrosevka Mono Regular" !important;
+    font-feature-settings: normal !important;
+    font-size: 2rem !important;
+    line-height: 1.5 !important;
+}
+```
+
+## Why Iosevka
+
+If you haven't used [Iosevka](https://typeof.net/Iosevka/) before,
+the elevator pitch is that it's a programming font, but it's also a
+typesetting system. Iosevka is a parametric, code-generated typeface:
+rather than being drawn in a font editor, every glyph is generated
+programmatically from a set of underlying mathematical rules and
+design parameters.
+
+The practical benefit is that Iosevka can have design variants and
+be customized in ways that would be expensive for a hand-drawn font.
+The [Iosevka Customizer](https://typeof.net/Iosevka/customizer) is an HTML
+tool where you click through each glyph variant and see the result update
+in your browser. When you're happy, it exports a TOML config that you can
+plug back into the build to reproduce the exact font from source. The
+same TOML can be imported into the customizer later, so the loop is fully
+reversible. If you can describe what you want in Iosevka's design vocabulary,
+you can have it.
+
+## Glyph choices
+
+Most of the Anthropic Mono design intent maps cleanly onto Iosevka variants.
+All of these are one toggle away in the customizer: double-storey `a` and `g`,
+dotted zero, square dots, and many more. None of it should be surprising.
+
+<div class="font-anthrosevka-mono">
+
+```text
+a b c d e f g h i j k l m n
+o p q r s t u v w x y z
+A B C D E F G H I J K L M N
+O P Q R S T U V W X Y Z
+0 1 2 3 4 5 6 7 8 9
+[ ] { } ( ) < > + - * / ^ =
+! ? @ % & # $ ~ ` ; : , .
+```
+
+</div>
+
+A few glyphs in Anthropic Mono don't have an exact match in Iosevka,
+and I had to settle for the closest available alternative:
+
+<div class="font-anthrosevka-mono">
+
+```text
+J Q g r ~ , ^ @ % ¶
+```
+
+</div>
+
+In particular, `Q`, `g`, and `@` are signature glyphs that define a typeface's
+character, and the available Iosevka variants approximate the feel rather
+than replicate it. Others, like `¶`, are minor enough that almost any choice
+would do, but I still wanted to land them somewhere consistent with the rest.
+
+## Ligatures and operators
+
+Unlike the ligaturized fonts in this series, Iosevka ships with a thoughtful
+set of programming ligatures that are designed alongside the rest of the font
+and enabled by default. Here are the common ones you'll see day to day:
+
+<div class="font-anthrosevka-mono">
+
+```text
+<- -> => ==> |> :: :::
+== != >= <= === || //
+```
+
+</div>
+
+And the broader operator and punctuation set:
+
+<div class="font-anthrosevka-mono">
+
+```text
+[] {} () <> + - * / ^ =
+! ? @ % & # $ ~ ` ; : , .
+```
+
+</div>
+
+## A visual verifier
+
+Building the font takes a single command. The harder question is whether
+the customization actually resembles the thing we set out to copy.
+After staring at glyphs for too long, every shape starts to look both
+wrong and right at the same time.
+
+To keep myself honest, I built a small browser-based
+[glyph verifier](https://nanx.me/anthrosevka/verifier/) in pure HTML/CSS/JS
+with AI's help. Point it at any two fonts (installed locally or loaded
+from a URL), and you can compare them at the glyph level with overlays.
+
+## Setting it up
+
+For VS Code and its forks:
+
+```json
+"editor.fontFamily": "'Anthrosevka Mono', monospace",
+"editor.fontLigatures": "'calt', 'liga'",
+"terminal.integrated.fontFamily": "'Anthrosevka Mono', monospace",
+"terminal.integrated.fontLigatures.enabled": true,
+```
+
+For Ghostty:
+
+```text
+font-family = Anthrosevka Mono
+adjust-cell-height = 8
+```
+
+## Attribution
+
+A big thank you to [@be5invis](https://github.com/be5invis) and the
+Iosevka contributors. Almost everything good about Anthrosevka Mono comes
+straight from Iosevka. I just flipped a few switches.
+
+Anthrosevka Mono is an independent third-party project and is **not**
+affiliated with, endorsed by, or supported by Anthropic PBC.
