@@ -89,12 +89,12 @@ O P Q R S T U V W X Y Z
 </div>
 
 A few glyphs in Anthropic Mono don't have an exact match in Iosevka,
-and I had to settle for the closest available alternative:
+and I had to patch the glyphs or settle for the closest available alternative:
 
 <div class="font-anthrosevka-mono">
 
 ```text
-J Q g r ~ , ^ @ % ¶
+0 J Q g r ~ , ^ @ % ¶
 ```
 
 </div>
