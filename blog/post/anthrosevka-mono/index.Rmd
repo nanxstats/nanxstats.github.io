@@ -137,8 +137,8 @@ the customization actually resembles the thing we set out to copy.
 After staring at glyphs for too long, every shape starts to look both
 wrong and right at the same time.
 
-To keep myself honest, I built a small browser-based
-[glyph verifier](https://nanx.me/anthrosevka/verifier/) in pure HTML/CSS/JS
+To keep myself honest, I built a static HTML
+[glyph verifier](https://nanx.me/anthrosevka/verifier/)
 with AI's help. Point it at any two fonts (installed locally or loaded
 from a URL), and you can compare them at the glyph level with overlays.
 
