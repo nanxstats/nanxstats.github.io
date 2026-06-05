@@ -94,7 +94,7 @@ and I had to patch the glyphs or settle for the closest available alternative:
 <div class="font-anthrosevka-mono">
 
 ```text
-0 J Q g r ~ , ^ @ % ¶
+0 1 J Q g r ~ , ^ @ % ¶
 ```
 
 </div>
