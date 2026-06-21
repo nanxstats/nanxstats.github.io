@@ -54,7 +54,7 @@ often developing reusable functions and packages to improve efficiency.
 A key turning point for me was when [Keaven](https://keaven.github.io/) asked
 me a simple yet insightful question: What is missing to make R viable for
 clinical study reports and regulatory submission?
-That same year, the [R/Pharma conference](https://rinpharma.com/event/rinpharma2018/)
+That same year, the [R/Pharma conference](https://web.archive.org/web/20250912165549/https://rinpharma.com/event/rinpharma2018/)
 was launched to explore open-source solutions.
 
 [Nan](https://nanx.me/) and I believed any sustainable solution must
