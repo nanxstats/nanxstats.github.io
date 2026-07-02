@@ -95,7 +95,7 @@ html {
 }
 
 .content .caption {
-    font-family: "Instrument Sans", sans-serif;
+    font-family: var(--font-sans);
     font-weight: 450;
     font-size: 0.9375rem;
     color: #71717a;
@@ -116,7 +116,7 @@ html {
 }
 
 .content .figcaption {
-    font-family: "Instrument Sans", sans-serif;
+    font-family: var(--font-sans);
     font-weight: 450;
     font-size: 0.9375rem;
     color: #71717a;
@@ -149,7 +149,7 @@ html {
     text-align: left;
     text-decoration: none;
     padding: 1.25rem;
-    font-family: "Instrument Sans", sans-serif;
+    font-family: var(--font-sans);
     font-weight: 450;
     font-size: 1rem;
     letter-spacing: normal;
