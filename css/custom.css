@@ -9,20 +9,20 @@
 
 @font-face {
     font-display: swap;
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-VF.woff2") format("woff2");
-    font-weight: 400 700;
+    font-family: "Scoutie Sans";
+    src: url("fonts/ScoutieSans-VF.woff2") format("woff2");
+    font-weight: 200 800;
     font-style: normal;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
+    font-feature-settings: "ss01", "ss04", "ss08";
 }
 
 @font-face {
     font-display: swap;
-    font-family: "Instrument Sans";
-    src: url("fonts/InstrumentSans-Italic-VF.woff2") format("woff2");
-    font-weight: 400 700;
+    font-family: "Scoutie Sans";
+    src: url("fonts/ScoutieSans-Italic-VF.woff2") format("woff2");
+    font-weight: 200 800;
     font-style: italic;
-    font-feature-settings: "ss01", "ss04", "ss07", "ss09";
+    font-feature-settings: "ss01", "ss04", "ss08";
 }
 
 @font-face {
