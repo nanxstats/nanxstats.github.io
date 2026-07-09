@@ -6,8 +6,15 @@
     <description>Recent content in automation on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Dec 2025 19:01:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 01:24:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Two small Python automation tools: asciilint and playwright-byob</title>
+      <link>https://nanx.me/blog/post/asciilint-playwright-byob/</link>
+      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/asciilint-playwright-byob/</guid>
+      <description>Bright sunroom with plants and dining table. Photo by Clay Banks. In the past week, besides fully indulging myself in the food scene and outdoor activities of the SF Bay Area, I started building a few new personal automation and developer tooling projects. This post shares two of them: asciilint checks that your text files contain only the characters you want, and playwright-byob lets Playwright drive the Chrome you already have installed.</description>
+    </item>
     <item>
       <title>revdeprun 2.1.0: hunting bottlenecks and a new speedrun record</title>
       <link>https://nanx.me/blog/post/revdeprun-2-1-0/</link>

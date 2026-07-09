@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Two small Python automation tools: asciilint and playwright-byob - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="I&#39;m happy to share two new Python tools: asciilint, a minimal, CI-friendly CLI for character policy checks in text files, and playwright-byob, a tiny helper for launching Playwright against the Chrome you already have installed.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/asciilint-playwright-byob/" />
+    <meta property="og:title" content="Two small Python automation tools: asciilint and playwright-byob" />
+    <meta property="og:description" content="I&#39;m happy to share two new Python tools: asciilint, a minimal, CI-friendly CLI for character policy checks in text files, and playwright-byob, a tiny helper for launching Playwright against the Chrome you already have installed.
+" />
+    <meta property="og:image" content="https://nanx.me/image/clay-banks-BnDI_MVomAI-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/clay-banks-BnDI_MVomAI-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-07-09T01:24:00Z" />
+    <meta property="article:modified_time" content="2026-07-09T01:24:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Two small Python automation tools: asciilint and playwright-byob" />
+    <meta name="twitter:description" content="I&#39;m happy to share two new Python tools: asciilint, a minimal, CI-friendly CLI for character policy checks in text files, and playwright-byob, a tiny helper for launching Playwright against the Chrome you already have installed.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/clay-banks-BnDI_MVomAI-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="Two small Python automation tools: asciilint and playwright-byob" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/asciilint-playwright-byob/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased">
+    
+<header class="py-8 lg:py-12">
+    <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 text-sm font-sans font-[450] tracking-wide">
+            <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+                Nan Xiao
+            </a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+                
+                
+                <a class="text-ink font-[550]"
+                    href="https://nanx.me/blog/">
+                    Blog
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/software/">
+                    Software
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/papers/">
+                    Papers
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/talks/">
+                    Talks
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/books/">
+                    Books
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/about/">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<main class="content site-container my-10">
+    <article>
+        <header class="mb-10">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-6">Two small Python automation tools: asciilint and playwright-byob</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Thu Jul 9 2026 01:24:00 UTC'>
+                    July 9, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    5 min read
+                </span>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/python"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Python
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/python-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Python packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/plaintext-workflow"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        plaintext workflow
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/automation"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        automation
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/playwright"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Playwright
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/cicd"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        CICD
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/clay-banks-BnDI_MVomAI-unsplash.jpg" alt="Bright sunroom with plants and dining table. Photo by Clay Banks." />
+<div class="figcaption">Bright sunroom with plants and dining table.
+Photo by <a href="https://unsplash.com/photos/BnDI_MVomAI">Clay Banks</a>.</div>
+</div>
+<p>In the past week, besides fully indulging myself in the food scene and
+outdoor activities of the SF Bay Area, I started building a few new personal
+automation and developer tooling projects. This post shares two of them:
+<a href="https://nanx.me/asciilint/">asciilint</a> checks that your text files contain
+only the characters you want, and
+<a href="https://nanx.me/playwright-byob/">playwright-byob</a> lets Playwright drive
+the Chrome you already have installed.</p>
+<p>Both projects are driven by my recently developed high standards for
+cleanliness (germophobia, if you prefer the clinical term). Each solves a
+boutique problem in my development workflows: too trivial to mention, but
+too important to ignore. And in keeping with the theme, neither introduces
+any unverified third-party dependencies. Contamination avoided.</p>
+<div id="asciilint-character-policy-checks-for-text-files" class="section level2">
+<h2>asciilint: character policy checks for text files</h2>
+<p>Every so often I need to clean up source code or data and make sure the
+text files in a project contain only ASCII characters, or at least only
+characters from a specific Unicode allowlist. This need usually announces
+itself right after an em dash or a curly quote has quietly snuck into a
+file where it has no business being.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
+<p>Doing this by hand is tedious and error-prone, so asciilint does it for you.
+By default, it scans a project recursively and fails when UTF-8 text
+files contain any non-ASCII characters (hence the name):</p>
+<pre class="text"><code>➜ asciilint .
+&gt; Checking characters in /path/to/asciilint
+Files found: 63, 35 to scan, 28 ignored
+Checking text:
+✓✓✓✓✓x✓✓✓✓✓✓✓✓xxx✓✓✓✓✓✓✓✓✓✓✓✓xxx
+Files checked: 32 text, 3 binary skipped, 0 read error(s)
+
+Issues :-(
+&gt; Disallowed characters
+  1. README.md
+     1. [L051:C001] U+2713 &quot;\u2713&quot; not allowed by policy
+     2. [L094:C044] U+2192 &quot;\u2192&quot; not allowed by policy
+  2. docs/index.md
+     1. [L051:C001] U+2713 &quot;\u2713&quot; not allowed by policy
+     2. [L094:C044] U+2192 &quot;\u2192&quot; not allowed by policy
+  ...
+  7. tests/test_scanner.py
+     1. [L015:C028] U+03C0 &quot;\u03c0&quot; not allowed by policy
+     2. [L030:C059] U+00E9 &quot;\xe9&quot; not allowed by policy
+     3. [L031:C054] U+00E9 &quot;\xe9&quot; not allowed by policy
+     4. [L067:C040] U+00E9 &quot;\xe9&quot; not allowed by policy
+Summary: 29 disallowed character(s), 0 read error(s)</code></pre>
+<p>The report is designed to be read by humans: every issue comes
+with a file, line, and column so you can fix it fast, and the exit code is
+non-zero whenever anything is wrong, so your CI pipeline fails loudly.</p>
+<p>You can install asciilint with pip. Or use pipx for an isolated, global CLI:</p>
+<pre class="bash"><code>pipx install asciilint
+asciilint .</code></pre>
+<p>Or try it once with uvx, no installation needed:</p>
+<pre class="bash"><code>uvx asciilint .</code></pre>
+<p>While the default is ASCII-only, the policy is fully configurable:
+you can supply arbitrary Unicode allowlists and denylists through an
+<code>asciilint.toml</code> file or command-line flags.</p>
+<p>For example, to allow any character except arrows and general punctuation:</p>
+<pre class="bash"><code>asciilint . \
+  --allow-any \
+  --disallowed-char &quot;→&quot; \
+  --disallowed-range U+2000-U+206F</code></pre>
+<p>A few design decisions worth knowing:</p>
+<ol style="list-style-type: decimal">
+<li>It is project focused. It respects your <code>.gitignore</code> out of the box, and
+you can specify additional ignore files that use the same syntax.</li>
+<li>It only checks text files, using the <a href="https://nanx.me/blog/post/txtvsbin/">zlib txtvsbin heuristic</a>
+to skip binary files automatically.</li>
+<li>It assumes all text files are UTF-8. Files that can’t be decoded are
+reported explicitly and skipped, rather than silently ignored.</li>
+</ol>
+<p>The only third-party dependencies are click (for the CLI) and pathspec
+(for gitignore pattern matching).</p>
+</div>
+<div id="playwright-byob-bring-your-own-browser-to-playwright" class="section level2">
+<h2>playwright-byob: bring your own browser to Playwright</h2>
+<p>So much of modern life happens in the browser, and Playwright is a great
+framework for automating it. But the canonical way to use a browser with
+Playwright is to let it download and manage its own binaries.
+That is exactly what you want for testing, and exactly what you don’t want
+for personal automation, where the browser you care about is the real Chrome
+already sitting on your machine.</p>
+<p>playwright-byob<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> is a tiny helper for precisely that: launching
+Playwright against installed Chrome, with practical defaults for headed,
+persistent browser automation.</p>
+<p>Install it into your project with uv:</p>
+<pre class="bash"><code>uv add playwright-byob</code></pre>
+<p>Then everything else is still classic Playwright: the package only
+resolves the Chrome executable, the profile directory, and the launch
+options, and hands you back a regular browser context:</p>
+<pre class="python"><code>from playwright.async_api import async_playwright
+from playwright_byob import async_launch_chrome
+
+async with async_playwright() as p:
+    context = await async_launch_chrome(p)
+    page = await context.new_page()
+    await page.goto(&quot;https://example.com&quot;)
+    await context.close()</code></pre>
+<p>One thing I want to highlight: using the installed Chrome binary and using
+your daily Chrome profile are two separate choices, and playwright-byob is
+opinionated about the second one. By default, it launches Chrome with a
+dedicated automation profile owned by the package, so your automation state
+persists across runs without touching your personal browsing data.
+It will refuse to launch against the default profile, which recent Chrome versions
+<a href="https://developer.chrome.com/blog/remote-debugging-port">block for remote debugging</a>
+anyway.</p>
+<p>In practice, there are a few more considerations, such as which profile
+pattern fits your task and how to manage profile lifecycles. The
+<a href="https://nanx.me/playwright-byob/">documentation</a> covers the recommended
+patterns, along with the privacy implications of persistent browser state.
+It is worth a read before you point automation at anything you log into.</p>
+</div>
+<div id="outro" class="section level2">
+<h2>Outro</h2>
+<p>Both packages are deliberately small, and I intend to keep them that way.
+If you give them a try and find some rough edges, please create an issue.
+These tools scratch my own itches, but I would be delighted if they
+scratch yours too.</p>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>I will leave it to you to guess how they keep getting in there.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>BYOB: bring your own browser. Pronounced like the party invitation,
+except you bring a browser.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/anthrosevka-mono/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Anthrosevka Mono: Custom Iosevka build inspired by Anthropic Mono</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="site-container">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>

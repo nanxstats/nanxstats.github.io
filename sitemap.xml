@@ -2,19 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/tags/automation/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/cicd/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/plaintext-workflow/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/playwright/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/python-packages/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/asciilint-playwright-byob/</loc>
+    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/tags/anthropic-mono/</loc>
     <lastmod>2026-06-03T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/anthrosevka-mono/</loc>
     <lastmod>2026-06-03T21:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/coding-fonts/</loc>
-    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2026-06-03T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/iosevka/</loc>
@@ -27,9 +51,6 @@
     <lastmod>2026-06-03T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/programming-ligatures/</loc>
-    <lastmod>2026-06-03T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-06-03T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/color-palettes/</loc>
@@ -53,12 +74,6 @@
     <loc>https://nanx.me/tags/plotnine/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/python/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/python-packages/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/r/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
@@ -75,9 +90,6 @@
     <lastmod>2026-04-11T20:39:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/ai-adoption/</loc>
-    <lastmod>2026-04-11T20:39:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/plaintext-workflow/</loc>
     <lastmod>2026-04-11T20:39:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-engineering/</loc>
@@ -134,9 +146,6 @@
     <loc>https://nanx.me/blog/post/noto-sans-mono-ligaturized/</loc>
     <lastmod>2026-02-02T20:11:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/cicd/</loc>
-    <lastmod>2026-01-02T03:32:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/pytest-r-snapshot/</loc>
     <lastmod>2026-01-02T03:32:00+00:00</lastmod>
   </url><url>
@@ -148,9 +157,6 @@
   </url><url>
     <loc>https://nanx.me/tags/test-driven-development/</loc>
     <lastmod>2026-01-02T03:32:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/developer-experience/</loc>
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>

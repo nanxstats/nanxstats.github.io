@@ -1,0 +1,178 @@
+---
+title: "Two small Python automation tools: asciilint and playwright-byob"
+author: "Nan Xiao"
+date: "2026-07-09T01:24:00"
+slug: asciilint-playwright-byob
+categories: []
+tags:
+  - Python
+  - Python packages
+  - plaintext workflow
+  - automation
+  - Playwright
+  - CICD
+meta_img: "image/clay-banks-BnDI_MVomAI-unsplash.jpg"
+description: >
+  I'm happy to share two new Python tools: asciilint, a minimal,
+  CI-friendly CLI for character policy checks in text files, and
+  playwright-byob, a tiny helper for launching Playwright against the
+  Chrome you already have installed.
+---
+
+![Bright sunroom with plants and dining table.
+Photo by [Clay Banks](https://unsplash.com/photos/BnDI_MVomAI).
+](/image/clay-banks-BnDI_MVomAI-unsplash.jpg)
+
+In the past week, besides fully indulging myself in the food scene and
+outdoor activities of the SF Bay Area, I started building a few new personal
+automation and developer tooling projects. This post shares two of them:
+[asciilint](https://nanx.me/asciilint/) checks that your text files contain
+only the characters you want, and
+[playwright-byob](https://nanx.me/playwright-byob/) lets Playwright drive
+the Chrome you already have installed.
+
+Both projects are driven by my recently developed high standards for
+cleanliness (germophobia, if you prefer the clinical term). Each solves a
+boutique problem in my development workflows: too trivial to mention, but
+too important to ignore. And in keeping with the theme, neither introduces
+any unverified third-party dependencies. Contamination avoided.
+
+## asciilint: character policy checks for text files
+
+Every so often I need to clean up source code or data and make sure the
+text files in a project contain only ASCII characters, or at least only
+characters from a specific Unicode allowlist. This need usually announces
+itself right after an em dash or a curly quote has quietly snuck into a
+file where it has no business being.[^1]
+
+[^1]: I will leave it to you to guess how they keep getting in there.
+
+Doing this by hand is tedious and error-prone, so asciilint does it for you.
+By default, it scans a project recursively and fails when UTF-8 text
+files contain any non-ASCII characters (hence the name):
+
+```text
+➜ asciilint .
+> Checking characters in /path/to/asciilint
+Files found: 63, 35 to scan, 28 ignored
+Checking text:
+✓✓✓✓✓x✓✓✓✓✓✓✓✓xxx✓✓✓✓✓✓✓✓✓✓✓✓xxx
+Files checked: 32 text, 3 binary skipped, 0 read error(s)
+
+Issues :-(
+> Disallowed characters
+  1. README.md
+     1. [L051:C001] U+2713 "\u2713" not allowed by policy
+     2. [L094:C044] U+2192 "\u2192" not allowed by policy
+  2. docs/index.md
+     1. [L051:C001] U+2713 "\u2713" not allowed by policy
+     2. [L094:C044] U+2192 "\u2192" not allowed by policy
+  ...
+  7. tests/test_scanner.py
+     1. [L015:C028] U+03C0 "\u03c0" not allowed by policy
+     2. [L030:C059] U+00E9 "\xe9" not allowed by policy
+     3. [L031:C054] U+00E9 "\xe9" not allowed by policy
+     4. [L067:C040] U+00E9 "\xe9" not allowed by policy
+Summary: 29 disallowed character(s), 0 read error(s)
+```
+
+The report is designed to be read by humans: every issue comes
+with a file, line, and column so you can fix it fast, and the exit code is
+non-zero whenever anything is wrong, so your CI pipeline fails loudly.
+
+You can install asciilint with pip. Or use pipx for an isolated, global CLI:
+
+```bash
+pipx install asciilint
+asciilint .
+```
+
+Or try it once with uvx, no installation needed:
+
+```bash
+uvx asciilint .
+```
+
+While the default is ASCII-only, the policy is fully configurable:
+you can supply arbitrary Unicode allowlists and denylists through an
+`asciilint.toml` file or command-line flags.
+
+For example, to allow any character except arrows and general punctuation:
+
+```bash
+asciilint . \
+  --allow-any \
+  --disallowed-char "→" \
+  --disallowed-range U+2000-U+206F
+```
+
+A few design decisions worth knowing:
+
+1. It is project focused. It respects your `.gitignore` out of the box, and
+   you can specify additional ignore files that use the same syntax.
+2. It only checks text files, using the [zlib txtvsbin heuristic](/blog/post/txtvsbin/)
+   to skip binary files automatically.
+3. It assumes all text files are UTF-8. Files that can't be decoded are
+   reported explicitly and skipped, rather than silently ignored.
+
+The only third-party dependencies are click (for the CLI) and pathspec
+(for gitignore pattern matching).
+
+## playwright-byob: bring your own browser to Playwright
+
+So much of modern life happens in the browser, and Playwright is a great
+framework for automating it. But the canonical way to use a browser with
+Playwright is to let it download and manage its own binaries.
+That is exactly what you want for testing, and exactly what you don't want
+for personal automation, where the browser you care about is the real Chrome
+already sitting on your machine.
+
+playwright-byob[^2] is a tiny helper for precisely that: launching
+Playwright against installed Chrome, with practical defaults for headed,
+persistent browser automation.
+
+[^2]: BYOB: bring your own browser. Pronounced like the party invitation,
+      except you bring a browser.
+
+Install it into your project with uv:
+
+```bash
+uv add playwright-byob
+```
+
+Then everything else is still classic Playwright: the package only
+resolves the Chrome executable, the profile directory, and the launch
+options, and hands you back a regular browser context:
+
+```python
+from playwright.async_api import async_playwright
+from playwright_byob import async_launch_chrome
+
+async with async_playwright() as p:
+    context = await async_launch_chrome(p)
+    page = await context.new_page()
+    await page.goto("https://example.com")
+    await context.close()
+```
+
+One thing I want to highlight: using the installed Chrome binary and using
+your daily Chrome profile are two separate choices, and playwright-byob is
+opinionated about the second one. By default, it launches Chrome with a
+dedicated automation profile owned by the package, so your automation state
+persists across runs without touching your personal browsing data.
+It will refuse to launch against the default profile, which recent Chrome versions
+[block for remote debugging](https://developer.chrome.com/blog/remote-debugging-port)
+anyway.
+
+In practice, there are a few more considerations, such as which profile
+pattern fits your task and how to manage profile lifecycles. The
+[documentation](https://nanx.me/playwright-byob/) covers the recommended
+patterns, along with the privacy implications of persistent browser state.
+It is worth a read before you point automation at anything you log into.
+
+## Outro
+
+Both packages are deliberately small, and I intend to keep them that way.
+If you give them a try and find some rough edges, please create an issue.
+These tools scratch my own itches, but I would be delighted if they
+scratch yours too.

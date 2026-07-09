@@ -6,8 +6,50 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 03 Jun 2026 21:03:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Jul 2026 01:24:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CICD</title>
+      <link>https://nanx.me/tags/cicd/</link>
+      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/cicd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>plaintext workflow</title>
+      <link>https://nanx.me/tags/plaintext-workflow/</link>
+      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/plaintext-workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Playwright</title>
+      <link>https://nanx.me/tags/playwright/</link>
+      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/playwright/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>https://nanx.me/tags/python/</link>
+      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python packages</title>
+      <link>https://nanx.me/tags/python-packages/</link>
+      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/python-packages/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Anthropic Mono</title>
       <link>https://nanx.me/tags/anthropic-mono/</link>
@@ -93,20 +135,6 @@
       <description></description>
     </item>
     <item>
-      <title>Python</title>
-      <link>https://nanx.me/tags/python/</link>
-      <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python packages</title>
-      <link>https://nanx.me/tags/python-packages/</link>
-      <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/python-packages/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>R</title>
       <link>https://nanx.me/tags/r/</link>
       <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
@@ -139,13 +167,6 @@
       <link>https://nanx.me/tags/ai-adoption/</link>
       <pubDate>Sat, 11 Apr 2026 20:39:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ai-adoption/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>plaintext workflow</title>
-      <link>https://nanx.me/tags/plaintext-workflow/</link>
-      <pubDate>Sat, 11 Apr 2026 20:39:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/plaintext-workflow/</guid>
       <description></description>
     </item>
     <item>
@@ -247,13 +268,6 @@
       <description></description>
     </item>
     <item>
-      <title>CICD</title>
-      <link>https://nanx.me/tags/cicd/</link>
-      <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/cicd/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>pytest</title>
       <link>https://nanx.me/tags/pytest/</link>
       <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
@@ -272,13 +286,6 @@
       <link>https://nanx.me/tags/test-driven-development/</link>
       <pubDate>Fri, 02 Jan 2026 03:32:00 +0000</pubDate>
       <guid>https://nanx.me/tags/test-driven-development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/automation/</guid>
       <description></description>
     </item>
     <item>
