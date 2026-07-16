@@ -27,8 +27,8 @@ Photo by [Logan DeBorde](https://unsplash.com/photos/J65Lk2j0R1Q).
 ](/image/logan-deborde-J65Lk2j0R1Q-unsplash.jpg)
 
 I'm delighted to announce the first public release of
-[bisectrunk](https://nanx.me/bisectrunk/), a Rust CLI for parallel Git
-bisection of real-world
+[bisectrunk](https://github.com/nanxstats/bisectrunk),
+a Rust CLI for parallel Git bisection of real-world
 [software regressions](https://en.wikipedia.org/wiki/Software_regression).
 
 You give it a known-good revision, a known-bad revision, and a few shell hooks
