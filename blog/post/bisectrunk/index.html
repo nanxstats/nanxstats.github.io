@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Introducing bisectrunk: Parallel Git bisection for real-world regressions - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="bisectrunk is a Rust CLI for parallel Git bisection of real-world software regressions. It treats every candidate commit as an isolated, cached, resumable experiment, so you can trace a behavior change through your dependencies. To show it in action, I bisect an rlang commit that broke SVG snapshot tests two dependencies downstream.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/bisectrunk/" />
+    <meta property="og:title" content="Introducing bisectrunk: Parallel Git bisection for real-world regressions" />
+    <meta property="og:description" content="bisectrunk is a Rust CLI for parallel Git bisection of real-world software regressions. It treats every candidate commit as an isolated, cached, resumable experiment, so you can trace a behavior change through your dependencies. To show it in action, I bisect an rlang commit that broke SVG snapshot tests two dependencies downstream.
+" />
+    <meta property="og:image" content="https://nanx.me/image/logan-deborde-J65Lk2j0R1Q-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/logan-deborde-J65Lk2j0R1Q-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-07-15T21:03:00Z" />
+    <meta property="article:modified_time" content="2026-07-15T21:03:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Introducing bisectrunk: Parallel Git bisection for real-world regressions" />
+    <meta name="twitter:description" content="bisectrunk is a Rust CLI for parallel Git bisection of real-world software regressions. It treats every candidate commit as an isolated, cached, resumable experiment, so you can trace a behavior change through your dependencies. To show it in action, I bisect an rlang commit that broke SVG snapshot tests two dependencies downstream.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/logan-deborde-J65Lk2j0R1Q-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="Introducing bisectrunk: Parallel Git bisection for real-world regressions" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/bisectrunk/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased">
+    
+<header class="py-8 lg:py-12">
+    <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 text-sm font-sans font-[450] tracking-wide">
+            <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+                Nan Xiao
+            </a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+                
+                
+                <a class="text-ink font-[550]"
+                    href="https://nanx.me/blog/">
+                    Blog
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/software/">
+                    Software
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/papers/">
+                    Papers
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/talks/">
+                    Talks
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/books/">
+                    Books
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/about/">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<main class="content site-container my-10">
+    <article>
+        <header class="mb-10">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-6">Introducing bisectrunk: Parallel Git bisection for real-world regressions</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Wed Jul 15 2026 21:03:00 UTC'>
+                    July 15, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    7 min read
+                </span>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/rust"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Rust
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/rust-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Rust packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/automation"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        automation
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/developer-experience"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        developer experience
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/regression-testing"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        regression testing
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/harness-engineering"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        harness engineering
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/loop-engineering"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        loop engineering
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/plaintext-workflow"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        plaintext workflow
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/logan-deborde-J65Lk2j0R1Q-unsplash.jpg" alt="The Broad, Los Angeles. Photo by Logan DeBorde." />
+<div class="figcaption">The Broad, Los Angeles.
+Photo by <a href="https://unsplash.com/photos/J65Lk2j0R1Q">Logan DeBorde</a>.</div>
+</div>
+<p>I’m delighted to announce the first public release of
+<a href="https://nanx.me/bisectrunk/">bisectrunk</a>, a Rust CLI for parallel Git
+bisection of real-world
+<a href="https://en.wikipedia.org/wiki/Software_regression">software regressions</a>.</p>
+<p>You give it a known-good revision, a known-bad revision, and a few shell hooks
+that describe how your ecosystem installs and tests a commit.
+It then finds the commit that changed the result by evaluating several
+candidates at once, each in its own isolated environment. Because the hooks
+speak plain shell, bisectrunk adapts to whatever toolchain you use, and it
+works equally well when the one driving it happens to be an AI agent.</p>
+<p>You can install it with:</p>
+<pre class="bash"><code>cargo install bisectrunk</code></pre>
+<p>bisectrunk is also my first experiment with pairing Claude Fable 5
+(extra) as the architect and GPT-5.6 Sol (xhigh) as the builder.
+I gave the architect context, goals, and constraints to produce a spec and
+a prompt, then handed both to the builder to implement. Each step was a
+single conversation with quality output, although I spent hours iterating
+on the spec, simplifying the prompt, and laying out the project skeleton to
+reduce guesswork. I was proudly the bottleneck of the entire process.</p>
+<div id="case-study-tracing-a-visual-regression-through-rlang" class="section level2">
+<h2>Case study: tracing a visual regression through rlang</h2>
+<p>A tool in the <code>git bisect run</code> family is much easier to appreciate with a
+genuinely messy example, so instead of a toy example, let me walk through a
+software regression with real-world complexity. Everything you need to
+reproduce it lives in
+<a href="https://github.com/nanxstats/bisectrunk-rlang">nanxstats/bisectrunk-rlang</a>,
+and you are welcome to run it yourself.</p>
+<div id="the-regression" class="section level3">
+<h3>The regression</h3>
+<p>Shortly after rlang 1.3.0 was released, the
+<a href="https://github.com/keaven/gsDesign">gsDesign package</a> started failing two
+vdiffr snapshot tests. The plots still looked identical, but two legends had
+swapped stacking order in the SVG output, and that was enough to break the snapshots.</p>
+<p>This is a fun bisection problem because the failure surfaced two dependencies
+away from its true cause. gsDesign supplied the tests and the expected output,
+ggplot2 rendered the plots, and rlang has the commit we were looking for.
+So every evaluation had to keep the gsDesign and ggplot2 versions fixed while
+swapping in an rlang built from a different candidate commit.</p>
+<p>The search covered rlang from v1.1.7 (<code>7a519a2</code>) to the then-current HEAD
+<code>b7b9861</code>. That is 189 candidate commits, including the bad endpoint.
+gsDesign was pinned at <code>67a3a74</code>, the commit just before the snapshots were
+regenerated and the issue resolved in
+<a href="https://github.com/keaven/gsDesign/pull/283">PR #283</a>.</p>
+</div>
+<div id="designing-the-experiment" class="section level3">
+<h3>Designing the experiment</h3>
+<p>Each evaluation constructed the following environment:</p>
+<table>
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Component</th>
+<th>Treatment</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>rlang</td>
+<td>Checked out at the candidate commit and installed into a private library</td>
+</tr>
+<tr class="even">
+<td>ggplot2 4.0.3</td>
+<td>Reinstalled alongside that candidate rlang</td>
+</tr>
+<tr class="odd">
+<td>gsDesign</td>
+<td>Pinned at the pre-fix commit and installed once into a separate library</td>
+</tr>
+<tr class="even">
+<td>Test workload</td>
+<td>Only the two affected <code>test_that()</code> blocks</td>
+</tr>
+<tr class="odd">
+<td>Snapshot output</td>
+<td>Written below the worker’s private <code>BISECTRUNK_OUT</code> directory</td>
+</tr>
+</tbody>
+</table>
+<p>Reinstalling the exact ggplot2 version for every candidate also matters:
+a ggplot2 built under one rlang and reused with another might tie the result
+to the state of the host library rather than to the candidate commit.
+The test wrapper also prepends the controlled libraries to <code>.libPaths()</code>,
+so a stray <code>.Renviron</code> setup can’t quietly swap in a different rlang
+behind your back.</p>
+<p>Rather than running the two complete test files, <code>testthat::test_file()</code> can
+select just the two affected tests by their exact descriptions:</p>
+<ul>
+<li><code>plot.gsDesign: ... plottype = power and base set to FALSE</code></li>
+<li><code>plot.gsProbability: ... plottype power and base set to FALSE</code></li>
+</ul>
+<p>The wrapper first copies those files and their two baseline SVGs into each
+worker’s private artifact directory. This detail earns its keep once things
+run in parallel: vdiffr writes a <code>.new.svg</code> whenever a snapshot differs, so
+workers sharing the original test directory would race over the same
+output files.</p>
+<p>One last wrinkle: older rlang commits use C declarations that
+<a href="https://github.com/eddelbuettel/R-4.6.0-binary-transition">R 4.6 no longer exposes by default</a>.
+A small compatibility header was created to make those declarations visible
+during compilation, which is just enough of a shim to let every commit in the
+range build under the same R installation.</p>
+</div>
+<div id="running-the-search" class="section level3">
+<h3>Running the search</h3>
+<p>With all the inputs prepared, the complete command is refreshingly boring:</p>
+<pre class="bash"><code>bisectrunk bisect \
+  --repo &quot;$PWD/rlang&quot; \
+  --project &quot;$PWD/gsDesign&quot; \
+  --good v1.1.7 \
+  --bad b7b9861 \
+  --setup &#39;../setup-rlang.sh&#39; \
+  --run &#39;Rscript ../test-gsdesign.R&#39; \
+  --env &quot;GSDESIGN_LIB=$PWD/.gsdesign-lib&quot; \
+  --jobs 4 \
+  --timeout 10m \
+  --run-dir &quot;$PWD/.bisectrunk-run&quot; \
+  --cache-dir &quot;$PWD/.bisectrunk-cache&quot;</code></pre>
+<p>The setup hook installs the candidate rlang and the pinned ggplot2 source
+into <code>BISECTRUNK_ENV</code>. The run hook executes the focused testthat workload.
+A clean snapshot comparison exits 0 and means “good”, while a changed snapshot
+exits 1 and means “bad”. <code>NOT_CRAN=true</code> is set explicitly because vdiffr
+intentionally skips these comparisons in CRAN mode.</p>
+<div class="float">
+<img src="https://nanx.me/image/bisectrunk-rlang.png" alt="A Ghostty terminal showing the bisectrunk run in progress." />
+<div class="figcaption">A Ghostty terminal showing the bisectrunk run in progress.</div>
+</div>
+</div>
+<div id="the-answer" class="section level3">
+<h3>The answer</h3>
+<p>With four workers, bisectrunk evaluated 15 of the 189 commits and reported:</p>
+<pre class="text"><code>first bad commit: 9899406c1a14252278303ba36b48ee3101d4eb83
+last good commit: e58d448ee9a7cf2b1fa8d50e2d93424bbce636d0</code></pre>
+<p>The first bad commit was titled <strong>“Implement hash() with our own walker”</strong>.
+Its new hashing implementation changed an ordering that ggplot2’s guide
+collection happened to observe, which propagated all the way to two SVG
+snapshots in a downstream package.</p>
+<p>The 15 evaluations might sound like more work than a sequential binary
+search over 189 commits would need (about 8). And as Claude says,
+<em>you’re right to push back… and that’s not nothing</em>: parallel <em>k</em>-section
+deliberately speculates and evaluates several candidates in each round so that
+the expensive installations overlap. It spends extra CPU to save wall time.
+This is a good trade when a single evaluation involves compiling rlang and
+reinstalling ggplot2, and 4 of them can progress at once.</p>
+</div>
+</div>
+<div id="why-not-just-use-git-bisect-run" class="section level2">
+<h2>Why not just use git bisect run?</h2>
+<p>In popular AI terms, it’s all about the <strong>harness</strong>.</p>
+<p>For a fast, deterministic test contained in one repository, <code>git bisect run</code> remains the right tool (for real, everyone should learn it).
+It has the right classification protocol, including exit code 125 for an
+untestable commit, and it performs an efficient sequential search.</p>
+<p>The example above crosses the lines where “run this command after each
+checkout” stops describing the problem. A correct evaluation now needs a
+detached checkout, a candidate-specific installation, a pinned downstream
+project, isolated artifacts, captured logs, and a durable classification.
+Running several such evaluations concurrently adds multiple worktrees and a
+scheduler that can narrow the range from results arriving out of order.</p>
+<p>You could certainly build all of that around <code>git bisect run</code>, but you
+would be writing the missing executor yourself:</p>
+<ul>
+<li>Create and clean multiple worktrees without corrupting Git’s
+registration.</li>
+<li>Assign commits to workers and reconcile out-of-order results.</li>
+<li>Key installation caches by repository, commit, and setup hook.</li>
+<li>Distinguish an unbuildable candidate from a genuine behavioral failure.</li>
+<li>Prevent workers from sharing mutable output paths.</li>
+<li>Retain per-commit setup and test logs.</li>
+<li>Persist enough state to resume after interruption without repeating
+finished installations.</li>
+</ul>
+<p>At that point, choosing the midpoint has become the easy part. The real
+work is making every classification reproducible while many of them
+run at once.</p>
+<p>So bisectrunk reinvents the <strong>execution layer</strong> of <code>git bisect run</code>, and
+only that. The Git commit graph and the familiar good/bad/skip model stay
+exactly as they are; what changes is the unit of work, from “one command in
+one mutable checkout” to “one isolated, cached, inspectable experiment for
+one commit”. For dependency regressions like this one, the isolation makes
+the answer trustworthy, while parallel execution and resumability make the
+experiment practical.</p>
+</div>
+<div id="built-for-humans-and-ai" class="section level2">
+<h2>Built for humans and AI</h2>
+<p>There was one more reason to build this as a CLI: bisectrunk is a tool
+that AI coding agents can learn and use quickly. The inputs are
+explicit, the hook protocol is small, the state is durable, and the reports
+and per-commit logs give an agent concrete evidence for its next decision.
+The case study above was built entirely by an AI agent.</p>
+<p>In a “loop engineering” workflow, an agent turns a clear goal and enough
+repository context into a focused test, runs the search, inspects skipped
+or failed commits, refines the harness, and resumes without discarding
+completed work. The human still decides which outcome matters and which
+constraints stay fixed, while the agent takes care of the repetitive
+experimental loop.</p>
+<p>I have come to believe that tools designed around composable commands and
+inspectable state do more than automate today’s debugging: they become
+reliable building blocks for AI-assisted development automation.</p>
+</div>
+<div id="acknowledgements" class="section level2">
+<h2>Acknowledgements</h2>
+<p>I’m grateful for <code>crossbeam-channel</code> and the entire tree of Rust crates
+underneath bisectrunk, which made the concurrent parts of this project a
+genuine pleasure to build. And to whoever maintains the bottleneck: keep up
+the good work.</p>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/asciilint-playwright-byob/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Two small Python automation tools: asciilint and playwright-byob</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="site-container">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>

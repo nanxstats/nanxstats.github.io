@@ -3,18 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/cicd/</loc>
-    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/developer-experience/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/harness-engineering/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/</loc>
-    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/bisectrunk/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/loop-engineering/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/plaintext-workflow/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/regression-testing/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust-packages/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/cicd/</loc>
     <lastmod>2026-07-09T01:24:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/playwright/</loc>
@@ -24,9 +48,6 @@
     <lastmod>2026-07-09T01:24:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/python-packages/</loc>
-    <lastmod>2026-07-09T01:24:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-07-09T01:24:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/asciilint-playwright-byob/</loc>
@@ -104,9 +125,6 @@
     <loc>https://nanx.me/blog/post/vibe-maintainer/</loc>
     <lastmod>2026-03-10T03:45:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/harness-engineering/</loc>
-    <lastmod>2026-03-10T03:45:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/ralph-wiggum-loop/</loc>
     <lastmod>2026-03-10T03:45:00+00:00</lastmod>
   </url><url>
@@ -158,9 +176,6 @@
     <loc>https://nanx.me/tags/test-driven-development/</loc>
     <lastmod>2026-01-02T03:32:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/developer-experience/</loc>
-    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/integration-testing/</loc>
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
@@ -174,9 +189,6 @@
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/reverse-dependency/</loc>
-    <lastmod>2025-12-24T19:01:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rust/</loc>
     <lastmod>2025-12-24T19:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/speedrun/</loc>
@@ -204,9 +216,6 @@
     <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/revdep-speedrun/</loc>
-    <lastmod>2025-11-05T08:51:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rust-packages/</loc>
     <lastmod>2025-11-05T08:51:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/revdepcheck/</loc>

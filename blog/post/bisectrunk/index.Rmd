@@ -1,0 +1,234 @@
+---
+title: "Introducing bisectrunk: Parallel Git bisection for real-world regressions"
+author: "Nan Xiao"
+date: "2026-07-15T21:03:00"
+slug: bisectrunk
+categories: []
+tags:
+  - Rust
+  - Rust packages
+  - automation
+  - developer experience
+  - regression testing
+  - harness engineering
+  - loop engineering
+  - plaintext workflow
+meta_img: "image/logan-deborde-J65Lk2j0R1Q-unsplash.jpg"
+description: >
+  bisectrunk is a Rust CLI for parallel Git bisection of real-world
+  software regressions. It treats every candidate commit as an isolated,
+  cached, resumable experiment, so you can trace a behavior change
+  through your dependencies. To show it in action, I bisect an rlang
+  commit that broke SVG snapshot tests two dependencies downstream.
+---
+
+![The Broad, Los Angeles.
+Photo by [Logan DeBorde](https://unsplash.com/photos/J65Lk2j0R1Q).
+](/image/logan-deborde-J65Lk2j0R1Q-unsplash.jpg)
+
+I'm delighted to announce the first public release of
+[bisectrunk](https://nanx.me/bisectrunk/), a Rust CLI for parallel Git
+bisection of real-world
+[software regressions](https://en.wikipedia.org/wiki/Software_regression).
+
+You give it a known-good revision, a known-bad revision, and a few shell hooks
+that describe how your ecosystem installs and tests a commit.
+It then finds the commit that changed the result by evaluating several
+candidates at once, each in its own isolated environment. Because the hooks
+speak plain shell, bisectrunk adapts to whatever toolchain you use, and it
+works equally well when the one driving it happens to be an AI agent.
+
+You can install it with:
+
+```bash
+cargo install bisectrunk
+```
+
+bisectrunk is also my first experiment with pairing Claude Fable 5
+(extra) as the architect and GPT-5.6 Sol (xhigh) as the builder.
+I gave the architect context, goals, and constraints to produce a spec and
+a prompt, then handed both to the builder to implement. Each step was a
+single conversation with quality output, although I spent hours iterating
+on the spec, simplifying the prompt, and laying out the project skeleton to
+reduce guesswork. I was proudly the bottleneck of the entire process.
+
+## Case study: tracing a visual regression through rlang
+
+A tool in the `git bisect run` family is much easier to appreciate with a
+genuinely messy example, so instead of a toy example, let me walk through a
+software regression with real-world complexity. Everything you need to
+reproduce it lives in
+[nanxstats/bisectrunk-rlang](https://github.com/nanxstats/bisectrunk-rlang),
+and you are welcome to run it yourself.
+
+### The regression
+
+Shortly after rlang 1.3.0 was released, the
+[gsDesign package](https://github.com/keaven/gsDesign) started failing two
+vdiffr snapshot tests. The plots still looked identical, but two legends had
+swapped stacking order in the SVG output, and that was enough to break the snapshots.
+
+This is a fun bisection problem because the failure surfaced two dependencies
+away from its true cause. gsDesign supplied the tests and the expected output,
+ggplot2 rendered the plots, and rlang has the commit we were looking for.
+So every evaluation had to keep the gsDesign and ggplot2 versions fixed while
+swapping in an rlang built from a different candidate commit.
+
+The search covered rlang from v1.1.7 (`7a519a2`) to the then-current HEAD
+`b7b9861`. That is 189 candidate commits, including the bad endpoint.
+gsDesign was pinned at `67a3a74`, the commit just before the snapshots were
+regenerated and the issue resolved in
+[PR #283](https://github.com/keaven/gsDesign/pull/283).
+
+### Designing the experiment
+
+Each evaluation constructed the following environment:
+
+| Component | Treatment |
+|---|---------|
+| rlang | Checked out at the candidate commit and installed into a private library |
+| ggplot2 4.0.3 | Reinstalled alongside that candidate rlang |
+| gsDesign | Pinned at the pre-fix commit and installed once into a separate library |
+| Test workload | Only the two affected `test_that()` blocks |
+| Snapshot output | Written below the worker's private `BISECTRUNK_OUT` directory |
+
+Reinstalling the exact ggplot2 version for every candidate also matters:
+a ggplot2 built under one rlang and reused with another might tie the result
+to the state of the host library rather than to the candidate commit.
+The test wrapper also prepends the controlled libraries to `.libPaths()`,
+so a stray `.Renviron` setup can't quietly swap in a different rlang
+behind your back.
+
+Rather than running the two complete test files, `testthat::test_file()` can
+select just the two affected tests by their exact descriptions:
+
+- `plot.gsDesign: ... plottype = power and base set to FALSE`
+- `plot.gsProbability: ... plottype power and base set to FALSE`
+
+The wrapper first copies those files and their two baseline SVGs into each
+worker's private artifact directory. This detail earns its keep once things
+run in parallel: vdiffr writes a `.new.svg` whenever a snapshot differs, so
+workers sharing the original test directory would race over the same
+output files.
+
+One last wrinkle: older rlang commits use C declarations that
+[R 4.6 no longer exposes by default](https://github.com/eddelbuettel/R-4.6.0-binary-transition).
+A small compatibility header was created to make those declarations visible
+during compilation, which is just enough of a shim to let every commit in the
+range build under the same R installation.
+
+### Running the search
+
+With all the inputs prepared, the complete command is refreshingly boring:
+
+```bash
+bisectrunk bisect \
+  --repo "$PWD/rlang" \
+  --project "$PWD/gsDesign" \
+  --good v1.1.7 \
+  --bad b7b9861 \
+  --setup '../setup-rlang.sh' \
+  --run 'Rscript ../test-gsdesign.R' \
+  --env "GSDESIGN_LIB=$PWD/.gsdesign-lib" \
+  --jobs 4 \
+  --timeout 10m \
+  --run-dir "$PWD/.bisectrunk-run" \
+  --cache-dir "$PWD/.bisectrunk-cache"
+```
+
+The setup hook installs the candidate rlang and the pinned ggplot2 source
+into `BISECTRUNK_ENV`. The run hook executes the focused testthat workload.
+A clean snapshot comparison exits 0 and means "good", while a changed snapshot
+exits 1 and means "bad". `NOT_CRAN=true` is set explicitly because vdiffr
+intentionally skips these comparisons in CRAN mode.
+
+![A Ghostty terminal showing the bisectrunk run in progress.](/image/bisectrunk-rlang.png)
+
+### The answer
+
+With four workers, bisectrunk evaluated 15 of the 189 commits and reported:
+
+```text
+first bad commit: 9899406c1a14252278303ba36b48ee3101d4eb83
+last good commit: e58d448ee9a7cf2b1fa8d50e2d93424bbce636d0
+```
+
+The first bad commit was titled **"Implement hash() with our own walker"**.
+Its new hashing implementation changed an ordering that ggplot2's guide
+collection happened to observe, which propagated all the way to two SVG
+snapshots in a downstream package.
+
+The 15 evaluations might sound like more work than a sequential binary
+search over 189 commits would need (about 8). And as Claude says,
+_you're right to push back... and that's not nothing_: parallel _k_-section
+deliberately speculates and evaluates several candidates in each round so that
+the expensive installations overlap. It spends extra CPU to save wall time.
+This is a good trade when a single evaluation involves compiling rlang and
+reinstalling ggplot2, and 4 of them can progress at once.
+
+## Why not just use git bisect run?
+
+In popular AI terms, it's all about the **harness**.
+
+For a fast, deterministic test contained in one repository, `git bisect
+run` remains the right tool (for real, everyone should learn it).
+It has the right classification protocol, including exit code 125 for an
+untestable commit, and it performs an efficient sequential search.
+
+The example above crosses the lines where "run this command after each
+checkout" stops describing the problem. A correct evaluation now needs a
+detached checkout, a candidate-specific installation, a pinned downstream
+project, isolated artifacts, captured logs, and a durable classification.
+Running several such evaluations concurrently adds multiple worktrees and a
+scheduler that can narrow the range from results arriving out of order.
+
+You could certainly build all of that around `git bisect run`, but you
+would be writing the missing executor yourself:
+
+- Create and clean multiple worktrees without corrupting Git's
+  registration.
+- Assign commits to workers and reconcile out-of-order results.
+- Key installation caches by repository, commit, and setup hook.
+- Distinguish an unbuildable candidate from a genuine behavioral failure.
+- Prevent workers from sharing mutable output paths.
+- Retain per-commit setup and test logs.
+- Persist enough state to resume after interruption without repeating
+  finished installations.
+
+At that point, choosing the midpoint has become the easy part. The real
+work is making every classification reproducible while many of them
+run at once.
+
+So bisectrunk reinvents the **execution layer** of `git bisect run`, and
+only that. The Git commit graph and the familiar good/bad/skip model stay
+exactly as they are; what changes is the unit of work, from "one command in
+one mutable checkout" to "one isolated, cached, inspectable experiment for
+one commit". For dependency regressions like this one, the isolation makes
+the answer trustworthy, while parallel execution and resumability make the
+experiment practical.
+
+## Built for humans and AI
+
+There was one more reason to build this as a CLI: bisectrunk is a tool
+that AI coding agents can learn and use quickly. The inputs are
+explicit, the hook protocol is small, the state is durable, and the reports
+and per-commit logs give an agent concrete evidence for its next decision.
+The case study above was built entirely by an AI agent.
+
+In a "loop engineering" workflow, an agent turns a clear goal and enough
+repository context into a focused test, runs the search, inspects skipped
+or failed commits, refines the harness, and resumes without discarding
+completed work. The human still decides which outcome matters and which
+constraints stay fixed, while the agent takes care of the repetitive
+experimental loop.
+
+I have come to believe that tools designed around composable commands and
+inspectable state do more than automate today's debugging: they become
+reliable building blocks for AI-assisted development automation.
+
+## Acknowledgements
+
+I'm grateful for `crossbeam-channel` and the entire tree of Rust crates
+underneath bisectrunk, which made the concurrent parts of this project a
+genuine pleasure to build. And to whoever maintains the bottleneck: keep up
+the good work.

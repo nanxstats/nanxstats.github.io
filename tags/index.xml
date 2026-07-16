@@ -6,13 +6,62 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 09 Jul 2026 01:24:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jul 2026 21:03:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>automation</title>
       <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
       <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>developer experience</title>
+      <link>https://nanx.me/tags/developer-experience/</link>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/developer-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>harness engineering</title>
+      <link>https://nanx.me/tags/harness-engineering/</link>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/harness-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>loop engineering</title>
+      <link>https://nanx.me/tags/loop-engineering/</link>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/loop-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>plaintext workflow</title>
+      <link>https://nanx.me/tags/plaintext-workflow/</link>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/plaintext-workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>regression testing</title>
+      <link>https://nanx.me/tags/regression-testing/</link>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/regression-testing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://nanx.me/tags/rust/</link>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust packages</title>
+      <link>https://nanx.me/tags/rust-packages/</link>
+      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -20,13 +69,6 @@
       <link>https://nanx.me/tags/cicd/</link>
       <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
       <guid>https://nanx.me/tags/cicd/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>plaintext workflow</title>
-      <link>https://nanx.me/tags/plaintext-workflow/</link>
-      <pubDate>Thu, 09 Jul 2026 01:24:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/plaintext-workflow/</guid>
       <description></description>
     </item>
     <item>
@@ -184,13 +226,6 @@
       <description></description>
     </item>
     <item>
-      <title>harness engineering</title>
-      <link>https://nanx.me/tags/harness-engineering/</link>
-      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/harness-engineering/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Ralph Wiggum loop</title>
       <link>https://nanx.me/tags/ralph-wiggum-loop/</link>
       <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
@@ -289,13 +324,6 @@
       <description></description>
     </item>
     <item>
-      <title>developer experience</title>
-      <link>https://nanx.me/tags/developer-experience/</link>
-      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/developer-experience/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>integration testing</title>
       <link>https://nanx.me/tags/integration-testing/</link>
       <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
@@ -321,13 +349,6 @@
       <link>https://nanx.me/tags/reverse-dependency/</link>
       <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
       <guid>https://nanx.me/tags/reverse-dependency/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust</title>
-      <link>https://nanx.me/tags/rust/</link>
-      <pubDate>Wed, 24 Dec 2025 19:01:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust/</guid>
       <description></description>
     </item>
     <item>
@@ -377,13 +398,6 @@
       <link>https://nanx.me/tags/data.table/</link>
       <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
       <guid>https://nanx.me/tags/data.table/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust packages</title>
-      <link>https://nanx.me/tags/rust-packages/</link>
-      <pubDate>Wed, 05 Nov 2025 08:51:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust-packages/</guid>
       <description></description>
     </item>
     <item>

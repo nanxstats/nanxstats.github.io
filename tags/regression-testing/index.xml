@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>harness engineering on Nan Xiao | 肖楠</title>
-    <link>https://nanx.me/tags/harness-engineering/</link>
-    <description>Recent content in harness engineering on Nan Xiao | 肖楠</description>
+    <title>regression testing on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/regression-testing/</link>
+    <description>Recent content in regression testing on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 15 Jul 2026 21:03:00 +0000</lastBuildDate>
-    <atom:link href="https://nanx.me/tags/harness-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://nanx.me/tags/regression-testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Introducing bisectrunk: Parallel Git bisection for real-world regressions</title>
       <link>https://nanx.me/blog/post/bisectrunk/</link>
       <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
       <guid>https://nanx.me/blog/post/bisectrunk/</guid>
       <description>The Broad, Los Angeles. Photo by Logan DeBorde. I’m delighted to announce the first public release of bisectrunk, a Rust CLI for parallel Git bisection of real-world software regressions.&#xA;You give it a known-good revision, a known-bad revision, and a few shell hooks that describe how your ecosystem installs and tests a commit. It then finds the commit that changed the result by evaluating several candidates at once, each in its own isolated environment.</description>
-    </item>
-    <item>
-      <title>Becoming a Vibe Maintainer</title>
-      <link>https://nanx.me/blog/post/vibe-maintainer/</link>
-      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
-      <guid>https://nanx.me/blog/post/vibe-maintainer/</guid>
-      <description>Back in 2018, I started awesome-shiny-extensions, a curated list of Shiny extension packages in R (and now +Python). What began as a small collection of around 130 packages has grown into something much bigger than I expected: nearly 500 packages and 1.6k GitHub stars. But I will be honest: for the last couple of years, I have been what you might call “vibe maintaining” this list. I update it when I feel like it, which means not very often.</description>
     </item>
   </channel>
 </rss>
