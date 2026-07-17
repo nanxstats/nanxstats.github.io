@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Building a Homebrew tap to distribute my software - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="I built a Homebrew tap that distributes my fonts and CLI tools, so you can install everything with brew install. Here is why I made it, what&#39;s inside, and some honest notes on the Homebrew developer experience.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/homebrew-tap/" />
+    <meta property="og:title" content="Building a Homebrew tap to distribute my software" />
+    <meta property="og:description" content="I built a Homebrew tap that distributes my fonts and CLI tools, so you can install everything with brew install. Here is why I made it, what&#39;s inside, and some honest notes on the Homebrew developer experience.
+" />
+    <meta property="og:image" content="https://nanx.me/image/clay-banks-rLQwcbZjrcU-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/clay-banks-rLQwcbZjrcU-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-07-17T02:56:00Z" />
+    <meta property="article:modified_time" content="2026-07-17T02:56:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Building a Homebrew tap to distribute my software" />
+    <meta name="twitter:description" content="I built a Homebrew tap that distributes my fonts and CLI tools, so you can install everything with brew install. Here is why I made it, what&#39;s inside, and some honest notes on the Homebrew developer experience.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/clay-banks-rLQwcbZjrcU-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="Building a Homebrew tap to distribute my software" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/homebrew-tap/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased">
+    
+<header class="py-8 lg:py-12">
+    <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 text-sm font-sans font-[450] tracking-wide">
+            <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+                Nan Xiao
+            </a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+                
+                
+                <a class="text-ink font-[550]"
+                    href="https://nanx.me/blog/">
+                    Blog
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/software/">
+                    Software
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/papers/">
+                    Papers
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/talks/">
+                    Talks
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/books/">
+                    Books
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/about/">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<main class="content site-container my-10">
+    <article>
+        <header class="mb-10">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-6">Building a Homebrew tap to distribute my software</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Fri Jul 17 2026 02:56:00 UTC'>
+                    July 17, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    4 min read
+                </span>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/homebrew"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Homebrew
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/brew-tap"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        brew tap
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/package-manager"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        package manager
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/software-distribution"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        software distribution
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/developer-experience"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        developer experience
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<blockquote>
+<p>TL;DR: I built a Homebrew tap so you can install my fonts and CLI tools
+with a single <code>brew install</code>:
+<a href="https://github.com/nanxstats/homebrew-tap" class="uri">https://github.com/nanxstats/homebrew-tap</a></p>
+</blockquote>
+<div class="float">
+<img src="https://nanx.me/image/clay-banks-rLQwcbZjrcU-unsplash.jpg" alt="I can’t find a good photo of beer tap so here is a kitchen tap instead. Photo by Clay Banks." />
+<div class="figcaption">I can’t find a good photo of beer tap so here is a kitchen tap instead.<br />
+Photo by <a href="https://unsplash.com/photos/rLQwcbZjrcU">Clay Banks</a>.</div>
+</div>
+<p>Until this week, I distributed my software the artisanal way:
+command line tools on PyPI and crates.io, fonts as zip files attached to
+GitHub releases. This works, but it asks every user to know a different
+“incantation” for each thing.</p>
+<p>Now, Homebrew can handle all of it. For example:</p>
+<pre class="sh"><code>brew install nanxstats/tap/asciilint
+brew install nanxstats/tap/bisectrunk
+brew install nanxstats/tap/pkglite
+
+brew install --cask nanxstats/tap/font-anthrosevka-mono
+brew install --cask nanxstats/tap/font-dm-mono-ligaturized
+brew install --cask nanxstats/tap/font-paper-mono-ligaturized</code></pre>
+<p>The fully qualified names add the tap automatically on first use,
+so no setup needed.</p>
+<div id="why" class="section level2">
+<h2>Why</h2>
+<p>The immediate reason is my friend <a href="https://github.com/svm-zhang">Simo</a>,
+who is setting up his homelab. He has written Ansible playbooks that
+configure his Linux servers, macOS dev machines, and cloud instances for
+language model training and inference. A few weeks ago he asked if my custom,
+ligaturized coding fonts could be made installable via Homebrew, so his
+playbooks could use a simple API instead of scripting the installations in-house.
+I have to admit it’s a convincing argument and it’s hard to say no to
+someone who has automated everything else.</p>
+<p>My own software packaging experience was limited to publishing to the
+Arch User Repository (AUR) about 15 years ago, and even that was mostly copying
+a text file from a template. Back then, I was a young, naive student who picked
+Arch as the daily driver for a ThinkPad T60, which meant regular quality time
+with GRUB, the kernel, and AMD graphics drivers. ANYWAYS, having been away
+that long, I was a little surprised to learn that Homebrew now runs on Linux too,
+which is exactly what makes it work for Simo, since one interface covers his
+entire development infra.</p>
+<p>Besides the fonts, adding my CLI tools is obviously needed.
+I have written a few in <a href="https://nanx.me/tags/python-packages/">Python</a> and
+<a href="https://nanx.me/tags/rust-packages/">Rust</a> over the past year. With Homebrew,
+you can skip <code>pipx install</code> or <code>cargo install</code> and let one package
+manager own everything at the system level.</p>
+</div>
+<div id="the-tap" class="section level2">
+<h2>The tap</h2>
+<p>Homebrew’s main repository has some <a href="https://docs.brew.sh/Acceptable-Casks">notability requirements</a> that my repos fail, so I created my own tap.
+A tap is a GitHub repo with a specific layout that <code>brew</code> knows how to install from.
+Each software is a declarative Ruby file.</p>
+<p>For a smooth start, the tap currently ships 4 formulae:
+<a href="https://nanx.me/blog/post/asciilint-playwright-byob/">asciilint</a> and
+<a href="https://nanx.me/blog/post/pkglite-python/">py-pkglite</a> (Python, each installed into its
+own isolated virtual environment), <a href="https://nanx.me/blog/post/bisectrunk/">bisectrunk</a> and
+<a href="https://nanx.me/blog/post/revdeprun/">revdeprun</a> (Rust, compiled from source),
+plus 7 font casks.</p>
+</div>
+<div id="the-homebrew-developer-experience" class="section level2">
+<h2>The Homebrew developer experience</h2>
+<p>The user half of Homebrew is lovely: once the tap exists, installation just works.
+The developer half took more effort than I expected. I suspect I had actually
+attempted this before, because I have a distinct memory of bouncing off the
+Homebrew documentation. It was written in a quite verbose style, and I still
+kept getting lost about which part applied to my situation. I’m sure it’s
+my fault for being a rookie…
+Overall, I would not bet on a first-time tap author getting a formula right on
+the first try, and probably nobody is <a href="https://blog.codinghorror.com/falling-into-the-pit-of-success/">falling into the pit of success</a> here.</p>
+<p>In practice, the tricky part was <strong>the loop</strong>, that is, figuring out how a
+formula or cask should be written, then figuring out which <code>brew</code> commands
+would tell me whether I wrote it correctly (never mind whether it worked).
+It even took today’s frontier AI agents several tries to get things
+right, which I found oddly comforting as a human.</p>
+<p>The positive aspect is that the Homebrew toolchain validates a lot of things
+behind the scenes: between <code>brew style</code>, <code>brew audit --strict</code>, <code>brew test</code>,
+and the test bot running CI on macOS and Linux. By the time everything passes,
+you can be reasonably confident the tap is in good shape, at least on paper.</p>
+<p>If you use any of my fonts or tools, give the tap a try, and please
+<a href="https://github.com/nanxstats/homebrew-tap/issues">create an issue</a> if anything breaks.
+And thanks, Simo, for the nudge!</p>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/bisectrunk/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Introducing bisectrunk: Parallel Git bisection for real-world regressions</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="site-container">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+
+    
+</body>
+
+</html>

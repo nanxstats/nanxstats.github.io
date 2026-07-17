@@ -1,0 +1,113 @@
+---
+title: "Building a Homebrew tap to distribute my software"
+author: "Nan Xiao"
+date: "2026-07-17T02:56:00"
+slug: homebrew-tap
+categories: []
+tags:
+  - Homebrew
+  - brew tap
+  - package manager
+  - software distribution
+  - developer experience
+meta_img: "image/clay-banks-rLQwcbZjrcU-unsplash.jpg"
+description: >
+  I built a Homebrew tap that distributes my fonts and CLI tools, so you can
+  install everything with brew install. Here is why I made it, what's inside,
+  and some honest notes on the Homebrew developer experience.
+---
+
+> TL;DR: I built a Homebrew tap so you can install my fonts and CLI tools
+> with a single `brew install`:
+> <https://github.com/nanxstats/homebrew-tap>
+
+![I can't find a good photo of beer tap so here is a kitchen tap instead.\
+Photo by [Clay Banks](https://unsplash.com/photos/rLQwcbZjrcU).
+](/image/clay-banks-rLQwcbZjrcU-unsplash.jpg)
+
+Until this week, I distributed my software the artisanal way:
+command line tools on PyPI and crates.io, fonts as zip files attached to
+GitHub releases. This works, but it asks every user to know a different
+"incantation" for each thing.
+
+Now, Homebrew can handle all of it. For example:
+
+```sh
+brew install nanxstats/tap/asciilint
+brew install nanxstats/tap/bisectrunk
+brew install nanxstats/tap/pkglite
+
+brew install --cask nanxstats/tap/font-anthrosevka-mono
+brew install --cask nanxstats/tap/font-dm-mono-ligaturized
+brew install --cask nanxstats/tap/font-paper-mono-ligaturized
+```
+
+The fully qualified names add the tap automatically on first use,
+so no setup needed.
+
+## Why
+
+The immediate reason is my friend [Simo](https://github.com/svm-zhang),
+who is setting up his homelab. He has written Ansible playbooks that
+configure his Linux servers, macOS dev machines, and cloud instances for
+language model training and inference. A few weeks ago he asked if my custom,
+ligaturized coding fonts could be made installable via Homebrew, so his
+playbooks could use a simple API instead of scripting the installations in-house.
+I have to admit it's a convincing argument and it's hard to say no to
+someone who has automated everything else.
+
+My own software packaging experience was limited to publishing to the
+Arch User Repository (AUR) about 15 years ago, and even that was mostly copying
+a text file from a template. Back then, I was a young, naive student who picked
+Arch as the daily driver for a ThinkPad T60, which meant regular quality time
+with GRUB, the kernel, and AMD graphics drivers. ANYWAYS, having been away
+that long, I was a little surprised to learn that Homebrew now runs on Linux too,
+which is exactly what makes it work for Simo, since one interface covers his
+entire development infra.
+
+Besides the fonts, adding my CLI tools is obviously needed.
+I have written a few in [Python](/tags/python-packages/) and
+[Rust](/tags/rust-packages/) over the past year. With Homebrew,
+you can skip `pipx install` or `cargo install` and let one package
+manager own everything at the system level.
+
+## The tap
+
+Homebrew's main repository has some [notability requirements
+](https://docs.brew.sh/Acceptable-Casks) that my repos fail, so I created my own tap.
+A tap is a GitHub repo with a specific layout that `brew` knows how to install from.
+Each software is a declarative Ruby file.
+
+For a smooth start, the tap currently ships 4 formulae:
+[asciilint](/blog/post/asciilint-playwright-byob/) and
+[py-pkglite](/blog/post/pkglite-python/) (Python, each installed into its
+own isolated virtual environment), [bisectrunk](/blog/post/bisectrunk/) and
+[revdeprun](/blog/post/revdeprun/) (Rust, compiled from source),
+plus 7 font casks.
+
+## The Homebrew developer experience
+
+The user half of Homebrew is lovely: once the tap exists, installation just works.
+The developer half took more effort than I expected. I suspect I had actually
+attempted this before, because I have a distinct memory of bouncing off the
+Homebrew documentation. It was written in a quite verbose style, and I still
+kept getting lost about which part applied to my situation. I'm sure it's
+my fault for being a rookie...
+Overall, I would not bet on a first-time tap author getting a formula right on
+the first try, and probably nobody is [falling into the pit of success
+](https://blog.codinghorror.com/falling-into-the-pit-of-success/) here.
+
+In practice, the tricky part was **the loop**, that is, figuring out how a
+formula or cask should be written, then figuring out which `brew` commands
+would tell me whether I wrote it correctly (never mind whether it worked).
+It even took today's frontier AI agents several tries to get things
+right, which I found oddly comforting as a human.
+
+The positive aspect is that the Homebrew toolchain validates a lot of things
+behind the scenes: between `brew style`, `brew audit --strict`, `brew test`,
+and the test bot running CI on macOS and Linux. By the time everything passes,
+you can be reasonably confident the tap is in good shape, at least on paper.
+
+If you use any of my fonts or tools, give the tap a try, and please
+[create an issue](https://github.com/nanxstats/homebrew-tap/issues) if anything breaks.
+And thanks, Simo, for the nudge!

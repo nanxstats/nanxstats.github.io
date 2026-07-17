@@ -2,19 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/blog/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/brew-tap/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/homebrew-tap/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/developer-experience/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/homebrew/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/package-manager/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/software-distribution/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/tags/automation/</loc>
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/developer-experience/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/harness-engineering/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/</loc>
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/bisectrunk/</loc>
@@ -33,9 +51,6 @@
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/rust-packages/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/cicd/</loc>
