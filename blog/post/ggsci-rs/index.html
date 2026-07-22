@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Introducing ggsci for Rust - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="ggsci is now available for Rust: a core crate with the full collection of scientific journal and sci-fi themed color palettes, plus adapters that turn them into Ratatui styles and ggsql scale clauses, so your terminal applications can be colored as carefully as your ggplot2 figures.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/ggsci-rs/" />
+    <meta property="og:title" content="Introducing ggsci for Rust" />
+    <meta property="og:description" content="ggsci is now available for Rust: a core crate with the full collection of scientific journal and sci-fi themed color palettes, plus adapters that turn them into Ratatui styles and ggsql scale clauses, so your terminal applications can be colored as carefully as your ggplot2 figures.
+" />
+    <meta property="og:image" content="https://nanx.me/image/remi-muller-LlHgaeBwYVE-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/remi-muller-LlHgaeBwYVE-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-07-22T00:53:00Z" />
+    <meta property="article:modified_time" content="2026-07-22T00:53:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Introducing ggsci for Rust" />
+    <meta name="twitter:description" content="ggsci is now available for Rust: a core crate with the full collection of scientific journal and sci-fi themed color palettes, plus adapters that turn them into Ratatui styles and ggsql scale clauses, so your terminal applications can be colored as carefully as your ggplot2 figures.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/remi-muller-LlHgaeBwYVE-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="Introducing ggsci for Rust" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/ggsci-rs/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased">
+    
+<header class="py-8 lg:py-12">
+    <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 text-sm font-sans font-[450] tracking-wide">
+            <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+                Nan Xiao
+            </a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+                
+                
+                <a class="text-ink font-[550]"
+                    href="https://nanx.me/blog/">
+                    Blog
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/software/">
+                    Software
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/papers/">
+                    Papers
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/talks/">
+                    Talks
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/books/">
+                    Books
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/about/">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<main class="content site-container my-10">
+    <article>
+        <header class="mb-10">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-6">Introducing ggsci for Rust</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Wed Jul 22 2026 00:53:00 UTC'>
+                    July 22, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    4 min read
+                </span>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/rust"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Rust
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/rust-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Rust packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/ggsci"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        ggsci
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/color-palettes"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        color palettes
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/color-scales"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        color scales
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/data-visualization"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        data visualization
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/command-line"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        command line
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/tui"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        TUI
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/ratatui"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Ratatui
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/ggsql"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        ggsql
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/remi-muller-LlHgaeBwYVE-unsplash.jpg" alt="Photo by Rémi Müller." />
+<div class="figcaption">Photo by <a href="https://unsplash.com/photos/LlHgaeBwYVE">Rémi Müller</a>.</div>
+</div>
+<p>Welcome to the latest post of the “Introducing X for Y” series.</p>
+<p>Today I’m happy to share that ggsci is now available for Rust.
+You can add the crates to your Rust project with Cargo:</p>
+<pre class="bash"><code>cargo add ggsci
+cargo add ggsci-ratatui
+cargo add ggsci-ggsql</code></pre>
+<p>ggsci for R started ten years ago as a small collection of color palettes
+inspired by scientific journals and science fiction, packaged as ggplot2
+color scales. It has since grown considerably, through the major expansions
+in <a href="https://nanx.me/blog/post/ggsci-4-0-0/">ggsci 4.0</a> and
+<a href="https://nanx.me/blog/post/ggsci-5-0-0/">ggsci 5.0</a>, then a
+<a href="https://nanx.me/blog/post/ggsci-python/">Python port</a> for plotnine.
+Rust felt like the natural next stop.</p>
+<p>My motivation has surprisingly little to do with plotting. We are living
+through a renaissance of the command line, and much of it runs on Rust.
+For example, <a href="https://ratatui.rs/">Ratatui</a> makes it pleasant to build terminal
+interfaces that people enjoy looking at, and <a href="https://ggsql.org/">ggsql</a>
+brings the grammar of graphics to SQL. All of these tools need colors,
+and I figured: there are never enough palettes to fit every context,
+so why not bring ggsci to Rust?</p>
+<div id="a-quick-tour" class="section level2">
+<h2>A quick tour</h2>
+<p>As of today, the core <code>ggsci</code> crate contains a core registry of 33 discrete
+and 53 continuous palette variants, along with 551 iTerm color themes and
+17 Gephi generative palettes.
+Palettes are looked up by a <code>family:name</code> spec.
+For discrete palettes, you take the number of categorical colors you need:</p>
+<pre class="rust"><code>use ggsci::palette_by_spec;
+
+let palette = palette_by_spec(&quot;observable:observable10&quot;)?;
+let colors = palette.take_hex(3)?;
+// [&quot;#4269D0&quot;, &quot;#EFB118&quot;, &quot;#FF725C&quot;]</code></pre>
+<p>For continuous palettes, you interpolate:</p>
+<pre class="rust"><code>let palette = palette_by_spec(&quot;tw3:gray&quot;)?;
+let colors = palette.interpolate(50)?;</code></pre>
+<p>The iTerm and Gephi collections have their own entry points, because
+each iTerm theme carries normal and bright variants in a fixed terminal
+channel order, and Gephi palettes generate their colors from an
+algorithm and a random seed rather than a stored list:</p>
+<pre class="rust"><code>use ggsci::{gephi_palette, iterm_palette, ItermVariant};
+
+let rose_pine = iterm_palette(&quot;Rose Pine&quot;)?;
+let colors = rose_pine.take_hex(ItermVariant::Normal, 6)?;
+
+let fancy = gephi_palette(&quot;fancy-light&quot;)?;
+let colors = fancy.generate_with_seed(20, 42)?;</code></pre>
+</div>
+<div id="palette-gallery" class="section level2">
+<h2>Palette gallery</h2>
+<p>It would be rude to build a Ratatui adapter and then never use it to
+show off the palettes. So the <code>ggsci-ratatui</code> crate ships with an
+interactive gallery that browses every palette by category in tabs,
+with a scrollable card grid, in truecolor or ANSI-256 mode. From the
+workspace directory:</p>
+<pre class="bash"><code>cargo run -p ggsci-ratatui --example palette-gallery</code></pre>
+<div class="float">
+<video autoplay loop muted playsinline src="https://nanx.me/image/ggsci-rs-palette-gallery.mp4">
+</video>
+<div class="figcaption">
+A Ratatui application for browsing all available palettes by category in tabs and scrolling down the grid. Demo recorded with charmbracelet/vhs.
+</div>
+</div>
+</div>
+<div id="three-crates" class="section level2">
+<h2>Three crates</h2>
+<p>The three crates live in the
+<a href="https://github.com/nanxstats/ggsci-rs">nanxstats/ggsci-rs</a> workspace
+and are released together at the same version:</p>
+<ul>
+<li><code>ggsci</code> provides the palette data, interpolation, and generation,
+with minimal dependencies.</li>
+<li><code>ggsci-ratatui</code> converts palettes to Ratatui colors and styles,
+in truecolor or ANSI-256 mode.</li>
+<li><code>ggsci-ggsql</code> (tentatively) converts palettes to typed ggsql output
+ranges or explicit array SQL scale clauses.</li>
+</ul>
+<p>The two adapter crates depend on <code>ggsci</code>, plus <code>ratatui-core</code> and
+<code>ggsql</code> respectively. Each crate declares its own MSRV (minimum
+supported Rust version), with <code>ggsci</code> at 1.85, and the adapters slightly
+higher to match their dependencies.</p>
+<p>One caveat: ggsql has no <a href="https://github.com/posit-dev/ggsql/issues/358">third-party palette extension
+API</a> yet, so
+<code>ggsci-ggsql</code> emits explicit color arrays instead of registering ggsci
+names globally. Think of it as a proof of concept for now.
+Once a proper extension mechanism lands, we will adopt it.</p>
+</div>
+<div id="api-design" class="section level2">
+<h2>API design</h2>
+<p>With no “ggplot2 for Rust” to extend, I had unusual freedom (or difficulty)
+in designing the API. I did intend to keep the core scale semantics from
+ggplot2, so at the heart of the crate sits this simple enum:</p>
+<pre class="rust"><code>pub enum PaletteKind {
+    Discrete,
+    Continuous,
+}</code></pre>
+<p>The iTerm and Gephi palettes all report <code>PaletteKind::Discrete</code>, but as
+you saw above, they use separate APIs that respect their own unique structures,
+such as the variant ordering for iTerm and seeded generation for Gephi.</p>
+<p>This is deliberately simpler than ggsci in R, where the palettes plug into
+ggplot2 through <code>scale_color_*()</code> function factories.
+Rather than reinvent all of that machinery in Rust, I decided to stop
+overthinking and just provide the colors, then let you decide what to do
+with them.</p>
+<p>The full API documentation is on docs.rs for
+<a href="https://docs.rs/ggsci/">ggsci</a>,
+<a href="https://docs.rs/ggsci-ratatui/">ggsci-ratatui</a>, and
+<a href="https://docs.rs/ggsci-ggsql/">ggsci-ggsql</a>.
+But let’s be honest… The fastest way to get started today is probably to
+clone the repository and let your AI coding agent figure it out, so you can
+focus on the one decision that matters: which palette to use for your project.</p>
+</div>
+<div id="ai-usage-disclaimer" class="section level2">
+<h2>AI usage disclaimer</h2>
+<p>The spec planning was done partially with GPT-5.5 Pro and 5.6 Pro,
+with prompts generated, reviewed, and modified by a human, then handed
+off to Codex with GPT-5.6 Sol (xhigh) for implementation. I then
+reviewed and revised the code by hand. I did my best to keep the AI
+slop to a minimum. If you spot any that escaped, please consider
+<a href="https://github.com/nanxstats/ggsci-rs/issues">creating an issue</a>.</p>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/homebrew-tap/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Building a Homebrew tap to distribute my software</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="site-container">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+
+    
+</body>
+
+</html>

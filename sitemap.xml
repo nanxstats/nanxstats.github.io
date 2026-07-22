@@ -3,7 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/color-palettes/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/color-scales/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/command-line/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/data-visualization/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ggsci/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ggsql/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/ggsci-rs/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ratatui/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust-packages/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/tui/</loc>
+    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/brew-tap/</loc>
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
@@ -14,9 +53,6 @@
     <loc>https://nanx.me/tags/developer-experience/</loc>
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/homebrew/</loc>
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
   </url><url>
@@ -24,9 +60,6 @@
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/software-distribution/</loc>
-    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/automation/</loc>
@@ -45,12 +78,6 @@
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/regression-testing/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rust/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rust-packages/</loc>
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/cicd/</loc>
@@ -89,19 +116,7 @@
     <loc>https://nanx.me/tags/programming-ligatures/</loc>
     <lastmod>2026-06-03T21:03:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/color-palettes/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/color-scales/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/data-visualization/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/ggplot2/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/ggsci/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/ggsci-5-0-0/</loc>
@@ -538,9 +553,6 @@
   </url><url>
     <loc>https://nanx.me/tags/non-proportional-hazards/</loc>
     <lastmod>2024-09-28T03:42:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/command-line/</loc>
-    <lastmod>2024-09-15T19:28:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/environment-variable/</loc>
     <lastmod>2024-09-15T19:28:00+00:00</lastmod>

@@ -6,8 +6,78 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Jul 2026 02:56:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Jul 2026 00:53:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>color palettes</title>
+      <link>https://nanx.me/tags/color-palettes/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/color-palettes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>color scales</title>
+      <link>https://nanx.me/tags/color-scales/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/color-scales/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>command line</title>
+      <link>https://nanx.me/tags/command-line/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/command-line/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>data visualization</title>
+      <link>https://nanx.me/tags/data-visualization/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/data-visualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ggsci</title>
+      <link>https://nanx.me/tags/ggsci/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ggsci/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ggsql</title>
+      <link>https://nanx.me/tags/ggsql/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ggsql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ratatui</title>
+      <link>https://nanx.me/tags/ratatui/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ratatui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://nanx.me/tags/rust/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust packages</title>
+      <link>https://nanx.me/tags/rust-packages/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TUI</title>
+      <link>https://nanx.me/tags/tui/</link>
+      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/tui/</guid>
+      <description></description>
+    </item>
     <item>
       <title>brew tap</title>
       <link>https://nanx.me/tags/brew-tap/</link>
@@ -76,20 +146,6 @@
       <link>https://nanx.me/tags/regression-testing/</link>
       <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
       <guid>https://nanx.me/tags/regression-testing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust</title>
-      <link>https://nanx.me/tags/rust/</link>
-      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust packages</title>
-      <link>https://nanx.me/tags/rust-packages/</link>
-      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -163,38 +219,10 @@
       <description></description>
     </item>
     <item>
-      <title>color palettes</title>
-      <link>https://nanx.me/tags/color-palettes/</link>
-      <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/color-palettes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>color scales</title>
-      <link>https://nanx.me/tags/color-scales/</link>
-      <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/color-scales/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>data visualization</title>
-      <link>https://nanx.me/tags/data-visualization/</link>
-      <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/data-visualization/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>ggplot2</title>
       <link>https://nanx.me/tags/ggplot2/</link>
       <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ggplot2/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>ggsci</title>
-      <link>https://nanx.me/tags/ggsci/</link>
-      <pubDate>Sun, 19 Apr 2026 01:33:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/ggsci/</guid>
       <description></description>
     </item>
     <item>
@@ -1000,13 +1028,6 @@
       <link>https://nanx.me/tags/non-proportional-hazards/</link>
       <pubDate>Sat, 28 Sep 2024 03:42:00 +0000</pubDate>
       <guid>https://nanx.me/tags/non-proportional-hazards/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>command line</title>
-      <link>https://nanx.me/tags/command-line/</link>
-      <pubDate>Sun, 15 Sep 2024 19:28:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/command-line/</guid>
       <description></description>
     </item>
     <item>

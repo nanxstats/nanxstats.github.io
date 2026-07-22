@@ -1,0 +1,173 @@
+---
+title: "Introducing ggsci for Rust"
+author: "Nan Xiao"
+date: "2026-07-22T00:53:00"
+slug: ggsci-rs
+categories: []
+tags:
+  - Rust
+  - Rust packages
+  - ggsci
+  - color palettes
+  - color scales
+  - data visualization
+  - command line
+  - TUI
+  - Ratatui
+  - ggsql
+meta_img: "image/remi-muller-LlHgaeBwYVE-unsplash.jpg"
+description: >
+  ggsci is now available for Rust: a core crate with the full collection
+  of scientific journal and sci-fi themed color palettes, plus adapters
+  that turn them into Ratatui styles and ggsql scale clauses, so your
+  terminal applications can be colored as carefully as your ggplot2 figures.
+---
+
+![Photo by [Rémi Müller](https://unsplash.com/photos/LlHgaeBwYVE).
+](/image/remi-muller-LlHgaeBwYVE-unsplash.jpg)
+
+Welcome to the latest post of the "Introducing X for Y" series.
+
+Today I'm happy to share that ggsci is now available for Rust.
+You can add the crates to your Rust project with Cargo:
+
+```bash
+cargo add ggsci
+cargo add ggsci-ratatui
+cargo add ggsci-ggsql
+```
+
+ggsci for R started ten years ago as a small collection of color palettes
+inspired by scientific journals and science fiction, packaged as ggplot2
+color scales. It has since grown considerably, through the major expansions
+in [ggsci 4.0](/blog/post/ggsci-4-0-0/) and
+[ggsci 5.0](/blog/post/ggsci-5-0-0/), then a
+[Python port](/blog/post/ggsci-python/) for plotnine.
+Rust felt like the natural next stop.
+
+My motivation has surprisingly little to do with plotting. We are living
+through a renaissance of the command line, and much of it runs on Rust.
+For example, [Ratatui](https://ratatui.rs/) makes it pleasant to build terminal
+interfaces that people enjoy looking at, and [ggsql](https://ggsql.org/)
+brings the grammar of graphics to SQL. All of these tools need colors,
+and I figured: there are never enough palettes to fit every context,
+so why not bring ggsci to Rust?
+
+## A quick tour
+
+As of today, the core `ggsci` crate contains a core registry of 33 discrete
+and 53 continuous palette variants, along with 551 iTerm color themes and
+17 Gephi generative palettes.
+Palettes are looked up by a `family:name` spec.
+For discrete palettes, you take the number of categorical colors you need:
+
+```rust
+use ggsci::palette_by_spec;
+
+let palette = palette_by_spec("observable:observable10")?;
+let colors = palette.take_hex(3)?;
+// ["#4269D0", "#EFB118", "#FF725C"]
+```
+
+For continuous palettes, you interpolate:
+
+```rust
+let palette = palette_by_spec("tw3:gray")?;
+let colors = palette.interpolate(50)?;
+```
+
+The iTerm and Gephi collections have their own entry points, because
+each iTerm theme carries normal and bright variants in a fixed terminal
+channel order, and Gephi palettes generate their colors from an
+algorithm and a random seed rather than a stored list:
+
+```rust
+use ggsci::{gephi_palette, iterm_palette, ItermVariant};
+
+let rose_pine = iterm_palette("Rose Pine")?;
+let colors = rose_pine.take_hex(ItermVariant::Normal, 6)?;
+
+let fancy = gephi_palette("fancy-light")?;
+let colors = fancy.generate_with_seed(20, 42)?;
+```
+
+## Palette gallery
+
+It would be rude to build a Ratatui adapter and then never use it to
+show off the palettes. So the `ggsci-ratatui` crate ships with an
+interactive gallery that browses every palette by category in tabs,
+with a scrollable card grid, in truecolor or ANSI-256 mode. From the
+workspace directory:
+
+```bash
+cargo run -p ggsci-ratatui --example palette-gallery
+```
+
+<div class="float">
+<video autoplay loop muted playsinline src="/image/ggsci-rs-palette-gallery.mp4"></video>
+<div class="figcaption">A Ratatui application for browsing all available palettes by category in tabs and scrolling down the grid. Demo recorded with charmbracelet/vhs.</div>
+</div>
+
+## Three crates
+
+The three crates live in the
+[nanxstats/ggsci-rs](https://github.com/nanxstats/ggsci-rs) workspace
+and are released together at the same version:
+
+- `ggsci` provides the palette data, interpolation, and generation,
+  with minimal dependencies.
+- `ggsci-ratatui` converts palettes to Ratatui colors and styles,
+  in truecolor or ANSI-256 mode.
+- `ggsci-ggsql` (tentatively) converts palettes to typed ggsql output
+  ranges or explicit array SQL scale clauses.
+
+The two adapter crates depend on `ggsci`, plus `ratatui-core` and
+`ggsql` respectively. Each crate declares its own MSRV (minimum
+supported Rust version), with `ggsci` at 1.85, and the adapters slightly
+higher to match their dependencies.
+
+One caveat: ggsql has no [third-party palette extension
+API](https://github.com/posit-dev/ggsql/issues/358) yet, so
+`ggsci-ggsql` emits explicit color arrays instead of registering ggsci
+names globally. Think of it as a proof of concept for now.
+Once a proper extension mechanism lands, we will adopt it.
+
+## API design
+
+With no "ggplot2 for Rust" to extend, I had unusual freedom (or difficulty)
+in designing the API. I did intend to keep the core scale semantics from
+ggplot2, so at the heart of the crate sits this simple enum:
+
+```rust
+pub enum PaletteKind {
+    Discrete,
+    Continuous,
+}
+```
+
+The iTerm and Gephi palettes all report `PaletteKind::Discrete`, but as
+you saw above, they use separate APIs that respect their own unique structures,
+such as the variant ordering for iTerm and seeded generation for Gephi.
+
+This is deliberately simpler than ggsci in R, where the palettes plug into
+ggplot2 through `scale_color_*()` function factories.
+Rather than reinvent all of that machinery in Rust, I decided to stop
+overthinking and just provide the colors, then let you decide what to do
+with them.
+
+The full API documentation is on docs.rs for
+[ggsci](https://docs.rs/ggsci/),
+[ggsci-ratatui](https://docs.rs/ggsci-ratatui/), and
+[ggsci-ggsql](https://docs.rs/ggsci-ggsql/).
+But let's be honest... The fastest way to get started today is probably to
+clone the repository and let your AI coding agent figure it out, so you can
+focus on the one decision that matters: which palette to use for your project.
+
+## AI usage disclaimer
+
+The spec planning was done partially with GPT-5.5 Pro and 5.6 Pro,
+with prompts generated, reviewed, and modified by a human, then handed
+off to Codex with GPT-5.6 Sol (xhigh) for implementation. I then
+reviewed and revised the code by hand. I did my best to keep the AI
+slop to a minimum. If you spot any that escaped, please consider
+[creating an issue](https://github.com/nanxstats/ggsci-rs/issues).
