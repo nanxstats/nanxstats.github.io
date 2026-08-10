@@ -3,7 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/extendr/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/language-interoperability/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/plaintext-workflow/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/zmij-r/</loc>
+    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/color-palettes/</loc>
     <lastmod>2026-07-22T00:53:00+00:00</lastmod>
@@ -23,22 +50,13 @@
     <loc>https://nanx.me/tags/ggsql/</loc>
     <lastmod>2026-07-22T00:53:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/ggsci-rs/</loc>
     <lastmod>2026-07-22T00:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/ratatui/</loc>
     <lastmod>2026-07-22T00:53:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/rust/</loc>
-    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/rust-packages/</loc>
-    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-07-22T00:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/tui/</loc>
@@ -72,9 +90,6 @@
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/loop-engineering/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/plaintext-workflow/</loc>
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/regression-testing/</loc>
@@ -123,12 +138,6 @@
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/plotnine/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2026-04-19T01:33:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
     <lastmod>2026-04-19T01:33:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/ligaturizer/</loc>
@@ -409,12 +418,6 @@
   </url><url>
     <loc>https://nanx.me/tags/vibe-debugging/</loc>
     <lastmod>2025-03-24T20:05:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/extendr/</loc>
-    <lastmod>2025-02-28T16:37:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/language-interoperability/</loc>
-    <lastmod>2025-02-28T16:37:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/r-rust-pkgs/</loc>
     <lastmod>2025-02-28T16:37:00+00:00</lastmod>

@@ -1,0 +1,413 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> Żmij for R: Floating-point to string conversion with round-trip guarantees - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="zmij converts doubles to the shortest decimal strings that parse back to exactly the same values. It brings Victor Zverovich&#39;s fast dtoa algorithm to R via Rust and extendr.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/zmij-r/" />
+    <meta property="og:title" content="Żmij for R: Floating-point to string conversion with round-trip guarantees" />
+    <meta property="og:description" content="zmij converts doubles to the shortest decimal strings that parse back to exactly the same values. It brings Victor Zverovich&#39;s fast dtoa algorithm to R via Rust and extendr.
+" />
+    <meta property="og:image" content="https://nanx.me/image/claire-satera-gd21U8VUsLc-unsplash.png" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/claire-satera-gd21U8VUsLc-unsplash.png" />
+    <meta property="article:published_time" content="2026-08-09T22:21:00Z" />
+    <meta property="article:modified_time" content="2026-08-09T22:21:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="Żmij for R: Floating-point to string conversion with round-trip guarantees" />
+    <meta name="twitter:description" content="zmij converts doubles to the shortest decimal strings that parse back to exactly the same values. It brings Victor Zverovich&#39;s fast dtoa algorithm to R via Rust and extendr.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/claire-satera-gd21U8VUsLc-unsplash.png" />
+    <meta name="twitter:image:alt" content="Żmij for R: Floating-point to string conversion with round-trip guarantees" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/zmij-r/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased">
+    
+<header class="py-8 lg:py-12">
+    <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 text-sm font-sans font-[450] tracking-wide">
+            <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+                Nan Xiao
+            </a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+                
+                
+                <a class="text-ink font-[550]"
+                    href="https://nanx.me/blog/">
+                    Blog
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/software/">
+                    Software
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/papers/">
+                    Papers
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/talks/">
+                    Talks
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/books/">
+                    Books
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/about/">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<main class="content site-container my-10">
+    <article>
+        <header class="mb-10">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-6">Żmij for R: Floating-point to string conversion with round-trip guarantees</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Sun Aug 9 2026 22:21:00 UTC'>
+                    August 9, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    4 min read
+                </span>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/r"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/r-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/rust"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Rust
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/extendr"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        extendr
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/plaintext-workflow"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        plaintext workflow
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/language-interoperability"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        language interoperability
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/claire-satera-gd21U8VUsLc-unsplash.png" alt="Photo by Claire Satera. Stylized with Paper Shaders halftone dots filter." />
+<div class="figcaption">Photo by <a href="https://unsplash.com/photos/gd21U8VUsLc">Claire Satera</a>.
+Stylized with Paper Shaders halftone dots filter.</div>
+</div>
+<!--
+https://shaders.paper.design/halftone-dots
+
+import { HalftoneDots } from '@paper-design/shaders-react';
+
+<HalftoneDots
+  width={1280}
+  height={720}
+  image="https://paper.design/flowers.webp"
+  colorBack="#f2f1e8"
+  colorFront="#0030a8"
+  originalColors={false}
+  type="gooey"
+  grid="hex"
+  inverted={false}
+  size={0.15}
+  radius={0.99}
+  contrast={0.42}
+  grainMixer={0.2}
+  grainOverlay={0.2}
+  grainSize={0.5}
+  fit="contain"
+/>
+-->
+<p>I’m glad to share that <a href="https://github.com/nanxstats/zmij">zmij</a>
+is now on CRAN. zmij converts doubles to decimal strings and back,
+using the fewest digits needed to recover the original values exactly.
+It brings Victor Zverovich’s <a href="https://github.com/vitaut/zmij">zmij algorithm</a>
+to R, via David Tolnay’s <a href="https://github.com/dtolnay/zmij">Rust zmij port</a>,
+wrapped in a vectorized interface with <a href="https://extendr.rs/">extendr</a>.</p>
+<p>You can install it from CRAN with:</p>
+<pre class="r"><code>install.packages(&quot;zmij&quot;)</code></pre>
+<div id="why-bother" class="section level2">
+<h2>Why bother?</h2>
+<p>I like storing data as plain text when possible: humans can read it, diff it,
+put it under version control, and edit it with any text editor.
+Floating-point numbers make this harder than it should be.
+By default, R converts them to strings using 15 significant digits
+and quietly loses information:</p>
+<pre class="r"><code>x &lt;- c(pi, 0.1, 1 / 3)
+x |&gt; as.character()
+#&gt; [1] &quot;3.14159265358979&quot; 
+#&gt; [2] &quot;0.1&quot;              
+#&gt; [3] &quot;0.333333333333333&quot;
+x |&gt; as.character() |&gt; as.numeric() |&gt; identical(x)
+#&gt; [1] FALSE</code></pre>
+<p>You can round-trip reliably by asking for 17 significant digits, but
+then you get to look at this:</p>
+<pre class="r"><code>x |&gt; sprintf(fmt = &quot;%.17g&quot;)
+#&gt; [1] &quot;3.1415926535897931&quot; 
+#&gt; [2] &quot;0.10000000000000001&quot;
+#&gt; [3] &quot;0.33333333333333331&quot;
+x |&gt; sprintf(fmt = &quot;%.17g&quot;) |&gt; as.numeric() |&gt; identical(x)
+#&gt; [1] TRUE</code></pre>
+<p>So the traditional choice was between losing precision, bloating your
+files with digit noise, or giving up on plaintext workflow entirely and
+using a binary format like <code>.rds</code>, <code>.parquet</code>, or <code>.safetensors</code>.</p>
+<p>The dtoa (double to ASCII) algorithms eliminate this trade-off.
+For every floating-point number, it finds the shortest decimal string
+that parses back to exactly the same value: <code>0.1</code> stays <code>"0.1"</code>, while <code>pi</code>
+keeps all 16 digits it genuinely needs. At the moment, zmij also happens to be
+the fastest known algorithm to do so with proven correctness:
+Victor’s <a href="https://vitaut.net/posts/2025/faster-dtoa/">blog post</a>
+has the benchmarks and the tricks behind them. From R, crossing the
+language boundary will absorb most of those nanoseconds, which I can
+live with: the round-trip guarantee is what I came for.</p>
+</div>
+<div id="usage" class="section level2">
+<h2>Usage</h2>
+<p>zmij provides two functions. <code>format_double()</code> turns doubles into
+strings, and <code>parse_double()</code> reverses it:</p>
+<pre class="r"><code>library(zmij)</code></pre>
+<pre class="r"><code>x &lt;- c(pi, 0.1, 1 / 3, .Machine$double.xmax)
+x |&gt; format_double()
+#&gt; [1] &quot;3.141592653589793&quot;      
+#&gt; [2] &quot;0.1&quot;                    
+#&gt; [3] &quot;0.3333333333333333&quot;     
+#&gt; [4] &quot;1.7976931348623157e+308&quot;
+x |&gt; format_double() |&gt; parse_double() |&gt; identical(x)
+#&gt; [1] TRUE</code></pre>
+<p>That <code>TRUE</code> holds for every finite double, meaning your numbers can
+survive a trip through any text file untouched:</p>
+<pre class="r"><code>path &lt;- tempfile()
+x |&gt; format_double() |&gt; writeLines(path)
+path |&gt; readLines() |&gt; parse_double() |&gt; identical(x)
+#&gt; [1] TRUE</code></pre>
+<p>Both functions are vectorized and preserve names and dimensions, so
+matrices and arrays pass through with their shape intact. Missing and
+non-finite values get explicit representations:</p>
+<pre class="r"><code>c(NA_real_, NaN, Inf, -Inf) |&gt; format_double()
+#&gt; [1] NA     &quot;NaN&quot;  &quot;inf&quot;  &quot;-inf&quot;</code></pre>
+<p><code>parse_double()</code> is useful in its own right, beyond undoing
+<code>format_double()</code>: it uses Rust’s correctly rounded parser, which
+behaves consistently across platforms even at the far edges of the
+double range:</p>
+<pre class="r"><code>c(&quot;5e-324&quot;, &quot;1.7976931348623157e+308&quot;) |&gt; parse_double()
+#&gt; [1] 4.940656e-324 1.797693e+308</code></pre>
+</div>
+<div id="development-notes" class="section level2">
+<h2>Development notes</h2>
+<p>zmij is my first package built with extendr. It scaffolds a Rust-powered
+R package and handles the plumbing between the two languages.
+The experience was pleasantly boring: most of my time went into building the
+Rust wrapper logic, and almost none into the bridge or packaging.</p>
+<p>One piece of developer tooling deserves a mention.
+My <a href="https://nanx.me/blog/post/r-rust-pkgs/">r-rust-pkgs</a> project tracks every CRAN package
+that uses Rust, and it now comes with a script that turns that list into
+something directly useful:</p>
+<pre class="bash"><code>git clone https://github.com/nanxstats/r-rust-pkgs.git
+cd r-rust-pkgs
+Rscript scripts/monorepo.R</code></pre>
+<p>This downloads the source of all those packages into a single
+“synthetic monorepo” under <code>references/</code>. Move that directory into your
+own package (remembering to add it to <code>.gitignore</code> and <code>.Rbuildignore</code>)
+and you have a greppable record of how the entire Rust-in-R community
+has solved the problems you might hit. AI coding agents can
+search it too. When zmij failed to build on win-builder, a quick
+grep showed other packages had already patched their <code>Makevars</code>
+templates for the same issue, and the fix
+(<a href="https://github.com/nanxstats/zmij/pull/6">nanxstats/zmij#6</a>)
+only took a few minutes to implement.</p>
+<p>Thanks to Victor Zverovich for the algorithm and to David Tolnay for
+the Rust crate. If you find a use for zmij, or a number it mishandles,
+please <a href="https://github.com/nanxstats/zmij/issues">create an issue</a>.</p>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/ggsci-rs/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Introducing ggsci for Rust</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="site-container">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+<script src="https://nanx.me/js/math-code.js"></script>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+    
+</body>
+
+</html>
