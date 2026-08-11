@@ -58,7 +58,7 @@ import { HalftoneDots } from '@paper-design/shaders-react';
 
 I'm glad to share that [zmij](https://github.com/nanxstats/zmij)
 is now on CRAN. zmij converts doubles to decimal strings and back,
-using the fewest digits needed to recover the original values exactly.
+using the fewest digits needed to recover the original values.
 It brings Victor Zverovich's [zmij algorithm](https://github.com/vitaut/zmij)
 to R, via David Tolnay's [Rust zmij port](https://github.com/dtolnay/zmij),
 wrapped in a vectorized interface with [extendr](https://extendr.rs/).
@@ -72,8 +72,8 @@ install.packages("zmij")
 ## Why bother?
 
 I like storing data as plain text when possible: humans can read it, diff it,
-put it under version control, and edit it with any text editor.
-Floating-point numbers make this harder than it should be.
+version control it, and edit it with any text editor.
+However, floating-point numbers make this harder than it should be.
 By default, R converts them to strings using 15 significant digits
 and quietly loses information:
 
@@ -83,8 +83,8 @@ x |> as.character()
 x |> as.character() |> as.numeric() |> identical(x)
 ```
 
-You can round-trip reliably by asking for 17 significant digits, but
-then you get to look at this:
+You can do a round-trip conversion reliably by asking for 17 significant digits,
+but then you get this:
 
 ```{r}
 x |> sprintf(fmt = "%.17g")
@@ -103,7 +103,7 @@ the fastest known algorithm to do so with proven correctness:
 Victor's [blog post](https://vitaut.net/posts/2025/faster-dtoa/)
 has the benchmarks and the tricks behind them. From R, crossing the
 language boundary will absorb most of those nanoseconds, which I can
-live with: the round-trip guarantee is what I came for.
+live with. The round-trip guarantee is what I came for.
 
 ## Usage
 
@@ -121,7 +121,7 @@ x |> format_double() |> parse_double() |> identical(x)
 ```
 
 That `TRUE` holds for every finite double, meaning your numbers can
-survive a trip through any text file untouched:
+survive a round-trip through any text file untouched:
 
 ```{r}
 path <- tempfile()
@@ -130,17 +130,16 @@ path |> readLines() |> parse_double() |> identical(x)
 ```
 
 Both functions are vectorized and preserve names and dimensions, so
-matrices and arrays pass through with their shape intact. Missing and
-non-finite values get explicit representations:
+matrices and arrays pass through with their shape intact.
+Missing values and non-finite values also get explicit representations:
 
 ```{r}
 c(NA_real_, NaN, Inf, -Inf) |> format_double()
 ```
 
-`parse_double()` is useful in its own right, beyond undoing
-`format_double()`: it uses Rust's correctly rounded parser, which
-behaves consistently across platforms even at the far edges of the
-double range:
+`parse_double()` is useful in its own right beyond undoing `format_double()`:
+it uses Rust's correctly rounded parser, which behaves consistently across
+platforms even at the far edges of the double range:
 
 ```{r}
 c("5e-324", "1.7976931348623157e+308") |> parse_double()
@@ -148,8 +147,8 @@ c("5e-324", "1.7976931348623157e+308") |> parse_double()
 
 ## Development notes
 
-zmij is my first package built with extendr. It scaffolds a Rust-powered
-R package and handles the plumbing between the two languages.
+zmij is my first package built with extendr. extendr scaffolds a
+Rust-powered R package and handles the plumbing between the two languages.
 The experience was pleasantly boring: most of my time went into building the
 Rust wrapper logic, and almost none into the bridge or packaging.
 
@@ -166,15 +165,14 @@ Rscript scripts/monorepo.R
 
 This downloads the source of all those packages into a single
 "synthetic monorepo" under `references/`. Move that directory into your
-own package (remembering to add it to `.gitignore` and `.Rbuildignore`)
-and you have a greppable record of how the entire Rust-in-R community
-has solved the problems you might hit. AI coding agents can
-search it too. When zmij failed to build on win-builder, a quick
-grep showed other packages had already patched their `Makevars`
-templates for the same issue, and the fix
-([nanxstats/zmij#6](https://github.com/nanxstats/zmij/pull/6))
+own package (remember to add it to `.gitignore` and `.Rbuildignore`)
+and your AI coding agents have a greppable record of how the entire
+Rust-in-R community has solved the problems you might hit.
+When zmij failed to build on win-builder, a quick grep showed other
+packages had already patched their `Makevars` templates for the same issue,
+and the fix ([nanxstats/zmij#6](https://github.com/nanxstats/zmij/pull/6))
 only took a few minutes to implement.
 
 Thanks to Victor Zverovich for the algorithm and to David Tolnay for
-the Rust crate. If you find a use for zmij, or a number it mishandles,
+the Rust crate. If you find a number the package mishandles,
 please [create an issue](https://github.com/nanxstats/zmij/issues).
