@@ -2,31 +2,55 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://nanx.me/tags/automation/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
     <loc>https://nanx.me/blog/</loc>
-    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/developer-experience/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/harness-engineering/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/okr/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/plaintext-workflow/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/reproducibility/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/rust-packages/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/synthetic-monorepo/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/vendoring/</loc>
+    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/extendr/</loc>
     <lastmod>2026-08-09T22:21:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/language-interoperability/</loc>
-    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/plaintext-workflow/</loc>
-    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
-    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/rust/</loc>
-    <lastmod>2026-08-09T22:21:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-08-09T22:21:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/zmij-r/</loc>
@@ -56,9 +80,6 @@
     <loc>https://nanx.me/tags/ratatui/</loc>
     <lastmod>2026-07-22T00:53:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/rust-packages/</loc>
-    <lastmod>2026-07-22T00:53:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/tui/</loc>
     <lastmod>2026-07-22T00:53:00+00:00</lastmod>
   </url><url>
@@ -66,9 +87,6 @@
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/homebrew-tap/</loc>
-    <lastmod>2026-07-17T02:56:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/developer-experience/</loc>
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/homebrew/</loc>
@@ -79,12 +97,6 @@
   </url><url>
     <loc>https://nanx.me/tags/software-distribution/</loc>
     <lastmod>2026-07-17T02:56:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/harness-engineering/</loc>
-    <lastmod>2026-07-15T21:03:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/post/bisectrunk/</loc>
     <lastmod>2026-07-15T21:03:00+00:00</lastmod>

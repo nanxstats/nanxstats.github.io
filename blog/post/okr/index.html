@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> okr: Reproducible R source context for coding agents - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="Vendor exact R package sources and reference repositories into a greppable, verifiable tree for coding agents.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/okr/" />
+    <meta property="og:title" content="okr: Reproducible R source context for coding agents" />
+    <meta property="og:description" content="Vendor exact R package sources and reference repositories into a greppable, verifiable tree for coding agents.
+" />
+    <meta property="og:image" content="https://nanx.me/image/t-bKGW_hdIUM4-unsplash.jpg" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/t-bKGW_hdIUM4-unsplash.jpg" />
+    <meta property="article:published_time" content="2026-08-17T21:53:00Z" />
+    <meta property="article:modified_time" content="2026-08-17T21:53:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="okr: Reproducible R source context for coding agents" />
+    <meta name="twitter:description" content="Vendor exact R package sources and reference repositories into a greppable, verifiable tree for coding agents.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/t-bKGW_hdIUM4-unsplash.jpg" />
+    <meta name="twitter:image:alt" content="okr: Reproducible R source context for coding agents" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/okr/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased">
+    
+<header class="py-8 lg:py-12">
+    <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 text-sm font-sans font-[450] tracking-wide">
+            <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+                Nan Xiao
+            </a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+                
+                
+                <a class="text-ink font-[550]"
+                    href="https://nanx.me/blog/">
+                    Blog
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/software/">
+                    Software
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/papers/">
+                    Papers
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/talks/">
+                    Talks
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/books/">
+                    Books
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/about/">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<main class="content site-container my-10">
+    <article>
+        <header class="mb-10">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-6">okr: Reproducible R source context for coding agents</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Mon Aug 17 2026 21:53:00 UTC'>
+                    August 17, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    3 min read
+                </span>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/rust"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Rust
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/rust-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Rust packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/r"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/r-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/synthetic-monorepo"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        synthetic monorepo
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/plaintext-workflow"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        plaintext workflow
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/developer-experience"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        developer experience
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/harness-engineering"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        harness engineering
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/automation"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        automation
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/vendoring"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        vendoring
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/reproducibility"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        reproducibility
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/t-bKGW_hdIUM4-unsplash.jpg" alt="Photo by @tanyabarrow." />
+<div class="figcaption">Photo by <a href="https://unsplash.com/photos/bKGW_hdIUM4"><span class="citation">@tanyabarrow</span></a>.</div>
+</div>
+<p>Today I’m pleased to introduce <a href="https://nanx.me/okr/">okr</a>, a small Rust CLI
+for giving coding agents reproducible source context from R packages
+and other reference repositories.</p>
+<p>Recent coding agents can solve surprisingly hard problems when they can
+inspect the relevant code. My own workflows kept running into one
+specifically R-shaped problem: after an R package is installed,
+R functions live in binary <code>.rdb</code> and <code>.rdx</code> databases, while compiled
+code from the source package under <code>src/</code> disappears. This makes installed
+R packages not easily greppable.</p>
+<p><code>okr</code> fills this (narrow) gap. It retrieves exact source trees, puts them in a
+directory that regular search tools can read, and records their provenance
+and content digests. To be clear: we are not in the business of package
+installation and management, so it leaves those more challenging tasks to
+the experts like <code>rig</code>, <code>pak</code>, <code>renv</code>, and <code>rv</code>.</p>
+<div id="installation" class="section level2">
+<h2>Installation</h2>
+<p>You can install <code>okr</code> with Homebrew:</p>
+<pre class="console"><code>brew install nanxstats/tap/okr</code></pre>
+<p>Or with Cargo:</p>
+<pre class="console"><code>cargo install okr</code></pre>
+</div>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<p>The group sequential design skill in
+<a href="https://github.com/RConsortium/pharma-skills">RConsortium/pharma-skills</a>
+uses several R packages for clinical trial design and simulation,
+plus <code>python-docx</code> for report generation. For an AI model evaluation using
+this skill, I want every model to receive the same source code, without a
+convenient trip to GitHub halfway through the test.</p>
+<p>Here is the complete setup for that source context:</p>
+<pre class="console"><code>okr init
+okr add gsDesign gsDesign2 lrstat graphicalMCP jsonlite eventPred
+okr add --reference python-openxml/python-docx@v1.2.0
+okr sync</code></pre>
+<p>As you would expect, <code>okr init</code> selects the latest available dated CRAN snapshot.
+When it can find <code>Rscript</code>, the current R version is recorded.
+<code>okr add</code> edits <code>okr.toml</code> to add the entries. <code>okr sync</code> performs the download.</p>
+<p>During sync, CRAN versions and remote refs resolve to exact sources.
+The resulting project looks like this:</p>
+<pre class="text"><code>okr.toml
+okr.lock
+deps-src/
+├── _manifest.json
+├── _manifest.md
+├── eventPred/
+├── graphicalMCP/
+├── gsDesign/
+├── gsDesign2/
+├── jsonlite/
+├── lrstat/
+└── python-docx/</code></pre>
+<p>The lockfile records resolved versions, commits, acquisition methods, and
+digests. The two manifests give humans, agents, and evaluation harnesses a
+compact index into the source trees. <code>okr</code> also maintains a short marker in
+<code>AGENTS.md</code> pointing agents to that index.</p>
+<p>Quality of life feature: the default configuration keeps <code>deps-src/</code> out of Git.
+For an R package, <code>okr</code> also adds appropriate entries to an existing <code>.Rbuildignore</code>.</p>
+</div>
+<div id="checking-the-result" class="section level2">
+<h2>Checking the result</h2>
+<p>Once the tree exists, two commands cover the common checks:</p>
+<pre class="console"><code>okr verify
+okr status</code></pre>
+<p><code>okr verify</code> hashes every vendored tree. Any drift produces exit code 4.
+Success prints one environment digest that an evaluation harness can
+record with its results.</p>
+<p><code>okr status</code> reports lock freshness, source integrity, cache, and toolchain
+details, and consistency between vendored and installed R package versions.
+If packages are missing or versions differ, it prints a copy-paste
+installation command and leaves the decision of next steps to you.</p>
+<p>For automated evaluations, JSON outputs are easier to parse:</p>
+<pre class="console"><code>okr verify --json
+okr verify --strict --json</code></pre>
+<p>After the initial online sync, verification needs no network access.
+You can also reconstruct the tree from the local cache with <code>okr sync --offline</code>.</p>
+</div>
+<div id="less-is-more" class="section level2">
+<h2>Less is more</h2>
+<p>For <code>okr</code>, I made a conscious decision to avoid involving topics like R or
+R package installation, transitive dependencies, and containers, because
+there are already excellent tools for those tasks.</p>
+<p>For now, 0.1 implements the part I needed the most:
+giving coding agents the same readable source code, then checking
+that it stayed that way. For 0.2, I’m exploring reusable profiles and
+deterministic bundles for offline distribution.</p>
+<p>You can find the documentation at <a href="https://nanx.me/okr/">nanx.me/okr</a>
+and the source code at <a href="https://github.com/nanxstats/okr">nanxstats/okr</a>.</p>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/zmij-r/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; Żmij for R: Floating-point to string conversion with round-trip guarantees</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="site-container">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+
+    
+</body>
+
+</html>

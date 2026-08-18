@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>reproducibility on Nan Xiao | 肖楠</title>
+    <link>https://nanx.me/tags/reproducibility/</link>
+    <description>Recent content in reproducibility on Nan Xiao | 肖楠</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 17 Aug 2026 21:53:00 +0000</lastBuildDate>
+    <atom:link href="https://nanx.me/tags/reproducibility/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>okr: Reproducible R source context for coding agents</title>
+      <link>https://nanx.me/blog/post/okr/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/blog/post/okr/</guid>
+      <description>Photo by @tanyabarrow. Today I’m pleased to introduce okr, a small Rust CLI for giving coding agents reproducible source context from R packages and other reference repositories.&#xA;Recent coding agents can solve surprisingly hard problems when they can inspect the relevant code. My own workflows kept running into one specifically R-shaped problem: after an R package is installed, R functions live in binary .rdb and .rdx databases, while compiled code from the source package under src/ disappears.</description>
+    </item>
+  </channel>
+</rss>

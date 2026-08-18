@@ -6,8 +6,85 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 09 Aug 2026 22:21:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 17 Aug 2026 21:53:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>automation</title>
+      <link>https://nanx.me/tags/automation/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/automation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>developer experience</title>
+      <link>https://nanx.me/tags/developer-experience/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/developer-experience/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>harness engineering</title>
+      <link>https://nanx.me/tags/harness-engineering/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/harness-engineering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>plaintext workflow</title>
+      <link>https://nanx.me/tags/plaintext-workflow/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/plaintext-workflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>reproducibility</title>
+      <link>https://nanx.me/tags/reproducibility/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/reproducibility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://nanx.me/tags/rust/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust packages</title>
+      <link>https://nanx.me/tags/rust-packages/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/rust-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>synthetic monorepo</title>
+      <link>https://nanx.me/tags/synthetic-monorepo/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/synthetic-monorepo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>vendoring</title>
+      <link>https://nanx.me/tags/vendoring/</link>
+      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/vendoring/</guid>
+      <description></description>
+    </item>
     <item>
       <title>extendr</title>
       <link>https://nanx.me/tags/extendr/</link>
@@ -20,34 +97,6 @@
       <link>https://nanx.me/tags/language-interoperability/</link>
       <pubDate>Sun, 09 Aug 2026 22:21:00 +0000</pubDate>
       <guid>https://nanx.me/tags/language-interoperability/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>plaintext workflow</title>
-      <link>https://nanx.me/tags/plaintext-workflow/</link>
-      <pubDate>Sun, 09 Aug 2026 22:21:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/plaintext-workflow/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Sun, 09 Aug 2026 22:21:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Sun, 09 Aug 2026 22:21:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rust</title>
-      <link>https://nanx.me/tags/rust/</link>
-      <pubDate>Sun, 09 Aug 2026 22:21:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust/</guid>
       <description></description>
     </item>
     <item>
@@ -100,13 +149,6 @@
       <description></description>
     </item>
     <item>
-      <title>Rust packages</title>
-      <link>https://nanx.me/tags/rust-packages/</link>
-      <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/rust-packages/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>TUI</title>
       <link>https://nanx.me/tags/tui/</link>
       <pubDate>Wed, 22 Jul 2026 00:53:00 +0000</pubDate>
@@ -118,13 +160,6 @@
       <link>https://nanx.me/tags/brew-tap/</link>
       <pubDate>Fri, 17 Jul 2026 02:56:00 +0000</pubDate>
       <guid>https://nanx.me/tags/brew-tap/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>developer experience</title>
-      <link>https://nanx.me/tags/developer-experience/</link>
-      <pubDate>Fri, 17 Jul 2026 02:56:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/developer-experience/</guid>
       <description></description>
     </item>
     <item>
@@ -146,20 +181,6 @@
       <link>https://nanx.me/tags/software-distribution/</link>
       <pubDate>Fri, 17 Jul 2026 02:56:00 +0000</pubDate>
       <guid>https://nanx.me/tags/software-distribution/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>automation</title>
-      <link>https://nanx.me/tags/automation/</link>
-      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/automation/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>harness engineering</title>
-      <link>https://nanx.me/tags/harness-engineering/</link>
-      <pubDate>Wed, 15 Jul 2026 21:03:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/harness-engineering/</guid>
       <description></description>
     </item>
     <item>

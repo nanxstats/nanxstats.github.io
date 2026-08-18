@@ -1,0 +1,147 @@
+---
+title: "okr: Reproducible R source context for coding agents"
+author: "Nan Xiao"
+date: "2026-08-17T21:53:00"
+slug: okr
+categories: []
+tags:
+  - Rust
+  - Rust packages
+  - R
+  - R packages
+  - synthetic monorepo
+  - plaintext workflow
+  - developer experience
+  - harness engineering
+  - automation
+  - vendoring
+  - reproducibility
+meta_img: "image/t-bKGW_hdIUM4-unsplash.jpg"
+description: >
+  Vendor exact R package sources and reference repositories into a
+  greppable, verifiable tree for coding agents.
+---
+
+![Photo by [@tanyabarrow](https://unsplash.com/photos/bKGW_hdIUM4).
+](/image/t-bKGW_hdIUM4-unsplash.jpg)
+
+Today I'm pleased to introduce [okr](https://nanx.me/okr/), a small Rust CLI
+for giving coding agents reproducible source context from R packages
+and other reference repositories.
+
+Recent coding agents can solve surprisingly hard problems when they can
+inspect the relevant code. My own workflows kept running into one
+specifically R-shaped problem: after an R package is installed,
+R functions live in binary `.rdb` and `.rdx` databases, while compiled
+code from the source package under `src/` disappears. This makes installed
+R packages not easily greppable.
+
+`okr` fills this (narrow) gap. It retrieves exact source trees, puts them in a
+directory that regular search tools can read, and records their provenance
+and content digests. To be clear: we are not in the business of package
+installation and management, so it leaves those more challenging tasks to
+the experts like `rig`, `pak`, `renv`, and `rv`.
+
+## Installation
+
+You can install `okr` with Homebrew:
+
+```console
+brew install nanxstats/tap/okr
+```
+
+Or with Cargo:
+
+```console
+cargo install okr
+```
+
+## Example
+
+The group sequential design skill in
+[RConsortium/pharma-skills](https://github.com/RConsortium/pharma-skills)
+uses several R packages for clinical trial design and simulation,
+plus `python-docx` for report generation. For an AI model evaluation using
+this skill, I want every model to receive the same source code, without a
+convenient trip to GitHub halfway through the test.
+
+Here is the complete setup for that source context:
+
+```console
+okr init
+okr add gsDesign gsDesign2 lrstat graphicalMCP jsonlite eventPred
+okr add --reference python-openxml/python-docx@v1.2.0
+okr sync
+```
+
+As you would expect, `okr init` selects the latest available dated CRAN snapshot.
+When it can find `Rscript`, the current R version is recorded.
+`okr add` edits `okr.toml` to add the entries. `okr sync` performs the download.
+
+During sync, CRAN versions and remote refs resolve to exact sources.
+The resulting project looks like this:
+
+```text
+okr.toml
+okr.lock
+deps-src/
+├── _manifest.json
+├── _manifest.md
+├── eventPred/
+├── graphicalMCP/
+├── gsDesign/
+├── gsDesign2/
+├── jsonlite/
+├── lrstat/
+└── python-docx/
+```
+
+The lockfile records resolved versions, commits, acquisition methods, and
+digests. The two manifests give humans, agents, and evaluation harnesses a
+compact index into the source trees. `okr` also maintains a short marker in
+`AGENTS.md` pointing agents to that index.
+
+Quality of life feature: the default configuration keeps `deps-src/` out of Git.
+For an R package, `okr` also adds appropriate entries to an existing `.Rbuildignore`.
+
+## Checking the result
+
+Once the tree exists, two commands cover the common checks:
+
+```console
+okr verify
+okr status
+```
+
+`okr verify` hashes every vendored tree. Any drift produces exit code 4.
+Success prints one environment digest that an evaluation harness can
+record with its results.
+
+`okr status` reports lock freshness, source integrity, cache, and toolchain
+details, and consistency between vendored and installed R package versions.
+If packages are missing or versions differ, it prints a copy-paste
+installation command and leaves the decision of next steps to you.
+
+For automated evaluations, JSON outputs are easier to parse:
+
+```console
+okr verify --json
+okr verify --strict --json
+```
+
+After the initial online sync, verification needs no network access.
+You can also reconstruct the tree from the local cache with `okr sync --offline`.
+
+## Less is more
+
+For `okr`, I made a conscious decision to avoid involving topics like R or
+R package installation, transitive dependencies, and containers, because
+there are already excellent tools for those tasks.
+
+For now, 0.1 implements the part I needed the most:
+giving coding agents the same readable source code, then checking
+that it stayed that way. For 0.2, I'm exploring reusable profiles and
+deterministic bundles for offline distribution.
+
+You can find the documentation at [nanx.me/okr](https://nanx.me/okr/)
+and the source code at [nanxstats/okr](https://github.com/nanxstats/okr).
