@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> shinygenui: Generative UI for Shiny - Nan Xiao | 肖楠 </title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="shinygenui brings generative UI to Shiny. Give a language model a catalog of trusted components, and it can build and revise an interactive interface as people describe what they need.
+" />
+
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Nan Xiao | 肖楠" />
+    <meta property="og:url" content="https://nanx.me/blog/post/shinygenui/" />
+    <meta property="og:title" content="shinygenui: Generative UI for Shiny" />
+    <meta property="og:description" content="shinygenui brings generative UI to Shiny. Give a language model a catalog of trusted components, and it can build and revise an interactive interface as people describe what they need.
+" />
+    <meta property="og:image" content="https://nanx.me/image/shinygenui-hero.png" />
+    <meta property="og:image:secure_url" content="https://nanx.me/image/shinygenui-hero.png" />
+    <meta property="article:published_time" content="2026-09-09T11:39:00Z" />
+    <meta property="article:modified_time" content="2026-09-09T11:39:00Z" />
+    <meta property="article:author" content="Nan Xiao" />
+
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <meta name="twitter:site" content="@nanxstats">
+    <meta name="twitter:creator" content="@nanxstats">
+    
+    <meta name="twitter:title" content="shinygenui: Generative UI for Shiny" />
+    <meta name="twitter:description" content="shinygenui brings generative UI to Shiny. Give a language model a catalog of trusted components, and it can build and revise an interactive interface as people describe what they need.
+" />
+    <meta name="twitter:image" content="https://nanx.me/image/shinygenui-hero.png" />
+    <meta name="twitter:image:alt" content="shinygenui: Generative UI for Shiny" />
+
+    
+    <meta property="og:linkedin:actor" content="nanxstats" />
+
+    <link rel="canonical" href="https://nanx.me/blog/post/shinygenui/">
+
+    <link rel="stylesheet" href="https://nanx.me/css/tailwind.css" />
+    <link rel="stylesheet" href="https://nanx.me/css/custom.css" />
+
+    
+    <link rel="stylesheet" href="https://nanx.me/css/textmate.css" />
+    
+
+    
+
+    <link rel="shortcut icon"
+        href="https://nanx.me/image/favicon.png">
+
+    
+</head>
+
+<body class="bg-paper text-ink font-serif antialiased">
+    
+<header class="py-8 lg:py-12">
+    <div class="site-container">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-0 text-sm font-sans font-[450] tracking-wide">
+            <a href="https://nanx.me/" class="font-[550] text-ink hover:text-accent transition-colors">
+                Nan Xiao
+            </a>
+            <nav class="flex flex-wrap gap-4 sm:gap-6 text-zinc-600">
+                
+                
+                <a class="text-ink font-[550]"
+                    href="https://nanx.me/blog/">
+                    Blog
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/software/">
+                    Software
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/papers/">
+                    Papers
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/talks/">
+                    Talks
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/books/">
+                    Books
+                </a>
+                
+                <a class="hover:text-accent transition-colors"
+                    href="https://nanx.me/about/">
+                    About
+                </a>
+                
+            </nav>
+        </div>
+    </div>
+</header>
+
+
+<main class="content site-container my-10">
+    <article>
+        <header class="mb-10">
+            <h1 class="text-3xl lg:text-4xl font-sans tracking-tight text-ink font-semibold mb-6">shinygenui: Generative UI for Shiny</h1>
+
+            <div class="text-zinc-500 font-sans font-[450] text-sm tracking-wide">
+                
+                
+                <span class="author mr-2" title="Nan Xiao">
+                    Nan Xiao
+                </span>
+                
+                
+
+                <span class="date middot tabular-nums mr-2" title='Wed Sep 9 2026 11:39:00 UTC'>
+                    September 9, 2026
+                </span>
+
+                <span class="reading-time middot">
+                    5 min read
+                </span>
+
+                <div class="mt-6 flex flex-wrap gap-2">
+                    
+                    <a href="https://nanx.me/tags/r"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/r-packages"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        R packages
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/shiny"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Shiny
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/generative-ui"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Generative UI
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/agentic-ai"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Agentic AI
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/large-language-model"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        Large Language Model
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/ellmer"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        ellmer
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/shinychat"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        shinychat
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/a2ui"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        A2UI
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/json-render"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        json-render
+                    </a>
+                    
+                    
+                    
+                </div>
+            </div>
+
+        </header>
+
+        <div class="prose prose-zinc max-w-none">
+            
+    
+
+
+<div class="float">
+<img src="https://nanx.me/image/shinygenui-hero.png" alt="Sketched user interface skeletons. Procedurally generated with p5.brush.skeleton." />
+<div class="figcaption">Sketched user interface skeletons. Procedurally generated with
+<a href="https://github.com/nanxstats/p5-brush-skeleton">p5.brush.skeleton</a>.</div>
+</div>
+<p>It’s my pleasure to share that <a href="https://nanx.me/shinygenui/">shinygenui</a>
+is now on CRAN. It brings generative UI to Shiny: the developer defines a
+catalog of components, and a language model builds and updates an interface
+as users describe what they need.</p>
+<p>You can install it with:</p>
+<pre class="r"><code>install.packages(&quot;shinygenui&quot;)</code></pre>
+<p>Or get the development version from GitHub:</p>
+<pre class="r"><code>pak::pak(&quot;nanxstats/shinygenui&quot;)</code></pre>
+<p>Apparently, language models are <a href="https://openai.com/index/better-language-models/">unsupervised multitask learners</a>, but that’s so 2019.
+Leviathan et al. (2026) showed that <a href="https://doi.org/10.48550/arXiv.2604.09577">current LLMs can also generate effective
+user interfaces</a>. Vercel’s
+<a href="https://github.com/vercel-labs/json-render">json-render</a> and Google’s
+<a href="https://github.com/a2ui-project/a2ui">A2UI</a> are two popular projects
+exploring this idea in the JavaScript world.</p>
+<p>shinygenui brings the same (broad) idea to R, with a much smaller scope.
+The flow goes like this: the app developer defines the available components
+and the arguments each one accepts. When someone makes a request in chat,
+the model chooses components from this catalog and supplies their arguments
+through tool calls. shinygenui verifies those arguments and renders the result
+on a canvas. As the conversation continues, the model can update or remove
+what it built.</p>
+<p>Behind the scenes, <a href="https://ellmer.tidyverse.org">ellmer</a> provides
+model providers and tool call abstractions,
+and <a href="https://posit-dev.github.io/shinychat/r/">shinychat</a> streams the
+conversation into Shiny. Both foundational packages saved me
+from reinventing some fairly huge wheels.</p>
+<div id="example" class="section level2">
+<h2>Example</h2>
+<p>Here is a recording of an mtcars explorer app built with shinygenui:</p>
+<div class="float">
+<video autoplay loop muted playsinline src="https://nanx.me/image/shinygenui-mtcars-explorer.mp4">
+</video>
+<div class="figcaption">
+Going through the four example prompts in the mtcars explorer app built with shinygenui. Playing at 1x speed. The model used is gpt-5.6-sol medium.
+</div>
+</div>
+<p>A minimal version of the app:</p>
+<pre class="r"><code>readRenviron(&quot;.env&quot;)
+
+library(shiny)
+library(bslib)
+library(shinygenui)
+
+ui &lt;- page_sidebar(
+  title = &quot;mtcars explorer&quot;,
+  sidebar = sidebar(
+    width = 380,
+    shinychat::chat_ui(&quot;chat&quot;, height = &quot;100%&quot;)
+  ),
+  genui_canvas(&quot;canvas&quot;)
+)
+
+server &lt;- function(input, output, session) {
+  catalog &lt;- genui_catalog(
+    genui_components_bslib(data = mtcars)
+  )
+  chat &lt;- ellmer::chat_openai(
+    model = Sys.getenv(&quot;SHINYGENUI_MODEL&quot;),
+    params = ellmer::params(
+      reasoning_effort = Sys.getenv(&quot;SHINYGENUI_EFFORT&quot;)
+    ),
+    echo = &quot;none&quot;
+  )
+  genui_server(
+    &quot;canvas&quot;,
+    catalog = catalog,
+    chat = chat,
+    data = reactive(mtcars),
+    chat_id = &quot;chat&quot;,
+    system_prompt = genui_prompt(
+      catalog,
+      context = &quot;The data is mtcars.&quot;
+    )
+  )
+}
+
+shinyApp(ui, server)</code></pre>
+<p>In the Shiny UI code, <code>genui_canvas()</code> creates the space where components appear.
+In the server code, <code>genui_components_bslib()</code> supplies a small set of
+predefined UI components, <code>genui_catalog()</code> bundles them,
+and <code>genui_server()</code> connects the catalog to the chat.
+Eventually, <code>genui_prompt()</code> tells the model about the catalog and the data.
+The example uses OpenAI API, but any model provider supported by ellmer works.</p>
+<p>Once a component appears, it behaves like regular Shiny UI. The histogram
+comes with a slider for the number of bins, and dragging it redraws the plot
+immediately via Shiny. The model understands the question and decides
+what to put on the canvas, and Shiny handles the interaction after it gets there.</p>
+<p>The “bslib starter components” were only created to keep the example app short.
+The point here is to build your own catalog. <code>genui_component()</code> can wrap the
+UI and server logic you would normally put in a <a href="https://mastering-shiny.org/scaling-modules.html">Shiny module</a>.
+This allows an app to offer a small set of domain-specific components,
+each with its own validations and <a href="https://nanx.me/blog/post/sensible-defaults/">sensible defaults</a>.
+shinygenui also records successful changes to the canvas, so you can save and
+replay an interface later without burning more tokens.</p>
+<p>You can find polished examples under
+<a href="https://github.com/nanxstats/shinygenui/tree/main/inst/examples"><code>inst/examples/</code></a>
+in the source package, ready to customize and run. I recommend checking
+the development version.</p>
+</div>
+<div id="why-generative-ui" class="section level2">
+<h2>Why generative UI?</h2>
+<p>We can observe two ends of the user interface spectrum.
+A traditional Shiny app works ok when the developer fully anticipates the
+(metaphorical) questions people will ask and how to answer them.
+Every code path through the app can be carefully designed and tested.
+In contrast, a post-2022 chat interface can accept any questions,
+but its common answer is often limited to a wall of text.</p>
+<p>Generative UI (GenUI) opens up the space between them, because… why not?
+We should be able to ask a question, get an interface tailored to that question,
+and then interact with it to explore the answer. Like the elastic-net,
+there should to be a useful point between the two extremes.</p>
+</div>
+<div id="declarative-genui" class="section level2">
+<h2>Declarative GenUI</h2>
+<p>Although the idea sounds amazing, the obvious concern is safety.
+Letting a model write arbitrary UI code gives it great power (and responsibility)
+inside your users’ browser sessions. shinygenui takes a boring approach.
+The model can only choose UI components from the catalog defined by the app developer.
+Each catalog entry is an ellmer tool with typed arguments.
+The model output is plain data, and shinygenui validates it before
+calling the component’s UI and server functions.</p>
+<p>The catalog can be created inside the server function,
+so its argument types can reflect the current session. For example, a column
+name argument can be limited to the columns in the current dataset.
+If the model invents a column that doesn’t exist, validation will simply reject
+the call and send a useful error message back to the model so it can try again.</p>
+<p>This approach is often called
+<a href="https://docs.langchain.com/oss/python/langchain/frontend/declarative-generative-ui">declarative generative UI</a>.
+The model has freedom to choose and arrange components, while the developer
+has control over the possible component options and behavior.
+It might not be <em>that</em> flexible, but it is predictable.</p>
+</div>
+<div id="im-finally-making-a-shiny-extension" class="section level2">
+<h2>I’m finally making a Shiny extension!</h2>
+<p>I have been curating
+<a href="https://github.com/nanxstats/awesome-shiny-extensions">awesome-shiny-extensions</a>
+since 2018. Somehow, during all that time, I never made a proper Shiny
+extension package of my own.</p>
+<p>My personal diagnosis is analysis paralysis. After years of cataloging
+every possibility in every shape and direction, everything speaks to my heart,
+so nothing speaks loudly enough. Any package I built would need
+a strong and clear reason to exist.</p>
+<p>Generative UI meets that bar. It’s quirky, meta, and new enough that R deserves
+an opinionated take on it. I am glad shinygenui is my first Shiny extension,
+and I hope you find something useful to build with it. If you do,
+I would love to hear about it.</p>
+</div>
+<div id="ai-usage-disclaimer" class="section level2">
+<h2>AI usage disclaimer</h2>
+<p>I used Claude (Fable 5, max) for parts of the problem analysis and spec writing.
+I generated, reviewed, and revised the prompts before sending the plan to
+Claude Code (Fable 5, xhigh) for implementation. I then reviewed
+and revised the code with substantial help from Codex (GPT-5.6 Sol, xhigh).</p>
+<p>Despite my best efforts to minimize AI slop… some generated content
+probably still escaped my review. If you see anything that looks bizarro,
+please <a href="https://github.com/nanxstats/shinygenui/issues">create an issue</a>.</p>
+</div>
+
+
+
+        </div>
+
+        
+        <nav class="pagination-nav mt-10 mb-3" aria-label="Blog post navigation">
+            <div class="navigation-btns">
+                
+                <a href="https://nanx.me/blog/post/okr/" class="btn-nav btn-prev w-full">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Previous</div>
+                        <div class="pagination-nav-label">&laquo; okr: Reproducible R source context for coding agents</div>
+                    </div>
+                </a>
+                
+
+                
+                <div class="btn-nav btn-next w-full invisible">
+                    <div class="btn-content">
+                        <div class="pagination-nav-sublabel">Next</div>
+                        <div class="pagination-nav-label">Placeholder</div>
+                    </div>
+                </div>
+                
+            </div>
+        </nav>
+        
+
+    </article>
+</main>
+
+<section id="comments">
+    <div class="py-3 content">
+        <div class="site-container">
+            <div class="comments">
+                <script src="https://utteranc.es/client.js" repo="nanxstats/blog-comments" issue-term="pathname"
+                    label="comment" theme="github-light" crossorigin="anonymous" async>
+                    </script>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="mt-20 mb-10 text-center font-sans font-[450] text-sm text-zinc-500 tracking-wide">
+    <div class="tufte-grid">
+        <div class="flex flex-col items-center gap-4">
+            <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2">
+                
+                
+                <a href="https://github.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">GitHub</a>
+                
+                
+                
+                
+                <a href="https://www.linkedin.com/in/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">LinkedIn</a>
+                
+                
+                <a href="https://bsky.app/profile/nanxstats.bsky.social" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Bluesky</a>
+                
+                
+                <a href="https://twitter.com/nanxstats" target="_blank" rel="noopener"
+                    class="hover:text-accent transition-colors">Twitter</a>
+                
+                
+                
+                <a href="https://nanx.me/colophon/" class="hover:text-accent transition-colors">Colophon</a>
+                
+                
+            </div>
+
+            
+            <div class="mt-2">
+                © 2026 Nan Xiao. All rights reserved.
+            </div>
+            
+        </div>
+    </div>
+</footer>
+
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"
+        integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/r.min.js" defer></script>
+    
+    <script>
+        window.addEventListener('load', function () {
+            hljs.highlightAll();
+        }, true);
+    </script>
+    
+
+    
+
+    
+    
+    
+
+    
+</body>
+
+</html>

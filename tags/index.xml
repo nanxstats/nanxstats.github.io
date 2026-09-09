@@ -6,8 +6,78 @@
     <description>Recent content in Tags on Nan Xiao | 肖楠</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 17 Aug 2026 21:53:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 11:39:00 +0000</lastBuildDate>
     <atom:link href="https://nanx.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A2UI</title>
+      <link>https://nanx.me/tags/a2ui/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/a2ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Agentic AI</title>
+      <link>https://nanx.me/tags/agentic-ai/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/agentic-ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ellmer</title>
+      <link>https://nanx.me/tags/ellmer/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/ellmer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Generative UI</title>
+      <link>https://nanx.me/tags/generative-ui/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/generative-ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>json-render</title>
+      <link>https://nanx.me/tags/json-render/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/json-render/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>large language model</title>
+      <link>https://nanx.me/tags/large-language-model/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/large-language-model/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R</title>
+      <link>https://nanx.me/tags/r/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>R packages</title>
+      <link>https://nanx.me/tags/r-packages/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/r-packages/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>shiny</title>
+      <link>https://nanx.me/tags/shiny/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/shiny/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>shinychat</title>
+      <link>https://nanx.me/tags/shinychat/</link>
+      <pubDate>Wed, 09 Sep 2026 11:39:00 +0000</pubDate>
+      <guid>https://nanx.me/tags/shinychat/</guid>
+      <description></description>
+    </item>
     <item>
       <title>automation</title>
       <link>https://nanx.me/tags/automation/</link>
@@ -34,20 +104,6 @@
       <link>https://nanx.me/tags/plaintext-workflow/</link>
       <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
       <guid>https://nanx.me/tags/plaintext-workflow/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R</title>
-      <link>https://nanx.me/tags/r/</link>
-      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>R packages</title>
-      <link>https://nanx.me/tags/r-packages/</link>
-      <pubDate>Mon, 17 Aug 2026 21:53:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/r-packages/</guid>
       <description></description>
     </item>
     <item>
@@ -289,13 +345,6 @@
       <description></description>
     </item>
     <item>
-      <title>Agentic AI</title>
-      <link>https://nanx.me/tags/agentic-ai/</link>
-      <pubDate>Sat, 11 Apr 2026 20:39:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/agentic-ai/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>AI adoption</title>
       <link>https://nanx.me/tags/ai-adoption/</link>
       <pubDate>Sat, 11 Apr 2026 20:39:00 +0000</pubDate>
@@ -321,13 +370,6 @@
       <link>https://nanx.me/tags/ralph-wiggum-loop/</link>
       <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
       <guid>https://nanx.me/tags/ralph-wiggum-loop/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>shiny</title>
-      <link>https://nanx.me/tags/shiny/</link>
-      <pubDate>Tue, 10 Mar 2026 03:45:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/shiny/</guid>
       <description></description>
     </item>
     <item>
@@ -538,13 +580,6 @@
       <link>https://nanx.me/tags/humor/</link>
       <pubDate>Mon, 01 Sep 2025 23:01:00 +0000</pubDate>
       <guid>https://nanx.me/tags/humor/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>large language model</title>
-      <link>https://nanx.me/tags/large-language-model/</link>
-      <pubDate>Mon, 01 Sep 2025 23:01:00 +0000</pubDate>
-      <guid>https://nanx.me/tags/large-language-model/</guid>
       <description></description>
     </item>
     <item>

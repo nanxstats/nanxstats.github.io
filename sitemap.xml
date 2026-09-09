@@ -2,10 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nanx.me/tags/automation/</loc>
-    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
+    <loc>https://nanx.me/tags/a2ui/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/agentic-ai/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/blog/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/ellmer/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/generative-ui/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/json-render/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/large-language-model/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/r-packages/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/shiny/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/shinychat/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/blog/post/shinygenui/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/</loc>
+    <lastmod>2026-09-09T11:39:00+00:00</lastmod>
+  </url><url>
+    <loc>https://nanx.me/tags/automation/</loc>
     <lastmod>2026-08-17T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/developer-experience/</loc>
@@ -14,19 +53,10 @@
     <loc>https://nanx.me/tags/harness-engineering/</loc>
     <lastmod>2026-08-17T21:53:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/</loc>
-    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/blog/post/okr/</loc>
     <lastmod>2026-08-17T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/plaintext-workflow/</loc>
-    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r/</loc>
-    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/r-packages/</loc>
     <lastmod>2026-08-17T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/reproducibility/</loc>
@@ -39,9 +69,6 @@
     <lastmod>2026-08-17T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/synthetic-monorepo/</loc>
-    <lastmod>2026-08-17T21:53:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/</loc>
     <lastmod>2026-08-17T21:53:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/vendoring/</loc>
@@ -158,9 +185,6 @@
     <loc>https://nanx.me/blog/post/paper-mono-ligaturized/</loc>
     <lastmod>2026-04-13T17:50:00+00:00</lastmod>
   </url><url>
-    <loc>https://nanx.me/tags/agentic-ai/</loc>
-    <lastmod>2026-04-11T20:39:00+00:00</lastmod>
-  </url><url>
     <loc>https://nanx.me/tags/ai-adoption/</loc>
     <lastmod>2026-04-11T20:39:00+00:00</lastmod>
   </url><url>
@@ -177,9 +201,6 @@
     <lastmod>2026-03-10T03:45:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/ralph-wiggum-loop/</loc>
-    <lastmod>2026-03-10T03:45:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/shiny/</loc>
     <lastmod>2026-03-10T03:45:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/antigravity/</loc>
@@ -297,9 +318,6 @@
     <lastmod>2025-09-01T23:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/humor/</loc>
-    <lastmod>2025-09-01T23:01:00+00:00</lastmod>
-  </url><url>
-    <loc>https://nanx.me/tags/large-language-model/</loc>
     <lastmod>2025-09-01T23:01:00+00:00</lastmod>
   </url><url>
     <loc>https://nanx.me/tags/recursion/</loc>
