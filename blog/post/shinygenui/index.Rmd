@@ -64,7 +64,8 @@ Behind the scenes, [ellmer](https://ellmer.tidyverse.org) provides
 model providers and tool call abstractions,
 and [shinychat](https://posit-dev.github.io/shinychat/r/) streams the
 conversation into Shiny. Both foundational packages saved me
-from reinventing some fairly huge wheels.
+from reinventing some fairly huge wheels, so shinygenui can focus on
+the "intent to interface" loop.
 
 ## Example
 
