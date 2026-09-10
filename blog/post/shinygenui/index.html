@@ -123,7 +123,7 @@
                 </span>
 
                 <span class="reading-time middot">
-                    5 min read
+                    6 min read
                 </span>
 
                 <div class="mt-6 flex flex-wrap gap-2">
@@ -155,7 +155,12 @@
                     
                     <a href="https://nanx.me/tags/large-language-model"
                         class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
-                        Large Language Model
+                        large language model
+                    </a>
+                    
+                    <a href="https://nanx.me/tags/tool-calling"
+                        class="inline-flex items-center px-3 py-1 rounded-full bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-ink transition-colors text-xs font-[550] tracking-wide">
+                        tool calling
                     </a>
                     
                     <a href="https://nanx.me/tags/ellmer"
@@ -208,7 +213,7 @@ Leviathan et al. (2026) showed that <a href="https://doi.org/10.48550/arXiv.260
 user interfaces</a>. Vercel’s
 <a href="https://github.com/vercel-labs/json-render">json-render</a> and Google’s
 <a href="https://github.com/a2ui-project/a2ui">A2UI</a> are two popular projects
-exploring this idea in the JavaScript world.</p>
+exploring this idea.</p>
 <p>shinygenui brings the same (broad) idea to R, with a much smaller scope.
 The flow goes like this: the app developer defines the available components
 and the arguments each one accepts. When someone makes a request in chat,
@@ -276,8 +281,9 @@ shinyApp(ui, server)</code></pre>
 In the server code, <code>genui_components_bslib()</code> supplies a small set of
 predefined UI components, <code>genui_catalog()</code> bundles them,
 and <code>genui_server()</code> connects the catalog to the chat.
-Eventually, <code>genui_prompt()</code> tells the model about the catalog and the data.
-The example uses OpenAI API, but any model provider supported by ellmer works.</p>
+<code>genui_prompt()</code> builds the system prompt describing the catalog and the data
+context. The example uses the OpenAI API, but you can use other providers
+supported by ellmer with a model that supports tool calling.</p>
 <p>Once a component appears, it behaves like regular Shiny UI. The histogram
 comes with a slider for the number of bins, and dragging it redraws the plot
 immediately via Shiny. The model understands the question and decides
@@ -288,11 +294,15 @@ UI and server logic you would normally put in a <a href="https://mastering-shiny
 This allows an app to offer a small set of domain-specific components,
 each with its own validations and <a href="https://nanx.me/blog/post/sensible-defaults/">sensible defaults</a>.
 shinygenui also records successful changes to the canvas, so you can save and
-replay an interface later without burning more tokens.</p>
+replay an interface later without burning more tokens.
+Replay restores the components and their arguments. Interactive input values such as a slider’s position return to their defaults.</p>
 <p>You can find polished examples under
 <a href="https://github.com/nanxstats/shinygenui/tree/main/inst/examples"><code>inst/examples/</code></a>
 in the source package, ready to customize and run. I recommend checking
 the development version.</p>
+<p>Things are moving super fast in this space, and I plan to release shinygenui
+0.2.0 on CRAN in a week or so. It will require shinychat &gt;= 0.5.0,
+and use its new <code>chat_server()</code> API to simplify the internals.</p>
 </div>
 <div id="why-generative-ui" class="section level2">
 <h2>Why generative UI?</h2>
@@ -304,8 +314,8 @@ In contrast, a post-2022 chat interface can accept any questions,
 but its common answer is often limited to a wall of text.</p>
 <p>Generative UI (GenUI) opens up the space between them, because… why not?
 We should be able to ask a question, get an interface tailored to that question,
-and then interact with it to explore the answer. Like the elastic-net,
-there should to be a useful point between the two extremes.</p>
+and then interact with it to explore the answer. Like the elastic net,
+there should be a useful point between the two extremes.</p>
 </div>
 <div id="declarative-genui" class="section level2">
 <h2>Declarative GenUI</h2>
@@ -314,7 +324,7 @@ Letting a model write arbitrary UI code gives it great power (and responsibility
 inside your users’ browser sessions. shinygenui takes a boring approach.
 The model can only choose UI components from the catalog defined by the app developer.
 Each catalog entry is an ellmer tool with typed arguments.
-The model output is plain data, and shinygenui validates it before
+The tool arguments are plain data, and shinygenui validates them before
 calling the component’s UI and server functions.</p>
 <p>The catalog can be created inside the server function,
 so its argument types can reflect the current session. For example, a column

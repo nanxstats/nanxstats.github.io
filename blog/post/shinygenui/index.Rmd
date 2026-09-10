@@ -10,7 +10,8 @@ tags:
   - Shiny
   - Generative UI
   - Agentic AI
-  - Large Language Model
+  - large language model
+  - tool calling
   - ellmer
   - shinychat
   - A2UI
@@ -49,7 +50,7 @@ Leviathan et al. (2026) showed that [current LLMs can also generate effective
 user interfaces](https://doi.org/10.48550/arXiv.2604.09577). Vercel's
 [json-render](https://github.com/vercel-labs/json-render) and Google's
 [A2UI](https://github.com/a2ui-project/a2ui) are two popular projects
-exploring this idea in the JavaScript world.
+exploring this idea.
 
 shinygenui brings the same (broad) idea to R, with a much smaller scope.
 The flow goes like this: the app developer defines the available components
@@ -123,8 +124,9 @@ In the Shiny UI code, `genui_canvas()` creates the space where components appear
 In the server code, `genui_components_bslib()` supplies a small set of
 predefined UI components, `genui_catalog()` bundles them,
 and `genui_server()` connects the catalog to the chat.
-Eventually, `genui_prompt()` tells the model about the catalog and the data.
-The example uses OpenAI API, but any model provider supported by ellmer works.
+`genui_prompt()` builds the system prompt describing the catalog and the data
+context. The example uses the OpenAI API, but you can use other providers
+supported by ellmer with a model that supports tool calling.
 
 Once a component appears, it behaves like regular Shiny UI. The histogram
 comes with a slider for the number of bins, and dragging it redraws the plot
@@ -138,11 +140,16 @@ This allows an app to offer a small set of domain-specific components,
 each with its own validations and [sensible defaults](https://nanx.me/blog/post/sensible-defaults/).
 shinygenui also records successful changes to the canvas, so you can save and
 replay an interface later without burning more tokens.
+Replay restores the components and their arguments. Interactive input values such as a slider's position return to their defaults.
 
 You can find polished examples under
 [`inst/examples/`](https://github.com/nanxstats/shinygenui/tree/main/inst/examples)
 in the source package, ready to customize and run. I recommend checking
 the development version.
+
+Things are moving super fast in this space, and I plan to release shinygenui
+0.2.0 on CRAN in a week or so. It will require shinychat >= 0.5.0,
+and use its new `chat_server()` API to simplify the internals.
 
 ## Why generative UI?
 
@@ -155,8 +162,8 @@ but its common answer is often limited to a wall of text.
 
 Generative UI (GenUI) opens up the space between them, because... why not?
 We should be able to ask a question, get an interface tailored to that question,
-and then interact with it to explore the answer. Like the elastic-net,
-there should to be a useful point between the two extremes.
+and then interact with it to explore the answer. Like the elastic net,
+there should be a useful point between the two extremes.
 
 ## Declarative GenUI
 
@@ -165,7 +172,7 @@ Letting a model write arbitrary UI code gives it great power (and responsibility
 inside your users' browser sessions. shinygenui takes a boring approach.
 The model can only choose UI components from the catalog defined by the app developer.
 Each catalog entry is an ellmer tool with typed arguments.
-The model output is plain data, and shinygenui validates it before
+The tool arguments are plain data, and shinygenui validates them before
 calling the component's UI and server functions.
 
 The catalog can be created inside the server function,
